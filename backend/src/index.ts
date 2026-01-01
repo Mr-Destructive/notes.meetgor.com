@@ -39,25 +39,6 @@ app.get('/health', (c) => {
 app.route('/api/auth', authRouter);
 app.route('/api/posts', postsRouter);
 
-// Serve frontend as root
-app.get('/', (c) => {
-  return c.html(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Blog Admin</title>
-    </head>
-    <body>
-      <script>
-        window.location.href = '/login.html';
-      </script>
-    </body>
-    </html>
-  `);
-});
-
 // 404 handler
 app.notFound((c) => {
   return c.json({ error: 'Not found' }, 404);
