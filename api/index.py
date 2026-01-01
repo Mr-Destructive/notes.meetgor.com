@@ -85,7 +85,7 @@ async def catchall(path: str, request: Request):
         token = jwt.encode(payload, JWT_SECRET, algorithm="HS256")
         return {"token": token, "expires_in": 604800}
     
-    return {"error": "Route not found", "path": path}
+    return {"error": "Route not found", "path": path, "method": request.method}
 
 @app.post("/auth/verify")
 async def verify(authorization: str = Header(None)):
