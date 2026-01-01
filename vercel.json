@@ -1,4 +1,3 @@
 {
-  "buildCommand": "mkdir -p public && cp -r frontend/* public/",
-  "outputDirectory": "public"
+  "buildCommand": "mkdir -p public && cp -r frontend/* public/"
 }
