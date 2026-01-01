@@ -127,6 +127,3 @@ async def create_post(post: PostCreate, authorization: str = Header(None)):
 @app.get("/health")
 async def health():
     return {"status": "ok"}
-
-# Serve static files
-app.mount("/", StaticFiles(directory="public", html=True), name="static")
