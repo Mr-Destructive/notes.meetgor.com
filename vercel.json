@@ -1,1 +1,4 @@
-{}
+{
+  "buildCommand": "echo 'Python FastAPI deployment' && pip install -r requirements.txt",
+  "outputDirectory": "public"
+}
