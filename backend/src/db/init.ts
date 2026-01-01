@@ -1,10 +1,9 @@
 import { createClient } from '@libsql/client';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = join(__filename, '..');
+const __dirname = dirname(process.argv[1]);
 
 async function initDatabase() {
   try {

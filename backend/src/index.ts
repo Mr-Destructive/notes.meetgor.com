@@ -51,10 +51,11 @@ app.onError((err, c) => {
 });
 
 // For serverless (Vercel, etc)
-export default app;
+module.exports = app;
+module.exports.default = app;
 
 // Only start server in development (local, not serverless)
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   const port = parseInt(process.env.API_PORT || '3000');
   serve({
     fetch: app.fetch,

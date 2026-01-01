@@ -1,28 +1,31 @@
-import app from '../backend/dist/index.js';
+const app = require('../backend/dist/index.js').default;
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   try {
-    // Convert Vercel request to fetch API Request
-    const url = new URL(req.url, `http://${req.headers.host}`);
-    const request = new Request(url, {
+    // Build full URL
+    const proto = req.headers['x-forwarded-proto'] || 'http';
+    const host = req.headers['x-forwarded-host'] || req.headers.host;
+    const url = new URL(req.url, `${proto}://${host}`);
+
+    // Create fetch-compatible request
+    const request = new Request(url.toString(), {
       method: req.method,
-      headers: req.headers,
-      body: ['GET', 'HEAD'].includes(req.method) ? undefined : req
+      headers: new Map(Object.entries(req.headers)),
+      body: ['GET', 'HEAD'].includes(req.method) ? undefined : req.body
     });
 
     // Call Hono app
     const response = await app.fetch(request);
     
-    // Set response status and headers
+    // Send response
     res.status(response.status);
-    for (const [key, value] of response.headers) {
+    response.headers.forEach((value, key) => {
       res.setHeader(key, value);
-    }
+    });
     
-    // Send body
     res.send(await response.text());
   } catch (error) {
     console.error('Error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: error.message });
   }
 };
