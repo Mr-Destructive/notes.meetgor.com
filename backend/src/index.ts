@@ -69,15 +69,15 @@ app.onError((err, c) => {
   return c.json({ error: 'Internal server error' }, 500);
 });
 
-// Start server
-const port = parseInt(process.env.API_PORT || '3000');
-
-serve({
-  fetch: app.fetch,
-  port
-});
-
-console.log(`🚀 Blog API running on http://localhost:${port}`);
-
 // For serverless (Vercel, etc)
 export default app;
+
+// Only start server in development (local, not serverless)
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const port = parseInt(process.env.API_PORT || '3000');
+  serve({
+    fetch: app.fetch,
+    port
+  });
+  console.log(`🚀 Blog API running on http://localhost:${port}`);
+}
