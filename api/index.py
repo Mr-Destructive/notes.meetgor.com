@@ -44,7 +44,7 @@ class PostCreate(BaseModel):
     status: str = "draft"
 
 # Auth endpoints
-@app.post("/auth/login")
+@app.post("/api/auth/login")
 async def login(request: LoginRequest):
     """Login endpoint"""
     if request.password != ADMIN_PASSWORD:
@@ -62,7 +62,7 @@ async def login(request: LoginRequest):
         "expires_in": 604800
     }
 
-@app.post("/auth/verify")
+@app.post("/api/auth/verify")
 async def verify(authorization: str = Header(None)):
     """Verify JWT token"""
     if not authorization:
@@ -76,7 +76,7 @@ async def verify(authorization: str = Header(None)):
         raise HTTPException(status_code=401, detail="Invalid token")
 
 # Post endpoints
-@app.get("/posts")
+@app.get("/api/posts")
 async def get_posts(status: str = None, type_id: str = None):
     """Get posts"""
     query = "SELECT * FROM posts WHERE 1=1"
@@ -92,7 +92,7 @@ async def get_posts(status: str = None, type_id: str = None):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/posts/{post_id}")
+@app.get("/api/posts/{post_id}")
 async def get_post(post_id: str):
     """Get single post"""
     try:
@@ -103,7 +103,7 @@ async def get_post(post_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/posts")
+@app.post("/api/posts")
 async def create_post(post: PostCreate, authorization: str = Header(None)):
     """Create post"""
     if not authorization:
@@ -125,7 +125,7 @@ async def create_post(post: PostCreate, authorization: str = Header(None)):
         raise HTTPException(status_code=500, detail=str(e))
 
 # Health check
-@app.get("/health")
+@app.get("/api/health")
 async def health():
     return {"status": "ok"}
 
