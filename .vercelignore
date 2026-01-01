@@ -1,0 +1,8 @@
+backend
+frontend
+cronjob
+hugo
+.git
+.env
+.env.*
+node_modules
