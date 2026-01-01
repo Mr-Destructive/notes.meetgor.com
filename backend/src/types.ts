@@ -1,3 +1,6 @@
+import type { Context } from 'hono';
+import type { Client } from '@libsql/client';
+
 export type PostType = 
   | 'article' 
   | 'review' 
@@ -12,6 +15,12 @@ export type PostType =
   | 'tutorial' 
   | 'interview' 
   | 'experiment';
+
+export type HonoEnv = {
+  Bindings: {
+    db: Client;
+  };
+};
 
 export type PostStatus = 'draft' | 'published' | 'archived';
 

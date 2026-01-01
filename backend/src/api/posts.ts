@@ -1,8 +1,8 @@
 import { Hono } from 'hono';
 import { randomUUID } from 'crypto';
-import type { Post, PostForm, PostStatus } from '../types.ts';
+import type { Post, PostForm, PostStatus, HonoEnv } from '../types.ts';
 
-export const postsRouter = new Hono();
+export const postsRouter = new Hono<HonoEnv>();
 
 // Middleware: auth check
 const requireAuth = async (c: any, next: any) => {
@@ -18,7 +18,7 @@ const requireAuth = async (c: any, next: any) => {
 postsRouter.post('/', requireAuth, async (c) => {
   try {
     const body: PostForm = await c.req.json();
-    const db = c.env.db;
+    const db = (c.env as any).db;
 
     // Validate required fields
     if (!body.title || !body.content || !body.type_id) {
@@ -68,7 +68,7 @@ postsRouter.post('/', requireAuth, async (c) => {
 // Get all posts (with filters)
 postsRouter.get('/', async (c) => {
   try {
-    const db = c.env.db;
+    const db = (c.env as any).db;
     const type = c.req.query('type');
     const status = c.req.query('status') || 'published';
     const limit = parseInt(c.req.query('limit') || '50');
@@ -101,7 +101,7 @@ postsRouter.get('/', async (c) => {
 // Get single post
 postsRouter.get('/:id', async (c) => {
   try {
-    const db = c.env.db;
+    const db = (c.env as any).db;
     const result = await db.execute('SELECT * FROM posts WHERE id = ? OR slug = ?', [
       c.req.param('id'),
       c.req.param('id')
@@ -120,7 +120,7 @@ postsRouter.get('/:id', async (c) => {
 // Update post
 postsRouter.put('/:id', requireAuth, async (c) => {
   try {
-    const db = c.env.db;
+    const db = (c.env as any).db;
     const body: Partial<PostForm> = await c.req.json();
     const id = c.req.param('id');
 
@@ -185,7 +185,7 @@ postsRouter.put('/:id', requireAuth, async (c) => {
 // Delete post
 postsRouter.delete('/:id', requireAuth, async (c) => {
   try {
-    const db = c.env.db;
+    const db = (c.env as any).db;
     await db.execute('DELETE FROM posts WHERE id = ?', [c.req.param('id')]);
     return c.json({ success: true });
   } catch (error) {
@@ -196,7 +196,7 @@ postsRouter.delete('/:id', requireAuth, async (c) => {
 // Get revisions
 postsRouter.get('/:id/revisions', async (c) => {
   try {
-    const db = c.env.db;
+    const db = (c.env as any).db;
     const result = await db.execute(
       'SELECT id, content, change_summary, created_at FROM revisions WHERE post_id = ? ORDER BY created_at DESC',
       [c.req.param('id')]

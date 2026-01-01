@@ -3,12 +3,12 @@ import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
-import { serveStatic } from 'hono/node-server/serve-static';
 import { createClient } from '@libsql/client';
 import { authRouter } from './api/auth.ts';
 import { postsRouter } from './api/posts.ts';
+import type { HonoEnv } from './types.ts';
 
-const app = new Hono();
+const app = new Hono<HonoEnv>();
 
 // Middleware
 app.use(logger());
@@ -26,7 +26,7 @@ const db = createClient({
 
 // Share db instance
 app.use(async (c, next) => {
-  c.env.db = db;
+  (c as any).env = { db };
   await next();
 });
 
@@ -39,12 +39,7 @@ app.get('/health', (c) => {
 app.route('/api/auth', authRouter);
 app.route('/api/posts', postsRouter);
 
-// Serve frontend static files
-app.use('/js/*', serveStatic({ root: '../frontend' }));
-app.use('/html/*', serveStatic({ root: '../frontend' }));
-app.use('/', serveStatic({ path: '../frontend/login.html', root: '.' }));
-
-// Serve login.html as root
+// Serve frontend as root
 app.get('/', (c) => {
   return c.html(`
     <!DOCTYPE html>
@@ -62,15 +57,6 @@ app.get('/', (c) => {
     </html>
   `);
 });
-
-// Serve login page
-app.get('/login.html', serveStatic({ path: '../frontend/login.html' }));
-
-// Serve editor page
-app.get('/editor.html', serveStatic({ path: '../frontend/editor.html' }));
-
-// Serve editor JS
-app.get('/editor.js', serveStatic({ path: '../frontend/editor.js' }));
 
 // 404 handler
 app.notFound((c) => {
