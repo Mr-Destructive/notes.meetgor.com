@@ -2,17 +2,6 @@ const API_URL = 'https://notes-meetgor-com.vercel.app/api';
 let currentPostId = null;
 let tags = [];
 
-// Initialize TinyMCE editor
-tinymce.init({
-  selector: 'textarea#content',
-  height: 400,
-  plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-  toolbar: 'undo redo | formatselect | bold italic underline strikethrough | link image media | alignleft aligncenter alignright | outdent indent | lists | charmap emoticons',
-  menubar: 'file edit view insert format tools table help',
-  skin: 'oxide',
-  content_css: 'default'
-});
-
 // Post type templates
 const POST_TEMPLATES = {
   article: { fields: ['category'] },
@@ -147,8 +136,8 @@ function getMetadata() {
 }
 
 async function savePost() {
-  const title = document.getElementById('title').value;
-  const content = tinymce.get('content')?.getContent() || document.getElementById('content').value;
+   const title = document.getElementById('title').value;
+   const content = document.getElementById('content').value;
   
   if (!title || !content) {
     showAlert('Title and content are required', 'error');
@@ -192,8 +181,8 @@ async function savePost() {
 }
 
 async function publishPost() {
-  const title = document.getElementById('title').value;
-  const content = tinymce.get('content')?.getContent() || document.getElementById('content').value;
+   const title = document.getElementById('title').value;
+   const content = document.getElementById('content').value;
   
   if (!title || !content) {
     showAlert('Title and content are required', 'error');
@@ -242,15 +231,15 @@ function previewPost() {
 }
 
 function resetForm() {
-  if (confirm('Reset form? This will clear all fields.')) {
-    document.getElementById('title').value = '';
-    document.getElementById('slug').value = '';
-    document.getElementById('excerpt').value = '';
-    tinymce.get('content')?.setContent('');
-    tags = [];
-    renderTags();
-    currentPostId = null;
-  }
+   if (confirm('Reset form? This will clear all fields.')) {
+     document.getElementById('title').value = '';
+     document.getElementById('slug').value = '';
+     document.getElementById('excerpt').value = '';
+     document.getElementById('content').value = '';
+     tags = [];
+     renderTags();
+     currentPostId = null;
+   }
 }
 
 function generateSlug(title) {
