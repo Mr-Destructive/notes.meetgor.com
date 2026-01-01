@@ -1,2 +1,3 @@
 {
+  "buildCommand": "echo 'Python functions auto-detected'"
 }
