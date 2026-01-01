@@ -1,11 +1,9 @@
 import { Hono } from 'hono';
-import bcrypt from 'bcryptjs';
 import { SignJWT } from 'jose';
 
 export const authRouter = new Hono();
 
 const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || 'dev-secret-key');
-const PASSWORD_HASH = process.env.PASSWORD_HASH || '';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
 
 // Login endpoint
@@ -17,9 +15,8 @@ authRouter.post('/login', async (c) => {
       return c.json({ error: 'Password required' }, 400);
     }
 
-    // Compare password
-    const isValid = ADMIN_PASSWORD && 
-      await bcrypt.compare(password, PASSWORD_HASH);
+    // Direct password comparison
+    const isValid = password === ADMIN_PASSWORD;
 
     if (!isValid) {
       return c.json({ error: 'Invalid credentials' }, 401);
