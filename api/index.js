@@ -1,31 +1,68 @@
-const app = require('../backend/dist/index.js').default;
+const { Hono } = require('hono');
+const { serve } = require('@hono/node-server');
+const { cors } = require('hono/cors');
+const { logger } = require('hono/logger');
+const { createClient } = require('@libsql/client');
 
-module.exports = async (req, res) => {
+const app = new Hono();
+
+// Middleware
+app.use(logger());
+app.use(cors({
+  origin: '*',
+  allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowHeaders: ['Content-Type', 'Authorization']
+}));
+
+// Initialize database client
+const db = createClient({
+  url: process.env.TURSO_CONNECTION_URL || 'file:./dev.db',
+  authToken: process.env.TURSO_AUTH_TOKEN
+});
+
+// Share db instance
+app.use(async (c, next) => {
+  c.env = { db };
+  await next();
+});
+
+// Health check
+app.get('/health', (c) => {
+  return c.json({ status: 'ok' });
+});
+
+// Placeholder API routes (full implementation in backend)
+app.post('/api/auth/login', async (c) => {
   try {
-    // Build full URL
-    const proto = req.headers['x-forwarded-proto'] || 'http';
-    const host = req.headers['x-forwarded-host'] || req.headers.host;
-    const url = new URL(req.url, `${proto}://${host}`);
-
-    // Create fetch-compatible request
-    const request = new Request(url.toString(), {
-      method: req.method,
-      headers: new Map(Object.entries(req.headers)),
-      body: ['GET', 'HEAD'].includes(req.method) ? undefined : req.body
-    });
-
-    // Call Hono app
-    const response = await app.fetch(request);
+    const { password } = await c.req.json();
     
-    // Send response
-    res.status(response.status);
-    response.headers.forEach((value, key) => {
-      res.setHeader(key, value);
-    });
+    // Direct password comparison
+    const isValid = password === process.env.ADMIN_PASSWORD;
     
-    res.send(await response.text());
+    if (!isValid) {
+      return c.json({ error: 'Invalid credentials' }, 401);
+    }
+    
+    // For now, return a simple token
+    return c.json({
+      token: 'temp-token-' + Date.now(),
+      expires_in: 604800
+    });
   } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: error.message });
+    return c.json({ error: 'Authentication failed' }, 500);
   }
-};
+});
+
+// 404 handler
+app.notFound((c) => {
+  return c.json({ error: 'Not found' }, 404);
+});
+
+// Error handler
+app.onError((err, c) => {
+  console.error('Error:', err);
+  return c.json({ error: 'Internal server error' }, 500);
+});
+
+// Export for Vercel
+module.exports = app;
