@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://notes-meetgor-com.vercel.app/api';
 let currentPostId = null;
 let tags = [];
 
