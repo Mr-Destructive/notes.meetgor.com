@@ -37,7 +37,6 @@ hugo/content/notes/
 hugo/content/snippets/
 hugo/content/essays/
 hugo/public/
-public/
 
 # Build artifacts
 backend/dist/
