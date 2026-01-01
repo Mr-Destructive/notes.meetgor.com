@@ -5,7 +5,6 @@ __pycache__
 *.pyc
 .venv
 venv
-frontend
 cronjob
 hugo
 dev.db
