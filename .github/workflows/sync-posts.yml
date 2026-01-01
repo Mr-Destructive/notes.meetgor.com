@@ -1,0 +1,48 @@
+name: Sync Posts and Build Static Site
+
+on:
+  schedule:
+    # Run every 6 hours (0, 6, 12, 18 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: cd cronjob && bun install
+
+      - name: Fetch and export posts from Turso
+        env:
+          TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: cd cronjob && bun run export
+
+      - name: Commit changes
+        run: |
+          git config user.name "Blog Sync Bot"
+          git config user.email "bot@blog.local"
+          git add hugo/content/
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: sync posts from database"
+          git push
+
+      - name: Build Hugo site
+        run: |
+          cd hugo
+          hugo -d ../public
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

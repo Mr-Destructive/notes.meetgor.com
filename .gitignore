@@ -1,0 +1,49 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Database
+dev.db
+*.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Generated content
+hugo/content/posts/
+hugo/content/articles/
+hugo/content/reviews/
+hugo/content/thoughts/
+hugo/content/links/
+hugo/content/tils/
+hugo/content/quotes/
+hugo/content/lists/
+hugo/content/notes/
+hugo/content/snippets/
+hugo/content/essays/
+hugo/public/
+public/
+
+# Build artifacts
+backend/dist/
+
+# Vercel
+.vercel/
+
+# GitHub Pages branch
+gh-pages
