@@ -1,5 +1,11 @@
 {
   "buildCommand": "mkdir -p public && cp -r frontend/* public/",
   "outputDirectory": "public",
-  "framework": null
+  "framework": null,
+  "env": {
+    "ADMIN_PASSWORD": "@admin_password",
+    "JWT_SECRET": "@jwt_secret",
+    "TURSO_CONNECTION_URL": "@turso_connection_url",
+    "TURSO_AUTH_TOKEN": "@turso_auth_token"
+  }
 }
