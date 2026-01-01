@@ -1,12 +1,10 @@
 from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import os
 from datetime import datetime, timedelta
 import jwt
 from libsql_client import create_client
-import pathlib
 
 app = FastAPI()
 
@@ -128,8 +126,3 @@ async def create_post(post: PostCreate, authorization: str = Header(None)):
 @app.get("/health")
 async def health():
     return {"status": "ok"}
-
-# Mount static files from public directory (must be last)
-public_dir = pathlib.Path(__file__).parent.parent / "public"
-if public_dir.exists():
-    app.mount("/", StaticFiles(directory=str(public_dir), html=True), name="static")
