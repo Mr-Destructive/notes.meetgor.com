@@ -1,4 +1,5 @@
 {
+  "buildCommand": "mkdir -p public && cp -r frontend/* public/",
   "rewrites": [
     {
       "source": "/api/:path*",
