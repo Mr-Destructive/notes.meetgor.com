@@ -1,3 +1,17 @@
 {
-  "buildCommand": "cp -r frontend public"
+  "buildCommand": "cp -r frontend public",
+  "rewrites": [
+    {
+      "source": "/auth/:path*",
+      "destination": "/api"
+    },
+    {
+      "source": "/posts/:path*",
+      "destination": "/api"
+    },
+    {
+      "source": "/health",
+      "destination": "/api"
+    }
+  ]
 }
