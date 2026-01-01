@@ -49,14 +49,30 @@ class PostCreate(BaseModel):
     metadata: dict = {}
     status: str = "draft"
 
-# Catch-all to handle /api/auth/login routed to /api function
+# Handle login at root as fallback for Vercel routing
+@app.post("")
+async def login_root(request: LoginRequest):
+    """Login endpoint at root"""
+    if request.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    
+    # Create JWT token
+    payload = {
+        "admin": True,
+        "exp": datetime.utcnow() + timedelta(days=7)
+    }
+    token = jwt.encode(payload, JWT_SECRET, algorithm="HS256")
+    
+    return {
+        "token": token,
+        "expires_in": 604800
+    }
+
+# Catch-all for debugging
 @app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
-async def root(path: str, request):
+async def catchall(path: str):
     """Forward all requests to their actual paths"""
-    # This gets called when Vercel routes /api/auth/login to /api
-    # The path parameter contains "auth/login"
-    # Just return a simple response for debugging
-    return {"routed_path": path}
+    return {"routed_path": path, "method": "catch-all"}
 
 # Auth endpoints
 @app.post("/auth/login")
