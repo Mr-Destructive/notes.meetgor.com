@@ -1,6 +1,5 @@
 {
   "buildCommand": "",
   "outputDirectory": "",
-  "framework": null,
-  "rootDirectory": "api"
+  "framework": null
 }
