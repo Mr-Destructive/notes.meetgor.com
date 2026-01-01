@@ -43,6 +43,11 @@ class PostCreate(BaseModel):
     metadata: dict = {}
     status: str = "draft"
 
+# Root endpoint for Vercel routing
+@app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
+async def catch_all(path: str):
+    return {"error": "Route not found", "path": path}
+
 # Auth endpoints
 @app.post("/auth/login")
 async def login(request: LoginRequest):
