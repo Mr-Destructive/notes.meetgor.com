@@ -19,11 +19,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Database client
-db = create_client(
-    url=os.getenv("TURSO_CONNECTION_URL", "file:./dev.db"),
-    auth_token=os.getenv("TURSO_AUTH_TOKEN")
-)
+# Database client (lazy initialized to avoid async issues at import time)
+db = None
+
+def get_db():
+    global db
+    if db is None:
+        db = create_client(
+            url=os.getenv("TURSO_CONNECTION_URL", "file:./dev.db"),
+            auth_token=os.getenv("TURSO_AUTH_TOKEN")
+        )
+    return db
 
 # Config
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "password")
@@ -92,7 +98,7 @@ async def get_posts(status: str = None, type_id: str = None):
     query += " ORDER BY published_at DESC"
     
     try:
-        result = db.execute(query)
+        result = get_db().execute(query)
         return [dict(row) for row in result.rows]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -101,7 +107,7 @@ async def get_posts(status: str = None, type_id: str = None):
 async def get_post(post_id: str):
     """Get single post"""
     try:
-        result = db.execute(f"SELECT * FROM posts WHERE id = '{post_id}'")
+        result = get_db().execute(f"SELECT * FROM posts WHERE id = '{post_id}'")
         if result.rows:
             return dict(result.rows[0])
         raise HTTPException(status_code=404, detail="Post not found")
@@ -124,7 +130,7 @@ async def create_post(post: PostCreate, authorization: str = Header(None)):
                 '{post.content}', '{post.excerpt or ""}', '{post.status}', '{post.tags}', '{post.metadata}', 
                 datetime('now'), datetime('now'))
         """
-        db.execute(query)
+        get_db().execute(query)
         return {"id": post_id, "status": "created"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
