@@ -10,11 +10,6 @@ import pathlib
 
 app = FastAPI()
 
-# Mount static files from public directory
-public_dir = pathlib.Path(__file__).parent.parent / "public"
-if public_dir.exists():
-    app.mount("/", StaticFiles(directory=str(public_dir), html=True), name="static")
-
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
@@ -133,3 +128,8 @@ async def create_post(post: PostCreate, authorization: str = Header(None)):
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+# Mount static files from public directory (must be last)
+public_dir = pathlib.Path(__file__).parent.parent / "public"
+if public_dir.exists():
+    app.mount("/", StaticFiles(directory=str(public_dir), html=True), name="static")
