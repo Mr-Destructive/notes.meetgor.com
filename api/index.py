@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import os
 from datetime import datetime, timedelta
@@ -8,12 +7,6 @@ import jwt
 from libsql_client import create_client
 
 app = FastAPI()
-
-# Mount static files
-import pathlib
-static_dir = pathlib.Path(__file__).parent.parent / "frontend"
-if static_dir.exists():
-    app.mount("/", StaticFiles(directory=str(static_dir), html=True), name="static")
 
 # CORS middleware
 app.add_middleware(

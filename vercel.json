@@ -1,12 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/public/$1"
-    }
-  ]
+  "buildCommand": "mkdir -p public && cp -r frontend/* public/",
+  "outputDirectory": "public"
 }
