@@ -129,7 +129,7 @@ async def create_post(post: PostCreate, authorization: str = Header(None)):
 async def health():
     return {"status": "ok"}
 
-# Mount static files (must be last)
-public_dir = pathlib.Path(__file__).parent.parent / "public"
-if public_dir.exists():
-    app.mount("/", StaticFiles(directory=str(public_dir), html=True), name="static")
+# Mount static files from frontend (must be last)
+frontend_dir = pathlib.Path(__file__).parent.parent / "frontend"
+if frontend_dir.exists():
+    app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="static")
