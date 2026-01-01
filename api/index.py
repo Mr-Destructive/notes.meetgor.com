@@ -72,7 +72,7 @@ async def login_root(request: LoginRequest):
 @app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
 async def catchall(path: str, request: Request):
     """Route all paths to their handlers"""
-    if path == "auth/login" and request.method == "POST":
+    if path == "api/auth/login" and request.method == "POST":
         body = await request.json()
         login_req = LoginRequest(**body)
         if login_req.password != ADMIN_PASSWORD:
