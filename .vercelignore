@@ -1,8 +1,10 @@
-backend
-frontend
-cronjob
-hugo
 .git
 .env
 .env.*
 node_modules
+frontend
+cronjob
+hugo
+backend/node_modules
+backend/dev.db
+backend/tsconfig.node.json
