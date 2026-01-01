@@ -68,11 +68,24 @@ async def login_root(request: LoginRequest):
         "expires_in": 604800
     }
 
-# Catch-all for debugging
+# Catch-all for routing
 @app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
-async def catchall(path: str):
-    """Forward all requests to their actual paths"""
-    return {"routed_path": path, "method": "catch-all"}
+async def catchall(path: str, request: Request):
+    """Route all paths to their handlers"""
+    if path == "auth/login" and request.method == "POST":
+        body = await request.json()
+        login_req = LoginRequest(**body)
+        if login_req.password != ADMIN_PASSWORD:
+            raise HTTPException(status_code=401, detail="Invalid credentials")
+        
+        payload = {
+            "admin": True,
+            "exp": datetime.utcnow() + timedelta(days=7)
+        }
+        token = jwt.encode(payload, JWT_SECRET, algorithm="HS256")
+        return {"token": token, "expires_in": 604800}
+    
+    return {"error": "Route not found", "path": path}
 
 # Auth endpoints
 @app.post("/auth/login")
