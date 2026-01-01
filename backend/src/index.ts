@@ -4,9 +4,9 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { createClient } from '@libsql/client';
-import { authRouter } from './api/auth.ts';
-import { postsRouter } from './api/posts.ts';
-import type { HonoEnv } from './types.ts';
+import { authRouter } from './api/auth';
+import { postsRouter } from './api/posts';
+import type { HonoEnv } from './types';
 
 const app = new Hono<HonoEnv>();
 

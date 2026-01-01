@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { SignJWT } from 'jose';
+import type { HonoEnv } from '../types';
 
 export const authRouter = new Hono();
 

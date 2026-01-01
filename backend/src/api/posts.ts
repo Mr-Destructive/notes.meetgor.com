@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { randomUUID } from 'crypto';
-import type { Post, PostForm, PostStatus, HonoEnv } from '../types.ts';
+import type { Post, PostForm, PostStatus, HonoEnv } from '../types';
 
 export const postsRouter = new Hono<HonoEnv>();
 
