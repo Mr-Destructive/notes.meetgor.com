@@ -87,25 +87,6 @@ async def catchall(path: str, request: Request):
     
     return {"error": "Route not found", "path": path}
 
-# Auth endpoints
-@app.post("/auth/login")
-async def login(request: LoginRequest):
-    """Login endpoint"""
-    if request.password != ADMIN_PASSWORD:
-        raise HTTPException(status_code=401, detail="Invalid credentials")
-    
-    # Create JWT token
-    payload = {
-        "admin": True,
-        "exp": datetime.utcnow() + timedelta(days=7)
-    }
-    token = jwt.encode(payload, JWT_SECRET, algorithm="HS256")
-    
-    return {
-        "token": token,
-        "expires_in": 604800
-    }
-
 @app.post("/auth/verify")
 async def verify(authorization: str = Header(None)):
     """Verify JWT token"""
