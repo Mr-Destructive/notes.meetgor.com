@@ -49,6 +49,15 @@ class PostCreate(BaseModel):
     metadata: dict = {}
     status: str = "draft"
 
+# Catch-all to handle /api/auth/login routed to /api function
+@app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
+async def root(path: str, request):
+    """Forward all requests to their actual paths"""
+    # This gets called when Vercel routes /api/auth/login to /api
+    # The path parameter contains "auth/login"
+    # Just return a simple response for debugging
+    return {"routed_path": path}
+
 # Auth endpoints
 @app.post("/auth/login")
 async def login(request: LoginRequest):
