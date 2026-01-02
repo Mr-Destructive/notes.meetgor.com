@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -23,9 +24,36 @@ func init() {
 	log.Println("Function initializing...")
 }
 
+// initDB initializes the database on first request
+func initDB() error {
+	if database != nil {
+		return nil
+	}
+
+	d, err := db.New(context.Background())
+	if err != nil {
+		return fmt.Errorf("failed to initialize database: %w", err)
+	}
+
+	// Initialize schema with soft fail
+	if err := d.InitSchema(context.Background()); err != nil {
+		log.Printf("Schema initialization warning (non-fatal): %v", err)
+	}
+
+	database = d
+	return nil
+}
+
 // Handler is the main Netlify function handler
 func Handler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Request: %s %s", r.Method, r.URL.Path)
+
+	// Initialize database on first request
+	if err := initDB(); err != nil {
+		log.Printf("Database initialization error: %v", err)
+		respondError(w, http.StatusInternalServerError, "Database connection failed")
+		return
+	}
 	
 	// CORS headers
 	w.Header().Set("Access-Control-Allow-Origin", "*")
