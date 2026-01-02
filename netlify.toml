@@ -1,0 +1,24 @@
+[build]
+  command = "mkdir -p netlify/functions && go build -o netlify/functions/cms ./cmd/functions/main.go"
+  functions = "netlify/functions"
+  publish = "public"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/cms/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  condition = "!{path}.html"
+
+[context.production]
+  environment = { ENV = "production" }
+
+[context.deploy-preview]
+  environment = { ENV = "preview" }
+
+[context.branch-deploy]
+  environment = { ENV = "staging" }

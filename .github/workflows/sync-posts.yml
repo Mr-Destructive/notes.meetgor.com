@@ -1,10 +1,10 @@
-name: Sync Posts and Build Static Site
+name: Sync Posts and Build Hugo Site
 
 on:
   schedule:
     # Run every 6 hours (0, 6, 12, 18 UTC)
     - cron: '0 */6 * * *'
-  workflow_dispatch:
+  workflow_dispatch:  # Allow manual trigger from Actions tab
 
 jobs:
   sync-and-build:
@@ -13,36 +13,99 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: oven-sh/setup-bun@v1
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23'
 
-      - name: Install dependencies
-        run: cd cronjob && bun install
+      - name: Build CMS binary
+        run: |
+          make build
+          ls -lh ./cms
 
-      - name: Fetch and export posts from Turso
+      - name: Export posts to Markdown
         env:
-          TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
-          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
-        run: cd cronjob && bun run export
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        run: |
+          # Start CMS server in background
+          ./cms > /tmp/cms.log 2>&1 &
+          CMS_PID=$!
+          
+          # Wait for server to start
+          sleep 2
+          
+          # Login and get token
+          TOKEN=$(curl -s -X POST http://localhost:8080/api/auth/login \
+            -H "Content-Type: application/json" \
+            -d "{\"password\":\"$ADMIN_PASSWORD\"}" | jq -r '.token')
+          
+          if [ "$TOKEN" = "null" ] || [ -z "$TOKEN" ]; then
+            echo "Failed to authenticate"
+            kill $CMS_PID
+            cat /tmp/cms.log
+            exit 1
+          fi
+          
+          echo "✓ Authentication successful"
+          
+          # Trigger export
+          EXPORT_RESPONSE=$(curl -s -X POST http://localhost:8080/api/exports \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $TOKEN")
+          
+          echo "Export response: $EXPORT_RESPONSE"
+          
+          # Kill CMS server
+          kill $CMS_PID
+          
+          # Verify export was successful
+          if [ -d "exports/content/posts" ]; then
+            echo "✓ Export successful"
+            ls -la exports/content/posts/
+          else
+            echo "✗ Export failed"
+            exit 1
+          fi
 
-      - name: Commit changes
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changed == 'true'
         run: |
           git config user.name "Blog Sync Bot"
           git config user.email "bot@blog.local"
-          git add hugo/content/
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: sync posts from database"
+          git add exports/
+          git commit -m "chore: sync posts from database [skip ci]"
           git push
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
 
       - name: Build Hugo site
         run: |
-          cd hugo
-          hugo -d ../public
+          cd exports
+          hugo --minify --destination ../public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          commit_message: "Deploy: ${{ github.event.head_commit.message || 'Scheduled sync' }}"

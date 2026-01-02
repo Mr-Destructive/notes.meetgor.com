@@ -1,210 +1,243 @@
-# Blog System
+# Blog CMS + Static Site
 
-A modern blog platform combining Turso database, password-protected editor, and static site generation.
+A lightweight blog system with:
+- **Pure Go + HTMX CMS** - Password-protected editor with crisp UI
+- **Netlify Functions** - Serverless backend (Turso SQLite compatible)
+- **Hugo Static Site** - Auto-synced posts with previews, tags, series
+- **Multiple Post Types** - Articles, reviews, TILs, snippets, essays, etc.
+
+## Stack
+
+- **Backend**: Pure Go (net/http)
+- **CMS UI**: HTMX + HTML (server-rendered, no JS framework)
+- **Database**: SQLite (local) or Turso (production)
+- **Serverless**: Netlify Functions
+- **Static Site**: Hugo
+- **Sync**: Daily cron job
+- **Auth**: Password + JWT tokens
 
 ## Features
 
-- **Multiple Post Types**: Articles, reviews, thoughts, links, TILs, quotes, lists, notes, snippets, essays, tutorials, interviews, experiments
-- **Password-Protected Admin Panel**: Rich markdown editor with form templates for each post type
-- **Database**: Turso-hosted SQLite with automatic backup and version history
-- **Static Generation**: GitHub Actions cronjob exports posts to markdown and generates static HTML with Hugo
-- **Extensible Schema**: Type-specific metadata fields for customization
+✓ 12 post types (articles, reviews, TILs, quotes, snippets, essays, etc.)  
+✓ Post drafts with revision history  
+✓ Series/collections for grouping posts  
+✓ Tagging system  
+✓ Markdown editor with live preview  
+✓ Link preview extraction (images, YouTube, Twitter)  
+✓ JSON metadata per post type  
+✓ Status: draft/published/archived  
+✓ Featured posts  
+✓ Auto-export to Hugo markdown  
 
-## Tech Stack
+## Quick Start
 
-- **Backend**: Hono (TypeScript)
-- **Database**: Turso (SQLite)
-- **Frontend**: Plain HTML/JS (lightweight)
-- **Export**: Node.js + Turso client
-- **Static Site**: Hugo
-- **CI/CD**: GitHub Actions
-
-## Setup
-
-### 1. Create Turso Database
+### 1. Clone & Setup
 
 ```bash
-# Install Turso CLI
-curl -sSfL https://get.turso.io | bash
-
-# Create database
-turso db create my-blog
-
-# Get connection details
-turso db show my-blog
+git clone <repo>
+cd blog
+cp .env.example .env
 ```
 
-### 2. Backend Setup
+### 2. Configure Environment
 
 ```bash
-cd backend
-cp ../.env.example .env
-
-# Edit .env with:
-# - TURSO_CONNECTION_URL
-# - TURSO_AUTH_TOKEN
-# - ADMIN_PASSWORD (set a strong password)
-# - JWT_SECRET
-
-npm install
-npm run db:init  # Initialize schema
-
-npm run dev  # Start dev server on port 3000
+# .env
+DATABASE_URL=file:./blog.db           # Local SQLite
+ADMIN_PASSWORD=your-secure-password   # Set a strong password
+JWT_SECRET=your-jwt-secret-key        # Random string
+PORT=8080
+ENV=development
 ```
 
-### 3. Generate Password Hash
+For **Turso** (production):
+```bash
+DATABASE_URL=libsql://[db]-[org].turso.io?authToken=[token]
+```
+
+### 3. Initialize Database
 
 ```bash
-node -e "const bcrypt = require('bcryptjs'); bcrypt.hash('your-password', 10).then(hash => console.log(hash));"
+go run cmd/cms/main.go
 ```
 
-Add the hash to `.env` as `PASSWORD_HASH`.
+Output should show schema initialized with 12 post types.
 
-### 4. Frontend
-
-Open `frontend/login.html` in browser (or serve with `npx http-server`).
-
-- Login with your password
-- Use the rich editor to create posts
-- Select post type to get type-specific form fields
-- Save as draft or publish directly
-
-### 5. GitHub Actions Setup
+### 4. Start CMS Server
 
 ```bash
-# Add secrets to GitHub repository
-gh secret set TURSO_CONNECTION_URL
-gh secret set TURSO_AUTH_TOKEN
+export $(cat .env | xargs)
+go run cmd/functions/main.go
 ```
 
-The cronjob will:
-- Run every 6 hours (configurable)
-- Fetch published posts from Turso
-- Generate markdown files with Hugo frontmatter
-- Commit to repo
-- Build and deploy static site to GitHub Pages
+Server runs on `http://localhost:8080`
 
-## API Endpoints
+### 5. Access CMS
+
+Open browser to `http://localhost:8080` (coming next: HTMX admin UI)
+
+## Project Structure
 
 ```
-POST   /api/auth/login           # Login with password
-POST   /api/posts                # Create post
-GET    /api/posts                # List posts
-GET    /api/posts/:id            # Get post by ID or slug
-PUT    /api/posts/:id            # Update post
-DELETE /api/posts/:id            # Delete post
-GET    /api/posts/:id/revisions  # Get revision history
+.
+├── cmd/
+│   ├── cms/
+│   │   └── main.go              # Database initialization
+│   └── functions/
+│       └── main.go              # Netlify Functions handler
+├── internal/
+│   ├── db/
+│   │   ├── client.go            # Database connection
+│   │   ├── posts.go             # Post CRUD
+│   │   ├── series.go            # Series CRUD
+│   │   └── schema.sql           # Database schema
+│   ├── models/
+│   │   └── models.go            # Data structures
+│   ├── handler/
+│   │   └── auth.go              # Authentication
+│   ├── editor/
+│   │   └── [coming next]        # Markdown & preview utils
+│   └── util/
+│       └── util.go              # Helpers
+├── web/
+│   ├── templates/               # [coming next]
+│   └── static/                  # [coming next]
+├── netlify.toml                 # Netlify config
+├── go.mod
+├── API.md                       # API documentation
+├── ARCHITECTURE.md              # Technical overview
+└── README.md
 ```
 
-Query parameters:
-- `type`: Filter by post type (article, review, etc.)
-- `status`: Filter by status (draft, published, archived)
-- `limit`: Results per page (default: 50)
-- `offset`: Pagination offset
+## API
 
-## Post Types & Templates
+See [API.md](./API.md) for full endpoint documentation.
 
-Each post type has predefined form fields:
+Quick examples:
 
-- **article** - Full articles with categories
-- **review** - Book/movie/product reviews with ratings
-- **thought** - Quick reflections
-- **link** - Curated links with commentary
-- **til** - Today I Learned (difficulty levels)
-- **quote** - Quotations with attribution
-- **list** - Ordered/unordered curated lists
-- **note** - Quick notes (can be private)
-- **snippet** - Code snippets with syntax highlighting
-- **essay** - Long-form personal essays
-- **tutorial** - Step-by-step guides with difficulty
-- **interview** - Q&A format interviews
-- **experiment** - Technical experiments
+### Login
+```bash
+curl -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"password":"your-password"}'
+```
+
+### Create a post
+```bash
+curl -X POST http://localhost:8080/api/posts \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type_id": "article",
+    "title": "Hello World",
+    "slug": "hello-world",
+    "content": "# Content here",
+    "excerpt": "Summary",
+    "status": "draft"
+  }'
+```
+
+### List posts
+```bash
+curl http://localhost:8080/api/posts?status=published
+```
+
+## Post Types
+
+Predefined templates for different content:
+
+| Type | Fields | Use Case |
+|------|--------|----------|
+| **article** | title, content, tags, reading_time | Full articles |
+| **review** | title, content, rating, subject_link | Book/movie/product reviews |
+| **thought** | title, content, tags | Quick reflections |
+| **link** | title, url, excerpt, tags | Curated links |
+| **til** | title, content, category, difficulty | Today I Learned |
+| **quote** | text, author, source | Quotations |
+| **list** | title, items, list_type | Curated lists |
+| **note** | title, content, is_private | Quick notes |
+| **snippet** | title, code, language | Code snippets |
+| **essay** | title, content, reading_time | Long-form writing |
+| **tutorial** | title, content, difficulty | Step-by-step guides |
+| **interview** | title, questions, answers | Q&A interviews |
+
+Each type stores additional metadata in JSON for flexibility.
 
 ## Database Schema
 
-```sql
-posts (id, type_id, title, slug, content, excerpt, status, tags, metadata, ...)
-post_types (id, name, slug, description)
-revisions (id, post_id, content, created_at)
+### Tables
+
+- **posts** - Main content (id, type_id, title, slug, content, tags, metadata, status, published_at)
+- **post_types** - Templates (article, review, etc.)
+- **series** - Collections (name, slug, description)
+- **post_series** - Many-to-many post↔series mapping
+- **revisions** - Version history
+- **settings** - Configuration key-value pairs
+
+See `internal/db/schema.sql` for full schema.
+
+## Development vs Production
+
+### Local Development
+```bash
+# Uses local SQLite
+DATABASE_URL=file:./blog.db go run cmd/functions/main.go
 ```
 
-Type-specific data stored in `metadata` JSON column for flexibility.
-
-## Extending
-
-### Add New Post Type
-
-1. Add to `POST_TEMPLATES` in `backend/src/types.ts`
-2. Define type-specific metadata interface
-3. Create form fields in `frontend/editor.js` POST_TEMPLATES
-4. Metadata automatically exports to Hugo frontmatter
-
-### Custom Hugo Theme
-
-```
-hugo/
-├── themes/
-│   └── my-theme/
-├── content/     # Auto-generated markdown
-└── config.toml
+### Production (Netlify)
+```bash
+# Uses Turso + Netlify Functions
+DATABASE_URL=libsql://... netlify deploy
 ```
 
-Run `hugo -d ../public` to build static site.
+Netlify automatically:
+1. Builds Go binary from `cmd/functions/main.go`
+2. Deploys as serverless function
+3. Routes `/api/*` to the handler
+4. Serves static site from `public/`
 
 ## Deployment
 
-### Backend
-- **Vercel**: `npm run build && npm run start`
-- **Railway/Fly.io**: Docker + Node.js
-- **Heroku**: Buildpack for Node.js
+### To Netlify
 
-### Static Site
-- **GitHub Pages**: Auto-deployed via Actions
-- **Netlify**: Connect repo, set build command to `hugo -d public`
-- **Vercel**: Static export with `hugo` build
+1. Connect GitHub repo
+2. Set environment variables:
+   - `DATABASE_URL=libsql://...turso.io...`
+   - `ADMIN_PASSWORD=...`
+   - `JWT_SECRET=...`
+   - `ENV=production`
+3. Netlify builds and deploys automatically
 
-## Cronjob Customization
-
-Edit `.github/workflows/sync-posts.yml`:
-
-```yaml
-- cron: '0 */6 * * *'  # Run every 6 hours
-- cron: '0 * * * *'    # Run every hour
-- cron: '0 0 * * *'    # Run daily
-```
-
-## Security Notes
-
-- Passwords are bcrypt-hashed
-- JWTs valid for 7 days (configurable)
-- All connections to Turso are HTTPS
-- GitHub Actions secrets never exposed
-- Admin panel is password-protected
-
-## Local Development
-
+### To Custom Domain
 ```bash
-# Backend
-cd backend
-npm run dev
-
-# Frontend (separate terminal)
-cd frontend
-npx http-server
-
-# Database (local SQLite for testing)
-DATABASE_URL=file:./dev.db npm run db:init
+netlify deploy --prod
 ```
 
-Use local SQLite during development, switch to Turso for production.
+### Local Build
+```bash
+go build -o cms ./cmd/functions/main.go
+./cms
+```
 
-## Troubleshooting
+## Next Steps
 
-**Auth fails**: Check PASSWORD_HASH matches your password
-**Posts not exporting**: Verify TURSO_CONNECTION_URL and token
-**Cronjob doesn't run**: Check GitHub Actions secrets are set
-**Hugo build fails**: Verify `hugo/config.toml` and theme setup
+- [ ] HTMX CMS frontend (dashboard, editor, components)
+- [ ] Markdown editor with preview
+- [ ] Link preview extraction (images, YouTube, Twitter embeds)
+- [ ] Hugo markdown export job
+- [ ] Static site with filtering/tagging/series
+- [ ] Search functionality
+- [ ] Admin-only posts (private notes)
+- [ ] Analytics/stats
+- [ ] Categories/topic organization
+- [ ] Multiple author support
 
----
+## Architecture Docs
 
-Made with ❤️ for bloggers
+- [API.md](./API.md) - Full API reference
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - System design
+- [DESIGN.md](./DESIGN.md) - Original specifications
+
+## License
+
+MIT

@@ -1,0 +1,130 @@
+name: Sync Posts (Remote API)
+
+on:
+  schedule:
+    # Run every 6 hours (0, 6, 12, 18 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Fetch published posts from remote API
+        env:
+          CMS_URL: ${{ secrets.CMS_URL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        run: |
+          # Login and get token
+          TOKEN=$(curl -s -X POST "${CMS_URL}/api/auth/login" \
+            -H "Content-Type: application/json" \
+            -d "{\"password\":\"$ADMIN_PASSWORD\"}" | jq -r '.token')
+          
+          if [ "$TOKEN" = "null" ] || [ -z "$TOKEN" ]; then
+            echo "✗ Authentication failed"
+            exit 1
+          fi
+          
+          echo "✓ Authentication successful"
+          
+          # Trigger export API
+          curl -s -X POST "${CMS_URL}/api/exports" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $TOKEN" | jq .
+          
+          echo "✓ Export triggered (backend side)"
+
+      - name: Download exported posts
+        env:
+          CMS_URL: ${{ secrets.CMS_URL }}
+        run: |
+          # Fetch published posts as JSON
+          curl -s "${CMS_URL}/api/exports" > /tmp/posts.json
+          
+          mkdir -p exports/content/posts
+          
+          # Parse JSON and generate markdown files
+          cat > /tmp/export.sh << 'EOF'
+          #!/bin/bash
+          cat /tmp/posts.json | jq -r '.[] | 
+            "---\n" +
+            "title: \"\(.title)\"\n" +
+            "date: \(.created_at | split("T")[0])\n" +
+            "slug: \(.slug)\n" +
+            "draft: false\n" +
+            "type: \(.type_id)\n" +
+            "description: \"\(.excerpt)\"\n" +
+            (if .tags then "tags: " + (.tags | @json) + "\n" else "" end) +
+            "---\n\n" +
+            .content' > "exports/content/posts/\(.slug).md"
+          EOF
+          
+          jq -r '.[] | {title, created_at, slug, excerpt, type_id, tags, content}' /tmp/posts.json | \
+          while IFS= read -r post; do
+            slug=$(echo "$post" | jq -r '.slug')
+            title=$(echo "$post" | jq -r '.title')
+            date=$(echo "$post" | jq -r '.created_at | split("T")[0]')
+            type=$(echo "$post" | jq -r '.type_id')
+            excerpt=$(echo "$post" | jq -r '.excerpt // ""')
+            content=$(echo "$post" | jq -r '.content')
+            tags=$(echo "$post" | jq -r '.tags // []')
+            
+            cat > "exports/content/posts/${slug}.md" << YAML
+---
+title: "$title"
+date: $date
+slug: $slug
+draft: false
+type: $type
+description: "$excerpt"
+tags: $tags
+---
+
+$content
+YAML
+          done
+          
+          echo "✓ Generated $(ls -1 exports/content/posts | wc -l) markdown files"
+          ls -la exports/content/posts/
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit changes
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Blog Sync Bot"
+          git config user.email "bot@blog.local"
+          git add exports/content/
+          git commit -m "chore: sync posts from CMS [skip ci]"
+          git push
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Hugo site
+        run: |
+          cd exports
+          hugo --minify --destination ../public
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          commit_message: "Deploy: Scheduled sync at $(date)"

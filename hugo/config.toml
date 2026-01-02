@@ -1,8 +1,0 @@
-baseURL = "https://your-blog-domain.com/"
-languageCode = "en-us"
-title = "My Blog"
-theme = "simple"
-publishDir = "public"
-
-[outputs]
-home = ["HTML"]

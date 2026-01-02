@@ -1,353 +1,278 @@
-# Step-by-Step Setup Guide
+# Setup Guide
 
-## Prerequisites
+Complete setup for Blog CMS + Static Site with pure Go + HTMX backend and Netlify deployment.
 
-- Node.js 18+ (check: `node --version`)
-- npm (comes with Node.js)
-- Git (for GitHub Actions)
-- Turso account (free tier at turso.io)
-- GitHub account (for Actions)
+## Development Setup
 
-## Step 1: Create Turso Database
+### 1. Prerequisites
+
+- Go 1.23+
+- Git
+- curl/httpie (for testing)
+
+### 2. Clone & Configure
 
 ```bash
-# Install Turso CLI
-curl -sSfL https://get.turso.io | bash
-export PATH="$PATH:$HOME/.turso"
+git clone <repo>
+cd blog
+cp .env.example .env
+```
 
-# Login (opens browser)
-turso auth login
+Edit `.env` with your preferences:
+```bash
+# For development (simple password)
+DATABASE_URL=file:./blog.db
+ADMIN_PASSWORD=your-secure-password
+JWT_SECRET=your-random-jwt-secret
+ENV=development
+PORT=8080
+```
+
+### 3. Initialize Database
+
+First time only - creates tables and seeds post types:
+
+```bash
+go run cmd/cms/main.go
+```
+
+You should see output like:
+```
+✓ Database initialized successfully
+✓ Schema created
+✓ Found 12 post types:
+  - Article (article)
+  - Review (review)
+  ...
+```
+
+### 4. Start Local Server
+
+```bash
+go build -o cms ./cmd/functions/main.go
+./cms
+```
+
+Or with environment variables:
+```bash
+DATABASE_URL="file:./blog.db" ADMIN_PASSWORD="test" JWT_SECRET="secret" ./cms
+```
+
+Server runs on `http://localhost:8080`
+
+### 5. Test the API
+
+```bash
+# Login
+TOKEN=$(curl -s -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"password":"your-password"}' | jq -r '.token')
+
+# Create a post
+curl -X POST http://localhost:8080/api/posts \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type_id": "article",
+    "title": "Hello World",
+    "slug": "hello-world",
+    "content": "# Hello\n\nThis is my first post!",
+    "excerpt": "My first post",
+    "tags": ["hello"],
+    "status": "draft"
+  }'
+
+# List posts
+curl http://localhost:8080/api/posts | jq .
+
+# Get a single post
+curl http://localhost:8080/api/posts/{post-id} | jq .
+```
+
+Full API documentation: see [API.md](./API.md)
+
+## Production Setup (Netlify)
+
+### Prerequisites
+
+- GitHub repository
+- Netlify account
+- Turso database account
+
+### 1. Create Turso Database
+
+```bash
+# Install Turso CLI if needed
+curl -sSfL https://get.turso.io | bash
 
 # Create database
-turso db create blog-db
+turso db create my-blog-cms
 
-# Get connection details
-turso db show blog-db --json
+# Get connection URL
+turso db show my-blog-cms
+# Copy the libsql:// URL
 
-# You'll need:
-# - URL (libsql://...)
-# - TOKEN (from turso db tokens create blog-db)
-
-turso db tokens create blog-db
-```
-
-Save the connection URL and token somewhere safe.
-
----
-
-## Step 2: Setup Backend
-
-```bash
-cd backend
-
-# Create .env file
-cat > .env << 'EOF'
-# Database
-TURSO_CONNECTION_URL=libsql://your-db.turso.io
-TURSO_AUTH_TOKEN=your-token-here
-
-# Auth
-ADMIN_PASSWORD=your-strong-password-here
-JWT_SECRET=your-random-jwt-secret-here
-
-# Server
-API_PORT=3000
-API_URL=http://localhost:3000
-
-# For dev, optional local SQLite:
-DATABASE_URL=file:./dev.db
-EOF
-```
-
-Replace the placeholder values with your actual Turso details.
-
-### Generate Password Hash
-
-```bash
-# Install dependencies first
-npm install
-
-# Generate bcrypt hash of your password
-node << 'EOF'
-const bcrypt = require('bcryptjs');
-const password = 'your-strong-password-here'; // Use same as ADMIN_PASSWORD
-
-bcrypt.hash(password, 10).then(hash => {
-  console.log('Add this to .env as PASSWORD_HASH:');
-  console.log(`PASSWORD_HASH=${hash}`);
-});
-EOF
-```
-
-Copy the hash and add it to `.env`:
-```
-PASSWORD_HASH=your-generated-hash-here
-```
-
-### Initialize Database
-
-```bash
-# Create and populate database schema
-npm run db:init
-
-# You should see: "Database initialized successfully"
-```
-
-### Start Backend Server
-
-```bash
-npm run dev
-
-# You should see: "Server running on http://localhost:3000"
-```
-
-Keep this terminal open.
-
----
-
-## Step 3: Setup Frontend
-
-Open new terminal:
-
-```bash
-cd frontend
-
-# Start a simple HTTP server
-npx http-server -p 8080
-
-# Open browser: http://localhost:8080/login.html
-```
-
-### First Login
-
-1. Open http://localhost:8080/login.html
-2. Enter your `ADMIN_PASSWORD`
-3. Click "Sign In"
-4. You should be redirected to editor.html
-
-If it fails, check:
-- Is backend running on port 3000?
-- Is password correct?
-- Check browser console (F12) for errors
-
----
-
-## Step 4: Create Your First Post
-
-1. Stay on editor.html
-2. Fill in form:
-   - **Title**: "Hello World"
-   - **Type**: Article
-   - **Content**: "My first blog post"
-   - Add a tag (e.g., "intro")
-3. Click "Save as Draft"
-4. Or click "Publish" directly
-
-Check backend console - you should see database queries.
-
----
-
-## Step 5: Verify Database
-
-Terminal:
-```bash
-# Connect to Turso database
-turso db shell blog-db
-
-# Check posts table
-SELECT * FROM posts;
-
-# Exit with Ctrl+D
-```
-
-You should see your post in the database.
-
----
-
-## Step 6: Test API Directly (Optional)
-
-```bash
 # Get auth token
-curl -X POST http://localhost:3000/api/auth/login \
+turso auth tokens issue
+```
+
+### 2. Add Netlify Configuration
+
+File: `netlify.toml` (already included)
+```toml
+[build]
+  command = "mkdir -p netlify/functions && go build -o netlify/functions/cms ./cmd/functions/main.go"
+  functions = "netlify/functions"
+  publish = "public"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/cms/:splat"
+  status = 200
+```
+
+### 3. Push to GitHub
+
+```bash
+git add .
+git commit -m "Initial blog cms setup"
+git push origin main
+```
+
+### 4. Deploy to Netlify
+
+Option A: Through Netlify UI
+1. Go to [netlify.com](https://netlify.com)
+2. Click "New site from Git"
+3. Select your repository
+4. Set environment variables (see below)
+5. Deploy
+
+Option B: Via CLI
+```bash
+netlify login
+netlify deploy --prod
+```
+
+### 5. Configure Environment Variables
+
+In Netlify dashboard, go to `Site settings → Environment` and add:
+
+```
+DATABASE_URL=libsql://your-db-name-org.turso.io?authToken=your-token
+ADMIN_PASSWORD=your-secure-password
+JWT_SECRET=your-random-jwt-secret
+ENV=production
+```
+
+### 6. Verify Deployment
+
+```bash
+# Test API endpoint
+curl https://your-site.netlify.app/api/types | jq .
+
+# Login
+TOKEN=$(curl -s -X POST https://your-site.netlify.app/api/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"password":"your-password"}'
-
-# Response: {"token":"eyJ...","expires_in":604800}
-
-# Save token
-TOKEN="eyJ..."
-
-# Get all posts
-curl http://localhost:3000/api/posts \
-  -H "Authorization: Bearer $TOKEN"
+  -d '{"password":"your-password"}' | jq -r '.token')
 
 # Create post
-curl -X POST http://localhost:3000/api/posts \
-  -H "Content-Type: application/json" \
+curl -X POST https://your-site.netlify.app/api/posts \
   -H "Authorization: Bearer $TOKEN" \
-  -d '{
-    "type_id":"thought",
-    "title":"Test Post",
-    "content":"Just testing the API",
-    "tags":["test"]
-  }'
+  -H "Content-Type: application/json" \
+  -d '{...}'
 ```
 
----
+## Database Migration
 
-## Step 7: GitHub Actions Setup (Optional for Now)
+### From Local SQLite to Turso
 
-Skip if you just want local setup. Setup later when ready to deploy.
-
+1. Export local data (if needed):
 ```bash
-# Push to GitHub first
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/your-username/blog
-git push -u origin main
-
-# Add secrets to GitHub
-gh secret set TURSO_CONNECTION_URL -b "libsql://your-db.turso.io"
-gh secret set TURSO_AUTH_TOKEN -b "your-token-here"
-
-# Trigger workflow manually or wait for schedule
-gh workflow run sync-posts.yml
+sqlite3 blog.db "SELECT * FROM posts;" > posts_backup.sql
 ```
 
----
-
-## Step 8: Hugo Setup (Optional)
-
+2. Update `DATABASE_URL` in `.env`:
 ```bash
-# Install Hugo
-# macOS: brew install hugo
-# Linux: sudo apt install hugo
-# Windows: choco install hugo-extended
+# Before:
+DATABASE_URL=file:./blog.db
 
-# Test Hugo
-hugo version
-
-# Initialize if not exists
-hugo new site hugo
-
-# Add a theme
-cd hugo
-git init
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-echo "theme = 'ananke'" >> hugo.toml
-
-# Test build
-hugo -d ../public
-
-# Serve locally
-hugo server -D
+# After:
+DATABASE_URL=libsql://[your-turso-db].turso.io?authToken=[token]
 ```
 
----
+3. Initialize Turso database with schema:
+```bash
+go run cmd/cms/main.go
+```
+
+4. Migrate data (if needed - use your backup SQL)
 
 ## Troubleshooting
 
-### "Connection refused" on login
-- Check backend is running: `npm run dev`
-- Verify port 3000 is not in use: `lsof -i :3000`
-- Check firewall
+### "database file is locked"
+Multiple processes accessing the same SQLite file. Close other connections or restart.
+
+### "no such table: posts"
+Run database initialization:
+```bash
+go run cmd/cms/main.go
+```
 
 ### "Invalid credentials"
-- Verify password matches `ADMIN_PASSWORD` in `.env`
-- Verify `PASSWORD_HASH` is set correctly
-- Regenerate hash if unsure
+Check:
+- `ADMIN_PASSWORD` env variable is set
+- Password matches what you're sending
+- Or use `PASSWORD_HASH` with bcrypt hash instead
 
-### "Database error"
-- Check `TURSO_CONNECTION_URL` is correct
-- Verify `TURSO_AUTH_TOKEN` is valid
-- Try: `turso db shell blog-db` to test connection
-- Check `.env` file exists in backend folder
+### Netlify deployment fails
+Check:
+- Go version: `netlify env:list`
+- Ensure `DATABASE_URL` is set in Netlify environment
+- Check build logs in Netlify dashboard
+- Verify Turso token is valid: `turso auth tokens list`
 
-### Posts not saving
-- Check backend console for errors
-- Open browser DevTools (F12) → Console
-- Check network tab for 401/500 errors
-- Verify JWT token is being sent
-
-### "CORS errors"
-- Backend should handle CORS automatically with Hono
-- If issues, check request headers in DevTools
-
-### Can't run `npm run db:init`
-- Check you're in `backend/` folder
-- Run `npm install` first
-- Check Node.js version: `node --version` (should be 18+)
-
----
+### Posts not appearing after creating
+Check post `status` field. Only `published` posts show in public queries by default:
+```bash
+# See all posts including drafts
+curl http://localhost:8080/api/posts?status=draft
+```
 
 ## Next Steps
 
-Once setup works:
+- [ ] Build HTMX frontend (admin dashboard, editor)
+- [ ] Add link preview extraction
+- [ ] Create Hugo export job
+- [ ] Set up automatic daily sync to static site
+- [ ] Add full-text search
+- [ ] Build public site with filtering/tagging
+- [ ] Add analytics
 
-1. **Create more posts** - Try different post types in editor
-2. **Add Hugo theme** - Customize `hugo/` for static site
-3. **Configure GitHub Actions** - Setup cronjob and auto-deploy
-4. **Deploy backend** - Push to Vercel, Railway, or Fly.io
-5. **Deploy static site** - Setup GitHub Pages or Netlify
-
----
-
-## File Structure After Setup
+## File Structure
 
 ```
-blog/author/
-├── .env                    ← Created in step 2
-├── backend/
-│   ├── .env               ← Your secrets
-│   ├── dev.db             ← Local SQLite (optional)
-│   ├── node_modules/      ← npm packages
-│   ├── src/
-│   │   ├── db/
-│   │   │   └── schema.sql
-│   │   ├── api/
-│   │   ├── types.ts
-│   │   └── index.ts       ← Main server
-│   └── package.json
-├── frontend/
-│   ├── login.html
-│   ├── editor.html
-│   ├── editor.js
-│   └── login.js
-├── hugo/                  ← Add after step 8
-│   ├── config.toml
-│   ├── content/           ← Auto-populated by cronjob
-│   └── themes/
-└── cronjob/
-    └── export.ts
-
+.
+├── cmd/
+│   ├── cms/main.go                  # DB initialization
+│   └── functions/main.go            # API server (Netlify)
+├── internal/
+│   ├── db/                          # Database layer
+│   ├── models/                      # Data structures
+│   ├── handler/                     # API handlers
+│   ├── editor/                      # [coming: markdown utils]
+│   └── util/                        # Helpers
+├── netlify.toml                     # Netlify config
+├── .env.example                     # Configuration template
+├── go.mod / go.sum                  # Go dependencies
+├── API.md                           # API documentation
+├── ARCHITECTURE.md                  # System design
+├── README.md                        # Overview
+└── SETUP.md                         # This file
 ```
 
----
+## Support
 
-## Commands Reference
+See [API.md](./API.md) for complete endpoint reference.
 
-```bash
-# Backend
-cd backend && npm run dev        # Start dev server
-cd backend && npm run db:init    # Initialize database
-cd backend && npm run build      # Build for production
-
-# Frontend
-cd frontend && npx http-server   # Serve on localhost:8080
-
-# Turso
-turso db show blog-db            # Show database info
-turso db shell blog-db           # Open database shell
-turso db tokens create blog-db   # Create new token
-turso db delete blog-db          # Delete database
-
-# GitHub
-git push origin main             # Push to GitHub
-gh workflow run sync-posts.yml   # Manually trigger action
-gh secret set KEY VALUE          # Set repository secret
-```
-
----
-
-Ready? Start with **Step 1** below.
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for system design details.
