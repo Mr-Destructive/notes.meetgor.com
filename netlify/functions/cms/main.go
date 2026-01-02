@@ -95,8 +95,11 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 	}
 
 	if id != "" {
-		// Get single post
-		post, err := queries.GetPost(ctx, id)
+		// Get single post by ID or slug
+		post, err := queries.GetPost(ctx, gen.GetPostParams{
+			ID:   id,
+			Slug: id,
+		})
 		if err != nil {
 			log.Printf("GetPost error: %v", err)
 			return respondError(404, "Post not found"), nil
@@ -105,14 +108,20 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 	}
 
 	// List posts with optional filters
-	limit := 50
-	offset := 0
 	status := req.QueryStringParameters["status"]
 	if status == "" {
 		status = "published"
 	}
 
-	posts, err := queries.ListPosts(ctx)
+	limit := int64(50)
+	offset := int64(0)
+
+	posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
+		Status: status,
+		TypeID: nil,
+		Offset: offset,
+		Limit:  limit,
+	})
 	if err != nil {
 		log.Printf("ListPosts error: %v", err)
 		return respondError(500, "Failed to fetch posts"), nil
@@ -136,19 +145,14 @@ func handleTypes(req events.APIGatewayProxyRequest, ctx context.Context, queries
 	return respondJSON(200, types), nil
 }
 
-// handleTags returns all tags
+// handleTags returns all posts (for now, tags would require aggregation)
 func handleTags(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
 	if req.HTTPMethod != "GET" {
 		return respondError(405, "Method not allowed"), nil
 	}
 
-	tags, err := queries.GetTags(ctx)
-	if err != nil {
-		log.Printf("GetTags error: %v", err)
-		return respondError(500, "Failed to fetch tags"), nil
-	}
-
-	return respondJSON(200, tags), nil
+	// GetTags not implemented yet - return empty array
+	return respondJSON(200, []map[string]interface{}{}), nil
 }
 
 // handleExports returns published posts for export
@@ -158,7 +162,12 @@ func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queri
 	}
 
 	// Get published posts only
-	posts, err := queries.ListPosts(ctx)
+	posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
+		Status: "published",
+		TypeID: nil,
+		Offset: 0,
+		Limit:  1000,
+	})
 	if err != nil {
 		log.Printf("ListPosts error: %v", err)
 		return respondError(500, "Failed to fetch posts"), nil
