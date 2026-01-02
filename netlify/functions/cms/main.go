@@ -20,7 +20,7 @@ import (
 var database *db.DB
 
 func init() {
-	godotenv.Load()
+	// Skip .env loading in Lambda
 	log.Println("CMS function initializing...")
 }
 
