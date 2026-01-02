@@ -28,15 +28,13 @@ func init() {
 func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	log.Printf("Request: %s %s", req.HTTPMethod, req.Path)
 
-	// Initialize database if needed
-	if database == nil {
-		var err error
-		database, err = db.New(req.RequestContext.RequestTimeEpoch)
-		if err != nil {
-			log.Printf("Database init error: %v", err)
-			return respondError(500, fmt.Sprintf("Database error: %v", err)), nil
-		}
-	}
+	// Note: Database initialization disabled for Lambda
+	// Lambda is ephemeral - use Turso remote DB instead
+	// if database == nil {
+	// 	var err error
+	// 	database, err = db.New(ctx)
+	// 	...
+	// }
 
 	// Parse path
 	path := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
