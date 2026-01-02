@@ -211,7 +211,7 @@
                 alert.textContent = 'Login successful! Redirecting...';
                 
                 setTimeout(() => {
-                    window.location.href = 'editor.html';
+                    window.location.href = '/.netlify/functions/cms/editor';
                 }, 1000);
 
             } catch (error) {
@@ -226,7 +226,7 @@
         window.addEventListener('load', () => {
             const token = localStorage.getItem('auth_token');
             if (token) {
-                window.location.href = 'editor.html';
+                window.location.href = '/.netlify/functions/cms/editor';
             }
         });
     </script>

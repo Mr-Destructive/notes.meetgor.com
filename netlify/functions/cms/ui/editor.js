@@ -263,14 +263,14 @@ function showAlert(message, type) {
 
 function logout() {
   localStorage.removeItem('auth_token');
-  window.location.href = 'login';
+  window.location.href = '/.netlify/functions/cms/login';
 }
 
 // Check auth on page load
 window.addEventListener('load', () => {
   const token = localStorage.getItem('auth_token');
   if (!token) {
-    window.location.href = 'login';
+    window.location.href = '/.netlify/functions/cms/login';
   }
   changePostType(); // Initialize type-specific fields
 });

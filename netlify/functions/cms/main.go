@@ -78,8 +78,11 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	fullPath := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
 	fullPath = strings.Trim(fullPath, "/")
 
-	// Serve UI files (login, editor, assets)
-	if fullPath == "" || fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
+	// Serve UI files (login is default at root, editor, assets)
+	if fullPath == "" {
+		return serveUI("login")
+	}
+	if fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
 		return serveUI(fullPath)
 	}
 
