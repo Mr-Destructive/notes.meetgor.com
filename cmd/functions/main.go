@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"blog/internal/db"
-	"blog/internal/handler"
+	h "blog/internal/handler"
 	"blog/internal/models"
 	"blog/internal/ssg"
 
@@ -84,7 +84,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 		switch resource {
 		case "dashboard":
-			handler.HandleAdminDashboard(w, r, database)
+			h.HandleAdminDashboard(w, r, database)
 		case "posts":
 			if action == "edit" {
 				// TODO: Handle post edit view
@@ -93,7 +93,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 				// TODO: Handle new post form
 				respondError(w, http.StatusNotImplemented, "New post form not yet implemented")
 			} else {
-				handler.HandlePostsList(w, r, database)
+				h.HandlePostsList(w, r, database)
 			}
 		case "series":
 			if action == "edit" {
@@ -103,14 +103,14 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 				// TODO: Handle new series form
 				respondError(w, http.StatusNotImplemented, "New series form not yet implemented")
 			} else {
-				handler.HandleSeriesList(w, r, database)
+				h.HandleSeriesList(w, r, database)
 			}
 		case "types":
-			handler.HandlePostTypes(w, r, database)
+			h.HandlePostTypes(w, r, database)
 		case "export":
-			handler.HandleExportPage(w, r, database)
+			h.HandleExportPage(w, r, database)
 		default:
-			handler.HandleAdminDashboard(w, r, database)
+			h.HandleAdminDashboard(w, r, database)
 		}
 		return
 	}
@@ -168,13 +168,13 @@ func handleAuth(w http.ResponseWriter, r *http.Request, db *db.DB, action string
 			respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
 			return
 		}
-		handler.HandleLogin(w, r, db)
+		h.HandleLogin(w, r, db)
 
 	case "logout":
-		handler.HandleLogout(w, r)
+		h.HandleLogout(w, r)
 
 	case "verify":
-		handler.HandleVerify(w, r)
+		h.HandleVerify(w, r)
 
 	default:
 		respondError(w, http.StatusNotFound, "Auth endpoint not found")
