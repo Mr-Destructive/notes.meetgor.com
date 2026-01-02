@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"database/sql"
+	"embed"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -14,6 +15,9 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	_ "github.com/tursodatabase/libsql-client-go/libsql"
 )
+
+//go:embed ui/*
+var uiFiles embed.FS
 
 func init() {
 	log.Println("CMS function initializing...")
@@ -69,8 +73,16 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	}
 
 	// Parse path
-	path := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
-	path = strings.TrimPrefix(path, "/api")
+	fullPath := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
+	fullPath = strings.Trim(fullPath, "/")
+
+	// Serve UI files (login, editor, assets)
+	if fullPath == "" || fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
+		return serveUI(fullPath)
+	}
+
+	// API routes
+	path := strings.TrimPrefix(fullPath, "api")
 	path = strings.Trim(path, "/")
 
 	if path == "" {
@@ -275,6 +287,39 @@ func initSchemaIfNotExists(ctx context.Context, db *sql.DB) error {
 
 	log.Println("Schema initialized")
 	return nil
+}
+
+// serveUI serves the embedded UI files
+func serveUI(page string) (events.APIGatewayProxyResponse, error) {
+	var filename, contentType string
+	
+	switch page {
+	case "editor":
+		filename = "ui/editor.html"
+		contentType = "text/html; charset=utf-8"
+	case "editor.js":
+		filename = "ui/editor.js"
+		contentType = "application/javascript; charset=utf-8"
+	case "login", "":
+		filename = "ui/login.html"
+		contentType = "text/html; charset=utf-8"
+	default:
+		return respondError(404, "Page not found"), nil
+	}
+
+	content, err := uiFiles.ReadFile(filename)
+	if err != nil {
+		log.Printf("Failed to read UI file %s: %v", filename, err)
+		return respondError(500, "Failed to load page"), nil
+	}
+
+	return events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       string(content),
+		Headers: map[string]string{
+			"Content-Type": contentType,
+		},
+	}, nil
 }
 
 // Helper functions
