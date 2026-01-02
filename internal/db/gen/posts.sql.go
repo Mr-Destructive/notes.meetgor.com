@@ -215,6 +215,21 @@ func (q *Queries) GetRevisions(ctx context.Context, postID string) ([]Revision, 
 	return items, nil
 }
 
+const initPostTables = `-- name: InitPostTables :exec
+CREATE TABLE IF NOT EXISTS post_types (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT UNIQUE NOT NULL,
+  description TEXT
+)
+`
+
+// Ensure tables exist
+func (q *Queries) InitPostTables(ctx context.Context) error {
+	_, err := q.db.ExecContext(ctx, initPostTables)
+	return err
+}
+
 const listPosts = `-- name: ListPosts :many
 SELECT id, type_id, title, slug, content, excerpt, status, is_featured, tags, metadata, created_at, updated_at, published_at FROM posts
 WHERE 1=1

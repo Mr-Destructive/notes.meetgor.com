@@ -173,6 +173,22 @@ func (q *Queries) GetSeriesPosts(ctx context.Context, seriesID string) ([]Post, 
 	return items, nil
 }
 
+const initSeriesTables = `-- name: InitSeriesTables :exec
+CREATE TABLE IF NOT EXISTS series (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT UNIQUE NOT NULL,
+  description TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+`
+
+// Ensure tables exist
+func (q *Queries) InitSeriesTables(ctx context.Context) error {
+	_, err := q.db.ExecContext(ctx, initSeriesTables)
+	return err
+}
+
 const listSeries = `-- name: ListSeries :many
 SELECT id, name, slug, description, created_at FROM series
 ORDER BY created_at DESC

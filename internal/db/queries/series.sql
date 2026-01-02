@@ -1,3 +1,22 @@
+-- Ensure tables exist
+-- name: InitSeriesTables :exec
+CREATE TABLE IF NOT EXISTS series (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT UNIQUE NOT NULL,
+  description TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS post_series (
+  post_id TEXT NOT NULL,
+  series_id TEXT NOT NULL,
+  order_in_series INT,
+  PRIMARY KEY(post_id, series_id),
+  FOREIGN KEY(post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY(series_id) REFERENCES series(id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_series_slug ON series(slug);
+
 -- name: CreateSeries :one
 INSERT INTO series (id, name, slug, description, created_at)
 VALUES (?, ?, ?, ?, ?)

@@ -51,8 +51,22 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 		return respondError(500, "Database connection failed"), nil
 	}
 
+	// Initialize schema if needed (soft fail - continues even if tables already exist)
+	if err := initSchemaIfNotExists(ctx, db); err != nil {
+		log.Printf("Schema initialization warning (non-fatal): %v", err)
+		// Don't return error - tables may already exist
+	}
+
 	// Create sqlc queries
 	queries := gen.New(db)
+
+	// Ensure specific query tables are initialized
+	if err := queries.InitPostTables(ctx); err != nil {
+		log.Printf("Post tables init warning (non-fatal): %v", err)
+	}
+	if err := queries.InitSeriesTables(ctx); err != nil {
+		log.Printf("Series tables init warning (non-fatal): %v", err)
+	}
 
 	// Parse path
 	path := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
@@ -175,6 +189,94 @@ func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queri
 
 	return respondJSON(200, posts), nil
 }
+// initSchemaIfNotExists creates tables if they don't exist
+func initSchemaIfNotExists(ctx context.Context, db *sql.DB) error {
+	// Create tables if not exists
+	schema := `
+	CREATE TABLE IF NOT EXISTS post_types (
+	  id TEXT PRIMARY KEY,
+	  name TEXT NOT NULL,
+	  slug TEXT UNIQUE NOT NULL,
+	  description TEXT
+	);
+
+	CREATE TABLE IF NOT EXISTS posts (
+	  id TEXT PRIMARY KEY,
+	  type_id TEXT NOT NULL,
+	  title TEXT NOT NULL,
+	  slug TEXT UNIQUE NOT NULL,
+	  content TEXT NOT NULL,
+	  excerpt TEXT,
+	  status TEXT DEFAULT 'draft',
+	  is_featured BOOLEAN DEFAULT 0,
+	  tags TEXT,
+	  metadata TEXT,
+	  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	  published_at DATETIME,
+	  FOREIGN KEY(type_id) REFERENCES post_types(id)
+	);
+
+	CREATE TABLE IF NOT EXISTS revisions (
+	  id TEXT PRIMARY KEY,
+	  post_id TEXT NOT NULL,
+	  content TEXT NOT NULL,
+	  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	  FOREIGN KEY(post_id) REFERENCES posts(id) ON DELETE CASCADE
+	);
+
+	CREATE TABLE IF NOT EXISTS series (
+	  id TEXT PRIMARY KEY,
+	  name TEXT NOT NULL,
+	  slug TEXT UNIQUE NOT NULL,
+	  description TEXT,
+	  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+	);
+
+	CREATE TABLE IF NOT EXISTS post_series (
+	  post_id TEXT NOT NULL,
+	  series_id TEXT NOT NULL,
+	  order_in_series INT,
+	  PRIMARY KEY(post_id, series_id),
+	  FOREIGN KEY(post_id) REFERENCES posts(id) ON DELETE CASCADE,
+	  FOREIGN KEY(series_id) REFERENCES series(id) ON DELETE CASCADE
+	);
+
+	CREATE TABLE IF NOT EXISTS settings (
+	  key TEXT PRIMARY KEY,
+	  value TEXT
+	);
+
+	CREATE INDEX IF NOT EXISTS idx_posts_type ON posts(type_id);
+	CREATE INDEX IF NOT EXISTS idx_posts_status ON posts(status);
+	CREATE INDEX IF NOT EXISTS idx_posts_published_at ON posts(published_at);
+	CREATE INDEX IF NOT EXISTS idx_posts_slug ON posts(slug);
+	CREATE INDEX IF NOT EXISTS idx_posts_created_at ON posts(created_at DESC);
+	CREATE INDEX IF NOT EXISTS idx_series_slug ON series(slug);
+
+	INSERT OR IGNORE INTO post_types (id, name, slug, description) VALUES
+	  ('article', 'Article', 'article', 'Full-length articles'),
+	  ('review', 'Review', 'review', 'Book, movie, or product reviews'),
+	  ('thought', 'Thought', 'thought', 'Quick thoughts and reflections'),
+	  ('link', 'Link', 'link', 'Curated links with commentary'),
+	  ('til', 'TIL', 'til', 'Today I Learned'),
+	  ('quote', 'Quote', 'quote', 'Quotations and excerpts'),
+	  ('list', 'List', 'list', 'Curated lists'),
+	  ('note', 'Note', 'note', 'Quick notes'),
+	  ('snippet', 'Snippet', 'snippet', 'Code snippets'),
+	  ('essay', 'Essay', 'essay', 'Long-form essays'),
+	  ('tutorial', 'Tutorial', 'tutorial', 'Step-by-step guides'),
+	  ('interview', 'Interview', 'interview', 'Q&A interviews');
+	`
+
+	if _, err := db.ExecContext(ctx, schema); err != nil {
+		return fmt.Errorf("failed to initialize schema: %w", err)
+	}
+
+	log.Println("Schema initialized")
+	return nil
+}
+
 // Helper functions
 func respondJSON(status int, data interface{}) events.APIGatewayProxyResponse {
 	body, _ := json.Marshal(data)
