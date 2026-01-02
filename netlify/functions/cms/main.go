@@ -42,9 +42,18 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 		}, nil
 	}
 
-	// Health check
-	if req.Path == "/.netlify/functions/cms" || req.Path == "/.netlify/functions/cms/" {
-		return respondJSON(200, map[string]string{"status": "ok", "message": "CMS function running"}), nil
+	// Parse path early to check if it's API or UI
+	fullPath := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
+	fullPath = strings.Trim(fullPath, "/")
+
+	// Serve UI files (login is default at root, editor, assets)
+	if fullPath == "" || fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
+		return serveUI(strings.TrimPrefix(fullPath, ""))
+	}
+
+	// Health check for API root
+	if fullPath == "api" {
+		return respondJSON(200, map[string]string{"status": "ok", "version": "1.0"}), nil
 	}
 
 	// Connect to Turso database
@@ -86,25 +95,9 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 		log.Printf("Series tables init warning (non-fatal): %v", err)
 	}
 
-	// Parse path
-	fullPath := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
-	fullPath = strings.Trim(fullPath, "/")
-
-	// Serve UI files (login is default at root, editor, assets)
-	if fullPath == "" {
-		return serveUI("login")
-	}
-	if fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
-		return serveUI(fullPath)
-	}
-
 	// API routes
 	path := strings.TrimPrefix(fullPath, "api")
 	path = strings.Trim(path, "/")
-
-	if path == "" {
-		return respondJSON(200, map[string]string{"status": "ok", "version": "1.0"}), nil
-	}
 
 	parts := strings.Split(path, "/")
 	resource := parts[0]
@@ -149,10 +142,13 @@ func handleAuth(req events.APIGatewayProxyRequest, ctx context.Context, action s
 
 		adminPassword := os.Getenv("ADMIN_PASSWORD")
 		if adminPassword == "" {
+			// Default to "test" if not set
 			adminPassword = "test"
 		}
 
+		log.Printf("Login attempt with password, admin password set: %v", adminPassword != "test")
 		if loginReq.Password != adminPassword {
+			log.Printf("Password mismatch: got %q, expected %q", loginReq.Password, adminPassword)
 			return respondError(401, "Invalid credentials"), nil
 		}
 
