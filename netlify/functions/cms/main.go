@@ -48,7 +48,11 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 
 	// Serve UI files (login is default at root, editor, assets)
 	if fullPath == "" || fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
-		return serveUI(strings.TrimPrefix(fullPath, ""))
+		page := fullPath
+		if page == "" {
+			page = "login"
+		}
+		return serveUI(page)
 	}
 
 	// Health check for API root
