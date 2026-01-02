@@ -30,6 +30,18 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	log.Printf("Request: %s %s", req.HTTPMethod, req.Path)
 	ctx := context.Background()
 
+	// Handle CORS preflight
+	if req.HTTPMethod == "OPTIONS" {
+		return events.APIGatewayProxyResponse{
+			StatusCode: 200,
+			Headers: map[string]string{
+				"Access-Control-Allow-Origin":  "*",
+				"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+				"Access-Control-Allow-Headers": "Content-Type, Authorization",
+			},
+		}, nil
+	}
+
 	// Health check
 	if req.Path == "/.netlify/functions/cms" || req.Path == "/.netlify/functions/cms/" {
 		return respondJSON(200, map[string]string{"status": "ok", "message": "CMS function running"}), nil
@@ -416,7 +428,8 @@ func serveUI(page string) (events.APIGatewayProxyResponse, error) {
 		StatusCode: 200,
 		Body:       string(content),
 		Headers: map[string]string{
-			"Content-Type": contentType,
+			"Content-Type":                contentType,
+			"Access-Control-Allow-Origin": "*",
 		},
 	}, nil
 }
@@ -428,7 +441,8 @@ func respondJSON(status int, data interface{}) events.APIGatewayProxyResponse {
 		StatusCode: status,
 		Body:       string(body),
 		Headers: map[string]string{
-			"Content-Type": "application/json",
+			"Content-Type":                "application/json",
+			"Access-Control-Allow-Origin": "*",
 		},
 	}
 }
