@@ -9,5 +9,7 @@ require (
 	golang.org/x/crypto v0.31.0
 )
 
+require github.com/aws/aws-lambda-go v1.51.1 // indirect
+
 // Development tools (run: go run github.com/sqlc-dev/sqlc/cmd/sqlc@latest generate)
 // tools: github.com/sqlc-dev/sqlc/cmd/sqlc@latest

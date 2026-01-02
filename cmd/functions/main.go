@@ -385,13 +385,15 @@ func respondError(w http.ResponseWriter, status int, message string) {
 	json.NewEncoder(w).Encode(map[string]string{"error": message})
 }
 
+// main() is only for local development
+// Netlify Functions automatically exports Handler
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}
 
-	log.Printf("Starting CMS server on :%s", port)
+	log.Printf("Starting CMS server on :%s (local dev only)", port)
 	if err := http.ListenAndServe(":"+port, http.HandlerFunc(Handler)); err != nil {
 		log.Fatal(err)
 	}
