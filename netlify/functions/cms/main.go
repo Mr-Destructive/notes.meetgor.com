@@ -226,46 +226,162 @@ func verifyToken(token string) bool {
 	return true
 }
 
-// handlePosts handles GET /posts
-func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, id, action string) (events.APIGatewayProxyResponse, error) {
-	if req.HTTPMethod != "GET" {
-		return respondError(405, "Method not allowed"), nil
-	}
+// generateID creates a unique ID for posts
+func generateID() string {
+	// Simple ID generation - in production use UUID
+	return fmt.Sprintf("%x", time.Now().UnixNano())
+}
 
-	if id != "" {
-		// Get single post by ID or slug
-		post, err := queries.GetPost(ctx, gen.GetPostParams{
-			ID:   id,
-			Slug: id,
+// handlePosts handles /posts CRUD endpoints
+func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, id, action string) (events.APIGatewayProxyResponse, error) {
+	switch req.HTTPMethod {
+	case "GET":
+		if id != "" {
+			// Get single post by ID or slug
+			post, err := queries.GetPost(ctx, gen.GetPostParams{
+				ID:   id,
+				Slug: id,
+			})
+			if err != nil {
+				log.Printf("GetPost error: %v", err)
+				return respondError(404, "Post not found"), nil
+			}
+			return respondJSON(200, post), nil
+		}
+
+		// List posts with optional filters
+		status := req.QueryStringParameters["status"]
+		if status == "" {
+			status = "published"
+		}
+
+		limit := int64(50)
+		offset := int64(0)
+
+		posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
+			Status: status,
+			TypeID: nil,
+			Offset: offset,
+			Limit:  limit,
 		})
 		if err != nil {
-			log.Printf("GetPost error: %v", err)
-			return respondError(404, "Post not found"), nil
+			log.Printf("ListPosts error: %v", err)
+			return respondError(500, "Failed to fetch posts"), nil
 		}
+
+		return respondJSON(200, posts), nil
+
+	case "POST":
+		// Create new post
+		var postReq struct {
+			TypeID   string                 `json:"type_id"`
+			Title    string                 `json:"title"`
+			Slug     string                 `json:"slug"`
+			Content  string                 `json:"content"`
+			Excerpt  string                 `json:"excerpt"`
+			Status   string                 `json:"status"`
+			Tags     []string               `json:"tags"`
+			Metadata map[string]interface{} `json:"metadata"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&postReq); err != nil {
+			log.Printf("POST decode error: %v", err)
+			return respondError(400, "Invalid request body"), nil
+		}
+
+		// Generate ID
+		postID := generateID()
+		now := time.Now()
+
+		// Convert tags and metadata to JSON
+		tagsJSON, _ := json.Marshal(postReq.Tags)
+		metaJSON, _ := json.Marshal(postReq.Metadata)
+
+		post, err := queries.CreatePost(ctx, gen.CreatePostParams{
+			ID:        postID,
+			TypeID:    postReq.TypeID,
+			Title:     postReq.Title,
+			Slug:      postReq.Slug,
+			Content:   postReq.Content,
+			Excerpt:   postReq.Excerpt,
+			Status:    postReq.Status,
+			Tags:      string(tagsJSON),
+			Metadata:  string(metaJSON),
+			CreatedAt: now,
+			UpdatedAt: now,
+		})
+		if err != nil {
+			log.Printf("CreatePost error: %v", err)
+			return respondError(500, "Failed to create post"), nil
+		}
+
+		return respondJSON(201, post), nil
+
+	case "PUT":
+		if id == "" {
+			return respondError(400, "Post ID required"), nil
+		}
+
+		var updateReq struct {
+			Title      *string                `json:"title"`
+			Slug       *string                `json:"slug"`
+			Content    *string                `json:"content"`
+			Excerpt    *string                `json:"excerpt"`
+			Status     *string                `json:"status"`
+			Tags       []string               `json:"tags"`
+			Metadata   map[string]interface{} `json:"metadata"`
+			IsFeatured *bool                  `json:"is_featured"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&updateReq); err != nil {
+			return respondError(400, "Invalid request body"), nil
+		}
+
+		// Convert tags and metadata to JSON if provided
+		tagsJSON := sql.NullString{}
+		if updateReq.Tags != nil {
+			b, _ := json.Marshal(updateReq.Tags)
+			tagsJSON = sql.NullString{String: string(b), Valid: true}
+		}
+
+		metaJSON := sql.NullString{}
+		if updateReq.Metadata != nil {
+			b, _ := json.Marshal(updateReq.Metadata)
+			metaJSON = sql.NullString{String: string(b), Valid: true}
+		}
+
+		post, err := queries.UpdatePost(ctx, gen.UpdatePostParams{
+			ID:         id,
+			Title:      updateReq.Title,
+			Slug:       updateReq.Slug,
+			Content:    updateReq.Content,
+			Excerpt:    updateReq.Excerpt,
+			Status:     updateReq.Status,
+			Tags:       tagsJSON,
+			Metadata:   metaJSON,
+			IsFeatured: updateReq.IsFeatured,
+			UpdatedAt:  time.Now(),
+		})
+		if err != nil {
+			log.Printf("UpdatePost error: %v", err)
+			return respondError(500, "Failed to update post"), nil
+		}
+
 		return respondJSON(200, post), nil
+
+	case "DELETE":
+		if id == "" {
+			return respondError(400, "Post ID required"), nil
+		}
+
+		if err := queries.DeletePost(ctx, id); err != nil {
+			log.Printf("DeletePost error: %v", err)
+			return respondError(500, "Failed to delete post"), nil
+		}
+
+		return respondJSON(200, map[string]string{"status": "deleted"}), nil
+
+	default:
+		return respondError(405, "Method not allowed"), nil
 	}
-
-	// List posts with optional filters
-	status := req.QueryStringParameters["status"]
-	if status == "" {
-		status = "published"
-	}
-
-	limit := int64(50)
-	offset := int64(0)
-
-	posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
-		Status: status,
-		TypeID: nil,
-		Offset: offset,
-		Limit:  limit,
-	})
-	if err != nil {
-		log.Printf("ListPosts error: %v", err)
-		return respondError(500, "Failed to fetch posts"), nil
-	}
-
-	return respondJSON(200, posts), nil
 }
 
 // handleTypes returns post types
