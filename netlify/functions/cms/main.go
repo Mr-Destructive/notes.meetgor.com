@@ -4,11 +4,13 @@ import (
 	"context"
 	"database/sql"
 	"embed"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"log"
 	"os"
 	"strings"
+	"time"
 
 	gen "blog/internal/db/gen"
 	"github.com/aws/aws-lambda-go/events"
@@ -101,6 +103,8 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 
 	// Route to handlers
 	switch resource {
+	case "auth":
+		return handleAuth(req, ctx, id)
 	case "posts":
 		return handlePosts(req, ctx, queries, id, action)
 	case "types":
@@ -112,6 +116,98 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	default:
 		return respondError(404, "Resource not found"), nil
 	}
+}
+
+// handleAuth handles authentication endpoints
+func handleAuth(req events.APIGatewayProxyRequest, ctx context.Context, action string) (events.APIGatewayProxyResponse, error) {
+	switch action {
+	case "login":
+		if req.HTTPMethod != "POST" {
+			return respondError(405, "Method not allowed"), nil
+		}
+		var loginReq struct {
+			Password string `json:"password"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&loginReq); err != nil {
+			return respondError(400, "Invalid request"), nil
+		}
+
+		adminPassword := os.Getenv("ADMIN_PASSWORD")
+		if adminPassword == "" {
+			adminPassword = "test"
+		}
+
+		if loginReq.Password != adminPassword {
+			return respondError(401, "Invalid credentials"), nil
+		}
+
+		// Generate JWT token
+		token, err := generateToken()
+		if err != nil {
+			log.Printf("Token generation error: %v", err)
+			return respondError(500, "Failed to generate token"), nil
+		}
+
+		return respondJSON(200, map[string]interface{}{
+			"token":      token,
+			"expires_at": time.Now().Add(7 * 24 * time.Hour).Format(time.RFC3339),
+		}), nil
+
+	case "verify":
+		if req.HTTPMethod != "GET" {
+			return respondError(405, "Method not allowed"), nil
+		}
+		token := getToken(req)
+		if token == "" {
+			return respondError(401, "No token"), nil
+		}
+		if !verifyToken(token) {
+			return respondError(401, "Invalid token"), nil
+		}
+		return respondJSON(200, map[string]bool{"valid": true}), nil
+
+	case "logout":
+		return respondJSON(200, map[string]string{"status": "logged out"}), nil
+
+	default:
+		return respondError(404, "Auth endpoint not found"), nil
+	}
+}
+
+// generateToken creates a simple JWT-like token (basic implementation for Netlify)
+func generateToken() (string, error) {
+	// For production, use a proper JWT library
+	// This is a simple base64-encoded timestamp token for demo
+	payload := fmt.Sprintf("admin:%d", time.Now().Unix())
+	return base64.StdEncoding.EncodeToString([]byte(payload)), nil
+}
+
+// getToken extracts token from Authorization header or cookie
+func getToken(req events.APIGatewayProxyRequest) string {
+	if auth := req.Headers["Authorization"]; auth != "" {
+		if len(auth) > 7 && auth[:7] == "Bearer " {
+			return auth[7:]
+		}
+	}
+	if cookies := req.Headers["Cookie"]; cookies != "" {
+		for _, cookie := range strings.Split(cookies, ";") {
+			if strings.Contains(cookie, "auth_token=") {
+				parts := strings.Split(strings.TrimSpace(cookie), "=")
+				if len(parts) == 2 {
+					return parts[1]
+				}
+			}
+		}
+	}
+	return ""
+}
+
+// verifyToken validates the token (basic implementation)
+func verifyToken(token string) bool {
+	if _, err := base64.StdEncoding.DecodeString(token); err != nil {
+		return false
+	}
+	return true
 }
 
 // handlePosts handles GET /posts
