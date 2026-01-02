@@ -1,5 +1,5 @@
 [build]
-  command = "mkdir -p netlify/functions && go build -o netlify/functions/cms ./cmd/functions/main.go"
+  command = "mkdir -p netlify/functions && CGO_ENABLED=0 go build -o netlify/functions/cms ./cmd/functions/main.go"
   functions = "netlify/functions"
   publish = "public"
 
