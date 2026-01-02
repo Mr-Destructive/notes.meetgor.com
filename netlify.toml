@@ -15,7 +15,7 @@
   condition = "!{path}.html"
 
 [context.production]
-  environment = { ENV = "production" }
+  environment = { ENV = "production", ADMIN_PASSWORD = "test" }
 
 [context.deploy-preview]
   environment = { ENV = "preview" }
