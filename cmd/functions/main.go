@@ -33,8 +33,7 @@ func init() {
 }
 
 // Handler is the main Netlify function handler
-// Export with lowercase for Netlify Functions
-func handler(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
 	// CORS headers
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
@@ -490,9 +489,9 @@ func main() {
 		port = "8080"
 	}
 
-	// For local development only - Netlify Functions runs handler automatically
+	// For local development only - Netlify Functions runs Handler automatically
 	log.Printf("Starting CMS server on :%s", port)
-	if err := http.ListenAndServe(":"+port, http.HandlerFunc(handler)); err != nil {
+	if err := http.ListenAndServe(":"+port, http.HandlerFunc(Handler)); err != nil {
 		log.Fatal(err)
 	}
 }
