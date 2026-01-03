@@ -1,0 +1,9 @@
+name = "Minimal"
+license = "MIT"
+licenselink = "https://github.com/Mr-Destructive/notes.meetgor.com"
+description = "A minimal, clean blog theme"
+homepage = "https://github.com/Mr-Destructive/notes.meetgor.com"
+tags = ["blog", "minimal", "clean"]
+features = ["dark mode", "responsive"]
+author = "Meet Gor"
+authorhomepage = "https://notes.meetgor.com"
