@@ -22,51 +22,13 @@ jobs:
         with:
           go-version: '1.23'
 
-      - name: Build CMS binary
-        run: |
-          go build -o cms ./cmd/functions/main.go
-          ls -lh ./cms
-
-      - name: Start CMS server with Turso
+      - name: Build export tool
         env:
           TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
         run: |
-          # Start CMS server in background with Turso credentials
-          timeout 60 ./cms > /tmp/cms.log 2>&1 &
-          CMS_PID=$!
-          sleep 4
-          
-          # Check if server started
-          if ! kill -0 $CMS_PID 2>/dev/null; then
-            echo "✗ CMS failed to start. Logs:"
-            cat /tmp/cms.log
-            exit 1
-          fi
-          
-          echo "✓ CMS server running (PID: $CMS_PID)"
-          
-          # Wait for server to be ready
-          for i in {1..10}; do
-            if curl -s http://localhost:8080/api/posts >/dev/null 2>&1; then
-              echo "✓ Server ready"
-              break
-            fi
-            echo "  Waiting for server... ($i/10)"
-            sleep 1
-          done
-          
-          # Trigger export to Markdown
-          echo "Triggering markdown export..."
-          curl -s -X POST http://localhost:8080/api/exports \
-            -H "Content-Type: application/json" | jq .
-          
-          sleep 2
-          echo "✓ Export completed"
-          
-          # Clean up
-          kill $CMS_PID 2>/dev/null || true
-          wait $CMS_PID 2>/dev/null || true
+          go build -o /tmp/export ./cmd/export/main.go
+          /tmp/export
 
       - name: Verify exported posts
         run: |
