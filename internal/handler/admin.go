@@ -528,52 +528,54 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 
 			<div class="form-group">
 				<label for="post-title">Title <span id="title-required">*</span></label>
-				<input type="text" id="post-title" name="title" placeholder="Enter post title">`
-	if post != nil {
-		html += fmt.Sprintf(`value="%s"`, post.Title)
-	}
-	html += `>
+				<input type="text" id="post-title" name="title" placeholder="Enter post title"`
+			if post != nil {
+			html += fmt.Sprintf(` value="%s"`, post.Title)
+			}
+			html += ` />
 			</div>
 
 			<div class="form-group">
 				<label for="post-slug">Slug *</label>
-				<input type="text" id="post-slug" name="slug" placeholder="post-slug" required>`
-	if post != nil {
-		html += fmt.Sprintf(`value="%s"`, post.Slug)
-	}
-	html += `>
+				<input type="text" id="post-slug" name="slug" placeholder="post-slug" required`
+			if post != nil {
+			html += fmt.Sprintf(` value="%s"`, post.Slug)
+			}
+			html += ` />
 			</div>
 
 			<div class="form-group">
 				<label for="post-content">Content <span id="content-required">*</span></label>
 				<textarea id="post-content" name="content" placeholder="Enter post content" rows="12">`
-	if post != nil {
-		html += post.Content
-	}
-	html += `</textarea>
+			if post != nil {
+			html += post.Content
+			}
+			html += `</textarea>
 			</div>
 
 			<div class="form-group">
 				<label for="post-excerpt">Excerpt</label>
 				<textarea id="post-excerpt" name="excerpt" placeholder="Optional excerpt" rows="3">`
-	if post != nil {
-		html += post.Excerpt
-	}
-	html += `</textarea>
+			if post != nil {
+			html += post.Excerpt
+			}
+			html += `</textarea>
 			</div>
 
 			<div class="form-group">
 				<label for="post-tags">Tags (comma-separated)</label>
-				<input type="text" id="post-tags" name="tags" placeholder="tag1, tag2, tag3">`
-	if post != nil && len(post.Tags) > 0 {
-		for i, tag := range post.Tags {
-			if i > 0 {
-				html += ", "
+				<input type="text" id="post-tags" name="tags" placeholder="tag1, tag2, tag3"`
+			if post != nil && len(post.Tags) > 0 {
+			html += ` value="`
+			for i, tag := range post.Tags {
+				if i > 0 {
+					html += ", "
+				}
+				html += tag
 			}
-			html += tag
-		}
-	}
-	html += `>
+			html += `"`
+			}
+			html += ` />
 			</div>
 
 			<div id="type-specific-fields"></div>
