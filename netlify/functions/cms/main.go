@@ -15,7 +15,6 @@ import (
 
 	"blog/internal/db"
 	"blog/internal/handler"
-	"blog/internal/models"
 	gen "blog/internal/db/gen"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -29,8 +28,8 @@ func init() {
 	log.Println("CMS function initializing...")
 }
 
-// handler is the AWS Lambda handler for Netlify Functions
-func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+// lambdaHandler is the AWS Lambda handler for Netlify Functions
+func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	log.Printf("Request: %s %s", req.HTTPMethod, req.Path)
 	ctx := context.Background()
 
@@ -83,31 +82,31 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	}
 
 	dbString := fmt.Sprintf("%s?authToken=%s", dbName, dbToken)
-	db, err := sql.Open("libsql", dbString)
+	sqldb, err := sql.Open("libsql", dbString)
 	if err != nil {
 		log.Printf("Database connection error: %v", err)
 		return respondError(500, "Database connection failed"), nil
 	}
-	defer db.Close()
+	defer sqldb.Close()
 
 	// Verify database connection
-	if err := db.PingContext(ctx); err != nil {
+	if err := sqldb.PingContext(ctx); err != nil {
 		log.Printf("Database ping error: %v", err)
 		return respondError(500, "Database connection failed"), nil
 	}
 
 	// Initialize schema if needed (soft fail - continues even if tables already exist)
-	if err := initSchemaIfNotExists(ctx, db); err != nil {
+	if err := initSchemaIfNotExists(ctx, sqldb); err != nil {
 		log.Printf("Schema initialization warning (non-fatal): %v", err)
 		// Don't return error - tables may already exist
 	}
 
 	// Create sqlc queries
-	queries := gen.New(db)
+	queries := gen.New(sqldb)
 	
 	// Handle /admin/* routes with database access
 	if strings.HasPrefix(fullPath, "admin/") {
-		return handleAdminRoute(ctx, req, fullPath, db)
+		return handleAdminRoute(ctx, req, fullPath, sqldb)
 	}
 
 	// Ensure specific query tables are initialized
@@ -535,6 +534,7 @@ func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queri
 
 	return respondJSON(200, posts), nil
 }
+
 // initSchemaIfNotExists creates tables if they don't exist
 func initSchemaIfNotExists(ctx context.Context, db *sql.DB) error {
 	// Create tables if not exists
@@ -623,7 +623,6 @@ func initSchemaIfNotExists(ctx context.Context, db *sql.DB) error {
 	return nil
 }
 
-// serveUI serves the embedded UI files
 // serveAdminShell returns the admin dashboard HTML shell
 func serveAdminShell() (events.APIGatewayProxyResponse, error) {
 	html := `<!DOCTYPE html>
@@ -879,596 +878,6 @@ func (w *lambdaResponseWriter) WriteHeader(statusCode int) {
 	w.statusCode = statusCode
 }
 
-// serveDashboard serves the dashboard with statistics
-func serveDashboard(ctx context.Context, db *sql.DB, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
-	posts, err := queries.ListPosts(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load posts"), nil
-	}
-	
-	types, err := queries.GetPostTypes(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load post types"), nil
-	}
-	
-	series, err := queries.ListSeries(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load series"), nil
-	}
-	
-	tags, err := queries.GetTags(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load tags"), nil
-	}
-	
-	// Count by status
-	draft, published, archived := 0, 0, 0
-	for _, p := range posts {
-		switch p.Status {
-		case "draft":
-			draft++
-		case "published":
-			published++
-		case "archived":
-			archived++
-		}
-	}
-	
-	// Show last 5 posts
-	recentPosts := posts
-	if len(recentPosts) > 5 {
-		recentPosts = recentPosts[:5]
-	}
-	
-	html := `<div class="card">
-	<div class="card-header"><h3>Dashboard</h3></div>
-	<div class="card-body">
-		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-bottom: 30px;">
-			<div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 4px;">
-				<div style="font-size: 32px; font-weight: bold; color: #0066cc;">` + fmt.Sprintf("%d", len(posts)) + `</div>
-				<div style="color: #666; font-size: 14px;">Total Posts</div>
-			</div>
-			<div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 4px;">
-				<div style="font-size: 32px; font-weight: bold; color: #28a745;">` + fmt.Sprintf("%d", published) + `</div>
-				<div style="color: #666; font-size: 14px;">Published</div>
-			</div>
-			<div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 4px;">
-				<div style="font-size: 32px; font-weight: bold; color: #ffc107;">` + fmt.Sprintf("%d", draft) + `</div>
-				<div style="color: #666; font-size: 14px;">Draft</div>
-			</div>
-			<div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 4px;">
-				<div style="font-size: 32px; font-weight: bold; color: #17a2b8;">` + fmt.Sprintf("%d", len(series)) + `</div>
-				<div style="color: #666; font-size: 14px;">Series</div>
-			</div>
-			<div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 4px;">
-				<div style="font-size: 32px; font-weight: bold; color: #6c757d;">` + fmt.Sprintf("%d", len(types)) + `</div>
-				<div style="color: #666; font-size: 14px;">Post Types</div>
-			</div>
-			<div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 4px;">
-				<div style="font-size: 32px; font-weight: bold; color: #007bff;">` + fmt.Sprintf("%d", len(tags)) + `</div>
-				<div style="color: #666; font-size: 14px;">Tags</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="card">
-	<div class="card-header"><h3>Recent Posts</h3></div>
-	<div class="card-body">
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Title</th>
-					<th>Type</th>
-					<th>Status</th>
-					<th>Created</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-			<tbody>`
-	
-	for _, post := range recentPosts {
-		statusBadge := `<span class="badge badge-warning">Draft</span>`
-		if post.Status == "published" {
-			statusBadge = `<span class="badge badge-success">Published</span>`
-		} else if post.Status == "archived" {
-			statusBadge = `<span class="badge badge-danger">Archived</span>`
-		}
-		html += `<tr>
-					<td><strong>` + post.Title + `</strong></td>
-					<td>` + post.TypeID + `</td>
-					<td>` + statusBadge + `</td>
-					<td>` + post.CreatedAt.Format("Jan 2, 2006") + `</td>
-					<td>
-						<div class="table-actions">
-							<button class="btn btn-sm btn-outline" hx-get="/admin/posts/` + post.ID + `/edit" hx-target="#main-content">Edit</button>
-							<button class="btn btn-sm btn-danger" hx-delete="/api/posts/` + post.ID + `" hx-confirm="Delete this post?">Delete</button>
-						</div>
-					</td>
-				</tr>`
-	}
-	
-	html += `
-			</tbody>
-		</table>
-	</div>
-</div>`
-	
-	return respondHTML(200, html), nil
-}
-
-// servePostsList serves the posts list view
-func servePostsList(ctx context.Context, db *sql.DB, queries *gen.Queries, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	posts, err := queries.ListPosts(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load posts"), nil
-	}
-	
-	types, err := queries.GetPostTypes(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load post types"), nil
-	}
-	
-	status := req.QueryStringParameters["status"]
-	postType := req.QueryStringParameters["type"]
-	
-	// Filter posts
-	if status != "" {
-		filtered := []gen.Post{}
-		for _, p := range posts {
-			if p.Status == status {
-				filtered = append(filtered, p)
-			}
-		}
-		posts = filtered
-	}
-	
-	if postType != "" {
-		filtered := []gen.Post{}
-		for _, p := range posts {
-			if p.TypeID == postType {
-				filtered = append(filtered, p)
-			}
-		}
-		posts = filtered
-	}
-	
-	html := `<div class="card">
-	<div class="card-header">
-		<div style="display: flex; justify-content: space-between; align-items: center;">
-			<h3>Posts</h3>
-			<button class="btn btn-primary" hx-get="/admin/posts/new" hx-target="#main-content">+ New Post</button>
-		</div>
-	</div>
-	<div class="card-body">
-		<div class="search-bar">
-			<select hx-get="/admin/posts" hx-target="#main-content" name="type" hx-trigger="change">`
-	if postType == "" {
-		html += `<option value="">All Types</option>`
-	} else {
-		html += `<option value="">All Types</option>`
-	}
-	for _, t := range types {
-		selected := ""
-		if t.ID == postType {
-			selected = "selected"
-		}
-		html += `<option value="` + t.ID + `" ` + selected + `>` + t.Name + `</option>`
-	}
-	html += `</select>
-			<select hx-get="/admin/posts" hx-target="#main-content" name="status" hx-trigger="change">
-				<option value="">All Statuses</option>
-				<option value="draft"` + (map[bool]string{true: " selected", false: ""})[status == "draft"] + `>Draft</option>
-				<option value="published"` + (map[bool]string{true: " selected", false: ""})[status == "published"] + `>Published</option>
-				<option value="archived"` + (map[bool]string{true: " selected", false: ""})[status == "archived"] + `>Archived</option>
-			</select>
-		</div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Title</th>
-					<th>Type</th>
-					<th>Status</th>
-					<th>Created</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-			<tbody>`
-	
-	for _, post := range posts {
-		statusBadge := `<span class="badge badge-warning">Draft</span>`
-		if post.Status == "published" {
-			statusBadge = `<span class="badge badge-success">Published</span>`
-		} else if post.Status == "archived" {
-			statusBadge = `<span class="badge badge-danger">Archived</span>`
-		}
-		html += `<tr>
-					<td><strong>` + post.Title + `</strong><br><small style="color: #666;">` + post.Slug + `</small></td>
-					<td>` + post.TypeID + `</td>
-					<td>` + statusBadge + `</td>
-					<td>` + post.CreatedAt.Format("Jan 2, 2006 15:04") + `</td>
-					<td>
-						<div class="table-actions">
-							<button class="btn btn-sm btn-outline" hx-get="/admin/posts/` + post.ID + `/edit" hx-target="#main-content">Edit</button>
-							<button class="btn btn-sm btn-danger" hx-delete="/api/posts/` + post.ID + `" hx-confirm="Delete this post?">Delete</button>
-						</div>
-					</td>
-				</tr>`
-	}
-	
-	html += `
-			</tbody>
-		</table>
-		<div style="text-align: center; margin-top: 20px; color: #666;">
-			Showing ` + fmt.Sprintf("%d", len(posts)) + ` posts
-		</div>
-	</div>
-</div>`
-	
-	return respondHTML(200, html), nil
-}
-
-// serveSeriesList serves the series list
-func serveSeriesList(ctx context.Context, db *sql.DB, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
-	series, err := queries.ListSeries(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load series"), nil
-	}
-	
-	html := `<div class="card">
-	<div class="card-header">
-		<div style="display: flex; justify-content: space-between; align-items: center;">
-			<h3>Series</h3>
-			<button class="btn btn-primary" hx-get="/admin/series/new" hx-target="#main-content">+ New Series</button>
-		</div>
-	</div>
-	<div class="card-body">
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Slug</th>
-					<th>Description</th>
-					<th>Created</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-			<tbody>`
-	
-	for _, s := range series {
-		html += `<tr>
-					<td><strong>` + s.Name + `</strong></td>
-					<td><code>` + s.Slug + `</code></td>
-					<td>` + s.Description + `</td>
-					<td>` + s.CreatedAt.Format("Jan 2, 2006") + `</td>
-					<td>
-						<div class="table-actions">
-							<button class="btn btn-sm btn-outline" hx-get="/admin/series/` + s.ID + `/edit" hx-target="#main-content">Edit</button>
-							<button class="btn btn-sm btn-danger" hx-delete="/api/series/` + s.ID + `" hx-confirm="Delete this series?">Delete</button>
-						</div>
-					</td>
-				</tr>`
-	}
-	
-	html += `
-			</tbody>
-		</table>
-	</div>
-</div>`
-	
-	return respondHTML(200, html), nil
-}
-
-// servePostTypes serves the post types reference
-func servePostTypes(ctx context.Context, db *sql.DB, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
-	types, err := queries.GetPostTypes(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load post types"), nil
-	}
-	
-	html := `<div class="card">
-	<div class="card-header"><h3>Post Types</h3></div>
-	<div class="card-body">
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>ID</th>
-					<th>Description</th>
-				</tr>
-			</thead>
-			<tbody>`
-	
-	for _, t := range types {
-		html += `<tr>
-					<td><strong>` + t.Name + `</strong></td>
-					<td><code>` + t.ID + `</code></td>
-					<td>` + t.Description + `</td>
-				</tr>`
-	}
-	
-	html += `
-			</tbody>
-		</table>
-		<p style="margin-top: 16px; color: #666; font-size: 12px;">
-			Post types are pre-defined and cannot be modified.
-		</p>
-	</div>
-</div>`
-	
-	return respondHTML(200, html), nil
-}
-
-// serveExportPage serves the export page
-func serveExportPage(ctx context.Context, db *sql.DB, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
-	posts, err := queries.ListPosts(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load posts"), nil
-	}
-	
-	published := 0
-	for _, p := range posts {
-		if p.Status == "published" {
-			published++
-		}
-	}
-	
-	html := `<div class="card">
-	<div class="card-header"><h3>Export & Deploy</h3></div>
-	<div class="card-body">
-		<div style="margin-bottom: 24px;">
-			<h4 style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">Static Site Generation</h4>
-			<p style="color: #666; font-size: 13px; margin-bottom: 16px;">
-				Export your blog posts as Markdown files.
-			</p>
-			<button class="btn btn-primary" hx-post="/api/exports/markdown" hx-confirm="Export all posts to Markdown?">
-				Export to Markdown
-			</button>
-		</div>
-		<div style="padding-top: 16px; border-top: 1px solid #e0e0e0;">
-			<h4 style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">Export Status</h4>
-			<table class="table" style="margin: 0;">
-				<tr>
-					<td><strong>Total Posts</strong></td>
-					<td style="text-align: right;">` + fmt.Sprintf("%d", len(posts)) + `</td>
-				</tr>
-				<tr>
-					<td><strong>Published Posts</strong></td>
-					<td style="text-align: right;">` + fmt.Sprintf("%d", published) + `</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-</div>`
-	
-	return respondHTML(200, html), nil
-}
-
-// servePostEditor serves the post editor form
-func servePostEditor(ctx context.Context, db *sql.DB, queries *gen.Queries, postID string) (events.APIGatewayProxyResponse, error) {
-	types, err := queries.GetPostTypes(ctx)
-	if err != nil {
-		return respondError(500, "Failed to load post types"), nil
-	}
-	
-	// Convert types to JSON for JavaScript
-	typesJSON := "["
-	for i, t := range types {
-		if i > 0 {
-			typesJSON += ","
-		}
-		typesJSON += fmt.Sprintf(`{"id":"%s","name":"%s"}`, t.ID, t.Name)
-	}
-	typesJSON += "]"
-	
-	// Load existing post if editing
-	var post *gen.Post
-	if postID != "" {
-		p, err := queries.GetPost(ctx, postID)
-		if err != nil {
-			return respondError(404, "Post not found"), nil
-		}
-		post = &p
-	}
-	
-	html := `<div class="card">
-	<div class="card-header">
-		<div style="display: flex; justify-content: space-between; align-items: center;">
-			<h3 id="editor-title">New Post</h3>
-			<button class="btn btn-outline" hx-get="/admin/posts" hx-target="#main-content">← Back to Posts</button>
-		</div>
-	</div>
-	<div class="card-body">
-		<form id="post-form" onsubmit="handlePostSubmit(event)">
-			<div class="form-group">
-				<label for="post-type">Post Type *</label>
-				<select id="post-type" name="type_id" required onchange="updatePostType()">
-					<option value="">Select a post type...</option>`
-	
-	for _, t := range types {
-		selected := ""
-		if post != nil && post.TypeID == t.ID {
-			selected = "selected"
-		}
-		html += fmt.Sprintf(`<option value="%s" %s>%s</option>`, t.ID, selected, t.Name)
-	}
-	
-	html += `</select>
-			</div>
-			<div class="form-group">
-				<label for="post-title">Title *</label>
-				<input type="text" id="post-title" name="title" placeholder="Enter post title"`
-	if post != nil {
-		html += fmt.Sprintf(` value="%s"`, post.Title)
-	}
-	html += `>
-			</div>
-			<div class="form-group">
-				<label for="post-slug">Slug *</label>
-				<input type="text" id="post-slug" name="slug" placeholder="post-slug" required`
-	if post != nil {
-		html += fmt.Sprintf(` value="%s"`, post.Slug)
-	}
-	html += `>
-			</div>
-			<div class="form-group">
-				<label for="post-content">Content *</label>
-				<textarea id="post-content" name="content" placeholder="Enter post content" rows="12" required>`
-	if post != nil {
-		html += post.Content
-	}
-	html += `</textarea>
-			</div>
-			<div class="form-group">
-				<label for="post-excerpt">Excerpt</label>
-				<textarea id="post-excerpt" name="excerpt" placeholder="Optional excerpt" rows="3">`
-	if post != nil {
-		html += post.Excerpt
-	}
-	html += `</textarea>
-			</div>
-			<div class="form-group">
-				<label for="post-tags">Tags (comma-separated)</label>
-				<input type="text" id="post-tags" name="tags" placeholder="tag1, tag2"`
-	if post != nil && len(post.Tags) > 0 {
-		html += ` value="`
-		for i, tag := range post.Tags {
-			if i > 0 {
-				html += ", "
-			}
-			html += tag
-		}
-		html += `"`
-	}
-	html += `>
-			</div>
-			<div class="form-group">
-				<label for="post-status">Status *</label>
-				<select id="post-status" name="status" required>
-					<option value="draft">Draft</option>
-					<option value="published">Published</option>
-					<option value="archived">Archived</option>
-				</select>`
-	if post != nil {
-		html += fmt.Sprintf(`<script>document.getElementById('post-status').value = '%s';</script>`, post.Status)
-	}
-	html += `
-			</div>
-			<div style="display: flex; gap: 10px; margin-top: 24px;">
-				<button type="button" class="btn btn-primary" onclick="saveAsDraft()">💾 Save as Draft</button>
-				<button type="button" class="btn btn-success" onclick="publish()">🚀 Publish</button>
-				<button type="button" class="btn btn-outline" hx-get="/admin/posts" hx-target="#main-content">Cancel</button>
-			</div>
-		</form>
-		<div id="editor-message" style="margin-top: 16px; display: none;"></div>
-	</div>
-</div>
-
-<script>
-const POST_TYPES = ` + typesJSON + `;
-const POST_TEMPLATES = {
-	article: { titleRequired: true, contentRequired: true },
-	link: { titleRequired: false, contentRequired: false },
-	quote: { titleRequired: false, contentRequired: true },
-	tutorial: { titleRequired: true, contentRequired: true },
-	list: { titleRequired: true, contentRequired: false },
-	thought: { titleRequired: false, contentRequired: true },
-	snippet: { titleRequired: true, contentRequired: true },
-	series: { titleRequired: true, contentRequired: true },
-	review: { titleRequired: true, contentRequired: true },
-	announcement: { titleRequired: true, contentRequired: true },
-	photo: { titleRequired: false, contentRequired: false },
-	video: { titleRequired: false, contentRequired: false }
-};
-
-function saveAsDraft() {
-	document.getElementById('post-status').value = 'draft';
-	handlePostSubmit();
-}
-
-function publish() {
-	document.getElementById('post-status').value = 'published';
-	handlePostSubmit();
-}
-
-function updatePostType() {
-	// Placeholder - could add dynamic fields here
-}
-
-function handlePostSubmit(event) {
-	if (event) event.preventDefault();
-	
-	const typeId = document.getElementById('post-type').value;
-	if (!typeId) {
-		alert('Please select a post type');
-		return;
-	}
-	
-	const slug = document.getElementById('post-slug').value;
-	if (!slug.trim()) {
-		alert('Slug is required');
-		return;
-	}
-	
-	const tagsStr = document.getElementById('post-tags').value;
-	const tags = tagsStr ? tagsStr.split(',').map(t => t.trim()).filter(t => t) : [];
-	
-	const postData = {
-		type_id: typeId,
-		title: document.getElementById('post-title').value || null,
-		slug: slug,
-		content: document.getElementById('post-content').value || null,
-		excerpt: document.getElementById('post-excerpt').value || '',
-		tags: tags,
-		metadata: {},
-		status: document.getElementById('post-status').value
-	};
-	
-	const postId = '` + postID + `';
-	const method = postId ? 'PUT' : 'POST';
-	const url = postId ? '/api/posts/' + postId : '/api/posts';
-	
-	fetch(url, {
-		method: method,
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(postData)
-	})
-	.then(r => {
-		if (!r.ok) return r.json().then(e => { throw new Error(e.error || 'Request failed'); });
-		return r.json();
-	})
-	.then(data => {
-		const msg = document.getElementById('editor-message');
-		msg.className = 'alert alert-success';
-		msg.textContent = (postId ? 'Updated' : 'Created') + ' post successfully!';
-		msg.style.display = 'block';
-		setTimeout(() => {
-			htmx.ajax('GET', '/admin/posts', {target: '#main-content'});
-		}, 1500);
-	})
-	.catch(err => {
-		const msg = document.getElementById('editor-message');
-		msg.className = 'alert alert-danger';
-		msg.textContent = 'Error: ' + err.message;
-		msg.style.display = 'block';
-	});
-}
-</script>`
-	
-	return respondHTML(200, html), nil
-}
-
-// respondHTML is a helper to return HTML responses
-func respondHTML(status int, html string) events.APIGatewayProxyResponse {
-	return events.APIGatewayProxyResponse{
-		StatusCode: status,
-		Body:       html,
-		Headers: map[string]string{
-			"Content-Type":                "text/html; charset=utf-8",
-			"Access-Control-Allow-Origin": "*",
-		},
-	}
-}
-
 // serveAdminCSS serves the admin CSS
 func serveAdminCSS() (events.APIGatewayProxyResponse, error) {
 	css := `* {
@@ -1651,5 +1060,5 @@ func respondError(status int, message string) events.APIGatewayProxyResponse {
 
 // main starts the Lambda handler
 func main() {
-	lambda.Start(handler)
+	lambda.Start(lambdaHandler)
 }
