@@ -1,11 +1,5 @@
 {
-  "buildCommand": "echo 'SSG only - no build needed'",
+  "buildCommand": "cp -r exports/public/* public/",
   "outputDirectory": "public",
-  "framework": null,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "framework": null
 }
