@@ -2,9 +2,11 @@ package handler
 
 import (
 	"context"
+	"html"
 	"fmt"
 	"net/http"
 	"strconv"
+	"strings"
 
 	"blog/internal/db"
 	"blog/internal/models"
@@ -498,7 +500,7 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 		post = p
 	}
 
-	html := `
+	htmlContent := `
 <div class="card">
 	<div class="card-header">
 		<div style="display: flex; justify-content: space-between; align-items: center;">
@@ -519,10 +521,10 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 		if post != nil && post.TypeID == t.ID {
 			selected = "selected"
 		}
-		html += fmt.Sprintf(`<option value="%s" %s>%s</option>`, t.ID, selected, t.Name)
+		htmlContent += fmt.Sprintf(`<option value="%s" %s>%s</option>`, t.ID, selected, t.Name)
 	}
 
-	html += `
+	htmlContent += `
 				</select>
 			</div>
 
@@ -530,52 +532,52 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 				<label for="post-title">Title <span id="title-required">*</span></label>
 				<input type="text" id="post-title" name="title" placeholder="Enter post title"`
 			if post != nil {
-			html += fmt.Sprintf(` value="%s"`, post.Title)
+			htmlContent += fmt.Sprintf(` value="%s"`, html.EscapeString(post.Title))
 			}
-			html += ` />
+			htmlContent += ` />
 			</div>
 
 			<div class="form-group">
 				<label for="post-slug">Slug *</label>
 				<input type="text" id="post-slug" name="slug" placeholder="post-slug" required`
 			if post != nil {
-			html += fmt.Sprintf(` value="%s"`, post.Slug)
+			htmlContent += fmt.Sprintf(` value="%s"`, html.EscapeString(post.Slug))
 			}
-			html += ` />
+			htmlContent += ` />
 			</div>
 
 			<div class="form-group">
 				<label for="post-content">Content <span id="content-required">*</span></label>
 				<textarea id="post-content" name="content" placeholder="Enter post content" rows="12">`
 			if post != nil {
-			html += post.Content
+			htmlContent += html.EscapeString(post.Content)
 			}
-			html += `</textarea>
+			htmlContent += `</textarea>
 			</div>
 
 			<div class="form-group">
 				<label for="post-excerpt">Excerpt</label>
 				<textarea id="post-excerpt" name="excerpt" placeholder="Optional excerpt" rows="3">`
 			if post != nil {
-			html += post.Excerpt
+			htmlContent += html.EscapeString(post.Excerpt)
 			}
-			html += `</textarea>
+			htmlContent += `</textarea>
 			</div>
 
 			<div class="form-group">
 				<label for="post-tags">Tags (comma-separated)</label>
 				<input type="text" id="post-tags" name="tags" placeholder="tag1, tag2, tag3"`
 			if post != nil && len(post.Tags) > 0 {
-			html += ` value="`
+			htmlContent += ` value="`
 			for i, tag := range post.Tags {
 				if i > 0 {
-					html += ", "
+					htmlContent += ", "
 				}
-				html += tag
+				htmlContent += tag
 			}
-			html += `"`
+			htmlContent += `"`
 			}
-			html += ` />
+			htmlContent += ` />
 			</div>
 
 			<div id="type-specific-fields"></div>
@@ -588,9 +590,9 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 					<option value="archived">Archived</option>
 				</select>`
 	if post != nil {
-		html += fmt.Sprintf(`<script>document.getElementById('post-status').value = '%s';</script>`, post.Status)
+		htmlContent += fmt.Sprintf(`<script>document.getElementById('post-status').value = '%s';</script>`, escapeSingleQuote(post.Status))
 	}
-	html += `
+	htmlContent += `
 			</div>
 
 			<div style="display: flex; gap: 10px; margin-top: 24px;">
@@ -791,15 +793,20 @@ function handlePostSubmit(event) {
 window.addEventListener('load', () => {
 	`
 	if post != nil {
-		html += fmt.Sprintf(`document.getElementById('post-type').value = '%s';`, post.TypeID)
+		htmlContent += fmt.Sprintf(`document.getElementById('post-type').value = '%s';`, escapeSingleQuote(post.TypeID))
 	}
-	html += `
+	htmlContent += `
 	updatePostType();
 });
 </script>
 	`
 
-	renderHTML(w, "text/html", html)
+	renderHTML(w, "text/html", htmlContent)
+}
+
+// escapeSingleQuote escapes single quotes for JavaScript strings
+func escapeSingleQuote(s string) string {
+	return strings.ReplaceAll(s, "'", "\\'")
 }
 
 // renderHTML is a helper to render HTML content
