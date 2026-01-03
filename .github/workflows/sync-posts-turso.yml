@@ -40,26 +40,17 @@ jobs:
             echo "⚠ No posts exported"
           fi
 
-      - name: Check for changes
-        id: check-changes
-        run: |
-          if git diff --quiet && git diff --staged --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected"
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected:"
-            git status
-          fi
-
       - name: Commit and push changes
-        if: steps.check-changes.outputs.changed == 'true'
         run: |
           git config user.name "Blog Sync Bot"
           git config user.email "bot@blog.local"
           git add exports/content/posts/
-          git commit -m "chore: sync posts from Turso database"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync posts from Turso database"
+            git push
+          fi
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
