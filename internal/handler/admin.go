@@ -858,15 +858,28 @@ function updatePreview() {
 		return;
 	}
 	
-	const html = marked(content);
-	let preview = '';
-	
-	if (title) {
-		preview += '<h1>' + escapeHtml(title) + '</h1>';
+	// Check if marked is available
+	if (typeof marked === 'undefined') {
+		document.getElementById('markdown-preview').innerHTML = 
+			'<p style="color: #999; text-align: center;">Loading markdown parser...</p>';
+		return;
 	}
 	
-	preview += html;
-	document.getElementById('markdown-preview').innerHTML = preview;
+	try {
+		const html = marked.parse ? marked.parse(content) : marked(content);
+		let preview = '';
+		
+		if (title) {
+			preview += '<h1>' + escapeHtml(title) + '</h1>';
+		}
+		
+		preview += html;
+		document.getElementById('markdown-preview').innerHTML = preview;
+	} catch (e) {
+		console.error('Preview error:', e);
+		document.getElementById('markdown-preview').innerHTML = 
+			'<p style="color: #e74c3c;">Error rendering preview: ' + escapeHtml(e.message) + '</p>';
+	}
 }
 
 function escapeHtml(text) {

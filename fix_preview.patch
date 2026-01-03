@@ -1,0 +1,6 @@
+The issue is that `marked` is a variable/function reference in JavaScript that's called as marked(content).
+In modern versions of marked, it's now a named export that requires initialization.
+
+The CDN script loads marked but we need to:
+1. Initialize marked properly
+2. Ensure the function is available when the editor JavaScript runs

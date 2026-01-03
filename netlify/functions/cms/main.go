@@ -1136,6 +1136,16 @@ func serveAdminShell() (events.APIGatewayProxyResponse, error) {
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
 	<script>
+		// Initialize marked
+		if (window.marked) {
+			marked.setOptions({
+				breaks: true,
+				gfm: true,
+				pedantic: false,
+				smartypants: false
+			});
+		}
+		
 		function updateActiveNav(element) {
 			document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
 			element.classList.add('active');
