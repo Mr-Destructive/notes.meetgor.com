@@ -37,6 +37,13 @@
   from = "/editor.js"
   to = "/.netlify/functions/cms/editor.js"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/dashboard.js"
+  to = "/.netlify/functions/cms/dashboard.js"
+  status = 200
+  force = true
 
 # Default: serve index.html for SPA fallback
 [[redirects]]
