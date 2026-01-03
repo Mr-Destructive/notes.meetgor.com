@@ -3,27 +3,112 @@ let currentPostId = null;
 let tags = [];
 let isEditMode = false;
 
-// Post type templates
+// Post type templates with required fields
 const POST_TEMPLATES = {
-  article: { fields: ['category'] },
-  review: { fields: ['type', 'rating', 'author', 'subject_link'] },
-  thought: {},
-  link: { fields: ['source_url'] },
-  til: { fields: ['category', 'difficulty'] },
-  quote: { fields: ['author', 'source', 'context'] },
-  list: { fields: ['items', 'list_type'] },
-  note: { fields: ['is_private'] },
-  snippet: { fields: ['language'] },
-  essay: { fields: ['reading_time'] },
-  tutorial: { fields: ['difficulty', 'estimated_time', 'tools'] },
-  interview: { fields: ['interviewee_name', 'role', 'company'] },
-  experiment: { fields: ['tools'] }
+  article: { 
+    fields: ['category'],
+    titleRequired: true,
+    contentRequired: true,
+    description: 'Full-length article'
+  },
+  review: { 
+    fields: ['rating', 'author', 'subject_link'],
+    titleRequired: true,
+    contentRequired: true,
+    description: 'Review of a book, movie, or product'
+  },
+  thought: {
+    fields: [],
+    titleRequired: false,
+    contentRequired: true,
+    description: 'Quick thoughts and reflections'
+  },
+  link: { 
+    fields: ['source_url'],
+    titleRequired: false,
+    contentRequired: false,
+    description: 'Curated link with commentary'
+  },
+  til: { 
+    fields: ['category', 'difficulty'],
+    titleRequired: false,
+    contentRequired: true,
+    description: 'Today I Learned'
+  },
+  quote: { 
+    fields: ['author', 'source'],
+    titleRequired: false,
+    contentRequired: true,
+    description: 'Quote or excerpt'
+  },
+  list: { 
+    fields: ['items', 'list_type'],
+    titleRequired: true,
+    contentRequired: false,
+    description: 'Curated list'
+  },
+  note: { 
+    fields: ['is_private'],
+    titleRequired: false,
+    contentRequired: true,
+    description: 'Quick note'
+  },
+  snippet: { 
+    fields: ['language'],
+    titleRequired: false,
+    contentRequired: true,
+    description: 'Code snippet'
+  },
+  essay: { 
+    fields: ['reading_time'],
+    titleRequired: true,
+    contentRequired: true,
+    description: 'Long-form essay'
+  },
+  tutorial: { 
+    fields: ['difficulty', 'estimated_time', 'tools'],
+    titleRequired: true,
+    contentRequired: true,
+    description: 'Step-by-step guide'
+  },
+  interview: { 
+    fields: ['interviewee_name', 'role', 'company'],
+    titleRequired: true,
+    contentRequired: true,
+    description: 'Q&A interview'
+  },
+  experiment: { 
+    fields: ['tools'],
+    titleRequired: true,
+    contentRequired: true,
+    description: 'Experiment or project'
+  }
 };
 
 function changePostType() {
   const type = document.getElementById('postType').value;
   const template = POST_TEMPLATES[type] || {};
   const container = document.getElementById('typeSpecificFields');
+  
+  // Update title requirement
+  const titleInput = document.getElementById('title');
+  if (template.titleRequired === false) {
+    titleInput.removeAttribute('required');
+    document.querySelector('label[for="title"]').textContent = 'Title (optional)';
+  } else {
+    titleInput.setAttribute('required', '');
+    document.querySelector('label[for="title"]').textContent = 'Title *';
+  }
+
+  // Update content requirement
+  const contentInput = document.getElementById('content');
+  if (template.contentRequired === false) {
+    contentInput.removeAttribute('required');
+    document.querySelector('label[for="content"]').textContent = 'Content (optional)';
+  } else {
+    contentInput.setAttribute('required', '');
+    document.querySelector('label[for="content"]').textContent = 'Content *';
+  }
   
   container.innerHTML = '';
   
@@ -38,16 +123,16 @@ function changePostType() {
       
       if (field === 'items') {
         group.innerHTML = `
-          <label for="${field}">${field.charAt(0).toUpperCase() + field.slice(1)}</label>
-          <textarea id="${field}" placeholder="One item per line..." rows="5"></textarea>
+          <label for="${field}">Items (one per line)</label>
+          <textarea id="${field}" placeholder="- Item 1&#10;- Item 2&#10;- Item 3" rows="5"></textarea>
         `;
       } else if (field === 'difficulty' || field === 'list_type') {
         group.innerHTML = `
-          <label for="${field}">${field.charAt(0).toUpperCase() + field.slice(1)}</label>
+          <label for="${field}">${formatFieldName(field)}</label>
           <select id="${field}">
             ${field === 'difficulty' 
-              ? '<option>beginner</option><option>intermediate</option><option>advanced</option>'
-              : '<option>ordered</option><option>unordered</option>'
+              ? '<option value="">Select difficulty</option><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option>'
+              : '<option value="">Select type</option><option value="ordered">Ordered</option><option value="unordered">Unordered</option>'
             }
           </select>
         `;
@@ -60,19 +145,25 @@ function changePostType() {
         `;
       } else if (field === 'rating') {
         group.innerHTML = `
-          <label for="${field}">${field.charAt(0).toUpperCase() + field.slice(1)}</label>
+          <label for="${field}">Rating</label>
           <select id="${field}">
+            <option value="">Select rating</option>
             <option value="1">⭐ 1</option>
             <option value="2">⭐⭐ 2</option>
-            <option value="3" selected>⭐⭐⭐ 3</option>
+            <option value="3">⭐⭐⭐ 3</option>
             <option value="4">⭐⭐⭐⭐ 4</option>
             <option value="5">⭐⭐⭐⭐⭐ 5</option>
           </select>
         `;
+      } else if (field === 'source_url') {
+        group.innerHTML = `
+          <label for="${field}">Source URL *</label>
+          <input type="url" id="${field}" placeholder="https://example.com" required onchange="updateTitleFromUrl()">
+        `;
       } else {
         group.innerHTML = `
-          <label for="${field}">${field.charAt(0).toUpperCase() + field.slice(1)}</label>
-          <input type="text" id="${field}" placeholder="${field}...">
+          <label for="${field}">${formatFieldName(field)}</label>
+          <input type="text" id="${field}" placeholder="${formatFieldName(field)}...">
         `;
       }
       
@@ -80,6 +171,34 @@ function changePostType() {
     });
     
     container.appendChild(section);
+  }
+}
+
+function formatFieldName(field) {
+  return field
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+function updateTitleFromUrl() {
+  const type = document.getElementById('postType').value;
+  if (type === 'link') {
+    const sourceUrl = document.getElementById('source_url')?.value;
+    if (sourceUrl && !document.getElementById('title').value) {
+      try {
+        const url = new URL(sourceUrl);
+        // Try to extract a meaningful title from the URL
+        const hostname = url.hostname.replace('www.', '');
+        const pathname = url.pathname.split('/').filter(p => p).pop() || hostname;
+        document.getElementById('title').value = pathname
+          .replace(/[-_]/g, ' ')
+          .replace(/\.[^.]+$/, '')
+          .replace(/\b\w/g, l => l.toUpperCase());
+      } catch (e) {
+        // Invalid URL, skip auto-titling
+      }
+    }
   }
 }
 
@@ -107,8 +226,8 @@ function renderTags() {
   const container = document.getElementById('tags');
   container.innerHTML = tags.map(tag => `
     <div class="tag">
-      ${tag}
-      <button onclick="removeTag('${tag}')">×</button>
+      ${escapeHtml(tag)}
+      <button type="button" onclick="removeTag('${tag}')">×</button>
     </div>
   `).join('');
 }
@@ -123,10 +242,27 @@ function getMetadata() {
       const input = document.getElementById(field);
       if (input) {
         if (field === 'items') {
-          metadata.items = input.value.split('\n').filter(i => i.trim());
+          // Split items by newline and filter empty
+          const items = input.value
+            .split('\n')
+            .map(i => i.trim())
+            .filter(i => i);
+          if (items.length > 0) {
+            metadata.items = items;
+          }
         } else if (field === 'is_private') {
           metadata.is_private = input.checked;
-        } else {
+        } else if (field === 'tools') {
+          // Handle comma-separated tools
+          const tools = input.value
+            .split(',')
+            .map(t => t.trim())
+            .filter(t => t);
+          if (tools.length > 0) {
+            metadata.tools = tools;
+          }
+        } else if (input.value) {
+          // Only add non-empty fields
           metadata[field] = input.value;
         }
       }
@@ -137,23 +273,41 @@ function getMetadata() {
 }
 
 async function savePost() {
-   const title = document.getElementById('title').value;
-   const content = document.getElementById('content').value;
+  const type = document.getElementById('postType').value;
+  const template = POST_TEMPLATES[type];
+  const title = document.getElementById('title').value.trim();
+  const content = document.getElementById('content').value.trim();
   
-  if (!title || !content) {
-    showAlert('Title and content are required', 'error');
+  // Validate required fields
+  if (template.titleRequired && !title) {
+    showAlert('Title is required for this post type', 'error');
     return;
   }
   
+  if (template.contentRequired && !content) {
+    showAlert('Content is required for this post type', 'error');
+    return;
+  }
+
+  // For link posts, require source_url
+  if (type === 'link') {
+    const sourceUrl = document.getElementById('source_url')?.value;
+    if (!sourceUrl) {
+      showAlert('Source URL is required for link posts', 'error');
+      return;
+    }
+  }
+  
   const postData = {
-    type_id: document.getElementById('postType').value,
-    title,
-    slug: document.getElementById('slug').value || generateSlug(title),
-    excerpt: document.getElementById('excerpt').value,
-    content,
+    type_id: type,
+    title: title || null,
+    slug: document.getElementById('slug').value || generateSlug(title || 'untitled'),
+    excerpt: document.getElementById('excerpt').value.trim() || null,
+    content: content || null,
     status: 'draft',
-    tags,
-    metadata: getMetadata()
+    tags: tags,
+    metadata: getMetadata(),
+    is_featured: false
   };
   
   try {
@@ -171,33 +325,54 @@ async function savePost() {
       body: JSON.stringify(postData)
     });
     
-    if (!response.ok) throw new Error('Save failed');
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.error || 'Save failed');
+    }
     
     const data = await response.json();
     currentPostId = data.id;
-    showAlert('Post saved as draft', 'success');
+    isEditMode = true;
+    showAlert('✓ Post saved as draft', 'success');
   } catch (error) {
     showAlert(error.message || 'Save failed', 'error');
   }
 }
 
 async function publishPost() {
-   const title = document.getElementById('title').value;
-   const content = document.getElementById('content').value;
+  const type = document.getElementById('postType').value;
+  const template = POST_TEMPLATES[type];
+  const title = document.getElementById('title').value.trim();
+  const content = document.getElementById('content').value.trim();
   
-  if (!title || !content) {
-    showAlert('Title and content are required', 'error');
+  // Validate required fields
+  if (template.titleRequired && !title) {
+    showAlert('Title is required to publish', 'error');
     return;
   }
   
+  if (template.contentRequired && !content) {
+    showAlert('Content is required to publish', 'error');
+    return;
+  }
+
+  // For link posts, require source_url
+  if (type === 'link') {
+    const sourceUrl = document.getElementById('source_url')?.value;
+    if (!sourceUrl) {
+      showAlert('Source URL is required for link posts', 'error');
+      return;
+    }
+  }
+  
   const postData = {
-    type_id: document.getElementById('postType').value,
-    title,
-    slug: document.getElementById('slug').value || generateSlug(title),
-    excerpt: document.getElementById('excerpt').value,
-    content,
+    type_id: type,
+    title: title || null,
+    slug: document.getElementById('slug').value || generateSlug(title || 'untitled'),
+    excerpt: document.getElementById('excerpt').value.trim() || null,
+    content: content || null,
     status: 'published',
-    tags,
+    tags: tags,
     metadata: getMetadata(),
     is_featured: document.getElementById('isFeatured').checked
   };
@@ -217,11 +392,15 @@ async function publishPost() {
       body: JSON.stringify(postData)
     });
     
-    if (!response.ok) throw new Error('Publish failed');
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.error || 'Publish failed');
+    }
     
     const data = await response.json();
     currentPostId = data.id;
-    showAlert('Post published! 🚀', 'success');
+    isEditMode = true;
+    showAlert('🚀 Post published!', 'success');
   } catch (error) {
     showAlert(error.message || 'Publish failed', 'error');
   }
@@ -232,18 +411,27 @@ function previewPost() {
 }
 
 function resetForm() {
-   if (confirm('Reset form? This will clear all fields.')) {
-     document.getElementById('title').value = '';
-     document.getElementById('slug').value = '';
-     document.getElementById('excerpt').value = '';
-     document.getElementById('content').value = '';
-     tags = [];
-     renderTags();
-     currentPostId = null;
-   }
+  if (confirm('Reset form? This will clear all fields.')) {
+    document.getElementById('title').value = '';
+    document.getElementById('slug').value = '';
+    document.getElementById('excerpt').value = '';
+    document.getElementById('content').value = '';
+    document.getElementById('status').value = 'draft';
+    document.getElementById('isFeatured').checked = false;
+    tags = [];
+    renderTags();
+    currentPostId = null;
+    isEditMode = false;
+    
+    // Clear type-specific fields
+    document.getElementById('typeSpecificFields').innerHTML = '';
+    
+    showAlert('Form cleared', 'success');
+  }
 }
 
 function generateSlug(title) {
+  if (!title) return '';
   return title
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
@@ -260,6 +448,17 @@ function showAlert(message, type) {
     alert.textContent = '';
     alert.className = '';
   }, 5000);
+}
+
+function escapeHtml(text) {
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return String(text).replace(/[&<>"']/g, m => map[m]);
 }
 
 function logout() {
@@ -282,9 +481,9 @@ window.addEventListener('load', async () => {
   if (postId) {
     await loadPostForEditing(postId);
     sessionStorage.removeItem('editPostId');
+  } else {
+    changePostType(); // Initialize type-specific fields for new post
   }
-
-  changePostType(); // Initialize type-specific fields
 });
 
 async function loadPostForEditing(postId) {
@@ -305,8 +504,11 @@ async function loadPostForEditing(postId) {
     currentPostId = post.id;
     isEditMode = true;
 
-    // Populate form fields
+    // Set post type first so type-specific fields load
     document.getElementById('postType').value = post.type_id || 'article';
+    changePostType(); // Initialize type-specific fields
+
+    // Populate form fields
     document.getElementById('title').value = post.title || '';
     document.getElementById('slug').value = post.slug || '';
     document.getElementById('excerpt').value = post.excerpt || '';
@@ -318,6 +520,7 @@ async function loadPostForEditing(postId) {
     if (post.tags) {
       try {
         tags = JSON.parse(post.tags);
+        if (!Array.isArray(tags)) tags = [];
         renderTags();
       } catch (e) {
         tags = [];
@@ -330,14 +533,21 @@ async function loadPostForEditing(postId) {
         const metadata = JSON.parse(post.metadata);
         const type = document.getElementById('postType').value;
         const template = POST_TEMPLATES[type] || {};
+        
         if (template.fields) {
           template.fields.forEach(field => {
             const input = document.getElementById(field);
-            if (input && metadata[field] !== undefined) {
+            if (input && metadata[field] !== undefined && metadata[field] !== null) {
               if (field === 'items') {
-                input.value = (Array.isArray(metadata[field]) ? metadata[field] : []).join('\n');
+                // items should be an array
+                const items = Array.isArray(metadata[field]) ? metadata[field] : [metadata[field]];
+                input.value = items.join('\n');
+              } else if (field === 'tools') {
+                // tools should be an array or comma-separated
+                const tools = Array.isArray(metadata[field]) ? metadata[field] : [metadata[field]];
+                input.value = tools.join(', ');
               } else if (field === 'is_private') {
-                input.checked = metadata[field];
+                input.checked = Boolean(metadata[field]);
               } else {
                 input.value = metadata[field];
               }
@@ -345,11 +555,11 @@ async function loadPostForEditing(postId) {
           });
         }
       } catch (e) {
-        // Skip metadata loading if parse fails
+        console.error('Error loading metadata:', e);
       }
     }
 
-    showAlert(`Editing: ${post.title}`, 'success');
+    showAlert(`✓ Editing: ${post.title || 'Untitled'}`, 'success');
   } catch (error) {
     showAlert(error.message || 'Failed to load post', 'error');
   }
@@ -360,5 +570,12 @@ document.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && e.target.id === 'tagInput') {
     e.preventDefault();
     addTag();
+  }
+});
+
+// Validate form before submit
+document.addEventListener('submit', (e) => {
+  if (e.target.tagName === 'FORM') {
+    e.preventDefault();
   }
 });

@@ -281,10 +281,10 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 		// Create new post
 		var postReq struct {
 			TypeID   string                 `json:"type_id"`
-			Title    string                 `json:"title"`
+			Title    *string                `json:"title"`
 			Slug     string                 `json:"slug"`
-			Content  string                 `json:"content"`
-			Excerpt  string                 `json:"excerpt"`
+			Content  *string                `json:"content"`
+			Excerpt  *string                `json:"excerpt"`
 			Status   string                 `json:"status"`
 			Tags     []string               `json:"tags"`
 			Metadata map[string]interface{} `json:"metadata"`
@@ -302,16 +302,33 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 		tagsJSON, _ := json.Marshal(postReq.Tags)
 		metaJSON, _ := json.Marshal(postReq.Metadata)
 
+		// Helper to convert *string to sql.NullString
+		stringToNull := func(s *string) sql.NullString {
+			if s == nil || *s == "" {
+				return sql.NullString{Valid: false}
+			}
+			return sql.NullString{String: *s, Valid: true}
+		}
+
+		title := ""
+		if postReq.Title != nil {
+			title = *postReq.Title
+		}
+		content := ""
+		if postReq.Content != nil {
+			content = *postReq.Content
+		}
+
 		post, err := queries.CreatePost(ctx, gen.CreatePostParams{
 			ID:      postID,
 			TypeID:  postReq.TypeID,
-			Title:   postReq.Title,
+			Title:   title,
 			Slug:    postReq.Slug,
-			Content: postReq.Content,
-			Excerpt: sql.NullString{String: postReq.Excerpt, Valid: postReq.Excerpt != ""},
+			Content: content,
+			Excerpt: stringToNull(postReq.Excerpt),
 			Status:  sql.NullString{String: postReq.Status, Valid: postReq.Status != ""},
-			Tags:    sql.NullString{String: string(tagsJSON), Valid: len(tagsJSON) > 0},
-			Metadata: sql.NullString{String: string(metaJSON), Valid: len(metaJSON) > 0},
+			Tags:    sql.NullString{String: string(tagsJSON), Valid: len(tagsJSON) > 2},
+			Metadata: sql.NullString{String: string(metaJSON), Valid: len(metaJSON) > 2},
 			CreatedAt: sql.NullTime{Time: now, Valid: true},
 			UpdatedAt: sql.NullTime{Time: now, Valid: true},
 		})
