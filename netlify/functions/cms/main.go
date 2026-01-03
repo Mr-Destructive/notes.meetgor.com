@@ -31,8 +31,15 @@ func init() {
 	log.Println("CMS function initializing...")
 }
 
-// fetchPageTitle fetches the title from a URL by reading its HTML meta tags
-func fetchPageTitle(url string) string {
+// PageMetadata holds extracted page info
+type PageMetadata struct {
+	Title       string
+	Description string
+	Image       string
+}
+
+// fetchPageMetadata fetches title, description, and image from a URL
+func fetchPageMetadata(url string) PageMetadata {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
@@ -41,28 +48,53 @@ func fetchPageTitle(url string) string {
 	
 	resp, err := http.DefaultClient.Do(httpReq)
 	if err != nil || resp.StatusCode != 200 {
-		return ""
+		return PageMetadata{}
 	}
 	defer resp.Body.Close()
 
-	// Read limited amount of HTML to find og:title or <title>
-	limitReader := io.LimitReader(resp.Body, 50000)
+	// Read limited amount of HTML
+	limitReader := io.LimitReader(resp.Body, 100000)
 	body, _ := io.ReadAll(limitReader)
 	html := string(body)
 
+	meta := PageMetadata{}
+
 	// Try og:title first
-	ogPattern := regexp.MustCompile(`<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']`)
-	if matches := ogPattern.FindStringSubmatch(html); len(matches) > 1 {
-		return strings.TrimSpace(matches[1])
+	ogTitlePattern := regexp.MustCompile(`<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']`)
+	if matches := ogTitlePattern.FindStringSubmatch(html); len(matches) > 1 {
+		meta.Title = strings.TrimSpace(matches[1])
+	} else {
+		// Try title tag
+		titlePattern := regexp.MustCompile(`<title>([^<]+)</title>`)
+		if matches := titlePattern.FindStringSubmatch(html); len(matches) > 1 {
+			meta.Title = strings.TrimSpace(matches[1])
+		}
 	}
 
-	// Try title tag
-	titlePattern := regexp.MustCompile(`<title>([^<]+)</title>`)
-	if matches := titlePattern.FindStringSubmatch(html); len(matches) > 1 {
-		return strings.TrimSpace(matches[1])
+	// Try og:description
+	ogDescPattern := regexp.MustCompile(`<meta\s+property=["']og:description["']\s+content=["']([^"']+)["']`)
+	if matches := ogDescPattern.FindStringSubmatch(html); len(matches) > 1 {
+		meta.Description = strings.TrimSpace(matches[1])
+	} else {
+		// Try meta description
+		descPattern := regexp.MustCompile(`<meta\s+name=["']description["']\s+content=["']([^"']+)["']`)
+		if matches := descPattern.FindStringSubmatch(html); len(matches) > 1 {
+			meta.Description = strings.TrimSpace(matches[1])
+		}
 	}
 
-	return ""
+	// Try og:image
+	ogImagePattern := regexp.MustCompile(`<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']`)
+	if matches := ogImagePattern.FindStringSubmatch(html); len(matches) > 1 {
+		meta.Image = strings.TrimSpace(matches[1])
+	}
+
+	return meta
+}
+
+// fetchPageTitle fetches the title from a URL (kept for backwards compatibility)
+func fetchPageTitle(url string) string {
+	return fetchPageMetadata(url).Title
 }
 
 // lambdaHandler is the AWS Lambda handler for Netlify Functions
@@ -439,11 +471,18 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			title = *postReq.Title
 		}
 		
-		// Fetch title from link if empty and type is "link"
+		// Fetch title and image from link if empty and type is "link"
 		if title == "" && postReq.TypeID == "link" {
 			if sourceURL, exists := postReq.Metadata["source_url"].(string); exists && sourceURL != "" {
-				if fetchedTitle := fetchPageTitle(sourceURL); fetchedTitle != "" {
-					title = fetchedTitle
+				pageMeta := fetchPageMetadata(sourceURL)
+				if pageMeta.Title != "" {
+					title = pageMeta.Title
+				}
+				if pageMeta.Image != "" {
+					postReq.Metadata["og_image"] = pageMeta.Image
+				}
+				if pageMeta.Description != "" {
+					postReq.Metadata["og_description"] = pageMeta.Description
 				}
 			}
 		}
