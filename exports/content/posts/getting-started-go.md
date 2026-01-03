@@ -5,6 +5,7 @@ publishDate: 2025-01-02
 description: "Learn Go basics"
 tags: ["go", "programming"]
 draft: false
+type: "posts"
 ---
 
 Go is a powerful language for building web applications.

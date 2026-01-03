@@ -1,0 +1,106 @@
+name: Sync Posts Every 6 Hours
+
+on:
+  schedule:
+    # Run every 6 hours (0, 6, 12, 18 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23'
+
+      - name: Build CMS binary
+        run: |
+          go build -o cms ./cmd/functions/main.go
+          ls -lh ./cms
+
+      - name: Start CMS server and export posts
+        run: |
+          # Start CMS in background
+          timeout 30 ./cms &
+          CMS_PID=$!
+          sleep 3
+          
+          # Test if server is running
+          if ! curl -s http://localhost:8080/api/health >/dev/null 2>&1; then
+            echo "✗ CMS server failed to start"
+            kill $CMS_PID 2>/dev/null || true
+            exit 1
+          fi
+          
+          echo "✓ CMS server running"
+          
+          # Trigger export
+          curl -X POST http://localhost:8080/api/exports \
+            -H "Content-Type: application/json" \
+            -w "\nStatus: %{http_code}\n"
+          
+          echo "✓ Export completed"
+          sleep 2
+          
+          # Stop server
+          kill $CMS_PID 2>/dev/null || true
+
+      - name: Verify exports
+        run: |
+          if [ -d "exports/content/posts" ]; then
+            count=$(find exports/content/posts -name "*.md" | wc -l)
+            echo "✓ Found $count posts"
+            ls -la exports/content/posts/
+          else
+            echo "⚠ No exports directory"
+          fi
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git status
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Blog Sync Bot"
+          git config user.email "bot@blog.local"
+          git add exports/content/posts/
+          git commit -m "chore: sync posts from database [skip ci]"
+          git push
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Hugo site
+        run: |
+          cd exports
+          hugo --minify --destination ../public
+          echo "✓ Site built"
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
+          npm install -g vercel
+          vercel deploy --prod --token=$VERCEL_TOKEN
