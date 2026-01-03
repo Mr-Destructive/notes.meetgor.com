@@ -138,6 +138,8 @@ func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRes
 		return handleAuth(req, ctx, id)
 	case "posts":
 		return handlePosts(req, ctx, queries, id, action)
+	case "series":
+		return handleSeries(req, ctx, queries, id)
 	case "types":
 		return handleTypes(req, ctx, queries)
 	case "tags":
@@ -815,6 +817,96 @@ jobs:
 `
 }
 
+// handleSeries handles /series CRUD endpoints
+func handleSeries(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, id string) (events.APIGatewayProxyResponse, error) {
+	switch req.HTTPMethod {
+	case "GET":
+		// Get single series
+		if id != "" {
+			series, err := queries.GetSeries(ctx, gen.GetSeriesParams{ID: id, Slug: id})
+			if err != nil {
+				log.Printf("GetSeries error: %v", err)
+				return respondError(404, "Series not found"), nil
+			}
+			return respondJSON(200, series), nil
+		}
+		
+		// List series
+		series, err := queries.ListSeries(ctx, gen.ListSeriesParams{Limit: 100, Offset: 0})
+		if err != nil {
+			log.Printf("ListSeries error: %v", err)
+			return respondError(500, "Failed to fetch series"), nil
+		}
+		return respondJSON(200, series), nil
+
+	case "POST":
+		// Create new series
+		var seriesReq struct {
+			Name        string `json:"name"`
+			Slug        string `json:"slug"`
+			Description string `json:"description"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&seriesReq); err != nil {
+			log.Printf("POST decode error: %v", err)
+			return respondError(400, "Invalid request body"), nil
+		}
+
+		seriesID := fmt.Sprintf("%x", time.Now().UnixNano())
+		series, err := queries.CreateSeries(ctx, gen.CreateSeriesParams{
+			ID:          seriesID,
+			Name:        seriesReq.Name,
+			Slug:        seriesReq.Slug,
+			Description: sql.NullString{String: seriesReq.Description, Valid: seriesReq.Description != ""},
+			CreatedAt:   sql.NullTime{Time: time.Now(), Valid: true},
+		})
+		if err != nil {
+			log.Printf("CreateSeries error: %v", err)
+			return respondError(500, "Failed to create series"), nil
+		}
+		return respondJSON(201, series), nil
+
+	case "PUT":
+		if id == "" {
+			return respondError(400, "Series ID required"), nil
+		}
+
+		var updateReq struct {
+			Name        string `json:"name"`
+			Slug        string `json:"slug"`
+			Description string `json:"description"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&updateReq); err != nil {
+			return respondError(400, "Invalid request body"), nil
+		}
+
+		series, err := queries.UpdateSeries(ctx, gen.UpdateSeriesParams{
+			ID:          id,
+			Name:        updateReq.Name,
+			Slug:        updateReq.Slug,
+			Description: sql.NullString{String: updateReq.Description, Valid: updateReq.Description != ""},
+		})
+		if err != nil {
+			log.Printf("UpdateSeries error: %v", err)
+			return respondError(500, "Failed to update series"), nil
+		}
+		return respondJSON(200, series), nil
+
+	case "DELETE":
+		if id == "" {
+			return respondError(400, "Series ID required"), nil
+		}
+
+		if err := queries.DeleteSeries(ctx, id); err != nil {
+			log.Printf("DeleteSeries error: %v", err)
+			return respondError(500, "Failed to delete series"), nil
+		}
+		return respondJSON(200, map[string]string{"status": "deleted"}), nil
+
+	default:
+		return respondError(405, "Method not allowed"), nil
+	}
+}
+
 // initSchemaIfNotExists creates tables if they don't exist
 func initSchemaIfNotExists(ctx context.Context, db *sql.DB) error {
 	// Create tables if not exists
@@ -1120,8 +1212,11 @@ func handleAdminRoute(ctx context.Context, req events.APIGatewayProxyRequest, fu
 	case "series":
 		// Check for editor routes: /series/new or /series/{id}/edit
 		if id == "new" || action == "edit" {
-			respWriter.WriteHeader(http.StatusNotImplemented)
-			fmt.Fprint(respWriter, `<div class="alert alert-danger">Series editor not yet implemented</div>`)
+			seriesID := id
+			if id == "new" {
+				seriesID = ""
+			}
+			handler.HandleSeriesEditor(respWriter, httpReq, appDB, seriesID)
 		} else {
 			handler.HandleSeriesList(respWriter, httpReq, appDB)
 		}

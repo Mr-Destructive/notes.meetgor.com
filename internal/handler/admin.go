@@ -344,6 +344,131 @@ func HandleSeriesList(w http.ResponseWriter, r *http.Request, database *db.DB) {
 	renderHTML(w, "text/html", html)
 }
 
+// HandleSeriesEditor serves the series editor form
+func HandleSeriesEditor(w http.ResponseWriter, r *http.Request, database *db.DB, seriesID string) {
+	ctx := context.Background()
+
+	var series *models.Series
+	if seriesID != "" {
+		var err error
+		series, err = database.GetSeries(ctx, seriesID)
+		if err != nil {
+			renderHTML(w, "text/html", `<div class="alert alert-danger">Series not found</div>`)
+			return
+		}
+	}
+
+	title := "New Series"
+	buttonText := "Create Series"
+	method := "POST"
+	endpoint := "/api/series"
+	nameValue := ""
+	slugValue := ""
+	descValue := ""
+
+	if series != nil {
+		title = "Edit Series"
+		buttonText = "Update Series"
+		method = "PUT"
+		endpoint = "/api/series/" + series.ID
+		nameValue = series.Name
+		slugValue = series.Slug
+		descValue = series.Description
+	}
+
+	html := `
+<div class="card">
+	<div class="card-header">
+		<div style="display: flex; justify-content: space-between; align-items: center;">
+			<h3 id="editor-title">` + title + `</h3>
+			<button class="btn btn-outline" hx-get="/admin/series" hx-target="#main-content">← Back to Series</button>
+		</div>
+	</div>
+	<div class="card-body">
+		<form id="series-form" onsubmit="handleSeriesSubmit(event)">
+			<div class="form-group">
+				<label for="series-name">Series Name *</label>
+				<input type="text" id="series-name" name="name" placeholder="Enter series name" required value="` + nameValue + `" />
+			</div>
+
+			<div class="form-group">
+				<label for="series-slug">Slug *</label>
+				<input type="text" id="series-slug" name="slug" placeholder="series-slug" required value="` + slugValue + `" />
+			</div>
+
+			<div class="form-group">
+				<label for="series-description">Description</label>
+				<textarea id="series-description" name="description" placeholder="Optional description" rows="4">` + descValue + `</textarea>
+			</div>
+
+			<div style="display: flex; gap: 10px; margin-top: 24px;">
+				<button type="button" class="btn btn-primary" onclick="saveSeries()">💾 ` + buttonText + `</button>
+				<button type="button" class="btn btn-outline" hx-get="/admin/series" hx-target="#main-content">Cancel</button>
+			</div>
+		</form>
+
+		<div id="series-message" style="margin-top: 16px; display: none;"></div>
+	</div>
+</div>
+
+<script>
+const SERIES_METHOD = '` + method + `';
+const SERIES_ENDPOINT = '` + endpoint + `';
+
+function saveSeries() {
+	const name = document.getElementById('series-name').value;
+	const slug = document.getElementById('series-slug').value;
+	const description = document.getElementById('series-description').value;
+
+	if (!name.trim()) {
+		showMessage('Series name is required', 'danger');
+		return;
+	}
+
+	if (!slug.trim()) {
+		showMessage('Slug is required', 'danger');
+		return;
+	}
+
+	const seriesData = {
+		name: name,
+		slug: slug,
+		description: description
+	};
+
+	fetch(SERIES_ENDPOINT, {
+		method: SERIES_METHOD,
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(seriesData)
+	})
+	.then(r => {
+		if (!r.ok) return r.json().then(e => { throw new Error(e.error || 'Request failed'); });
+		return r.json();
+	})
+	.then(data => {
+		showMessage((SERIES_METHOD === 'POST' ? 'Created' : 'Updated') + ' series successfully!', 'success');
+		setTimeout(() => {
+			htmx.ajax('GET', '/admin/series', {target: '#main-content'});
+		}, 1000);
+	})
+	.catch(err => {
+		showMessage('Error: ' + err.message, 'danger');
+	});
+}
+
+function showMessage(message, type) {
+	const msg = document.getElementById('series-message');
+	msg.className = 'alert alert-' + type;
+	msg.textContent = message;
+	msg.style.display = 'block';
+	setTimeout(() => msg.style.display = 'none', 5000);
+}
+</script>
+	`
+
+	renderHTML(w, "text/html", html)
+}
+
 // HandlePostTypes serves the post types view
 func HandlePostTypes(w http.ResponseWriter, r *http.Request, database *db.DB) {
 	ctx := context.Background()
