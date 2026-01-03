@@ -297,17 +297,17 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 		metaJSON, _ := json.Marshal(postReq.Metadata)
 
 		post, err := queries.CreatePost(ctx, gen.CreatePostParams{
-			ID:        postID,
-			TypeID:    postReq.TypeID,
-			Title:     postReq.Title,
-			Slug:      postReq.Slug,
-			Content:   postReq.Content,
-			Excerpt:   postReq.Excerpt,
-			Status:    postReq.Status,
-			Tags:      string(tagsJSON),
-			Metadata:  string(metaJSON),
-			CreatedAt: now,
-			UpdatedAt: now,
+			ID:      postID,
+			TypeID:  postReq.TypeID,
+			Title:   postReq.Title,
+			Slug:    postReq.Slug,
+			Content: postReq.Content,
+			Excerpt: sql.NullString{String: postReq.Excerpt, Valid: postReq.Excerpt != ""},
+			Status:  sql.NullString{String: postReq.Status, Valid: postReq.Status != ""},
+			Tags:    sql.NullString{String: string(tagsJSON), Valid: len(tagsJSON) > 0},
+			Metadata: sql.NullString{String: string(metaJSON), Valid: len(metaJSON) > 0},
+			CreatedAt: sql.NullTime{Time: now, Valid: true},
+			UpdatedAt: sql.NullTime{Time: now, Valid: true},
 		})
 		if err != nil {
 			log.Printf("CreatePost error: %v", err)
@@ -337,7 +337,7 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 
 		// Convert tags and metadata to JSON if provided
 		tagsJSON := sql.NullString{}
-		if updateReq.Tags != nil {
+		if len(updateReq.Tags) > 0 {
 			b, _ := json.Marshal(updateReq.Tags)
 			tagsJSON = sql.NullString{String: string(b), Valid: true}
 		}
@@ -348,17 +348,33 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			metaJSON = sql.NullString{String: string(b), Valid: true}
 		}
 
+		// Helper function to convert *string to sql.NullString
+		stringToNull := func(s *string) sql.NullString {
+			if s == nil {
+				return sql.NullString{Valid: false}
+			}
+			return sql.NullString{String: *s, Valid: true}
+		}
+
+		// Helper function to convert *bool to sql.NullBool
+		boolToNull := func(b *bool) sql.NullBool {
+			if b == nil {
+				return sql.NullBool{Valid: false}
+			}
+			return sql.NullBool{Bool: *b, Valid: true}
+		}
+
 		post, err := queries.UpdatePost(ctx, gen.UpdatePostParams{
 			ID:         id,
-			Title:      updateReq.Title,
-			Slug:       updateReq.Slug,
-			Content:    updateReq.Content,
-			Excerpt:    updateReq.Excerpt,
-			Status:     updateReq.Status,
+			Title:      stringToNull(updateReq.Title),
+			Slug:       stringToNull(updateReq.Slug),
+			Content:    stringToNull(updateReq.Content),
+			Excerpt:    stringToNull(updateReq.Excerpt),
+			Status:     stringToNull(updateReq.Status),
 			Tags:       tagsJSON,
 			Metadata:   metaJSON,
-			IsFeatured: updateReq.IsFeatured,
-			UpdatedAt:  time.Now(),
+			IsFeatured: boolToNull(updateReq.IsFeatured),
+			UpdatedAt:  sql.NullTime{Time: time.Now(), Valid: true},
 		})
 		if err != nil {
 			log.Printf("UpdatePost error: %v", err)
