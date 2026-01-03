@@ -828,7 +828,12 @@ func handleAdminRoute(ctx context.Context, req events.APIGatewayProxyRequest, fu
 	case "posts":
 		// Check for editor routes: /posts/new or /posts/{id}/edit
 		if id == "new" || action == "edit" {
-			handler.HandlePostEditor(respWriter, httpReq, appDB, id)
+			// For /posts/new, pass empty string; for /posts/{id}/edit, pass id
+			postID := id
+			if id == "new" {
+				postID = ""
+			}
+			handler.HandlePostEditor(respWriter, httpReq, appDB, postID)
 		} else {
 			handler.HandlePostsList(respWriter, httpReq, appDB)
 		}
