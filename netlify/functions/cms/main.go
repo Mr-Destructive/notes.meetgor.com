@@ -7,10 +7,12 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"time"
 
@@ -27,6 +29,40 @@ var uiFiles embed.FS
 
 func init() {
 	log.Println("CMS function initializing...")
+}
+
+// fetchPageTitle fetches the title from a URL by reading its HTML meta tags
+func fetchPageTitle(url string) string {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	httpReq, _ := http.NewRequestWithContext(ctx, "GET", url, nil)
+	httpReq.Header.Set("User-Agent", "Mozilla/5.0 (compatible)")
+	
+	resp, err := http.DefaultClient.Do(httpReq)
+	if err != nil || resp.StatusCode != 200 {
+		return ""
+	}
+	defer resp.Body.Close()
+
+	// Read limited amount of HTML to find og:title or <title>
+	limitReader := io.LimitReader(resp.Body, 50000)
+	body, _ := io.ReadAll(limitReader)
+	html := string(body)
+
+	// Try og:title first
+	ogPattern := regexp.MustCompile(`<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']`)
+	if matches := ogPattern.FindStringSubmatch(html); len(matches) > 1 {
+		return strings.TrimSpace(matches[1])
+	}
+
+	// Try title tag
+	titlePattern := regexp.MustCompile(`<title>([^<]+)</title>`)
+	if matches := titlePattern.FindStringSubmatch(html); len(matches) > 1 {
+		return strings.TrimSpace(matches[1])
+	}
+
+	return ""
 }
 
 // lambdaHandler is the AWS Lambda handler for Netlify Functions
@@ -402,6 +438,16 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 		if postReq.Title != nil {
 			title = *postReq.Title
 		}
+		
+		// Fetch title from link if empty and type is "link"
+		if title == "" && postReq.TypeID == "link" {
+			if sourceURL, exists := postReq.Metadata["source_url"].(string); exists && sourceURL != "" {
+				if fetchedTitle := fetchPageTitle(sourceURL); fetchedTitle != "" {
+					title = fetchedTitle
+				}
+			}
+		}
+		
 		content := ""
 		if postReq.Content != nil {
 			content = *postReq.Content

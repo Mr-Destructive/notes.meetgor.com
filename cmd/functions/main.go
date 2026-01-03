@@ -4,10 +4,13 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
+	"regexp"
 	"strings"
+	"time"
 
 	"blog/internal/db"
 	h "blog/internal/handler"
@@ -22,6 +25,40 @@ var database *db.DB
 func init() {
 	godotenv.Load()
 	log.Println("Function initializing...")
+}
+
+// fetchPageTitle fetches the title from a URL by reading its HTML meta tags
+func fetchPageTitle(url string) string {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	req, _ := http.NewRequestWithContext(ctx, "GET", url, nil)
+	req.Header.Set("User-Agent", "Mozilla/5.0 (compatible)")
+	
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil || resp.StatusCode != 200 {
+		return ""
+	}
+	defer resp.Body.Close()
+
+	// Read limited amount of HTML to find og:title or <title>
+	limitReader := io.LimitReader(resp.Body, 50000)
+	body, _ := io.ReadAll(limitReader)
+	html := string(body)
+
+	// Try og:title first
+	ogPattern := regexp.MustCompile(`<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']`)
+	if matches := ogPattern.FindStringSubmatch(html); len(matches) > 1 {
+		return strings.TrimSpace(matches[1])
+	}
+
+	// Try title tag
+	titlePattern := regexp.MustCompile(`<title>([^<]+)</title>`)
+	if matches := titlePattern.FindStringSubmatch(html); len(matches) > 1 {
+		return strings.TrimSpace(matches[1])
+	}
+
+	return ""
 }
 
 // initDB initializes the database on first request
@@ -242,6 +279,17 @@ func handlePosts(w http.ResponseWriter, r *http.Request, db *db.DB, id, action s
 		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 			respondError(w, http.StatusBadRequest, err.Error())
 			return
+		}
+
+		// Fetch title from link if empty and type is "link"
+		if (req.Title == "" || req.Title == nil) && req.TypeID == "link" {
+			if metadata, ok := req.Metadata.(map[string]interface{}); ok {
+				if sourceURL, exists := metadata["source_url"].(string); exists && sourceURL != "" {
+					if title := fetchPageTitle(sourceURL); title != "" {
+						req.Title = title
+					}
+				}
+			}
 		}
 
 		post, err := db.CreatePost(ctx, &req)
