@@ -2,7 +2,6 @@
   "buildCommand": "echo 'SSG only - no build needed'",
   "outputDirectory": "public",
   "framework": null,
-  "ignoreCommand": "git diff --quiet HEAD~ HEAD -- cmd/ internal/ cms netlify.toml",
   "routes": [
     {
       "src": "/(.*)",
