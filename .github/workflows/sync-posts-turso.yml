@@ -63,3 +63,15 @@ jobs:
           cd exports
           hugo --minify --destination ../public
           echo "✓ Built $(find ../public -name '*.html' | wc -l) HTML files"
+
+      - name: Commit and push built site
+        run: |
+          git add public/
+          if git diff --cached --quiet; then
+            echo "No changes to public/"
+          else
+            git config user.name "Blog Sync Bot"
+            git config user.email "bot@blog.local"
+            git commit -m "Build: update site with latest posts"
+            git push
+          fi
