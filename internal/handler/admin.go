@@ -509,8 +509,14 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 		</div>
 	</div>
 	<div class="card-body">
-		<form id="post-form" onsubmit="handlePostSubmit(event)">
-			<div class="form-group">
+		<div class="editor-tabs">
+			<button type="button" class="editor-tab active" onclick="switchTab('edit')">✏️ Edit</button>
+			<button type="button" class="editor-tab" onclick="switchTab('preview')">👁️ Preview</button>
+		</div>
+		
+		<div id="edit-content" class="editor-content active">
+			<form id="post-form" onsubmit="handlePostSubmit(event)">
+				<div class="form-group">
 				<label for="post-type">Post Type *</label>
 				<select id="post-type" name="type_id" required onchange="updatePostType()">
 					<option value="">Select a post type...</option>
@@ -600,11 +606,90 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 				<button type="button" class="btn btn-success" onclick="publish()">🚀 Publish</button>
 				<button type="button" class="btn btn-outline" hx-get="/admin/posts" hx-target="#main-content">Cancel</button>
 			</div>
-		</form>
+			</form>
 
-		<div id="editor-message" style="margin-top: 16px; display: none;"></div>
+			<div id="editor-message" style="margin-top: 16px; display: none;"></div>
+		</div>
+		
+		<div id="preview-content" class="editor-content">
+			<div class="preview" id="markdown-preview">
+				<p style="color: #999; text-align: center;">Select content above to see preview</p>
+			</div>
+		</div>
 	</div>
 </div>
+
+<style>
+.editor-tabs {
+	display: flex;
+	gap: 0;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.editor-tab {
+	padding: 12px 20px;
+	border: none;
+	background: #f5f5f5;
+	cursor: pointer;
+	font-size: 14px;
+	border-bottom: 3px solid transparent;
+	transition: all 0.2s;
+}
+.editor-tab:hover {
+	background: #e8e8e8;
+}
+.editor-tab.active {
+	background: white;
+	border-bottom-color: #0066cc;
+	color: #0066cc;
+	font-weight: 600;
+}
+.editor-content {
+	display: none;
+}
+.editor-content.active {
+	display: block;
+}
+.preview {
+	padding: 20px;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	min-height: 400px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.preview h1, .preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+	margin: 20px 0 10px 0;
+	font-weight: 600;
+}
+.preview p {
+	line-height: 1.6;
+	margin: 10px 0;
+	color: #333;
+}
+.preview code {
+	background: #f4f4f4;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: 'Monaco', 'Courier New', monospace;
+}
+.preview pre {
+	background: #f4f4f4;
+	padding: 12px;
+	border-radius: 4px;
+	overflow-x: auto;
+}
+.preview blockquote {
+	border-left: 4px solid #ddd;
+	padding-left: 15px;
+	margin-left: 0;
+	color: #666;
+}
+.preview ul, .preview ol {
+	margin: 10px 0;
+	padding-left: 30px;
+}
+</style>
 
 <script>
 const POST_TYPES = ` + typesJSON + `;
@@ -622,6 +707,66 @@ const POST_TEMPLATES = {
 	photo: { titleRequired: false, contentRequired: false, fields: [{ name: "image_url", label: "Image URL", type: "url" }] },
 	video: { titleRequired: false, contentRequired: false, fields: [{ name: "video_url", label: "Video URL", type: "url" }] }
 };
+
+function switchTab(tab) {
+	// Update tabs
+	document.querySelectorAll('.editor-tab').forEach(el => el.classList.remove('active'));
+	event.target.classList.add('active');
+	
+	// Update content
+	document.querySelectorAll('.editor-content').forEach(el => el.classList.remove('active'));
+	document.getElementById(tab + '-content').classList.add('active');
+	
+	// Update preview if switching to it
+	if (tab === 'preview') {
+		updatePreview();
+	}
+}
+
+function updatePreview() {
+	const title = document.getElementById('post-title').value;
+	const content = document.getElementById('post-content').value;
+	
+	if (!content) {
+		document.getElementById('markdown-preview').innerHTML = 
+			'<p style="color: #999; text-align: center;">No content to preview</p>';
+		return;
+	}
+	
+	const html = marked(content);
+	let preview = '';
+	
+	if (title) {
+		preview += '<h1>' + escapeHtml(title) + '</h1>';
+	}
+	
+	preview += html;
+	document.getElementById('markdown-preview').innerHTML = preview;
+}
+
+function escapeHtml(text) {
+	const map = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;',
+		'"': '&quot;',
+		"'": '&#039;'
+	};
+	return text.replace(/[&<>"']/g, c => map[c]);
+}
+
+// Auto-update preview when content changes
+document.addEventListener('DOMContentLoaded', () => {
+	const contentArea = document.getElementById('post-content');
+	if (contentArea) {
+		contentArea.addEventListener('input', updatePreview);
+		contentArea.addEventListener('change', updatePreview);
+	}
+	const titleArea = document.getElementById('post-title');
+	if (titleArea) {
+		titleArea.addEventListener('input', updatePreview);
+	}
+});
 
 function updatePostType() {
 	const typeId = document.getElementById('post-type').value;
