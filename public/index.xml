@@ -1,1 +1,202 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2026 Meet Gor</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Sample Link Post</title><link>/posts/sample-link/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/sample-link/</guid><description>&lt;p&gt;Check out this cool thing&lt;/p&gt;</description></item><item><title>Sample Post</title><link>/posts/sample-post/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/sample-post/</guid><description>&lt;p&gt;This is a regular post with some content.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2026 Meet Gor</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>My approach to running a link blog</title><link>/posts/my-approach-to-running-a-link-blog/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/my-approach-to-running-a-link-blog/</guid><description>&lt;p&gt;Lets test it&lt;/p&gt;</description></item><item><title>Sample Link Post</title><link>/posts/sample-link/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/sample-link/</guid><description>&lt;p&gt;Check out this cool thing&lt;/p&gt;</description></item><item><title>Sample Post</title><link>/posts/sample-post/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/sample-post/</guid><description>&lt;p&gt;This is a regular post with some content.&lt;/p&gt;</description></item><item><title>Stop Coding. Start Writing.</title><link>/posts/stop-coding-start-writing/</link><pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/stop-coding-start-writing/</guid><description>&lt;p&gt;This hits hard!&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;LLMs are a “calculator for words” and will only respond to what you put in.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;Surely they indeed are the calculator for saphegetti code.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;You need to communicate. You went from working directly with code, to needing to communicate your assumptions, and it feels like an increased cost. The thing is, you’re probably not solo and you always should have been communicating when working with others. But writing a design doc was extra work, in the way of completing your immediate task when the code is already working. Now it’s not a side quest, it’s the main quest. You benefit directly from explaining yourself. Less time coding, more time communicating.&lt;/p&gt;</description></item><item><title>The 12-Month Bug: Why Your Side Project Is Still Just an Idea | Zak El Fassi | Where Code Meets Consciousness - MCP, AI Agents &amp; Information Beings</title><link>/posts/the-12-month-bug-why-your-side-project-is-still-just-an-idea-zak-el-fassi-where-code-meets-consciousness-mcp-ai-agents-information-beings/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate><guid>/posts/the-12-month-bug-why-your-side-project-is-still-just-an-idea-zak-el-fassi-where-code-meets-consciousness-mcp-ai-agents-information-beings/</guid><description>&lt;p&gt;Maybe the fear is for short amount of time, what if we create it? But it turns out to be bad. I am not saying we are not incompetent, I am incompetent but it just breaks when you thought you could make it.&lt;/p&gt;
+&lt;p&gt;This might be very small percentage of it, but it happens to me every project. Not sure if that is just me, am I really incapable of making that project or is that my motivation lacks after the initial hump.&lt;/p&gt;</description></item><item><title>Inline Notes</title><link>/posts/inline-notes/</link><pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/inline-notes/</guid><description>&lt;p&gt;This is cool, Maybe I can add this to my own markdown parser?&lt;br&gt;
+Maybe not but that is tempting to start writing my own markdown parser and have this little easter egg like syntax for tidbits in the post.&lt;/p&gt;</description></item><item><title>Beyond the Front Page: A Personal Guide to Hacker News - neverland</title><link>/posts/beyond-the-front-page-a-personal-guide-to-hacker-news-neverland/</link><pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/beyond-the-front-page-a-personal-guide-to-hacker-news-neverland/</guid><description>&lt;p&gt;A cool write up on the hackernews legacy and its current state&lt;/p&gt;</description></item><item><title>The Hardware Knowledge that Every Programmer Should Know | by Needone App | Medium</title><link>/posts/the-hardware-knowledge-that-every-programmer-should-know-by-needone-app-medium/</link><pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/the-hardware-knowledge-that-every-programmer-should-know-by-needone-app-medium/</guid><description>&lt;h1 class="relative group"&gt;Resource
+ &lt;div id="resource" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#resource" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;</description></item><item><title>The Beauty of Programming</title><link>/posts/the-beauty-of-programming/</link><pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/the-beauty-of-programming/</guid><description>&lt;h1 class="relative group"&gt;Read later
+ &lt;div id="read-later" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#read-later" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;</description></item><item><title>GitHub - little-book-of/llm.c: Small file, giant dream, llm.c whispers tokens, worlds unfold in text.</title><link>/posts/github-little-book-of-llm-c-small-file-giant-dream-llm-c-whispers-tokens-worlds-unfold-in-text/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/github-little-book-of-llm-c-small-file-giant-dream-llm-c-whispers-tokens-worlds-unfold-in-text/</guid><description>&lt;h1 class="relative group"&gt;Github Star
+ &lt;div id="github-star" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#github-star" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;</description></item><item><title>I used to like software development... but not anymore - Igor Kulman</title><link>/posts/i-used-to-like-software-development-but-not-anymore-igor-kulman/</link><pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/i-used-to-like-software-development-but-not-anymore-igor-kulman/</guid><description>&lt;p&gt;This is a honest and fair take&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;People are too obsessed with productivity, they just don&amp;rsquo;t do things just for the sake of it, there has to be a evil or some meaning before it exists&lt;br&gt;
+The joy of shear creation is losing in AI slop&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>How do arrays work?</title><link>/posts/how-do-arrays-work/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/how-do-arrays-work/</guid><description>&lt;p&gt;So well explained. It listed the naive array logic and then also gave a better and more possibilities for the reader to be curious and excited about to try.&lt;/p&gt;</description></item><item><title>You Cannot Outsource Understanding - by Russ Miles</title><link>/posts/you-cannot-outsource-understanding-by-russ-miles/</link><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/you-cannot-outsource-understanding-by-russ-miles/</guid><description>&lt;p&gt;So true.&lt;br&gt;
+We had assembly to programming language to no-code platforms, and now AI.&lt;br&gt;
+They all wanted to outsource the burden of managing or working with developers but eventually they end up in more of those.&lt;br&gt;
+Are software engineers really that bad, like people want to remove them?&lt;br&gt;
+Why? We solve problems (and end up creating more, but the original problem is indeed solved)&lt;/p&gt;</description></item><item><title>15 Go Subtleties You May Not Already KnowGithub icon15 Go Subtleties You May Not Already KnowGithub icon</title><link>/posts/15-go-subtleties-you-may-not-already-knowgithub-icon15-go-subtleties-you-may-not-already-knowgithub-icon/</link><pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/15-go-subtleties-you-may-not-already-knowgithub-icon15-go-subtleties-you-may-not-already-knowgithub-icon/</guid><description>&lt;p&gt;A great post linking some gotchas and quirks about the semantics and syntactix of the language&lt;/p&gt;</description></item><item><title>Karpathy is wrong. Write that post, build that slide deck!</title><link>/posts/karpathy-is-wrong-write-that-post-build-that-slide-deck/</link><pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/karpathy-is-wrong-write-that-post-build-that-slide-deck/</guid><description>&lt;p&gt;I agree to that, he might not have said it generally, but after seeing all the jank slop, anyone would prefer the actual work rather than the slop. Because doing it is no LLM can do it, thinking about it, LLMs can make it look very thorugh and promising on the surface, but when you go a little deeper, it breaks apart like hell, you want to tear apart it, and would reject the contennt&lt;/p&gt;</description></item><item><title>Why bcrypt Can Be Unsafe for Password Hashing ? | enamya | blog</title><link>/posts/why-bcrypt-can-be-unsafe-for-password-hashing-enamya-blog/</link><pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/why-bcrypt-can-be-unsafe-for-password-hashing-enamya-blog/</guid><description>&lt;p&gt;Nice to know that bcrypt is not safe for passwords greater than 72 characters, who even would store such a long password.&lt;br&gt;
+But that is the thing, subtle decisions, like this is not a password, so we can use bcrypt, and bam you would be wrong&lt;/p&gt;
+&lt;p&gt;use Argon for this&lt;/p&gt;</description></item><item><title>A Project Is Not a Bundle of Tasks - by Steve Newman</title><link>/posts/a-project-is-not-a-bundle-of-tasks-by-steve-newman/</link><pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/a-project-is-not-a-bundle-of-tasks-by-steve-newman/</guid><description>&lt;p&gt;A practical and grounded facts on the growth of AI for programmers&lt;/p&gt;</description></item><item><title>Abstract Heresies: AI success anecdotes</title><link>/posts/abstract-heresies-ai-success-anecdotes/</link><pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/abstract-heresies-ai-success-anecdotes/</guid><description>&lt;p&gt;Nice anecdotes to learn for using AI-assisted coding&lt;/p&gt;</description></item><item><title>Advent of SQL Day 3-Hotline Messages</title><link>/posts/advent-of-sql-day-3-hotline-messages/</link><pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/advent-of-sql-day-3-hotline-messages/</guid><description>&lt;p&gt;This is day 3 from the Advent of SQL&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Grab the SQL StatementsLet&amp;rsquo;s take the insert statements i.e. to create and populate tables and rows into the database. I am using SQLite.
+ &lt;div id="grab-the-sql-statementslets-take-the-insert-statements-ie-to-create-and-populate-tables-and-rows-into-the-database-i-am-using-sqlite" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grab-the-sql-statementslets-take-the-insert-statements-ie-to-create-and-populate-tables-and-rows-into-the-database-i-am-using-sqlite" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;It works without any special shenanigans, as it was intended to used for Postgres, but the table and use case looks very simple, so nothing specific to Postgres used yet! We are good!&lt;/p&gt;</description></item><item><title>Alien Authors - by Chris Behan - Behan’s Substack</title><link>/posts/alien-authors-by-chris-behan-behan-s-substack/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/alien-authors-by-chris-behan-behan-s-substack/</guid><description>&lt;p&gt;Such a beautifully written post&lt;/p&gt;</description></item><item><title>Do Not Put Your Site Behind Cloudflare if You Don't Need To - Rik's Weblog</title><link>/posts/do-not-put-your-site-behind-cloudflare-if-you-don-t-need-to-rik-s-weblog/</link><pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/do-not-put-your-site-behind-cloudflare-if-you-don-t-need-to-rik-s-weblog/</guid><description>&lt;p&gt;I have 1 user, I will use kubernetes, of course why not&lt;/p&gt;</description></item><item><title>SQLog: Advent of SQL Day 2-Snowballs</title><link>/posts/sqlog-advent-of-sql-day-2-snowballs/</link><pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/sqlog-advent-of-sql-day-2-snowballs/</guid><description>&lt;p&gt;Here we are on the day 2 of Advent of SQL&lt;br&gt;
+As I said in the previous day this is in SQLite so I won&amp;rsquo;t be doing it in the playground. So here is your SQLite playground :)&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;`SELECT 1;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;From now on no setup straight to the problem!&lt;br&gt;
+Let&amp;rsquo;s download the .sql file for today&amp;rsquo;s problem to see what data we are playing with.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-sql"&gt;DROP TABLE IF EXISTS snowball_categories;
+DROP TABLE IF EXISTS snowball_inventory;
+
+CREATE TABLE snowball_categories (
+ id INT PRIMARY KEY,
+ official_category TEXT
+);
+
+CREATE TABLE snowball_inventory (
+ id INT PRIMARY KEY,
+ batch_id TEXT,
+ category_name TEXT,
+ quantity INT,
+ status TEXT
+);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well, neat and clean!&lt;br&gt;
+Straight pulling it in the sqlite shell.&lt;/p&gt;</description></item><item><title>Why Software Development Fell to AI First</title><link>/posts/why-software-development-fell-to-ai-first/</link><pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/why-software-development-fell-to-ai-first/</guid><description>&lt;p&gt;Think, think, it all makes sense why would code be the first thing to fall for ai&lt;/p&gt;</description></item><item><title>Fizz Buzz without conditionals or booleans</title><link>/posts/fizz-buzz-without-conditionals-or-booleans/</link><pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/fizz-buzz-without-conditionals-or-booleans/</guid><description>&lt;p&gt;A nice pattern like loop for 3 and 5 divisibility, it won&amp;rsquo;t scale i think for other problems&lt;/p&gt;</description></item><item><title>Cloudflare outage on November 18, 2025</title><link>/posts/cloudflare-outage-on-november-18-2025/</link><pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/cloudflare-outage-on-november-18-2025/</guid><description>&lt;p&gt;Missing where clause for filtering the default database.&lt;br&gt;
+Assumptions about software is a bad thing&lt;br&gt;
+Rust won&amp;rsquo;t protect you from shooting yourself on the foot if you don&amp;rsquo;t aim properly&lt;/p&gt;</description></item><item><title> Weekly #72</title><link>/posts/weekly-72/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/weekly-72/</guid><description>&lt;h2 class="relative group"&gt;Week #72
+ &lt;div id="week-72" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#week-72" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;Quote of the week&lt;blockquote&gt;&amp;ldquo;Never trust anything that can think for itself if you can&amp;rsquo;t see where it keeps its brain&amp;rdquo;
+ &lt;div id="quote-of-the-weeknever-trust-anything-that-can-think-for-itself-if-you-cant-see-where-it-keeps-its-brain" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quote-of-the-weeknever-trust-anything-that-can-think-for-itself-if-you-cant-see-where-it-keeps-its-brain" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&amp;ndash; Mr. Arthur Weasley, Harry Potter and the Chambers of secret (Chapter 18)&lt;/p&gt;
+&lt;/blockquote&gt;I don't know how I picked it up. But it hit me right on. LLMs are like Tom Riddle's diary, aren't they? I feel so relatable here. Software developers like me are Ginny and they hallucinate us to do certain things in certain way and we follow it, like in a trance, and it makes the software collapse.
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;Read&lt;ol&gt;&lt;li&gt;&lt;a href="https://rapha.land/craft-software-that-makes-people-feel-something/" target="_blank"&gt;Craft Software that make people feel something&lt;/a&gt;
+ &lt;div id="readcraft-software-that-make-people-feel-something" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#readcraft-software-that-make-people-feel-something" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ol&gt;&lt;li&gt;So good. Just do it because there is a curiosity. Inspiration is also cool and need for software to make.
+&gt; When programming becomes repetitive, the odds of you creating something that makes people go “wow” are reduced quite a bit. It isn’t a rule, of course. You need to be inspired to make inspiring software.
+&lt;/li&gt;&lt;li&gt;This is aspiration, the level of it is high here.
+&gt; This is what I’m talking about: taking time to build something so that once people try it, they remember it for as long as they live.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[If you're going to vibe code, why not do it in C or even Assembly](https://stephenramsay.net/posts/vibe-coding.html)
+&lt;ol&gt;&lt;li&gt;Yeah! This is a valid point, If you are not caring about the code, why bother with the language. 
+&lt;/li&gt;&lt;li&gt;Choose a language which computers can understand the best, x86 or even machine code, 1s and 0s. 
+&lt;/li&gt;&lt;li&gt;Stephen says to create a VOPL vibe-oriented-programming-language which suits LLMs. Maybe this is what it will look it, who knows. 
+&lt;/li&gt;&lt;li&gt; But the point is strong, if vibe coding is not caring about programming, why bother choosing tech stack and languages, just let it choose whichever it is familiar and good at just like a good'ol developer.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[Why Transformers must hallucinate](https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be)
+&lt;ol&gt;&lt;li&gt;This is a spicy take. The points are valid
+&lt;ol&gt;&lt;li&gt;Averaging is a critical mistake
+&lt;/li&gt;&lt;li&gt; They miss checking whether an answer exist or not
+&lt;/li&gt;&lt;li&gt; Always answers will guarantee hallucination
+&lt;/li&gt;&lt;li&gt;It should asses the question, then generate and not generate and then asses.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[Please don't automate science](https://togelius.blogspot.com/2025/12/please-dont-automate-science.html)
+&lt;ol&gt;&lt;li&gt;Boy, it takes courage to speak this! Well spoken.
+&gt; They are here because they love research and want to contribute to advancing human knowledge. If you take the human out of the loop, meaning that humans no longer have any role in scientific research, you're depriving them of the activity they love and a key source of meaning in their lives. And we all want to do something meaningful. Why, I asked, do you want to take the opportunity to contribute to science away from us?
+&lt;/li&gt;&lt;li&gt;This hits it harder
+ &gt; Science automation is coming whether we want it or not, and we'd better get used to it. The train is coming, and we can get on it or stand in its way.
+&gt; I think that is a remarkably cowardly argument.
+&gt; It is up to us as a society to decide how we use the technology we develop. It's not a train, it's a truck, and we'd better grab the steering wheel.
+&lt;/li&gt;&lt;li&gt;There are bangers after bangers
+&gt; Making human intellectual or creative work redundant is something we should avoid when we can, and we should absolutely avoid it if there are no equally meaningful new roles for humans to transition into.
+&lt;/li&gt;&lt;li&gt;I want to quote each and every paragraph it seems, this is so good, almost like it comes out of my mouth
+&gt; You could further argue that working on cutting humans out of meaningful creative work such as scientific research is incredibly egoistic. You get the intellectual satisfaction of inventing new AI methods, but the next generation don't get a chance to contribute. Why do you want to rob your children (academic and biological) of the chance to engage in the most meaningful activity in the world?
+&lt;/li&gt;&lt;li&gt;So true, I have been here when there was model after model releases in a week, i think in August-September. It was a wild month. I was overwhelmed, I didn't get a chance to slow down. AI can do a lot of things, can produce a lot of things, and I cannot handle it at that pace. I need time to absorb, it makes productive, true, but it quickly overshoots the danger productive bar. The moment where you are too much productive that you lose track of every context in your head.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[Software never Fails](https://entropicthoughts.com/software-never-fails)
+&lt;ol&gt;&lt;li&gt;It never fails. It does what it was intended to do. If the intended thing and the actual thing was different than that's a developer problem and not the software's. It did what was written as its not a magic wand that will do what you thought to do.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[I read more than I write, do you?](https://enombic.com/read-more-than-write)
+&lt;ol&gt;&lt;li&gt;Yes, this is true for me too. Reading needs to be more or rather at certain point, balanced from writing.
+&lt;/li&gt;&lt;li&gt;You can't just keep on reading and produce nothing. You will have to reflect on what you have consumed. This newsletter is exactly that. 
+&lt;/li&gt;&lt;li&gt;After I got a full time job, I suddenly had a lot of time, I realized i needed to dump my learning somewhere and I was following Register Spill by Thorsten Ball and quickly felt the urge to log my reading and interesting things I find throughout the week. There were a lot of things, I took for granted, they got lost and most of the things didn't stick. I started this and it helped me realize the ample amount of time I have to learn, explore and tinker on stuff. It was liberating. Hence writing the 72nd edition of this. Its fun.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[Vibe Coding is made and depressing](https://law.gmnz.xyz/vibe-coding-is-mad-depressing/)
+&lt;ol&gt;&lt;li&gt;Sigh, The frustration is quite evident
+&gt; I just feel sad with how AI has bastardized my profession, which I worked hard for the last 15 years. There is no best practices anymore, no proper process, no meaningful back and forth
+&lt;/li&gt;&lt;li&gt;I can even feel it with 5 years of coding, man has been doing it for 15 years! Humans gets too excited when they can produce code i think.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[The Gemini API Key Frustration](https://ankursethi.com/blog/gemini-api-key-frustration/)
+&lt;ol&gt;&lt;li&gt;Yeah! have you set up Google products without opening and closing a bunch of tabs
+&lt;/li&gt;&lt;li&gt;Here you are in 2025. Wait a minute, was PaLM a thing? wasn't google notes to be shut down?
+&lt;/li&gt;&lt;li&gt;What is happening, what is AI Studio, Vertex AI, Jules, Antigravity, Gemini CLI, Gemini models of course, dug sneaked into various products, geese. Google!
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[A TSP game I wanted for 10 years: built in 4 hours](https://www.graphhopper.com/blog/2025/12/08/a-tsp-game-10-years-in-the-making-built-in-4-hours/)
+&lt;ol&gt;&lt;li&gt;This is quite a good thing, I am not good at frontend, i let ai do it, i do what i am good at, writing backend. Really? need to see it carefully again.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[Growing Software](https://www.pearprogramming.blog/programming/opinions/2025/11/11/why-rails-just-stayed-with-me/)
+&lt;ol&gt;&lt;li&gt;What a great analogy. Software is not architect a building but its growing a garden. You don't have a layout already built, some parts are clear not all. Software is ever changing. You need to build something, observe and change constantly just like a gardener. Gardener doesn't plant a bunch of plants and forgets, but rather it nurtures them, observes and then takes care of them.
+&lt;/li&gt;&lt;li&gt;Software is not something you build, its something you grow. Its a slow process.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;[How HTML changes in EPUB](https://htmhell.dev/adventcalendar/2025/11/)
+&lt;ol&gt;&lt;li&gt;This is quite intuitive. I didn't knew epub is a collection of XHTML documents. Its quite obvious now.
+&lt;/li&gt;&lt;li&gt;Because e-book has to be scaled from each character, so it is xhtml or some variant of it. Zooming, Changing fonts, all happens at all levels or doesn't look good. So that is the perfect use case for it.
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;
+## Created&lt;ul&gt;&lt;li&gt;[SQLog: Create Strict Tables](https://www.meetgor.com/sqlog/sqlite-create-strict-table/)
+&lt;/li&gt;&lt;li&gt;Live streaming Advent of Code Day 1 and 2 in Golang
+&lt;/li&gt;&lt;li&gt;Youtube shorts on FreeCodeCamp Daily Challenges
+&lt;/li&gt;&lt;/ul&gt;
+## Watched&lt;ul&gt;&lt;li&gt;[Software is getting worse](https://www.youtube.com/watch?v=FI5ba4RRE8U)
+&lt;ul&gt;&lt;li&gt;Yes, This is true, from I have not observed actively, but looks valid and intuitive
+&lt;ul&gt;&lt;li&gt;We need these three ingredients for a good software
+&lt;ul&gt;&lt;li&gt;Passion
+&lt;/li&gt;&lt;li&gt;Trying to solve a problem with care
+&lt;/li&gt;&lt;li&gt;Developers been funded or are self sustainable
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;As the software gets old it get big
+As the software gets big, it gets worse
+&lt;/blockquote&gt;These are not the things responsible for bad software (might be but not only)
+&lt;ul&gt;&lt;li&gt;AI Slop
+&lt;/li&gt;&lt;li&gt;Not using Rust (or any not using a particular framework or language)
+&lt;/li&gt;&lt;li&gt;Its a Electron app (or using a particular framework or language)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;
+&lt;/li&gt;&lt;/ul&gt;## Learnt&lt;ul&gt;&lt;li&gt;
+&lt;/li&gt;&lt;/ul&gt;
+## Tech News&lt;ul&gt;&lt;li&gt;
+&lt;/li&gt;&lt;/ul&gt;
+---</description></item><item><title>SQLite SQL: Create Table STRICT</title><link>/posts/sqlite-sql-create-table-strict/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/sqlite-sql-create-table-strict/</guid><description>&lt;p&gt;We have seen how to create &lt;code&gt;TABLE&lt;/code&gt; loosely Not adhering to the types. Because if we create a table with column name of type text, and insert a integer, it will happily store it as text. It is very flexible as we saw. So, in such &lt;code&gt;CREATE TABLE&lt;/code&gt; statement in SQLite, without the &lt;code&gt;STRICT&lt;/code&gt; constraint, the types don&amp;rsquo;t matter.&lt;/p&gt;
+&lt;p&gt;If you created a table with column type as &lt;code&gt;XYZ&lt;/code&gt; it will accept it, because it really doesn&amp;rsquo;t see that. It will see the data coming in from the insert statement and store it whatever it thinks is the best one for that piece of data. Look at the below example:&lt;/p&gt;</description></item><item><title>The CloudFlare outage was a good thing · GitHub</title><link>/posts/the-cloudflare-outage-was-a-good-thing-github/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/the-cloudflare-outage-was-a-good-thing-github/</guid><description>&lt;p&gt;Fair take&lt;/p&gt;</description></item><item><title>Paul Graham Isn’t a Simple Writer, and Here Are Some of His Cool Tricks</title><link>/posts/paul-graham-isn-t-a-simple-writer-and-here-are-some-of-his-cool-tricks/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/paul-graham-isn-t-a-simple-writer-and-here-are-some-of-his-cool-tricks/</guid><description>&lt;p&gt;Should be reading him now PG&lt;/p&gt;</description></item><item><title>Make Your Own Website - Michael Enger</title><link>/posts/make-your-own-website-michael-enger/</link><pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/make-your-own-website-michael-enger/</guid><description>&lt;p&gt;Just make one&lt;/p&gt;</description></item><item><title>A cautionary tale on vibes | BAML Blog</title><link>/posts/a-cautionary-tale-on-vibes-baml-blog/</link><pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/a-cautionary-tale-on-vibes-baml-blog/</guid><description>&lt;p&gt;Vibe coping&lt;/p&gt;</description></item><item><title>My Personal Curriculum</title><link>/posts/my-personal-curriculum/</link><pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/my-personal-curriculum/</guid><description>&lt;h2 class="relative group"&gt;Interests&lt;ul&gt;&lt;li&gt;Tech
+ &lt;div id="intereststech" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#intereststech" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;SQL
+&lt;/li&gt;&lt;li&gt;LLMs
+&lt;/li&gt;&lt;li&gt;APIs
+&lt;/li&gt;&lt;li&gt;Database Internals
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Writing fiction
+&lt;ul&gt;&lt;li&gt;Fantasy worlds
+&lt;/li&gt;&lt;li&gt;Travelogues
+&lt;/li&gt;&lt;li&gt;Adventrues
+&lt;/li&gt;&lt;li&gt;Childhood memories
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Reading fiction
+&lt;ul&gt;&lt;li&gt;Harry Potter
+&lt;/li&gt;&lt;li&gt;Cafe books
+&lt;/li&gt;&lt;li&gt;Cosmere novels
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;
+&lt;/li&gt;&lt;/ul&gt;</description></item><item><title>llm-text-as-image-tokens</title><link>/posts/llm-text-as-image-tokens/</link><pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/llm-text-as-image-tokens/</guid><description>&lt;p&gt;It is a interesting concept as deepseek and other vllm and parsers have tried to take over OCR.&lt;/p&gt;</description></item><item><title>Writing Hack: Write It Just Like That - by Sasha Putilin</title><link>/posts/writing-hack-write-it-just-like-that-by-sasha-putilin/</link><pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/writing-hack-write-it-just-like-that-by-sasha-putilin/</guid><description>&lt;p&gt;Just write it like that, however, first draft is to spill the thoughts, second to pick up the parts, the third to nit pick the gems and clean up the floor&lt;/p&gt;</description></item><item><title>If You Have Writer's Block, Maybe You Should Stop Lying</title><link>/posts/if-you-have-writer-s-block-maybe-you-should-stop-lying/</link><pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/if-you-have-writer-s-block-maybe-you-should-stop-lying/</guid><description>&lt;p&gt;Be honest, stop lying and pretending to be something else&lt;/p&gt;</description></item><item><title>Attention Required! | Cloudflare</title><link>/posts/attention-required-cloudflare/</link><pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/attention-required-cloudflare/</guid><description>&lt;p&gt;Ok that looks cool, why use json then hah?&lt;/p&gt;</description></item><item><title>On 10 Years of Writing a Blog Nobody Reads | flow2</title><link>/posts/on-10-years-of-writing-a-blog-nobody-reads-flow2/</link><pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/on-10-years-of-writing-a-blog-nobody-reads-flow2/</guid><description>&lt;p&gt;Interesting take on writing in the age of AI,&lt;br&gt;
+relating to breathe, inhale -&amp;gt; read, exhale -&amp;gt; review and reflect&lt;/p&gt;</description></item><item><title>All it takes is for one to work out – A Learning a Day</title><link>/posts/all-it-takes-is-for-one-to-work-out-a-learning-a-day/</link><pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/all-it-takes-is-for-one-to-work-out-a-learning-a-day/</guid><description>&lt;p&gt;Eye opening&lt;/p&gt;</description></item><item><title>The CRDT Dictionary: A Field Guide to Conflict-Free Replicated Data Types - Ian Duncan - Ian Duncan</title><link>/posts/the-crdt-dictionary-a-field-guide-to-conflict-free-replicated-data-types-ian-duncan-ian-duncan/</link><pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/the-crdt-dictionary-a-field-guide-to-conflict-free-replicated-data-types-ian-duncan-ian-duncan/</guid><description>&lt;p&gt;Saving for later&lt;/p&gt;</description></item><item><title>Dear Mr. Debroy: Reading the Valmiki Ramayana at Hampi | Stonecharioteer</title><link>/posts/dear-mr-debroy-reading-the-valmiki-ramayana-at-hampi-stonecharioteer/</link><pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/dear-mr-debroy-reading-the-valmiki-ramayana-at-hampi-stonecharioteer/</guid><description>&lt;p&gt;Oh boy! what a read, gold, no nectar of divine&lt;/p&gt;</description></item><item><title>Just a moment...</title><link>/posts/just-a-moment/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/just-a-moment/</guid><description>&lt;p&gt;Japan mentioned&lt;/p&gt;</description></item><item><title>What I learned building an opinionated and minimal coding agent</title><link>/posts/what-i-learned-building-an-opinionated-and-minimal-coding-agent/</link><pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/what-i-learned-building-an-opinionated-and-minimal-coding-agent/</guid><description>&lt;p&gt;Coding agents.&lt;/p&gt;</description></item><item><title>Reading | Stonecharioteer</title><link>/posts/reading-stonecharioteer/</link><pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/reading-stonecharioteer/</guid><description>&lt;p&gt;This is a gold mine to read and consume&lt;/p&gt;</description></item><item><title>Notion</title><link>/posts/notion/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/notion/</guid><description>&lt;p&gt;Learning Strudel&lt;/p&gt;</description></item><item><title>A pragmatic guide to LLM evals for devs</title><link>/posts/a-pragmatic-guide-to-llm-evals-for-devs/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/a-pragmatic-guide-to-llm-evals-for-devs/</guid><description>&lt;p&gt;Evals and LLMS&lt;/p&gt;</description></item><item><title>razor.blog: where philosophy meets the road.: Your Mind Is Not Software</title><link>/posts/razor-blog-where-philosophy-meets-the-road-your-mind-is-not-software/</link><pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/razor-blog-where-philosophy-meets-the-road-your-mind-is-not-software/</guid><description>&lt;p&gt;Why is it not?&lt;/p&gt;</description></item><item><title>Go escape analysis and why my function return worked.&lt;!-- --&gt; - Bonnie Simon</title><link>/posts/go-escape-analysis-and-why-my-function-return-worked-bonnie-simon/</link><pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/go-escape-analysis-and-why-my-function-return-worked-bonnie-simon/</guid><description>&lt;p&gt;Nice, actually it remembers the pointer if it returns on the function, it allocates on the heap and not the stack so it can stay till no other references hold in the program&lt;/p&gt;</description></item><item><title>Thoughts on Go vs. Rust vs. Zig | Sinclair Target</title><link>/posts/thoughts-on-go-vs-rust-vs-zig-sinclair-target/</link><pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/thoughts-on-go-vs-rust-vs-zig-sinclair-target/</guid><description>&lt;p&gt;Interesting read&lt;/p&gt;</description></item><item><title>I failed to recreate the 1996 Space Jam Website with Claude | j0nah.com</title><link>/posts/i-failed-to-recreate-the-1996-space-jam-website-with-claude-j0nah-com/</link><pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/i-failed-to-recreate-the-1996-space-jam-website-with-claude-j0nah-com/</guid><description>&lt;p&gt;Damn! Programmers are alive&lt;/p&gt;</description></item><item><title>Nova, mechanically - Nova</title><link>/posts/nova-mechanically-nova/</link><pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/nova-mechanically-nova/</guid><description>&lt;p&gt;Wow! just wow, is it ai generated though?&lt;/p&gt;</description></item><item><title>Software Never Fails</title><link>/posts/software-never-fails/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/software-never-fails/</guid><description>&lt;p&gt;It does what is intended to do, it depends on what the intention was. That&amp;rsquo;s a different thing the developer mislead the intention&lt;/p&gt;</description></item><item><title>Making the Solution Transparent • ButtondownGitHubBluesky</title><link>/posts/making-the-solution-transparent-buttondowngithubbluesky/</link><pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/making-the-solution-transparent-buttondowngithubbluesky/</guid><description>&lt;p&gt;Interesting&lt;/p&gt;</description></item><item><title>i read more than i write | enombic</title><link>/posts/i-read-more-than-i-write-enombic/</link><pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/i-read-more-than-i-write-enombic/</guid><description>&lt;p&gt;I do, Do you?&lt;/p&gt;</description></item><item><title>Being a Writer in the Age of the Influencer</title><link>/posts/being-a-writer-in-the-age-of-the-influencer/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/being-a-writer-in-the-age-of-the-influencer/</guid><description>&lt;p&gt;Interesting&lt;/p&gt;</description></item><item><title>The Internet forgets, but I don’t want to – alexwlchan</title><link>/posts/the-internet-forgets-but-i-don-t-want-to-alexwlchan/</link><pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/the-internet-forgets-but-i-don-t-want-to-alexwlchan/</guid><description>&lt;p&gt;I want it too&lt;/p&gt;</description></item></channel></rss>
