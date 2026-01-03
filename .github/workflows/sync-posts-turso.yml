@@ -72,12 +72,3 @@ jobs:
           cd exports
           hugo --minify --destination ../public
           echo "✓ Built $(find ../public -name '*.html' | wc -l) HTML files"
-
-      - name: Deploy to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          npm install -g vercel --silent
-          vercel deploy --prod --token=$VERCEL_TOKEN --confirm
