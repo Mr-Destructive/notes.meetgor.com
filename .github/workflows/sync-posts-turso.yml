@@ -66,12 +66,13 @@ jobs:
 
       - name: Commit and push built site
         run: |
+          git config user.name "Blog Sync Bot"
+          git config user.email "bot@blog.local"
           git add public/
           if git diff --cached --quiet; then
             echo "No changes to public/"
           else
-            git config user.name "Blog Sync Bot"
-            git config user.email "bot@blog.local"
             git commit -m "Build: update site with latest posts"
+            git pull --rebase
             git push
           fi
