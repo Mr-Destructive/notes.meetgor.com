@@ -2,8 +2,8 @@
 title: "Advent of SQL Day 3-Hotline Messages"
 date: 2025-12-18
 slug: advent-of-sql-day-3-hotline-messages
-draft: false
 type: post
+draft: false
 description: ""
 tags: []
 ---

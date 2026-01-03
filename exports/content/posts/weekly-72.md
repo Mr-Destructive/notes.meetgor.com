@@ -2,8 +2,8 @@
 title: " Weekly #72"
 date: 2025-12-12
 slug: weekly-72
-draft: false
 type: post
+draft: false
 description: ""
 tags: []
 ---

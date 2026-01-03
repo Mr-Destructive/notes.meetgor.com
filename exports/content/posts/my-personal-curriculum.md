@@ -2,8 +2,8 @@
 title: "My Personal Curriculum"
 date: 2025-12-09
 slug: my-personal-curriculum
-draft: false
 type: post
+draft: false
 description: ""
 tags: []
 ---

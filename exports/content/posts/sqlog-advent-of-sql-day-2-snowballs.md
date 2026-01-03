@@ -2,8 +2,8 @@
 title: "SQLog: Advent of SQL Day 2-Snowballs"
 date: 2025-12-16
 slug: sqlog-advent-of-sql-day-2-snowballs
-draft: false
 type: post
+draft: false
 description: ""
 tags: []
 ---

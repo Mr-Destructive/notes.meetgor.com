@@ -2,8 +2,8 @@
 title: "SQLite SQL: Create Table STRICT "
 date: 2025-12-12
 slug: sqlite-sql-create-table-strict
-draft: false
 type: post
+draft: false
 description: ""
 tags: []
 ---
