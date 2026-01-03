@@ -29,11 +29,11 @@
   to = "/.netlify/functions/cms/editor.js"
   status = 200
 
+# Default: serve index.html for SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  condition = "!{path}.html"
 
 [context.production]
   environment = { ENV = "production", ADMIN_PASSWORD = "test" }
