@@ -87,17 +87,8 @@ func main() {
 		}
 
 		// Build front matter
-		frontMatter := fmt.Sprintf(`---
-		title: "%s"
-		date: %s
-		slug: %s
-		draft: false
-		type: %s
-		description: "%s"
-		tags: %s
-		---
-		
-		`, escapeYAML(post.Title), post.CreatedAt[:10], post.Slug, typeID, escapeYAML(excerpt), tags)
+		frontMatter := fmt.Sprintf("---\ntitle: %q\ndate: %s\nslug: %s\ndraft: false\ntype: %s\ndescription: %q\ntags: %s\n---\n\n", 
+			post.Title, post.CreatedAt[:10], post.Slug, typeID, excerpt, tags)
 
 		// Write file
 		filePath := filepath.Join(postsDir, post.Slug+".md")
