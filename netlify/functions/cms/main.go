@@ -46,8 +46,9 @@ func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	fullPath := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
 	fullPath = strings.Trim(fullPath, "/")
 
-	// Serve UI files (login is default at root, editor, assets)
-	if fullPath == "" || fullPath == "login" || fullPath == "editor" || fullPath == "editor.js" {
+	// Serve UI files (login is default at root, dashboard, editor, assets)
+	if fullPath == "" || fullPath == "login" || fullPath == "dashboard" || fullPath == "editor" || 
+	   fullPath == "editor.js" || fullPath == "dashboard.js" {
 		page := fullPath
 		if page == "" {
 			page = "login"
@@ -538,6 +539,12 @@ func serveUI(page string) (events.APIGatewayProxyResponse, error) {
 	var filename, contentType string
 	
 	switch page {
+	case "dashboard":
+		filename = "ui/dashboard.html"
+		contentType = "text/html; charset=utf-8"
+	case "dashboard.js":
+		filename = "ui/dashboard.js"
+		contentType = "application/javascript; charset=utf-8"
 	case "editor":
 		filename = "ui/editor.html"
 		contentType = "text/html; charset=utf-8"

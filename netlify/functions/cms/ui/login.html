@@ -206,12 +206,12 @@
                 // Store token
                 localStorage.setItem('auth_token', data.token);
 
-                // Redirect to editor
+                // Redirect to dashboard
                 alert.className = 'alert success';
                 alert.textContent = 'Login successful! Redirecting...';
                 
                 setTimeout(() => {
-                    window.location.href = '/editor';
+                    window.location.href = '/dashboard';
                 }, 1000);
 
             } catch (error) {
@@ -226,7 +226,7 @@
         window.addEventListener('load', () => {
             const token = localStorage.getItem('auth_token');
             if (token) {
-                window.location.href = '/editor';
+                window.location.href = '/dashboard';
             }
         });
     </script>

@@ -221,7 +221,10 @@
     <div class="container">
         <div class="header">
             <h1>📝 Blog Editor</h1>
-            <button class="logout-btn" onclick="logout()">Logout</button>
+            <div style="display: flex; gap: 10px;">
+                <button class="logout-btn" style="background: #3498db;" onclick="window.location.href='/dashboard'">← Dashboard</button>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
         </div>
 
         <div class="content">

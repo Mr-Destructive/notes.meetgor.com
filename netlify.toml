@@ -13,16 +13,25 @@
   from = "/"
   to = "/.netlify/functions/cms/"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/.netlify/functions/cms/dashboard"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/login"
   to = "/.netlify/functions/cms/login"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/editor"
   to = "/.netlify/functions/cms/editor"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/editor.js"

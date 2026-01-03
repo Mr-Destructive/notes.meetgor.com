@@ -1,6 +1,7 @@
 // API URL is set dynamically in editor.html via window.API_URL
 let currentPostId = null;
 let tags = [];
+let isEditMode = false;
 
 // Post type templates
 const POST_TEMPLATES = {
@@ -267,13 +268,92 @@ function logout() {
 }
 
 // Check auth on page load
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   const token = localStorage.getItem('auth_token');
   if (!token) {
     window.location.href = '/login';
+    return;
   }
+
+  // Check if editing existing post
+  const urlParams = new URLSearchParams(window.location.search);
+  const postId = urlParams.get('id') || sessionStorage.getItem('editPostId');
+  
+  if (postId) {
+    await loadPostForEditing(postId);
+    sessionStorage.removeItem('editPostId');
+  }
+
   changePostType(); // Initialize type-specific fields
 });
+
+async function loadPostForEditing(postId) {
+  try {
+    const token = localStorage.getItem('auth_token');
+    const response = await fetch(`${window.API_URL}/posts/${postId}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    if (!response.ok) {
+      showAlert('Post not found', 'error');
+      return;
+    }
+
+    const post = await response.json();
+    currentPostId = post.id;
+    isEditMode = true;
+
+    // Populate form fields
+    document.getElementById('postType').value = post.type_id || 'article';
+    document.getElementById('title').value = post.title || '';
+    document.getElementById('slug').value = post.slug || '';
+    document.getElementById('excerpt').value = post.excerpt || '';
+    document.getElementById('content').value = post.content || '';
+    document.getElementById('status').value = post.status || 'draft';
+    document.getElementById('isFeatured').checked = post.is_featured || false;
+
+    // Load tags
+    if (post.tags) {
+      try {
+        tags = JSON.parse(post.tags);
+        renderTags();
+      } catch (e) {
+        tags = [];
+      }
+    }
+
+    // Load metadata
+    if (post.metadata) {
+      try {
+        const metadata = JSON.parse(post.metadata);
+        const type = document.getElementById('postType').value;
+        const template = POST_TEMPLATES[type] || {};
+        if (template.fields) {
+          template.fields.forEach(field => {
+            const input = document.getElementById(field);
+            if (input && metadata[field] !== undefined) {
+              if (field === 'items') {
+                input.value = (Array.isArray(metadata[field]) ? metadata[field] : []).join('\n');
+              } else if (field === 'is_private') {
+                input.checked = metadata[field];
+              } else {
+                input.value = metadata[field];
+              }
+            }
+          });
+        }
+      } catch (e) {
+        // Skip metadata loading if parse fails
+      }
+    }
+
+    showAlert(`Editing: ${post.title}`, 'success');
+  } catch (error) {
+    showAlert(error.message || 'Failed to load post', 'error');
+  }
+}
 
 // Allow Enter to add tag
 document.addEventListener('keypress', (e) => {
