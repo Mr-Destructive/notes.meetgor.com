@@ -826,13 +826,15 @@ func handleAdminRoute(ctx context.Context, req events.APIGatewayProxyRequest, fu
 	case "dashboard":
 		handler.HandleAdminDashboard(respWriter, httpReq, appDB)
 	case "posts":
-		if action == "edit" || action == "new" {
+		// Check for editor routes: /posts/new or /posts/{id}/edit
+		if id == "new" || action == "edit" {
 			handler.HandlePostEditor(respWriter, httpReq, appDB, id)
 		} else {
 			handler.HandlePostsList(respWriter, httpReq, appDB)
 		}
 	case "series":
-		if action == "edit" || action == "new" {
+		// Check for editor routes: /series/new or /series/{id}/edit
+		if id == "new" || action == "edit" {
 			respWriter.WriteHeader(http.StatusNotImplemented)
 			fmt.Fprint(respWriter, `<div class="alert alert-danger">Series editor not yet implemented</div>`)
 		} else {
