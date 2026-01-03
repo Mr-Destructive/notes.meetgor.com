@@ -36,6 +36,10 @@ jobs:
             count=$(find exports/content/posts -name "*.md" | wc -l)
             echo "✓ Exported $count posts"
             ls -la exports/content/posts/
+            if [ "$count" -eq 0 ]; then
+              echo "⚠ Warning: No posts exported from Turso. This might indicate a connection issue."
+              echo "  Will use existing posts if available."
+            fi
           else
             echo "⚠ No posts exported"
           fi
@@ -58,11 +62,29 @@ jobs:
           hugo-version: '0.154.0'
           extended: true
 
+      - name: Backup current public directory
+        run: |
+          cp -r public public.backup 2>/dev/null || true
+          echo "✓ Backed up current public directory"
+
       - name: Build Hugo site
         run: |
           cd exports
           hugo --minify --destination ../public
           echo "✓ Built $(find ../public -name '*.html' | wc -l) HTML files"
+      
+      - name: Verify posts page was generated
+        run: |
+          if [ ! -f "public/posts/index.html" ] || [ ! -s "public/posts/index.html" ]; then
+            echo "⚠ Posts page is empty or missing, restoring from backup"
+            if [ -f "public.backup/posts/index.html" ]; then
+              cp public.backup/posts/index.html public/posts/index.html
+              echo "✓ Restored posts page from backup"
+            else
+              echo "ERROR: Cannot restore posts page, no backup available"
+              exit 1
+            fi
+          fi
 
       - name: Commit and push built site
         run: |
