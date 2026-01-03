@@ -1,0 +1,6 @@
+[submodule "exports/themes/stack"]
+	path = exports/themes/stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack
+[submodule "exports/themes/papermod"]
+	path = exports/themes/papermod
+	url = https://github.com/adityatelange/hugo-PaperMod

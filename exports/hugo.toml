@@ -1,14 +1,17 @@
-baseURL = "https://notes.meetgor.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Notes"
-theme = "minimal"
+theme = "stack"
 enableGitInfo = true
 outputs.home = ["HTML", "JSON"]
 
 [params]
   description = "A collection of technical notes and posts"
-  author = "Meet Gor"
   
+[params.author]
+  name = "Meet Gor"
+  email = "me@meetgor.com"
+
 [markup.goldmark.renderer]
   unsafe = true
   hardWraps = true
