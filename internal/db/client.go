@@ -71,6 +71,14 @@ func NewQueries(db gen.DBTX) *gen.Queries {
 	return gen.New(db)
 }
 
+// FromSQL creates a DB instance from an existing sql.DB connection
+func FromSQL(sqldb *sql.DB) *DB {
+	return &DB{
+		conn:    sqldb,
+		queries: NewQueries(sqldb),
+	}
+}
+
 // InitSchema initializes the database schema from embedded SQL
 func (d *DB) InitSchema(ctx context.Context) error {
 	schemaSQL, err := schema.ReadFile("schema.sql")
