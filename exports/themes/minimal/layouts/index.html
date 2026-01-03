@@ -2,14 +2,20 @@
 <div>
     <p style="font-size: 16px; margin-bottom: 30px;">{{ .Site.Params.description }}</p>
     
-    {{ $posts := (where .Site.RegularPages "Type" "in" (slice "posts")) }}
+    {{ $posts := where .Site.RegularPages.ByPublishDate.Reverse "Section" "posts" }}
     {{ if $posts }}
     <h2>Latest Posts</h2>
     <ul class="post-list">
-        {{ range $posts.ByPublishDate.Reverse | first 10 }}
+        {{ range $posts | first 10 }}
         <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-            <span class="date">{{ .PublishDate.Format "Jan 02, 2006" }}</span>
+            <span class="date">
+                {{ if .PublishDate }}
+                    {{ .PublishDate.Format "Jan 02, 2006" }}
+                {{ else if .Date }}
+                    {{ .Date.Format "Jan 02, 2006" }}
+                {{ end }}
+            </span>
             {{ if .Params.description }}
             <p style="color: var(--secondary); margin: 5px 0 0 0; font-size: 14px;">{{ .Params.description }}</p>
             {{ end }}

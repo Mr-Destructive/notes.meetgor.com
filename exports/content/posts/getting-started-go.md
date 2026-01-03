@@ -1,9 +1,7 @@
 ---
 title: "Getting Started with Go"
-date: 2026-01-02
-slug: getting-started-go
-draft: false
-type: article
+date: 2025-01-02
+publishDate: 2025-01-02
 description: "Learn Go basics"
 tags: ["go", "programming"]
 ---

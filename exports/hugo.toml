@@ -1,18 +1,14 @@
-baseURL = "https://example.com/"
+baseURL = "https://notes.meetgor.com/"
 languageCode = "en-us"
-title = "Blog"
-theme = "blog-theme"
+title = "Notes"
+theme = "minimal"
+enableGitInfo = true
+outputs.home = ["HTML", "JSON"]
 
 [params]
-  author = "Author"
-  description = "A minimalist blog"
-
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 2
+  description = "A collection of technical notes and posts"
+  author = "Meet Gor"
+  
+[markup.goldmark.renderer]
+  unsafe = true
+  hardWraps = true
