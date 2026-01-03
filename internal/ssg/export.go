@@ -61,7 +61,13 @@ func buildFrontMatter(post *models.Post) string {
 	front += fmt.Sprintf("date: %s\n", post.CreatedAt.Format("2006-01-02"))
 	front += fmt.Sprintf("slug: %s\n", post.Slug)
 	front += fmt.Sprintf("draft: %v\n", post.Status != "published")
-	front += fmt.Sprintf("type: %s\n", post.TypeID)
+	
+	// Default to "posts" if no type specified
+	typeID := post.TypeID
+	if typeID == "" {
+		typeID = "posts"
+	}
+	front += fmt.Sprintf("type: %s\n", typeID)
 
 	if post.Excerpt != "" {
 		front += fmt.Sprintf("description: \"%s\"\n", escapeYAML(post.Excerpt))
