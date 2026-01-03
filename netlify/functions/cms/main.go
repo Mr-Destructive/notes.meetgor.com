@@ -2,459 +2,819 @@ package main
 
 import (
 	"context"
+	"database/sql"
+	"embed"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"log"
-	"net/http"
 	"os"
 	"strings"
+	"time"
 
-	"blog/internal/db"
-	h "blog/internal/handler"
-	"blog/internal/models"
-	"blog/internal/ssg"
-
-	"github.com/joho/godotenv"
+	gen "blog/internal/db/gen"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
+	_ "github.com/tursodatabase/libsql-client-go/libsql"
 )
 
-var database *db.DB
+//go:embed ui/*
+var uiFiles embed.FS
 
 func init() {
-	godotenv.Load()
-	log.Println("Function initializing...")
+	log.Println("CMS function initializing...")
 }
 
-// initDB initializes the database on first request
-func initDB() error {
-	if database != nil {
-		return nil
+// handler is the AWS Lambda handler for Netlify Functions
+func handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	log.Printf("Request: %s %s", req.HTTPMethod, req.Path)
+	ctx := context.Background()
+
+	// Handle CORS preflight
+	if req.HTTPMethod == "OPTIONS" {
+		return events.APIGatewayProxyResponse{
+			StatusCode: 200,
+			Headers: map[string]string{
+				"Access-Control-Allow-Origin":  "*",
+				"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+				"Access-Control-Allow-Headers": "Content-Type, Authorization",
+			},
+		}, nil
 	}
 
-	d, err := db.New(context.Background())
+	// Parse path early to check if it's API or UI
+	fullPath := strings.TrimPrefix(req.Path, "/.netlify/functions/cms")
+	fullPath = strings.Trim(fullPath, "/")
+
+	// Serve root path with admin dashboard shell
+	if fullPath == "" {
+		return serveAdminShell()
+	}
+	
+	// Serve UI files for legacy routes
+	if fullPath == "login" || fullPath == "dashboard" || fullPath == "editor" || 
+	   fullPath == "editor.js" || fullPath == "dashboard.js" {
+		return serveUI(fullPath)
+	}
+	
+	// Handle /admin/* routes with new admin handlers
+	if strings.HasPrefix(fullPath, "admin/") {
+		return handleAdminRoute(req, fullPath)
+	}
+	
+	// Serve CSS files
+	if strings.HasPrefix(fullPath, "css/") {
+		if fullPath == "css/admin.css" {
+			return serveAdminCSS()
+		}
+		return respondError(404, "CSS file not found"), nil
+	}
+
+	// Health check for API root
+	if fullPath == "api" {
+		return respondJSON(200, map[string]string{"status": "ok", "version": "1.0"}), nil
+	}
+
+	// Connect to Turso database
+	dbName := os.Getenv("TURSO_CONNECTION_URL")
+	dbToken := os.Getenv("TURSO_AUTH_TOKEN")
+
+	if dbName == "" || dbToken == "" {
+		return respondError(500, "Database credentials not configured"), nil
+	}
+
+	dbString := fmt.Sprintf("%s?authToken=%s", dbName, dbToken)
+	db, err := sql.Open("libsql", dbString)
 	if err != nil {
-		return fmt.Errorf("failed to initialize database: %w", err)
+		log.Printf("Database connection error: %v", err)
+		return respondError(500, "Database connection failed"), nil
+	}
+	defer db.Close()
+
+	// Verify database connection
+	if err := db.PingContext(ctx); err != nil {
+		log.Printf("Database ping error: %v", err)
+		return respondError(500, "Database connection failed"), nil
 	}
 
-	// Initialize schema with soft fail
-	if err := d.InitSchema(context.Background()); err != nil {
+	// Initialize schema if needed (soft fail - continues even if tables already exist)
+	if err := initSchemaIfNotExists(ctx, db); err != nil {
 		log.Printf("Schema initialization warning (non-fatal): %v", err)
+		// Don't return error - tables may already exist
 	}
 
-	database = d
-	return nil
-}
+	// Create sqlc queries
+	queries := gen.New(db)
 
-// Handler is the main Netlify function handler
-func Handler(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Request: %s %s", r.Method, r.URL.Path)
-
-	// Initialize database on first request
-	if err := initDB(); err != nil {
-		log.Printf("Database initialization error: %v", err)
-		respondError(w, http.StatusInternalServerError, "Database connection failed")
-		return
+	// Ensure specific query tables are initialized
+	if err := queries.InitPostTables(ctx); err != nil {
+		log.Printf("Post tables init warning (non-fatal): %v", err)
 	}
-	
-	// CORS headers
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
-
-	if r.Method == http.MethodOptions {
-		w.WriteHeader(http.StatusOK)
-		return
-	}
-
-	// Parse route
-	path := strings.TrimPrefix(r.URL.Path, "/.netlify/functions/cms")
-	path = strings.Trim(path, "/")
-	
-	// Root path - serve admin dashboard
-	if path == "" {
-		serveAdminIndex(w, r)
-		return
-	}
-
-	// API health endpoint
-	if path == "api" {
-		respondJSON(w, http.StatusOK, map[string]string{"status": "ok", "version": "1.0"})
-		return
-	}
-
-	// CSS file serving
-	if strings.HasPrefix(path, "css/") {
-		serveCSSFile(w, r, path)
-		return
-	}
-
-	// Database initialization happens on demand in individual handlers
-
-	// Admin routes
-	if strings.HasPrefix(path, "admin/") {
-		path = strings.TrimPrefix(path, "admin/")
-		path = strings.Trim(path, "/")
-		
-		parts := strings.Split(path, "/")
-		resource := parts[0]
-		var id, action string
-		if len(parts) > 1 {
-			id = parts[1]
-		}
-		if len(parts) > 2 {
-			action = parts[2]
-		}
-
-		switch resource {
-		case "dashboard":
-			h.HandleAdminDashboard(w, r, database)
-		case "posts":
-			if action == "new" || (id != "" && action == "edit") {
-				h.HandlePostEditor(w, r, database, id)
-			} else {
-				h.HandlePostsList(w, r, database)
-			}
-		case "series":
-			if action == "new" || (id != "" && action == "edit") {
-				// TODO: HandleSeriesEditor
-				respondError(w, http.StatusNotImplemented, "Series editor not yet implemented")
-			} else {
-				h.HandleSeriesList(w, r, database)
-			}
-		case "types":
-			h.HandlePostTypes(w, r, database)
-		case "exports":
-			h.HandleExportPage(w, r, database)
-		default:
-			respondError(w, http.StatusNotFound, "Admin page not found")
-		}
-		return
+	if err := queries.InitSeriesTables(ctx); err != nil {
+		log.Printf("Series tables init warning (non-fatal): %v", err)
 	}
 
 	// API routes
-	if strings.HasPrefix(path, "api/") {
-		path = strings.TrimPrefix(path, "api/")
-		path = strings.Trim(path, "/")
-		
-		if path == "" {
-			respondJSON(w, http.StatusOK, map[string]string{"status": "ok", "version": "1.0"})
-			return
-		}
+	path := strings.TrimPrefix(fullPath, "api")
+	path = strings.Trim(path, "/")
 
-		parts := strings.Split(path, "/")
-		resource := parts[0]
-		var id, action string
-		if len(parts) > 1 {
-			id = parts[1]
-		}
-		if len(parts) > 2 {
-			action = parts[2]
-		}
-
-		// Route to handlers
-		switch resource {
-		case "auth":
-			handleAuth(w, r, database, id)
-		case "posts":
-			handlePosts(w, r, database, id, action)
-		case "series":
-			handleSeries(w, r, database, id, action)
-		case "types":
-			handleTypes(w, r, database)
-		case "tags":
-			handleTags(w, r, database)
-		case "exports":
-			handleExports(w, r, database)
-		default:
-			respondError(w, http.StatusNotFound, "Resource not found")
-		}
-		return
+	parts := strings.Split(path, "/")
+	resource := parts[0]
+	var id, action string
+	if len(parts) > 1 {
+		id = parts[1]
+	}
+	if len(parts) > 2 {
+		action = parts[2]
 	}
 
-	respondError(w, http.StatusNotFound, "Not found")
+	// Route to handlers
+	switch resource {
+	case "auth":
+		return handleAuth(req, ctx, id)
+	case "posts":
+		return handlePosts(req, ctx, queries, id, action)
+	case "types":
+		return handleTypes(req, ctx, queries)
+	case "tags":
+		return handleTags(req, ctx, queries)
+	case "exports":
+		return handleExports(req, ctx, queries)
+	default:
+		return respondError(404, "Resource not found"), nil
+	}
 }
-
-
 
 // handleAuth handles authentication endpoints
-func handleAuth(w http.ResponseWriter, r *http.Request, db *db.DB, action string) {
+func handleAuth(req events.APIGatewayProxyRequest, ctx context.Context, action string) (events.APIGatewayProxyResponse, error) {
 	switch action {
 	case "login":
-		if r.Method != http.MethodPost {
-			respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
-			return
+		if req.HTTPMethod != "POST" {
+			return respondError(405, "Method not allowed"), nil
 		}
-		h.HandleLogin(w, r, db)
-	case "logout":
-		h.HandleLogout(w, r)
+		var loginReq struct {
+			Password string `json:"password"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&loginReq); err != nil {
+			return respondError(400, "Invalid request"), nil
+		}
+
+		// Accept any non-empty password for now (set ADMIN_PASSWORD env var in Netlify UI for security)
+		if loginReq.Password == "" {
+			return respondError(401, "Password required"), nil
+		}
+		
+		// For development/demo: accept "test" or any password with ADMIN_PASSWORD env var
+		adminPassword := os.Getenv("ADMIN_PASSWORD")
+		if adminPassword != "" && loginReq.Password != adminPassword {
+			return respondError(401, "Invalid credentials"), nil
+		}
+		
+		log.Printf("Login successful for user (password: %q)", loginReq.Password)
+
+		// Generate JWT token
+		token, err := generateToken()
+		if err != nil {
+			log.Printf("Token generation error: %v", err)
+			return respondError(500, "Failed to generate token"), nil
+		}
+
+		return respondJSON(200, map[string]interface{}{
+			"token":      token,
+			"expires_at": time.Now().Add(7 * 24 * time.Hour).Format(time.RFC3339),
+		}), nil
+
 	case "verify":
-		h.HandleVerify(w, r)
+		if req.HTTPMethod != "GET" {
+			return respondError(405, "Method not allowed"), nil
+		}
+		token := getToken(req)
+		if token == "" {
+			return respondError(401, "No token"), nil
+		}
+		if !verifyToken(token) {
+			return respondError(401, "Invalid token"), nil
+		}
+		return respondJSON(200, map[string]bool{"valid": true}), nil
+
+	case "logout":
+		return respondJSON(200, map[string]string{"status": "logged out"}), nil
+
 	default:
-		respondError(w, http.StatusNotFound, "Auth endpoint not found")
+		return respondError(404, "Auth endpoint not found"), nil
 	}
 }
 
-// handlePosts handles post CRUD endpoints
-func handlePosts(w http.ResponseWriter, r *http.Request, db *db.DB, id, action string) {
-	ctx := r.Context()
+// generateToken creates a simple JWT-like token (basic implementation for Netlify)
+func generateToken() (string, error) {
+	// For production, use a proper JWT library
+	// This is a simple base64-encoded timestamp token for demo
+	payload := fmt.Sprintf("admin:%d", time.Now().Unix())
+	return base64.StdEncoding.EncodeToString([]byte(payload)), nil
+}
 
-	switch r.Method {
-	case http.MethodGet:
-		if id == "" {
-			limit := 50
-			offset := 0
-			if q := r.URL.Query().Get("limit"); q != "" {
-				fmt.Sscanf(q, "%d", &limit)
+// getToken extracts token from Authorization header or cookie
+func getToken(req events.APIGatewayProxyRequest) string {
+	if auth := req.Headers["Authorization"]; auth != "" {
+		if len(auth) > 7 && auth[:7] == "Bearer " {
+			return auth[7:]
+		}
+	}
+	if cookies := req.Headers["Cookie"]; cookies != "" {
+		for _, cookie := range strings.Split(cookies, ";") {
+			if strings.Contains(cookie, "auth_token=") {
+				parts := strings.Split(strings.TrimSpace(cookie), "=")
+				if len(parts) == 2 {
+					return parts[1]
+				}
 			}
-			if q := r.URL.Query().Get("offset"); q != "" {
-				fmt.Sscanf(q, "%d", &offset)
-			}
+		}
+	}
+	return ""
+}
 
-			opts := &models.ListOptions{
-				Limit:  limit,
-				Offset: offset,
-				Type:   r.URL.Query().Get("type"),
-				Status: r.URL.Query().Get("status"),
-				Tag:    r.URL.Query().Get("tag"),
-				Series: r.URL.Query().Get("series"),
-			}
+// verifyToken validates the token (basic implementation)
+func verifyToken(token string) bool {
+	if _, err := base64.StdEncoding.DecodeString(token); err != nil {
+		return false
+	}
+	return true
+}
 
-			posts, total, err := db.ListPosts(ctx, opts)
-			if err != nil {
-				respondError(w, http.StatusInternalServerError, err.Error())
-				return
-			}
+// generateID creates a unique ID for posts
+func generateID() string {
+	// Simple ID generation - in production use UUID
+	return fmt.Sprintf("%x", time.Now().UnixNano())
+}
 
-			respondJSON(w, http.StatusOK, map[string]interface{}{
-				"posts": posts,
-				"total": total,
+// handlePosts handles /posts CRUD endpoints
+func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, id, action string) (events.APIGatewayProxyResponse, error) {
+	switch req.HTTPMethod {
+	case "GET":
+		if id != "" {
+			// Get single post by ID or slug
+			post, err := queries.GetPost(ctx, gen.GetPostParams{
+				ID:   id,
+				Slug: id,
 			})
-		} else {
-			post, err := db.GetPost(ctx, id)
 			if err != nil {
-				respondError(w, http.StatusNotFound, "Post not found")
-				return
+				log.Printf("GetPost error: %v", err)
+				return respondError(404, "Post not found"), nil
 			}
-			respondJSON(w, http.StatusOK, post)
+			return respondJSON(200, post), nil
 		}
 
-	case http.MethodPost:
-		var req models.PostCreate
-		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-			respondError(w, http.StatusBadRequest, err.Error())
-			return
+		// List posts with optional filters
+		status := req.QueryStringParameters["status"]
+		// Note: empty status means get all posts (for authenticated users viewing dashboard)
+		// For public API, callers can specify status=published to get only published posts
+
+		limit := int64(50)
+		offset := int64(0)
+		
+		// Use nil for status if empty to get all posts
+		var statusParam interface{} = nil
+		if status != "" {
+			statusParam = status
 		}
 
-		post, err := db.CreatePost(ctx, &req)
+		posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
+			Status: statusParam,
+			TypeID: nil,
+			Offset: offset,
+			Limit:  limit,
+		})
 		if err != nil {
-			respondError(w, http.StatusInternalServerError, err.Error())
-			return
+			log.Printf("ListPosts error: %v", err)
+			return respondError(500, "Failed to fetch posts"), nil
 		}
 
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusCreated)
-		json.NewEncoder(w).Encode(post)
+		return respondJSON(200, posts), nil
 
-	case http.MethodPut:
-		if id == "" {
-			respondError(w, http.StatusBadRequest, "Post ID required")
-			return
+	case "POST":
+		// Create new post
+		var postReq struct {
+			TypeID   string                 `json:"type_id"`
+			Title    *string                `json:"title"`
+			Slug     string                 `json:"slug"`
+			Content  *string                `json:"content"`
+			Excerpt  *string                `json:"excerpt"`
+			Status   string                 `json:"status"`
+			Tags     []string               `json:"tags"`
+			Metadata map[string]interface{} `json:"metadata"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&postReq); err != nil {
+			log.Printf("POST decode error: %v", err)
+			return respondError(400, "Invalid request body"), nil
 		}
 
-		var req models.PostUpdate
-		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-			respondError(w, http.StatusBadRequest, err.Error())
-			return
+		// Generate ID
+		postID := generateID()
+		now := time.Now()
+
+		// Convert tags and metadata to JSON
+		tagsJSON, _ := json.Marshal(postReq.Tags)
+		metaJSON, _ := json.Marshal(postReq.Metadata)
+
+		// Helper to convert *string to sql.NullString
+		stringToNull := func(s *string) sql.NullString {
+			if s == nil || *s == "" {
+				return sql.NullString{Valid: false}
+			}
+			return sql.NullString{String: *s, Valid: true}
 		}
 
-		post, err := db.UpdatePost(ctx, id, &req)
+		title := ""
+		if postReq.Title != nil {
+			title = *postReq.Title
+		}
+		content := ""
+		if postReq.Content != nil {
+			content = *postReq.Content
+		}
+
+		post, err := queries.CreatePost(ctx, gen.CreatePostParams{
+			ID:      postID,
+			TypeID:  postReq.TypeID,
+			Title:   title,
+			Slug:    postReq.Slug,
+			Content: content,
+			Excerpt: stringToNull(postReq.Excerpt),
+			Status:  sql.NullString{String: postReq.Status, Valid: postReq.Status != ""},
+			Tags:    sql.NullString{String: string(tagsJSON), Valid: len(tagsJSON) > 0 && string(tagsJSON) != "[]"},
+			Metadata: sql.NullString{String: string(metaJSON), Valid: len(metaJSON) > 0 && string(metaJSON) != "{}"},
+			CreatedAt: sql.NullTime{Time: now, Valid: true},
+			UpdatedAt: sql.NullTime{Time: now, Valid: true},
+		})
 		if err != nil {
-			respondError(w, http.StatusInternalServerError, err.Error())
-			return
+			log.Printf("CreatePost error: %v", err)
+			return respondError(500, "Failed to create post"), nil
 		}
 
-		respondJSON(w, http.StatusOK, post)
+		return respondJSON(201, post), nil
 
-	case http.MethodDelete:
+	case "PUT":
 		if id == "" {
-			respondError(w, http.StatusBadRequest, "Post ID required")
-			return
+			return respondError(400, "Post ID required"), nil
 		}
 
-		if err := db.DeletePost(ctx, id); err != nil {
-			respondError(w, http.StatusInternalServerError, err.Error())
-			return
+		var updateReq struct {
+			Title      *string                `json:"title"`
+			Slug       *string                `json:"slug"`
+			Content    *string                `json:"content"`
+			Excerpt    *string                `json:"excerpt"`
+			Status     *string                `json:"status"`
+			Tags       []string               `json:"tags"`
+			Metadata   map[string]interface{} `json:"metadata"`
+			IsFeatured *bool                  `json:"is_featured"`
+		}
+		if err := json.NewDecoder(strings.NewReader(req.Body)).Decode(&updateReq); err != nil {
+			return respondError(400, "Invalid request body"), nil
 		}
 
-		respondJSON(w, http.StatusOK, map[string]string{"status": "deleted"})
+		// Convert tags and metadata to JSON if provided
+		tagsJSON := sql.NullString{Valid: false}
+		if len(updateReq.Tags) > 0 {
+			b, _ := json.Marshal(updateReq.Tags)
+			jsonStr := string(b)
+			if jsonStr != "[]" && jsonStr != "" {
+				tagsJSON = sql.NullString{String: jsonStr, Valid: true}
+			}
+		}
+
+		metaJSON := sql.NullString{Valid: false}
+		if updateReq.Metadata != nil && len(updateReq.Metadata) > 0 {
+			b, _ := json.Marshal(updateReq.Metadata)
+			jsonStr := string(b)
+			if jsonStr != "{}" && jsonStr != "" {
+				metaJSON = sql.NullString{String: jsonStr, Valid: true}
+			}
+		}
+
+		// Helper function to convert *string to sql.NullString for nullable fields
+		stringToNullable := func(s *string) sql.NullString {
+			if s == nil || *s == "" {
+				return sql.NullString{Valid: false}
+			}
+			return sql.NullString{String: *s, Valid: true}
+		}
+
+		// Helper function to convert *bool to sql.NullBool
+		boolToNull := func(b *bool) sql.NullBool {
+			if b == nil {
+				return sql.NullBool{Valid: false}
+			}
+			return sql.NullBool{Bool: *b, Valid: true}
+		}
+
+		// Title and Slug are NOT NULL in DB, so must provide values (don't change if not provided)
+		title := updateReq.Title
+		if title == nil || *title == "" {
+			// Need to fetch current value from DB
+			currentPost, err := queries.GetPost(ctx, gen.GetPostParams{ID: id, Slug: id})
+			if err != nil {
+				return respondError(404, "Post not found"), nil
+			}
+			if title == nil {
+				title = &currentPost.Title
+			} else if *title == "" {
+				// Empty string - keep current value
+				title = &currentPost.Title
+			}
+		}
+
+		slug := updateReq.Slug
+		if slug == nil || *slug == "" {
+			currentPost, err := queries.GetPost(ctx, gen.GetPostParams{ID: id, Slug: id})
+			if err != nil {
+				return respondError(404, "Post not found"), nil
+			}
+			if slug == nil {
+				slug = &currentPost.Slug
+			} else if *slug == "" {
+				slug = &currentPost.Slug
+			}
+		}
+
+		content := updateReq.Content
+		if content == nil || *content == "" {
+			currentPost, err := queries.GetPost(ctx, gen.GetPostParams{ID: id, Slug: id})
+			if err != nil {
+				return respondError(404, "Post not found"), nil
+			}
+			if content == nil {
+				content = &currentPost.Content
+			} else if *content == "" {
+				content = &currentPost.Content
+			}
+		}
+
+		post, err := queries.UpdatePost(ctx, gen.UpdatePostParams{
+			ID:         id,
+			Title:      *title,
+			Slug:       *slug,
+			Content:    *content,
+			Excerpt:    stringToNullable(updateReq.Excerpt),
+			Status:     stringToNullable(updateReq.Status),
+			Tags:       tagsJSON,
+			Metadata:   metaJSON,
+			PublishedAt: sql.NullTime{Valid: false}, // Don't change on update
+			IsFeatured: boolToNull(updateReq.IsFeatured),
+			UpdatedAt:  sql.NullTime{Time: time.Now(), Valid: true},
+		})
+		if err != nil {
+			log.Printf("UpdatePost error: %v", err)
+			return respondError(500, "Failed to update post"), nil
+		}
+
+		return respondJSON(200, post), nil
+
+	case "DELETE":
+		if id == "" {
+			return respondError(400, "Post ID required"), nil
+		}
+
+		if err := queries.DeletePost(ctx, id); err != nil {
+			log.Printf("DeletePost error: %v", err)
+			return respondError(500, "Failed to delete post"), nil
+		}
+
+		return respondJSON(200, map[string]string{"status": "deleted"}), nil
 
 	default:
-		respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
-	}
-}
-
-// handleSeries handles series endpoints
-func handleSeries(w http.ResponseWriter, r *http.Request, db *db.DB, id, action string) {
-	ctx := r.Context()
-
-	switch r.Method {
-	case http.MethodGet:
-		if id == "" {
-			limit := 50
-			offset := 0
-			if q := r.URL.Query().Get("limit"); q != "" {
-				fmt.Sscanf(q, "%d", &limit)
-			}
-			if q := r.URL.Query().Get("offset"); q != "" {
-				fmt.Sscanf(q, "%d", &offset)
-			}
-
-			series, err := db.ListSeries(ctx, limit, offset)
-			if err != nil {
-				respondError(w, http.StatusInternalServerError, err.Error())
-				return
-			}
-
-			respondJSON(w, http.StatusOK, series)
-		} else if action == "posts" {
-			posts, err := db.GetSeriesPosts(ctx, id)
-			if err != nil {
-				respondError(w, http.StatusInternalServerError, err.Error())
-				return
-			}
-			respondJSON(w, http.StatusOK, posts)
-		} else {
-			series, err := db.GetSeries(ctx, id)
-			if err != nil {
-				respondError(w, http.StatusNotFound, "Series not found")
-				return
-			}
-			respondJSON(w, http.StatusOK, series)
-		}
-
-	case http.MethodPost:
-		var req models.SeriesCreate
-		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-			respondError(w, http.StatusBadRequest, err.Error())
-			return
-		}
-
-		series, err := db.CreateSeries(ctx, &req)
-		if err != nil {
-			respondError(w, http.StatusInternalServerError, err.Error())
-			return
-		}
-
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusCreated)
-		json.NewEncoder(w).Encode(series)
-
-	case http.MethodDelete:
-		if id == "" {
-			respondError(w, http.StatusBadRequest, "Series ID required")
-			return
-		}
-
-		if err := db.DeleteSeries(ctx, id); err != nil {
-			respondError(w, http.StatusInternalServerError, err.Error())
-			return
-		}
-
-		respondJSON(w, http.StatusOK, map[string]string{"status": "deleted"})
-
-	default:
-		respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
+		return respondError(405, "Method not allowed"), nil
 	}
 }
 
 // handleTypes returns post types
-func handleTypes(w http.ResponseWriter, r *http.Request, db *db.DB) {
-	if r.Method != http.MethodGet {
-		respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
-		return
+func handleTypes(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
+	if req.HTTPMethod != "GET" {
+		return respondError(405, "Method not allowed"), nil
 	}
 
-	types, err := db.GetPostTypes(r.Context())
+	types, err := queries.GetPostTypes(ctx)
 	if err != nil {
-		respondError(w, http.StatusInternalServerError, err.Error())
-		return
+		log.Printf("GetPostTypes error: %v", err)
+		return respondError(500, "Failed to fetch types"), nil
 	}
 
-	respondJSON(w, http.StatusOK, types)
+	return respondJSON(200, types), nil
 }
 
-// handleTags returns all tags
-func handleTags(w http.ResponseWriter, r *http.Request, db *db.DB) {
-	if r.Method != http.MethodGet {
-		respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
-		return
+// handleTags returns all posts (for now, tags would require aggregation)
+func handleTags(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
+	if req.HTTPMethod != "GET" {
+		return respondError(405, "Method not allowed"), nil
 	}
 
-	tags, err := db.GetTags(r.Context())
-	if err != nil {
-		respondError(w, http.StatusInternalServerError, err.Error())
-		return
-	}
-
-	respondJSON(w, http.StatusOK, tags)
+	// GetTags not implemented yet - return empty array
+	return respondJSON(200, []map[string]interface{}{}), nil
 }
 
-// handleExports handles data export and markdown generation
-func handleExports(w http.ResponseWriter, r *http.Request, db *db.DB) {
-	if r.Method == http.MethodGet {
-		handleExportsGet(w, r, db)
-	} else if r.Method == http.MethodPost {
-		handleExportsPost(w, r, db)
-	} else {
-		respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
-	}
-}
-
-// handleExportsGet returns JSON export of posts
-func handleExportsGet(w http.ResponseWriter, r *http.Request, db *db.DB) {
-	status := r.URL.Query().Get("status")
-	if status == "" {
-		status = "published"
+// handleExports returns published posts for export
+func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
+	if req.HTTPMethod != "GET" {
+		return respondError(405, "Method not allowed"), nil
 	}
 
-	ctx := r.Context()
-	posts, _, err := db.ListPosts(ctx, &models.ListOptions{
+	// Get published posts only
+	posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
+		Status: "published",
+		TypeID: nil,
+		Offset: 0,
 		Limit:  1000,
-		Status: status,
 	})
 	if err != nil {
-		respondError(w, http.StatusInternalServerError, err.Error())
-		return
+		log.Printf("ListPosts error: %v", err)
+		return respondError(500, "Failed to fetch posts"), nil
 	}
 
-	respondJSON(w, http.StatusOK, posts)
+	return respondJSON(200, posts), nil
+}
+// initSchemaIfNotExists creates tables if they don't exist
+func initSchemaIfNotExists(ctx context.Context, db *sql.DB) error {
+	// Create tables if not exists
+	schema := `
+	CREATE TABLE IF NOT EXISTS post_types (
+	  id TEXT PRIMARY KEY,
+	  name TEXT NOT NULL,
+	  slug TEXT UNIQUE NOT NULL,
+	  description TEXT
+	);
+
+	CREATE TABLE IF NOT EXISTS posts (
+	  id TEXT PRIMARY KEY,
+	  type_id TEXT NOT NULL,
+	  title TEXT NOT NULL,
+	  slug TEXT UNIQUE NOT NULL,
+	  content TEXT NOT NULL,
+	  excerpt TEXT,
+	  status TEXT DEFAULT 'draft',
+	  is_featured BOOLEAN DEFAULT 0,
+	  tags TEXT,
+	  metadata TEXT,
+	  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	  published_at DATETIME,
+	  FOREIGN KEY(type_id) REFERENCES post_types(id)
+	);
+
+	CREATE TABLE IF NOT EXISTS revisions (
+	  id TEXT PRIMARY KEY,
+	  post_id TEXT NOT NULL,
+	  content TEXT NOT NULL,
+	  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	  FOREIGN KEY(post_id) REFERENCES posts(id) ON DELETE CASCADE
+	);
+
+	CREATE TABLE IF NOT EXISTS series (
+	  id TEXT PRIMARY KEY,
+	  name TEXT NOT NULL,
+	  slug TEXT UNIQUE NOT NULL,
+	  description TEXT,
+	  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+	);
+
+	CREATE TABLE IF NOT EXISTS post_series (
+	  post_id TEXT NOT NULL,
+	  series_id TEXT NOT NULL,
+	  order_in_series INT,
+	  PRIMARY KEY(post_id, series_id),
+	  FOREIGN KEY(post_id) REFERENCES posts(id) ON DELETE CASCADE,
+	  FOREIGN KEY(series_id) REFERENCES series(id) ON DELETE CASCADE
+	);
+
+	CREATE TABLE IF NOT EXISTS settings (
+	  key TEXT PRIMARY KEY,
+	  value TEXT
+	);
+
+	CREATE INDEX IF NOT EXISTS idx_posts_type ON posts(type_id);
+	CREATE INDEX IF NOT EXISTS idx_posts_status ON posts(status);
+	CREATE INDEX IF NOT EXISTS idx_posts_published_at ON posts(published_at);
+	CREATE INDEX IF NOT EXISTS idx_posts_slug ON posts(slug);
+	CREATE INDEX IF NOT EXISTS idx_posts_created_at ON posts(created_at DESC);
+	CREATE INDEX IF NOT EXISTS idx_series_slug ON series(slug);
+
+	INSERT OR IGNORE INTO post_types (id, name, slug, description) VALUES
+	  ('article', 'Article', 'article', 'Full-length articles'),
+	  ('review', 'Review', 'review', 'Book, movie, or product reviews'),
+	  ('thought', 'Thought', 'thought', 'Quick thoughts and reflections'),
+	  ('link', 'Link', 'link', 'Curated links with commentary'),
+	  ('til', 'TIL', 'til', 'Today I Learned'),
+	  ('quote', 'Quote', 'quote', 'Quotations and excerpts'),
+	  ('list', 'List', 'list', 'Curated lists'),
+	  ('note', 'Note', 'note', 'Quick notes'),
+	  ('snippet', 'Snippet', 'snippet', 'Code snippets'),
+	  ('essay', 'Essay', 'essay', 'Long-form essays'),
+	  ('tutorial', 'Tutorial', 'tutorial', 'Step-by-step guides'),
+	  ('interview', 'Interview', 'interview', 'Q&A interviews');
+	`
+
+	if _, err := db.ExecContext(ctx, schema); err != nil {
+		return fmt.Errorf("failed to initialize schema: %w", err)
+	}
+
+	log.Println("Schema initialized")
+	return nil
 }
 
-// handleExportsPost exports posts as markdown for static site generation
-func handleExportsPost(w http.ResponseWriter, r *http.Request, db *db.DB) {
-	outputDir := "./exports"
-	if err := os.MkdirAll(outputDir, 0755); err != nil {
-		respondError(w, http.StatusInternalServerError, "Failed to create export directory")
-		return
-	}
-
-	ctx := r.Context()
-	result, err := ssg.ExportAll(ctx, db, outputDir)
-	if err != nil {
-		respondError(w, http.StatusInternalServerError, fmt.Sprintf("Export failed: %v", err))
-		return
-	}
-
-	respondJSON(w, http.StatusOK, result)
+// serveUI serves the embedded UI files
+// serveAdminShell returns the admin dashboard HTML shell
+func serveAdminShell() (events.APIGatewayProxyResponse, error) {
+	html := `<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Admin</title>
+	<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+	<link rel="stylesheet" href="/css/admin.css">
+	<style>
+		body {
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+			background: #f5f5f5;
+		}
+		.admin-shell {
+			display: flex;
+			height: 100vh;
+			overflow: hidden;
+		}
+		.sidebar {
+			width: 220px;
+			background: #1a1a1a;
+			color: white;
+			padding: 20px;
+			overflow-y: auto;
+			border-right: 1px solid #333;
+		}
+		.sidebar h2 {
+			margin: 0 0 30px 0;
+			font-size: 18px;
+			font-weight: 600;
+			border-bottom: 1px solid #333;
+			padding-bottom: 15px;
+		}
+		.nav-section {
+			margin-bottom: 30px;
+		}
+		.nav-section-title {
+			font-size: 11px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #888;
+			margin-bottom: 12px;
+			letter-spacing: 1px;
+		}
+		.nav-link {
+			display: block;
+			padding: 10px 12px;
+			color: #ccc;
+			text-decoration: none;
+			border-radius: 4px;
+			margin-bottom: 4px;
+			font-size: 14px;
+			cursor: pointer;
+			border: none;
+			background: none;
+			text-align: left;
+			width: 100%;
+		}
+		.nav-link:hover {
+			background: #333;
+			color: white;
+		}
+		.nav-link.active {
+			background: #0066cc;
+			color: white;
+			font-weight: 600;
+		}
+		.main-content {
+			flex: 1;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+		}
+		.topbar {
+			background: white;
+			border-bottom: 1px solid #e0e0e0;
+			padding: 15px 30px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.topbar h1 {
+			margin: 0;
+			font-size: 24px;
+			font-weight: 600;
+		}
+		.content-area {
+			flex: 1;
+			overflow-y: auto;
+			padding: 30px;
+		}
+		.spinner {
+			display: none;
+			width: 16px;
+			height: 16px;
+			border: 2px solid #f3f3f3;
+			border-top: 2px solid #0066cc;
+			border-radius: 50%;
+			animation: spin 1s linear infinite;
+		}
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<div class="admin-shell">
+		<div class="sidebar">
+			<h2>Blog Admin</h2>
+			<div class="nav-section">
+				<div class="nav-section-title">Main</div>
+				<a class="nav-link" hx-get="/admin/dashboard" hx-target="#main-content" onclick="updateActiveNav(this)">📊 Dashboard</a>
+				<a class="nav-link" hx-get="/admin/posts" hx-target="#main-content" onclick="updateActiveNav(this)">📝 Posts</a>
+				<a class="nav-link" hx-get="/admin/series" hx-target="#main-content" onclick="updateActiveNav(this)">📚 Series</a>
+			</div>
+			<div class="nav-section">
+				<div class="nav-section-title">Config</div>
+				<a class="nav-link" hx-get="/admin/types" hx-target="#main-content" onclick="updateActiveNav(this)">🏷️ Post Types</a>
+				<a class="nav-link" hx-get="/admin/exports" hx-target="#main-content" onclick="updateActiveNav(this)">📤 Export</a>
+			</div>
+		</div>
+		<div class="main-content">
+			<div class="topbar">
+				<h1 id="page-title">Dashboard</h1>
+				<div class="spinner"></div>
+			</div>
+			<div class="content-area" id="main-content">
+				<div class="card">
+					<div class="card-body" style="text-align: center; padding: 60px 20px;">
+						<p style="color: #999; font-size: 16px;">Loading...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+	<script>
+		function updateActiveNav(element) {
+			document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+			element.classList.add('active');
+			const text = element.textContent.trim();
+			document.getElementById('page-title').textContent = text;
+		}
+		document.addEventListener('DOMContentLoaded', () => {
+			htmx.ajax('GET', '/admin/dashboard', { target: '#main-content' });
+			document.querySelector('.nav-link').classList.add('active');
+		});
+	</script>
+</body>
+</html>`
+	return events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       html,
+		Headers: map[string]string{
+			"Content-Type":                "text/html; charset=utf-8",
+			"Access-Control-Allow-Origin": "*",
+		},
+	}, nil
 }
 
-// serveCSSFile serves CSS files from public/css/
-func serveCSSFile(w http.ResponseWriter, r *http.Request, path string) {
-	// Simple CSS serving - in production this would be embedded or served by Netlify
-	filename := strings.TrimPrefix(path, "css/")
+// handleAdminRoute handles /admin/* routes
+func handleAdminRoute(req events.APIGatewayProxyRequest, fullPath string) (events.APIGatewayProxyResponse, error) {
+	// For now, return a placeholder 
+	// This will be connected to actual handlers later
+	path := strings.TrimPrefix(fullPath, "admin/")
+	path = strings.Trim(path, "/")
 	
-	// Only allow admin.css for now
-	if filename == "admin.css" {
-		css := `* {
+	// Parse the admin path
+	parts := strings.Split(path, "/")
+	resource := parts[0]
+	
+	// Return minimal responses for now
+	switch resource {
+	case "dashboard":
+		return respondJSON(200, map[string]string{"page": "dashboard", "status": "loading"}), nil
+	case "posts":
+		return respondJSON(200, map[string]string{"page": "posts", "status": "loading"}), nil
+	case "series":
+		return respondJSON(200, map[string]string{"page": "series", "status": "loading"}), nil
+	case "types":
+		return respondJSON(200, map[string]string{"page": "types", "status": "loading"}), nil
+	case "exports":
+		return respondJSON(200, map[string]string{"page": "exports", "status": "loading"}), nil
+	default:
+		return respondError(404, "Admin page not found"), nil
+	}
+}
+
+// serveAdminCSS serves the admin CSS
+func serveAdminCSS() (events.APIGatewayProxyResponse, error) {
+	css := `* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -473,15 +833,6 @@ func serveCSSFile(w http.ResponseWriter, r *http.Request, path string) {
     --danger: #e74c3c;
 }
 
-html, body {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text);
-    background: var(--bg-white);
-}
-
 .card {
     background: var(--bg-white);
     border: 1px solid var(--border);
@@ -494,12 +845,6 @@ html, body {
     padding: 20px;
     border-bottom: 1px solid var(--border);
     background: var(--bg-light);
-}
-
-.card-header h3 {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0;
 }
 
 .card-body {
@@ -526,22 +871,6 @@ html, body {
     border-radius: 3px;
     font-family: inherit;
     font-size: 13px;
-    transition: border-color 0.2s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: inset 0 0 0 1px var(--primary);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 200px;
-    font-family: 'Monaco', 'Menlo', monospace;
-    font-size: 12px;
 }
 
 .btn {
@@ -551,43 +880,12 @@ html, body {
     cursor: pointer;
     font-size: 13px;
     font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s;
-    white-space: nowrap;
 }
 
-.btn-primary {
-    background: var(--primary);
-    color: white;
-}
-
-.btn-success {
-    background: var(--success);
-    color: white;
-}
-
-.btn-danger {
-    background: var(--danger);
-    color: white;
-}
-
-.btn-outline {
-    background: transparent;
-    border-color: var(--border);
-    color: var(--text);
-}
-
-.btn-outline:hover {
-    background: var(--bg-light);
-}
-
-.btn-sm {
-    padding: 6px 12px;
-    font-size: 12px;
-}
+.btn-primary { background: var(--primary); color: white; }
+.btn-success { background: var(--success); color: white; }
+.btn-danger { background: var(--danger); color: white; }
+.btn-outline { background: transparent; border-color: var(--border); color: var(--text); }
 
 .table {
     width: 100%;
@@ -600,344 +898,101 @@ html, body {
     font-weight: 600;
     border-bottom: 2px solid var(--border);
     background: var(--bg-light);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .table td {
     padding: 12px;
     border-bottom: 1px solid var(--border);
-    font-size: 13px;
-}
-
-.table tbody tr:hover {
-    background: var(--bg-light);
-}
-
-.table-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.search-bar {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.search-bar select {
-    padding: 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    font-size: 13px;
 }
 
 .badge {
     display: inline-flex;
-    align-items: center;
     padding: 4px 10px;
     border-radius: 3px;
     font-size: 11px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-.badge-success {
-    background: #d5f4e6;
-    color: #27ae60;
-}
-
-.badge-warning {
-    background: #fdebd0;
-    color: #f39c12;
-}
-
-.badge-danger {
-    background: #fadbd8;
-    color: #e74c3c;
-}
+.badge-success { background: #d5f4e6; color: #27ae60; }
+.badge-warning { background: #fdebd0; color: #f39c12; }
+.badge-danger { background: #fadbd8; color: #e74c3c; }
 
 .alert {
     padding: 12px 16px;
     border-radius: 3px;
     margin-bottom: 20px;
     border-left: 4px solid;
-    font-size: 13px;
 }
 
-.alert-success {
-    background: #d5f4e6;
-    color: #27ae60;
-    border-color: #27ae60;
+.alert-success { background: #d5f4e6; color: #27ae60; border-color: #27ae60; }
+.alert-danger { background: #fadbd8; color: #e74c3c; border-color: #e74c3c; }`
+	return events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       css,
+		Headers: map[string]string{
+			"Content-Type":                "text/css; charset=utf-8",
+			"Access-Control-Allow-Origin": "*",
+		},
+	}, nil
 }
 
-.alert-danger {
-    background: #fadbd8;
-    color: #e74c3c;
-    border-color: #e74c3c;
-}`
-		w.Header().Set("Content-Type", "text/css")
-		w.WriteHeader(http.StatusOK)
-		fmt.Fprint(w, css)
-		return
-	}
+func serveUI(page string) (events.APIGatewayProxyResponse, error) {
+	var filename, contentType string
 	
-	respondError(w, http.StatusNotFound, "CSS file not found")
+	switch page {
+	case "dashboard":
+		filename = "ui/dashboard.html"
+		contentType = "text/html; charset=utf-8"
+	case "dashboard.js":
+		filename = "ui/dashboard.js"
+		contentType = "application/javascript; charset=utf-8"
+	case "editor":
+		filename = "ui/editor.html"
+		contentType = "text/html; charset=utf-8"
+	case "editor.js":
+		filename = "ui/editor.js"
+		contentType = "application/javascript; charset=utf-8"
+	case "login", "":
+		filename = "ui/login.html"
+		contentType = "text/html; charset=utf-8"
+	default:
+		return respondError(404, "Page not found"), nil
+	}
+
+	content, err := uiFiles.ReadFile(filename)
+	if err != nil {
+		log.Printf("Failed to read UI file %s: %v", filename, err)
+		return respondError(500, "Failed to load page"), nil
+	}
+
+	return events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       string(content),
+		Headers: map[string]string{
+			"Content-Type":                contentType,
+			"Access-Control-Allow-Origin": "*",
+		},
+	}, nil
 }
 
-// serveAdminIndex serves the admin dashboard HTML
-func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
-	// Read and serve the admin index
-	indexHTML := `<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Blog Admin</title>
-	<script src="https://unpkg.com/htmx.org@1.9.10"></script>
-	<link rel="stylesheet" href="/css/admin.css">
-	<style>
-		body {
-			margin: 0;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-			background: #f5f5f5;
-		}
-		
-		.admin-shell {
-			display: flex;
-			height: 100vh;
-			overflow: hidden;
-		}
-		
-		.sidebar {
-			width: 220px;
-			background: #1a1a1a;
-			color: white;
-			padding: 20px;
-			overflow-y: auto;
-			border-right: 1px solid #333;
-		}
-		
-		.sidebar h2 {
-			margin: 0 0 30px 0;
-			font-size: 18px;
-			font-weight: 600;
-			border-bottom: 1px solid #333;
-			padding-bottom: 15px;
-		}
-		
-		.nav-section {
-			margin-bottom: 30px;
-		}
-		
-		.nav-section-title {
-			font-size: 11px;
-			font-weight: 700;
-			text-transform: uppercase;
-			color: #888;
-			margin-bottom: 12px;
-			letter-spacing: 1px;
-		}
-		
-		.nav-link {
-			display: block;
-			padding: 10px 12px;
-			color: #ccc;
-			text-decoration: none;
-			border-radius: 4px;
-			margin-bottom: 4px;
-			font-size: 14px;
-			cursor: pointer;
-			border: none;
-			background: none;
-			text-align: left;
-			width: 100%;
-		}
-		
-		.nav-link:hover {
-			background: #333;
-			color: white;
-		}
-		
-		.nav-link.active {
-			background: #0066cc;
-			color: white;
-			font-weight: 600;
-		}
-		
-		.main-content {
-			flex: 1;
-			overflow: hidden;
-			display: flex;
-			flex-direction: column;
-		}
-		
-		.topbar {
-			background: white;
-			border-bottom: 1px solid #e0e0e0;
-			padding: 15px 30px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		
-		.topbar h1 {
-			margin: 0;
-			font-size: 24px;
-			font-weight: 600;
-		}
-		
-		.content-area {
-			flex: 1;
-			overflow-y: auto;
-			padding: 30px;
-		}
-		
-		.htmx-request.htmx-settling #main-content {
-			opacity: 0.6;
-		}
-		
-		.htmx-request.htmx-settling .spinner {
-			display: inline-block;
-		}
-		
-		.spinner {
-			display: none;
-			width: 16px;
-			height: 16px;
-			border: 2px solid #f3f3f3;
-			border-top: 2px solid #0066cc;
-			border-radius: 50%;
-			animation: spin 1s linear infinite;
-		}
-		
-		@keyframes spin {
-			0% { transform: rotate(0deg); }
-			100% { transform: rotate(360deg); }
-		}
-		
-		@media (max-width: 768px) {
-			.admin-shell {
-				flex-direction: column;
-			}
-			
-			.sidebar {
-				width: 100%;
-				max-height: 60px;
-				padding: 10px 20px;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				overflow-x: auto;
-				overflow-y: hidden;
-			}
-			
-			.sidebar h2 {
-				margin: 0;
-				font-size: 14px;
-				border: none;
-				padding: 0;
-			}
-			
-			.nav-section {
-				margin: 0;
-				display: flex;
-				gap: 10px;
-			}
-			
-			.nav-section-title {
-				display: none;
-			}
-			
-			.content-area {
-				padding: 20px;
-			}
-		}
-	</style>
-</head>
-<body>
-	<div class="admin-shell">
-		<div class="sidebar">
-			<h2>Blog Admin</h2>
-			
-			<div class="nav-section">
-				<div class="nav-section-title">Main</div>
-				<a class="nav-link" hx-get="/admin/dashboard" hx-target="#main-content" onclick="updateActiveNav(this)">📊 Dashboard</a>
-				<a class="nav-link" hx-get="/admin/posts" hx-target="#main-content" onclick="updateActiveNav(this)">📝 Posts</a>
-				<a class="nav-link" hx-get="/admin/series" hx-target="#main-content" onclick="updateActiveNav(this)">📚 Series</a>
-			</div>
-			
-			<div class="nav-section">
-				<div class="nav-section-title">Config</div>
-				<a class="nav-link" hx-get="/admin/types" hx-target="#main-content" onclick="updateActiveNav(this)">🏷️ Post Types</a>
-				<a class="nav-link" hx-get="/admin/exports" hx-target="#main-content" onclick="updateActiveNav(this)">📤 Export</a>
-			</div>
-		</div>
-		
-		<div class="main-content">
-			<div class="topbar">
-				<h1 id="page-title">Dashboard</h1>
-				<div class="spinner"></div>
-			</div>
-			
-			<div class="content-area" id="main-content">
-				<div class="card">
-					<div class="card-body" style="text-align: center; padding: 60px 20px;">
-						<p style="color: #999; font-size: 16px;">Loading...</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
-	<script>
-		function updateActiveNav(element) {
-			document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-			element.classList.add('active');
-			
-			const text = element.textContent.trim();
-			document.getElementById('page-title').textContent = text;
-		}
-
-		// Load dashboard on startup
-		document.addEventListener('DOMContentLoaded', () => {
-			htmx.ajax('GET', '/admin/dashboard', { target: '#main-content' });
-			document.querySelector('.nav-link').classList.add('active');
-		});
-	</script>
-</body>
-</html>`
-	w.Header().Set("Content-Type", "text/html")
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprint(w, indexHTML)
+// Helper functions
+func respondJSON(status int, data interface{}) events.APIGatewayProxyResponse {
+	body, _ := json.Marshal(data)
+	return events.APIGatewayProxyResponse{
+		StatusCode: status,
+		Body:       string(body),
+		Headers: map[string]string{
+			"Content-Type":                "application/json",
+			"Access-Control-Allow-Origin": "*",
+		},
+	}
 }
 
-// Helper response functions
-func respondJSON(w http.ResponseWriter, status int, data interface{}) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(status)
-	json.NewEncoder(w).Encode(data)
+func respondError(status int, message string) events.APIGatewayProxyResponse {
+	return respondJSON(status, map[string]string{"error": message})
 }
 
-func respondError(w http.ResponseWriter, status int, message string) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(status)
-	json.NewEncoder(w).Encode(map[string]string{"error": message})
-}
-
-// main() is only for local development
-// Netlify Functions automatically exports Handler
+// main starts the Lambda handler
 func main() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
-
-	log.Printf("Starting CMS server on :%s (local dev only)", port)
-	if err := http.ListenAndServe(":"+port, http.HandlerFunc(Handler)); err != nil {
-		log.Fatal(err)
-	}
+	lambda.Start(handler)
 }
