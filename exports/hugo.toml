@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Notes"
 theme = "stack"
 enableGitInfo = true
-outputs.home = ["HTML", "JSON"]
 
 [params]
   description = "A collection of technical notes and posts"
@@ -16,22 +15,25 @@ outputs.home = ["HTML", "JSON"]
 [params.homepage]
   profile = false
 
-[[params.homepage.social]]
-  name = "GitHub"
-  url = "https://github.com"
+[params.colorScheme]
+  toggle = true
+  default = "light"
   
 [markup.goldmark.renderer]
   unsafe = true
   hardWraps = true
 
 [[menu.main]]
-  identifier = "home"
   name = "Home"
   url = "/"
-  weight = -100
+  weight = 1
 
 [[menu.main]]
-  identifier = "archives"
-  name = "Archives"
-  url = "/archives/"
-  weight = -99
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 3

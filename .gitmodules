@@ -4,3 +4,9 @@
 [submodule "exports/themes/papermod"]
 	path = exports/themes/papermod
 	url = https://github.com/adityatelange/hugo-PaperMod
+[submodule "exports/themes/blowfish"]
+	path = exports/themes/blowfish
+	url = https://github.com/nunocoracao/blowfish
+[submodule "exports/themes/congo"]
+	path = exports/themes/congo
+	url = https://github.com/jpanther/congo
