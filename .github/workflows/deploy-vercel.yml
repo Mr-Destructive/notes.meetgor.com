@@ -20,19 +20,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.128.2'
-          extended: false
-
-      - name: Build Hugo site
-        run: |
-          cd exports
-          hugo --minify
-          echo "✓ Site built successfully"
-          ls -lh public/index.html
-
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
