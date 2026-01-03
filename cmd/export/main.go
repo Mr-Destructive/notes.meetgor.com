@@ -17,11 +17,11 @@ type Post struct {
 	Title     string
 	Slug      string
 	Content   string
-	Excerpt   string
+	Excerpt   sql.NullString
 	TypeID    string
 	Status    string
 	CreatedAt string
-	Tags      string
+	Tags      sql.NullString
 }
 
 func main() {
@@ -75,18 +75,29 @@ func main() {
 			typeID = "posts"
 		}
 
+		// Handle nullable fields
+		excerpt := ""
+		if post.Excerpt.Valid {
+			excerpt = post.Excerpt.String
+		}
+		
+		tags := "[]"
+		if post.Tags.Valid {
+			tags = post.Tags.String
+		}
+
 		// Build front matter
 		frontMatter := fmt.Sprintf(`---
-title: "%s"
-date: %s
-slug: %s
-draft: false
-type: %s
-description: "%s"
-tags: %s
----
-
-`, escapeYAML(post.Title), post.CreatedAt[:10], post.Slug, typeID, escapeYAML(post.Excerpt), post.Tags)
+		title: "%s"
+		date: %s
+		slug: %s
+		draft: false
+		type: %s
+		description: "%s"
+		tags: %s
+		---
+		
+		`, escapeYAML(post.Title), post.CreatedAt[:10], post.Slug, typeID, escapeYAML(excerpt), tags)
 
 		// Write file
 		filePath := filepath.Join(postsDir, post.Slug+".md")
