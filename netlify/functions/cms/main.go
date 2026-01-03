@@ -252,15 +252,20 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 
 		// List posts with optional filters
 		status := req.QueryStringParameters["status"]
-		if status == "" {
-			status = "published"
-		}
+		// Note: empty status means get all posts (for authenticated users viewing dashboard)
+		// For public API, callers can specify status=published to get only published posts
 
 		limit := int64(50)
 		offset := int64(0)
+		
+		// Use nil for status if empty to get all posts
+		var statusParam interface{} = nil
+		if status != "" {
+			statusParam = status
+		}
 
 		posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
-			Status: status,
+			Status: statusParam,
 			TypeID: nil,
 			Offset: offset,
 			Limit:  limit,

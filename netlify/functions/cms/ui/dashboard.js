@@ -12,23 +12,7 @@ window.addEventListener('load', async () => {
         return;
     }
 
-    // Verify token is still valid
-    try {
-        const response = await fetch(`${API_URL}/auth/verify`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-        if (!response.ok) {
-            localStorage.removeItem('auth_token');
-            window.location.href = '/login';
-            return;
-        }
-    } catch (error) {
-        showAlert('Session verification failed', 'error');
-    }
-
-    // Load posts
+    // Load posts (this will fail if token is invalid, redirecting to login)
     loadPosts();
 });
 
@@ -40,6 +24,13 @@ async function loadPosts() {
                 'Authorization': `Bearer ${token}`
             }
         });
+
+        // If unauthorized, redirect to login
+        if (response.status === 401) {
+            localStorage.removeItem('auth_token');
+            window.location.href = '/login';
+            return;
+        }
 
         if (!response.ok) {
             throw new Error('Failed to load posts');
