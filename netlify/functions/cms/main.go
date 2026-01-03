@@ -145,7 +145,7 @@ func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRes
 	case "tags":
 		return handleTags(req, ctx, queries)
 	case "exports":
-		return handleExports(req, ctx, queries, action)
+		return handleExports(req, ctx, queries, id)
 	default:
 		return respondError(404, "Resource not found"), nil
 	}
