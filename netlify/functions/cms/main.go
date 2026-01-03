@@ -327,8 +327,8 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			Content: content,
 			Excerpt: stringToNull(postReq.Excerpt),
 			Status:  sql.NullString{String: postReq.Status, Valid: postReq.Status != ""},
-			Tags:    sql.NullString{String: string(tagsJSON), Valid: len(tagsJSON) > 2},
-			Metadata: sql.NullString{String: string(metaJSON), Valid: len(metaJSON) > 2},
+			Tags:    sql.NullString{String: string(tagsJSON), Valid: len(tagsJSON) > 0 && string(tagsJSON) != "[]"},
+			Metadata: sql.NullString{String: string(metaJSON), Valid: len(metaJSON) > 0 && string(metaJSON) != "{}"},
 			CreatedAt: sql.NullTime{Time: now, Valid: true},
 			UpdatedAt: sql.NullTime{Time: now, Valid: true},
 		})
@@ -359,16 +359,22 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 		}
 
 		// Convert tags and metadata to JSON if provided
-		tagsJSON := sql.NullString{}
+		tagsJSON := sql.NullString{Valid: false}
 		if len(updateReq.Tags) > 0 {
 			b, _ := json.Marshal(updateReq.Tags)
-			tagsJSON = sql.NullString{String: string(b), Valid: true}
+			jsonStr := string(b)
+			if jsonStr != "[]" && jsonStr != "" {
+				tagsJSON = sql.NullString{String: jsonStr, Valid: true}
+			}
 		}
 
-		metaJSON := sql.NullString{}
-		if updateReq.Metadata != nil {
+		metaJSON := sql.NullString{Valid: false}
+		if updateReq.Metadata != nil && len(updateReq.Metadata) > 0 {
 			b, _ := json.Marshal(updateReq.Metadata)
-			metaJSON = sql.NullString{String: string(b), Valid: true}
+			jsonStr := string(b)
+			if jsonStr != "{}" && jsonStr != "" {
+				metaJSON = sql.NullString{String: jsonStr, Valid: true}
+			}
 		}
 
 		// Helper function to convert *string to sql.NullString

@@ -530,11 +530,27 @@ async function loadPostForEditing(postId) {
     // Load metadata
     if (post.metadata) {
       try {
-        const metadata = JSON.parse(post.metadata);
+        let metadata = {};
+        
+        // Handle both string and object metadata
+        if (typeof post.metadata === 'string') {
+          // Try to parse if it's a string
+          if (post.metadata && post.metadata !== '{}' && !post.metadata.includes('[object Object]')) {
+            try {
+              metadata = JSON.parse(post.metadata);
+            } catch (parseError) {
+              console.warn('Could not parse metadata JSON:', post.metadata);
+              metadata = {};
+            }
+          }
+        } else if (typeof post.metadata === 'object') {
+          metadata = post.metadata;
+        }
+        
         const type = document.getElementById('postType').value;
         const template = POST_TEMPLATES[type] || {};
         
-        if (template.fields) {
+        if (template.fields && Object.keys(metadata).length > 0) {
           template.fields.forEach(field => {
             const input = document.getElementById(field);
             if (input && metadata[field] !== undefined && metadata[field] !== null) {
@@ -555,7 +571,7 @@ async function loadPostForEditing(postId) {
           });
         }
       } catch (e) {
-        console.error('Error loading metadata:', e);
+        console.warn('Error loading metadata (non-fatal):', e);
       }
     }
 
