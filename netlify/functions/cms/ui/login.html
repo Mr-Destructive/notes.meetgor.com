@@ -142,8 +142,7 @@
 <body>
     <div class="login-container">
         <div class="logo">
-            <h1>📝</h1>
-            <h2>Blog Admin</h2>
+            <h1>📝 Blog Admin</h1>
             <p>Sign in to manage your blog</p>
         </div>
 
@@ -175,7 +174,15 @@
     </div>
 
     <script>
-        const API_URL = `${window.location.origin}/.netlify/functions/cms/api`;
+        // Determine API URL based on whether running in Netlify Functions or local
+        const getAPIUrl = () => {
+            const basePath = window.location.pathname;
+            if (basePath.includes('/.netlify/functions/cms')) {
+                return `${window.location.origin}/.netlify/functions/cms/api`;
+            }
+            return `${window.location.origin}/api`;
+        };
+        const API_URL = getAPIUrl();
 
         async function handleLogin(event) {
             event.preventDefault();
@@ -211,7 +218,10 @@
                 alert.textContent = 'Login successful! Redirecting...';
                 
                 setTimeout(() => {
-                    window.location.href = '/.netlify/functions/cms/editor';
+                    const editorPath = window.location.pathname.includes('/.netlify/functions/cms')
+                        ? '/.netlify/functions/cms/editor'
+                        : '/editor';
+                    window.location.href = editorPath;
                 }, 1000);
 
             } catch (error) {
@@ -226,7 +236,10 @@
         window.addEventListener('load', () => {
             const token = localStorage.getItem('auth_token');
             if (token) {
-                window.location.href = '/.netlify/functions/cms/editor';
+                const editorPath = window.location.pathname.includes('/.netlify/functions/cms')
+                    ? '/.netlify/functions/cms/editor'
+                    : '/editor';
+                window.location.href = editorPath;
             }
         });
     </script>

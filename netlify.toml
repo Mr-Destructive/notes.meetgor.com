@@ -5,7 +5,27 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/cms/:splat"
+  to = "/.netlify/functions/cms/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/cms/"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/.netlify/functions/cms/login"
+  status = 200
+
+[[redirects]]
+  from = "/editor"
+  to = "/.netlify/functions/cms/editor"
+  status = 200
+
+[[redirects]]
+  from = "/editor.js"
+  to = "/.netlify/functions/cms/editor.js"
   status = 200
 
 [[redirects]]
