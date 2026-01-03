@@ -1,4 +1,3 @@
-draft: false
 ---
 title: "Getting Started with Go"
 date: 2025-01-02

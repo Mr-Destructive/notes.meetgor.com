@@ -12,6 +12,25 @@ outputs.home = ["HTML", "JSON"]
   name = "Meet Gor"
   email = "me@meetgor.com"
 
+[params.homepage]
+  profile = false
+
+[[params.homepage.social]]
+  name = "GitHub"
+  url = "https://github.com"
+  
 [markup.goldmark.renderer]
   unsafe = true
   hardWraps = true
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = -100
+
+[[menu.main]]
+  identifier = "archives"
+  name = "Archives"
+  url = "/archives/"
+  weight = -99
