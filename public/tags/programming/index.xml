@@ -1,3 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Notes</title><link>/tags/programming/</link><description>Recent content in Programming on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 03 Jan 2026 19:09:34 +0530</lastBuildDate><atom:link href="/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started with Go</title><link>/posts/getting-started-go/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/getting-started-go/</guid><description>&lt;p&gt;Go is a powerful language for building web applications.&lt;/p&gt;
-&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Notes</title><link>/tags/programming/</link><description>Recent content in Programming on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2026 Meet Gor</copyright><lastBuildDate>Sat, 03 Jan 2026 19:09:34 +0530</lastBuildDate><atom:link href="/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started with Go</title><link>/posts/getting-started-go/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/getting-started-go/</guid><description>&lt;p&gt;Go is a powerful language for building web applications.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Installation
+ &lt;div id="installation" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#installation" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;Download from golang.org&lt;/p&gt;</description></item></channel></rss>
