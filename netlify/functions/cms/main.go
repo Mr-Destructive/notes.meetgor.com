@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -142,7 +143,7 @@ func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRes
 	case "tags":
 		return handleTags(req, ctx, queries)
 	case "exports":
-		return handleExports(req, ctx, queries)
+		return handleExports(req, ctx, queries, id)
 	default:
 		return respondError(404, "Resource not found"), nil
 	}
@@ -583,12 +584,19 @@ func handleTags(req events.APIGatewayProxyRequest, ctx context.Context, queries 
 }
 
 // handleExports returns published posts for export
-func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
-	if req.HTTPMethod != "GET" {
+func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, action string) (events.APIGatewayProxyResponse, error) {
+	switch {
+	case action == "markdown" && req.HTTPMethod == "POST":
+		return handleExportsMarkdown(ctx, queries)
+	case action == "" && req.HTTPMethod == "GET":
+		return handleExportsGet(ctx, queries)
+	default:
 		return respondError(405, "Method not allowed"), nil
 	}
+}
 
-	// Get published posts only
+// handleExportsGet returns published posts as JSON
+func handleExportsGet(ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
 	posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
 		Status: "published",
 		TypeID: nil,
@@ -600,7 +608,211 @@ func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queri
 		return respondError(500, "Failed to fetch posts"), nil
 	}
 
-	return respondJSON(200, posts), nil
+	// Convert posts to response format
+	postResponses := make([]PostResponse, len(posts))
+	for i, p := range posts {
+		postResponses[i] = convertPost(p)
+	}
+	return respondJSON(200, postResponses), nil
+}
+
+// handleExportsMarkdown generates markdown files and Hugo configuration
+func handleExportsMarkdown(ctx context.Context, queries *gen.Queries) (events.APIGatewayProxyResponse, error) {
+	// Get published posts
+	posts, err := queries.ListPosts(ctx, gen.ListPostsParams{
+		Status: "published",
+		TypeID: nil,
+		Offset: 0,
+		Limit:  1000,
+	})
+	if err != nil {
+		log.Printf("ListPosts error: %v", err)
+		return respondError(500, "Failed to fetch posts"), nil
+	}
+
+	// Note: File writing in Lambda is limited to /tmp directory
+	// In production, use S3 or other cloud storage
+	exportDir := "/tmp/exports"
+	contentDir := filepath.Join(exportDir, "content", "posts")
+	workflowDir := filepath.Join(exportDir, ".github", "workflows")
+
+	// Create directories
+	if err := os.MkdirAll(contentDir, 0755); err != nil {
+		log.Printf("Failed to create directories: %v", err)
+		return respondError(500, fmt.Sprintf("Failed to create directories: %v", err)), nil
+	}
+	if err := os.MkdirAll(workflowDir, 0755); err != nil {
+		log.Printf("Failed to create workflow directory: %v", err)
+		return respondError(500, fmt.Sprintf("Failed to create workflow directory: %v", err)), nil
+	}
+
+	// Write each post as markdown
+	for _, post := range posts {
+		markdown := postToMarkdown(post)
+		filename := filepath.Join(contentDir, post.Slug+".md")
+		if err := os.WriteFile(filename, []byte(markdown), 0644); err != nil {
+			log.Printf("Failed to write post file: %v", err)
+			return respondError(500, fmt.Sprintf("Failed to write post file: %v", err)), nil
+		}
+	}
+
+	// Generate hugo.toml
+	hugoConfig := generateHugoConfig()
+	if err := os.WriteFile(filepath.Join(exportDir, "hugo.toml"), []byte(hugoConfig), 0644); err != nil {
+		log.Printf("Failed to write hugo config: %v", err)
+		return respondError(500, fmt.Sprintf("Failed to write hugo config: %v", err)), nil
+	}
+
+	// Generate GitHub Actions workflow
+	workflow := generateGitHubWorkflow()
+	if err := os.WriteFile(filepath.Join(workflowDir, "deploy.yml"), []byte(workflow), 0644); err != nil {
+		log.Printf("Failed to write workflow: %v", err)
+		return respondError(500, fmt.Sprintf("Failed to write workflow: %v", err)), nil
+	}
+
+	return respondJSON(200, map[string]interface{}{
+		"exported_at": time.Now().Format(time.RFC3339),
+		"posts_count": len(posts),
+		"files_count": len(posts) + 2,
+		"output_dir":  exportDir,
+		"success":     true,
+		"message":     fmt.Sprintf("Successfully exported %d posts to /tmp/exports (available for 15 minutes)", len(posts)),
+	}), nil
+}
+
+// postToMarkdown converts a post to markdown with front matter
+func postToMarkdown(post gen.Post) string {
+	frontMatter := generatePostFrontMatter(post)
+	return fmt.Sprintf("---\n%s---\n\n%s", frontMatter, post.Content)
+}
+
+// generatePostFrontMatter creates YAML front matter for a post
+func generatePostFrontMatter(post gen.Post) string {
+	sb := strings.Builder{}
+
+	// Title
+	sb.WriteString(fmt.Sprintf("title: \"%s\"\n", escapeYAMLValue(post.Title)))
+
+	// Date
+	createdDate := ""
+	if post.CreatedAt.Valid {
+		createdDate = post.CreatedAt.Time.Format("2006-01-02")
+	}
+	sb.WriteString(fmt.Sprintf("date: %s\n", createdDate))
+
+	// Slug
+	sb.WriteString(fmt.Sprintf("slug: %s\n", post.Slug))
+
+	// Draft status (false for published)
+	sb.WriteString("draft: false\n")
+
+	// Type
+	sb.WriteString(fmt.Sprintf("type: %s\n", post.TypeID))
+
+	// Description/Excerpt
+	if post.Excerpt.Valid && post.Excerpt.String != "" {
+		sb.WriteString(fmt.Sprintf("description: \"%s\"\n", escapeYAMLValue(post.Excerpt.String)))
+	}
+
+	// Tags
+	if post.Tags.Valid && post.Tags.String != "" {
+		var tags []string
+		json.Unmarshal([]byte(post.Tags.String), &tags)
+		if len(tags) > 0 {
+			sb.WriteString("tags:\n")
+			for _, tag := range tags {
+				sb.WriteString(fmt.Sprintf("  - %s\n", escapeYAMLValue(tag)))
+			}
+		}
+	}
+
+	// Metadata if present
+	if post.Metadata.Valid && post.Metadata.String != "" && post.Metadata.String != "{}" {
+		var metadata map[string]interface{}
+		if err := json.Unmarshal([]byte(post.Metadata.String), &metadata); err == nil && len(metadata) > 0 {
+			sb.WriteString("metadata:\n")
+			for key, value := range metadata {
+				valStr := fmt.Sprintf("%v", value)
+				sb.WriteString(fmt.Sprintf("  %s: \"%s\"\n", key, escapeYAMLValue(valStr)))
+			}
+		}
+	}
+
+	return sb.String()
+}
+
+// escapeYAMLValue escapes special characters for YAML
+func escapeYAMLValue(s string) string {
+	s = strings.ReplaceAll(s, "\"", "\\\"")
+	s = strings.ReplaceAll(s, "\n", "\\n")
+	return s
+}
+
+// generateHugoConfig creates a hugo.toml configuration file
+func generateHugoConfig() string {
+	return `baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "My Blog"
+theme = "blog-theme"
+
+[params]
+  author = "Your Name"
+  description = "A blog about technology and software"
+
+# Content structure
+[content]
+  [[content.dirs]]
+    path = "content/posts"
+    singular = false
+
+# Markdown processing
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      xhtml = false
+
+# Output formats
+[outputs]
+  home = ["HTML", "JSON"]
+`
+}
+
+// generateGitHubWorkflow creates a GitHub Actions workflow file for deployment
+func generateGitHubWorkflow() string {
+	return `name: Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+`
 }
 
 // initSchemaIfNotExists creates tables if they don't exist
