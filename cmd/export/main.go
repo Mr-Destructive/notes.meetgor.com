@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	_ "github.com/tursodatabase/go-libsql"
@@ -90,9 +91,9 @@ func main() {
 		frontMatter := fmt.Sprintf("---\ntitle: %q\ndate: %s\nslug: %s\ndraft: false\ntype: %s\ndescription: %q\ntags: %s\n---\n\n", 
 			post.Title, post.CreatedAt[:10], post.Slug, typeID, excerpt, tags)
 
-		// Write file
+		// Write file - trim content to remove leading/trailing whitespace
 		filePath := filepath.Join(postsDir, post.Slug+".md")
-		content := frontMatter + post.Content
+		content := frontMatter + strings.TrimSpace(post.Content)
 		if err := os.WriteFile(filePath, []byte(content), 0644); err != nil {
 			log.Printf("Write error for %s: %v", filePath, err)
 			continue
