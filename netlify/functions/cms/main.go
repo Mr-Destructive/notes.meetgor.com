@@ -251,6 +251,69 @@ func generateID() string {
 }
 
 // handlePosts handles /posts CRUD endpoints
+// PostResponse is the clean JSON response format for posts
+type PostResponse struct {
+	ID          string                 `json:"id"`
+	TypeID      string                 `json:"type_id"`
+	Title       string                 `json:"title"`
+	Slug        string                 `json:"slug"`
+	Content     string                 `json:"content"`
+	Excerpt     string                 `json:"excerpt"`
+	Status      string                 `json:"status"`
+	IsFeatured  bool                   `json:"is_featured"`
+	Tags        []string               `json:"tags"`
+	Metadata    map[string]interface{} `json:"metadata"`
+	CreatedAt   string                 `json:"created_at"`
+	UpdatedAt   string                 `json:"updated_at"`
+	PublishedAt *string                `json:"published_at"`
+}
+
+// convertPost transforms a SQLC Post to a clean PostResponse
+func convertPost(p gen.Post) PostResponse {
+	// Parse tags
+	tags := []string{}
+	if p.Tags.Valid && p.Tags.String != "" {
+		json.Unmarshal([]byte(p.Tags.String), &tags)
+	}
+	
+	// Parse metadata
+	metadata := make(map[string]interface{})
+	if p.Metadata.Valid && p.Metadata.String != "" && p.Metadata.String != "{}" {
+		json.Unmarshal([]byte(p.Metadata.String), &metadata)
+	}
+	
+	// Convert times
+	createdAt := ""
+	if p.CreatedAt.Valid {
+		createdAt = p.CreatedAt.Time.Format(time.RFC3339)
+	}
+	updatedAt := ""
+	if p.UpdatedAt.Valid {
+		updatedAt = p.UpdatedAt.Time.Format(time.RFC3339)
+	}
+	var publishedAt *string
+	if p.PublishedAt.Valid {
+		t := p.PublishedAt.Time.Format(time.RFC3339)
+		publishedAt = &t
+	}
+	
+	return PostResponse{
+		ID:         p.ID,
+		TypeID:     p.TypeID,
+		Title:      p.Title,
+		Slug:       p.Slug,
+		Content:    p.Content,
+		Excerpt:    p.Excerpt.String,
+		Status:     p.Status.String,
+		IsFeatured: p.IsFeatured.Bool,
+		Tags:       tags,
+		Metadata:   metadata,
+		CreatedAt:  createdAt,
+		UpdatedAt:  updatedAt,
+		PublishedAt: publishedAt,
+	}
+}
+
 func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, id, action string) (events.APIGatewayProxyResponse, error) {
 	switch req.HTTPMethod {
 	case "GET":
@@ -264,7 +327,7 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 				log.Printf("GetPost error: %v", err)
 				return respondError(404, "Post not found"), nil
 			}
-			return respondJSON(200, post), nil
+			return respondJSON(200, convertPost(post)), nil
 		}
 
 		// List posts with optional filters
@@ -292,7 +355,12 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			return respondError(500, "Failed to fetch posts"), nil
 		}
 
-		return respondJSON(200, posts), nil
+		// Convert to response format
+		postResponses := make([]PostResponse, len(posts))
+		for i, p := range posts {
+			postResponses[i] = convertPost(p)
+		}
+		return respondJSON(200, postResponses), nil
 
 	case "POST":
 		// Create new post
@@ -354,7 +422,7 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			return respondError(500, "Failed to create post"), nil
 		}
 
-		return respondJSON(201, post), nil
+		return respondJSON(201, convertPost(post)), nil
 
 	case "PUT":
 		if id == "" {
@@ -470,7 +538,7 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			return respondError(500, "Failed to update post"), nil
 		}
 
-		return respondJSON(200, post), nil
+		return respondJSON(200, convertPost(post)), nil
 
 	case "DELETE":
 		if id == "" {
