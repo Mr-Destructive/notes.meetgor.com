@@ -145,7 +145,7 @@ func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRes
 	case "tags":
 		return handleTags(req, ctx, queries)
 	case "exports":
-		return handleExports(req, ctx, queries, id)
+		return handleExports(req, ctx, queries, action)
 	default:
 		return respondError(404, "Resource not found"), nil
 	}
@@ -586,11 +586,11 @@ func handleTags(req events.APIGatewayProxyRequest, ctx context.Context, queries 
 }
 
 // handleExports returns published posts for export
-func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, action string) (events.APIGatewayProxyResponse, error) {
+func handleExports(req events.APIGatewayProxyRequest, ctx context.Context, queries *gen.Queries, id string) (events.APIGatewayProxyResponse, error) {
 	switch {
-	case action == "markdown" && req.HTTPMethod == "POST":
+	case id == "markdown" && req.HTTPMethod == "POST":
 		return handleExportsMarkdown(ctx, queries)
-	case action == "" && req.HTTPMethod == "GET":
+	case id == "" && req.HTTPMethod == "GET":
 		return handleExportsGet(ctx, queries)
 	default:
 		return respondError(405, "Method not allowed"), nil
