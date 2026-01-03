@@ -261,24 +261,16 @@ function showAlert(message, type) {
   }, 5000);
 }
 
-function getLoginPath() {
-  const basePath = window.location.pathname;
-  if (basePath.includes('/.netlify/functions/cms')) {
-    return '/.netlify/functions/cms/login';
-  }
-  return '/login';
-}
-
 function logout() {
   localStorage.removeItem('auth_token');
-  window.location.href = getLoginPath();
+  window.location.href = '/login';
 }
 
 // Check auth on page load
 window.addEventListener('load', () => {
   const token = localStorage.getItem('auth_token');
   if (!token) {
-    window.location.href = getLoginPath();
+    window.location.href = '/login';
   }
   changePostType(); // Initialize type-specific fields
 });

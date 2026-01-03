@@ -174,15 +174,8 @@
     </div>
 
     <script>
-        // Determine API URL based on whether running in Netlify Functions or local
-        const getAPIUrl = () => {
-            const basePath = window.location.pathname;
-            if (basePath.includes('/.netlify/functions/cms')) {
-                return `${window.location.origin}/.netlify/functions/cms/api`;
-            }
-            return `${window.location.origin}/api`;
-        };
-        const API_URL = getAPIUrl();
+        // API URL - always use /api which is redirected to Netlify function
+        const API_URL = `${window.location.origin}/api`;
 
         async function handleLogin(event) {
             event.preventDefault();
@@ -218,10 +211,7 @@
                 alert.textContent = 'Login successful! Redirecting...';
                 
                 setTimeout(() => {
-                    const editorPath = window.location.pathname.includes('/.netlify/functions/cms')
-                        ? '/.netlify/functions/cms/editor'
-                        : '/editor';
-                    window.location.href = editorPath;
+                    window.location.href = '/editor';
                 }, 1000);
 
             } catch (error) {
@@ -236,10 +226,7 @@
         window.addEventListener('load', () => {
             const token = localStorage.getItem('auth_token');
             if (token) {
-                const editorPath = window.location.pathname.includes('/.netlify/functions/cms')
-                    ? '/.netlify/functions/cms/editor'
-                    : '/editor';
-                window.location.href = editorPath;
+                window.location.href = '/editor';
             }
         });
     </script>
