@@ -1,23 +1,15 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Notes"
-theme = "stack"
+theme = "blowfish"
 enableGitInfo = true
 
 [params]
   description = "A collection of technical notes and posts"
-  mainSections = ["posts"]
+  enableAnimation = false
   
 [params.author]
   name = "Meet Gor"
-  email = "me@meetgor.com"
-
-[params.homepage]
-  profile = false
-
-[params.colorScheme]
-  toggle = true
-  default = "light"
   
 [markup.goldmark.renderer]
   unsafe = true
