@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'exports/**'
+      - 'public/**'
+      - 'exports/content/**'
       - '.github/workflows/deploy-vercel.yml'
   workflow_dispatch:
 
@@ -38,7 +39,7 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: ./exports
+          working-directory: ./
           scope: ${{ secrets.VERCEL_ORG_ID }}
 
       - name: Comment on PR
