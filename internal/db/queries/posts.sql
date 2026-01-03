@@ -68,15 +68,15 @@ LIMIT sqlc.arg('limit') OFFSET sqlc.arg('offset');
 
 -- name: UpdatePost :one
 UPDATE posts SET
-  title = COALESCE(sqlc.narg('title'), title),
-  slug = COALESCE(sqlc.narg('slug'), slug),
-  content = COALESCE(sqlc.narg('content'), content),
-  excerpt = COALESCE(sqlc.narg('excerpt'), excerpt),
-  status = COALESCE(sqlc.narg('status'), status),
-  is_featured = COALESCE(sqlc.narg('is_featured'), is_featured),
-  tags = COALESCE(sqlc.narg('tags'), tags),
-  metadata = COALESCE(sqlc.narg('metadata'), metadata),
-  published_at = COALESCE(sqlc.narg('published_at'), published_at),
+  title = ?,
+  slug = ?,
+  content = ?,
+  excerpt = ?,
+  status = ?,
+  is_featured = ?,
+  tags = ?,
+  metadata = ?,
+  published_at = ?,
   updated_at = ?
 WHERE id = ?
 RETURNING *;

@@ -290,24 +290,24 @@ func (q *Queries) ListPosts(ctx context.Context, arg ListPostsParams) ([]Post, e
 
 const updatePost = `-- name: UpdatePost :one
 UPDATE posts SET
-  title = COALESCE(?3, title),
-  slug = COALESCE(?4, slug),
-  content = COALESCE(?5, content),
-  excerpt = COALESCE(?6, excerpt),
-  status = COALESCE(?7, status),
-  is_featured = COALESCE(?8, is_featured),
-  tags = COALESCE(?9, tags),
-  metadata = COALESCE(?10, metadata),
-  published_at = COALESCE(?11, published_at),
+  title = ?,
+  slug = ?,
+  content = ?,
+  excerpt = ?,
+  status = ?,
+  is_featured = ?,
+  tags = ?,
+  metadata = ?,
+  published_at = ?,
   updated_at = ?
 WHERE id = ?
 RETURNING id, type_id, title, slug, content, excerpt, status, is_featured, tags, metadata, created_at, updated_at, published_at
 `
 
 type UpdatePostParams struct {
-	Title       sql.NullString `db:"title" json:"title"`
-	Slug        sql.NullString `db:"slug" json:"slug"`
-	Content     sql.NullString `db:"content" json:"content"`
+	Title       string         `db:"title" json:"title"`
+	Slug        string         `db:"slug" json:"slug"`
+	Content     string         `db:"content" json:"content"`
 	Excerpt     sql.NullString `db:"excerpt" json:"excerpt"`
 	Status      sql.NullString `db:"status" json:"status"`
 	IsFeatured  sql.NullBool   `db:"is_featured" json:"is_featured"`

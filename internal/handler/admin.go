@@ -467,6 +467,339 @@ Post content in Markdown
 	renderHTML(w, "text/html", html)
 }
 
+// HandlePostEditor serves the post editor form for new or existing posts
+func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, postID string) {
+	ctx := context.Background()
+
+	types, err := database.GetPostTypes(ctx)
+	if err != nil {
+		renderHTML(w, "text/html", `<div class="alert alert-danger">Error loading post types</div>`)
+		return
+	}
+
+	// Convert types to JavaScript array
+	typesJSON := "["
+	for i, t := range types {
+		if i > 0 {
+			typesJSON += ","
+		}
+		typesJSON += fmt.Sprintf(`{"id":"%s","name":"%s","description":"%s"}`, t.ID, t.Name, t.Description)
+	}
+	typesJSON += "]"
+
+	// Fetch existing post if editing
+	var post *models.Post
+	if postID != "" {
+		p, err := database.GetPost(ctx, postID)
+		if err != nil {
+			renderHTML(w, "text/html", `<div class="alert alert-danger">Post not found</div>`)
+			return
+		}
+		post = p
+	}
+
+	html := `
+<div class="card">
+	<div class="card-header">
+		<div style="display: flex; justify-content: space-between; align-items: center;">
+			<h3 id="editor-title">New Post</h3>
+			<button class="btn btn-outline" hx-get="/admin/posts" hx-target="#main-content">← Back to Posts</button>
+		</div>
+	</div>
+	<div class="card-body">
+		<form id="post-form" onsubmit="handlePostSubmit(event)">
+			<div class="form-group">
+				<label for="post-type">Post Type *</label>
+				<select id="post-type" name="type_id" required onchange="updatePostType()">
+					<option value="">Select a post type...</option>
+	`
+
+	for _, t := range types {
+		selected := ""
+		if post != nil && post.TypeID == t.ID {
+			selected = "selected"
+		}
+		html += fmt.Sprintf(`<option value="%s" %s>%s</option>`, t.ID, selected, t.Name)
+	}
+
+	html += `
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="post-title">Title <span id="title-required">*</span></label>
+				<input type="text" id="post-title" name="title" placeholder="Enter post title">`
+	if post != nil {
+		html += fmt.Sprintf(`value="%s"`, post.Title)
+	}
+	html += `>
+			</div>
+
+			<div class="form-group">
+				<label for="post-slug">Slug *</label>
+				<input type="text" id="post-slug" name="slug" placeholder="post-slug" required>`
+	if post != nil {
+		html += fmt.Sprintf(`value="%s"`, post.Slug)
+	}
+	html += `>
+			</div>
+
+			<div class="form-group">
+				<label for="post-content">Content <span id="content-required">*</span></label>
+				<textarea id="post-content" name="content" placeholder="Enter post content" rows="12">`
+	if post != nil {
+		html += post.Content
+	}
+	html += `</textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="post-excerpt">Excerpt</label>
+				<textarea id="post-excerpt" name="excerpt" placeholder="Optional excerpt" rows="3">`
+	if post != nil {
+		html += post.Excerpt
+	}
+	html += `</textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="post-tags">Tags (comma-separated)</label>
+				<input type="text" id="post-tags" name="tags" placeholder="tag1, tag2, tag3">`
+	if post != nil && len(post.Tags) > 0 {
+		for i, tag := range post.Tags {
+			if i > 0 {
+				html += ", "
+			}
+			html += tag
+		}
+	}
+	html += `>
+			</div>
+
+			<div id="type-specific-fields"></div>
+
+			<div class="form-group">
+				<label for="post-status">Status *</label>
+				<select id="post-status" name="status" required>
+					<option value="draft">Draft</option>
+					<option value="published">Published</option>
+					<option value="archived">Archived</option>
+				</select>`
+	if post != nil {
+		html += fmt.Sprintf(`<script>document.getElementById('post-status').value = '%s';</script>`, post.Status)
+	}
+	html += `
+			</div>
+
+			<div style="display: flex; gap: 10px; margin-top: 24px;">
+				<button type="button" class="btn btn-primary" onclick="saveAsDraft()">💾 Save as Draft</button>
+				<button type="button" class="btn btn-success" onclick="publish()">🚀 Publish</button>
+				<button type="button" class="btn btn-outline" hx-get="/admin/posts" hx-target="#main-content">Cancel</button>
+			</div>
+		</form>
+
+		<div id="editor-message" style="margin-top: 16px; display: none;"></div>
+	</div>
+</div>
+
+<script>
+const POST_TYPES = ` + typesJSON + `;
+const POST_TEMPLATES = {
+	article: { titleRequired: true, contentRequired: true, fields: [] },
+	link: { titleRequired: false, contentRequired: false, fields: [{ name: "source_url", label: "Source URL", type: "url" }] },
+	quote: { titleRequired: false, contentRequired: true, fields: [{ name: "author", label: "Author", type: "text" }, { name: "source", label: "Source", type: "text" }] },
+	tutorial: { titleRequired: true, contentRequired: true, fields: [{ name: "difficulty", label: "Difficulty", type: "select", options: ["beginner", "intermediate", "advanced"] }, { name: "estimated_time", label: "Estimated Time", type: "text" }] },
+	list: { titleRequired: true, contentRequired: false, fields: [{ name: "list_type", label: "List Type", type: "select", options: ["ordered", "unordered"] }] },
+	thought: { titleRequired: false, contentRequired: true, fields: [] },
+	snippet: { titleRequired: true, contentRequired: true, fields: [{ name: "language", label: "Language", type: "text" }] },
+	series: { titleRequired: true, contentRequired: true, fields: [] },
+	review: { titleRequired: true, contentRequired: true, fields: [{ name: "rating", label: "Rating", type: "number" }, { name: "subject", label: "Subject", type: "text" }] },
+	announcement: { titleRequired: true, contentRequired: true, fields: [] },
+	photo: { titleRequired: false, contentRequired: false, fields: [{ name: "image_url", label: "Image URL", type: "url" }] },
+	video: { titleRequired: false, contentRequired: false, fields: [{ name: "video_url", label: "Video URL", type: "url" }] }
+};
+
+function updatePostType() {
+	const typeId = document.getElementById('post-type').value;
+	const template = POST_TEMPLATES[typeId] || {};
+	
+	// Update title requirement
+	const titleRequired = document.getElementById('title-required');
+	if (titleRequired) titleRequired.textContent = template.titleRequired ? '*' : '(optional)';
+	
+	// Update content requirement
+	const contentRequired = document.getElementById('content-required');
+	if (contentRequired) contentRequired.textContent = template.contentRequired ? '*' : '(optional)';
+	
+	// Generate type-specific fields
+	const fieldsContainer = document.getElementById('type-specific-fields');
+	fieldsContainer.innerHTML = '';
+	
+	if (template.fields && template.fields.length > 0) {
+		const fieldset = document.createElement('fieldset');
+		fieldset.style.marginTop = '20px';
+		fieldset.style.paddingTop = '20px';
+		fieldset.style.borderTop = '1px solid #ddd';
+		
+		const legend = document.createElement('legend');
+		legend.textContent = 'Type-Specific Fields';
+		legend.style.fontSize = '14px';
+		legend.style.fontWeight = '600';
+		legend.style.marginBottom = '12px';
+		fieldset.appendChild(legend);
+		
+		for (const field of template.fields) {
+			const group = document.createElement('div');
+			group.className = 'form-group';
+			
+			const label = document.createElement('label');
+			label.setAttribute('for', 'field-' + field.name);
+			label.textContent = field.label;
+			group.appendChild(label);
+			
+			let input;
+			if (field.type === 'select') {
+				input = document.createElement('select');
+				input.id = 'field-' + field.name;
+				input.name = 'meta_' + field.name;
+				for (const opt of (field.options || [])) {
+					const option = document.createElement('option');
+					option.value = opt;
+					option.textContent = opt;
+					input.appendChild(option);
+				}
+			} else if (field.type === 'textarea') {
+				input = document.createElement('textarea');
+				input.id = 'field-' + field.name;
+				input.name = 'meta_' + field.name;
+				input.rows = 3;
+			} else {
+				input = document.createElement('input');
+				input.type = field.type;
+				input.id = 'field-' + field.name;
+				input.name = 'meta_' + field.name;
+				input.placeholder = 'Enter ' + field.label.toLowerCase();
+			}
+			
+			group.appendChild(input);
+			fieldset.appendChild(group);
+		}
+		
+		fieldsContainer.appendChild(fieldset);
+	}
+}
+
+function saveAsDraft() {
+	document.getElementById('post-status').value = 'draft';
+	handlePostSubmit();
+}
+
+function publish() {
+	document.getElementById('post-status').value = 'published';
+	handlePostSubmit();
+}
+
+function showMessage(message, type) {
+	const msg = document.getElementById('editor-message');
+	msg.className = 'alert alert-' + type;
+	msg.textContent = message;
+	msg.style.display = 'block';
+	setTimeout(() => msg.style.display = 'none', 5000);
+}
+
+function handlePostSubmit(event) {
+	if (event) event.preventDefault();
+	
+	const typeId = document.getElementById('post-type').value;
+	if (!typeId) {
+		showMessage('Please select a post type', 'danger');
+		return;
+	}
+	
+	const template = POST_TEMPLATES[typeId] || {};
+	
+	const title = document.getElementById('post-title').value;
+	if (template.titleRequired && !title.trim()) {
+		showMessage('Title is required for this post type', 'danger');
+		return;
+	}
+	
+	const content = document.getElementById('post-content').value;
+	if (template.contentRequired && !content.trim()) {
+		showMessage('Content is required for this post type', 'danger');
+		return;
+	}
+	
+	const slug = document.getElementById('post-slug').value;
+	if (!slug.trim()) {
+		showMessage('Slug is required', 'danger');
+		return;
+	}
+	
+	// Build metadata from type-specific fields
+	const metadata = {};
+	const inputs = document.querySelectorAll('[name^="meta_"]');
+	for (const input of inputs) {
+		const key = input.name.substring(5);
+		if (input.value) {
+			metadata[key] = input.value;
+		}
+	}
+	
+	// Parse tags
+	const tagsStr = document.getElementById('post-tags').value;
+	const tags = tagsStr ? tagsStr.split(',').map(t => t.trim()).filter(t => t) : [];
+	
+	const postData = {
+		type_id: typeId,
+		title: title || null,
+		slug: slug,
+		content: content || null,
+		excerpt: document.getElementById('post-excerpt').value || '',
+		tags: tags,
+		metadata: Object.keys(metadata).length > 0 ? metadata : {},
+		status: document.getElementById('post-status').value
+	};
+	
+	const postId = '` + postID + `';
+	const method = postId ? 'PUT' : 'POST';
+	const url = postId ? '/api/posts/' + postId : '/api/posts';
+	
+	fetch(url, {
+		method: method,
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(postData)
+	})
+	.then(r => {
+		if (!r.ok) return r.json().then(e => { throw new Error(e.error || 'Request failed'); });
+		return r.json();
+	})
+	.then(data => {
+		showMessage((postId ? 'Updated' : 'Created') + ' post successfully!', 'success');
+		setTimeout(() => {
+			htmx.ajax('GET', '/admin/posts', {target: '#main-content'});
+		}, 1000);
+	})
+	.catch(err => {
+		showMessage('Error: ' + err.message, 'danger');
+	});
+}
+
+// Initialize on load
+window.addEventListener('load', () => {
+	`
+	if post != nil {
+		html += fmt.Sprintf(`document.getElementById('post-type').value = '%s';`, post.TypeID)
+	}
+	html += `
+	updatePostType();
+});
+</script>
+	`
+
+	renderHTML(w, "text/html", html)
+}
+
 // renderHTML is a helper to render HTML content
 func renderHTML(w http.ResponseWriter, contentType string, html string) {
 	if contentType == "500" {

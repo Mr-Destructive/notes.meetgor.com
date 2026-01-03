@@ -377,9 +377,9 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			}
 		}
 
-		// Helper function to convert *string to sql.NullString
-		stringToNull := func(s *string) sql.NullString {
-			if s == nil {
+		// Helper function to convert *string to sql.NullString for nullable fields
+		stringToNullable := func(s *string) sql.NullString {
+			if s == nil || *s == "" {
 				return sql.NullString{Valid: false}
 			}
 			return sql.NullString{String: *s, Valid: true}
@@ -393,15 +393,58 @@ func handlePosts(req events.APIGatewayProxyRequest, ctx context.Context, queries
 			return sql.NullBool{Bool: *b, Valid: true}
 		}
 
+		// Title and Slug are NOT NULL in DB, so must provide values (don't change if not provided)
+		title := updateReq.Title
+		if title == nil || *title == "" {
+			// Need to fetch current value from DB
+			currentPost, err := queries.GetPost(ctx, gen.GetPostParams{ID: id, Slug: id})
+			if err != nil {
+				return respondError(404, "Post not found"), nil
+			}
+			if title == nil {
+				title = &currentPost.Title
+			} else if *title == "" {
+				// Empty string - keep current value
+				title = &currentPost.Title
+			}
+		}
+
+		slug := updateReq.Slug
+		if slug == nil || *slug == "" {
+			currentPost, err := queries.GetPost(ctx, gen.GetPostParams{ID: id, Slug: id})
+			if err != nil {
+				return respondError(404, "Post not found"), nil
+			}
+			if slug == nil {
+				slug = &currentPost.Slug
+			} else if *slug == "" {
+				slug = &currentPost.Slug
+			}
+		}
+
+		content := updateReq.Content
+		if content == nil || *content == "" {
+			currentPost, err := queries.GetPost(ctx, gen.GetPostParams{ID: id, Slug: id})
+			if err != nil {
+				return respondError(404, "Post not found"), nil
+			}
+			if content == nil {
+				content = &currentPost.Content
+			} else if *content == "" {
+				content = &currentPost.Content
+			}
+		}
+
 		post, err := queries.UpdatePost(ctx, gen.UpdatePostParams{
 			ID:         id,
-			Title:      stringToNull(updateReq.Title),
-			Slug:       stringToNull(updateReq.Slug),
-			Content:    stringToNull(updateReq.Content),
-			Excerpt:    stringToNull(updateReq.Excerpt),
-			Status:     stringToNull(updateReq.Status),
+			Title:      *title,
+			Slug:       *slug,
+			Content:    *content,
+			Excerpt:    stringToNullable(updateReq.Excerpt),
+			Status:     stringToNullable(updateReq.Status),
 			Tags:       tagsJSON,
 			Metadata:   metaJSON,
+			PublishedAt: sql.NullTime{Valid: false}, // Don't change on update
 			IsFeatured: boolToNull(updateReq.IsFeatured),
 			UpdatedAt:  sql.NullTime{Time: time.Now(), Valid: true},
 		})
