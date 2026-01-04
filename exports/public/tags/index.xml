@@ -7,7 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 Meet Gor</copyright>
-    <lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jan 2026 15:49:51 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ai</title>
+      <link>/tags/ai/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>/tags/api/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/api/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Banking</title>
+      <link>/tags/banking/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/banking/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>/tags/test/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/test/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Updated</title>
+      <link>/tags/updated/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/updated/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Developer-Life</title>
@@ -315,16 +365,6 @@
       <pubDate>Mon, 11 Jul 2022 22:30:00 +0000</pubDate>
       
       <guid>/tags/lua/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Api</title>
-      <link>/tags/api/</link>
-      <pubDate>Sat, 25 Jun 2022 16:44:59 +0000</pubDate>
-      
-      <guid>/tags/api/</guid>
       <description></description>
       
     </item>

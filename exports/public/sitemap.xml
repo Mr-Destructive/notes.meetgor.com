@@ -3,80 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>/posts/2025-review/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <loc>/posts/tally-transaction-ai-tool/</loc>
+    <lastmod>2026-01-04T10:05:36+00:00</lastmod>
   </url>
   <url>
     <loc>/posts/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
+  </url>
+  <url>
+    <loc>/posts/test-article-1767442805/</loc>
+    <lastmod>2026-01-04T10:05:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>/posts/2025-review/</loc>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-15/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-14/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-13/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-12/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-74/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-11/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-10/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-9/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-8/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-7/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-6/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-5/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-73/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-4/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-3/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-2/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/advent-of-sql-2025-day-1/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-12-13-tom-riddle-diary-as-llms/</loc>
@@ -84,7 +92,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-72/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-create-strict-table/</loc>
@@ -92,7 +100,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-64/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-10-17-test-after-resolving-merge-conflicts/</loc>
@@ -100,11 +108,11 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-63/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-62/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-create-table-from-select/</loc>
@@ -112,7 +120,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-61/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-create-table-if-not-exists/</loc>
@@ -132,7 +140,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-60/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-one-to-one-relations/</loc>
@@ -164,7 +172,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-59/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-check-column-constraint/</loc>
@@ -196,7 +204,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-58/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-create-table-bare-bones-table/</loc>
@@ -228,7 +236,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-57/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/sqlite-read-dot-command-is-recursive/</loc>
@@ -260,7 +268,7 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-56/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/generate-series-examples/</loc>
@@ -280,83 +288,83 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-55/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-54/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/openai-open-weight-oss-model/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-53/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-07-30-tmux-scroll-mode-select-and-copy/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/just-fucking-use-kubernetes/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/kubernetes-isn-t-for-you/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-52/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-51/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-50/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-49/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-48/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-47/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-46/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-45/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/getting-python-version-in-a-uv-project/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-44/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/a-draft-post/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-43/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/i-kind-of-hate-agentic-ides-for-the-sake-of-productivity/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/appwrite-launches-sites-hosting/</loc>
@@ -364,51 +372,51 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-42/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-41/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-40/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-39/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-38/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-36/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/add-hunks-only-line-specific-changes-with-git-add-p/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/format-json-in-vim-with-jq/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-36/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-35/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/robots-generate-humans-manifest/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-03-15-techstructive-weekly-33/</loc>
@@ -416,31 +424,31 @@
   </url>
   <url>
     <loc>/posts/techstructive-weekly-34/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/zellij-open-scrollback-edit-mode/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/zellij-scrollback-edit-mode/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/https-evolveasdev-com-blogs-guide-learn-go-templates-a-practical-guide-to-layouts-data-binding-and-rendering/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/dear-student-yes-ai-is-here-you-re-screwed-unless-you-take-action/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/python-is-tactile/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-03-01-techstructive-weekly-32/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-03-01-techstructive-weekly-31/</loc>
@@ -452,11 +460,11 @@
   </url>
   <url>
     <loc>/posts/2025-02-15-techstructive-weekly-29/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-02-08-techstructive-weekly-28/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-02-01-techstructive-weekly-27/</loc>
@@ -468,35 +476,35 @@
   </url>
   <url>
     <loc>/posts/2025-01-18-techstructive-weekly-25/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-web-delete-method/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-web-patch-method/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-01-11-techstructive-weekly-24/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-01-04-techstructive-weekly-23/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2025-01-02-golang-weak-package/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2024-review/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2024-12-28-techstructive-weekly-22/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2024-12-21-techstructive-weekly-21/</loc>
@@ -512,15 +520,15 @@
   </url>
   <url>
     <loc>/posts/aoc-2024-day-5/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/aoc-2024-day-4/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/aoc-2024-day-3/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-19/</loc>
@@ -528,15 +536,15 @@
   </url>
   <url>
     <loc>/posts/aoc-2024-day-2/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/aoc-2024-day-1/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/first_til/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-18/</loc>
@@ -568,7 +576,7 @@
   </url>
   <url>
     <loc>/posts/turso-libsql-embedded-replicas-golang/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-13/</loc>
@@ -588,7 +596,7 @@
   </url>
   <url>
     <loc>/posts/turso-libsql-db-golang/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-9/</loc>
@@ -608,7 +616,7 @@
   </url>
   <url>
     <loc>/posts/golang-safely-using-maps/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-weekly-5/</loc>
@@ -636,11 +644,11 @@
   </url>
   <url>
     <loc>/posts/nginx-02-web-servers/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-web-put-method/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/git-ssh-multiple-accounts/</loc>
@@ -656,7 +664,7 @@
   </url>
   <url>
     <loc>/posts/golang-web-post-method/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-sort-package-basic/</loc>
@@ -664,11 +672,11 @@
   </url>
   <url>
     <loc>/posts/nginx-01-basics/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/neovim-sourcegraph-cody/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-test-output-json/</loc>
@@ -676,11 +684,11 @@
   </url>
   <url>
     <loc>/posts/2023-review/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/libsql-python/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/libsql-query-remote-db/</loc>
@@ -688,15 +696,15 @@
   </url>
   <url>
     <loc>/posts/golang-web-get-method/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-web-url-parsing/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-channels/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/mindsdb-grafbase/</loc>
@@ -704,11 +712,11 @@
   </url>
   <url>
     <loc>/posts/golang-go-routines/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-generics/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/utility-studio/</loc>
@@ -720,7 +728,7 @@
   </url>
   <url>
     <loc>/posts/golang-date-time/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/solar-labs/</loc>
@@ -732,7 +740,7 @@
   </url>
   <url>
     <loc>/posts/golang-random-numbers/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/mindsdb-go-sdk/</loc>
@@ -740,23 +748,23 @@
   </url>
   <url>
     <loc>/posts/golang-regex/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-htmx-chat-app/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-command-line-args/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/2022-review/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-file-write/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-read-rss-feed/</loc>
@@ -768,7 +776,7 @@
   </url>
   <url>
     <loc>/posts/golang-config-file-read/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-bulk-update-queryset/</loc>
@@ -776,15 +784,15 @@
   </url>
   <url>
     <loc>/posts/golang-file-read/</loc>
-    <lastmod>2026-01-04T15:32:35+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-paths/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-error-handling/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/python-pipreqs/</loc>
@@ -792,15 +800,15 @@
   </url>
   <url>
     <loc>/posts/golang-interfaces/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-closures/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/pgcli-pg-from-terminal/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-mermaid/</loc>
@@ -816,15 +824,15 @@
   </url>
   <url>
     <loc>/posts/django-htmx-crud/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-anonymous-functions/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-deploy-railway-nixpacks/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vimscript-to-lua-keymapper/</loc>
@@ -832,15 +840,15 @@
   </url>
   <url>
     <loc>/posts/neovim-vimscript-to-lua/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-defer/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-strings/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/djnotes/</loc>
@@ -852,7 +860,7 @@
   </url>
   <url>
     <loc>/posts/golang-mutable-immutable/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/lingo/</loc>
@@ -864,67 +872,67 @@
   </url>
   <url>
     <loc>/posts/django-deploy-railway/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-deploy-heroku/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-operators/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-math/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-packages/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-pointers/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-structs/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-functions/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-maps/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-slices/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-arrays/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-input/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-conditionals-loops/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-variables/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/hello-golang/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/golang-intro/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-python-black-autoformat/</loc>
@@ -932,31 +940,31 @@
   </url>
   <url>
     <loc>/posts/python-search-replace-file/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/python-feedparser/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/pipx-intro/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/pipenv-intro/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-get-visual-text/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/dockerize-django-prj/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/docker-port-forward/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/crossposter/</loc>
@@ -968,11 +976,11 @@
   </url>
   <url>
     <loc>/posts/podevcast-project/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-crud-api/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/backchat/</loc>
@@ -980,83 +988,83 @@
   </url>
   <url>
     <loc>/posts/django-basics-admin/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-database-conf/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-models/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-static-files/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-templates/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-views-urls/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-folder-struct/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-setup/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/django-basics-intro/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/curl-basics/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/crossposter-shellscript/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/hacktoberfest-2021/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/flask-django-frameworks/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-un-comment-p1/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/ml-intro/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/djagno-auth0-script/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/oop-cpp-p3/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/techstructive-blog-init/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/oop-cpp-p2/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/oop-cpp-p1/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/geeks-for-geeks/</loc>
@@ -1064,27 +1072,27 @@
   </url>
   <url>
     <loc>/posts/technical-writer-journey/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-for-cp/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/find-filter-github-issues/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/why-use-vim/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-nerdtree/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/devquotes-platform/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/dev-quotes/</loc>
@@ -1092,23 +1100,23 @@
   </url>
   <url>
     <loc>/posts/django-setup-script/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-buffers/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-window-splits/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-tabs/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-dictionary-scrapper/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/world-atlas/</loc>
@@ -1116,59 +1124,59 @@
   </url>
   <url>
     <loc>/posts/vim-registers/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-editing-speed/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-crypto-scrapper/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-guide-p3/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-game-numberjack/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-guide-p2/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-plus-teminal/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-movement-speed/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-guide-p1/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/bash-intro/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-keymaps/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-for-bash/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-for-python/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/posts/vim-text-editor-ide/</loc>
-    <lastmod>2026-01-03T21:39:39+05:30</lastmod>
+    <lastmod>2026-01-04T15:49:51+05:30</lastmod>
   </url>
   <url>
     <loc>/</loc>
