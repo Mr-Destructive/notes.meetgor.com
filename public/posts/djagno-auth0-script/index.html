@@ -1,0 +1,1311 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Django &#43; Auth0 Quick Setup &middot; Notes</title>
+    <meta name="title" content="Django &#43; Auth0 Quick Setup &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="django,bash,python,">
+  
+  
+  
+  <link rel="canonical" href="/posts/djagno-auth0-script/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/djagno-auth0-script/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Django &#43; Auth0 Quick Setup">
+  <meta property="og:description" content="Introduction # This is a guide and a walkthrough of how to quickly set up a base Django project with Auth0 as integration for authentication and authorization. I will walk you through the Django setup and how to use and integrate the functionalities of the Auth0. I will also discuss how why you should be using Auth0 and why I love it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-09-28T20:08:47+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Django &#43; Auth0 Quick Setup">
+  <meta name="twitter:description" content="Introduction # This is a guide and a walkthrough of how to quickly set up a base Django project with Auth0 as integration for authentication and authorization. I will walk you through the Django setup and how to use and integrate the functionalities of the Auth0. I will also discuss how why you should be using Auth0 and why I love it.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Django \u002b Auth0 Quick Setup",
+    "headline": "Django \u002b Auth0 Quick Setup",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/djagno-auth0-script/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-09-28T20:08:47\u002b05:30",
+    "datePublished": "2021-09-28T20:08:47\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    "keywords": ["django","bash","python"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2301"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Django + Auth0 Quick Setup
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-09-28T20:08:47&#43;05:30">September 28, 2021</time><span class="px-2 text-primary-500">&middot;</span><span>2301 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This is a guide and a walkthrough of how to quickly set up a base Django project with Auth0 as integration for authentication and authorization. I will walk you through the Django setup and how to use and integrate the functionalities of the Auth0.  I will also discuss how why you should be using Auth0 and why I love it.</p>
+<p>The script takes <code>2:44</code> minutes time to do everything from scratch. From installing virtualenv in python to integrating the Auth0 application.</p>
+<p>Here&rsquo;s how the script works:</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="authodj.gif"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1632830813802/MOvedPYdt.gif"
+    ></figure>
+</p>
+
+<h3 class="relative group">Contents
+    <div id="contents" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#contents" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><a href="/posts/djagno-auth0-script/#what-is-auth0" >What is Auth0</a></li>
+<li><a href="/posts/djagno-auth0-script/#why-i-love-auth0" >Why I love Auth0</a></li>
+<li><a href="/posts/djagno-auth0-script/#set-up-a-django-project" >Set up a Django Project</a></li>
+<li><a href="/posts/djagno-auth0-script/#integrate-auth0-to-a-django-project" >Integrate Auth0 to a Django project</a></li>
+<li><a href="/posts/djagno-auth0-script/#creating-a-bash-script-for-integrating-auth0" >Creating a BASH Script for integrating Auth0</a>
+<ul>
+<li><a href="/posts/djagno-auth0-script/#appending-to-a-file" >Appending to a file</a></li>
+<li><a href="/posts/djagno-auth0-script/#adding-text-before-a-particular-line-using-sed" >Adding text before a particular line using <code>sed</code> </a></li>
+<li><a href="/posts/djagno-auth0-script/#appending-to-a-line-using-sed" >Appending to a line using <code>sed</code></a></li>
+</ul>
+</li>
+<li><a href="/posts/djagno-auth0-script/#complete-bash-script" >Complete BASH Script</a></li>
+<li><a href="/posts/djagno-auth0-script/#conclusion" >Conclusion</a></li>
+</ul>
+
+<h2 class="relative group">What is Auth0
+    <div id="what-is-auth0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-is-auth0" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Auth0 (<code>Auth zero</code>) is a platform that provides easy authentication and authorization for a number of platforms in various programming languages and frameworks. The easy-to-follow documentation, availability for almost all web frameworks across platforms make it a big bonus for developers. They actually make the Developer experience flawless and beginner-friendly.</p>
+<p>According to Auth0,</p>
+<blockquote><p>They make your login box awesome</p>
+</blockquote><p>And how true is that they make things pretty convenient and wicked fast to integrate a smooth functional backend for authentication and authorization. Of course, there are more things they offer than just making authentication systems but it is by far what the world knows them for.</p>
+
+<h2 class="relative group">Why I love Auth0
+    <div id="why-i-love-auth0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-i-love-auth0" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Auth0 is a generous company that provides a free tier for a limited capacity of authentication and that might be more than enough for a developer getting its feet wet in the web development (backend).</p>
+<p>They even provide a nice user interface out of the box for login/signup and even a dashboard ready-made, which is quite a lot of heavy lifting already done for you. Also, there is a dashboard for analyzing the number of sign-in/logins into the particular app. This provides the admin/developer of the app to get a closer look at the user registered in a day/week/months, number of active users, and so on.</p>
+<p>So, who would not love it? I am willing to write and use their service for some of my projects. I already have used one for the Hashnode x Auth0 Hackathon, I made <a href="https://github.com/Mr-Destructive/devquotes"  target="_blank">devquotes</a> using the authentication of Auth0 in my Django application.</p>
+
+<h2 class="relative group">Set up a Django Project
+    <div id="set-up-a-django-project" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-up-a-django-project" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>If you are reading this you already know how to set up a Django project, I assume. But nevertheless, I can just include a quick introduction on how to do it. I have a script to do this.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mkdir $1
+</span></span><span style="display:flex;"><span>cd $1
+</span></span><span style="display:flex;"><span>pip install virtualenv
+</span></span><span style="display:flex;"><span>virtualenv env
+</span></span><span style="display:flex;"><span>source envinctivate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pip install django
+</span></span><span style="display:flex;"><span>django-admin startproject $1 .
+</span></span><span style="display:flex;"><span>clear</span></span></code></pre></div></div>
+<p>You can check out  <a href="https://techstructiveblog.hashnode.dev/django-quick-setup-script"  target="_blank">Django Quick Setup Script</a>  for the details of this script and also a more in-depth guide of Django project setup.</p>
+<p>But if you want to understand the basics of the Django project setup here is a little guide about it:</p>
+<p>Firstly, create a virtual environment, it&rsquo;s not mandatory but it keeps things simple and easy for your project in correspondence to the entire OS. So in python, we have a module to create the virtual environment pretty easily,</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install virtualenv</span></span></code></pre></div></div>
+<p>You can use <code>pip3</code> or <code>pip -m</code>, or however you install normal python modules. This just installs the python virtual environment, we need to create one in the current folder, so for that navigate to the folder where you want to create the project and enter the following command:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>virtualenv venv</span></span></code></pre></div></div>
+<p>Here, <code>venv</code> can be anything like <code>env</code> just for your understanding and simplicity it&rsquo;s a standard name kept for the same. After this, you will see a folder of the same name i.e. <code>venv</code> or any other name you have used. This is the folder where python will keep every installation private to the local folder itself. Now, we need to activate the virtual environment, for that we can use the command :</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># for Linux/macOS :</span>
+</span></span><span style="display:flex;"><span>source venv/bin/activate</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-batch" data-lang="batch"><span style="display:flex;"><span># for Windows:
+</span></span><span style="display:flex;"><span>venv\Scriptsctivate</span></span></code></pre></div></div>
+<p>After this, your command prompt will have a <code>(venv)</code> attached to its start. This indicates you are in a virtual environment, things you do here, may it be module installation or any configuration related to python will stay in the local folder itself.</p>
+<p>After the virtual environment is set up and activated, you can install Django and get started with it. Firstly, install Django using pip:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install django</span></span></code></pre></div></div>
+<p>After the installation is completed, you can start a Django project in the current folder using the command:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>django-admin startproject name</span></span></code></pre></div></div>
+<p>Here name can be your project name. After this, you will see one new folder and one file pop up.<br>
+Namely, the <code>project named</code> folder and <code>manage.py</code> file. So you don&rsquo;t have to touch the <code>manage.py</code> file but we use it in most of the commands to use the Django functionalities.</p>
+<p>You can now run your basic server using the command :</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python manage.py runserver</span></span></code></pre></div></div>
+<p>There is a base installed/setup of the Django project. Moving on in integrating the Auth0 login functionality in our webpage.</p>
+
+<h2 class="relative group">Integrate the Auth0 app in your project
+    <div id="integrate-the-auth0-app-in-your-project" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#integrate-the-auth0-app-in-your-project" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>So, for integrating the Auth0 app for your web application, you need to have an Auth0 account, you can signup here. After this you can create an Auth0 application for any type of application, we have a couple of options:</p>
+<ul>
+<li>Native Application</li>
+<li>Single Page Application</li>
+<li>Regular Web Application</li>
+<li>Machine to Machine Application</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1632748408741/sUeS8AgrX.png"
+    ></figure>
+</p>
+<p>You can choose as per your needs, but mostly it would be a Regular Web application if you have a backend like Django, Nodejs, PHP, or other types of frameworks and languages. So, moving ahead we have created an application for the Django framework as a backend. Now, we have a <code>Settings</code> tab in the application dashboard, where we have different credentials for the Auth0 app to talk to our application.</p>
+<p>The credentials needed to be stored safely are:</p>
+<ul>
+<li>domain</li>
+<li>Client ID (Key)</li>
+<li>Client Secret</li>
+</ul>
+<p>This has to be secured for our local application which will go into production when ready. You can use several options like dotenv, environment variables, and so on when the application is being deployed but for now, let&rsquo;s hardcode them in our Django project.</p>
+<p>Now, you can follow the simple straightforward procedure to copy-paste your credentials from the  <a href="https://auth0.com/docs/quickstart/webapp/django/01-login#logout"  target="_blank">Auth0 official documentation</a>. It&rsquo;s quite straightforward to follow the steps even for a beginner.</p>
+<p>After the Auth0 app has been configured following the procedure in the documentation, you need to integrate several files like dashboard and index templates into your custom templates.</p>
+<p>Following additional changes are also to be made if you have a user-defined app for your Django project.</p>
+<p>In the <code>auth0login</code> app, <code>view.py</code> file:</p>
+<ol>
+<li>The <code>index</code> function renders the base file for your project if the user is logged in.</li>
+<li>The <code>dashboard</code> function renders the baked version of your profile/dashboard of users on your app.</li>
+</ol>
+<p>You would also need to add the root URIs of your app that you will be using for testing or in production. For example, we can add <code>http://127.0.0.1:8000</code> to allow and use Auth0 in our development environment locally.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1632828981455/2gc4h7tTh.png"
+    ></figure>
+</p>
+<p>You also need to specify the callback URLs for your application which is <code>/complete/auth0</code> by default.</p>
+
+<h2 class="relative group">Creating a BASH Script for integrating Auth0
+    <div id="creating-a-bash-script-for-integrating-auth0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-a-bash-script-for-integrating-auth0" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>So, we can now dive into creating the BASH Script to set up the Django x Auth0 application in minutes. The script is quite large, like 200 lines but don&rsquo;t worry! Its automation reduces the pain of integrating a User Authorization flawlessly. I am also thinking of adding the <code>cURL</code> command and parsing in the Client ids, keys, and secret keys, etc.</p>
+
+<h3 class="relative group">Appending to a file
+    <div id="appending-to-a-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#appending-to-a-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can use the <code>cat</code> command to append text to a file, using the syntax as below:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; filename
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">text
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">more text
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span></span></span></code></pre></div></div>
+<p>Remember here EOF is just a label to stop the command and save it to the file.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1632826339707/_g_RXP3NE.png"
+    ></figure>
+</p>
+<p>So, we can see that we were able to append to a file, multiple lines using the cat command.</p>
+<p>We have used this concept in adding configuration and credentials to the <code>settings.py</code> or the <code>urls.py</code> files.</p>
+
+<h3 class="relative group">Adding text before a particular line using <code>sed</code>
+    <div id="adding-text-before-a-particular-line-using-sed" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#adding-text-before-a-particular-line-using-sed" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><code>sed</code> is a great command, and there is nothing you can&rsquo;t do with it, OK there might be exceptions. We can get write to a file directly (don&rsquo;t display the output) and specify the line number before which we want to append the text. We can then add the text we want and followed by the filename.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;33 i sometext here&#39;</span> filename</span></span></code></pre></div></div>
+<p>Here, <code>33</code> is the line number in the file which we want to insert before. We have used <code>'&quot;'</code> to add a <code>'</code> inside a <code>'</code>, this might feel a bit wired but that is how it is in BASH.</p>
+<p>Let&rsquo;s say you want to add <code>print('Hello, World!')</code> to a particular line, we have to enclose <code>'</code> with these <code>&quot;'</code>( double and single quotes),</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;2i print(&#39;</span><span style="color:#e6db74">&#34;&#39;Hello, World&#39;&#34;</span><span style="color:#e6db74">&#39;)&#39;</span> hello.py</span></span></code></pre></div></div>
+<p>This will add the line <code>print('Hello World')</code> to the file <code>hello.py</code></p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1632824742835/Uj8AF07UG.png"
+    ></figure>
+</p>
+
+<h3 class="relative group">Appending to a line using sed
+    <div id="appending-to-a-line-using-sed" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#appending-to-a-line-using-sed" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can even append text to a particular line using sed, we can use some escape characters and regex to add the text from the end of the line.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;2i s/$/ textgoes here /&#39;</span> filename</span></span></code></pre></div></div>
+<p>Here 2 is any number of line you want to add text to, next <code>i</code> a prompt for inserting text and then we have regex like <code>s/$/ /</code>, this will put the text enclosed in <code>/ /</code> to the end of the line as indicated by <code>$</code>.  We have the filename at its usual place as before.</p>
+<p>So, lets say, I want to add a comment to the second line in the previous example, I can use the following command to do it:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;2 s/$/ # another comment/&#39;</span> hello.py</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1632825067925/0eU2mkCDI.png"
+    ></figure>
+</p>
+<p>We have used these commands to add the <code>include</code> function in the <code>urls.py</code> in the project folder.</p>
+<p>So those were all the operations we used for doing some automated editing for the Auth0 app integration to our Django project.</p>
+<p>Below is the entire script and is also uploaded on <a href="https://github.com/Mr-Destructive/django-auth0-quick-setup"  target="_blank">GitHub</a>.</p>
+
+<h2 class="relative group">Complete BASH Script
+    <div id="complete-bash-script" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#complete-bash-script" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>You can run the file by parsing the name of your project.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bash script.sh mywebsite</span></span></code></pre></div></div>
+<p>Wait for some 2-3 minutes, and the script will produce the Django application with the Auth0 app integrated. You will have to enter the credentials manually wherever applicable.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mkdir $1
+</span></span><span style="display:flex;"><span>cd $1
+</span></span><span style="display:flex;"><span>pip install virtualenv
+</span></span><span style="display:flex;"><span>virtualenv venv
+</span></span><span style="display:flex;"><span>source venv/Scripts/activate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pip install django
+</span></span><span style="display:flex;"><span>django-admin startproject $1 .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; requirements.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">social-auth-app-django~=3.1 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">python-jose~=3.0 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">python-dotenv~=0.9
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pip freeze &gt; requirements.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>python manage.py startapp auth0login
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>touch auth0login/urls.py
+</span></span><span style="display:flex;"><span>mkdir auth0login/templates
+</span></span><span style="display:flex;"><span>touch auth0login/templates/index.html
+</span></span><span style="display:flex;"><span>touch auth0login/templates/dashboard.html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;40 i \    &#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;social_django&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;,&#39;</span> $1/settings.py
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;41 i \    &#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;auth0login&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;,&#39;</span> $1/settings.py
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;21 i \    path(&#39;</span><span style="color:#e6db74">&#34;&#39;&#39;&#34;</span><span style="color:#e6db74">&#39;, include(&#39;</span><span style="color:#e6db74">&#34;&#39;auth0login.urls&#39;&#34;</span><span style="color:#e6db74">&#39;)),&#39;</span> $1/urls.py
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;17 s/$/, include/&#39;</span> $1/urls.py 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; $1/settings.py
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SOCIAL_AUTH_TRAILING_SLASH = False  # Remove trailing slash from routes
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SOCIAL_AUTH_AUTH0_DOMAIN = &#39;YOUR_DOMAIN&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SOCIAL_AUTH_AUTH0_KEY = &#39;YOUR_CLIENT_ID&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SOCIAL_AUTH_AUTH0_SECRET = &#39;YOUR_CLIENT_SECRET&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; $1/settings.py 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SOCIAL_AUTH_AUTH0_SCOPE = [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#39;openid&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#39;profile&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#39;email&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>python manage.py migrate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt;auth0login/auth0backend.py
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from urllib import request
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from jose import jwt
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from social_core.backends.oauth import BaseOAuth2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">class Auth0(BaseOAuth2):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;Auth0 OAuth authentication backend&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    name = &#39;auth0&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    SCOPE_SEPARATOR = &#39; &#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ACCESS_TOKEN_METHOD = &#39;POST&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    REDIRECT_STATE = False
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    EXTRA_DATA = [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        (&#39;picture&#39;, &#39;picture&#39;),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        (&#39;email&#39;, &#39;email&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    def authorization_url(self):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return &#39;https://&#39; + self.setting(&#39;DOMAIN&#39;) + &#39;/authorize&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    def access_token_url(self):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return &#39;https://&#39; + self.setting(&#39;DOMAIN&#39;) + &#39;/oauth/token&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    def get_user_id(self, details, response):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;Return current user id.&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return details[&#39;user_id&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    def get_user_details(self, response):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        # Obtain JWT and the keys to validate the signature
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        id_token = response.get(&#39;id_token&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        jwks = request.urlopen(&#39;https://&#39; + self.setting(&#39;DOMAIN&#39;) + &#39;/.well-known/jwks.json&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        issuer = &#39;https://&#39; + self.setting(&#39;DOMAIN&#39;) + &#39;/&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        audience = self.setting(&#39;KEY&#39;)  # CLIENT_ID
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        payload = jwt.decode(id_token, jwks.read(), algorithms=[&#39;RS256&#39;], audience=audience, issuer=issuer)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return {&#39;username&#39;: payload[&#39;nickname&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#39;first_name&#39;: payload[&#39;name&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#39;picture&#39;: payload[&#39;picture&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#39;user_id&#39;: payload[&#39;sub&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#39;email&#39;: payload[&#39;email&#39;]}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; $1/settings.py
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">AUTHENTICATION_BACKENDS = {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #&#39;YOUR_DJANGO_APP_NAME.auth0backend.Auth0&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#39;django.contrib.auth.backends.ModelBackend&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; $1/settings.py
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">LOGIN_URL = &#39;/login/auth0&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">LOGIN_REDIRECT_URL = &#39;/dashboard&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat &gt; auth0login/views.py<span style="color:#e6db74">&lt;&lt;EOF
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from django.shortcuts import render, redirect
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from django.contrib.auth.decorators import login_required
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from django.contrib.auth import logout as log_out
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from django.conf import settings
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from django.http import HttpResponseRedirect
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from urllib.parse import urlencode
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">import json
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">def index(request):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    user = request.user
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    if user.is_authenticated:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return redirect(dashboard)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    else:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return render(request, &#39;index.html&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">@login_required
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">def dashboard(request):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    user = request.user
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    auth0user = user.social_auth.get(provider=&#39;auth0&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    userdata = {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;user_id&#39;: auth0user.uid,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;name&#39;: user.first_name,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;picture&#39;: auth0user.extra_data[&#39;picture&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;email&#39;: auth0user.extra_data[&#39;email&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    return render(request, &#39;dashboard.html&#39;, {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;auth0User&#39;: auth0user,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;userdata&#39;: json.dumps(userdata, indent=4)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    })
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">def logout(request):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    log_out(request)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    return_to = urlencode({&#39;returnTo&#39;: request.build_absolute_uri(&#39;/&#39;)})
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    logout_url = &#39;https://%s/v2/logout?client_id=%s&amp;%s&#39; % \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                 (settings.SOCIAL_AUTH_AUTH0_DOMAIN, settings.SOCIAL_AUTH_AUTH0_KEY, return_to)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    return HttpResponseRedirect(logout_url)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; auth0login/templates/index.html
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;div class=&#34;login-box auth0-box before&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;img src=&#34;https://i.cloudup.com/StzWWrY34s.png&#34; /&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h3&gt;Auth0 Example&lt;/h3&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;Zero friction identity infrastructure, built for developers&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;a class=&#34;btn btn-primary btn-lg btn-login btn-block&#34; href=&#34;/login/auth0&#34;&gt;Log In&lt;/a&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; auth0login/templates/dashboard.html
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;div class=&#34;logged-in-box auth0-box logged-in&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h1 id=&#34;logo&#34;&gt;&lt;img src=&#34;//cdn.auth0.com/samples/auth0_logo_final_blue_RGB.png&#34; /&gt;&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;img class=&#34;avatar&#34; src=&#34;{{ auth0User.extra_data.picture }}&#34;/&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h2&gt;Welcome {{ user.username }}&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;pre&gt;{{ userdata }}&lt;/pre&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt;&gt; auth0login/urls.py
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from django.urls import path, include
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from . import views
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">urlpatterns = [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    path(&#39;&#39;, views.index),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    path(&#39;dashboard&#39;, views.dashboard),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    path(&#39;logout&#39;, views.logout),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    path(&#39;&#39;, include(&#39;django.contrib.auth.urls&#39;)),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    path(&#39;&#39;, include(&#39;social_django.urls&#39;)),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>python manage.py makemigrations
+</span></span><span style="display:flex;"><span>python manage.py migrate</span></span></code></pre></div></div>
+
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Ok, so this was it, a quite big script but that&rsquo;s how automation can be. We were able to set up a Django base application with a ready app of Auth0 to extend the functionality. This was just a basic script also you can extend the functionalities like adding a curl command to fetch the credentials and make it more automated but that was not the aim of this article.</p>
+<p>If you had any issues using the script please let me know, I&rsquo;ll be happy to fix those. Thanks for reading. Happy Coding :)</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2021-09-28-Django-Auth0-Quick-Setup.md"
+          data-oid-likes="likes_posts/2021-09-28-Django-Auth0-Quick-Setup.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/oop-cpp-p3/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Object-Oriented Programming in C++: Constructors
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-09-23T19:33:52&#43;05:30">September 23, 2021</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/ml-intro/">
+              <span class="leading-6">
+                What is Machine Learning?&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-09-29T15:30:07&#43;05:30">September 29, 2021</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

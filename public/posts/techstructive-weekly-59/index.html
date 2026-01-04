@@ -1,0 +1,1133 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Techstructive Weekly #59 &middot; Notes</title>
+    <meta name="title" content="Techstructive Weekly #59 &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+  
+  
+  <link rel="canonical" href="/posts/techstructive-weekly-59/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/techstructive-weekly-59/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Techstructive Weekly #59">
+  <meta property="og:description" content="Week #59 # Another productive week, a lot shipped, almost all critical bugs fixed, the launch looks great. Wrote daily for another week about SQLite/SQL. Adding up 24 posts. Read it here. Generating a lot of ideas, getting back to journaling, reading instead of consuming videos and doomscrolling. It is getting better day by day. I have completed my yearly goal of reading 12 books. Still 3 more months to go, would be almost at 15-18 books.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Techstructive Weekly #59">
+  <meta name="twitter:description" content="Week #59 # Another productive week, a lot shipped, almost all critical bugs fixed, the launch looks great. Wrote daily for another week about SQLite/SQL. Adding up 24 posts. Read it here. Generating a lot of ideas, getting back to journaling, reading instead of consuming videos and doomscrolling. It is getting better day by day. I have completed my yearly goal of reading 12 books. Still 3 more months to go, would be almost at 15-18 books.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Techstructive Weekly #59",
+    "headline": "Techstructive Weekly #59",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/techstructive-weekly-59/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-09-13T00:00:00\u002b00:00",
+    "datePublished": "2025-09-13T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3165"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Techstructive Weekly #59
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-09-13T00:00:00&#43;00:00">September 13, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3165 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">15 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Week #59
+    <div id="week-59" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#week-59" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Another productive week, a lot shipped, almost all critical bugs fixed, the launch looks great. Wrote daily for another week about SQLite/SQL. Adding up 24 posts. Read it <a href="https://www.meetgor.com/sqlog/"  target="_blank">here</a>. Generating a lot of ideas, getting back to journaling, reading instead of consuming videos and doomscrolling. It is getting better day by day. I have completed my yearly goal of reading 12 books. Still 3 more months to go, would be almost at 15-18 books.</p>
+<p>I am healing. Another week, of not writing much production code, but helping a lot of code go to production by pointing out bugs, testing, debugging and importantly defining the problem and its possible solution. Coding is not the only thing about being a software developer, there are all of those elements to that make one better at the craft.</p>
+<p>Looking forward for a month full of SQLog, might live stream this weekend after again 2 weeks of procrastinating about it. Have a bit of ideas, and the inspiration that the coding from scratch is not dead yet, learning is still alive, people might feel value in what I do.</p>
+
+<h3 class="relative group">Quote of the week
+    <div id="quote-of-the-week" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quote-of-the-week" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<blockquote><p>&ldquo;The quieter you become, the more you are able to hear.&rdquo;</p>
+<p>&ndash; Rumi</p>
+</blockquote><p>Ah! This is what I have been doing, just hearing what nature has to say. I am reading and journaling instead of consuming endlessly. This puts me in a thinking and attentive zone, rather than the consumption cycle that drains energy and causes anxiety. Being quite here doesn’t mean not doing, it just means to step down your brain power and think about the things happening, without getting distracted, lets embrace boredom.</p>
+
+<h2 class="relative group">Created
+    <div id="created" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#created" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>SQLOG Entries for 7th September to 12th September
+<ul>
+<li>Continuing with some week of Learning SQL probably 8, but 24 days of consistently writing a blog post. Feels refreshing and accomplished. It really feels good to look at the number cracking up and the blog filling up, the sudden increase in likes, followers and sprinkles of curiosity to learn more.</li>
+<li>Writing about the things we learn is underrated.<br>
+1. <a href="https://www.meetgor.com/sqlog/sqlite-create-table-column-types/"  target="_blank">SQLite: Create Tables with columns</a><br>
+2. <a href="https://www.meetgor.com/sqlog/sqlite-create-table-column-constraint/"  target="_blank">SQLite: Column Constraints</a><br>
+3. <a href="https://www.meetgor.com/sqlog/sqlite-not-null-column-constraint/"  target="_blank">SQLite: NOT NULL Constraint</a><br>
+4. <a href="https://www.meetgor.com/sqlog/sqlite-unique-column-constraint/"  target="_blank">SQLite: UNIQUE Column Constraint</a><br>
+5. <a href="https://www.meetgor.com/sqlog/sqlite-default-column-constraint/"  target="_blank">SQLite: DEFAULT Column Constraint</a><br>
+6. <a href="https://www.meetgor.com/sqlog/sqlite-generated-column-constraint/"  target="_blank">SQLite: Generated Column Constraint</a><br>
+7. <a href="https://www.meetgor.com/sqlog/sqlite-check-column-constraint/"  target="_blank">SQLite: Check Constraint</a></li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">Read
+    <div id="read" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#read" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><a href="https://www.njbrown.com/blog/25/"  target="_blank">What would you do with 52 hours of discretionary time</a>
+<ul>
+<li>This is a fresh perspective, I haven&rsquo;t taken that analytical approach in measuring the number of hours spent in weekends. That&rsquo;s quite a lot, 52.</li>
+<li>Would be spending some time to plan and think about it, it really had me thinking now.</li>
+</ul>
+</li>
+<li><a href="https://www.njbrown.com/blog/67/"  target="_blank">I wrote a journal entry for everyday in 2024</a>
+<ul>
+<li>I had journaled for 1 year in paper, 2 years on my phone, and the last couple of years, have lost that habit. Life gets in the way, your habits change, but this I think I have to keep, it used to give me clarity and feeling of accomplishment.</li>
+<li>It has been exactly a month since I started journalling again, pen and paper, a tiny little book, around 50 words, I would cramp 100 in that little page. I love it, its like a glimpse of a quarter in a tiny book. I am also thinking of getting back to obsidian for digital journal, just because its accessible and searchable. This article I will give credit for bringing up searching and doing some analysis on the things I have already written, that would be exciting to find how I change or my writing changes me.</li>
+</ul>
+</li>
+<li><a href="https://www.xipu.li/posts/the-last-programmers"  target="_blank">The last programmers</a>
+<ul>
+<li>There is so much wisdom in this post, I feel like quoting a lot of things, but the ending nails it &ldquo;The parts that have always mattered, really. Understanding people&rdquo;. There I put it, no fuss, no bait, just facts.</li>
+<li>Maybe we are the last generation of coders that type code by hand, and push to production. We are seeing the hands taken over by AI slop. I call the code slop, it is. If not reviewed by a human, it is garbage, well not entirely but nothing short of saphegetti, legacy, I-don&rsquo;t-want-to-touch-and-read like code.</li>
+<li>The author is hinting at the transition from developer happiness to user happiness. I don&rsquo;t like that but it&rsquo;s the harsh truth, the hard pill to swallow. No one will be a true nerdy developer anymore, they all would be average vibe coders. Only the best among them will be truly nerds. Will that change from now? I don&rsquo;t think so, people can use computers now, but in earlier days they don&rsquo;t use to. People (in India) at least don&rsquo;t know the proper usage of AI, its actual working, that&rsquo;s why AI-bros exist. Sadly they would sell these AI as their product but that is I think would be a skill, to steer AI in doing what you want, and for that you need to understand what they want. Pretty long rabbit hole but worth thinking about as a developer.</li>
+</ul>
+</li>
+<li><a href="https://www.gingerbill.org/article/2025/09/08/package-managers-are-evil/"  target="_blank">Package Managers are evil</a>
+<ul>
+<li>This is a fair take. Absolitely, the left pad example from Theo is one such thing. People just keep on adding packages/libraries without thinking much, in pre-AI days that was the problem.</li>
+<li>But now, with AI, it can spit out code like anything. No need to worry about managing packages, but eventually it will be producing more code which is a liability. AI produced code might be fragile, very like todo: authentication coming soon, like code. If not tested or reviewed, can&rsquo;t trust it.</li>
+<li>He is right on all the points, Golang is batteries included, and clearly defines what a package actually is, its just a folder. You can import anything from the folder. Except only if the functions or structs are capital case (annoying at times, but fine). Having some rule is better than having none. Javascript failed to define a rule, and NPM is a mess. Golang doesn&rsquo;t have a package manager, it just manages itself.</li>
+<li>I also find python dependency management like javascript to be honest, but a little better with terms of completeness. Since people can mess up on the web pretty easily, the things to mess up with Python have a less surface area. If you are aware of what happened to PyPI several times, you know what I am talking about, Its common to manipulate a source of truth and people might find themselves in all sorts of trouble, they would have never imagined. With <code>uv</code> I think it is moving to a better place, but still the core of the problem is from the too much of flexibility, which is fine, and needed even. Python doesn&rsquo;t needs to be like Go.</li>
+</ul>
+</li>
+<li><a href="https://www.jeffwofford.com/wp/?p=2240"  target="_blank">When the Job search becomes impossible</a>
+<ul>
+<li>This is gold. It might not look as relatable to everyone or even every time for those who relate to it now. But for me, who had spent 4 months finding a internships, 87 applications to land an interview, I can surely say there is a hope at the end of tunnel.</li>
+<li>I am saying this to myself again, maybe in the future, if this job search turns out to be the three stage one, impossible search, next to impossible search, wired search. Maybe sometimes, life wants you to show something different before you see what you wanted to see, and that might even amp up the feelings after going through that path. Maybe it was not the path for you, you were all on the wrong path, maybe it was a long path, maybe it was multiple paths, and you&rsquo;ll have to keep switching paths, who knows?</li>
+<li>I started to slow down and learn things, If people say you are not worth hiring, don&rsquo;t give them a chance to say that. I started writing about a skill, every single day, even if it might be very small thing I learn, I write it down in the blog. I don&rsquo;t care if no one sees it, I don&rsquo;t care if in the era of AI, blogs are not searched, I don&rsquo;t give a shi* about SEO, its all doom and gloom. But I do keep my knowledge to myself, it just takes a moment for someone to see my work in these days and recognize the skills and if not I still have the skill, If can&rsquo;t prove the skill then I need to improve.</li>
+<li>&ldquo;Rest is all about space. It engages purposefully with serious boredom&rdquo;.</li>
+<li>The above quote is true, I am not sure, if people are getting aware about this doom-scrolling thing, but its real! I got sucked into it in the month of June-July somewhere and it felt like my brain was rotting. I immediately took a step back, paused all notifications and started reading instead of scrolling. I read books, I don&rsquo;t have money to buy but you know, I love fiction. I completed around 6 books in the past 2 months, and wow what a feeling to bear. Too much dumped here, let&rsquo;s write a post about it. Thriving in the boredom or Reading is better then doom-scrolling.</li>
+</ul>
+</li>
+<li><a href="https://jetgirl.art/blogs-used-to-be-very-different/"  target="_blank">Blogs used to be different</a>
+<ul>
+<li>This is so well written, the conversations have been lost, it feels all clickbait and flow where the trend takes me, instead of the flow or my curiosity.</li>
+<li>Blogging in earlier days, I am speaking from 2018-2020, I knew it used to be very much tied to google, I never read a lot of blog post at that time, so I can’t comment, but can feel the lack of social media would make it really amazing back then.</li>
+</ul>
+</li>
+<li><a href="https://www.infoworld.com/article/2335455/13-reasons-sql-has-got-to-go.html"  target="_blank">13 Reason why SQL has to GO</a>
+<ul>
+<li><a href="https://www.infoworld.com/article/2335455/13-reasons-sql-has-got-to-go.html"  target="_blank">https://www.infoworld.com/article/2335455/13-reasons-sql-has-got-to-go.html</a></li>
+<li>I don&rsquo;t like this take, nor I think is grounded. Its looking like a AI slop or maybe someone just living in the land of NoSQL.</li>
+<li>&ldquo;Tables don&rsquo;t scale&rdquo;, what is the meaning of it? If that&rsquo;s the case, then collections also don&rsquo;t? Right? I bet PostgreSQL and MySQL aren&rsquo;t using tables, then it means that MySQL doesn&rsquo;t scale, come on!</li>
+<li>I don&rsquo;t want to react to this clickbait, I already know the pros and cons of SQL vs NoSQL, SQL isn&rsquo;t going anywhere, and so is the good old MySQL. Relational Databases are the nuts and bolts of web, and without them, industry can fall apart pretty quickly. Unless MongoDB keeps them happy :)</li>
+</ul>
+</li>
+<li><a href="https://www.theregister.com/2025/09/12/on_call/"  target="_blank">IT manager needed tech support because they had never heard of a command line</a>
+<ul>
+<li>Can we all laugh here? I mean, yes its not needed, but at least heard of it! SKILL ISSUES.</li>
+<li>Or Maybe he was rich, he had macbook since his career began. I didn&rsquo;t had a laptop, I found the command line on my android phone! Also discovered the world of Vim, because Nano and Vim was the only option, and I choose the Command line and Vim came along.</li>
+</ul>
+</li>
+<li><a href="https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/"  target="_blank">Become the person who does the thing</a>
+<ul>
+<li><a href="https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/"  target="_blank">https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/</a></li>
+<li>Yes, the world right now feels like everything is pushing me in a direction that I wanted, in my favor. For real! Journalling, job searching, embracing boredom, learning and locking in, and the most recent thing since almost a week, building a exercise routine.</li>
+<li>I also believed physical fitness is not important as mental well being. But I am coming to realize, there is no mental fitness if the body is not fit. At least it should be moving. By working remotely I was sucked into sitting and consuming junk/content. Feeling lethargic and exhausted all the time, last weekend, my brother set me up for an exercise, I felt energetic after that. I have been doing minimum 20 minutes each day since and keeping away from the vicious consumption cycle.</li>
+<li>Side by side, I am also on a writing streak of 24 on SQL and SQLite on my blog here with sqlog. This all is pushing me to get better and be the person I want to be. This article helps me validate everything I am doing, I don&rsquo;t need validation for the actions I do, but a human is a social animal, he needs resonance and some level of accountability or validation for what I am heading for is the correct place or not.</li>
+</ul>
+</li>
+<li><a href="https://newsletter.systemdesign.one/p/forward-proxy-vs-reverse-proxy"  target="_blank">Forward vs Reverse Proxy</a>
+<ul>
+<li>This is cool, the examples, make it really interesting and relatable.</li>
+<li>Forward proxy acts on the behalf of the client</li>
+<li>Reverse proxy acts on the behalf of the server</li>
+<li>It actually makes sense and helps understand better.</li>
+</ul>
+</li>
+<li><a href="https://www.architecture-weekly.com/p/just-use-sql-they-say-or-on-how-accidental"  target="_blank">Just use SQL they say</a>
+<ul>
+<li>Use tooling around it, there are SQLC tools for go and I think even for Python. It will help you write type safe boilerplate code in the native language as you write the SQL query.</li>
+<li>I think the author is right, but unaware of the tooling that exists around it.</li>
+</ul>
+</li>
+<li><a href="https://dev.to/bekbrace/why-do-they-quit-coding--56eo?ref=dailydev"  target="_blank">The AI Trap: Why do they quit coding</a>
+<ul>
+<li>Programming isn’t dead. Programming is not just about coding, its about problem solving.</li>
+<li>The joy of problem solving would still be there. It makes a little harsh on people to quit as some of the casual programmers who tried to earn money would definitely quit.</li>
+</ul>
+</li>
+</ol>
+
+<h2 class="relative group">Watched
+    <div id="watched" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#watched" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p><a href="https://youtu.be/GfH4QL4VqJ0"  target="_blank">Python: The documentary</a></p>
+<ul>
+<li>Wow! Just wow! From abstracting the language for making it friendly to running the world. It went from 0 to 3 pretty quick. Its the language spoken by LLMs</li>
+<li>Dropbox was surprising, the whole stack is Python! how would the frontend by python, maybe server side rendered, but that is really sick. The scale of that working makes me think again, is python slow? or people make it? by adding unnecessary complexity, django scales!</li>
+<li>I read a few post from Amir about Claude code and AI stuff and was about to disagree, but he is a creator of Flask, and oh my god how many frameworks? I took a step back and read some of his blogs again and it changed my mindset. Maybe LLMs are cool, maybe we need to be better programmers, we need to define our problems better, that’s what I was missing. This guy is a legend.</li>
+<li>The pyladies moment made me cry. Not gonna lie, this was really relatable. I also find loneliness and under-confident when given an opportunity, maybe its just me.</li>
+<li>Guido is such a humble and mature person. He took the leadership as if he was like the care-taker of the language, I mean he is the creator of course, but most of the people just take the money and go away. He lead the development forward and made the language what it is today.</li>
+<li>I cannot relate to 2 to 3 switch, but can understand why it might have happened in the first place. Writing an API for the first time is cool, no constraints, just buggy code to make it work, but then you realise oh, that is a bad code, here and there, and it becomes necessary to refactor in a way that it has to break the backwards compatibility.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://youtu.be/Y95a-8oNqps"  target="_blank">The fastest sorting algorithm: Radix Sort</a></p>
+<ul>
+<li>Simply, we take the bases or digits in the number and sort them in buckets, the memory might be high, so that’s why its done per digit to avoid billions of buckets being created for each number.</li>
+<li>I like the approach of floating point numbers, the guy really thought it through, was really clever of using a format that would sort the number as a digit. Absolutely fantastic mathematics in this.</li>
+<li>Will try to implement in golang to get a feel for it.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://youtu.be/CHaEdVIF2_M"  target="_blank">DNS Lookup from scratch</a></p>
+<ul>
+<li>This was a refreshing post, it made me think,</li>
+<li>Programming is not dead yet.</li>
+<li>I have lost the motivation in streaming because of AI, no one would watch someone code something for hours, but this is bringing that back.</li>
+<li>The joy, the delight, the satisfaction of coding your own DNS from scratch in C, elite programmer. I would recommend subscribing this guy, full of energy.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://youtu.be/MuzF9oQb2rI"  target="_blank">Print function in Python</a></p>
+<ul>
+<li>Wow! I thought print was for stdout, but it was meant to be written to the file. So cool. I though write was the only option to write the file, but this is so crucial to know.</li>
+<li>Print is a very versatile function. Sometimes, it makes me wonder, is python really a magical language.</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+
+<h2 class="relative group">Learnt
+    <div id="learnt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#learnt" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Javascript
+<ul>
+<li>2d Arrays<br>
+- Creating and Initialising an 2d array<br>
+- <code>arr = Array.from({length:n}, () =&gt; Array(n).fill(val));</code><br>
+- Here n is the dimension and val is the value to prefill with<br>
+- For instance if <code>n = 2, val = 0</code> then arr = <code>[[0,0],[0,0]]</code></li>
+<li>Set difference<br>
+- To find the difference in two sets in JS<br>
+- <code>&gt; s1 = new Set([1,2,3])</code><br>
+<code>Set(3) { 1, 2, 3 }</code><br>
+<code>&gt; s2 = new Set([2,3,4])</code><br>
+<code>Set(3) { 2, 3, 4 }</code><br>
+<code>&gt; s1.difference(s2)</code><br>
+<code>Set(1) { 1 }</code><br>
+- Or from an Array<br>
+- Create a set, for each array<br>
+- Then from each array find the element that doesn’t exist in the other set<br>
+- This will give the non-present element in both the arrays<br>
+- Combine the set to get a array of elements that are different in both the original arrays<br>
+- <code>&gt; a1 = [1,2,3,4,4]</code><br>
+<code>[ 1, 2, 3, 4, 4 ]</code><br>
+<code>&gt; a2 = [2,3,4,5,5]</code><br>
+<code>[ 2, 3, 4, 5, 5 ]</code><br>
+<code>&gt; s1 = new Set(a1);</code><br>
+<code>Set(4) { 1, 2, 3, 4 }</code><br>
+<code>&gt; s2 = new Set(a2);</code><br>
+<code>Set(4) { 2, 3, 4, 5 }</code><br>
+<code>&gt; d1 = new Set(a1.filter(n=&gt;!s2.has(n)));</code><br>
+<code>Set(1) { 1 }</code><br>
+<code>&gt; d2 = new Set(a2.filter(n=&gt;!s1.has(n)));</code><br>
+<code>Set(1) { 5 }</code><br>
+<code>&gt; [...d1, ...d2]</code><br>
+<code>[ 1, 5 ]</code></li>
+<li>String split<br>
+- Javascript split is bit under-powered compared to the Python split<br>
+- <code>&gt; s = &quot;hello world,  this is  two spaced word&quot;</code><br>
+<code>'hello world,  this is  two spaced word'</code><br>
+<code>&gt; s.match(/\S+/g)</code><br>
+<code>[</code><br>
+<code>  'hello', 'world,',</code><br>
+<code>  'this',  'is',</code><br>
+<code>  'two',   'spaced',</code><br>
+<code>  'word'</code><br>
+<code>]</code><br>
+<code>&gt; s.split(&quot; &quot;)</code><br>
+<code>[</code><br>
+<code>  'hello', 'world,',</code><br>
+<code>  '',      'this',</code><br>
+<code>  'is',    '',</code><br>
+<code>  'two',   'spaced',</code><br>
+<code>  'word'</code><br>
+<code>]</code><br>
+<code>&gt;</code></li>
+</ul>
+</li>
+<li>SQLite
+<ul>
+<li>There are 4 column constraint namely<br>
+1. NOT NULL<br>
+2. GENERATED ALWAYS<br>
+3. DEFAULT (Not really a constraint)<br>
+4. UNIQUE</li>
+<li>TABLE Level constraint<br>
+1. PRIMARY KEY<br>
+2. FOREIGN KEY<br>
+3. CHECK<br>
+4. UNIQUE</li>
+<li>Using combination values for unique constraint</li>
+<li>Understanding the difference between stored and virtual generated columns and comparing against the reading of those columns with time bench marking</li>
+<li>The check constraint is not a column level constraint, its a table level constraint as it can use combination of multiple columns for managing (updating or inserting) a record / row.</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">Tech News
+    <div id="tech-news" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tech-news" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><a href="https://ilikekillnerds.com/2025/09/09/anthropic-finally-admits-claude-quality-degradation/"  target="_blank">Claude model degradation</a>: I don’t use Claude much but it had a reputation of being one of the premium and high quality availability model which with this seems to be deteriorated.</li>
+<li><a href="https://techcrunch.com/2025/09/08/nepal-reverses-social-media-ban-as-protests-turn-deadly/"  target="_blank">Nepal reverses the social media ban as the protest turns deadly</a>: Really a deadly situation in Nepal, I can relate as I have my work colleagues working there. Government is pretty unstable and it might create havoc for such a fragile nation which might add misery to the already poor state.</li>
+</ul>
+<hr>
+<p>Happy Coding :)</p>
+<p>For more news, follow the <a href="https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-762"  target="_blank">Hackernewsletter</a> (#762nd edition) , and for software development/coding articles, join <a href="http://daily.dev/"  target="_blank">daily.dev</a>.</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-09-13-techstructive-weekly-59.md"
+          data-oid-likes="likes_posts/2025-09-13-techstructive-weekly-59.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-check-column-constraint/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;SQLite SQL: CHECK column constraint
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-12T00:00:00&#43;00:00">September 12, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-primary-key-column-constraint/">
+              <span class="leading-6">
+                SQLite SQL: PRIMARY KEY column constraint&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-13T00:00:00&#43;00:00">September 13, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

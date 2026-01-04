@@ -1,0 +1,1253 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Golang Web: URL Parsing &middot; Notes</title>
+    <meta name="title" content="Golang Web: URL Parsing &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="go,">
+  
+  
+  
+  <link rel="canonical" href="/posts/golang-web-url-parsing/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/golang-web-url-parsing/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Golang Web: URL Parsing">
+  <meta property="og:description" content="Introduction # We have done around 32 posts on the fundamental concepts in golang, With that basic foundation, I’d like to start with the new section of this series which will be a major one as web-development. This section will have nearly 40-50 posts, this will cover the fundamental concepts for web development like APIs, Database integrations, Authentication and Authorizations, Web applications, static sites, etc.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-09-05T21:30:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Golang Web: URL Parsing">
+  <meta name="twitter:description" content="Introduction # We have done around 32 posts on the fundamental concepts in golang, With that basic foundation, I’d like to start with the new section of this series which will be a major one as web-development. This section will have nearly 40-50 posts, this will cover the fundamental concepts for web development like APIs, Database integrations, Authentication and Authorizations, Web applications, static sites, etc.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Golang Web: URL Parsing",
+    "headline": "Golang Web: URL Parsing",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/golang-web-url-parsing/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-09-05T21:30:00\u002b00:00",
+    "datePublished": "2023-09-05T21:30:00\u002b00:00",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    "keywords": ["go"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2647"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Golang Web: URL Parsing
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2023-09-05T21:30:00&#43;00:00">September 5, 2023</time><span class="px-2 text-primary-500">&middot;</span><span>2647 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We have done around 32 posts on the fundamental concepts in golang, With that basic foundation, I&rsquo;d like to start with the new section of this series which will be a major one as <code>web-development</code>. This section will have nearly 40-50 posts, this will cover the fundamental concepts for web development like APIs, Database integrations, Authentication and Authorizations, Web applications, static sites, etc.</p>
+
+<h2 class="relative group">What is a URL?
+    <div id="what-is-a-url" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-is-a-url" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A URL is a Uniform Resource Locator. It is a string of characters that identifies a resource on the Internet. URLs are the building blocks of the web, allowing us to access websites, documents, and data with just a click. URLs are all over the place, if we want to build a strong foundation in web development, it&rsquo;s quite important to understand what URLs actually mean and what can they store.</p>
+<p>A URL looks something like this:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[scheme:][//[userinfo@]host][/]path[?query][#fragment]</span></span></code></pre></div></div>
+<p>Not all the URLs are like this, majority of the URLs that the common user sees are simply the ones with the <code>scheme</code>, <code>host</code>, and <code>paths</code>. However other components are equally important and are vital in the exchanging of information over the network.</p>
+<ul>
+<li>The <code>scheme</code> is the protocol used for accessing the resource like <code>http</code>, <code>https</code>, <code>ftp</code>, etc.</li>
+<li>The <code>userinfo</code> is the username and password used to access the resource.</li>
+<li>The <code>host</code> is the domain name of the resource.</li>
+<li>The <code>path</code> is the path or folder to the resource.</li>
+<li>The <code>query</code> is the query string of the resource. It is usually a key-value pair as a paramter to access resources.</li>
+<li>The <code>fragment</code> is used as a reference within the resource.</li>
+</ul>
+<p>We will see the use cases of most of them throughout this series for example, the <code>userinfo</code> is commonly used in accessing databases over the internet/cloud. The query parameters will be used in making dynamic API calls, etc.</p>
+
+<h2 class="relative group">Basic URL Parsing
+    <div id="basic-url-parsing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#basic-url-parsing" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// simple url</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlString</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://www.google.com&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">urlString</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>http://www.google.com</span></span></code></pre></div></div>
+<p>So, what is getting parsed here, we gave the URL as a string we get the URL back, the only difference is that instead of the URL being a string, it is now a structure of components. For instance, we want the protocol the host name, the port, etc. from the URL.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>fmt.Printf(&#34;%T
+</span></span><span style="display:flex;"><span>&#34;, parsedUrl)
+</span></span><span style="display:flex;"><span>// *url.URL</span></span></code></pre></div></div>
+<p>The <code>parsedUrl</code> is a pointer to a <a href="https://pkg.go.dev/net/url#URL"  target="_blank">url.URL</a> structure. The structure <code>url.URL</code> has a lot of components to it like <code>Scheme</code>, <code>Host</code>, <code>User</code>, <code>Path</code>, <code>RawQuery</code>, etc. We will dive into each of these soon.</p>
+<p>We could get those specific components ourselves, but that would be a bit tedious and might be even prone to bugs.</p>
+<p>Let&rsquo;s try to get those components from the URL without any functions, just string manipulation.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">urlString</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://www.google.com&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">protocol</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">urlString</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;:&#34;</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">hostName</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">urlString</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;//&#34;</span>)[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">protocol</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">hostName</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p>This might work for a simple URL, but what if we have more complex URLs which have paths, query parameters, fragments, username, port, etc? This could mess up quickly if we tried to get the parts of the URL ourselves. So, golang has a package called <a href="https://pkg.go.dev/net/url"  target="_blank">net/url</a> explicitly for parsing URLs.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;strings&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlString</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;http://www.google.com&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;http://www.google.com/about/&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;http://www.google.com/about?q=hello&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;http://www.google.com:8080/about?q=hello&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;http://user:password@example.com:8080/path/to/resource?query=value#fragment&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">url</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">urlString</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">hostStr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">url</span>, <span style="color:#e6db74">&#34;//&#34;</span>)[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">hostName</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">hostStr</span>, <span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">hostName</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>www.google.com
+</span></span><span style="display:flex;"><span>www.google.com
+</span></span><span style="display:flex;"><span>www.google.com
+</span></span><span style="display:flex;"><span>www.google.com:8080
+</span></span><span style="display:flex;"><span>user:password@example.com:8080</span></span></code></pre></div></div>
+<p>The above code might work for most of the URLs, but what if we have a more complex URL like the one with <code>port</code> or <code>user</code>, it doesn&rsquo;t give the thing we want exactly. In the above example, we have created a list of URLs as strings and simply iterated over each of the <code>url</code> in the <code>urlString</code>. Thereafter, we split the <code>url</code> on <code>//</code> so we get <code>https:</code> and <code>www.google.com</code>, if we want the host/domain name, we could simply get the <code>1</code> index in the slice since the <a href="https://pkg.go.dev/strings#Split"  target="_blank">strings.Split</a> method returns a slice after splitting the string with the provided separator. The <code>hostName</code> could be fetched from the <code>1</code> index. However, this time for the 2nd element in the list, we have <code>https://www.google.com/about</code>, which would return <code>www.google.com/about</code> as the hostname which is not ideal, so we will again have to split this string with <code>/</code> and grab the first part i.e. 0th index.</p>
+<p>The above code would work for <code>paths</code> and <code>query</code> parameters but if we had ports, and username, and password, it would not work as expected as evident from the last 2 examples in the list.</p>
+<p>So, now we know the downsides of manually parsing the URLs, we can use the <a href="https://pkg.go.dev/net/url"  target="_blank">net/url</a> package to do it for us.</p>
+
+<h2 class="relative group">Parsing DB URLs
+    <div id="parsing-db-urls" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-db-urls" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Databases have a connection URL or connection string which provides a standard way to connect to a database/database server. The format of the URL is just the <code>URL</code> with all the components from the <code>scheme</code> to the <code>path</code>. The common examples of some database connection URLs might include:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># PostgreSQL DB Connection URL/string
+</span></span><span style="display:flex;"><span>postgresql://username:password@hostname:port/database_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># MongoDB Connection URL/string
+</span></span><span style="display:flex;"><span>mongodb://username:password@hostname:port/database_name</span></span></code></pre></div></div>
+<p>The above are examples of the Postgres and MongoDB connection URLs, they have a <code>protocol</code> which usually for databases is their short name, the user credentials i.e. <code>username</code> and <code>password</code>, the <code>hostname</code> i.e. the server IP address, the <code>port</code> on which the database is running, and finally the path as the <code>database name</code>.</p>
+<p>We can construct a simple snippet in golang to grab all the details from the simple connection URL string with the <code>net/url</code> package.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//postgres db url</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">dbUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;postgres://admin:pass1234@localhost:5432/mydb&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">dbUrl</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Scheme/Protocol = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">Scheme</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;User = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">User</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//fmt.Println(&#34;User = &#34;, dbUrl.User.String())</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Username = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">Username</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">Password</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Password = &#34;</span>, <span style="color:#a6e22e">password</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Host = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">Host</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;HostName = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">Hostname</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Port = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">Port</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;DB Name = &#34;</span>, <span style="color:#a6e22e">dbUrl</span>.<span style="color:#a6e22e">Path</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>postgres://postgres:pass1234@localhost:5432/mydb
+</span></span><span style="display:flex;"><span>Scheme/Protocol =  postgres
+</span></span><span style="display:flex;"><span>User = admin:pass1234
+</span></span><span style="display:flex;"><span>Username =  admin
+</span></span><span style="display:flex;"><span>Password =  pass1234
+</span></span><span style="display:flex;"><span>Host =  localhost:5432
+</span></span><span style="display:flex;"><span>HostName =  localhost
+</span></span><span style="display:flex;"><span>Port =  5432
+</span></span><span style="display:flex;"><span>DB Name =  mydb</span></span></code></pre></div></div>
+<p>In the above code, we have given the string <code>postgres://admin:pass1234@localhost:5432/mydb</code>, and we have parsed the URL using the <code>net/url</code> package. The result is we have a <code>parsedUrl</code> object which has all the components that can be accessed as either fields or methods. Let&rsquo;s break down each field/method we used in the above example:</p>
+<ul>
+<li>The <code>Scheme</code> is simply a string representing the protocol of the resource(URL).</li>
+<li>The <code>User</code> is the <a href="https://pkg.go.dev/net/url#Userinfo"  target="_blank">UserInfo</a> object having immutable username and password fields.</li>
+<li>The <code>Username</code> is the method on <a href="https://pkg.go.dev/net/url#Userinfo.Username"  target="_blank">UserInfo</a> that returns the string representing the username of the URL.</li>
+<li>The <code>Password</code> is the method on <a href="https://pkg.go.dev/net/url#Userinfo.Password"  target="_blank">UserInfo</a> that returns the string representing the password of the URL.</li>
+<li>The <code>Host</code> is the field on <code>URL</code> as a string representing the host:port of the URL.</li>
+<li>The <code>Hostname</code> is the method on <a href="https://pkg.go.dev/net/url#URL.Hostname"  target="_blank">URL</a> that returns the string representing the hostname of the URL.</li>
+<li>The <code>Port</code> is the method on <a href="https://pkg.go.dev/net/url#URL.Port"  target="_blank">URL</a> that returns the string representing the port of the URL.</li>
+<li>The <code>Path</code> is the field as the string representing the path of the URL.</li>
+</ul>
+<p>So, this is how we can get almost every detail like <code>db protocol</code>, <code>username</code>, <code>password</code>, <code>hostname</code>, <code>port</code>, and the <code>database name</code> from the database connection string URL.</p>
+
+<h2 class="relative group">Parsing Query Parameters
+    <div id="parsing-query-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-query-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can even get the query parameters of a URL using the <a href="https://pkg.go.dev/net/url#URL.Query"  target="_blank">Query</a> method on the <code>URL</code> object. The <code>Query</code> method returns a <code>map[string][]string</code> which is to say a map with the key as <code>string</code> and the value as a <code>[]string</code> slice of string. For example, if the URL is something like <code>https://google.com/?q=hello</code>, the <code>Query</code> method will return <code>map[q:[hello]]</code> which means the key is <code>q</code> and the value is a list of strings of which the only element is <code>hello</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// a complex url with query params</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlStr</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://www.google.com/?q=hello&amp;q=world&amp;lang=en&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">urlStr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Query</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">k</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Query</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;KEY:&#34;</span>, <span style="color:#a6e22e">k</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">vv</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">v</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">vv</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>http://www.google.com/?q=hello+world&amp;lang=en&amp;q=gopher
+</span></span><span style="display:flex;"><span>map[lang:[en] q:[hello world gopher]]
+</span></span><span style="display:flex;"><span>KEY: q
+</span></span><span style="display:flex;"><span>hello world
+</span></span><span style="display:flex;"><span>gopher
+</span></span><span style="display:flex;"><span>KEY: lang
+</span></span><span style="display:flex;"><span>en</span></span></code></pre></div></div>
+<p>We have taken a bit of a complex example that might cover many use cases of the <code>Query</code> method. We have a URL as <code>http://www.google.com/?q=hello&amp;q=world&amp;lang=en</code>, and the <code>Query</code> method returns <code>map[lang:[en] q:[hello world]]</code> which means the <code>q</code> key has a slice of a string with elements <code>hello world</code> and <code>gopher</code> and the <code>lang</code> key has a value of <code>en</code>. Here, the first paramter, <code>q=hello+world</code> is basically <code>hello world</code> or <code>hello%20world</code>, which is to say escaping the space in the URL. We can have multiple values for the same key, which is evident as we have added <code>q=gopher</code> at the end of the <code>URL</code>, the key <code>q</code> has two elements in the slice as <code>hello world</code> and <code>gopher</code>. The <code>lang=en</code> is simply a key as <code>lang</code> with the only element as <code>en</code> in the slice. We use <code>&amp;</code> to separate different query parameters in the URL.</p>
+
+<h3 class="relative group">Checking Values in Query Parameters
+    <div id="checking-values-in-query-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#checking-values-in-query-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can even check the values in the query parameters without requiring the construction of for loops to find a particular value in a key. The <a href="https://pkg.go.dev/net/url#Values"  target="_blank">Values</a> is a type that stores the map as a return value from the <code>Query</code> method. It has a few handy methods like:</p>
+<ul>
+<li><a href="https://pkg.go.dev/net/url#Values.Has"  target="_blank">Has</a> to check if the key exists in the map (paramter as key <code>string</code> and returns a <code>bool</code>).</li>
+<li><a href="https://pkg.go.dev/net/url#Values.Get"  target="_blank">Get</a> to fetch the first value of the given key as a string or if not present then returns an empty string (paramter as key <code>string</code> and returns <code>string</code>).</li>
+<li><a href="https://pkg.go.dev/net/url#Values.Add"  target="_blank">Add</a> method is used to append the value for a given key (paramter as key <code>string</code> and value to be added as <code>string</code>).</li>
+<li><a href="https://pkg.go.dev/net/url#Values.Set"  target="_blank">Set</a> method is used to replace the value for a given key if already exists (paramter as key <code>string</code> and value as <code>string</code>).</li>
+<li><a href="https://pkg.go.dev/net/url#Values.Del"  target="_blank">Del</a> method is used to delete the value for a given key (paramter as key <code>string</code>).</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// a complex url with query params</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlStr</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://www.google.com/?q=hello+world&amp;lang=en&amp;q=gopher&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">urlStr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Query</span>())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">queryParams</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Query</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;q&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Has</span>(<span style="color:#e6db74">&#34;q&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Has</span>(<span style="color:#e6db74">&#34;lang&#34;</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;lang&#34;</span>))
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#e6db74">&#34;q&#34;</span>, <span style="color:#e6db74">&#34;ferris&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">queryParams</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;q&#34;</span>, <span style="color:#e6db74">&#34;books&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">queryParams</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Del</span>(<span style="color:#e6db74">&#34;q&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">queryParams</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>http://www.google.com/?q=hello+world&amp;lang=en&amp;q=gopher
+</span></span><span style="display:flex;"><span>hello world
+</span></span><span style="display:flex;"><span>true
+</span></span><span style="display:flex;"><span>en
+</span></span><span style="display:flex;"><span>map[lang:[en] q:[hello world gopher ferris]]
+</span></span><span style="display:flex;"><span>map[lang:[en] q:[books]]
+</span></span><span style="display:flex;"><span>map[lang:[en]]</span></span></code></pre></div></div>
+<p>The above code example demonstrates almost all the methods available on the <code>Values</code> type. The <code>Get</code> method is used to fetch the first value for a given key, so we parse the key as a <code>string</code> to the method and it would return a <code>string</code>. We checked for the <code>q</code> as the key and it returned the first element in the <code>queryParams</code> for key <code>q</code> as <code>hello world</code> from the list <code>[hello world, gopher]</code>. The <code>Has</code> method takes in the paramter as key as <code>string</code> and returns if the key exists in the <code>queryParams</code> or not as a bool. The <code>Add</code> method, we have used to <code>Add</code> a key with a particular value, we added the value <code>ferris</code> to the key <code>q</code> hence it appended to the list and the list of <code>queryParams[q]</code> became <code>[hello world, gopher, ferris]</code>. The <code>Set</code> method is used to override the existing key with a particular value, here we have set the value <code>books</code> to the key <code>q</code> and hence the list of <code>queryParams[q]</code> becomes <code>[books]</code>. We can use the <code>Del</code> method to remove the key from the <code>queryParams</code>, so we delete <code>q</code> from <code>queryParams</code>, then the <code>queryParams</code> simply has no key as <code>q</code> in it.</p>
+
+<h3 class="relative group">Parsing Query Parameters to String
+    <div id="parsing-query-parameters-to-string" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-query-parameters-to-string" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Now, that you have manipulated the query parameters, let&rsquo;s say you want to construct back that string representation of the query particular or the URL for it. The <a href="" >Encode</a> method is used to grab the <code>queryParams</code> i.e. <code>Values</code> object and convert it into the <code>string</code> representation of the encoded URL.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// a complex url with query params</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlStr</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://www.google.com/?q=hello+world&amp;lang=en&amp;q=gopher&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">urlStr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">queryParams</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Query</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;ferris&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">q</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Encode</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">q</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lang=en&amp;name=ferris&amp;q=hello+world&amp;q=gopher</span></span></code></pre></div></div>
+<p>So, we can see the <code>Encode</code> method has given a query parameter in the form of a URL encoded string. We first grab the query parameters from the <code>parsedUrl</code> which is a <code>URL</code> object via the <code>Query</code> method, we then <code>Add</code> the key <code>name</code> with a value of <code>ferris</code> to the <code>queryParams</code>. This is then used to <code>Encode</code> the object back to a string representation. This could be useful to construct a query paramter for requesting other websites/APIs.</p>
+
+<h2 class="relative group">Parsing URL object back to String
+    <div id="parsing-url-object-back-to-string" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-url-object-back-to-string" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can even get the <code>URL</code> object back to a string representation using the <a href="https://pkg.go.dev/net/url#URL.String"  target="_blank">String</a> method on the <code>URL</code> object. The <code>String</code> method returns a <code>string</code> representation of the URL object.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlStr</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://www.google.com/?q=hello+world&amp;lang=en&amp;q=gopher&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;URL:&#34;</span>, <span style="color:#a6e22e">urlStr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">urlStr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">queryParams</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Query</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;ferris&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">q</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">queryParams</span>.<span style="color:#a6e22e">Encode</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">q</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">RawQuery</span> = <span style="color:#a6e22e">q</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">newUrl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">String</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;New URL:&#34;</span>, <span style="color:#a6e22e">newUrl</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>URL: http://www.google.com/?q=hello+world&amp;lang=en&amp;q=gopher
+</span></span><span style="display:flex;"><span>lang=en&amp;name=ferris&amp;q=hello+world&amp;q=gopher
+</span></span><span style="display:flex;"><span>New URL: http://www.google.com/?lang=en&amp;name=ferris&amp;q=hello+world&amp;q=gopher</span></span></code></pre></div></div>
+<p>In the example above, we parse a URL string into a <code>URL</code> object as <code>parsedUrl</code>, then we <code>Add</code> the key <code>name</code> with a value of <code>ferris</code> to the <code>queryParams</code>. We then <code>Encode</code> the <code>URL</code> object back to a string representation. But this won&rsquo;t change the <code>parsedUrl</code> object we want to change the entire <code>URL</code> object. For that, we have overwritten the <code>RawQuery</code> field of the <code>URL</code> object with the query parameter encoded string as <code>q</code>. The <code>String</code> method returns a <code>string</code> representation of the <code>URL</code> object.</p>
+
+<h2 class="relative group">Parsing Fragments
+    <div id="parsing-fragments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-fragments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The fragment in a URL is usually present in a static website like <code>#about</code>, <code>#contact</code>, <code>#blog</code>, etc. The <code>Fragment</code> is a string that is usually a reference to a specific section or anchor point within a web page or resource. When a URL with a fragment is accessed, the web browser or user agent will scroll the page to display the section identified by the fragment.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// url with fragments</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">urlStr</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://pkg.go.dev/math/rand#Norm Float64&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parsedUrl</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">urlStr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">Fragment</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">RawFragment</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parsedUrl</span>.<span style="color:#a6e22e">EscapedFragment</span>())
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://pkg.go.dev/math/rand#Norm Float64
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Norm Float64
+</span></span><span style="display:flex;"><span>Norm Float64
+</span></span><span style="display:flex;"><span>Norm%20Float64</span></span></code></pre></div></div>
+<p>The above code is used to fetch the <code>#Norm Float64</code> fragment from the URL <code>https://pkg.go.dev/math/rand#NormFloat64</code>. We can use the <a href="https://pkg.go.dev/net/url#URL"  target="_blank">Fragment</a> field in the <code>URL</code> object to get the fragment text. There is <a href="https://pkg.go.dev/net/url#URL"  target="_blank">RawFragment</a> field that is used to parse the fragment text as it is, without trying to escape any special characters in the URL. The <a href="https://pkg.go.dev/net/url#URL.EscapedFragment"  target="_blank">EscapedFragment</a> is used to parse the fragment text by escaping the characters in the URL.</p>
+<p>That&rsquo;s it from the 32nd part of the series, all the source code for the examples are linked in the GitHub on the <a href="https://github.com/Mr-Destructive/100-days-of-golang/tree/main/web/url-parsing"  target="_blank">100 days of Golang</a> repository.</p>
+<p><a href="https://github.com/Mr-Destructive/100-days-of-golang"  target="_blank">100-days-of-golang</a></p>
+
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>From the first post of the web development section, we covered the fundamentals of URL parsing and got a bit introduced to the <code>net</code> package, which will be heavily used for most of the core language&rsquo;s features for working with the web. We covered the concepts for parsing URLs, getting components of URLs from the parsed object, Database connection URL resolving, parsing query parameters, and some other URL-related concepts.</p>
+<p>Hopefully, you found this section helpful, if you have any comments or feedback, please let me know in the comments section or on my social handles. Thank you for reading. Happy Coding :)</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2023-09-01-GO-32-URL-Parsing.md"
+          data-oid-likes="likes_posts/2023-09-01-GO-32-URL-Parsing.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/golang-channels/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Golang: Channels
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-08-28T21:15:00&#43;00:00">August 28, 2023</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/golang-web-get-method/">
+              <span class="leading-6">
+                Golang Web: GET Method&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-10-28T20:15:00&#43;00:00">October 28, 2023</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

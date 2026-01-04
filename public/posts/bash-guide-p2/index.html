@@ -1,0 +1,1506 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>BASH Scripting Guide - PART - 2 &middot; Notes</title>
+    <meta name="title" content="BASH Scripting Guide - PART - 2 &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="bash,">
+  
+  
+  
+  <link rel="canonical" href="/posts/bash-guide-p2/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/bash-guide-p2/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="BASH Scripting Guide - PART - 2">
+  <meta property="og:description" content="Introduction # In this part, topics such as switch cases, mathematical expression, arrays, and strings. This won’t be an in-depth guide to understand each and every concept, but to make users aware of the things and features in Bash. This also would not be an absolute basic guide, I expect to have some basic programming knowledge such as binary systems, logical and mathematical concepts. Don’t worry, you won’t be bombarded with commands, I’ll just explain with easy examples to get started.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-07-02T15:57:34+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BASH Scripting Guide - PART - 2">
+  <meta name="twitter:description" content="Introduction # In this part, topics such as switch cases, mathematical expression, arrays, and strings. This won’t be an in-depth guide to understand each and every concept, but to make users aware of the things and features in Bash. This also would not be an absolute basic guide, I expect to have some basic programming knowledge such as binary systems, logical and mathematical concepts. Don’t worry, you won’t be bombarded with commands, I’ll just explain with easy examples to get started.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "BASH Scripting Guide - PART - 2",
+    "headline": "BASH Scripting Guide - PART - 2",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/bash-guide-p2/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-07-02T15:57:34\u002b05:30",
+    "datePublished": "2021-07-02T15:57:34\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    "keywords": ["bash"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3191"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        BASH Scripting Guide - PART - 2
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-07-02T15:57:34&#43;05:30">July 2, 2021</time><span class="px-2 text-primary-500">&middot;</span><span>3191 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">15 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>In this part, topics such as switch cases, mathematical expression, arrays, and strings. This won&rsquo;t be an in-depth guide to understand each and every concept, but to make users aware of the things and features in Bash. This also would not be an absolute basic guide, I expect to have some basic programming knowledge such as binary systems, logical and mathematical concepts. Don&rsquo;t worry, you won&rsquo;t be bombarded with commands, I&rsquo;ll just explain with easy examples to get started.</p>
+<p>Topics to be covered in this part are as follows:</p>
+<ul>
+<li>
+<p>User Input</p>
+<ul>
+<li>User Prompt</li>
+<li>Changing the Delimiter</li>
+<li>Password as Input</li>
+<li>Limiting the length of Input</li>
+</ul>
+</li>
+<li>
+<p>Cases</p>
+</li>
+<li>
+<p>Arrays</p>
+<ul>
+<li>Declaring and Printing Arrays</li>
+<li>Number of elements in an array</li>
+<li>Splicing the array</li>
+<li>Inserting and Deleting elements</li>
+</ul>
+</li>
+<li>
+<p>Strings</p>
+<ul>
+<li>Making Substrings</li>
+<li>String Concatenation</li>
+<li>String Comparison</li>
+</ul>
+</li>
+<li>
+<p>Arithmetic in Bash</p>
+<ul>
+<li>Integer Arithmetic</li>
+<li>Floating-Point Arithmetic</li>
+</ul>
+</li>
+</ul>
+
+<h1 class="relative group">User Input
+    <div id="user-input" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#user-input" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Taking user input in Bash is quite straightforward and quite readable as well. We can make use of <code>read</code> command to take in input from the user. We just specify the variable in which we want to store the input.<code> read x</code> Here, the input will be stored in x. We can also pass in certain arguments to the read command such as -p (prompt with string), -r ( delimiter variation), -a(pass to the array), and others as well. Each of them will make the foundation of various complicated tasks to perform in logical operations.</p>
+
+<h3 class="relative group">User prompt argument
+    <div id="user-prompt-argument" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#user-prompt-argument" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The -p argument will prompt the user with a string before they input anything. It makes quite informative and useful user input. This becomes quite a useful argument/parameter to make it quite readable and understand what to do directly with much hassle. The below is the general syntax of passing the argument to the read function.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>read -p <span style="color:#e6db74">&#34;Enter the number &#34;</span> n</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -p <span style="color:#e6db74">&#34;Enter the number &#34;</span> n
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;The inputted number was </span>$n<span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625118915300/NRF7Ci2rK.png"
+    ></figure>
+</p>
+<p>In this example, we can prompt the user with the string <strong>Enter the number</strong>, and it gives certain information to the user about what to input.</p>
+
+<h3 class="relative group">Changing the delimiter
+    <div id="changing-the-delimiter" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#changing-the-delimiter" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Next, we can make use of -r which depending on the use case, we can change the delimiter while taking the input.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IFS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/&#39;</span> read -p <span style="color:#e6db74">&#34;Enter the file path : &#34;</span> user project app 
+</span></span><span style="display:flex;"><span>echo $user $project $app</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625202319183/R9Eo3lg0oU.png"
+    ></figure>
+</p>
+<p>In the above script, we separated the path of a directory(user-entered) into separate components such as the username, project name, and the app name, this can get pretty important and a great tool for automation of making project and application structures. At the beginning of the command, we use IFS which stands for Internal Field Separator, which does the separation of variables based on the field provided, in this case it was <code>//</code>, you can use any other field characters appropriate to your needs.</p>
+<p>This command will change the delimiter, by default it uses spaces or tabs etc to identify distinct input variables but we change it to other internal field separators such as / , \ ,- , |, etc. This can make the user input more customizable and dynamic.</p>
+
+<h3 class="relative group">Password Typing
+    <div id="password-typing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#password-typing" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can hide the input from the screen so as to keep it confidential and keep sensitive information such as passwords and keys private and protected.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -sp <span style="color:#e6db74">&#34;Password: &#34;</span> pswd
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;the password was </span>$pswd<span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625161571993/MkCadbyKW.png"
+    ></figure>
+</p>
+<p>We used the -s to keep the input hidden, the screen doesn&rsquo;t reflect what the user is typing, and -p for the prompt to offer the user some information on the text.</p>
+
+<h3 class="relative group">Limiting Length of Input
+    <div id="limiting-length-of-input" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#limiting-length-of-input" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can limit the user to only a certain number of characters as input. It becomes quite useful in constrained environments such as usernames and passwords to be restricted with a certain limit.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -n <span style="color:#ae81ff">6</span> -p <span style="color:#e6db74">&#34;Enter the name: &#34;</span> n
+</span></span><span style="display:flex;"><span>echo $n</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625161752440/8xI5Lovxo.png"
+    ></figure>
+</p>
+<p>In the above script, we demonstrate the limit of characters of 6 in the variable n. This restricts the user with only the first 6 characters, it just doesn&rsquo;t exceed ahead, directly to the next command.</p>
+
+<h3 class="relative group">Passing to the array
+    <div id="passing-to-the-array" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#passing-to-the-array" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Another important argument to be passed after read command is -a which inserts the value to the array elements.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -a nums -p <span style="color:#e6db74">&#34;Enter the elements : &#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>nums[*]<span style="color:#e6db74">}</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> 
+</span></span><span style="display:flex;"><span>	echo -e <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span></span></span></code></pre></div></div>
+<p>In the above script, we have used array, don&rsquo;t worry, I&rsquo;ll explain it in the coming sections of this part. We have assigned an empty array and made the user enter those arrays, they are space-separated values. We have used the -a operator to insert the input to the elements of the array. The for loop is range-based which means it will do certain commands until there are no elements left in nums. The command <code>${nums[@]}</code> indicates every element in the array nums.</p>
+
+<h1 class="relative group">Cases
+    <div id="cases" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cases" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Cases are quite a good way of replacing nested if-else statements to make them nice and readable in the script.  Cases in Bash are quite powerful and easy to use compared with C/ C++ styled switch cases.</p>
+<p>The general structure of using a case in Bash is as follows:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> variable in
+</span></span><span style="display:flex;"><span>    pattern 1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        statements
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>    pattern 2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        statements
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>    pattern 3<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        statements
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>    pattern 4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        statements
+</span></span><span style="display:flex;"><span>        ;; 
+</span></span><span style="display:flex;"><span>    *<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        statements
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span></span></span></code></pre></div></div>
+<p>It follows a particular pattern if it matches it stops the search and executes the statements, finally comes out of the block. If it doesn&rsquo;t find any match it redirects to a default condition if any.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash 
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -p <span style="color:#e6db74">&#34;Enter a name : &#34;</span> n
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> $n in 
+</span></span><span style="display:flex;"><span>	admin<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>		echo <span style="color:#e6db74">&#34;You are logged as root&#34;</span>
+</span></span><span style="display:flex;"><span>		;;
+</span></span><span style="display:flex;"><span>	unknown<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>		echo <span style="color:#e6db74">&#34;A hacker probably&#34;</span>
+</span></span><span style="display:flex;"><span>		;;
+</span></span><span style="display:flex;"><span>	manager<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>		echo <span style="color:#e6db74">&#34;Weolcome Manager!&#34;</span>
+</span></span><span style="display:flex;"><span>		;;
+</span></span><span style="display:flex;"><span>	*<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>		echo <span style="color:#e6db74">&#34;A normal person&#34;</span>
+</span></span><span style="display:flex;"><span>		;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625160454707/YDYGkU34d.png"
+    ></figure>
+</p>
+<p>Seeing the above example, it is quite clear, that it looks quite structured and readable than the nested ladder of If-else statements. Cases are rendered based on the variable after the <code>case</code> keyword. We use the patterns before <code>)</code> as making the match in the variable provided before. Once the interpreter finds a match it returns to <code>esac</code> command which is <code>case</code> spelled in reverse just like <code>fi</code> for <code>if</code> and <code>done</code> for <code>do</code> in loops :) If it doesn&rsquo;t match any pattern, we have a default case represented by <code>*)</code> and it executes for any non-matching expression.</p>
+
+<h2 class="relative group">Arrays
+    <div id="arrays" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#arrays" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Arrays or a way to store a list of numbers is implemented in Bash identical to most of the general programming languages.</p>
+
+<h3 class="relative group">Declaring and Printing Arrays
+    <div id="declaring-and-printing-arrays" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#declaring-and-printing-arrays" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We declare an array similar to a variable but we mention the index of the element in the array(0 based index).  We can also simply declare an empty array using the declare command <code>declare -A nums</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash 
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]=</span><span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>2<span style="color:#f92672">]=</span><span style="color:#ae81ff">8</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625124595563/TzBEaH1E4.png"
+    ></figure>
+</p>
+<p>The above script initializes an array with some hard-coded elements, surely you can input those from the user. For printing and accessing those elements in the array, We can use a loop, here we have used a range-based for loop. You can use any other loop you prefer. The iterator is &quot; i &quot; and we use $ to access the values from the array, we use <code>{}</code> as we have nested expression for indexing the element and <code>*</code> for every element in the array ( <code>@</code> will also work fine ), that&rsquo;s why range-based for loops make it quite simple to use. And we have simply printed &quot; i &quot; as it holds a particular element based on the iteration.</p>
+<p>OR</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>declare -A nums<span style="color:#f92672">=(</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>0<span style="color:#f92672">]=</span><span style="color:#ae81ff">44</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]=</span><span style="color:#ae81ff">45</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2<span style="color:#f92672">]=</span><span style="color:#ae81ff">46</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625128343654/NCKUzurXe.png"
+    ></figure>
+</p>
+<p>The above script uses declare an array, it can be empty as well after the name declaration. We used the <code>()</code> to include the values in the array, using indices in the array we assigned the values to the particular index.</p>
+<p>If you just want to print the elements, we can use <code>${nums[@]}</code> or <code>${nums[*]}</code>, this will print every element without using any iteration loops.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]=</span><span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>2<span style="color:#f92672">]=</span><span style="color:#ae81ff">8</span> 
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625125456166/85zXjapQ_.png"
+    ></figure>
+</p>
+
+<h3 class="relative group">Number of Elements in the array
+    <div id="number-of-elements-in-the-array" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#number-of-elements-in-the-array" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>To get the length of the array, we can use # in the expression <code>${nums[@]}</code>, like <code>${#nums[@]}</code> to get the number of elements from the array.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625125770005/VzIr8CD7-.png"
+    ></figure>
+</p>
+<p>Since we had 4 elements in the array, it accurately printed 4.</p>
+
+<h3 class="relative group">Inserting and Deleting elements from Array
+    <div id="inserting-and-deleting-elements-from-array" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#inserting-and-deleting-elements-from-array" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can push elements to the array using the assignment operator.</p>
+<p><code>nums=(${nums[@]} 76) </code></p>
+<p>This will push 76 into the array, i.e. in the last index( length -1 index).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]=</span><span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>2<span style="color:#f92672">]=</span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>3<span style="color:#f92672">]=</span><span style="color:#ae81ff">19</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">=(</span><span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span> 76<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Length of nums = </span><span style="color:#e6db74">${#</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625126198675/A8IAE-2FR.png"
+    ></figure>
+</p>
+<p>As you can see the element was added at the end of the array, you can also specify the index you want to insert. We can use <code>unset nums[3] </code> to delete the element at the particular location or we can pop back (delete from the end) an element from the array using the index <code>-1</code> from the array using the following command.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unset nums<span style="color:#f92672">[</span>-1<span style="color:#f92672">]</span></span></span></code></pre></div></div>
+<p>Any index provided will delete the element at that location by using unset. By using -1, we intend to refer to the last element. This can be quite handy and important as well in certain cases.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]=</span><span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>2<span style="color:#f92672">]=</span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>3<span style="color:#f92672">]=</span><span style="color:#ae81ff">19</span>
+</span></span><span style="display:flex;"><span>unset nums<span style="color:#f92672">[</span>-1<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Length of nums = </span><span style="color:#e6db74">${#</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625126770211/LYK2Q0Rp0.png"
+    ></figure>
+</p>
+<p>There you can see we removed the element using unset.</p>
+
+<h3 class="relative group">Splicing an Array
+    <div id="splicing-an-array" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#splicing-an-array" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can splice the array to print/ copy a portion of the array to another one.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nums[@]:1:3<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p>Using two colons and numbers in between them, we can print in this case certain elements in the array from a particular range. Here the first number after the colon is the starting index to print from(inclusive) and the next number after the second colon is the length to which we would like to print the element, it is not the index but the number of elements after the start index to be spliced</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]=</span><span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>2<span style="color:#f92672">]=</span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>3<span style="color:#f92672">]=</span><span style="color:#ae81ff">19</span>
+</span></span><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>4<span style="color:#f92672">]=</span><span style="color:#ae81ff">76</span>
+</span></span><span style="display:flex;"><span>newarr<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>nums[@]:1:3<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>newarr[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nums[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625127387739/IH2Fc6ghk.png"
+    ></figure>
+</p>
+<p>In this case, we have copied the slice of an array to another new array using the double colon operator. We added the elements from the 1st index till <code>1+3</code> indices i.e till 4. 3 is not the index but the length till you would like to copy or print.</p>
+<p>This was a basic introduction to arrays, definitely, there will be much more stuff I didn&rsquo;t cover. Just to give an overview of how an array looks like in BASH scripting. Next, we move on to strings.</p>
+
+<h1 class="relative group">Strings
+    <div id="strings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#strings" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Strings are quite important as it forms the core of any script to deal with filenames, user information, etc all contain strings or array of characters. Let&rsquo;s take a closer look at how strings are declared, handled, and manipulated in Bash scripting.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;World&#34;</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$s<span style="color:#e6db74">&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625129318948/02V3bpP1I.png"
+    ></figure>
+</p>
+<p>Strings are again declared as normal variables but are enclosed in double quotation marks.  And we access them in the exact same way as we do with variables. If you were to use single quotes instead of double quotes Bash would not interpret the variable name as a variable, it would print the name literally and not the value of the variable, So prefer using double quotes in echo and other commands to make variables accessible.</p>
+
+<h3 class="relative group">Making Substrings
+    <div id="making-substrings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#making-substrings" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can even splice the string as we did with the arrays, in strings we can call it substrings. The syntax is almost identical as we just have to get the variable name.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>p<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>s:6<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>echo $p
+</span></span><span style="display:flex;"><span>q<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>s::5<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>echo $q
+</span></span><span style="display:flex;"><span>t<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>s:4:3<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>echo $t</span></span></code></pre></div></div>
+<p>In the above script, we had a base string &rsquo;s&rsquo; which was then sliced from the 6th index to the end, If we do not pass the second number and colon, it interprets as the end of the string and if we do not pass the first number, it will interpret as the first character in the string. We sliced s from the 6th index till the end of the string and copied it in the string &lsquo;p&rsquo;&rsquo;. In the &lsquo;q&rsquo; string, we sliced the first 5 characters from the string &rsquo;s&rsquo;. In the &rsquo;t&rsquo; string we sliced starting from the 4th index and 3 characters in length i.e till  7th index, not the 7th index.</p>
+<p>We can use the # before the variable name to get the length of the string as we saw in the array section. So we can use the <code>echo ${#s}</code> command to print the length of the string where s is the string variable name.</p>
+
+<h3 class="relative group">String Concatenation
+    <div id="string-concatenation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#string-concatenation" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>String concatenation on Bash is quite straightforward as it is just the matter of adding strings in a very simple way.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span><span style="display:flex;"><span>p<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;World&#34;</span>
+</span></span><span style="display:flex;"><span>q<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$s<span style="color:#e6db74"> </span>$p<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>echo $q</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625135997314/_n05RIoTTM.png"
+    ></figure>
+</p>
+<p>The space between the two variables is quite literal, anything you place between this space or the double quotes will get stored in the variable or get printed.</p>
+
+<h3 class="relative group">String Comparison
+    <div id="string-comparison" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#string-comparison" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moving on to the string comparison in Bash. String comparison is quite complex in certain programming languages but it&rsquo;s quite straightforward in some languages such as Bash. We can compare strings quite easily in Bash, either they are equal or they are not, it&rsquo;s just comparison operators to perform the heavy-lifting for us.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hello&#34;</span>
+</span></span><span style="display:flex;"><span>p<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $s <span style="color:#f92672">=</span> $p <span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Equal&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Not equal&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625138020711/UWlRN8aPq.png"
+    ></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625137884154/7bNPkpGd3.png"
+    ></figure>
+</p>
+<p>From the above code, it is quite clear that the strings as not equal and we compared them with the &ldquo;equality&rdquo; operator (=) and checked if that condition was true, and perform commands accordingly. We can also check if the strings are not equal using <code>!=</code> operator and we can perform commands based on the desired logic. We also have operators to compare the length of the strings. We can use <code>\&lt;</code> operator to check if the first string is less than the second string(compared characters in ASCII).  And check if the first string is greater than the second string using <code>\&gt;</code> operator.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hello&#34;</span>
+</span></span><span style="display:flex;"><span>p<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $s <span style="color:#ae81ff">\&lt;</span> $p <span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;</span>$s<span style="color:#e6db74"> is Less than </span>$p<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> $s <span style="color:#ae81ff">\&gt;</span> $p <span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;</span>$s<span style="color:#e6db74"> is greater than </span>$p<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Equal&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625137393683/u3WbgDIrN.png"
+    ></figure>
+</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625137467448/NP1UXZAbv.png"
+    ></figure>
+</p>
+<p>Here, we are using the ASCII equivalent of strings to compare them as it gives an idea in terms of the value of the strings. We see that &lsquo;h&rsquo;( 104)has a greater ASCII value than &lsquo;H&quot; (72) which is why we see the shown outcome.</p>
+<p>We also have operators to check for the string being empty or not using the -z operator. Also, we have arguments to pass to the string comparison to check for non-empty strings as well, specifically for input validation and some error handling.</p>
+<p>We can quite easily use -n to check for non-empty string and -z for the length of the string being zero.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -p <span style="color:#e6db74">&#34;Enter a string : &#34;</span> s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -s $s <span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Empty Input&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>   echo <span style="color:#e6db74">&#34;Valid input&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625138907051/tbjRDda0U1.png"
+    ></figure>
+</p>
+<p>So the string topic is quite straightforward and self-explanatory as it doesn&rsquo;t how that much complexity but is still powerful and convenient to use.</p>
+
+<h1 class="relative group">Arithmetic in Bash
+    <div id="arithmetic-in-bash" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#arithmetic-in-bash" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Performing any Arithmetic operations is the core for scripting. Without arithmetic, it feels incomplete to programmatically create something, it would be quite menial to write commands by hand without having the ability to perform arithmetic operations.</p>
+
+<h3 class="relative group">Integer Arithmetic
+    <div id="integer-arithmetic" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#integer-arithmetic" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Firstly we quite commonly use operations on variables, so let us see how to perform an arithmetic operation on variables in Bash. We use double curly braces to evaluate certain results of the operations performed on variables.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>y<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>z<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span>$x <span style="color:#f92672">*</span> $y<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span>echo $z</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625139582135/Sb4hdE990.png"
+    ></figure>
+</p>
+<p>We use double curly braces in order to evaluate the operations performed on the variables inside them. We definitely have to use the $ symbol to extract the value of the variable.</p>
+<p>We can surely use operators such as addition(<code>+</code>), subtraction(<code>-</code>), multiplication(<code>*</code>), division(<code>/</code>), and modulus(<code>%</code>, it stores the remainder of the division,17%3 gets you 2) in statements. We can also perform operations such as <code>&lt;&lt;</code> to do left bitwise shift and <code>&gt;&gt;</code> right bitwise shift to shift the binary digits in left tor right respectively in a variable. There are also logical operations such as Bitwise and logical AND(<code>&amp;</code>), OR(<code>|</code>), EX-OR(<code>^</code>), and ternary expressions.</p>
+<p>Alternative to double curly braces is <code>expr</code>, expr allows you to freely wherever you need to evaluate an arithmetic operation. Though this is not native in-built in shells, it uses a binary process to evaluate the arithmetic operations. It can also defer depending on the implementation of such commands in various environments.</p>
+<p>We can also use the <code>let</code> command to initialize a variable and perform expressions in the initialization itself.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let a<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>let b<span style="color:#f92672">=</span>a*a
+</span></span><span style="display:flex;"><span>let c<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;b/(a*2)&#34;</span>
+</span></span><span style="display:flex;"><span>echo $b</span></span></code></pre></div></div>
+<p>We can perform quite complex operations using simple implementation using <code>let</code>, this allows much readable and bug-free scripts.  If you would like to perform operations with brackets and other operations you can enclose the expression in double quotation marks.</p>
+
+<h3 class="relative group">Floating-Point Arithmetic
+    <div id="floating-point-arithmetic" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#floating-point-arithmetic" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Performing floating-point arithmetic in Bash is not quite well though. We won&rsquo;t get 100% accurate answers in the expressions this is because it is <strong>not designed</strong> for such things. Doing <strong>things related to floating-point is a bad idea</strong>, Still, you can improve the precision to a little extent to do some basic things. I <strong>don&rsquo;t recommend this</strong> only do this if there are no other options.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>printf %.9f <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$((</span><span style="color:#ae81ff">10</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span><span style="color:#66d9ef">))</span></span></span></code></pre></div></div>
+<p>The result of this is 3.0000000..064 roughly, which is pretty bad. Bash at its core doesn&rsquo;t support floating-point calculations. But there is good news, we have  <a href="https://en.wikipedia.org/wiki/AWK"  target="_blank">awk</a>  and other tools such as  <a href="https://en.wikipedia.org/wiki/Bc_%28programming_language%29"  target="_blank">bc</a>  and others which is planned for the next part in the series. I&rsquo;ll explain awk just for floating-point here, in the next part, I&rsquo;ll cover it in depth.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>a<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo | awk -v a<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$a<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#39;{print a/3}&#39;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>echo $b </span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="bashs2.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625157391350/gHudsNntM4.png"
+    ></figure>
+</p>
+<p>WOW! That is to the point, but that was a lot of hassle using echo but printing nothing! HH? OK, you see certain things can get really annoying when things aren&rsquo;t supported natively. Firstly, we use  | to pipe echo command with awk, the echo command doesn&rsquo;t do anything just a way to use awk command in assigning variables here. Then the general syntax of the awk command is <code> awk -options -commands</code>. In this case, we are using -v as an argument and passing in an as a variable which is equal to a, which is stupid and silly but that is what it is, you can name any variable name you want. Then we simply have to use the variable in the print function which generally evaluates the expressions or other operations and returns to the interpreter. And that is how we print the expression, Phew! That took a while to do some silly things, But hey! That&rsquo;s possible though.</p>
+<p>That is the basic overview of Arithmetic in Bash, you can also perform logical operations in it which is very easy and can be understood on a quick run-through in the  <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Arithmetic-Expansion"  target="_blank">documentation</a>.</p>
+<p>I hope you understood the mentioned topics and what are their use cases depending on the requirements. Some topics such as positional parameters, tools and utilities, dictionaries, and some other important aspects of Bash scripting will be covered in the next part. Happy Coding.</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2021-07-02-BASH-scripting-P2.md"
+          data-oid-likes="likes_posts/2021-07-02-BASH-scripting-P2.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/vim-plus-teminal/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Vim: Terminal Integration
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-06-29T15:21:11&#43;05:30">June 29, 2021</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/bash-game-numberjack/">
+              <span class="leading-6">
+                Learning BASH by making a Number game&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-07-08T19:50:35&#43;05:30">July 8, 2021</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

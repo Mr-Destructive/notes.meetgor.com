@@ -1,0 +1,1191 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Techstructive Weekly #53 &middot; Notes</title>
+    <meta name="title" content="Techstructive Weekly #53 &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+  
+  
+  <link rel="canonical" href="/posts/techstructive-weekly-53/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/techstructive-weekly-53/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Techstructive Weekly #53">
+  <meta property="og:description" content="Week #53 # A pretty slow moving week, but a lot of consumption. I watched and read a lot of resources on SQL, databases and backend in general. I want to understand SQL to learn what is the fundamental unit in CRUD apps, which I think is a SQL query.
+Writing SQL query by hand in 2025 might be obsolete, but that 2% or 5% of the queries are pain in the ass to get LLMs write, that’s when the knowledge the depth, the legs of the PI shaped learning helps and make you feel alive, after weeks of existential crisis. I’ll keep learning SQL for the time being.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Techstructive Weekly #53">
+  <meta name="twitter:description" content="Week #53 # A pretty slow moving week, but a lot of consumption. I watched and read a lot of resources on SQL, databases and backend in general. I want to understand SQL to learn what is the fundamental unit in CRUD apps, which I think is a SQL query.
+Writing SQL query by hand in 2025 might be obsolete, but that 2% or 5% of the queries are pain in the ass to get LLMs write, that’s when the knowledge the depth, the legs of the PI shaped learning helps and make you feel alive, after weeks of existential crisis. I’ll keep learning SQL for the time being.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Techstructive Weekly #53",
+    "headline": "Techstructive Weekly #53",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/techstructive-weekly-53/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-08-02T00:00:00\u002b00:00",
+    "datePublished": "2025-08-02T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2493"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Techstructive Weekly #53
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-08-02T00:00:00&#43;00:00">August 2, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2493 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Week #53
+    <div id="week-53" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#week-53" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A pretty slow moving week, but a lot of consumption. I watched and read a lot of resources on SQL, databases and backend in general. I want to understand SQL to learn what is the fundamental unit in CRUD apps, which I think is a SQL query.</p>
+<p>Writing SQL query by hand in 2025 might be obsolete, but that 2% or 5% of the queries are pain in the ass to get LLMs write, that’s when the knowledge the depth, the legs of the PI shaped learning helps and make you feel alive, after weeks of existential crisis. I’ll keep learning SQL for the time being.</p>
+<p>Admitting that I didn’t push any code to prod this week, it was a bit of struggle for me to get things in shape after loosing touch, I did a ton of debugging, but didn’t push any code. I’ll be honest about it, as there are days where you are just a helping hand or a gazing at the things unfold before you, because it’s ain’t my time or space to do it. Next week, probably will be breaking prod.</p>
+
+<h3 class="relative group">Quote of the week
+    <div id="quote-of-the-week" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quote-of-the-week" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<blockquote><p>“Without your involvement you can’t succeed. With your involvement you can’t fail.”</p>
+<p>— APJ Abdul Kalam</p>
+</blockquote><p>Immerse yourself in the process, because you can’t win without, and the only thing in the way is yourself. I have involved myself in programming completely for 3 years, and have not failed in a literal sense, I have a great job, have good motivation to work towards, yes I made mistakes and continue to learn from them and make more different ones, that’s the process. If you put out, you know, you learn, you get better, the more you put out, the more luck doubles up each time.</p>
+<p>Most people get exhausted after the upteenth attempt, but they might be just one more step away from success, success should never be the only goal, if it is, what after you achieve it? The process, the madness to do it, should be, the curiosity that will flicker in the toughest of times will carry the weakest to the peaks and the absence of it can make the strongest tumble down the cliff.</p>
+
+<h2 class="relative group">Created
+    <div id="created" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#created" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Wrote
+<ul>
+<li><a href="https://www.meetgor.com/til/tmux-scroll-mode-select-and-copy/"  target="_blank">TIL: TMUX Scroll mode select and copy</a><br>
+- I was in dilemma, I sometimes use Ghostty or default terminal, sometimes with multiple windows, sometimes different tabs, sometimes zellij and sometimes tmux.<br>
+- I just forced myself to use TMUX and ended on the problems or flows that I have been avoiding to fix,failing to find and navigate around like a wizard, but took a few minutes to get the mess out, and here we go.<br>
+- This was just a few key strokes away namely, <code>prefix + [ </code>to enter the scroll mode, Ctrl + Space to enter selection mode, and Enter or Ctrl + J to copy to clipboard. Rock and rolling with log driven debugging.</li>
+<li><a href="https://www.meetgor.com/thoughts/kubernetes-isn-t-for-you"  target="_blank">Thoughts: Kubernetes isn’t for you</a><br>
+- I agree to this post, in certain situations. Especially for me if I am starting out in tech, I probably would not give advice to learn Kubernetes. Just get dirty with the normal deployment options, understand the pain points and then switch to K8s or others as needed.<br>
+- This post lists down the points that people use Kubernetes just for bragging or showing that they know what they are doing, or just using it to show that they are cooking. But in reality if you are a small scale team, with couple of services, using Kubernetes makes no sense.</li>
+<li><a href="https://www.meetgor.com/thoughts/just-fucking-use-kubernetes/"  target="_blank">Thoughts: Just fucking use kubernetes</a><br>
+- I agreed to this post, too, as I said it depends. If you purpose is to learn Kubernetes, be a DevOps guy, be a SRE, or some cool tech guy, nerding, curios about it, JUST F-ING LEARN KUBERNETES.<br>
+- This post made really good attempts to pull the trigger for me, I’ll quote waylon walker for a giga-chad quote<br>
+&gt; “But my App is small, So is you ambition”<br>
+- That just hits home, for me at least. If you think your app is a toy project, you are probably right and wrong, how do you know that if you haven’t deployed yet and people haven’t used it yet.</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">Read
+    <div id="read" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#read" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><a href="https://scottsexton.co/post/overthinking_gis/"  target="_blank">Overthinking GIS</a>
+<ul>
+<li>This just triggered some neurons in my brains, some horses running. I got a bit of interest in exploring GIS data. Want to play with it, and find interesting details.</li>
+<li>This post highlighted the ways to use GIS data to get the usability of a land, basically which are fertile and usable for farming I think. But the technicality in which it was explained was clicking the right knobs at the right time with the perfect steps and images.</li>
+<li>Would be certainly writing a post in this style sometimes soon.</li>
+</ul>
+</li>
+<li><a href="https://tobennaoduah.substack.com/p/websockets-vs-http-the-breakthrough"  target="_blank">HTTP VS Websockets: The breakthrough moment that clicked</a>
+<ul>
+<li>Such a honest, humble and insightful post. HTTP as a delivery truck, Websockets as a telephone! Such a relatable example, this shows the author got it right and is able to connect it well.</li>
+<li>I can’t agree more to this tip
+<blockquote><p>Try building a tiny app with both. Make a little dashboard that gets real time updates on something simple like stock prices or server load. Build one with HTTP polling. Build one with WebSockets. You will feel the difference, not just see it.</p>
+</blockquote></li>
+<li>Back when I was a freshman in college, I tried doing this kind of thing for my world atlas chat app game, and failed badly, calling database for each message to send over the HTTP, what a idiot I was, but then, google searched about this and found plethora of articles about websockets and what not.</li>
+<li>While making that, I realised the pain points getting solved with websockets and everything just clicked.</li>
+</ul>
+</li>
+<li><a href="https://deadprogrammersociety.com/2025/07/more-than-code.html"  target="_blank">More than Code</a>
+<ul>
+<li>Reading code in the age of AI, is gold and the only thing I think people spend most of the time, with other being vibe-debugging which might be fair less then vibe-reading.</li>
+<li>Reading code should become like instinct, just by gazing, you should be able to smell bad code and sniff the bugs out. This is not easy, it comes with practise and years of slog-debugging, first debugging the human code then go to vibe-debugging.</li>
+</ul>
+</li>
+<li><a href="https://www.pixperk.tech/blog/learn-grpc-completely-in-golang"  target="_blank">Learning GRPC Completely in Golang</a>
+<ul>
+<li>This explains what GRPC, protocol-buffers and the connecting technologies behind them in Golang.</li>
+<li>This gives a great overview of what and how the APIs are created.</li>
+</ul>
+</li>
+<li><a href="https://davebarry.substack.com/p/death-by-ai"  target="_blank">Death by AI</a>
+<ul>
+<li>Woah! AI Overview mode in Google is terse at certain things. But for programming, I think it works a charm 95% of the times. yes there are pretty bad hallucinations too due to reddit and slop debates.</li>
+<li>Haven’t thought that it would mistaken a person with other person’s name and call it dead! Hillarious.</li>
+</ul>
+</li>
+<li><a href="https://esafev.com/notes/why-i-do-programming/"  target="_blank">Why I do programming</a></li>
+</ol>
+<blockquote><p>For me, programming has always been more than a skill. It’s a way to explore, to tinker, and to satisfy curiosity.<br>
+- This is what programming is about, using curiosity to find the solutions to the problems. Curiosity is like a fire that keeps you warm in the winter.</p>
+</blockquote><ol start="7">
+<li><a href="https://soypetetech.substack.com/p/why-genai-infrastructure-feels-backwards"  target="_blank">Why GenAI Infrastructure feels backward</a>
+<ul>
+<li>I agree to this, this post can’t read this entire thing, but can understand the point of view</li>
+<li>Python and Javascript seems to be taking the forefront in the infrastructure side of things. All AI-Labs first launch SDKs and Packages for these two ecosystems, but never the others which are suited for them like Go or Rust.</li>
+<li>It’s time to change and make a difference in this revolution.</li>
+</ul>
+</li>
+<li><a href="https://blog.algomaster.io/p/json-web-tokens"  target="_blank">What are JSON Web tokens (JWT)</a>
+<ul>
+<li>Find me a better JWT tutorial then this, I’ll wait.</li>
+<li>Explained the problem then developed the intuition for the reason why JWTs exist. Very well explained, detailed and the diagram made it perfect for visualising the flow. It also mentioned the best practises, ticking all the boxes for a great article.</li>
+<li>Must read for beginner getting to understand JWT Authentication after learning Session based authentication.</li>
+</ul>
+</li>
+</ol>
+
+<h2 class="relative group">Watched
+    <div id="watched" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#watched" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><a href="https://youtu.be/s0r3Aky9I5g"  target="_blank">Anatomy of a Request: A deep dive of a http request processing from the Backend side</a>
+<ul>
+<li>Woah! That is a ton of computation.</li>
+<li>On Client: Creating the payload, encryption (write copy), loading in kernel space, sending the data</li>
+<li>On backend: Received the data, reading to the user space, decryption, decoding (serialization) of the body.</li>
+<li>So many steps are there, the speaker rightly said, its a fascinating field, the more you go deeper, the more stuff is there to explore and learn.</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+<ul>
+<li><a href="https://youtu.be/g2hiVp6oPZc"  target="_blank">Writing a Text Editor - Computerphile</a>
+<ul>
+<li>Interesting that text editors use Gap buffers. Its like a temporary register (block of memory) used to append text characters while the user edits (adds) to the file and then it gets saved, the remaining empty part is truncated. Clever data structure.</li>
+<li>He explained it so nicely, the approach, the problem and then a new intuition, again a limitation, then a proper intuition.</li>
+<li>Vi uses linked linked like data structure for editing, very interesting.</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+<ul>
+<li><a href="https://youtu.be/09E-tVAUqQw"  target="_blank">Why do databases store data in B+ Trees</a>
+<ul>
+<li>Everything is about intuition it seems, you see a problem, you think for a while, you think of a ideal scenario and you just scramble up a solution by adding the good parts and discarding the bad parts.</li>
+<li>This was the same, for why database use B+ Trees. Because we need to optimise for any arbitrary access for data as well as for range queries.</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+<ul>
+<li><a href="https://youtu.be/ZSKLA81tBis"  target="_blank">SQLite: How it works: Richard Hipp</a>
+<ul>
+<li>What a banger of a presentation and talk. Explained so much, in depth, in such a short time. It helped me understand what SQLite actually is, it’s a parser + virtual machine to run the core part and basically the fopen function in C to actually perform the operation.</li>
+<li>One unique insight here is<br>
+- Reading 10 files content from disk is slower than reading those file contents from SQLite<br>
+- Why? Because the database file is opened once and the reading happens in that instance only, data is stored in pages (fragments of memory), so it’s just a matter of reading bytes at a specific order.<br>
+- But reading 10 different files on disk will make you use fopen 10 times, and that is slow!<br>
+- 200 IQ move from SQLite team, have never seen such a beautiful solution to almost all the problems in the data world.</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+<ul>
+<li><a href="https://youtu.be/SPwPpsXpZfg"  target="_blank">The real reason you can’t get a job</a>
+<ul>
+<li>More work, more luck</li>
+<li>Curiosity to learn, outperforms desperation to get money</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+<ul>
+<li><a href="https://youtu.be/EV13CNrq4ZA"  target="_blank">Simple Joy of programming Course announcement</a>
+<ul>
+<li>It’s a great commitment to teaching the fundamentals.</li>
+<li>Not just fundamentals but building on top of the strong foundation.</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+<ul>
+<li><a href="https://youtu.be/1uVR5X7HpI8"  target="_blank">Sync Engines and Local Data</a>: Discussion of different database sync providers
+<ul>
+<li>This actually made me a bit curious about sync engines further. I was in confusion when I heard about it from Theo as he used it for T3 chat. It didn’t made sense at that time. It still doesn’t, as why syncing is required in a chat app, all the data comes from the backend, there is no processing on the frontend?</li>
+</ul>
+</li>
+</ul>
+<p>Double click to interact with video</p>
+
+<h2 class="relative group">Learnt
+    <div id="learnt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#learnt" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>Getting into scroll mode in TMUX, selecting text and copying with vi-like keybindings.</p>
+</li>
+<li>
+<p>You can’t do a unpacking in a sql query when using nested query for more than one column returned</p>
+<ul>
+<li>Like example i have a query like this
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>SELECT 
+</span></span><span style="display:flex;"><span>  s.id, 
+</span></span><span style="display:flex;"><span>  s.package_id,
+</span></span><span style="display:flex;"><span>  address_id, 
+</span></span><span style="display:flex;"><span>  a.address AS from_address, 
+</span></span><span style="display:flex;"><span>  (
+</span></span><span style="display:flex;"><span>    SELECT 
+</span></span><span style="display:flex;"><span>      address,
+</span></span><span style="display:flex;"><span>    FROM 
+</span></span><span style="display:flex;"><span>      addresses 
+</span></span><span style="display:flex;"><span>    WHERE 
+</span></span><span style="display:flex;"><span>      id = p.to_address_id
+</span></span><span style="display:flex;"><span>  ) AS to_address 
+</span></span><span style="display:flex;"><span>FROM 
+</span></span><span style="display:flex;"><span>  scans AS s 
+</span></span><span style="display:flex;"><span>  INNER JOIN packages AS p ON p.id = s.package_id 
+</span></span><span style="display:flex;"><span>  INNER JOIN addresses AS a on a.id = p.from_address_id;</span></span></code></pre></div></div>
+</li>
+<li>But let’s say for some reason I wanted to also get the to_address_type like a column from the addresses table</li>
+<li>You might try to over-optimise the queries and try something like this
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>SELECT 
+</span></span><span style="display:flex;"><span>  s.id, 
+</span></span><span style="display:flex;"><span>  s.package_id, 
+</span></span><span style="display:flex;"><span>  action, 
+</span></span><span style="display:flex;"><span>  contents, 
+</span></span><span style="display:flex;"><span>  address_id, 
+</span></span><span style="display:flex;"><span>  a.address AS from_address, 
+</span></span><span style="display:flex;"><span>  (
+</span></span><span style="display:flex;"><span>    SELECT 
+</span></span><span style="display:flex;"><span>      address, 
+</span></span><span style="display:flex;"><span>      type 
+</span></span><span style="display:flex;"><span>    FROM 
+</span></span><span style="display:flex;"><span>      addresses 
+</span></span><span style="display:flex;"><span>    WHERE 
+</span></span><span style="display:flex;"><span>      id = p.to_address_id
+</span></span><span style="display:flex;"><span>  ) AS (to_address, to_address_type) 
+</span></span><span style="display:flex;"><span>FROM 
+</span></span><span style="display:flex;"><span>  scans AS s 
+</span></span><span style="display:flex;"><span>  INNER JOIN packages AS p ON p.id = s.package_id 
+</span></span><span style="display:flex;"><span>  INNER JOIN addresses AS a on a.id = p.from_address_id 
+</span></span><span style="display:flex;"><span>WHERE 
+</span></span><span style="display:flex;"><span>  address = &#39;900 Somerville Avenue&#39; 
+</span></span><span style="display:flex;"><span>  AND s.action = &#39;Drop&#39;;</span></span></code></pre></div></div>
+</li>
+<li>And ERROR, you can’t do that</li>
+<li>This bit right here
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>(SELECT address, type FROM addresses WHERE id=p.to_address_id)
+</span></span><span style="display:flex;"><span>AS
+</span></span><span style="display:flex;"><span>(to_address, to_address_type)</span></span></code></pre></div></div>
+</li>
+<li>This is not feasible in SQL, you can’t unpack multiple columns from a subquery directly and alias them inline in a single SELECT clause.</li>
+<li>Well I have to do it this way then, duhh</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>SELECT 
+</span></span><span style="display:flex;"><span>  s.id, 
+</span></span><span style="display:flex;"><span>  s.package_id, 
+</span></span><span style="display:flex;"><span>  action, 
+</span></span><span style="display:flex;"><span>  contents, 
+</span></span><span style="display:flex;"><span>  address_id, 
+</span></span><span style="display:flex;"><span>  a.address AS from_address, 
+</span></span><span style="display:flex;"><span>  (
+</span></span><span style="display:flex;"><span>    SELECT 
+</span></span><span style="display:flex;"><span>      address 
+</span></span><span style="display:flex;"><span>    FROM 
+</span></span><span style="display:flex;"><span>      addresses 
+</span></span><span style="display:flex;"><span>    WHERE 
+</span></span><span style="display:flex;"><span>      id = p.to_address_id
+</span></span><span style="display:flex;"><span>  ) AS to_address, 
+</span></span><span style="display:flex;"><span>  (
+</span></span><span style="display:flex;"><span>    SELECT 
+</span></span><span style="display:flex;"><span>      type 
+</span></span><span style="display:flex;"><span>    FROM 
+</span></span><span style="display:flex;"><span>      addresses 
+</span></span><span style="display:flex;"><span>    WHERE 
+</span></span><span style="display:flex;"><span>      id = p.to_address_id
+</span></span><span style="display:flex;"><span>  ) AS to_address_type 
+</span></span><span style="display:flex;"><span>FROM 
+</span></span><span style="display:flex;"><span>  scans AS s 
+</span></span><span style="display:flex;"><span>  INNER JOIN packages AS p ON p.id = s.package_id 
+</span></span><span style="display:flex;"><span>  INNER JOIN addresses AS a on a.id = p.from_address_id </span></span></code></pre></div></div>
+<ul>
+<li>What a long query!</li>
+<li>By the way, this is one of the questions in <a href="https://cs50.harvard.edu/sql/psets/1/packages/"  target="_blank">CS50 SQL Problem set 1 packages</a> section.</li>
+<li>Any better way to do this? drop them in the comments or hit me up on my socials, will be completing more challenges this weekend.</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">Tech News
+    <div id="tech-news" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tech-news" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><a href="https://blog.google/products/gemini/gemini-2-5-deep-think/"  target="_blank">Google Gemini 2.5 Deep Thinking mode on app</a>
+<ul>
+<li>This looks something interesting, Google keeps pushing the boundaries for what LLMs are capable and making it more accessible.</li>
+</ul>
+</li>
+<li><a href="https://blog.google/technology/google-labs/notebooklm-video-overviews-studio-upgrades/"  target="_blank">NotebookLM launches Video overview mode for notebooks summaries</a>
+<ul>
+<li>This is a good feature, not great! I tried it and it’s decent, cuts in between, just text and arrows matched up like a presentation deck for the given problem. Not much value for a deeper dive, but really great to get a gist and overview.</li>
+<li>I can see this being used for news aggregation or summarising things from a lots of similar sources.</li>
+</ul>
+</li>
+<li><a href="https://z.ai/blog/glm-4.5"  target="_blank">ZAI release GLM 4.5</a>
+<ul>
+<li>Another chinese model that is a serious contender for coding or general purpose tasks. That too local and open source models.</li>
+</ul>
+</li>
+<li>Qwen releases 3rd version of Instruct, Thinking and Coder models
+<ul>
+<li>They launched quite a few variations, 235B for thinking and instruct</li>
+<li>Also 480 and 30 Billion variant for the Coder model</li>
+</ul>
+</li>
+<li><a href="https://poe.com/blog/introducing-the-poe-api"  target="_blank">POE introduces the API for AI Models</a>
+<ul>
+<li>I have used POE in the past, and this looks like a great addition to test out a few SOTA models for free with some limitations via the API.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Phew! a lot of open source models are cooking! Everything is intuition and curiosity, and AI is still a thing to wrap our heads around, but the fundamentals are the same.</p>
+<p>See you in the next one!</p>
+<p>Happy Coding :)</p>
+<p>For more news, follow the <a href="https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-756"  target="_blank">Hackernewsletter</a> (#756th edition) , and for software development/coding articles, join <a href="http://daily.dev/"  target="_blank">daily.dev</a>.</p>
+<p>[REMOVED]</p>
+<p>Thanks for reading Techstructive Weekly! This post is public so feel free to share it.</p>
+<p>[REMOVED]</p>
+<p>Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-08-02-techstructive-weekly-53.md"
+          data-oid-likes="likes_posts/2025-08-02-techstructive-weekly-53.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2025-07-30-tmux-scroll-mode-select-and-copy/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Tmux scroll mode select and copy
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-07-30T00:00:00&#43;00:00">July 30, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/openai-open-weight-oss-model/">
+              <span class="leading-6">
+                OpenAI releases Open Weight models GPT-OSS&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-08-06T00:00:00&#43;00:00">August 6, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

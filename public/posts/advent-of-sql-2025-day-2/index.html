@@ -1,0 +1,1474 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Advent of SQL 2025 Day 2: Snowballs &middot; Notes</title>
+    <meta name="title" content="Advent of SQL 2025 Day 2: Snowballs &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,advent-of-sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/advent-of-sql-2025-day-2/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/advent-of-sql-2025-day-2/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Advent of SQL 2025 Day 2: Snowballs">
+  <meta property="og:description" content="SQLog: Advent of SQL Day 2 # Here we are on the day 2 of Advent of SQL
+As I said in the previous day this is in SQLite so I won’t be doing it in the playground. So here is your SQLite playground :)
+SELECT 1; From now on no setup straight to the problem!
+Let’s download the .sql file for today’s problem to see what data we are playing with.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-17T15:30:00+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of SQL 2025 Day 2: Snowballs">
+  <meta name="twitter:description" content="SQLog: Advent of SQL Day 2 # Here we are on the day 2 of Advent of SQL
+As I said in the previous day this is in SQLite so I won’t be doing it in the playground. So here is your SQLite playground :)
+SELECT 1; From now on no setup straight to the problem!
+Let’s download the .sql file for today’s problem to see what data we are playing with.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Advent of SQL 2025 Day 2: Snowballs",
+    "headline": "Advent of SQL 2025 Day 2: Snowballs",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/advent-of-sql-2025-day-2/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-17T15:30:00\u002b05:30",
+    "datePublished": "2025-12-17T15:30:00\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    "keywords": ["sqlite","sql","advent-of-sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3146"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Advent of SQL 2025 Day 2: Snowballs
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-17T15:30:00&#43;05:30">December 17, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3146 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">15 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">SQLog: Advent of SQL Day 2
+    <div id="sqlog-advent-of-sql-day-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sqlog-advent-of-sql-day-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Here we are on the day 2 of Advent of SQL</p>
+<p>As I said in the previous day this is in SQLite so I won&rsquo;t be doing it in the playground. So here is your SQLite playground :)</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#ae81ff">1</span>;</span></span></code></pre></div></div>
+<p>From now on no setup straight to the problem!</p>
+<p>Let&rsquo;s download the .sql file for today&rsquo;s problem to see what data we are playing with.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> snowball_categories;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> snowball_inventory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> snowball_categories (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    official_category TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> snowball_inventory (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    batch_id TEXT,
+</span></span><span style="display:flex;"><span>    category_name TEXT,
+</span></span><span style="display:flex;"><span>    quantity INT,
+</span></span><span style="display:flex;"><span>    status TEXT
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Well, neat and clean!</p>
+<p>Straight pulling it in the sqlite shell.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ sqlite3 
+</span></span><span style="display:flex;"><span>SQLite version 3.45.1 2024-01-30 16:01:20
+</span></span><span style="display:flex;"><span>Enter &#34;.help&#34; for usage hints.
+</span></span><span style="display:flex;"><span>Connected to a transient in-memory database.
+</span></span><span style="display:flex;"><span>Use &#34;.open FILENAME&#34; to reopen on a persistent database.
+</span></span><span style="display:flex;"><span>sqlite&gt; .read day2-inserts.sql
+</span></span><span style="display:flex;"><span>sqlite&gt; .schema
+</span></span><span style="display:flex;"><span>CREATE TABLE snowball_categories (
+</span></span><span style="display:flex;"><span>    id INT PRIMARY KEY,
+</span></span><span style="display:flex;"><span>    official_category TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>CREATE TABLE snowball_inventory (
+</span></span><span style="display:flex;"><span>    id INT PRIMARY KEY,
+</span></span><span style="display:flex;"><span>    batch_id TEXT,
+</span></span><span style="display:flex;"><span>    category_name TEXT,
+</span></span><span style="display:flex;"><span>    quantity INT,
+</span></span><span style="display:flex;"><span>    status TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Worked right off the bat.</p>
+<p>Straight to problem now.</p>
+<p>If you are working in the playground, do add this full code with inserts in order to get a sense of what the data looks like, note that this below statements is not all data, just sharing to get you a taste of the problem.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> snowball_categories;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> snowball_inventory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> snowball_categories (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    official_category TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> snowball_inventory (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    batch_id TEXT,
+</span></span><span style="display:flex;"><span>    category_name TEXT,
+</span></span><span style="display:flex;"><span>    quantity INT,
+</span></span><span style="display:flex;"><span>    status TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> snowball_categories (id, official_category) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;glacier sphere (xl)&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;polar precision microball&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;everfrost training round&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;arctic blast premium&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> snowball_inventory (id, batch_id, category_name, quantity, status) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;BATCH-35443-J&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">19</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;BATCH-59767-M&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">41</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;BATCH-44795-B&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">21</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;BATCH-23396-C&#39;</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;BATCH-88907-A&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;BATCH-42662-D&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">47</span>, <span style="color:#e6db74">&#39;needs review&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;BATCH-37460-V&#39;</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>, <span style="color:#ae81ff">43</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;BATCH-21395-S&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;BATCH-36100-E&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">46</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;BATCH-64987-H&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">43</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#39;BATCH-57576-Z&#39;</span>, <span style="color:#e6db74">&#39;melty deluxe&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;BATCH-56025-U&#39;</span>, <span style="color:#e6db74">&#39;snowball v2&#39;</span>, <span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">13</span>, <span style="color:#e6db74">&#39;BATCH-86556-W&#39;</span>, <span style="color:#e6db74">&#39;snowball v2&#39;</span>, <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;BATCH-83385-N&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">38</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#39;BATCH-85156-M&#39;</span>, <span style="color:#e6db74">&#39;prototype x-12&#39;</span>, <span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;BATCH-82135-F&#39;</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>, <span style="color:#ae81ff">32</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">17</span>, <span style="color:#e6db74">&#39;BATCH-10074-T&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">49</span>, <span style="color:#e6db74">&#39;needs review&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;BATCH-22676-L&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">19</span>, <span style="color:#e6db74">&#39;BATCH-31174-R&#39;</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>, <span style="color:#ae81ff">33</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;BATCH-41385-B&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">21</span>, <span style="color:#e6db74">&#39;BATCH-50404-L&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;needs review&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;BATCH-92240-F&#39;</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">23</span>, <span style="color:#e6db74">&#39;BATCH-29198-J&#39;</span>, <span style="color:#e6db74">&#39;beta test sphere&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">24</span>, <span style="color:#e6db74">&#39;BATCH-64987-H&#39;</span>, <span style="color:#e6db74">&#39;glacier sphere (xl)&#39;</span>, <span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;needs review&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;BATCH-80008-A&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">26</span>, <span style="color:#e6db74">&#39;BATCH-88907-A&#39;</span>, <span style="color:#e6db74">&#39;polar precision microball&#39;</span>, <span style="color:#ae81ff">48</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">27</span>, <span style="color:#e6db74">&#39;BATCH-55830-J&#39;</span>, <span style="color:#e6db74">&#39;north ridge compact&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;needs review&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;BATCH-69470-A&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;incomplete&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">29</span>, <span style="color:#e6db74">&#39;BATCH-46211-R&#39;</span>, <span style="color:#e6db74">&#39;frost-flight deluxe&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;ready&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;BATCH-18675-G&#39;</span>, <span style="color:#e6db74">&#39;glacier sphere (xl)&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;ready&#39;</span>);</span></span></code></pre></div></div>
+
+<h2 class="relative group">Problem
+    <div id="problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Let&rsquo;s check the challenge of day 2</p>
+<blockquote><p>Using the <code>snowball_inventory</code> and <code>snowball_categories</code> tables, write a query that returns valid snowball categories with the count of valid snowballs per category. Your final table should have the columns <code>official_category</code> and <code>total_usable_snowballs</code>. Sort the output from fewest to most <code>total_usable_snowballs</code>.</p>
+</blockquote><p>So, we have two tables:</p>
+<ol>
+<li>
+<p>snowball categories</p>
+</li>
+<li>
+<p>snowball inventory</p>
+</li>
+</ol>
+<p>The snowball categories looks a quite a small table with just the category name and the id which is not really the data, the name is.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> snowball_categories;</span></span></code></pre></div></div>
+<p>Just 6 entries with some names of the categories, the column is official categories.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> snowball_categories;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----+---------------------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> id <span style="color:#f92672">|</span>     official_category     <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----+---------------------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span>  <span style="color:#f92672">|</span> frost<span style="color:#f92672">-</span>flight deluxe       <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">2</span>  <span style="color:#f92672">|</span> north ridge compact       <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span>  <span style="color:#f92672">|</span> glacier sphere (xl)       <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">4</span>  <span style="color:#f92672">|</span> polar <span style="color:#66d9ef">precision</span> microball <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">5</span>  <span style="color:#f92672">|</span> everfrost training round  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">6</span>  <span style="color:#f92672">|</span> arctic blast premium      <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----+---------------------------+
+</span></span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> </span></span></code></pre></div></div>
+<p>And the other table has oddles of data:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> snowball_inventory <span style="color:#66d9ef">limit</span> <span style="color:#ae81ff">10</span>;</span></span></code></pre></div></div>
+<p>So, we have quite a few columns,</p>
+<ol>
+<li>
+<p>batch_id</p>
+</li>
+<li>
+<p>category_name</p>
+</li>
+<li>
+<p>quantity</p>
+</li>
+<li>
+<p>status</p>
+</li>
+</ol>
+<p>It has 200,000 rows, that&rsquo;s quite a lot.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT count(*) FROM snowball_inventory;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| count(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 200000   |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM snowball_inventory limit 10;
+</span></span><span style="display:flex;"><span>+----+---------------+---------------------+----------+--------------+
+</span></span><span style="display:flex;"><span>| id |   batch_id    |    category_name    | quantity |    status    |
+</span></span><span style="display:flex;"><span>+----+---------------+---------------------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1  | BATCH-35443-J | frost-flight deluxe | 19       |              |
+</span></span><span style="display:flex;"><span>| 2  | BATCH-59767-M | frost-flight deluxe | 41       | incomplete   |
+</span></span><span style="display:flex;"><span>| 3  | BATCH-44795-B | frost-flight deluxe | 21       | ready        |
+</span></span><span style="display:flex;"><span>| 4  | BATCH-23396-C | north ridge compact | 0        | incomplete   |
+</span></span><span style="display:flex;"><span>| 5  | BATCH-88907-A | frost-flight deluxe | -2       | incomplete   |
+</span></span><span style="display:flex;"><span>| 6  | BATCH-42662-D | frost-flight deluxe | 47       | needs review |
+</span></span><span style="display:flex;"><span>| 7  | BATCH-37460-V | north ridge compact | 43       | ready        |
+</span></span><span style="display:flex;"><span>| 8  | BATCH-21395-S | frost-flight deluxe | -2       | ready        |
+</span></span><span style="display:flex;"><span>| 9  | BATCH-36100-E | frost-flight deluxe | 46       | ready        |
+</span></span><span style="display:flex;"><span>| 10 | BATCH-64987-H | frost-flight deluxe | 43       |              |
+</span></span><span style="display:flex;"><span>+----+---------------+---------------------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>What we have to do?</p>
+<blockquote><p>return valid snowball categories with the count of valid snowballs per category</p>
+</blockquote><p>That&rsquo;s a mouthful.</p>
+<p>The problem is trying to get at counting the number of inventory items per category I think.</p>
+<p>Because there are quite less categories and tons of inventory records.</p>
+<p>Also the <code>category_name</code> in the <code>snowball_inventory</code> table is not trustworthy.</p>
+<blockquote><p>Santa hurried to the snowball storage board, but the situation only got stranger. Whole batches appeared twice. Some batches claimed they had negative snowballs (“a bookkeeping accident,” the elves muttered). Others had a quantity of zero but were still marked “Ready.” And many batches referenced categories that didn’t appear anywhere in the official Snowball Category Guide</p>
+</blockquote>
+<h2 class="relative group">Naive Approach
+    <div id="naive-approach" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#naive-approach" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The first approach I see is scan through all the inventory records and check if the category is in the <code>snowball_category</code> table and its quantity is positive or more than 0, also I wonder if the status needs to be checked as <code>ready</code>.</p>
+<blockquote><p>“We need to know what we actually have left,” Santa said. “Not puddles. Not phantom batches. Real, usable, throw-ready snowballs.”</p>
+</blockquote><p><strong>Real, throw-ready snowballs</strong></p>
+<p>Let&rsquo;s check how to do that with simple sub query.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>   category_name <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> official_category <span style="color:#66d9ef">FROM</span> snowball_categories)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ready&#39;</span>;</span></span></code></pre></div></div>
+<p>OK!</p>
+<p>What we did? Simply selected all the data from <code>snowball_inventory</code> table,</p>
+<p>in which the category name is matching either of the 6 categories in the <code>snowball_categories</code> table.</p>
+<p>Also the quantity is positive and not zero, also the status is set to be <code>ready</code>.</p>
+<p>This looks naive to me for using subquery because for each 200,000 records we will scan the <code>snowball_categories</code> . Ew!</p>
+<p>Wait its done! We need the count of each category! We need to group by the <code>category_name</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>   category_name <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> official_category <span style="color:#66d9ef">FROM</span> snowball_categories)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> category_name;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>   category_name <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> official_category <span style="color:#66d9ef">FROM</span> snowball_categories)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> category_name;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+---------------+---------------------------+----------+--------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> id  <span style="color:#f92672">|</span>   batch_id    <span style="color:#f92672">|</span>       category_name       <span style="color:#f92672">|</span> quantity <span style="color:#f92672">|</span> status <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+---------------+---------------------------+----------+--------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">240</span> <span style="color:#f92672">|</span> BATCH<span style="color:#f92672">-</span><span style="color:#ae81ff">55793</span><span style="color:#f92672">-</span>L <span style="color:#f92672">|</span> arctic blast premium      <span style="color:#f92672">|</span> <span style="color:#ae81ff">45</span>       <span style="color:#f92672">|</span> ready  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">163</span> <span style="color:#f92672">|</span> BATCH<span style="color:#f92672">-</span><span style="color:#ae81ff">75333</span><span style="color:#f92672">-</span>O <span style="color:#f92672">|</span> everfrost training round  <span style="color:#f92672">|</span> <span style="color:#ae81ff">23</span>       <span style="color:#f92672">|</span> ready  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span>   <span style="color:#f92672">|</span> BATCH<span style="color:#f92672">-</span><span style="color:#ae81ff">44795</span><span style="color:#f92672">-</span>B <span style="color:#f92672">|</span> frost<span style="color:#f92672">-</span>flight deluxe       <span style="color:#f92672">|</span> <span style="color:#ae81ff">21</span>       <span style="color:#f92672">|</span> ready  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">39</span>  <span style="color:#f92672">|</span> BATCH<span style="color:#f92672">-</span><span style="color:#ae81ff">22704</span><span style="color:#f92672">-</span>V <span style="color:#f92672">|</span> glacier sphere (xl)       <span style="color:#f92672">|</span> <span style="color:#ae81ff">37</span>       <span style="color:#f92672">|</span> ready  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">7</span>   <span style="color:#f92672">|</span> BATCH<span style="color:#f92672">-</span><span style="color:#ae81ff">37460</span><span style="color:#f92672">-</span>V <span style="color:#f92672">|</span> north ridge compact       <span style="color:#f92672">|</span> <span style="color:#ae81ff">43</span>       <span style="color:#f92672">|</span> ready  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">125</span> <span style="color:#f92672">|</span> BATCH<span style="color:#f92672">-</span><span style="color:#ae81ff">81987</span><span style="color:#f92672">-</span>E <span style="color:#f92672">|</span> polar <span style="color:#66d9ef">precision</span> microball <span style="color:#f92672">|</span> <span style="color:#ae81ff">47</span>       <span style="color:#f92672">|</span> ready  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+---------------+---------------------------+----------+--------+</span></span></span></code></pre></div></div>
+<p>That sort of looks wired right?</p>
+<p>Why?</p>
+<p>Because what happens to the quantity? Is that summed? averaged, or what just happened to the batch_id?</p>
+<p>No it takes one value out of the <code>200 000</code> rows for each category. That&rsquo;s not what we want right?</p>
+<p>We want this</p>
+<blockquote><p>return valid snowball categories with the count of valid snowballs per category</p>
+</blockquote><p>So, we just want the category name and the count of those category. Basically count per category.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> category_name <span style="color:#66d9ef">as</span> official_category, <span style="color:#66d9ef">sum</span>(quantity) <span style="color:#66d9ef">as</span> total_usable_snowballs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> snowball_inventory 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>   category_name <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> official_category <span style="color:#66d9ef">FROM</span> snowball_categories)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> category_name;</span></span></code></pre></div></div>
+<p>Here we are only fetching the <code>category_name</code> and the <code>count</code> which will bundle up all the counts from the grouped of the category_name.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT category_name as official_category, sum(quantity) as total_usable_snowballs 
+</span></span><span style="display:flex;"><span>FROM snowball_inventory 
+</span></span><span style="display:flex;"><span>WHERE
+</span></span><span style="display:flex;"><span>   category_name IN (SELECT official_category FROM snowball_categories)
+</span></span><span style="display:flex;"><span>   AND quantity &gt; 0
+</span></span><span style="display:flex;"><span>   AND status == &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY category_name;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Not done yet!</p>
+<p>We need to order by the count.</p>
+<blockquote><p>Sort the output from fewest to most <code>total_usable_snowballs</code>.</p>
+</blockquote><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> category_name, <span style="color:#66d9ef">sum</span>(quantity)  <span style="color:#66d9ef">as</span> total_usable_snowballs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>   category_name <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> official_category <span style="color:#66d9ef">FROM</span> snowball_categories)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> category_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> total_usable_snowballs;</span></span></code></pre></div></div>
+<p>We can provide <code>ORDER BY total_usable_snowballs ASC</code> but ascending is default. I prefer keeping things default, you can be explicit and mention it as <code>ASC</code> to make it clear and readable.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT category_name as official_category, sum(quantity) as total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory 
+</span></span><span style="display:flex;"><span>WHERE
+</span></span><span style="display:flex;"><span>   category_name IN (SELECT official_category FROM snowball_categories)
+</span></span><span style="display:flex;"><span>   AND quantity &gt; 0
+</span></span><span style="display:flex;"><span>   AND status == &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY category_name
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>There it is!</p>
+<p>The solution to the day 2.</p>
+<p>But Santa, I am using subqueries. Is that fine?</p>
+
+<h2 class="relative group">Joins?
+    <div id="joins" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#joins" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can use joins here, since we just require the count of each category.</p>
+<p>Which JOIN though?</p>
+<p>LEFT, RIGHT, INNER?</p>
+<p>any really?</p>
+<p>You don&rsquo;t choose the join based on the problem, you define your output columns and then choose the type of join that would give you the result.</p>
+<p>If the thing that is to be searched from left to right and then its a left join, i.e. join everything from the left. and so on.</p>
+<p>Here,</p>
+<p>I need all the <code>official_category</code> column right, which is in the <code>snowball_categories</code> table.</p>
+<p>If I assume the <code>snowball_categories</code> is on the left, I can join everything for that row in the left to match all the <code>category_name</code> rows in the <code>snowball_inventory</code> table which would be in the right. Like so.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    snowball_categories.official_category <span style="color:#66d9ef">as</span> official_category,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SUM</span>(snowball_inventory.quantity) <span style="color:#66d9ef">as</span> total_usable_snowballs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> snowball_categories
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> snowball_inventory
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">ON</span> snowball_categories.official_category <span style="color:#f92672">=</span> snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> snowball_inventory.quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> snowball_inventory.status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> official_category
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> total_usable_snowballs;</span></span></code></pre></div></div>
+<p>We JOIN on the condition of <code>snowball_categories.official_category = snowball_inventory.category_name</code> which is to say, the <code>category_name</code> in the <code>snowball_inventory</code> table should match the <code>official category</code> from the <code>snowball_categories</code> table. Also the other conditions like <code>quantity</code> should be more than <code>0</code> and the <code>status</code> should be <code>ready</code>.</p>
+<p>We will still need to group by and order by as the joins will basically be the filtering criteria in which to select or reject the bad categories. However to group by the category name and obtain the count of each category we need to group by the name of the category.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT snowball_categories.official_category AS official_category, SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_categories
+</span></span><span style="display:flex;"><span>LEFT JOIN snowball_inventory
+</span></span><span style="display:flex;"><span>     ON snowball_categories.official_category = snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>     AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>     AND snowball_inventory.status == &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+</span></span></code></pre></div></div>
+<p>This is it! The same thing that we did for the subquery. Just the filtering part is different.</p>
+<p>How about INNER JOIN?</p>
+<p><code>INNER JOIN</code> is different from <code>LEFT JOIN</code> as it will by default take only rows that match the condition, whereas <code>LEFT JOIN</code> will include records/rows from the <code>LEFT</code> table even if they are empty or <code>NULL</code> . Similar is <code>RIGHT JOIN</code>, it will include everything from the RIGHT table even if that is <code>NULL</code> so that all the records from the <code>RIGHT</code> table are in the result set.</p>
+<p>For INNER JOIN if we flip the tables end it won&rsquo;t matter, as it only relies on the condition and not on the order of where the tables are placed (left or right).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category <span style="color:#66d9ef">AS</span> official_category,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SUM</span>(snowball_inventory.quantity) <span style="color:#66d9ef">AS</span> total_usable_snowballs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> snowball_categories
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ON</span> snowball_categories.official_category <span style="color:#f92672">=</span> snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> snowball_inventory.quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> snowball_inventory.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> official_category
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> total_usable_snowballs;</span></span></code></pre></div></div>
+<p>This is with INNER JOIN nothing changed here? did it?</p>
+<p>except the word <code>LEFT</code> is no longer there, the default join is <code>INNER JOIN</code> .</p>
+<p>In our case i don&rsquo;t think we have <code>NULL</code> values in the <code>snowball_categories</code> table or <code>snowball_inventory</code> table with the category name columns. So LEFT AND INNER JOIN won&rsquo;t be different in terms of the results.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category AS official_category,
+</span></span><span style="display:flex;"><span>  SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory
+</span></span><span style="display:flex;"><span>JOIN snowball_categories
+</span></span><span style="display:flex;"><span>  ON snowball_categories.official_category = snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.status = &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>However if we decide to make the <code>snowball_inventory</code> table as the <code>Left</code> table then does it make a difference?</p>
+<p>Well we don&rsquo;t want that to be the left table if we are doing a <code>LEFT</code> JOIN as it might list all the wrong categories in the result list as well even if they are not in the <code>official_category</code> those will be 0 or NULL but that would make a mess.</p>
+<p>We instead can do a RIGHT JOIN.</p>
+<p>With the tables order as</p>
+<ol>
+<li>
+<p>snowball_inventory</p>
+</li>
+<li>
+<p>snowball_categories</p>
+</li>
+</ol>
+<p>And we will RIGHT JOIN that is select all the columns from the right to be in the result set even if the condition is not true. It will be NULL. But the case is not true for here, as there are only 6 non-NULL category names in the snowball_categories table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>                                                       
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category <span style="color:#66d9ef">AS</span> official_category,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SUM</span>(snowball_inventory.quantity) <span style="color:#66d9ef">AS</span> total_usable_snowballs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">RIGHT</span> <span style="color:#66d9ef">JOIN</span> snowball_categories
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ON</span> snowball_categories.official_category <span style="color:#f92672">=</span> snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> snowball_inventory.quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> snowball_inventory.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> official_category
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> total_usable_snowballs;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT                                                       
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category AS official_category,
+</span></span><span style="display:flex;"><span>  SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory
+</span></span><span style="display:flex;"><span>RIGHT JOIN snowball_categories
+</span></span><span style="display:flex;"><span>  ON snowball_categories.official_category = snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.status = &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+</span></span></code></pre></div></div>
+<p>However if we try to use <code>LEFT JOIN</code> with <code>snowball_inventory</code> as the <code>LEFT</code> table, we might get something wired.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>                                                
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category <span style="color:#66d9ef">AS</span> official_category,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SUM</span>(snowball_inventory.quantity) <span style="color:#66d9ef">AS</span> total_usable_snowballs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> snowball_inventory
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> snowball_categories
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ON</span> snowball_categories.official_category <span style="color:#f92672">=</span> snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> snowball_inventory.quantity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> snowball_inventory.status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ready&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> official_category
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> total_usable_snowballs;</span></span></code></pre></div></div>
+<p>We have 6 and 1 more category as empty ?</p>
+<p>That category is for all the rows that didn&rsquo;t met the criteria of JOIN but still as asked to <code>LEFT JOIN</code> it will try to show the results for all the rows in the left table which is the <code>snowball_inventory</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT                                                
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category AS official_category,
+</span></span><span style="display:flex;"><span>  SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory
+</span></span><span style="display:flex;"><span>LEFT JOIN snowball_categories
+</span></span><span style="display:flex;"><span>  ON snowball_categories.official_category = snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.status = &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>|                           | 1692814                |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+</span></span></code></pre></div></div>
+
+<h2 class="relative group">Timer
+    <div id="timer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#timer" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Phew! Let&rsquo;s see which one of them is the best one</p>
+<p>Let&rsquo;s see the timings:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>.timer on</span></span></code></pre></div></div>
+
+<h3 class="relative group">SUBQUERY
+    <div id="subquery" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#subquery" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT category_name, SUM(quantity)AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory
+</span></span><span style="display:flex;"><span>WHERE
+</span></span><span style="display:flex;"><span>   category_name IN (SELECT official_category FROM snowball_categories)
+</span></span><span style="display:flex;"><span>   AND quantity &gt; 0
+</span></span><span style="display:flex;"><span>   AND status == &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY category_name
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|       category_name       | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.077 user 0.073886 sys 0.002942
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+
+<h3 class="relative group">LEFT JOIN
+    <div id="left-join" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#left-join" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt;  SELECT snowball_categories.official_category AS official_category, SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_categories
+</span></span><span style="display:flex;"><span>LEFT JOIN snowball_inventory
+</span></span><span style="display:flex;"><span>     ON snowball_categories.official_category = snowball_inventory.category_name 
+</span></span><span style="display:flex;"><span>     AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>     AND snowball_inventory.status == &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.182 user 0.171433 sys 0.009907
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+
+<h3 class="relative group">INNER JOIN
+    <div id="inner-join" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#inner-join" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt;  SELECT
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category AS official_category,
+</span></span><span style="display:flex;"><span>  SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory
+</span></span><span style="display:flex;"><span>JOIN snowball_categories
+</span></span><span style="display:flex;"><span>  ON snowball_categories.official_category = snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.status = &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.072 user 0.069623 sys 0.001929
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+
+<h3 class="relative group">RIGHT JOIN
+    <div id="right-join" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#right-join" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>sqlite&gt; SELECT                                                       
+</span></span><span style="display:flex;"><span>  snowball_categories.official_category AS official_category,
+</span></span><span style="display:flex;"><span>  SUM(snowball_inventory.quantity) AS total_usable_snowballs
+</span></span><span style="display:flex;"><span>FROM snowball_inventory
+</span></span><span style="display:flex;"><span>RIGHT JOIN snowball_categories
+</span></span><span style="display:flex;"><span>  ON snowball_categories.official_category = snowball_inventory.category_name
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.quantity &gt; 0
+</span></span><span style="display:flex;"><span>  AND snowball_inventory.status = &#39;ready&#39;
+</span></span><span style="display:flex;"><span>GROUP BY official_category
+</span></span><span style="display:flex;"><span>ORDER BY total_usable_snowballs;
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>|     official_category     | total_usable_snowballs |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>| arctic blast premium      | 11470                  |
+</span></span><span style="display:flex;"><span>| everfrost training round  | 24248                  |
+</span></span><span style="display:flex;"><span>| polar precision microball | 70773                  |
+</span></span><span style="display:flex;"><span>| glacier sphere (xl)       | 165158                 |
+</span></span><span style="display:flex;"><span>| north ridge compact       | 594119                 |
+</span></span><span style="display:flex;"><span>| frost-flight deluxe       | 952019                 |
+</span></span><span style="display:flex;"><span>+---------------------------+------------------------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.151 user 0.149690 sys 0.001957
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Time wise ranking:</p>
+<ol>
+<li>
+<p>INNER JOIN</p>
+</li>
+<li>
+<p>SUBQUERY</p>
+</li>
+<li>
+<p>RIGHT JOIN</p>
+</li>
+<li>
+<p>LEFT JOIN</p>
+</li>
+</ol>
+<p>That&rsquo;s quite quick, not much can be measured here. I am sure there are other ways to do this. But stopping here for today. Explored JOINs a little.</p>
+<p>See you for the day 3</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-12-17-advent-of-sql-day02-snowballs.md"
+          data-oid-likes="likes_posts/2025-12-17-advent-of-sql-day02-snowballs.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-1/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Advent of SQL 2025: Wish List
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-16T15:30:00&#43;05:30">December 16, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-3/">
+              <span class="leading-6">
+                Advent of SQL 2025 Day 3: Hotline Messages&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-18T15:30:00&#43;05:30">December 18, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

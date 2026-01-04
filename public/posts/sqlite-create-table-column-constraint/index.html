@@ -1,0 +1,1212 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>SQLite SQL: Create Table with column constraints &middot; Notes</title>
+    <meta name="title" content="SQLite SQL: Create Table with column constraints &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/sqlite-create-table-column-constraint/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/sqlite-create-table-column-constraint/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="SQLite SQL: Create Table with column constraints">
+  <meta property="og:description" content="Create Table with column constraints # We have seen the table creation with column types, we now need to look into the constraints or limitations that we can add to those columns, in order to make the data-model more robust and add some basic validations before doing any updation/mutation on the data itself.
+To add a constraint, we can specify it at the end of the column name, after the type, so there are a list of constraints that could be added to column, which are relevant to specific scenarios of the actual model of the column.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T15:32:35+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SQLite SQL: Create Table with column constraints">
+  <meta name="twitter:description" content="Create Table with column constraints # We have seen the table creation with column types, we now need to look into the constraints or limitations that we can add to those columns, in order to make the data-model more robust and add some basic validations before doing any updation/mutation on the data itself.
+To add a constraint, we can specify it at the end of the column name, after the type, so there are a list of constraints that could be added to column, which are relevant to specific scenarios of the actual model of the column.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "SQLite SQL: Create Table with column constraints",
+    "headline": "SQLite SQL: Create Table with column constraints",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/sqlite-create-table-column-constraint/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-09-07T00:00:00\u002b00:00",
+    "datePublished": "2025-09-07T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-04T15:32:35\u002b05:30",
+    
+    "keywords": ["sqlite","sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2750"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        SQLite SQL: Create Table with column constraints
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-09-07T00:00:00&#43;00:00">September 7, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2750 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Create Table with column constraints
+    <div id="create-table-with-column-constraints" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-table-with-column-constraints" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We have seen the table creation with column types, we now need to look into the constraints or limitations that we can add to those columns, in order to make the data-model more robust and add some basic validations before doing any updation/mutation on the data itself.</p>
+<p>To add a constraint, we can specify it at the end of the column name, after the type, so there are a list of constraints that could be added to column, which are relevant to specific scenarios of the actual model of the column.</p>
+<ul>
+<li><code>NOT NULL</code>: This will prevent insertion of <code>NULL</code> or empty values in the column field, even updating an existing filled value with <code>NULL</code> will prevent it from inserting a <code>NULL</code> value.</li>
+<li><code>UNIQUE</code>: This will prevent insertion of duplicate value for an column field, same applies for updating an existing value with a duplicate will lead to violating the constraint.</li>
+<li><code>DEFAULT</code>: This will add a default value to the column field, if not specified in the insertion of the value.</li>
+<li><code>GENERATED ALWAYS AS</code>: A expression used to generate the value of the column field, this can be derived from the existing columns, or a constant value.</li>
+<li><code>CHECK</code>: A custom check (numeric expression) can be added for that column before updating or inserting its value in the column.</li>
+<li><code>PRIMARY KEY</code>: This will set the column as the primary identifier for the table, so essentially it will be like a <code>rowid</code> for the table, acting like a unique identifier among the other rows.</li>
+<li><code>FOREIGN KEY</code>: This will set the column as a foreign key, and it will be a reference to the primary key of another table.</li>
+</ul>
+<p>Let&rsquo;s look at a basic example of each, I would go into details in each subsequent posts in the future as their is a lot of nitty-gritty details to be covered.</p>
+
+<h2 class="relative group">NOT NULL Constraint
+    <div id="not-null-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#not-null-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The <code>NOT NULL</code> constraint is a column-level constraint that can be added to a column in order to avoid getting a <code>NULL</code> or empty value being populated/inserted/updated in that column field for any row in the table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT,
+</span></span><span style="display:flex;"><span>    model_code TEXT
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">VALUES</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>OOPs! <code>Runtime error: NOT NULL constraint failed: llm_models.name (19)</code>. The default value is <code>NULL</code> or empty if not explicitly constrained on the column. So, it tried to insert the <code>NULL</code> as the <code>name</code> of the <code>llm_models</code> record/row, and while doing so sqlite hit a error, at runtime, that the constraint of the column <code>llm_models.name</code> cannot be <code>NULL</code>.</p>
+<p>So, one of the solution to avoid this, could be explicitly passing a value, or setting a default value in the column setting (we will see that in the later section as the default constraint).</p>
+<p>Let&rsquo;s sepcify the value of the <code>name</code> column:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>This time it successfully ran, the thing to note here is that the <code>model_type</code> or <code>model_code</code> column is populated as <code>NULL</code> becuase they don&rsquo;t have any constraint, especially they don&rsquo;t have the <code>NOT NULL</code> constraint, and hence we need to provide a value to the <code>name</code> column but the <code>model_type</code> or <code>model_code</code> columns becomes optional.</p>
+<p>SQLite also treats <code>''</code> empty string as not null, i.e. you can insert <code>''</code> into the <code>name</code> column and it will work fine. This is a bit wired but again a flexibility being a double edged sword. We need to understand what is the difference between <code>NULL</code> and empty string in this case, those are both different values.</p>
+
+<h2 class="relative group">UNIQUE Constraint
+    <div id="unique-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#unique-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Now, we will add a constraint to the <code>model_code</code> column that it should be unique, we don&rsquo;t want it to be a primary key just yet, but each row/record in this table should have a unique model_code.</p>
+<p>We cannot alter the table to add a constraint in sqlite, but is allowed in other databases like postgres, mysql, etc. however that is a bit risky as the previous data might become redundant and also would fail the constraints updated. So ideally we need to re-create the table, you can however alter table columns with a combination of constraints in order to maintain the backwards data correction.</p>
+<p>Let&rsquo;s drop the table <code>llm_models</code> so that we can start afresh.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span>
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>This way, we make sure the <code>model_code</code> column is unique, and we don&rsquo;t have any duplicate values in the column. When each new record is added to the table <code>llm_models</code> the <code>model_code</code> needs to be unique and even updation would fail if the new value is duplicated.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>Works fine, now notice here that the <code>model_code</code> is not provided and therefore it is <code>NULL</code>, let&rsquo;s add one more row with the same <code>name</code> and check if that fails the unique constraint on the <code>model_code</code> as it will now have the model_code duplicated <code>NULL</code> in both the rows, that should fail right? RIGHT?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>Nopes!</p>
+<p><code>NULL</code> is not a value to be called as unique. NULL is like undefined, you can&rsquo;t really distinguish between one <code>NULL</code> and other <code>NULL</code>s. Hence, the constraint is often associated with the <code>NOT NULL</code> as well to prevent the <code>NULL</code> confusion.</p>
+<p>Let&rsquo;s add the <code>model_code</code> now.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>Ok, we added a record with <code>model_code</code> as <code>llm-1</code>. Now, let&rsquo;s add the same record again.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>And, it broke, it gave a <code>Runtime error: UNIQUE constraint failed: llm_models.model_code (19)</code> error. So, we can&rsquo;t add the same <code>model_code</code> twice.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    model_type TEXT,
+</span></span><span style="display:flex;"><span>    model_code TEXT UNIQUE
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name) VALUES(&#39;abc&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; .mode table
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| abc  |            |            |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name) VALUES(&#39;abc&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| abc  |            |            |
+</span></span><span style="display:flex;"><span>| abc  |            |            |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code) VALUES(&#39;abc&#39;, &#39;llm-1&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code) VALUES(&#39;abc&#39;, &#39;llm-1&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: UNIQUE constraint failed: llm_models.model_code (19)
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| abc  |            |            |
+</span></span><span style="display:flex;"><span>| abc  |            |            |
+</span></span><span style="display:flex;"><span>| abc  |            | llm-1      |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>So some tips for using the <code>UNIQUE</code> constraints in sqlite:</p>
+<ul>
+<li>You can&rsquo;t use <code>UNIQUE</code> constraint on the <code>NULL</code> values.</li>
+<li>Prefer using <code>NOT NULL</code> in addition to the <code>UNIQUE</code> constraint.</li>
+</ul>
+
+<h2 class="relative group">DEFAULT Constraint
+    <div id="default-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#default-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The default constraint as the name suggest, will set a default value for a column if no value is provided in the insert statement. However, you need to provide the default value while creating the table. You can generate a default value (for that we can use the <code>GENERATED ALWAYS</code> constraint).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>I have added a constraint of <code>model_type</code> as <code>DEFAULT 'text'</code> which will set the value of <code>model_type</code> column to <code>text</code> if no value is provided in the insert statement.</p>
+<p>Also, the <code>model_code</code> column is updated with the constraints of <code>UNIQUE</code> and <code>NOT NULL</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>And that works as expected, it populates the value of <code>model_type</code> as <code>text</code> by default.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    model_type TEXT DEFAULT &#39;text&#39;,
+</span></span><span style="display:flex;"><span>    model_code TEXT UNIQUE NOT NULL
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code) VALUES(&#39;abc&#39;, &#39;llm-1&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>| abc  | text       | llm-1      |
+</span></span><span style="display:flex;"><span>+------+------------+------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code) VALUES(&#39;abc&#39;, &#39;llm-1&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: UNIQUE constraint failed: llm_models.model_code (19)
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>And if we try to insert the same <code>model_code</code> value again, it will fail with the <code>UNIQUE</code> constraint.</p>
+
+<h2 class="relative group">Generated Constraint
+    <div id="generated-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#generated-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The <a href="https://sqlite.org/gencol.html"  target="_blank">Generated</a> constraint can add a value to a column based on evaluated expression from the values of the other columns in that row.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    display_name TEXT <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; (&#39;</span> <span style="color:#f92672">||</span> model_code <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;)&#39;</span>) STORED
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>We have added a <code>GENERATED ALWAYS AS STORED</code> constraint which will store the result of <code>name || ' (' || model_code || ')'</code> in the <code>display_name</code> column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>There is a variant of <code>VIRTUAL</code> instead of <code>STORED</code>, we will explore this separately, I am just getting my hands on and getting familiarity with all the constraints available in SQL.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    model_type TEXT DEFAULT &#39;text&#39;,
+</span></span><span style="display:flex;"><span>    model_code TEXT UNIQUE NOT NULL,
+</span></span><span style="display:flex;"><span>    display_name TEXT GENERATED ALWAYS AS (name || &#39; (&#39; || model_code || &#39;)&#39;) STORED
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; .mode table
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code) VALUES(&#39;abc&#39;, &#39;llm-1&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code | display_name |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| abc  | text       | llm-1      | abc (llm-1)  |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+</span></span></code></pre></div></div>
+<p>Neat! It populated, or I should say <code>generated</code> the <code>display_name</code> column by evaluating the <code>name || ' (' || model_code || ')'</code> expression.</p>
+
+<h2 class="relative group">Check Constraint
+    <div id="check-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#check-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The <code>CHECK</code> constraint is a column-level constraint that can be added to a column in order to add a custom check (numeric expression) before updating or inserting its value in the column. Just a simple expression or a validation check before inserting the value to the column in the row.</p>
+<p>Let&rsquo;s take the <code>model_type</code> constraint with the <code>CHECK</code> constraint by limiting the values of <code>model_type</code> to <code>text</code>, <code>conversational</code>, <code>multimodal</code>, <code>code</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT <span style="color:#66d9ef">CHECK</span>(model_type <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;conversational&#39;</span>, <span style="color:#e6db74">&#39;multimodal&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>)) <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    display_name TEXT <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; (&#39;</span> <span style="color:#f92672">||</span> model_code <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;)&#39;</span>) STORED
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Here, we have added the <code>CHECK</code> constraint to the <code>model_type</code> column. And we have limited the values of <code>model_type</code> to <code>text</code>, <code>conversational</code>, <code>multimodal</code>, <code>code</code>. It could be anything, but its just a true or false check that will either fail or work.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>This will add the default value as <code>text</code> for the <code>model_type</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code, model_type) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>, <span style="color:#e6db74">&#39;visual&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>Here we try to add the column <code>model_type</code> as <code>visual</code> which is not allowed by the <code>CHECK</code> constraint.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code, model_type) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>And we try to add the column <code>model_type</code> as <code>code</code> which is not allowed by the <code>CHECK</code> constraint.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    model_type TEXT CHECK(model_type IN (&#39;text&#39;, &#39;conversational&#39;, &#39;multimodal&#39;, &#39;code&#39;)) DEFAULT &#39;text&#39;,
+</span></span><span style="display:flex;"><span>    model_code TEXT UNIQUE NOT NULL,
+</span></span><span style="display:flex;"><span>    display_name TEXT GENERATED ALWAYS AS (name || &#39; (&#39; || model_code || &#39;)&#39;) STORED
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code) VALUES(&#39;abc&#39;, &#39;llm-1&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models
+</span></span><span style="display:flex;"><span>   ...&gt; ;
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code | display_name |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| abc  | text       | llm-1      | abc (llm-1)  |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code, model_type) VALUES(&#39;abc&#39;, &#39;llm-1&#39;, &#39;visual&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: CHECK constraint failed: model_type IN (&#39;text&#39;, &#39;conversational&#39;, &#39;multimodal&#39;, &#39;code&#39;) (19)
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code, model_type) VALUES(&#39;abc&#39;, &#39;llm-1&#39;, &#39;code&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: UNIQUE constraint failed: llm_models.model_code (19)
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code, model_type) VALUES(&#39;abc&#39;, &#39;llm-2&#39;, &#39;code&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code | display_name |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| abc  | text       | llm-1      | abc (llm-1)  |
+</span></span><span style="display:flex;"><span>| abc  | code       | llm-2      | abc (llm-2)  |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Right! We checked that it failed the constraint <code>model_type IN ('text', 'conversational', 'multimodal', 'code')</code> and we checked that it failed the constraint <code>UNIQUE</code> constraint.</p>
+
+<h2 class="relative group">Primary Key Constraint
+    <div id="primary-key-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#primary-key-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The primary key constraint is a column-level constraint that is used to identify a unique row in a table.<br>
+It is a unique constraint that can be used to identify a row in a table using a single column.</p>
+<p>We can provide it right after the column name or at the bottom of all the table constraints.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT <span style="color:#66d9ef">CHECK</span>(model_type <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;conversational&#39;</span>, <span style="color:#e6db74">&#39;multimodal&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>)) <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    display_name TEXT <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; (&#39;</span> <span style="color:#f92672">||</span> model_code <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;)&#39;</span>) STORED,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(model_code)
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>OR</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT <span style="color:#66d9ef">CHECK</span>(model_type <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;conversational&#39;</span>, <span style="color:#e6db74">&#39;multimodal&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>)) <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    display_name TEXT <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; (&#39;</span> <span style="color:#f92672">||</span> model_code <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;)&#39;</span>) STORED
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>The <code>PRIMARY KEY</code> is a table level constraint, as it needs to unique across all the rows in the table.</p>
+
+<h2 class="relative group">Foreign Key Constraint
+    <div id="foreign-key-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#foreign-key-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The foreign key constraint is a column-level constraint that is used to establish a relationship between two tables.</p>
+<p>We will now create a separate table called <code>companies</code> for this example, this will be a table that stores the company information those will be creating or developing the LLM models.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> companies(
+</span></span><span style="display:flex;"><span>    id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    company_name TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    founded_year INTEGER
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Let&rsquo;s insert a few companies</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> companies (company_name, founded_year) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;ABC&#39;</span>, <span style="color:#ae81ff">1998</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> companies (company_name, founded_year) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;ClosedAI&#39;</span>, <span style="color:#ae81ff">2016</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> companies (company_name, founded_year) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;Beta&#39;</span>, <span style="color:#ae81ff">2014</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> companies;</span></span></code></pre></div></div>
+<p>Original companies right?<br>
+Now we will update the <code>llm_models</code> table that will store the LLM models information. We will add a foreign key, that will be a reference i.e. to make a relation for the row that will reference another row. So, the foreign key indicates a key (field/column) in another table that&rsquo;s why named as <code>FOREIGN KEY</code>. This foreign key will be referencing the <code>companies.id</code> column from the <code>companies</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> llm_models;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    model_type TEXT <span style="color:#66d9ef">CHECK</span>(model_type <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;conversational&#39;</span>, <span style="color:#e6db74">&#39;multimodal&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>)) <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+</span></span><span style="display:flex;"><span>    model_code TEXT <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    display_name TEXT <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; (&#39;</span> <span style="color:#f92672">||</span> model_code <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;)&#39;</span>) STORED,
+</span></span><span style="display:flex;"><span>    company_id INTEGER,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span>(company_id) <span style="color:#66d9ef">REFERENCES</span> companies(id)
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>We insert the <code>llm_models</code> with the foreign key of 2 indicating the company <code>ClosedAI</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> llm_models(name, model_code, company_id) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;llm-1&#39;</span>, <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>Now, if we see, this has successfully inserted the row.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models;</span></span></code></pre></div></div>
+<p>We can join the two tables together, this will give us the combined sets form the tables.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> llm_models <span style="color:#66d9ef">as</span> llm <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> companies <span style="color:#66d9ef">as</span> comp <span style="color:#66d9ef">ON</span> comp.id <span style="color:#f92672">=</span> llm.company_id;</span></span></code></pre></div></div>
+<p>That was a bit unclear, let&rsquo;s only keep what we needed.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> llm.<span style="color:#f92672">*</span>, comp.company_name  <span style="color:#66d9ef">FROM</span> llm_models <span style="color:#66d9ef">as</span> llm <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> companies <span style="color:#66d9ef">as</span> comp <span style="color:#66d9ef">ON</span> comp.id <span style="color:#f92672">=</span> llm.company_id;</span></span></code></pre></div></div>
+<p>Cool, that is sweat.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE companies(
+</span></span><span style="display:flex;"><span>    id INTEGER PRIMARY KEY,
+</span></span><span style="display:flex;"><span>    company_name TEXT UNIQUE NOT NULL,
+</span></span><span style="display:flex;"><span>    founded_year INTEGER
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO companies (company_name, founded_year) VALUES(&#39;ABC&#39;, 1998);
+</span></span><span style="display:flex;"><span>INSERT INTO companies (company_name, founded_year) VALUES(&#39;ClosedAI&#39;, 2016);
+</span></span><span style="display:flex;"><span>INSERT INTO companies (company_name, founded_year) VALUES(&#39;Beta&#39;, 2014);
+</span></span><span style="display:flex;"><span>SELECT * FROM companies;
+</span></span><span style="display:flex;"><span>+----+--------------+--------------+
+</span></span><span style="display:flex;"><span>| id | company_name | founded_year |
+</span></span><span style="display:flex;"><span>+----+--------------+--------------+
+</span></span><span style="display:flex;"><span>| 1  | ABC          | 1998         |
+</span></span><span style="display:flex;"><span>| 2  | ClosedAI     | 2016         |
+</span></span><span style="display:flex;"><span>| 3  | Beta         | 2014         |
+</span></span><span style="display:flex;"><span>+----+--------------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;
+</span></span><span style="display:flex;"><span>sqlite&gt; CREATE TABLE llm_models(
+</span></span><span style="display:flex;"><span>    name TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    model_type TEXT CHECK(model_type IN (&#39;text&#39;, &#39;conversational&#39;, &#39;multimodal&#39;, &#39;code&#39;)) DEFAULT &#39;text&#39;,
+</span></span><span style="display:flex;"><span>    model_code TEXT UNIQUE NOT NULL PRIMARY KEY,
+</span></span><span style="display:flex;"><span>    display_name TEXT GENERATED ALWAYS AS (name || &#39; (&#39; || model_code || &#39;)&#39;) STORED,
+</span></span><span style="display:flex;"><span>    company_id INTEGER,
+</span></span><span style="display:flex;"><span>    FOREIGN KEY(company_id) REFERENCES companies(id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO llm_models(name, model_code, model_type, company_id) VALUES(&#39;abc&#39;, &#39;llm-1&#39;, &#39;code&#39;, 2);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models;
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code | display_name | company_id |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+
+</span></span><span style="display:flex;"><span>| abc  | code       | llm-1      | abc (llm-1)  | 2          |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM llm_models as llm INNER JOIN companies as comp ON comp.id = llm.company_id;
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+----+--------------+--------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code | display_name | company_id | id | company_name | founded_year |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+----+--------------+--------------+
+</span></span><span style="display:flex;"><span>| abc  | code       | llm-1      | abc (llm-1)  | 2          | 2  | ClosedAI     | 2016         |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+----+--------------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT llm.*, comp.company_name  FROM llm_models as llm INNER JOIN companies as comp ON comp.id = llm.company_id;
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| name | model_type | model_code | display_name | company_id | company_name |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+--------------+
+</span></span><span style="display:flex;"><span>| abc  | code       | llm-1      | abc (llm-1)  | 2          | ClosedAI     |
+</span></span><span style="display:flex;"><span>+------+------------+------------+--------------+------------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>That is it, a high level overview of adding constraints in SQLite, I will dig deep into each constraint in separate posts over the coming week.</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-09-07-create-table-with-column-constraints.md"
+          data-oid-likes="likes_posts/2025-09-07-create-table-with-column-constraints.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-create-table-column-types/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;SQLite SQL: Create Table with column types
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-06T00:00:00&#43;00:00">September 6, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-not-null-column-constraint/">
+              <span class="leading-6">
+                SQLite SQL: NOT NULL column constraint&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-08T00:00:00&#43;00:00">September 8, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

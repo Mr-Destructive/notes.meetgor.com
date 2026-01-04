@@ -1,0 +1,1314 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Advent of SQL 2025 Day 14: Ski Resort Paths &middot; Notes</title>
+    <meta name="title" content="Advent of SQL 2025 Day 14: Ski Resort Paths &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,advent-of-sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/advent-of-sql-2025-day-14/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/advent-of-sql-2025-day-14/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Advent of SQL 2025 Day 14: Ski Resort Paths">
+  <meta property="og:description" content="Advent of SQL, Day 14 - Ski Resort Paths # Ok, almost to the penultimate day in the series. It is day 14 of Advent of SQL.
+Let’s grab the SQL for the day.
+DROP TABLE IF EXISTS mountain_network; CREATE TABLE mountain_network ( id INTEGER PRIMARY KEY, from_node TEXT, to_node TEXT, node_type TEXT, -- &#39;Lift&#39; or &#39;Trail&#39; difficulty TEXT -- Only applicable for trails: &#39;green&#39;, &#39;blue&#39;, &#39;black&#39;, &#39;double_black&#39; ); INSERT INTO mountain_network (id, from_node, to_node, node_type, difficulty) VALUES (1, &#39;Outlaw Express&#39;, &#39;Stairway Lift&#39;, &#39;Lift&#39;, NULL), (2, &#39;Outlaw Express&#39;, &#39;Top Gun Bowl&#39;, &#39;Trail&#39;, &#39;black&#39;), (3, &#39;Top Gun Bowl&#39;, &#39;Top Gun&#39;, &#39;Trail&#39;, &#39;black&#39;), (4, &#39;Top Gun&#39;, &#39;Montoya&#39;, &#39;Trail&#39;, &#39;blue&#39;), (5, &#39;Montoya&#39;, &#39;Center Aisle&#39;, &#39;Trail&#39;, &#39;green&#39;), (6, &#39;Center Aisle&#39;, &#39;Lower Stampede&#39;, &#39;Trail&#39;, &#39;green&#39;), (7, &#39;Stairway Lift&#39;, &#39;Red&#39;&#39;s Lift&#39;, &#39;Lift&#39;, NULL), (8, &#39;Stairway Lift&#39;, &#39;Broadway&#39;, &#39;Trail&#39;, &#39;green&#39;), (9, &#39;Red&#39;&#39;s Lift&#39;, &#39;Bearclaw&#39;, &#39;Trail&#39;, &#39;blue&#39;), (10, &#39;Bearclaw&#39;, &#39;Last Chance&#39;, &#39;Trail&#39;, &#39;blue&#39;), (11, &#39;Last Chance&#39;, &#39;Diamondback&#39;, &#39;Trail&#39;, &#39;blue&#39;), (12, &#39;Diamondback&#39;, &#39;Broadway&#39;, &#39;Trail&#39;, &#39;green&#39;), (13, &#39;Red&#39;&#39;s Lift&#39;, &#39;Bishop&#39;&#39;s Bowl&#39;, &#39;Trail&#39;, &#39;black&#39;), (14, &#39;Red&#39;&#39;s Lift&#39;, &#39;Amy&#39;&#39;s Ridge&#39;, &#39;Trail&#39;, &#39;blue&#39;), (15, &#39;Amy&#39;&#39;s Ridge&#39;, &#39;Grizzly Bowl&#39;, &#39;Trail&#39;, &#39;black&#39;), (16, &#39;Flathead Lift&#39;, &#39;Amy&#39;&#39;s Ridge&#39;, &#39;Trail&#39;, &#39;blue&#39;), (17, &#39;Jake&#39;&#39;s Lift&#39;, &#39;Wildwood Lift&#39;, &#39;Lift&#39;, NULL), (18, &#39;Wildwood Lift&#39;, &#39;Sidewinder&#39;, &#39;Trail&#39;, &#39;green&#39;), (19, &#39;Wildwood Lift&#39;, &#39;Brightside&#39;, &#39;Trail&#39;, &#39;blue&#39;), (20, &#39;Brightside&#39;, &#39;Moonrise&#39;, &#39;Trail&#39;, &#39;green&#39;), (21, &#39;Moonrise&#39;, &#39;Draw&#39;, &#39;Trail&#39;, &#39;green&#39;), (22, &#39;Moonrise&#39;, &#39;Lone Pine&#39;, &#39;Trail&#39;, &#39;blue&#39;), (23, &#39;Draw&#39;, &#39;Maverick&#39;, &#39;Trail&#39;, &#39;blue&#39;), (24, &#39;Draw&#39;, &#39;Broadway&#39;, &#39;Trail&#39;, &#39;green&#39;), (25, &#39;Broadway&#39;, &#39;Outlaw Trail&#39;, &#39;Trail&#39;, &#39;green&#39;), (26, &#39;Outlaw Trail&#39;, &#39;Center Aisle&#39;, &#39;Trail&#39;, &#39;green&#39;), (27, &#39;Center Aisle&#39;, &#39;Bandit&#39;, &#39;Trail&#39;, &#39;green&#39;), (28, &#39;Jake&#39;&#39;s Lift&#39;, &#39;Maverick&#39;, &#39;Trail&#39;, &#39;blue&#39;); That’s it, we just have 1 table called mountain_network and it has 28 records.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-28T15:30:00+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:49:51+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of SQL 2025 Day 14: Ski Resort Paths">
+  <meta name="twitter:description" content="Advent of SQL, Day 14 - Ski Resort Paths # Ok, almost to the penultimate day in the series. It is day 14 of Advent of SQL.
+Let’s grab the SQL for the day.
+DROP TABLE IF EXISTS mountain_network; CREATE TABLE mountain_network ( id INTEGER PRIMARY KEY, from_node TEXT, to_node TEXT, node_type TEXT, -- &#39;Lift&#39; or &#39;Trail&#39; difficulty TEXT -- Only applicable for trails: &#39;green&#39;, &#39;blue&#39;, &#39;black&#39;, &#39;double_black&#39; ); INSERT INTO mountain_network (id, from_node, to_node, node_type, difficulty) VALUES (1, &#39;Outlaw Express&#39;, &#39;Stairway Lift&#39;, &#39;Lift&#39;, NULL), (2, &#39;Outlaw Express&#39;, &#39;Top Gun Bowl&#39;, &#39;Trail&#39;, &#39;black&#39;), (3, &#39;Top Gun Bowl&#39;, &#39;Top Gun&#39;, &#39;Trail&#39;, &#39;black&#39;), (4, &#39;Top Gun&#39;, &#39;Montoya&#39;, &#39;Trail&#39;, &#39;blue&#39;), (5, &#39;Montoya&#39;, &#39;Center Aisle&#39;, &#39;Trail&#39;, &#39;green&#39;), (6, &#39;Center Aisle&#39;, &#39;Lower Stampede&#39;, &#39;Trail&#39;, &#39;green&#39;), (7, &#39;Stairway Lift&#39;, &#39;Red&#39;&#39;s Lift&#39;, &#39;Lift&#39;, NULL), (8, &#39;Stairway Lift&#39;, &#39;Broadway&#39;, &#39;Trail&#39;, &#39;green&#39;), (9, &#39;Red&#39;&#39;s Lift&#39;, &#39;Bearclaw&#39;, &#39;Trail&#39;, &#39;blue&#39;), (10, &#39;Bearclaw&#39;, &#39;Last Chance&#39;, &#39;Trail&#39;, &#39;blue&#39;), (11, &#39;Last Chance&#39;, &#39;Diamondback&#39;, &#39;Trail&#39;, &#39;blue&#39;), (12, &#39;Diamondback&#39;, &#39;Broadway&#39;, &#39;Trail&#39;, &#39;green&#39;), (13, &#39;Red&#39;&#39;s Lift&#39;, &#39;Bishop&#39;&#39;s Bowl&#39;, &#39;Trail&#39;, &#39;black&#39;), (14, &#39;Red&#39;&#39;s Lift&#39;, &#39;Amy&#39;&#39;s Ridge&#39;, &#39;Trail&#39;, &#39;blue&#39;), (15, &#39;Amy&#39;&#39;s Ridge&#39;, &#39;Grizzly Bowl&#39;, &#39;Trail&#39;, &#39;black&#39;), (16, &#39;Flathead Lift&#39;, &#39;Amy&#39;&#39;s Ridge&#39;, &#39;Trail&#39;, &#39;blue&#39;), (17, &#39;Jake&#39;&#39;s Lift&#39;, &#39;Wildwood Lift&#39;, &#39;Lift&#39;, NULL), (18, &#39;Wildwood Lift&#39;, &#39;Sidewinder&#39;, &#39;Trail&#39;, &#39;green&#39;), (19, &#39;Wildwood Lift&#39;, &#39;Brightside&#39;, &#39;Trail&#39;, &#39;blue&#39;), (20, &#39;Brightside&#39;, &#39;Moonrise&#39;, &#39;Trail&#39;, &#39;green&#39;), (21, &#39;Moonrise&#39;, &#39;Draw&#39;, &#39;Trail&#39;, &#39;green&#39;), (22, &#39;Moonrise&#39;, &#39;Lone Pine&#39;, &#39;Trail&#39;, &#39;blue&#39;), (23, &#39;Draw&#39;, &#39;Maverick&#39;, &#39;Trail&#39;, &#39;blue&#39;), (24, &#39;Draw&#39;, &#39;Broadway&#39;, &#39;Trail&#39;, &#39;green&#39;), (25, &#39;Broadway&#39;, &#39;Outlaw Trail&#39;, &#39;Trail&#39;, &#39;green&#39;), (26, &#39;Outlaw Trail&#39;, &#39;Center Aisle&#39;, &#39;Trail&#39;, &#39;green&#39;), (27, &#39;Center Aisle&#39;, &#39;Bandit&#39;, &#39;Trail&#39;, &#39;green&#39;), (28, &#39;Jake&#39;&#39;s Lift&#39;, &#39;Maverick&#39;, &#39;Trail&#39;, &#39;blue&#39;); That’s it, we just have 1 table called mountain_network and it has 28 records.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Advent of SQL 2025 Day 14: Ski Resort Paths",
+    "headline": "Advent of SQL 2025 Day 14: Ski Resort Paths",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/advent-of-sql-2025-day-14/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-28T15:30:00\u002b05:30",
+    "datePublished": "2025-12-28T15:30:00\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:49:51\u002b05:30",
+    
+    "keywords": ["sqlite","sql","advent-of-sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3043"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Advent of SQL 2025 Day 14: Ski Resort Paths
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-28T15:30:00&#43;05:30">December 28, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3043 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">15 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Advent of SQL, Day 14 - Ski Resort Paths
+    <div id="advent-of-sql-day-14---ski-resort-paths" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#advent-of-sql-day-14---ski-resort-paths" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Ok, almost to the penultimate day in the series. It is day 14 of Advent of SQL.</p>
+<p>Let&rsquo;s grab the SQL for the day.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> mountain_network;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> mountain_network (
+</span></span><span style="display:flex;"><span>    id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    from_node TEXT,
+</span></span><span style="display:flex;"><span>    to_node TEXT,
+</span></span><span style="display:flex;"><span>    node_type TEXT,    <span style="color:#75715e">-- &#39;Lift&#39; or &#39;Trail&#39;
+</span></span></span><span style="display:flex;"><span>    difficulty TEXT    <span style="color:#75715e">-- Only applicable for trails: &#39;green&#39;, &#39;blue&#39;, &#39;black&#39;, &#39;double_black&#39;
+</span></span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mountain_network (id, from_node, to_node, node_type, difficulty) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Outlaw Express&#39;</span>, <span style="color:#e6db74">&#39;Stairway Lift&#39;</span>, <span style="color:#e6db74">&#39;Lift&#39;</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Outlaw Express&#39;</span>, <span style="color:#e6db74">&#39;Top Gun Bowl&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Top Gun Bowl&#39;</span>, <span style="color:#e6db74">&#39;Top Gun&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Top Gun&#39;</span>, <span style="color:#e6db74">&#39;Montoya&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;Montoya&#39;</span>, <span style="color:#e6db74">&#39;Center Aisle&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;Center Aisle&#39;</span>, <span style="color:#e6db74">&#39;Lower Stampede&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;Stairway Lift&#39;</span>, <span style="color:#e6db74">&#39;Red&#39;&#39;s Lift&#39;</span>, <span style="color:#e6db74">&#39;Lift&#39;</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;Stairway Lift&#39;</span>, <span style="color:#e6db74">&#39;Broadway&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;Red&#39;&#39;s Lift&#39;</span>, <span style="color:#e6db74">&#39;Bearclaw&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;Bearclaw&#39;</span>, <span style="color:#e6db74">&#39;Last Chance&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#39;Last Chance&#39;</span>, <span style="color:#e6db74">&#39;Diamondback&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;Diamondback&#39;</span>, <span style="color:#e6db74">&#39;Broadway&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">13</span>, <span style="color:#e6db74">&#39;Red&#39;&#39;s Lift&#39;</span>, <span style="color:#e6db74">&#39;Bishop&#39;&#39;s Bowl&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;Red&#39;&#39;s Lift&#39;</span>, <span style="color:#e6db74">&#39;Amy&#39;&#39;s Ridge&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#39;Amy&#39;&#39;s Ridge&#39;</span>, <span style="color:#e6db74">&#39;Grizzly Bowl&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;Flathead Lift&#39;</span>, <span style="color:#e6db74">&#39;Amy&#39;&#39;s Ridge&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">17</span>, <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>, <span style="color:#e6db74">&#39;Wildwood Lift&#39;</span>, <span style="color:#e6db74">&#39;Lift&#39;</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;Wildwood Lift&#39;</span>, <span style="color:#e6db74">&#39;Sidewinder&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">19</span>, <span style="color:#e6db74">&#39;Wildwood Lift&#39;</span>, <span style="color:#e6db74">&#39;Brightside&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;Brightside&#39;</span>, <span style="color:#e6db74">&#39;Moonrise&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">21</span>, <span style="color:#e6db74">&#39;Moonrise&#39;</span>, <span style="color:#e6db74">&#39;Draw&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;Moonrise&#39;</span>, <span style="color:#e6db74">&#39;Lone Pine&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">23</span>, <span style="color:#e6db74">&#39;Draw&#39;</span>, <span style="color:#e6db74">&#39;Maverick&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">24</span>, <span style="color:#e6db74">&#39;Draw&#39;</span>, <span style="color:#e6db74">&#39;Broadway&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;Broadway&#39;</span>, <span style="color:#e6db74">&#39;Outlaw Trail&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">26</span>, <span style="color:#e6db74">&#39;Outlaw Trail&#39;</span>, <span style="color:#e6db74">&#39;Center Aisle&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">27</span>, <span style="color:#e6db74">&#39;Center Aisle&#39;</span>, <span style="color:#e6db74">&#39;Bandit&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>),
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>, <span style="color:#e6db74">&#39;Maverick&#39;</span>, <span style="color:#e6db74">&#39;Trail&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>);</span></span></code></pre></div></div>
+<p>That&rsquo;s it, we just have 1 table called <code>mountain_network</code> and it has <code>28</code> records.</p>
+<p>Let&rsquo;s look at the problem statement to check what we need to do to make sense of those 28 rows.</p>
+
+<h2 class="relative group">Problem
+    <div id="problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<blockquote><p>Find all the possible routes from Jake&rsquo;s Lift to Maverick. None of the possible routes will take more than 12 connections.</p>
+</blockquote><p>Oh! This is a graph like or network like problem.</p>
+<p>Ouch!</p>
+<p>Relational databases looks like they would be a good fit for these stuff, but if the data is just in the single table, there&rsquo;s not really much help.</p>
+<p>Let&rsquo;s see how we can think about it.</p>
+
+<h3 class="relative group">JOINs and UNIONS
+    <div id="joins-and-unions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#joins-and-unions" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We need to find all the routes from a start node(record) i.e. <code>Jake's Lift</code> and find all ways that lead to the node(record) i.e. <code>Maverick</code>. The table gives a list of edges i.e. from which node to which node there is a way or a trail or lift.</p>
+<p>So, we can do a simple select to check if the <code>from_node</code> has <code>Jake's Lift</code> and the <code>to_node</code> has <code>Maverick</code> right?</p>
+<p>But that would make it too long.</p>
+<p>Like we would have to look for 12 consecutive edges and branch off at each direction.</p>
+<p>For the first level it would look simple like this:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    mountain_network.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> mountain_network.to_node <span style="color:#66d9ef">AS</span> path, 
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">AS</span> connections
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
+</span></span><span style="display:flex;"><span>    mountain_network.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AND</span> mountain_network.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT mountain_network.from_node || &#39; -&gt; &#39; || mountain_network.to_node AS path, 1 AS connections
+</span></span><span style="display:flex;"><span>FROM mountain_network
+</span></span><span style="display:flex;"><span>WHERE mountain_network.from_node = &#39;Jake&#39;&#39;s Lift&#39; AND mountain_network.to_node = &#39;Maverick&#39;
+</span></span><span style="display:flex;"><span>   ...&gt; ;
+</span></span><span style="display:flex;"><span>+-------------------------+-------------+
+</span></span><span style="display:flex;"><span>|          path           | connections |
+</span></span><span style="display:flex;"><span>+-------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Maverick | 1           |
+</span></span><span style="display:flex;"><span>+-------------------------+-------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Luckily, we have one route directly from <code>Jake's Lift</code> to <code>Maverick</code>. But that might not be for all levels. Like we need to check then, from each of the start nodes that begin at <code>Jake's Lift</code>, then for all the nodes that begin at that then it branches of further till we have a dead end only at <code>Maverick</code>.</p>
+<p>Phew that&rsquo;s going to be a long one.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node, <span style="color:#ae81ff">2</span>                     <span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
+</span></span><span style="display:flex;"><span>    T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AND</span> T2.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>;</span></span></code></pre></div></div>
+<p>That is the first branch off from <code>Jake's Lift</code>. If we remove the <code>T2.to_node = 'Maverick'</code> you would see all nodes from the <code>Jake's Lift</code>, not necessarily ending at <code>Maverick</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#66d9ef">as</span> path,
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">as</span> connections
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT T1.from_node || &#39; -&gt; &#39; || T1.to_node || &#39; -&gt; &#39; || T2.to_node as path,
+</span></span><span style="display:flex;"><span> 2 as connections
+</span></span><span style="display:flex;"><span>FROM mountain_network T1
+</span></span><span style="display:flex;"><span>JOIN mountain_network T2 ON T1.to_node = T2.from_node
+</span></span><span style="display:flex;"><span>WHERE T1.from_node = &#39;Jake&#39;&#39;s Lift&#39;;
+</span></span><span style="display:flex;"><span>+--------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>|                    path                    | connections |
+</span></span><span style="display:flex;"><span>+--------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside | 2           |
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Sidewinder | 2           |
+</span></span><span style="display:flex;"><span>+--------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Similarly we can do it for 3 and 4, and till 12 connections.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#66d9ef">as</span> path,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">as</span> connections
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT T1.from_node || &#39; -&gt; &#39; || T1.to_node || &#39; -&gt; &#39; || T2.to_node || &#39; -&gt; &#39; || T3.to_node as path, 3 as connections
+</span></span><span style="display:flex;"><span>FROM mountain_network T1
+</span></span><span style="display:flex;"><span>JOIN mountain_network T2 ON T1.to_node = T2.from_node
+</span></span><span style="display:flex;"><span>JOIN mountain_network T3 ON T2.to_node = T3.from_node
+</span></span><span style="display:flex;"><span>WHERE T1.from_node = &#39;Jake&#39;&#39;s Lift&#39;
+</span></span><span style="display:flex;"><span>   ...&gt; ;
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>|                          path                          | connections |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise | 3           |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Yikes.</p>
+<p>That gives a long long query. I cannot write.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#66d9ef">AS</span> path, <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">AS</span> connections
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T1.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node, <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T2.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node, <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T3.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node, <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T4.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node, <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T5.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node, <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T6.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T7.to_node, <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T7 <span style="color:#66d9ef">ON</span> T6.to_node <span style="color:#f92672">=</span> T7.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T7.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T7.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T8.to_node, <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T7 <span style="color:#66d9ef">ON</span> T6.to_node <span style="color:#f92672">=</span> T7.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T8 <span style="color:#66d9ef">ON</span> T7.to_node <span style="color:#f92672">=</span> T8.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T8.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T7.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T8.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T9.to_node, <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T7 <span style="color:#66d9ef">ON</span> T6.to_node <span style="color:#f92672">=</span> T7.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T8 <span style="color:#66d9ef">ON</span> T7.to_node <span style="color:#f92672">=</span> T8.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T9 <span style="color:#66d9ef">ON</span> T8.to_node <span style="color:#f92672">=</span> T9.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T9.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T7.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T8.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T9.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T10.to_node, <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T7 <span style="color:#66d9ef">ON</span> T6.to_node <span style="color:#f92672">=</span> T7.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T8 <span style="color:#66d9ef">ON</span> T7.to_node <span style="color:#f92672">=</span> T8.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T9 <span style="color:#66d9ef">ON</span> T8.to_node <span style="color:#f92672">=</span> T9.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T10 <span style="color:#66d9ef">ON</span> T9.to_node <span style="color:#f92672">=</span> T10.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T10.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T7.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T8.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T9.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T10.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T11.to_node, <span style="color:#ae81ff">11</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T7 <span style="color:#66d9ef">ON</span> T6.to_node <span style="color:#f92672">=</span> T7.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T8 <span style="color:#66d9ef">ON</span> T7.to_node <span style="color:#f92672">=</span> T8.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T9 <span style="color:#66d9ef">ON</span> T8.to_node <span style="color:#f92672">=</span> T9.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T10 <span style="color:#66d9ef">ON</span> T9.to_node <span style="color:#f92672">=</span> T10.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T11 <span style="color:#66d9ef">ON</span> T10.to_node <span style="color:#f92672">=</span> T11.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T11.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> T1.from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T1.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T2.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T3.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T4.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T5.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T6.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T7.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T8.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T9.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T10.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T11.to_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> T12.to_node, <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> mountain_network T1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T2 <span style="color:#66d9ef">ON</span> T1.to_node <span style="color:#f92672">=</span> T2.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T3 <span style="color:#66d9ef">ON</span> T2.to_node <span style="color:#f92672">=</span> T3.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T4 <span style="color:#66d9ef">ON</span> T3.to_node <span style="color:#f92672">=</span> T4.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T5 <span style="color:#66d9ef">ON</span> T4.to_node <span style="color:#f92672">=</span> T5.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T6 <span style="color:#66d9ef">ON</span> T5.to_node <span style="color:#f92672">=</span> T6.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T7 <span style="color:#66d9ef">ON</span> T6.to_node <span style="color:#f92672">=</span> T7.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T8 <span style="color:#66d9ef">ON</span> T7.to_node <span style="color:#f92672">=</span> T8.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T9 <span style="color:#66d9ef">ON</span> T8.to_node <span style="color:#f92672">=</span> T9.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T10 <span style="color:#66d9ef">ON</span> T9.to_node <span style="color:#f92672">=</span> T10.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T11 <span style="color:#66d9ef">ON</span> T10.to_node <span style="color:#f92672">=</span> T11.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> mountain_network T12 <span style="color:#66d9ef">ON</span> T11.to_node <span style="color:#f92672">=</span> T12.from_node
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> T1.from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span> <span style="color:#66d9ef">AND</span> T12.to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>|                             path                             | connections |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Maverick                                      | 1           |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 5           |
+</span></span><span style="display:flex;"><span>| aw -&gt; Maverick                                               |             |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Ok, we get the result, but that looks like a terrifying query.</p>
+<p>Can we do better?</p>
+<p>I looked at the tutorial and we have something like <code>RECURSIVE CTE</code></p>
+<p>Wow!</p>
+<p>This is quite challenging to explain.</p>
+
+<h3 class="relative group">Recursive CTE
+    <div id="recursive-cte" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#recursive-cte" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can create a recursive CTE that draws the path until we have not found the stop node that is, <code>Maverick</code> and the number of connections is not more than <code>12</code>.</p>
+<p>So here&rsquo;s how it goes.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">RECURSIVE</span> ski_paths <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        from_node,
+</span></span><span style="display:flex;"><span>        to_node,
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">CAST</span>(from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> to_node <span style="color:#66d9ef">AS</span> TEXT) <span style="color:#66d9ef">AS</span> full_path,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">AS</span> connections
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> mountain_network
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        mn.from_node,
+</span></span><span style="display:flex;"><span>        mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.full_path <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.connections <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> ski_paths sp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> mountain_network mn <span style="color:#66d9ef">ON</span> sp.to_node <span style="color:#f92672">=</span> mn.from_node
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> sp.connections <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">AND</span> sp.to_node <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> full_path, connections
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> ski_paths
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> to_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> connections <span style="color:#66d9ef">ASC</span>;</span></span></code></pre></div></div>
+<p>We first define the base case i.e. what to select first. We get the first row where we start, the <code>Jake's Lift</code> and from there on we create a recursive select statement by referencing the CTE within it.</p>
+<p>The recursive bit is this one</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span> <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        mn.from_node,
+</span></span><span style="display:flex;"><span>        mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.full_path <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.connections <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> ski_paths sp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> mountain_network mn <span style="color:#66d9ef">ON</span> sp.to_node <span style="color:#f92672">=</span> mn.from_node
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> sp.connections <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">AND</span> sp.to_node <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span></span></span></code></pre></div></div>
+<p>We are referencing the CTE (table) within it as the recursive condition to select from the nodes where the end node or the <code>to_node</code> is not Maverick and connections haven&rsquo;t gone beyond <code>12</code>, we try to find the path.</p>
+<p>This would give us all the nodes.</p>
+<p>Let&rsquo;s see first, by checking the CTE as is.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">RECURSIVE</span> ski_paths <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        from_node,
+</span></span><span style="display:flex;"><span>        to_node,
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">CAST</span>(from_node <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> to_node <span style="color:#66d9ef">AS</span> TEXT) <span style="color:#66d9ef">AS</span> full_path,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">AS</span> connections
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> mountain_network
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> from_node <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jake&#39;&#39;s Lift&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        mn.from_node,
+</span></span><span style="display:flex;"><span>        mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.full_path <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; -&gt; &#39;</span> <span style="color:#f92672">||</span> mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.connections <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> ski_paths sp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> mountain_network mn <span style="color:#66d9ef">ON</span> sp.to_node <span style="color:#f92672">=</span> mn.from_node
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> sp.connections <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">AND</span> sp.to_node <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;Maverick&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> ski_paths;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH RECURSIVE ski_paths AS (
+</span></span><span style="display:flex;"><span>    SELECT
+</span></span><span style="display:flex;"><span>        from_node,
+</span></span><span style="display:flex;"><span>        to_node,
+</span></span><span style="display:flex;"><span>        CAST(from_node || &#39; -&gt; &#39; || to_node AS TEXT) AS full_path,
+</span></span><span style="display:flex;"><span>        1 AS connections
+</span></span><span style="display:flex;"><span>    FROM mountain_network
+</span></span><span style="display:flex;"><span>    WHERE from_node = &#39;Jake&#39;&#39;s Lift&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    UNION ALL
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    SELECT
+</span></span><span style="display:flex;"><span>        mn.from_node,
+</span></span><span style="display:flex;"><span>        mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.full_path || &#39; -&gt; &#39; || mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.connections + 1
+</span></span><span style="display:flex;"><span>    FROM ski_paths sp
+</span></span><span style="display:flex;"><span>    JOIN mountain_network mn ON sp.to_node = mn.from_node
+</span></span><span style="display:flex;"><span>    WHERE sp.connections &lt; 12
+</span></span><span style="display:flex;"><span>      AND sp.to_node != &#39;Maverick&#39;
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT * from ski_paths;
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>|   from_node   |    to_node     |                          full_path                           | connections |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift   | Wildwood Lift  | Jake&#39;s Lift -&gt; Wildwood Lift                                 | 1           |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift   | Maverick       | Jake&#39;s Lift -&gt; Maverick                                      | 1           |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Wildwood Lift | Brightside     | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside                   | 2           |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Wildwood Lift | Sidewinder     | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Sidewinder                   | 2           |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Brightside    | Moonrise       | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise       | 3           |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Moonrise      | Draw           | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 4           |
+</span></span><span style="display:flex;"><span>|               |                | aw                                                           |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Moonrise      | Lone Pine      | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Lo | 4           |
+</span></span><span style="display:flex;"><span>|               |                | ne Pine                                                      |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Draw          | Broadway       | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 5           |
+</span></span><span style="display:flex;"><span>|               |                | aw -&gt; Broadway                                               |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Draw          | Maverick       | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 5           |
+</span></span><span style="display:flex;"><span>|               |                | aw -&gt; Maverick                                               |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Broadway      | Outlaw Trail   | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 6           |
+</span></span><span style="display:flex;"><span>|               |                | aw -&gt; Broadway -&gt; Outlaw Trail                               |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Outlaw Trail  | Center Aisle   | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 7           |
+</span></span><span style="display:flex;"><span>|               |                | aw -&gt; Broadway -&gt; Outlaw Trail -&gt; Center Aisle               |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Center Aisle  | Bandit         | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 8           |
+</span></span><span style="display:flex;"><span>|               |                | aw -&gt; Broadway -&gt; Outlaw Trail -&gt; Center Aisle -&gt; Bandit     |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Center Aisle  | Lower Stampede | Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 8           |
+</span></span><span style="display:flex;"><span>|               |                | aw -&gt; Broadway -&gt; Outlaw Trail -&gt; Center Aisle -&gt; Lower Stam |             |
+</span></span><span style="display:flex;"><span>|               |                | pede                                                         |             |
+</span></span><span style="display:flex;"><span>+---------------+----------------+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>You can see we have got quite a lot of paths, this are all the paths that start from <code>Jake's Lift</code> and have less than <code>12</code> connections.</p>
+<p>So, now we can simply filter with the <code>WHERE</code> clause in the case where the <code>to_node = 'Maverick'</code> and we would get the result.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH RECURSIVE ski_paths AS (
+</span></span><span style="display:flex;"><span>    SELECT
+</span></span><span style="display:flex;"><span>        from_node,
+</span></span><span style="display:flex;"><span>        to_node,
+</span></span><span style="display:flex;"><span>        CAST(from_node || &#39; -&gt; &#39; || to_node AS TEXT) AS full_path,
+</span></span><span style="display:flex;"><span>        1 AS connections
+</span></span><span style="display:flex;"><span>    FROM mountain_network
+</span></span><span style="display:flex;"><span>    WHERE from_node = &#39;Jake&#39;&#39;s Lift&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    UNION ALL
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    SELECT
+</span></span><span style="display:flex;"><span>        mn.from_node,
+</span></span><span style="display:flex;"><span>        mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.full_path || &#39; -&gt; &#39; || mn.to_node,
+</span></span><span style="display:flex;"><span>        sp.connections + 1
+</span></span><span style="display:flex;"><span>    FROM ski_paths sp
+</span></span><span style="display:flex;"><span>    JOIN mountain_network mn ON sp.to_node = mn.from_node
+</span></span><span style="display:flex;"><span>    WHERE sp.connections &lt; 12
+</span></span><span style="display:flex;"><span>      AND sp.to_node != &#39;Maverick&#39;
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT full_path, connections
+</span></span><span style="display:flex;"><span>FROM ski_paths
+</span></span><span style="display:flex;"><span>WHERE to_node = &#39;Maverick&#39;
+</span></span><span style="display:flex;"><span>ORDER BY connections ASC;
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>|                          full_path                           | connections |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Maverick                                      | 1           |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>| Jake&#39;s Lift -&gt; Wildwood Lift -&gt; Brightside -&gt; Moonrise -&gt; Dr | 5           |
+</span></span><span style="display:flex;"><span>| aw -&gt; Maverick                                               |             |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------+-------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Ok, that gave the result correctly.</p>
+<p>And this is it!</p>
+<p>Sweet problem to learn about Recursive CTE!</p>
+<p>Off to the final day of advent of SQL 2025!</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-12-28-advent-of-sql-day-14-ski-resort-paths.md"
+          data-oid-likes="likes_posts/2025-12-28-advent-of-sql-day-14-ski-resort-paths.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-13/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Advent of SQL 2025 Day 13: XML Travel Manifests
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-27T20:30:00&#43;05:30">December 27, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-15/">
+              <span class="leading-6">
+                Advent of SQL 2025 Day 15: Confirmation Phrase Dispatches&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-28T20:30:00&#43;05:30">December 28, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
