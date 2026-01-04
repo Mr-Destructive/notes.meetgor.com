@@ -1,9 +1,9 @@
 ---
+type: til
 title: "Golang: Test Output JSON"
 description: "Obtain JSON output of test results in Golang"
 status: published
 slug: golang-test-output-json
-type: post
 tags: ["go",]
 date: 2024-01-01 21:30:00
 ---

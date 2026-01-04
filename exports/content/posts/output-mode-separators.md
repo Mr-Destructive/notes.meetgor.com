@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLite dot commands: Output mode separator command"
 slug: sqlite-mode-dot-command-separators
-type: post
 date: 2025-09-02
 tags: ["sqlite", "sql"]
 ---

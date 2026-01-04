@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-default-column-constraint
-type: post
 title: 'SQLite SQL: DEFAULT column constraint'
 date: "2025-09-10"
 tags: ["sqlite", "sql"]

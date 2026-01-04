@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLite SQL: Create Table with column types"
 slug: sqlite-create-table-column-types
-type: post
 date: 2025-09-06
 tags: ["sqlite", "sql"]
 ---

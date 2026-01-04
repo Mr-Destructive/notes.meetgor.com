@@ -1,8 +1,8 @@
 ---
+type: "newsletter"
 title: "Techstructive Weekly #3"
 date: 2024-08-17
 slug: "techstructive-weekly-3"
-type: post
 ---
 
 ## Techstructive Weekly #3

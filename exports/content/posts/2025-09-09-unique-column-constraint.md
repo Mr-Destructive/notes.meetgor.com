@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-unique-column-constraint
-type: post
 title: 'SQLite SQL: UNIQUE column constraint'
 date: "2025-09-09"
 tags: ["sqlite", "sql"]

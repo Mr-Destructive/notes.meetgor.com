@@ -1,10 +1,10 @@
 ---
+type: "til"
 title: "Autoformat Python file with Black after saving in Vim"
 description: "Automatically format python code in the current file after saving the file in Vim."
 date: 2022-03-29 20:40:53
 status: published
 slug: vim-python-black-autoformat
-type: post
 tags: ['vim','python']
 ---
 

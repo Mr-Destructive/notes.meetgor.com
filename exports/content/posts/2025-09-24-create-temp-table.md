@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-create-temp-table
-type: post
 title: "SQLite SQL: Create Temporary Table"
 date: "2025-09-24"
 tags: ["sqlite", "sql"]

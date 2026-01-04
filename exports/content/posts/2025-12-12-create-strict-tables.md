@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLITE SQL: Create Table with STRICT Option"
 slug: "sqlite-create-strict-table"
-type: post
 date: 2025-12-12
 tags: ["sqlite", "sql"]
 ---

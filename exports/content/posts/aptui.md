@@ -1,4 +1,5 @@
 ---
+type: projects
 title: APTUI
 description: "A terminal interface for testing and working with APIs and web requests."
 date: 2022-06-22 17:00:00

@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-foreign-key-table-constraint
-type: post
 title: 'SQLite SQL: Foreign KEY table constraint'
 date: "2025-09-15"
 tags: ["sqlite", "sql"]

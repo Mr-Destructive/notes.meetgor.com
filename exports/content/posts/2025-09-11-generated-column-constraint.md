@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-generated-column-constraint
-type: post
 title: 'SQLite SQL: GENERATED column constraint'
 date: "2025-09-11"
 tags: ["sqlite", "sql"]

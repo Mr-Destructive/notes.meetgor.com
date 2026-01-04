@@ -1,5 +1,6 @@
 ---
 title: Test after resolving merge conflicts
+type: thoughts
 post_dir: thoughts
 date: 2025-10-17
 status: published

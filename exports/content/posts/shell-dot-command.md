@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLite dot commands: run system shell commands"
 slug: sqlite-shell-dot-command
-type: post
 date: 2025-08-30
 tags: ["sqlite", "sql"]
 ---

@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLite SQL: Create Table Basic"
 slug: sqlite-create-table
-type: post
 date: 2025-09-04
 tags: ["sqlite", "sql"]
 ---

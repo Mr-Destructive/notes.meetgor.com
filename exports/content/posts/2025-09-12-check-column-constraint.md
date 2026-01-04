@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-check-column-constraint
-type: post
 title: 'SQLite SQL: CHECK column constraint'
 date: "2025-09-12"
 tags: ["sqlite", "sql"]

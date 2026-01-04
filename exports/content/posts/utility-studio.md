@@ -1,4 +1,5 @@
 ---
+type: projects
 title: Utility-Studio
 date: 2023-07-14 22:00:00
 description: "A single source for text, youtube and link extraction and summarization."

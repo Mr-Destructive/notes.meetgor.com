@@ -1,4 +1,5 @@
 ---
+type: projects
 title: DJ Notes
 date: 2022-06-25 16:44:59
 description: "A simple note app with core django and postgres"

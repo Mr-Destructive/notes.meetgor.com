@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "Advent of SQL 2025 Day 5: EchoTrack Wrapped"
 slug: "advent-of-sql-2025-day-5"
-type: post
 date: 2025-12-20 15:30 +0530
 series: ["advent-of-sql-2025"]
 tags: ["sqlite", "sql", "advent-of-sql"]

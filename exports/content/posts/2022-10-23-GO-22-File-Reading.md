@@ -49,6 +49,7 @@ func main() {
 $ go run main.go                                                                                                                                                         
 2022/10/23 22:39:11 Golang is a programming language.                                                                                                                    
 created: 2007                                                                                                                                                            
+type:static 
 ```
 
 So, under the hood here, we have text as a slice of bytes. We can iterate over the text as a slice and get the character by character-in the content of the file. Though we don't directly interact with the file content, we are storing it in a variable. In technical words, the file is directly loaded into the memory at once. We thereby return a single string object containing the content of the file.

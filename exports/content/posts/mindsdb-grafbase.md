@@ -1,4 +1,5 @@
 ---
+type: projects
 title: MindsDB GraphQL API (Grafbase)
 date: 2023-08-13 20:00:00
 description: "Query MindsDB API with Grafbase as a GraphQL endpoint"

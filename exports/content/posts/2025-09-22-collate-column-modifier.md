@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-collate-column-modifier
-type: post
 title: "SQLite SQL: Collate Column Modifier"
 date: "2025-09-22"
 tags: ["sqlite", "sql"]

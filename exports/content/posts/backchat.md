@@ -1,4 +1,5 @@
 ---
+type: projects
 title: BackChat
 date: 2022-01-31 12:00:00
 description: "A simple chat app with django-channels and HTMX"

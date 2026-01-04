@@ -1,9 +1,9 @@
 ---
+type: til
 title: "Golang: Sort Package Introduction"
 description: "Understanding the fundamentals of the sort package in Golang. Sorting integers, slices, struct values, maps"
 status: published
 slug: golang-sort-package-basic
-type: post
 tags: ["go",]
 date: 2024-01-15 22:30:00
 ---

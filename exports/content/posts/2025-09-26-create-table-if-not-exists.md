@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-create-table-if-not-exists
-type: post
 title: "SQLite SQL: Create Table If Not Exists"
 date: "2025-09-26"
 tags: ["sqlite", "sql"]

@@ -1,9 +1,9 @@
 ---
+type: til
 title: "Turn Python dictionary into a neat CSV table"
 description: "Exploring how to write python dict/key-value pairs and a table-like structure to a CSV file."
 status: published
 slug: python-dict-to-csv-table
-type: post
 tags: ["python",]
 date: 2024-03-20 22:30:00
 ---

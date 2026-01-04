@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLite SQL: Create Table Bare Bones Table"
 slug: sqlite-create-table-bare-bones-table
-type: post
 date: 2025-09-05
 tags: ["sqlite", "sql"]
 ---

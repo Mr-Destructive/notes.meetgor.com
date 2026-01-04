@@ -1,4 +1,5 @@
 ---
+type: projects
 title: Google Generative AI PaLM2 Golang SDK(Client)
 date: 2023-06-22 15:00:00
 description: "Unofficial go SDK for Google Generative AI LLM PaLM2 API."

@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-self-join-relations
-type: post
 title: "SQLite SQL: Self Join Relations"
 date: "2025-09-17"
 tags: ["sqlite", "sql"]

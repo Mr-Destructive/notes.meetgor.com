@@ -1,6 +1,6 @@
 ---
+type: sqlog
 slug: sqlite-many-to-many-relations
-type: post
 title: "SQLite SQL: Many to Many Relations"
 date: "2025-09-18"
 tags: ["sqlite", "sql"]

@@ -1,7 +1,7 @@
 ---
+type: "sqlog"
 title: "SQLite dot commands: Output mode"
 slug: sqlite-mode-dot-command
-type: post
 date: 2025-09-01
 tags: ["sqlite", "sql"]
 ---

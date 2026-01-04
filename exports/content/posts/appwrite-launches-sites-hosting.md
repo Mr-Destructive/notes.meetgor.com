@@ -1,4 +1,5 @@
 ---
+type: thoughts
 date: 2025-05-19
 status: published
 title: "Appwrite is now Full-Stack-as-a-Service with Sites"

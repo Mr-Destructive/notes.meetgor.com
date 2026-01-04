@@ -1,4 +1,5 @@
 ---
+type: projects
 title: Hugging Chat Golang SDK(Client)
 date: 2023-05-17 19:00:00
 description: "Unofficial Go SDK for Hugging Chat."

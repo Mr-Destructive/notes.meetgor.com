@@ -1,4 +1,5 @@
 ---
+type: projects
 title: Lingo
 date: 2022-05-27 17:00:00
 description: "A simple link-tree clone in Golang"

@@ -1,4 +1,5 @@
 ---
+type: projects
 title: MindsDB Golang SDK(Client)
 date: 2023-04-08 10:00:00
 description: "Unofficial go SDK for MindsDB API."

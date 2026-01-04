@@ -1,4 +1,5 @@
 ---
+type: "newsletter"
 title: "Techstructive Weekly #20"
 date: 2024-12-14
 ---
