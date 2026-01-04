@@ -1,6 +1,6 @@
 ---
 title: "Updated Article 1767442805"
-date: 2026-01-03
+date: 2026-01-03T12:20:00Z
 slug: test-article-1767442805
 draft: false
 type: article
