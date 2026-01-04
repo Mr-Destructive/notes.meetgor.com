@@ -1,43 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Work on Notes</title>
-    <link>/type/work/</link>
-    <description>Recent content in Work on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>© 2026 Meet Gor</copyright>
-    <lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/type/work/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Docsumo</title>
-      <link>/posts/docsumo/</link>
-      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/docsumo/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Junior Backend Engineer - &lt;a href=&#34;https://www.docsumo.com/&#34;  target=&#34;_blank&#34;&gt;Docsumo&lt;/a&gt;&#xA;    &lt;div id=&#34;junior-backend-engineer---docsumo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#junior-backend-engineer---docsumo&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;June 2024 - Present&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Maintaining and improving APIs for document extraction&lt;/li&gt;&#xA;&lt;li&gt;Research and Experimentation for better table extraction from documents&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Python Intern - &lt;a href=&#34;https://www.docsumo.com/&#34;  target=&#34;_blank&#34;&gt;Docsumo&lt;/a&gt;&#xA;    &lt;div id=&#34;python-intern---docsumo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#python-intern---docsumo&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;November 2023 - June 2024&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Developed fraud detection algorithms for bank statement analysis.&lt;/li&gt;&#xA;&lt;li&gt;Built analytics features for banking clients.&lt;/li&gt;&#xA;&lt;li&gt;Collaborated with the R&amp;amp;D team to enhance security features.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Solar Labs</title>
-      <link>/posts/solar-labs/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/solar-labs/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Backend Developer Intern - &lt;a href=&#34;https://www.thesolarlabs.com/&#34;  target=&#34;_blank&#34;&gt;The Solar Labs&lt;/a&gt;&#xA;    &lt;div id=&#34;backend-developer-intern---the-solar-labs&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#backend-developer-intern---the-solar-labs&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;July 2022 - April 2023&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Developed REST APIs using Python and Django/DRF.&lt;/li&gt;&#xA;&lt;li&gt;Worked on backend services and database optimization.&lt;/li&gt;&#xA;&lt;li&gt;Utilized Azure Pipelines for continuous integration and deployment.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>GeeksForGeeks</title>
-      <link>/posts/geeks-for-geeks/</link>
-      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/geeks-for-geeks/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Technical Content Writer - &lt;a href=&#34;https://www.geeksforgeeks.org/&#34;  target=&#34;_blank&#34;&gt;GeeksForGeeks&lt;/a&gt;&#xA;    &lt;div id=&#34;technical-content-writer---geeksforgeeks&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#technical-content-writer---geeksforgeeks&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;June 2021 - September 2021&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Authored 60+ technical articles on topics like shell scripting, Linux, and web development.&lt;/li&gt;&#xA;&lt;li&gt;Contributed to tutorials and educational resources for the programming community.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Work on Notes</title><link>/type/work/</link><description>Recent content in Work on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/type/work/index.xml" rel="self" type="application/rss+xml"/><item><title>Docsumo</title><link>/posts/docsumo/</link><pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate><guid>/posts/docsumo/</guid><description>&lt;h3 id="junior-backend-engineer---docsumo"&gt;Junior Backend Engineer - &lt;a href="https://www.docsumo.com/"&gt;Docsumo&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;June 2024 - Present&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintaining and improving APIs for document extraction&lt;/li&gt;
+&lt;li&gt;Research and Experimentation for better table extraction from documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="python-intern---docsumo"&gt;Python Intern - &lt;a href="https://www.docsumo.com/"&gt;Docsumo&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;November 2023 - June 2024&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed fraud detection algorithms for bank statement analysis.&lt;/li&gt;
+&lt;li&gt;Built analytics features for banking clients.&lt;/li&gt;
+&lt;li&gt;Collaborated with the R&amp;amp;D team to enhance security features.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Solar Labs</title><link>/posts/solar-labs/</link><pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate><guid>/posts/solar-labs/</guid><description>&lt;h3 id="backend-developer-intern---the-solar-labs"&gt;Backend Developer Intern - &lt;a href="https://www.thesolarlabs.com/"&gt;The Solar Labs&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;July 2022 - April 2023&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed REST APIs using Python and Django/DRF.&lt;/li&gt;
+&lt;li&gt;Worked on backend services and database optimization.&lt;/li&gt;
+&lt;li&gt;Utilized Azure Pipelines for continuous integration and deployment.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GeeksForGeeks</title><link>/posts/geeks-for-geeks/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/geeks-for-geeks/</guid><description>&lt;h3 id="technical-content-writer---geeksforgeeks"&gt;Technical Content Writer - &lt;a href="https://www.geeksforgeeks.org/"&gt;GeeksForGeeks&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;June 2021 - September 2021&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authored 60+ technical articles on topics like shell scripting, Linux, and web development.&lt;/li&gt;
+&lt;li&gt;Contributed to tutorials and educational resources for the programming community.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
