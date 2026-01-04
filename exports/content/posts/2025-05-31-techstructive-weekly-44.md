@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-05-31","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #44","type":"newsletter", "slug": "techstructive-weekly-44"}
+---
+type: newsletter
+title: "Techstructive Weekly #44"
+date: 2025-05-31T00:00:00
+slug: "techstructive-weekly-44"
+---
 
 ## Week #44
 
@@ -131,10 +136,10 @@ Let’s try to wrap our heads around these questions, since we need sometime and
 
 That’s it from this 44th edition of my weekly learning. I hope you enjoyed it, and leave comments on what you think about some of my takes or any feedback.
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

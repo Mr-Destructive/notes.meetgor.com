@@ -1,11 +1,12 @@
-{
-    "type": "til",
-    "title": "Dockerize a Django project",
-    "date": "2022-03-02 19:12:51",
-    "status": "published",
-    "tags": ["django", "docker"],
-    "slug": "dockerize-django-prj"
-}
+---
+type: til
+title: "Dockerize a Django project"
+date: 2022-03-02T19:12:51
+slug: "dockerize-django-prj"
+tags:
+  - django
+  - docker
+---
 
 ## Dockerize a Django project
 
@@ -71,7 +72,7 @@ docker run -p 8000:8000 django-app
 
 ![Create Container](https://res.cloudinary.com/techstructive-blog/image/upload/v1646231023/blog-media/yneuz46burorz4b5vzp4.png)
 
-You can use any port like `3000` or `4000` on your local system by changing the first port number as `3000:8000` and so on. So, the first port number is the local system's port number and the port number followed by a `:` is the port number for the environment inside the container of the django project. The container port is the same which we have `exposed` while creating the image. You can now go to [127.0.0.1:8000](127.0.0.1:8000) or your chosen port in your local environment and see the django app running. 
+You can use any port like `3000` or `4000` on your local system by changing the first port number as `3000:8000` and so on. So, the first port number is the local system's port number and the port number followed by a `:` is the port number for the environment inside the container of the django project. The container port is the same which we have `exposed` while creating the image. You can now go to [127.0.0.1:8000](http://127.0.0.1:8000) or your chosen port in your local environment and see the django app running. 
 
 If you are using a Docker as a Virtual Machine, you need to find the IP-address of that Virtual-Machine(`docker-machine ip`) and use that instead of `localhost` or `127.0.0.1`. 
 
@@ -95,4 +96,3 @@ docker rmi -f <image-id>
 ```
 
   So, we now have a image of our Django project, this image can be used by anyone inside a docker environment and thus creating much more easier to test/work on a given project irrespective of the system is being used.
-

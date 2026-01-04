@@ -1,11 +1,9 @@
-{
-  "title": "Zellij Open Scrollback Edit mode",
-  "post_dir": "til",
-  "type": "til",
-  "status": "published",
-  "slug": "zellij-open-scrollback-edit-mode",
-  "date": "2025-03-20"
-}
+---
+type: til
+title: "Zellij Open Scrollback Edit mode"
+date: 2025-03-20T00:00:00
+slug: "zellij-open-scrollback-edit-mode"
+---
 
 I was looking at a long list of logs, (debugging of course). 
 

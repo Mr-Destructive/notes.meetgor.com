@@ -1,0 +1,1212 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>BASH Scripting Guide - PART - 3 &middot; Notes</title>
+    <meta name="title" content="BASH Scripting Guide - PART - 3 &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="bash,">
+  
+  
+  
+  <link rel="canonical" href="/posts/bash-guide-p3/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/bash-guide-p3/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="BASH Scripting Guide - PART - 3">
+  <meta property="og:description" content="Bash or shell won’t be much popular and powerful if they didn’t have some tools and utilities baked in. But even further they are supported natively in Bash, which just makes every task and challenge quite hassle-free to deal with. In this part of the series, I’ll try to cover an overview of some quite powerful and robust tools and utilities in Bash(shell in general) and also some of the advanced topics like dictionaries and positional parameters. Enough talk let’s dive in.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-07-12T23:16:13+05:30">
+    <meta property="article:modified_time" content="2026-01-03T21:39:39+05:30">
+    <meta property="article:tag" content="Bash">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BASH Scripting Guide - PART - 3">
+  <meta name="twitter:description" content="Bash or shell won’t be much popular and powerful if they didn’t have some tools and utilities baked in. But even further they are supported natively in Bash, which just makes every task and challenge quite hassle-free to deal with. In this part of the series, I’ll try to cover an overview of some quite powerful and robust tools and utilities in Bash(shell in general) and also some of the advanced topics like dictionaries and positional parameters. Enough talk let’s dive in.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "BASH Scripting Guide - PART - 3",
+    "headline": "BASH Scripting Guide - PART - 3",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/bash-guide-p3/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-07-12T23:16:13\u002b05:30",
+    "datePublished": "2021-07-12T23:16:13\u002b05:30",
+    
+    "dateModified": "2026-01-03T21:39:39\u002b05:30",
+    
+    "keywords": ["bash"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2472"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        BASH Scripting Guide - PART - 3
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-07-12T23:16:13&#43;05:30">July 12, 2021</time><span class="px-2 text-primary-500">&middot;</span><span>2472 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          <p>Bash or shell won&rsquo;t be much popular and powerful if they didn&rsquo;t have some tools and utilities baked in. But even further they are supported natively in Bash, which just makes every task and challenge quite hassle-free to deal with. In this part of the series, I&rsquo;ll try to cover an overview of some quite powerful and robust tools and utilities in Bash(shell in general) and also some of the advanced topics like dictionaries and positional parameters. Enough talk let&rsquo;s dive in.</p>
+<p>The topics to be covered in this part include the following:</p>
+<ul>
+<li>Hash tables/dictionaries in BASH</li>
+<li>Positional parameters</li>
+<li>Aliases in BASH</li>
+<li>Some Tools and utilities
+<ul>
+<li>grep/sed/awk</li>
+<li>cat/tac/head/tail</li>
+<li>cURL</li>
+<li>find</li>
+<li>bc</li>
+<li>wc</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">Bash dictionaries
+    <div id="bash-dictionaries" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bash-dictionaries" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Bash dictionaries or hash tables are just like any other hash tables or keymaps in other programming languages. Bash dictionaries are quite similar to arrays but they have a key instead of the index(0,1,2&hellip;) and a value just like arrays. This can be quite useful for storing passwords with emails or usernames or any other way in which a value can be accessed only via a unique key.</p>
+<p>To declare a dictionary/ hash table, we can simply write <code>declare -A name</code>, this will declare an empty hash map for us. Further, we can populate the hash map with keys and values using the same syntax as of array just instead of numbers we can also have strings.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>declare -A fruits
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;yellow&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;green&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>read -p <span style="color:#e6db74">&#34;Enter the name of fruit : &#34;</span> name 
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;The fruit is </span>$name<span style="color:#e6db74"> and its color is </span><span style="color:#e6db74">${</span>fruits[$name]<span style="color:#e6db74">}</span><span style="color:#e6db74"> &#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626167875237/A2TxYPNoS.png"
+    ></figure>
+</p>
+<p>The above example depicts a way to declare, define and access the key values in a dictionary. The example may look silly but you get the idea. We can also access every key or value using the <code>@</code> variable and access the number of key-value pairs using the <code>#</code> variable just like an array.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>declare -A fruits
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;yellow&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;green&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>!fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74"> : </span><span style="color:#e6db74">${</span>fruits[$i]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">${#</span>fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> key-value pairs.&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626171398570/14jJl2eFs.png"
+    ></figure>
+</p>
+<p>OK, this is very tricky they are the same variables but used slightly differently. Firstly in the range-based for loop <code>${!fruits[@]}</code>, focus on the <code>!</code> before the hash table name, this will expand(depict) the hash map&rsquo;s keys. This is used to access every key from the hash table and we can also see <code>#</code> at the beginning of the hash map name as it is used to represent the entire hash map further in the <code>{#fruits[@]}</code> we can also use <code>{#fruits[*]}</code>.  Inside the for loop, <code>i</code> will be the key, and <code>{fruits[$i]}</code> will be the value for that <code>i</code> th key.</p>
+<p>Also, you can notice the bash interpreter automatically arranges the map in the alphabetical order of the values and not keys. This is quite a neat little feature that can come in handy a lot of times.</p>
+<p>If you want to delete or add any key-value pairs we can do that by the following commands:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>declare -A fruits
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;yellow&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;green&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>!fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74"> : </span><span style="color:#e6db74">${</span>fruits[$i]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">${#</span>fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> key-value pairs.&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>unset fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">]</span> 
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">${#</span>fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> key-value pairs.&#34;</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;strawberry&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;pink&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>!fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74"> : </span><span style="color:#e6db74">${</span>fruits[$i]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">${#</span>fruits[@]<span style="color:#e6db74">}</span><span style="color:#e6db74"> key-value pairs.&#34;</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626172120966/yCeXpaM9w.png"
+    ></figure>
+</p>
+<p>The above code example is a bit complex but easy enough to understand. We can delete the key-value pair using the unset command and pass in the key along with the hash map name. We can create a key-value pair by simple command as depicted in the above example. This was a basic overview of hash maps/dictionaries in BASH.</p>
+
+<h2 class="relative group">Positional parameters
+    <div id="positional-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#positional-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We often use user input from within the script but there is another way to pass in parameters outside of the script using positional parameters. It basically allows us to pass in arguments or parameters from the command prompt/ shell and inside of the script, we can access them via Positional Parameters ( $1, $2, $3&hellip;.$9, ${10} and so on).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;first parameter : &#34;</span> $1
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;second parameter : &#34;</span> $2
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;eleventh parameter : &#34;</span> <span style="color:#e6db74">${</span>11<span style="color:#e6db74">}</span></span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626159559317/XSyVwkC9U.png"
+    ></figure>
+</p>
+<p>You can see from the above script we have passed the parameters from the command line just after typing the filename. The positional parameter $0 is the file name and from 1 onwards the parameters are optional to run if only your script needs any parameters or input to work with. The numbers are just random and just used for demonstration. The 11th parameter or double-digit parameter starting from 10 onwards, you need to encapsulate the number in {curly braces}<code>${number}</code> because it won&rsquo;t interpret <code>$10</code> or any other number as just <code>$1</code> and print 0.</p>
+<p>So we can pass a list of parameters that should be space-separated. We can pass any relevant information such as a string, number, or file names as well.</p>
+<p>If we want to access all the parameters passed to the script, we can use <code>@</code> variable. You may know this symbol from the array section of part-II, it is used to access every element in the array. But here it is used to access every parameter passed to the script just behaving like a list of values.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;The parameters passed are: &#34;</span> $@</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626160205206/eH6BD1r_Yu.png"
+    ></figure>
+</p>
+<p>To get the number of the parameters passed to the script, we can use <code>#</code> variable. This is also a variable used in the array section for accessing the number of elements in the array, in this case, the number of parameters in the list.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;The parameters passed are: &#34;</span> $#</span></span></code></pre></div></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626160630991/jVvJqtCqs.png"
+    ></figure>
+</p>
+<p>Positional parameters allow to not take explicit input from the user from the script. This might not be used for the simple scripts but for administration purposes for the admins and users who know what does the script needs and it allows them to pass in arguments without designing the input system.</p>
+
+<h2 class="relative group">Bash aliases
+    <div id="bash-aliases" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bash-aliases" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Bash aliases are a great way of reducing the command length and making it much easier to type and work with the scripts or any development-related work. Alias is a file called bash_aliases inside the .bashrc folder that contains our shortcut commands, it has a particular order to map certain commands with others.</p>
+<p>Let&rsquo;s see what is an alias first and then we&rsquo;ll see how to set it up.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>alias cdc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd C:/Users/acer/Desktop/New\ folder/Code/&#39;</span></span></span></code></pre></div></div>
+<p>This will make it viable to just type cdc and I will be in this directory instead of printing all of the jargon. The command we need to use to replace the big command is <code>cdc</code>. The right command is the variable assigned the command and the left or its value is the command to be replaced with it.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="shalias.gif"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626163036098/lDwlSdiry.gif"
+    ></figure>
+</p>
+<p>This command will definitely defer on your machine and OS as the filesystems are different in each major operating system. We can quickly make other such alias or shortcuts so to speak for making the development process faster and efficient.</p>
+<p>Now let us see how we set up this environment for bash alias, it&rsquo;s quite straightforward. You need to create a hidden file named &ldquo;bashrc&rdquo; i.e the file name will be <code>.bashrc</code>. This file has to be in the root directory (the folder to which bash defaults). I do not mean the <code>root</code> directory in Linux but the repository in which your bash interpreter opens. Once you have created the file put any alias in the file and source the file using the command:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .bashrc</span></span></code></pre></div></div>
+<p>And that would do the trick, you can now test your macro or shortcut by opening a new instance of the terminal. If this doesn&rsquo;t work for you, then you can check  <a href="https://opensource.com/article/19/7/bash-aliases"  target="_blank">this article</a>  for a broader understanding of the setup.</p>
+
+<h2 class="relative group">Bash tools &amp; utilities
+    <div id="bash-tools--utilities" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bash-tools--utilities" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>What would you call BASH without grep or sed man! It&rsquo;s a sad life:( BASH comes with some absolutely powerful and handy tools and utilities such as grep, sed, awk, at, wc, find, tar, gzip, which, make, ping, cURL, wget, ssh, &hellip;. my words there is an unstoppable long list. Really they are quite important and lay the foundation for some quite complex tasks. Some web servers can become redundant if some of the tools went missing. Let us find why they are so powerful.</p>
+
+<h3 class="relative group">grep
+    <div id="grep" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grep" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>GREP or global regular expression print is a tool or command that can find patterns using regular expressions in files/strings or any other piece of data. It&rsquo;s not just printing or searching for the text, besides all that it can also edit the file and store the output in the desired file or any variable by proving some arguments to it. Grep supports Pearl&rsquo;s regular expression as well. There is a lot of customization options and arguments available in grep that can just do anything. It becomes an irreplaceable tool for some complex tasks.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626179054053/9ttkV-MZZ.png"
+    ></figure>
+</p>
+<p>The above code finds the pattern &ldquo;more text&rdquo; in the file specified and prints the line to the screen, but we can modify the output we want, extract the output in a file and do all kinds of wizardry with this tool. This is just a basic, to get started example but trust me it&rsquo;s more than you think, this tool is used widely for web scrapping and pattern matching in quite a lot of use cases.</p>
+
+<h3 class="relative group">sed
+    <div id="sed" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sed" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>SED or stream editor is another beast in BASH&rsquo;s toolkit, this is just a flawless tool. No words for this. This is a great tool but still underrated. This can actually edit the text inside the terminal, no graphical environment, no interface at all just commands, but it can do what a huge text editor can&rsquo;t! Save time, just edit text without opening anything except a terminal, becomes unbeatable in large files. This is surely a tiny little application that can skyrocket the efficiency development process.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626179410079/BkvdAqkfDS.png"
+    ></figure>
+</p>
+<p>The above example replaces the word <code>more</code> with <code>less</code> using the sed command if you type 3g or nth line preceded by g, you will replace the word on the nth line only. In this case, only<code>g</code> will replace every occurrence of the word.<br>
+This is again a basic example of a sed command, its more if you go deeper, its more than a tool, its kind of a text-editor for wizards ;)</p>
+
+<h3 class="relative group">awk
+    <div id="awk" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#awk" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>awk or Aho, Weinberger, and Kernighan XD are the names of the developers of this application. This is another mind-blowing tool that can programmatically do a lot of stuff. This is like a programming language to a whole new level that can extrapolate and extract data from files and other forms of data. This is quite a great option if you want to quite neatly do something. It has great support libraries and functions that can even perform complex mathematical and scientific operations.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626180322400/hWkEVhPl_.png"
+    ></figure>
+</p>
+<p>These are the topics for separate articles because it is insufficient to explain everything at once.</p>
+
+<h3 class="relative group">cat / tac / head / tail
+    <div id="cat--tac--head--tail" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cat--tac--head--tail" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>CAT or concatenate is a tool used for printing out files, create files, sorting the contents of files, editing files, and a plethora of stuff. This command is generally used for printing the file but there is more to it like creating a file directly in the terminal, merging two files, and a ton of other operations.</p>
+<p>TAC or reverse of CAT is a tool used for everything that CAT can do but in reverse:) This is a wired tool but still quite useful sometimes.</p>
+<p>Head is a tool that will print or edit the text in the first 10 lines of the file, it can be used to extrapolate multiple files with similar content.<br>
+Tail is a tool that will print or edit the text in the last 10 lines of the file, it can be used just like head but for the last few lines.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626180451092/Z5VUpIxCm.png"
+    ></figure>
+</p>
+<p>It turns out, you can not only print the first or last 10 lines but n lines by passing the -n as an argument, there is a ton of stuff to discover, this just drives me crazy.</p>
+
+<h3 class="relative group">cURL
+    <div id="curl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#curl" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>cURL or client URL is a tool that can be used to transfer data via various network protocols. You might not believe but it is used in cars, televisions, routers, and other embedded systems for exchanging relevant data via appropriate protocols.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626181263235/JPocJwoEd.png"
+    ></figure>
+</p>
+<p>This example depicts how we can fetch data from an API using cURL and extract data in JSON format and use it for relevant tasks.<br>
+This is again one of the best utility out there as it becomes quite remarkable and vintage. Despite being almost 30 years old, it shines bright in the tech world.</p>
+
+<h3 class="relative group">find
+    <div id="find" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#find" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Find as the name suggests it is used to find files among the folders and directories in a file system. it becomes quite helpful in complex projects where the directory structure is deep and large.<br>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626181386566/zpP9Yaom4.png"
+    ></figure>
+</p>
+<p>The command <code>find *.txt</code> finds every txt file available on this directory. As simple as it can get. This is surely looking silly and idiotic but it finds its glory in large and complicated codebases.</p>
+
+<h3 class="relative group">bc
+    <div id="bc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bc" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>bc or basic calculator is a utility tool for performing mathematical and arithmetical operations in the terminal, this commands gets integrated with other commands such as awk really well and can be used for further extending the limits of what the command line development can do.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626182601487/z8X4KeDGG.png"
+    ></figure>
+</p>
+<p>AWW! I could hear the excitement. That just added new dimensions into BASH. Just creativity and resonance to anything is the limit here. I am using  <a href="http://repl.it/"  target="_blank">REPL.IT</a>  here for using bash as I do not have it on my windows machine :( But that command is truly insane.</p>
+
+<h3 class="relative group">wc
+    <div id="wc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wc" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>wc or word count is a utility tool for counting and analyzing the size or count of characters, words, lines, or files in a given file structure. This is quite a handy tool for monitoring and keeping track of a system, also for general development purposes.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="possh.png"
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1626182319602/r8UidHV2z.png"
+    ></figure>
+</p>
+<p>The above command prints out the word and lines in the provided file. This command <code>wc</code> can even compute the size of files and even more properties of files.<br>
+Those were some of the quite powerful commands, tools, or utilities in BASH/shell. There are plenty of other commands not covered here because this an extremely large topic and even making separate articles or resources there will certainly and surely be some things that will get missed out, that&rsquo;s the beauty Linux or in general Computer Science has.<br>
+Ok, that was a lot, but I hope you got some insights for learning more BASH or Linux in general. This is a wide topic and can&rsquo;t be covered entirely in a single article.</p>
+<p>Now that is it from this part, everything cannot be covered in any number of parts but at least it will help someone to get started in BASH scripting and its specifications for development. Have a Blast learning BASH. Happy Coding :)</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2021-07-12-BASH-scripting-P3.md"
+          data-oid-likes="likes_posts/2021-07-12-BASH-scripting-P3.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/bash-game-numberjack/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Learning BASH by making a Number game
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-07-08T19:50:35&#43;05:30">July 8, 2021</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/bash-crypto-scrapper/">
+              <span class="leading-6">
+                Cryptocurrency Price Scrapping using BASH and Coingecko API&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-07-15T17:56:47&#43;05:30">July 15, 2021</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,18 +1,13 @@
-{
-  "type": "posts",
-  "title": "Golang Web: POST Method",
-  "description": "Exploring the fundamentals of a POST method in golang. How to send a basic POST request, parse json, structs, files, form-data into the request body.",
-  "date": "2024-03-10 20:15:00",
-  "status": "published",
-  "slug": "golang-web-post-method",
-  "tags": [
-    "go"
-  ],
-  "series": [
-    "100-days-of-golang"
-  ],
-  "image_url": "https://meetgor-cdn.pages.dev/100-days-of-golang/golang-034-post-method.png"
-}
+---
+type: posts
+title: "Golang Web: POST Method"
+date: 2024-03-10T20:15:00
+slug: "golang-web-post-method"
+series: ["100-days-of-golang"]
+tags:
+  - go
+image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-034-post-method.png
+---
 
 ## Introduction
 

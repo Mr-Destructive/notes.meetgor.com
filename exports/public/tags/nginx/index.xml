@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on Notes</title>
+    <link>/tags/nginx/</link>
+    <description>Recent content in Nginx on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sat, 03 Jan 2026 21:39:39 +0530</lastBuildDate><atom:link href="/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>NGINX Survival Guide: Serving Web Applications</title>
+      <link>/posts/nginx-02-web-servers/</link>
+      <pubDate>Sun, 21 Jul 2024 22:45:00 +0000</pubDate>
+      
+      <guid>/posts/nginx-02-web-servers/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the second part of our NGINX Survival Guide, we dive into the practical aspects of using NGINX to serve web applications. This section will guide you through the essential tasks of setting up a basic HTTP server, configuring NGINX to serve content from custom directories, and using it as a reverse proxy to forward requests to backend servers.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>NGINX Basics and Setup</title>
+      <link>/posts/nginx-01-basics/</link>
+      <pubDate>Sun, 14 Jan 2024 18:15:00 +0000</pubDate>
+      
+      <guid>/posts/nginx-01-basics/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;NGINX is a tool that can be used as a web server, reverse proxy, load balancer, streaming media files, application gateway, content caching, and so much more. It can be said to be a Swiss army knife for optimizing and securing your web application deployment.&lt;/p&gt;&#xA;&lt;p&gt;The series &amp;ldquo;NGINX Survival Guide&amp;rdquo; will start from the basics and cover the bare minimum required for a backend developer to get going with NGINX. I will use Docker widely throughout this course as it is a great combination with NGINX to server web applications. However, you can use NGINX without docker, and spawn multiple servers.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

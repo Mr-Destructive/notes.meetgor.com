@@ -1,0 +1,1340 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>SQLite SQL: GENERATED column constraint &middot; Notes</title>
+    <meta name="title" content="SQLite SQL: GENERATED column constraint &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/sqlite-generated-column-constraint/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/sqlite-generated-column-constraint/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="SQLite SQL: GENERATED column constraint">
+  <meta property="og:description" content="The GENERATED column constraint # We saw certain limitations of the DEFAULT column constraint clause, that it can’t generate dynamic values based on other columns or some other dynamic popularities. For overcomming those kind of constraints, there is one more specific constraint, the GENERATED column constraint.
+You can think of it as a DEFAULT but having more than static values, it is evaluated and computed each time a new row is inserted. However they come with one catch, you can’t later update the values, you need to update the values of the dependent columns first, so it will generate ALWAYS a update is made to the row(relevant columns in that row).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T15:32:35+05:30">
+    <meta property="article:tag" content="Sqlite">
+    <meta property="article:tag" content="Sql">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SQLite SQL: GENERATED column constraint">
+  <meta name="twitter:description" content="The GENERATED column constraint # We saw certain limitations of the DEFAULT column constraint clause, that it can’t generate dynamic values based on other columns or some other dynamic popularities. For overcomming those kind of constraints, there is one more specific constraint, the GENERATED column constraint.
+You can think of it as a DEFAULT but having more than static values, it is evaluated and computed each time a new row is inserted. However they come with one catch, you can’t later update the values, you need to update the values of the dependent columns first, so it will generate ALWAYS a update is made to the row(relevant columns in that row).">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "SQLite SQL: GENERATED column constraint",
+    "headline": "SQLite SQL: GENERATED column constraint",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/sqlite-generated-column-constraint/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-09-11T00:00:00\u002b00:00",
+    "datePublished": "2025-09-11T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-04T15:32:35\u002b05:30",
+    
+    "keywords": ["sqlite","sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3514"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        SQLite SQL: GENERATED column constraint
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-09-11T00:00:00&#43;00:00">September 11, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3514 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">17 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">The GENERATED column constraint
+    <div id="the-generated-column-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-generated-column-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We saw certain limitations of the <code>DEFAULT</code> column constraint clause, that it can&rsquo;t generate dynamic values based on other columns or some other dynamic popularities. For overcomming those kind of constraints, there is one more specific constraint, the <a href="https://sqlite.org/gencol.html"  target="_blank">GENERATED</a> column constraint.</p>
+<p>You can think of it as a <code>DEFAULT</code> but having more than static values, it is evaluated and computed each time a new row is inserted. However they come with one catch, you can&rsquo;t later update the values, you need to update the values of the dependent columns first, so it will generate <strong>ALWAYS</strong> a update is made to the row(relevant columns in that row).</p>
+<p>Let&rsquo;s create a simple table to understand the <code>GENERATED</code> column constraint:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> posts (
+</span></span><span style="display:flex;"><span>    id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    content TEXT,
+</span></span><span style="display:flex;"><span>    word_count INTEGER <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (<span style="color:#66d9ef">length</span>(content) <span style="color:#f92672">-</span> <span style="color:#66d9ef">length</span>(<span style="color:#66d9ef">replace</span>(content, <span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    read_time_minutes INTEGER <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (ceil(word_count <span style="color:#f92672">/</span> <span style="color:#ae81ff">200</span>.<span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>The syntax of the <code>GENERATED</code> constraint is</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>column_name &lt;type&gt; GENERATED ALWAYS AS &lt;expression&gt;</span></span></code></pre></div></div>
+<p>Nothing fancy, just a content field as a text, then based on that value, the <code>word_count</code> and <code>read_time_minutes</code> is always calculated/generated based on the value of the <code>content</code> and the <code>read_time_minutes</code> is inturn dependent on the <code>word_count</code> value. So, the change in <code>content</code> will make a update on the <code>word_count</code> that will inturn update the <code>read_time_minutes</code>, like a chain reaction of sorts.</p>
+<p>Let&rsquo;s insert a sample post, note, we can&rsquo;t insert a generated value.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A sample post&#39;</span>);</span></span></code></pre></div></div>
+<p>This will create a record with the <code>id</code> as 1, the <code>content</code> as <code>A sample post</code>, and the <code>word_count</code> will be generated/calculated as the <code>(length(content) - length(replace(content, ' ', ''))+1)</code> as the number of spaces + 1. The <code>read_time_minutes</code> is generated with the <code>word_count</code> divided by 200 which is the average word read in a minute by a human (let&rsquo;s not go into the nity-grity) but you can get the point of this. These are just mathematical values, and those are dependent on the value of the other columns of the same record/row.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts;</span></span></code></pre></div></div>
+<p>As, you can see here, the value of <code>word_count</code> is <code>3</code> and the value of <code>read_time_minutes</code> is <code>1</code>.</p>
+<p>Let&rsquo;s insert a few more values and check how these generated values behave.</p>
+<p>Let&rsquo;s insert a bit longer text.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A SQLITE Post for the generated column constraint.&#39;</span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts;</span></span></code></pre></div></div>
+<p>As, you can see the value of the <code>word_count</code> is <code>8</code> and the value of <code>read_time_minutes</code> is <code>1</code>.</p>
+<p>Let&rsquo;s update the <code>content</code> and check if the <code>word_count</code> and the <code>read_time_minutes</code> are updated.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> posts <span style="color:#66d9ef">SET</span> content <span style="color:#f92672">=</span> content <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;New content
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">some more content&#39;</span> <span style="color:#66d9ef">where</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts;</span></span></code></pre></div></div>
+<p>As you can see the value of the <code>word_count</code> is <code>11</code> and the value of <code>read_time_minutes</code> is <code>1</code> still. That is because, until we write <code>200</code> words it will ceil off to 1.</p>
+<p>Let&rsquo;s add a record with more than <code>200</code> words, and check if the <code>read_time_minutes</code> is updated.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;New post&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts;</span></span></code></pre></div></div>
+<p>The current value of the <code>word_count</code> is <code>2</code> and the <code>read_time_minutes</code> is <code>1</code>, let&rsquo;s update it by adding the value of <code>Adding some extra words here.</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> posts 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SET</span> content <span style="color:#f92672">=</span> content <span style="color:#f92672">||</span> <span style="color:#66d9ef">replace</span>(
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#39;%200c&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; &#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39; Adding some extra words here.&#39;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;</span></span></code></pre></div></div>
+<p>Ok, this might be too much, but let&rsquo;s break it down:</p>
+<ul>
+<li>First, we are updating the <code>content</code> by adding the value of <code>Adding some extra words here.</code> to the end of the existing value of <code>content</code>.</li>
+<li>In the replace function, the parameters are original string, the value to replace, and the value to replace it with.</li>
+<li>So in this case, we are taking the string <code>printf('%200c', ' ')</code>, which is a string of 200 spaces, basically adding a single space character, but it will be right-justified within a field of 200 characters.</li>
+<li>The second parameter is the character to replace, in this case it is single white space or <code>' '</code> character.</li>
+<li>The third parameter is the text to replace that <code>' '</code> space character with, here it is <code> Adding some extra words here</code>.</li>
+<li>So, essentially we are taking <code>200</code> white spaces and adding <code> Adding some extra words here.</code> for each space to the end of the existing value of <code>content</code>.</li>
+</ul>
+<p>Hence we will have around ~<code>200 * 5</code> words i.e. 1000 words, this way we can check the value of the <code>read_time_minutes</code> is updated.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts;</span></span></code></pre></div></div>
+<p>As you can see the value of the <code>word_count</code> is <code>1002</code> and the value of <code>read_time_minutes</code> is <code>6</code>. That is perfect. And it is getting updated for each updation to the <code>content</code> column.</p>
+<p>Here&rsquo;s a step by step output log: Its a SQLog :)</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE posts (
+</span></span><span style="display:flex;"><span>   id INTEGER PRIMARY KEY,
+</span></span><span style="display:flex;"><span>   content TEXT,
+</span></span><span style="display:flex;"><span>   word_count INTEGER GENERATED ALWAYS AS (length(content) - length(replace(content, &#39; &#39;, &#39;&#39;)) + 1),
+</span></span><span style="display:flex;"><span>   read_time_minutes INTEGER GENERATED ALWAYS AS (ceil(word_count / 200.0))
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; .mode table
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO posts(content) VALUES(&#39;A sample post&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM posts;
+</span></span><span style="display:flex;"><span>+----+---------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| id |    content    | word_count | read_time_minutes |
+</span></span><span style="display:flex;"><span>+----+---------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 1  | A sample post | 3          | 1                 |
+</span></span><span style="display:flex;"><span>+----+---------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO posts(content) VALUES(&#39;A SQLITE Post for the generated column constraint.&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM posts;
+</span></span><span style="display:flex;"><span>+----+----------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| id |                      content                       | word_count | read_time_minutes |
+</span></span><span style="display:flex;"><span>+----+----------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 1  | A sample post                                      | 3          | 1                 |
+</span></span><span style="display:flex;"><span>| 2  | A SQLITE Post for the generated column constraint. | 8          | 1                 |
+</span></span><span style="display:flex;"><span>+----+----------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; UPDATE posts SET content = content || &#39;New content
+</span></span><span style="display:flex;"><span>&#39;  ...&gt; some more content&#39; where id = 2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM posts;
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| id |                           content                            | word_count | read_time_minutes |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 1  | A sample post                                                | 3          | 1                 |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 2  | A SQLITE Post for the generated column constraint.New conten | 11         | 1                 |
+</span></span><span style="display:flex;"><span>|    | t                                                            |            |                   |
+</span></span><span style="display:flex;"><span>|    | some more content                                            |            |                   |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO posts(content) VALUES(&#39;New post&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM posts;
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| id |                           content                            | word_count | read_time_minutes |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 1  | A sample post                                                | 3          | 1                 |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 2  | A SQLITE Post for the generated column constraint.New conten | 11         | 1                 |
+</span></span><span style="display:flex;"><span>|    | t                                                            |            |                   |
+</span></span><span style="display:flex;"><span>|    | some more content                                            |            |                   |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 3  | New post                                                     | 2          | 1                 |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; UPDATE posts SET content = content || replace(printf(&#39;%200c&#39;, &#39; &#39;), &#39; &#39;, &#39; Adding some extra words here.&#39;) WHERE id = 3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM posts;
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| id |                           content                            | word_count | read_time_minutes |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 1  | A sample post                                                | 3          | 1                 |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 2  | A SQLITE Post for the generated column constraint.New conten | 11         | 1                 |
+</span></span><span style="display:flex;"><span>|    | t                                                            |            |                   |
+</span></span><span style="display:flex;"><span>|    | some more content                                            |            |                   |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+
+</span></span><span style="display:flex;"><span>| 3  | New post Adding some extra words here. Adding some extra wor | 1002       | 6                 |
+</span></span><span style="display:flex;"><span>|    | ds here. Adding some extra words here. Adding some extra wor |            |                   |
+</span></span><span style="display:flex;"><span>|    | ds here. Adding some extra words here. Adding some extra wor |            |                   |
+</span></span><span style="display:flex;"><span>|    |..............................................................|            |                   |
+</span></span><span style="display:flex;"><span>|    | ds here. Adding some extra words here. Adding some extra wor |            |                   |
+</span></span><span style="display:flex;"><span>|    | ds here.                                                     |            |                   |
+</span></span><span style="display:flex;"><span>+----+--------------------------------------------------------------+------------+-------------------+</span></span></code></pre></div></div>
+
+<h2 class="relative group">Generated columns cannot be updated manually
+    <div id="generated-columns-cannot-be-updated-manually" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#generated-columns-cannot-be-updated-manually" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>If you tried to update the columns with <code>GENERATED ALWAYS</code> constraint, you will get a <code>constraint failed</code> error. As the constraint itself says, it is <strong>GENERATED ALWAYS</strong>, hence not to be updated or inserted.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> posts <span style="color:#66d9ef">SET</span> word_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;</span></span></code></pre></div></div>
+<p>It will fail with <code>cannot UPDATE generated column &quot;word_count&quot;</code> as mentioned.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> posts <span style="color:#66d9ef">SET</span> read_time_minutes <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;</span></span></code></pre></div></div>
+<p>Similarly, this will also fail, as it is also a <code>GENERATED ALWAYS</code> constrained column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; UPDATE posts SET word_count = 10 WHERE id = 1;
+</span></span><span style="display:flex;"><span>Parse error: cannot UPDATE generated column &#34;word_count&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; UPDATE posts SET read_time_minutes = 10 WHERE id = 1;
+</span></span><span style="display:flex;"><span>Parse error: cannot UPDATE generated column &#34;read_time_minutes&#34;</span></span></code></pre></div></div>
+
+<h2 class="relative group">STORED VS VIRTUAL
+    <div id="stored-vs-virtual" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#stored-vs-virtual" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Now, the Generated columns can be <code>STORED</code> as in stored in the database to the disk file, or they could be <code>VIRTUAL</code> as in computed (generated,calculated each time). There are trade-offs and I will definitely add the meme here <code>IT ACTUALLY DEPENDS</code>!</p>
+<p>The <code>STORED</code> column will take up space but the queries will be quick, since it doesn&rsquo;t need to calculate it each time, only it needs to do it at each updation (that can&rsquo;t be avoided).<br>
+The <code>VIRTUAL</code> column will not take up space but the queries will be a little slower, depending on the number of data to compute, since it doesn&rsquo;t store the column values, it will have to compute each time and it as well need to update it each time.</p>
+<blockquote><p>The default is <code>VIRTUAL</code> if not specified.</p>
+</blockquote><p>The commonality of <code>STORED</code> and <code>VIRTUAL</code> is that they are both updated at the updation of the column it relates to or the updation of the row, the only difference is that one stores it the other calculates it for each query made to it.</p>
+<p>We&rsquo;ll see the difference how is that the case, it generates each time in the case of the <code>VIRTUAL</code> column <code>GENERATED</code> constraint.</p>
+<p>I&rsquo;ll show the most basic example continuing with the same table, but with the <code>VIRTUAL</code> clause on the <code>GENERATED ALWAYS</code> constraint.</p>
+
+<h3 class="relative group">Virtual generated column
+    <div id="virtual-generated-column" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#virtual-generated-column" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>By default, it is <code>VIRTUAL</code> it doesn&rsquo;t matter if you add it or not (let&rsquo;s add it to make it clear).</p>
+<p>I&rsquo;ll specify the <code>word_count</code> as the <code>VIRTUAL</code> column with the <code>GENERATED ALWAYS</code> constraint with the same formula to get the word count and at the end specify the <code>VIRTUAL</code> keyword (its optional).</p>
+<blockquote><p>Let&rsquo;s skip the <code>read_time_minutes</code> for now, you can add it won&rsquo;t make it any difference (it was a little extreme example to use 200 words to update its value)</p>
+</blockquote><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> posts_virtual (
+</span></span><span style="display:flex;"><span>   id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>   content TEXT,
+</span></span><span style="display:flex;"><span>   word_count INTEGER <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">length</span>(content) <span style="color:#f92672">-</span> <span style="color:#66d9ef">length</span>(<span style="color:#66d9ef">replace</span>(content, <span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>   ) VIRTUAL
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Now, we&rsquo;ll add some data to the table and check the value of the <code>word_count</code> column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_virtual(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A sample post&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_virtual(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A SQLITE Post for the virtual generated column constraint.&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts_virtual;</span></span></code></pre></div></div>
+<p>This we already know, the plain old <code>word_count</code> is <code>3</code> and <code>9</code> for the two posts respectively.</p>
+<p>But let&rsquo;s see how is the <code>word_count</code> column is actually stored and how slow or fast it actually is.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>PRAGMA table_info(posts_virtual);</span></span></code></pre></div></div>
+<p>HH? There is no <code>word_count</code> column here, it is not stored, it is a <code>VIRTUAL</code> column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; PRAGMA table_info(posts_virtual);
+</span></span><span style="display:flex;"><span>+-----+---------+---------+---------+------------+----+
+</span></span><span style="display:flex;"><span>| cid |  name   |  type   | notnull | dflt_value | pk |
+</span></span><span style="display:flex;"><span>+-----+---------+---------+---------+------------+----+
+</span></span><span style="display:flex;"><span>| 0   | id      | INTEGER | 0       |            | 1  |
+</span></span><span style="display:flex;"><span>| 1   | content | TEXT    | 0       |            | 0  |
+</span></span><span style="display:flex;"><span>+-----+---------+---------+---------+------------+----+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>What about extra info?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>PRAGMA table_xinfo(posts_virtual);</span></span></code></pre></div></div>
+<p>Yes, that is indeed there, and its hidden? Nope, its <code>generated</code> a special type.</p>
+<ul>
+<li><code>0</code> is not hidden</li>
+<li><code>1</code> is hidden</li>
+<li><code>2</code> is generated</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; PRAGMA table_xinfo(posts_virtual);
+</span></span><span style="display:flex;"><span>+-----+------------+---------+---------+------------+----+--------+
+</span></span><span style="display:flex;"><span>| cid |    name    |  type   | notnull | dflt_value | pk | hidden |
+</span></span><span style="display:flex;"><span>+-----+------------+---------+---------+------------+----+--------+
+</span></span><span style="display:flex;"><span>| 0   | id         | INTEGER | 0       |            | 1  | 0      |
+</span></span><span style="display:flex;"><span>| 1   | content    | TEXT    | 0       |            | 0  | 0      |
+</span></span><span style="display:flex;"><span>| 2   | word_count | INTEGER | 0       |            | 0  | 2      |
+</span></span><span style="display:flex;"><span>+-----+------------+---------+---------+------------+----+--------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>It&rsquo;s time to benchmark it then, let&rsquo;s bulk insert 100000 posts.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">RECURSIVE</span> cnt(x) <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">FROM</span> cnt <span style="color:#66d9ef">WHERE</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100000</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_virtual(content)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#e6db74">&#39;This is a sample post number &#39;</span> <span style="color:#f92672">||</span> x <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; with some words repeated multiple times.&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> cnt;</span></span></code></pre></div></div>
+<p>If we see now the <code>posts_virtual</code> table has over 100000 rows.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> posts_virtual;</span></span></code></pre></div></div>
+<p>We already had <code>2</code> records, and we added <code>100000</code> more, so the total is <code>100002</code>.</p>
+<p>Let&rsquo;s check the sum of the <code>word_count</code> to be sure it inserted it right.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_virtual;</span></span></code></pre></div></div>
+<p>Ok that shows the sum of the <code>word_count</code> is <code>1300012</code>.</p>
+<p>Let&rsquo;s check with the timer on and evaluate the query.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH RECURSIVE cnt(x) AS (
+</span></span><span style="display:flex;"><span>  SELECT 1
+</span></span><span style="display:flex;"><span>  UNION ALL
+</span></span><span style="display:flex;"><span>  SELECT x+1 FROM cnt WHERE x &lt; 100000
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>INSERT INTO posts_virtual(content)
+</span></span><span style="display:flex;"><span>SELECT &#39;This is a sample post number &#39; || x || &#39; with some words repeated multiple times.&#39;
+</span></span><span style="display:flex;"><span>FROM cnt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; PRAGMA table_xinfo(posts_virtual);
+</span></span><span style="display:flex;"><span>+-----+------------+---------+---------+------------+----+--------+
+</span></span><span style="display:flex;"><span>| cid |    name    |  type   | notnull | dflt_value | pk | hidden |
+</span></span><span style="display:flex;"><span>+-----+------------+---------+---------+------------+----+--------+
+</span></span><span style="display:flex;"><span>| 0   | id         | INTEGER | 0       |            | 1  | 0      |
+</span></span><span style="display:flex;"><span>| 1   | content    | TEXT    | 0       |            | 0  | 0      |
+</span></span><span style="display:flex;"><span>| 2   | word_count | INTEGER | 0       |            | 0  | 2      |
+</span></span><span style="display:flex;"><span>+-----+------------+---------+---------+------------+----+--------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; .timer on
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM posts_virtual;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 100002   |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.001 user 0.000352 sys 0.000103
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT SUM(word_count) FROM posts_virtual;
+</span></span><span style="display:flex;"><span>+-----------------+
+</span></span><span style="display:flex;"><span>| SUM(word_count) |
+</span></span><span style="display:flex;"><span>+-----------------+
+</span></span><span style="display:flex;"><span>| 1300012         |
+</span></span><span style="display:flex;"><span>+-----------------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.041 user 0.040682 sys 0.000418
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; PRAGMA page_count;
+</span></span><span style="display:flex;"><span>+------------+
+</span></span><span style="display:flex;"><span>| page_count |
+</span></span><span style="display:flex;"><span>+------------+
+</span></span><span style="display:flex;"><span>| 2086       |
+</span></span><span style="display:flex;"><span>+------------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.000 user 0.000000 sys 0.000078
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; PRAGMA page_size;
+</span></span><span style="display:flex;"><span>+-----------+
+</span></span><span style="display:flex;"><span>| page_size |
+</span></span><span style="display:flex;"><span>+-----------+
+</span></span><span style="display:flex;"><span>| 4096      |
+</span></span><span style="display:flex;"><span>+-----------+
+</span></span><span style="display:flex;"><span>Run Time: real 0.000 user 0.000025 sys 0.000006
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; UPDATE posts_virtual SET content = content || &#39; extra text&#39; WHERE id % 1000 = 0;
+</span></span><span style="display:flex;"><span>Run Time: real 0.010 user 0.009353 sys 0.000161</span></span></code></pre></div></div>
+<p>I think we&rsquo;ll leave it here and move onto creating the <code>STORED</code> column as a generated value</p>
+
+<h3 class="relative group">Stored generated column
+    <div id="stored-generated-column" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#stored-generated-column" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Similar to the <code>VIRTUAL</code> column, we&rsquo;ll create the <code>STORED</code> column with the <code>GENERATED ALWAYS</code> constraint.</p>
+<p>This will be the same table named as <code>posts_stored</code> but with the <code>word_count</code> being a <code>STORED</code> column rather than a <code>VIRTUAL</code> column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> posts_stored (
+</span></span><span style="display:flex;"><span>   id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>   content TEXT,
+</span></span><span style="display:flex;"><span>   word_count INTEGER <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">length</span>(content) <span style="color:#f92672">-</span> <span style="color:#66d9ef">length</span>(<span style="color:#66d9ef">replace</span>(content, <span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>   ) STORED
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Now, we&rsquo;ll add some data to the table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_stored(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A sample post&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_stored(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A SQLITE Post for the virtual generated column constraint.&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts_stored;</span></span></code></pre></div></div>
+<p>This is cool, working as expected, we have already seen it, we need to take a look at how this values are stored now.</p>
+<p>Let&rsquo;s take a look at the <code>table_info</code> for the <code>posts_stored</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>PRAGMA table_info(posts_stored);</span></span></code></pre></div></div>
+<p>It still doesn&rsquo;t have the <code>GENERATED</code> column <code>word_count</code>.</p>
+<p>Let&rsquo;s take a look at the <code>table_xinfo</code> for the <code>posts_stored</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>PRAGMA table_xinfo(posts_stored);</span></span></code></pre></div></div>
+<p>Ok, wiredly it has the <code>GENERATED ALWAYS</code> column <code>word_count</code> as well but the <code>hidden</code> value is <code>3</code>.</p>
+<p>We knew it was <code>2</code> for hidden but <code>3</code> is for? You guessed it right, stored and generated column.</p>
+<p>Now, let&rsquo;s also populate the <code>posts_stored</code> table with some data, bulk inserting the data.</p>
+<p>Let&rsquo;s add <code>100000</code> rows in it.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">RECURSIVE</span> cnt(x) <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">FROM</span> cnt <span style="color:#66d9ef">WHERE</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100000</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_stored(content)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#e6db74">&#39;This is a sample post number &#39;</span> <span style="color:#f92672">||</span> x <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; with some words repeated multiple times.&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> cnt;</span></span></code></pre></div></div>
+<p>This is the same query except its inserting in the <code>posts_stored</code> table.</p>
+<p>Let&rsquo;s check if it has inserted the right number of rows.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> posts_stored;</span></span></code></pre></div></div>
+<p>Indeed there are <code>100000</code> rows in the <code>posts_stored</code> table.</p>
+<p>Now, let&rsquo;s verify that the inserted values are rightly populated.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_stored;</span></span></code></pre></div></div>
+<p>This gives <code>1300012</code> as the sum of the <code>word_count</code> from the <code>posts_stored</code> table. Which matches the sum of the <code>word_count</code> from the <code>posts_virtual</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> posts_stored (
+</span></span><span style="display:flex;"><span>   id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>   content TEXT,
+</span></span><span style="display:flex;"><span>   word_count INTEGER <span style="color:#66d9ef">GENERATED</span> ALWAYS <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">length</span>(content) <span style="color:#f92672">-</span> <span style="color:#66d9ef">length</span>(<span style="color:#66d9ef">replace</span>(content, <span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>   ) STORED
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000258</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000027</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_stored(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A sample post&#39;</span>);
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_stored(content) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A SQLITE Post for the virtual generated column constraint.&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> posts_stored;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----+------------------------------------------------------------+------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> id <span style="color:#f92672">|</span>                          content                           <span style="color:#f92672">|</span> word_count <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----+------------------------------------------------------------+------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span>  <span style="color:#f92672">|</span> A sample post                                              <span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span>          <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">2</span>  <span style="color:#f92672">|</span> A SQLITE Post <span style="color:#66d9ef">for</span> the virtual <span style="color:#66d9ef">generated</span> <span style="color:#66d9ef">column</span> <span style="color:#66d9ef">constraint</span>. <span style="color:#f92672">|</span> <span style="color:#ae81ff">9</span>          <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----+------------------------------------------------------------+------------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000224</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> PRAGMA table_info(posts_stored);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+---------+---------+---------+------------+----+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> cid <span style="color:#f92672">|</span>  name   <span style="color:#f92672">|</span>  <span style="color:#66d9ef">type</span>   <span style="color:#f92672">|</span> <span style="color:#66d9ef">notnull</span> <span style="color:#f92672">|</span> dflt_value <span style="color:#f92672">|</span> pk <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+---------+---------+---------+------------+----+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>   <span style="color:#f92672">|</span> id      <span style="color:#f92672">|</span> INTEGER <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>       <span style="color:#f92672">|</span>            <span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span>  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span>   <span style="color:#f92672">|</span> content <span style="color:#f92672">|</span> TEXT    <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>       <span style="color:#f92672">|</span>            <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>  <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+---------+---------+---------+------------+----+
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> PRAGMA table_xinfo(posts_stored);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+------------+---------+---------+------------+----+--------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> cid <span style="color:#f92672">|</span>    name    <span style="color:#f92672">|</span>  <span style="color:#66d9ef">type</span>   <span style="color:#f92672">|</span> <span style="color:#66d9ef">notnull</span> <span style="color:#f92672">|</span> dflt_value <span style="color:#f92672">|</span> pk <span style="color:#f92672">|</span> hidden <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+------------+---------+---------+------------+----+--------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>   <span style="color:#f92672">|</span> id         <span style="color:#f92672">|</span> INTEGER <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>       <span style="color:#f92672">|</span>            <span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span>  <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>      <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span>   <span style="color:#f92672">|</span> content    <span style="color:#f92672">|</span> TEXT    <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>       <span style="color:#f92672">|</span>            <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>  <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>      <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">2</span>   <span style="color:#f92672">|</span> word_count <span style="color:#f92672">|</span> INTEGER <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>       <span style="color:#f92672">|</span>            <span style="color:#f92672">|</span> <span style="color:#ae81ff">0</span>  <span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span>      <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----+------------+---------+---------+------------+----+--------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000013</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000322</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> posts_stored;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">2</span>        <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000108</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000012</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">RECURSIVE</span> cnt(x) <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">FROM</span> cnt <span style="color:#66d9ef">WHERE</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100000</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> posts_stored(content)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#e6db74">&#39;This is a sample post number &#39;</span> <span style="color:#f92672">||</span> x <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; with some words repeated multiple times.&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> cnt;
+</span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">071</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">067858</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">002929</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> posts_stored;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">100002</span>   <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">----------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000367</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_stored;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1300012</span>         <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">008</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">006492</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000941</span></span></span></code></pre></div></div>
+<p>This is all setup for the comparison of both the tables.</p>
+
+<h3 class="relative group">The difference
+    <div id="the-difference" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-difference" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Now, let&rsquo;s check the difference between the <code>STORED</code> and <code>VIRTUAL</code> column.</p>
+<p>Let&rsquo;s sum the <code>word_count</code> from each of the tables <code>posts_stored</code> and <code>posts_virtual</code></p>
+<p>First, lets set the timer on, which will give the breakdown of the time for each ran query.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.timer on</span></span></code></pre></div></div>
+<p>The timer will give three time durations, the real, user and the system.<br>
+The breakdown is like this:</p>
+<ul>
+<li>real time : The full clock time form the start to the end of the query</li>
+<li>user time : The CPU time in the user space (I/O) operations on the sqlite side, computations on the obtained data, or preprocessing the data before inserting.</li>
+<li>system time: The CPU time in the kernel space (I/O) operations on the host side, it could be reading or writing to the actual db file, etc.</li>
+</ul>
+<p>And then run the query for the <code>posts_stored</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_stored;</span></span></code></pre></div></div>
+<p>This is giving the result in around <code>~0.008</code> seconds might be approximately <code>0.01</code> in certain cases.<br>
+We can even get the breakdown of the time for each ran query.</p>
+<ul>
+<li>full query execution time: <code>0.008</code></li>
+<li>user time: <code>0.006492</code></li>
+<li>system time: <code>0.000941</code></li>
+</ul>
+<p>So, here in this case, the system and user time are around the same, however there is some system time for reading from the database file.</p>
+<p>And then run the query for the <code>posts_virtual</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_virtual;</span></span></code></pre></div></div>
+<p>This is giving the result in around <code>~0.039</code> seconds might be approximately <code>0.04</code> in certain cases.</p>
+<p>We can even get the breakdown of the time for each ran query.</p>
+<ul>
+<li>full query execution time: <code>0.039</code></li>
+<li>user time: <code>0.039366</code></li>
+<li>system time: <code>0.000000</code> this can go sometimes to <code>0.000652</code>, almost negligible, but if it happens, in that case the full query time will increase by a bit.</li>
+</ul>
+<p>So, it is taking a quite lot of time in the user space by the CPU right?<br>
+And almost 0 time in the kernel level (disk operation) to read from the database file.</p>
+<p>That is so clear, as this is a virtual column, and we are only reading a single column, and that too is a virtual column, we don&rsquo;t need to hit a read to the database file. Clever right? But that costs some CPU to compute the sum for the <code>100002</code> rows.</p>
+<p>This is the trade-off</p>
+<ul>
+<li>Time spent on the CPU on the computation vs the time spent on the disk operation to read the data.</li>
+<li>These can be different depending on the query.</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_stored;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1300012</span>         <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">008</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">006492</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000941</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#66d9ef">FROM</span> posts_virtual;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">SUM</span>(word_count) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#ae81ff">1300012</span>         <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#75715e">-----------------+
+</span></span></span><span style="display:flex;"><span>Run Time: real <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">039</span> <span style="color:#66d9ef">user</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">039366</span> sys <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">000000</span></span></span></code></pre></div></div>
+<p>You can clearly see the difference, the <code>STORED</code> column is almost <code>4</code> to <code>5</code> times faster than the <code>VIRTUAL</code> column.</p>
+
+<h3 class="relative group">Key observations
+    <div id="key-observations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#key-observations" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>If you have lot of processing to do in the generated column, better to go with the <code>STORED</code> column.</li>
+<li>If you have a lot of data to compute and not necessarily complex, better to go with the <code>VIRTUAL</code> column.</li>
+<li>It really depends on the data too, and we cannot say which one is better over the other without knowing the structure and the design of the queries.</li>
+</ol>
+<p>There are lot of details as well beyond this, it will require specific guides on how to do certain things and busting certain myths in the documentation.</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-09-11-generated-column-constraint.md"
+          data-oid-likes="likes_posts/2025-09-11-generated-column-constraint.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-default-column-constraint/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;SQLite SQL: DEFAULT column constraint
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-10T00:00:00&#43;00:00">September 10, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-check-column-constraint/">
+              <span class="leading-6">
+                SQLite SQL: CHECK column constraint&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-12T00:00:00&#43;00:00">September 12, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

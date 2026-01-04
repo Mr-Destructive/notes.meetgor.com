@@ -1,12 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-05-03",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #40",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-40"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #40"
+date: 2025-05-03T00:00:00
+slug: "techstructive-weekly-40"
+---
 
 ## Week #40
 
@@ -255,10 +252,10 @@ That’s it for this week, will see you in the next one!
 
 Thanks for reading
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public, so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

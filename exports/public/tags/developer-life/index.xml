@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer-Life on Notes</title>
+    <link>/tags/developer-life/</link>
+    <description>Recent content in Developer-Life on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sat, 03 Jan 2026 21:39:39 +0530</lastBuildDate><atom:link href="/tags/developer-life/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2025: Year Review</title>
+      <link>/posts/2025-review/</link>
+      <pubDate>Wed, 31 Dec 2025 00:15:00 +0000</pubDate>
+      
+      <guid>/posts/2025-review/</guid>
+      <description>&lt;p&gt;I had focused on tech on this reviews. I would keep it same this year, I might write a separate non-tech, a human yearly review on my separate blog.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Gist&#xA;    &lt;div id=&#34;gist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#gist&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I moved from a software developer to a reliable and responsible developer. I took ownership and sat on problems more than the level of my comfort zone. It made me a better developer, it helped me sympathize the people around me, and connect more. These moments might create life long relations, but from the macro perspective they looked frustrating and annoying at times. Here I am still finding peace and standing and walking through what has not been a smooth journey both at work and life. I was thinking work and life could mean same thing once I got out of college, but those kept diverging and I had to keep both my feet at par with each one&amp;rsquo;s pace.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2024: Year Review</title>
+      <link>/posts/2024-review/</link>
+      <pubDate>Tue, 31 Dec 2024 00:15:00 +0000</pubDate>
+      
+      <guid>/posts/2024-review/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It is the end of the year, and I write this yearly as I have been writing it since &lt;a href=&#34;https://www.meetgor.com/tag/developer-life/&#34;  target=&#34;_blank&#34;&gt;2022&lt;/a&gt;. I get a lot of insights on the things after writing them. Let’s dive in for my journey from intern to full-time backend developer.&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;“2024, You had me in the first half”&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;No jokes here, I was scared as shit till May 31st, something special happened on May 31st, 2024 in my life!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2023: Year Review</title>
+      <link>/posts/2023-review/</link>
+      <pubDate>Sun, 31 Dec 2023 00:15:00 +0000</pubDate>
+      
+      <guid>/posts/2023-review/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;2023, what a year! If you&amp;rsquo;re a developer and haven&amp;rsquo;t heard the word &amp;lsquo;AI&amp;rsquo; a million times, where have you been? With the introduction of Chat GPT in December 2022, the start of 2023 was buzzing with Open AI&amp;rsquo;s flagship product. I also did a &lt;a href=&#34;https://www.meetgor.com/2022-review/&#34;  target=&#34;_blank&#34;&gt;2022 review&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The year 2023 was a pivotal year for me to gain experience in solving and delivering real-world problems to solutions. I went from a code-first approach to a code-last approach for solving a problem. The year was not ideal for freshers, as from the end of 2022 till 2023 there was a huge round of layoffs in big tech companies. The competition was too much for freshers and the AI hype added salt to the injury.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2022: Year Review</title>
+      <link>/posts/2022-review/</link>
+      <pubDate>Sat, 31 Dec 2022 12:15:00 +0000</pubDate>
+      
+      <guid>/posts/2022-review/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Well, what a year! If 2021 was a start, 2022 was a year to convert a start into a goal. From collaborating on open-source projects to getting an internship, it was an exciting year! Created a couple dozen of projects(not finished as usual), wrote 40+ articles, did a couple of streams, learned the basics of golang, and spend 6 months as a backend dev intern at &lt;a href=&#34;https://thesolarlabs.com/&#34;  target=&#34;_blank&#34;&gt;Solarlabs&lt;/a&gt;, just a year that was awaited for the hard work over the span of 2 years.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

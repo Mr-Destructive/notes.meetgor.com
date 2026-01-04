@@ -1,15 +1,12 @@
-{
-  "type": "posts",
-  "title": "Feedparser: Python package for reading RSS feeds",
-  "description": "Read and extract content from RSS feeds in python using feedparser",
-  "date": "2022-03-26 15:45:00",
-  "status": "published",
-  "slug": "python-feedparser",
-  "tags": [
-    "python"
-  ],
-  "image_url": "https://meetgor-cdn.pages.dev/python-pkg-feedparser.png"
-}
+---
+type: posts
+title: "Feedparser: Python package for reading RSS feeds"
+date: 2022-03-26T15:45:00
+slug: "python-feedparser"
+tags:
+  - python
+image_url: https://meetgor-cdn.pages.dev/python-pkg-feedparser.png
+---
 
 ## Introduction
 

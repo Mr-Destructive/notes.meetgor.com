@@ -1,16 +1,13 @@
-{
-  "type": "posts",
-  "title": "Vim: Enhancing Editing Speed",
-  "subtitle": "Improving the way you edit code in Vim.",
-  "date": "2021-07-18 16:52:17 +0530",
-  "status": "published",
-  "tags": [
-    "vim"
-  ],
-  "slug": "vim-editing-speed",
-  "image_url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1625651851743/RK-CxEtLT.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress"
-}
-
+---
+type: posts
+title: "Vim: Enhancing Editing Speed"
+subtitle: "Improving the way you edit code in Vim."
+date: 2021-07-18T16:52:17+05:30
+slug: "vim-editing-speed"
+tags:
+  - vim
+image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1625651851743/RK-CxEtLT.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
+---
 
 ## Introduction
 Editing/ Writing is a crucial part of any text editor, the swiftness with which one can make changes in a file(s) or a structure is a bit dependent on the editor we use as well. Vim can be a bit hassle for beginners in the initial stage but it becomes second nature soon. It also depends majorly on the level of usage and the area of usage. If you are an advanced programmer, you will use these commands extensively, and might not be a big deal for you, But for a beginner, it might take some time to get used to the workflow in Vim.
@@ -154,4 +151,3 @@ If your file is saved as a particular language that supports indentation, it wil
 All of the above commands were somewhat basic and commonly used but if used along with other key shortcuts for movement can also improve the editing speed quite considerably. Just keep using these commands and you'll be amazed by the speed you've developed. Thanks for reading. Happy Coding :)
 
 References:  [catswhocode](https://catswhocode.com/vim-commands/)  [The valuable dev](https://thevaluable.dev/vim-advanced/) [rtorr.com](https://vim.rtorr.com/)
-                      

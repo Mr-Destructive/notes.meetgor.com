@@ -1,13 +1,9 @@
-{
-  "title": "Robots Generate, Humans Manifest",
-  "post_dir": "thoughts",
-  "type": "thoughts",
-  "status": "published",
-  "slug": "robots-generate-humans-manifest",
-  "date": "2025-03-28"
-}
-
-
+---
+type: thoughts
+title: "Robots Generate, Humans Manifest"
+date: 2025-03-28T00:00:00
+slug: "robots-generate-humans-manifest"
+---
 
 To,
 New Graduates or Students (or whoever is scared of AI)
@@ -69,4 +65,4 @@ Meet
 ---
 Thanks for reading,
 
-This looks like a ramble, but please don't judge me, I am just a junior software developer trying to navigate life, and based on what I observe and know, it feels this way. 
+This looks like a ramble, but please don't judge me, I am just a junior software developer trying to navigate life, and based on what I observe and know, it feels this way.

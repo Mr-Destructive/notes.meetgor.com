@@ -1,10 +1,8 @@
-{
-  "title": "A draft post",
-  "post_dir": "thoughts",
-  "type": "thoughts",
-  "status": "published",
-  "slug": "a-draft-post",
-  "date": "2025-05-25"
-}
+---
+type: thoughts
+title: "A draft post"
+date: 2025-05-25T00:00:00
+slug: "a-draft-post"
+---
 
 Hello, this is a draft post

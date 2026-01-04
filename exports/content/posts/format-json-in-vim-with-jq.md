@@ -1,11 +1,9 @@
-{
-  "title": "Format JSON in Vim with JQ",
-  "post_dir": "til",
-  "type": "til",
-  "status": "published",
-  "slug": "format-json-in-vim-with-jq",
-  "date": "2025-04-05T12:33:15Z"
-}
+---
+type: til
+title: "Format JSON in Vim with JQ"
+date: 2025-04-05T12:33:15+00:00
+slug: "format-json-in-vim-with-jq"
+---
 
 <p>We can use</p>
 <pre><code>:%!jq .

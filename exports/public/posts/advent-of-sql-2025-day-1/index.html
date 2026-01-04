@@ -1,0 +1,1081 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Advent of SQL 2025: Wish List &middot; Notes</title>
+    <meta name="title" content="Advent of SQL 2025: Wish List &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,advent-of-sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/advent-of-sql-2025-day-1/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/advent-of-sql-2025-day-1/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Advent of SQL 2025: Wish List">
+  <meta property="og:description" content="Learning SQLite: Advent of SQL Day 1 # I am trying to learn SQLite, I want to understand that database. It’s quite simple yet the whole world uses it for various kinds of things ranging from developers’ toy database to spaceships. What a tiny engineering marvel!
+I am happy to see this happening: Advent of SQL
+What a better time to learn more. I guess I want to start by exploring all the specificities of the INSERT statement in SQLite after exploring most of the things of the CREATE TABLE statement.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-16T15:30:00+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:32:35+05:30">
+    <meta property="article:tag" content="Sqlite">
+    <meta property="article:tag" content="Sql">
+    <meta property="article:tag" content="Advent-of-Sql">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of SQL 2025: Wish List">
+  <meta name="twitter:description" content="Learning SQLite: Advent of SQL Day 1 # I am trying to learn SQLite, I want to understand that database. It’s quite simple yet the whole world uses it for various kinds of things ranging from developers’ toy database to spaceships. What a tiny engineering marvel!
+I am happy to see this happening: Advent of SQL
+What a better time to learn more. I guess I want to start by exploring all the specificities of the INSERT statement in SQLite after exploring most of the things of the CREATE TABLE statement.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Advent of SQL 2025: Wish List",
+    "headline": "Advent of SQL 2025: Wish List",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/advent-of-sql-2025-day-1/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-16T15:30:00\u002b05:30",
+    "datePublished": "2025-12-16T15:30:00\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:32:35\u002b05:30",
+    
+    "keywords": ["sqlite","sql","advent-of-sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1568"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Advent of SQL 2025: Wish List
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-16T15:30:00&#43;05:30">December 16, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1568 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Learning SQLite: Advent of SQL Day 1
+    <div id="learning-sqlite-advent-of-sql-day-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#learning-sqlite-advent-of-sql-day-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I am trying to learn SQLite, I want to understand that database. It&rsquo;s quite simple yet the whole world uses it for various kinds of things ranging from developers&rsquo; toy database to spaceships. What a tiny engineering marvel!</p>
+<p>I am happy to see this happening: <a href="https://databaseschool.com/series/advent-of-sql/videos/308"  target="_blank">Advent of SQL</a></p>
+<p>What a better time to learn more. I guess I want to start by exploring all the specificities of the INSERT statement in SQLite after exploring most of the things of the CREATE TABLE statement.</p>
+<p>But here I am jumping to this. Why? Because I want to solve something first before exploring other branches.</p>
+<p>Today I am going to try to solve the day 1 part.</p>
+<blockquote><p><strong>NOTE:</strong> I would be using my local sqlite db for this or a playground on this for testing. I am not going to use the browser-based playground attached in the databaseschool.com app for a reason. I want to use SQLite. The database is some form of Postgres; I don&rsquo;t mind using it, but I want to do it in SQLite.</p>
+</blockquote><p>I have a playground on my blog for SQLite, you can try it out here:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#ae81ff">1</span>;</span></span></code></pre></div></div>
+<p>It uses an embedded SQLite version (3.49.1) with sql-js as a wasm extension: <a href="https://github.com/sql-js/sql.js/releases/tag/v1.13.0"  target="_blank">sql.js v1.13.0</a></p>
+<p>Back to the problem elves!</p>
+
+<h2 class="relative group">Setup
+    <div id="setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This is the first day, so advent calendar usually requires some setup or preparation for the rest of the days. Luckily it&rsquo;s optional for you if you are doing it in the playground of database school or in PostgreSQL Database.</p>
+<p>We have some .sql files as input for creation and insertions of tables and rows in the database. It&rsquo;s for constructing the schema (tables) and populating the rows that the problem requires us to do.</p>
+<p>The SQL looked something simpler like:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> wish_list <span style="color:#66d9ef">CASCADE</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> wish_list (
+</span></span><span style="display:flex;"><span>   id          BIGSERIAL <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>   child_name  TEXT,
+</span></span><span style="display:flex;"><span>   raw_wish    TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;James A.&#39;</span>, <span style="color:#e6db74">&#39; BLUEY SUPERMARKET PLAY SET&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Sade C.&#39;</span>, <span style="color:#e6db74">&#39;lego star wars set &#39;</span>);</span></span></code></pre></div></div>
+<p>There are around 499,000 rows!</p>
+<p>However when I tried to read directly into a SQLite shell as:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.read day1-wish-list.sql</span></span></code></pre></div></div>
+<p>It got an error for parsing the DROP TABLE statement:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; .read day1-wish-list.sql
+</span></span><span style="display:flex;"><span>Parse error near line 11: near &#34;CASCADE&#34;: syntax error
+</span></span><span style="display:flex;"><span>  DROP TABLE IF EXISTS wish_list CASCADE;
+</span></span><span style="display:flex;"><span>                       error here ---^</span></span></code></pre></div></div>
+<p>Obviously it was designed for Postgres. It won&rsquo;t work in SQLite.</p>
+<p>SQLite is minimal. It might not have everything that PostgreSQL has, but PostgreSQL might have everything that SQLite has (maybe but not as is).</p>
+<p>So, we need to remove the CASCADE, which is an option to decide what to do with the related data rows when a relation is removed. In this case, it is cascading—deleting all the other related data points or records in the related tables. SQLite doesn&rsquo;t have options to modify the relations for the DROP TABLE statement. It has it for CREATE TABLE with the foreign key constraint.</p>
+<p>Now we need to remove it. It can&rsquo;t be in the DROP TABLE statement for SQLite database:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> wish_list;</span></span></code></pre></div></div>
+<p>Now, let&rsquo;s check by running the queries again:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>.read day1-wish-list.sql</span></span></code></pre></div></div>
+<p>That works!</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ sqlite3
+</span></span><span style="display:flex;"><span>SQLite version 3.45.1 2024-01-30 16:01:20
+</span></span><span style="display:flex;"><span>Enter &#34;.help&#34; for usage hints.
+</span></span><span style="display:flex;"><span>Connected to a transient in-memory database.
+</span></span><span style="display:flex;"><span>Use &#34;.open FILENAME&#34; to reopen on a persistent database.
+</span></span><span style="display:flex;"><span>sqlite&gt; .read day1-wish-list_sqlite1.sql
+</span></span><span style="display:flex;"><span>sqlite&gt; .schema
+</span></span><span style="display:flex;"><span>CREATE TABLE wish_list (
+</span></span><span style="display:flex;"><span>   id          BIGSERIAL PRIMARY KEY,
+</span></span><span style="display:flex;"><span>   child_name  TEXT,
+</span></span><span style="display:flex;"><span>   raw_wish    TEXT
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>But this looks weird:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> wish_list (
+</span></span><span style="display:flex;"><span>   id          BIGSERIAL <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>   child_name  TEXT,
+</span></span><span style="display:flex;"><span>   raw_wish    TEXT
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>BIGSERIAL is not a datatype in SQLite. It might be in PostgreSQL. But does it matter? In SQLite, if the table is not STRICT, it doesn&rsquo;t matter what type the column is or even if it is NOT specified of any type. That&rsquo;s fine.</p>
+<p>INSERT some rows shall we?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;James A.&#39;</span>, <span style="color:#e6db74">&#39; BLUEY SUPERMARKET PLAY SET&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Sade C.&#39;</span>, <span style="color:#e6db74">&#39;lego star wars set &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Juan Q.&#39;</span>, <span style="color:#e6db74">&#39;   SCOOTER &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Samir S.&#39;</span>, <span style="color:#e6db74">&#39;   LEGO STAR WARS SET  &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;Priya E.&#39;</span>, <span style="color:#e6db74">&#39;shaved ice machine   &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;Henry L.&#39;</span>, <span style="color:#e6db74">&#39;   mini brands fill the fridge&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;Ayumi C.&#39;</span>, <span style="color:#e6db74">&#39;VR HEADSET&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;Juan Y.&#39;</span>, <span style="color:#e6db74">&#39;BARBIE DREAMHOUSE   &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> wish_list (id, child_name, raw_wish) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;Priya O.&#39;</span>, <span style="color:#e6db74">&#39;  VR HEADSET  &#39;</span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> wish_list;</span></span></code></pre></div></div>
+<p>But I want to know what is the type of <code>wish_list.id</code>?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">distinct</span>(typeof(id)) <span style="color:#66d9ef">FROM</span> wish_list;</span></span></code></pre></div></div>
+<p>Here&rsquo;s the output:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT distinct(typeof(id)) FROM wish_list;
+</span></span><span style="display:flex;"><span>integer</span></span></code></pre></div></div>
+<p>It is integer, because of type affinity, I guess. Good work SQLite.</p>
+<p>Looks like the data is fine.</p>
+<p>Now to the problem.</p>
+
+<h2 class="relative group">Problem
+    <div id="problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><a href="https://databaseschool.com/series/advent-of-sql/videos/309#:~:text=Challenge%3A%20Using%20the,and%20get%20started!"  target="_blank">Link to the challenge</a></p>
+<p><strong>Challenge:</strong> Using the wish_list table, count how many times each cleaned toy name appears, from most requested to least requested. Return the results in two columns: wish and count. Make sure the wish results have no extra leading or trailing spaces and are all lowercase.</p>
+<p>So, simply we need two columns:</p>
+<ul>
+<li><strong>wish</strong> (the text)</li>
+<li><strong>count</strong> (the number of times that wish is wished)</li>
+</ul>
+
+<h3 class="relative group">Subtleties
+    <div id="subtleties" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#subtleties" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<blockquote><p>Some children had typed extra spaces. Some wrote in ALL CAPS. Some had letters that danced between cases like playful snowflakes.</p>
+<p>I know there are some issues with spelling, the extra spaces, or the funny capitalization, but I just need to know what the children truly meant.</p>
+</blockquote><p>So, we need to either use lower caps or upper caps the wish text and trim off the space.</p>
+<p>SCALAR FUNCTIONS!!</p>
+
+<h3 class="relative group">Scalar Functions
+    <div id="scalar-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#scalar-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><a href="https://sqlite.org/lang_corefunc.html"  target="_blank">SQLite Core Functions</a></p>
+<p>I read through the list of around ~70 of them, most of them are kind of the same with different parameters.</p>
+<p>The one that I found relevant are:</p>
+<ul>
+<li><a href="https://sqlite.org/lang_corefunc.html#lower"  target="_blank">LOWER</a></li>
+<li><a href="https://sqlite.org/lang_corefunc.html#trim"  target="_blank">TRIM</a></li>
+</ul>
+<p>That&rsquo;s it, right? Convert into LOWER (or UPPER) and TRIM off the spaces.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">LOWER</span>(<span style="color:#66d9ef">TRIM</span>(raw_wish)) <span style="color:#66d9ef">FROM</span> wish_list;</span></span></code></pre></div></div>
+<p>Don&rsquo;t run just yet!</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">LOWER</span>(<span style="color:#66d9ef">TRIM</span>(raw_wish)) <span style="color:#66d9ef">FROM</span> wish_list <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">100</span>;</span></span></code></pre></div></div>
+<p>Looks good. Now to the next step.</p>
+
+<h3 class="relative group">Grouping and Counting
+    <div id="grouping-and-counting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grouping-and-counting" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We need to count them i.e. to group by the wish.</p>
+<blockquote><p>GROUP BY: What group by does is that it condenses the rows of certain column into a singular column for instance if there are 10 entries for &ldquo;lego star wars set&rdquo; adding a group by wish will create a singular entry for that wish and we can then perform operations like sum, count, average and all of that on other rows</p>
+</blockquote><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">LOWER</span>(<span style="color:#66d9ef">TRIM</span>(raw_wish)) <span style="color:#66d9ef">AS</span> wish, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> <span style="color:#66d9ef">count</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> wish_list
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> wish;</span></span></code></pre></div></div>
+<p>Here we are grouping by wish because we don&rsquo;t want 10 entries of &ldquo;lego star wars set&rdquo; we just want one common entry to view the unique wishes.</p>
+<p>Also by using <code>COUNT(*)</code> we are counting the instances of each row. As I said, the multiple rows with the same wish are squished into a single row. So now we can use aggregate functions like count, sum, in our case we want to count how many instances of those particular wish are.</p>
+
+<h3 class="relative group">Ordering Results
+    <div id="ordering-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ordering-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Does that solve it? Mostly, just need the ORDER BY now.</p>
+<p>Because we also need to order the results:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">LOWER</span>(<span style="color:#66d9ef">TRIM</span>(raw_wish)) <span style="color:#66d9ef">AS</span> wish, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> <span style="color:#66d9ef">count</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> wish_list
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> wish
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">count</span> <span style="color:#66d9ef">DESC</span>;</span></span></code></pre></div></div>
+<p>Perfect? Probably.</p>
+<blockquote><p>What ORDER BY does is that it just determines which way the row should be aligned based on what column and how i.e. the column name and either ASC(ending) or DESC(ending).</p>
+</blockquote><p>Here we have ordered by count so that we can filter the most wished toy or least wished toy at the top and increasing or decreasing order of it.</p>
+
+<h3 class="relative group">Results
+    <div id="results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#results" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Now with the mode table:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; .mode table
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT LOWER(TRIM(raw_wish)) as wish, count(*) as count FROM wish_list group by wish order by count desc;
+</span></span><span style="display:flex;"><span>+-----------------------------+-------+
+</span></span><span style="display:flex;"><span>|            wish             | count |
+</span></span><span style="display:flex;"><span>+-----------------------------+-------+
+</span></span><span style="display:flex;"><span>| lego city f1 car            | 32893 |
+</span></span><span style="display:flex;"><span>| barbie dreamhouse           | 32785 |
+</span></span><span style="display:flex;"><span>| nerf blaster                | 32746 |
+</span></span><span style="display:flex;"><span>| lego star wars set          | 32611 |
+</span></span><span style="display:flex;"><span>| beyblade battle arena       | 29564 |
+</span></span><span style="display:flex;"><span>| magna-tiles pet playhouse   | 29529 |
+</span></span><span style="display:flex;"><span>| bluey supermarket play set  | 26292 |
+</span></span><span style="display:flex;"><span>| lego friends amusement park | 25982 |
+</span></span><span style="display:flex;"><span>| pokemon trainer box         | 25968 |
+</span></span><span style="display:flex;"><span>| duplo building set          | 23005 |
+</span></span><span style="display:flex;"><span>| mini brands fill the fridge | 22965 |
+</span></span><span style="display:flex;"><span>| electric toy train set      | 22885 |
+</span></span><span style="display:flex;"><span>| toniebox audio player       | 19529 |
+</span></span><span style="display:flex;"><span>| scooter                     | 19496 |
+</span></span><span style="display:flex;"><span>| vr headset                  | 16468 |
+</span></span><span style="display:flex;"><span>| squishmallows               | 16304 |
+</span></span><span style="display:flex;"><span>| shaved ice machine          | 16263 |
+</span></span><span style="display:flex;"><span>| drone for kids              | 13151 |
+</span></span><span style="display:flex;"><span>| coding robot                | 13025 |
+</span></span><span style="display:flex;"><span>| headphones                  | 13006 |
+</span></span><span style="display:flex;"><span>| interactive robot dog       | 9770  |
+</span></span><span style="display:flex;"><span>| fidget spinner              | 3590  |
+</span></span><span style="display:flex;"><span>| yo-yo                       | 3565  |
+</span></span><span style="display:flex;"><span>| slime kit                   | 3553  |
+</span></span><span style="display:flex;"><span>| littlest pet shop playset   | 3543  |
+</span></span><span style="display:flex;"><span>| chatter telephone           | 3527  |
+</span></span><span style="display:flex;"><span>| fingerlings robot monkey    | 3511  |
+</span></span><span style="display:flex;"><span>| rubik&#39;s revolution          | 3474  |
+</span></span><span style="display:flex;"><span>+-----------------------------+-------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<hr>
+<p>Day 1 done, moving on to day two by helping those pesky elves tomorrow. I am amazed at how stupider problems humans create with those elves as target. Just kidding, humans are elves :)</p>
+<p>Happy Coding :)</p>
+<p>Happy Squealing</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-12-16-advent-of-sql-day01-wish-list.md"
+          data-oid-likes="likes_posts/2025-12-16-advent-of-sql-day01-wish-list.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2025-12-13-tom-riddle-diary-as-llms/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Is Tom Riddle's Diary like an LLM?
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-13T00:00:00&#43;00:00">December 13, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-2/">
+              <span class="leading-6">
+                Advent of SQL 2025 Day 2: Snowballs&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-17T15:30:00&#43;05:30">December 17, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

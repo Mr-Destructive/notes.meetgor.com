@@ -1,16 +1,13 @@
-{
-  "type": "posts",
-  "title": "Configure Neovim in Lua",
-  "description": "Setting up or Migrating to Lua in Neovim Configuration. Using Lua in Neovim for configurations and moving out of Vimscript. Setting up Keymaps, Plugins, customizations",
-  "date": "2022-07-09 20:30:00",
-  "status": "published",
-  "slug": "neovim-vimscript-to-lua",
-  "tags": [
-    "vim",
-    "lua"
-  ],
-  "image_url": "https://meetgor-cdn.pages.dev/vimtolua.png"
-}
+---
+type: posts
+title: "Configure Neovim in Lua"
+date: 2022-07-09T20:30:00
+slug: "neovim-vimscript-to-lua"
+tags:
+  - vim
+  - lua
+image_url: https://meetgor-cdn.pages.dev/vimtolua.png
+---
 
 ## Introduction
 

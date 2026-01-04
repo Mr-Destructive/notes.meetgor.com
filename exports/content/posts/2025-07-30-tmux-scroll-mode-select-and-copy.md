@@ -1,11 +1,10 @@
-{
-  "title": "Tmux scroll mode select and copy",
-  "post_dir": "til",
-  "type": "til",
-  "status": "published",
-  "date": "2025-07-30",
-  "tags": ["tmux"]
-}
+---
+type: til
+title: "Tmux scroll mode select and copy"
+date: 2025-07-30T00:00:00
+tags:
+  - tmux
+---
 
 I have found scrolling in tmux is a bit unconventional. Maybe its just me, but sometimes, the terminal interfaces are different, sometimes they are a bit wired, I use Ghostty right now, so selection without tmux works a charm, but the moment I am in tmux, ahmm, it kind of breaks.
 

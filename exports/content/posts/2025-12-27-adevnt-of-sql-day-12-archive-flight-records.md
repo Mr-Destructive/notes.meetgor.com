@@ -2,7 +2,7 @@
 type: "sqlog"
 title: "Advent of SQL 2025 Day 12: Archive Flight Records"
 slug: "advent-of-sql-2025-day-12"
-date: 2025-12-27 15:30 +0530
+date: 2025-12-27T15:30:00+0530
 series: ["advent-of-sql-2025"]
 tags: ["sqlite", "sql", "advent-of-sql"]
 ---

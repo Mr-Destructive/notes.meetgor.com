@@ -1,11 +1,9 @@
-{
-  "title": "Just Fucking use kubernetes",
-  "post_dir": "thoughts",
-  "type": "thoughts",
-  "status": "published",
-  "slug": "just-fucking-use-kubernetes",
-  "date": "2025-07-28"
-}
+---
+type: thoughts
+title: "Just Fucking use kubernetes"
+date: 2025-07-28T00:00:00
+slug: "just-fucking-use-kubernetes"
+---
 
 Just fucking use Kubernetes - [https://waylonwalker.com/just-fucking-use-kubernetes/](https://waylonwalker.com/just-fucking-use-kubernetes/)
 
@@ -41,5 +39,4 @@ I agree to this post too, correct for pointing out the low ambitions, complainin
 
 Does anyone care if you use simple yet fragile bash scripts or heavy weight Kubernetes cluster for just clicking buttons and creating and updating rows in a database? No! 
 
-You know what, let's fucking use Kubernetes. 
-
+You know what, let's fucking use Kubernetes.

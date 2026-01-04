@@ -1,10 +1,8 @@
-{
-    "date": "2025-03-09",
-    "status": "published",
-    "title": "youre screwed unless you take action",
-    "type": "thoughts"
-}
-
+---
+type: thoughts
+title: "youre screwed unless you take action"
+date: 2025-03-09T00:00:00
+---
 
 Interesting read,
 

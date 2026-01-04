@@ -1,21 +1,16 @@
-{
-  "type": "posts",
-  "title": "Django Basics: Admin Section",
-  "subtitle": "Exploring and Interacting with the Django's built-in Admin Section",
-  "date": "2022-01-26 22:25:00 +0530",
-  "status": "published",
-  "tags": [
-    "django",
-    "python",
-    "web-development"
-  ],
-  "slug": "django-basics-admin",
-  "image_url": "https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643202559/blogmedia/k5oebqxixvyhn8o60qpo.png",
-  "series": [
-    "Django-Basics",
-    "Django-Series"
-  ]
-}
+---
+type: posts
+title: "Django Basics: Admin Section"
+subtitle: "Exploring and Interacting with the Django's built-in Admin Section"
+date: 2022-01-26T22:25:00+05:30
+slug: "django-basics-admin"
+series: ["Django-Basics"]
+tags:
+  - django
+  - python
+  - web-development
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643202559/blogmedia/k5oebqxixvyhn8o60qpo.png
+---
 
 ## Introduction
 

@@ -1,13 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-12-27",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #74",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-74"
-}
-
+---
+type: newsletter
+title: "Techstructive Weekly #74"
+date: 2025-12-27T00:00:00
+slug: "techstructive-weekly-74"
+---
 
 ## Week #74
 

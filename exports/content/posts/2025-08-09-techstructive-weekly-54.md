@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-08-09","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #54","type":"newsletter", "slug": "techstructive-weekly-54"}
+---
+type: newsletter
+title: "Techstructive Weekly #54"
+date: 2025-08-09T00:00:00
+slug: "techstructive-weekly-54"
+---
 
 ## Week #54
 
@@ -150,10 +155,10 @@ Happy Coding :)
 
 For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-757) (#757th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

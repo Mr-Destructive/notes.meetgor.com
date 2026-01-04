@@ -1,12 +1,11 @@
-{
-    "type": "til",
-    "title": "Vim: Get the Text from Visual Selection",
-    "description": "Store the selected text in a variable in Vim Script",
-    "date": "2022-03-05 17:25:37",
-    "status": "published",
-    "slug": "vim-get-visual-text",
-    "tags": ["vim"]
-}
+---
+type: til
+title: "Vim: Get the Text from Visual Selection"
+date: 2022-03-05T17:25:37
+slug: "vim-get-visual-text"
+tags:
+  - vim
+---
 
 ## Using Registers 
 

@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-07-19","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #51","type":"newsletter", "slug": "techstructive-weekly-51"}
+---
+type: newsletter
+title: "Techstructive Weekly #51"
+date: 2025-07-19T00:00:00
+slug: "techstructive-weekly-51"
+---
 
 ## Week #51
 
@@ -72,11 +77,11 @@ Double click to interact with video
 
 Didn’t consume much this week, produced a lot of shitty python and probably fixed a tons of bugs, but never got recognition. That’s quite a whirlwind to do, will be taking this weekend a slight self development route to upskill myself for learning SQL. I am finding it really interesting to learn SQL and contribute to SQLC, will continue on that.
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.
 

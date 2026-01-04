@@ -1,0 +1,1117 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Golang: Anonymous Functions &middot; Notes</title>
+    <meta name="title" content="Golang: Anonymous Functions &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="go,">
+  
+  
+  
+  <link rel="canonical" href="/posts/golang-anonymous-functions/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/golang-anonymous-functions/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Golang: Anonymous Functions">
+  <meta property="og:description" content="Introduction # We have looked at the defer keyword in golang in the previous part of the series, in this section, we will understand how we can use anonymous functions in golang. We will explore how to declare and use anonymous functions with a few examples.
+What are Anonymous Functions # Anonymous functions are quite simple to understand, we don’t define a function, we declare it and call it instantly. An anonymous function doesn’t have a name so hence it is called an anonymous function. As a normal function it can take in parameters and return values. With anonymous functions, we can bind the operations to a variable or a constant as a literal(value). If an anonymous function takes in a parameter, it needs to be parsed immediately after the end of the function body. We will see how we define the syntax and specifications of the anonymous functions in golang.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-24T18:15:00+00:00">
+    <meta property="article:modified_time" content="2026-01-03T21:39:39+05:30">
+    <meta property="article:tag" content="Go">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Golang: Anonymous Functions">
+  <meta name="twitter:description" content="Introduction # We have looked at the defer keyword in golang in the previous part of the series, in this section, we will understand how we can use anonymous functions in golang. We will explore how to declare and use anonymous functions with a few examples.
+What are Anonymous Functions # Anonymous functions are quite simple to understand, we don’t define a function, we declare it and call it instantly. An anonymous function doesn’t have a name so hence it is called an anonymous function. As a normal function it can take in parameters and return values. With anonymous functions, we can bind the operations to a variable or a constant as a literal(value). If an anonymous function takes in a parameter, it needs to be parsed immediately after the end of the function body. We will see how we define the syntax and specifications of the anonymous functions in golang.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Golang: Anonymous Functions",
+    "headline": "Golang: Anonymous Functions",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/golang-anonymous-functions/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-07-24T18:15:00\u002b00:00",
+    "datePublished": "2022-07-24T18:15:00\u002b00:00",
+    
+    "dateModified": "2026-01-03T21:39:39\u002b05:30",
+    
+    "keywords": ["go"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2093"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Golang: Anonymous Functions
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-07-24T18:15:00&#43;00:00">July 24, 2022</time><span class="px-2 text-primary-500">&middot;</span><span>2093 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We have looked at the defer keyword in golang in the <a href="https://www.meetgor.com/golang-defer/"  target="_blank">previous</a> part of the series, in this section, we will understand how we can use anonymous functions in golang. We will explore how to declare and use anonymous functions with a few examples.</p>
+
+<h2 class="relative group">What are Anonymous Functions
+    <div id="what-are-anonymous-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-are-anonymous-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Anonymous functions are quite simple to understand, we don&rsquo;t define a function, we declare it and call it instantly. An anonymous function doesn&rsquo;t have a name so hence it is called an anonymous function. As a normal function it can take in parameters and return values. With anonymous functions, we can bind the operations to a variable or a constant as a literal(value). If an anonymous function takes in a parameter, it needs to be parsed immediately after the end of the function body. We will see how we define the syntax and specifications of the anonymous functions in golang.</p>
+
+<h2 class="relative group">Simple Anonymous functions
+    <div id="simple-anonymous-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#simple-anonymous-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To create a simple anonymous function we use the same function syntax without giving it a name like <code>func() {}</code>, inside the function body i.e. <code>{}</code>, you can define the operations that need to be performed.</p>
+<p>Here, we have created an anonymous function that simply calls the <code>fmt.Println</code> function with a string. So, we have made things a little too much as we can even directly call the <code>fmt.Println</code> function from the main function, instead we have called an anonymous function that in turn calls the <code>fmt.Println</code> function. It might not make sense to use an anonymous function here, but it can be helpful for other complex tasks that you want to isolate the logic without creating a dedicated function for the process.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, Anonymous functions&#34;</span>)
+</span></span><span style="display:flex;"><span>  }()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hello, Anonymous functions</span></span></code></pre></div></div>
+<p>So, this is how we create a basic anonymous function in golang, this can be further used for returning values from the function or passing parameters into the function and also assigning the function call to a variable or a constant.</p>
+
+<h2 class="relative group">Assigning anonymous function to variables
+    <div id="assigning-anonymous-function-to-variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#assigning-anonymous-function-to-variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can assign the call to the anonymous function to a variable or a constant and call the function as many times as we require. So, we can basically store the function logic in a variable and call it whenever we require the function with the <code>()</code> parenthesis as an indication to call the function.</p>
+<p>In the following example, we have used the variable <code>draw</code> to store the function call which prints <code>Drawing</code> with the help of the <code>fmt.Println</code> function. The draw variable now contains the function and not its value. So be careful here, the anonymous function which we have defined as the <code>draw</code> variable&rsquo;s literal value, it&rsquo;s like we are giving a name to this anonymous function and the name will be the variable name so we have created the function <code>draw</code> which is an anonymous function stored in a variable.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">draw</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Drawing&#34;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">draw</span>()
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">draw</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Drawing
+</span></span><span style="display:flex;"><span>Drawing</span></span></code></pre></div></div>
+<p>We see that we call the variable <code>draw</code> as a function call by appending <code>()</code> parenthesis to it as <code>draw()</code> this thereby calls the anonymous function stored inside the variable value.</p>
+<p>The main thing to note here is that we are not adding <code>()</code> at the time of declaring the anonymous function, as it will call the function directly. The problem then will arise because the function is not returning anything so we can&rsquo;t assign it to a variable.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">draw</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Drawing&#34;</span>)
+</span></span><span style="display:flex;"><span>}()</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>functions/anonymous_functions.go:10:11: func() {…}() (no value) used as value</span></span></code></pre></div></div>
+<p>So, we are trying to assign a variable to a function call that has no return value. This has no value, not even nil, so we get an error for assigning a variable to nothing.</p>
+<p>Though if you had a return value from the function, we can directly assign the function call to the variable as it has returned a valid value defined in the function literal.</p>
+
+<h2 class="relative group">Parsing parameters
+    <div id="parsing-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can even parse parameters to the anonymous functions as any other normal function. We define the name of the variable followed by the type of the variable in the parenthesis to use these parameters inside the anonymous function.</p>
+<p>We need to keep in mind that these function parameters can either be passed with the variable call or directly at the time of defining the function.</p>
+<p>In the below example, we have created a variable <code>call</code> and are assigning it to an anonymous function that takes in a parameter <code>name</code> which is a <code>string</code>, and prints some text to the console. So, we call the funciton <code>call</code> with a parameter as a string, as we have <code>&quot;Meet&quot;</code> and <code>person := &quot;Chris&quot;</code> as a string passed to the <code>call</code> function.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">call</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Calling,&#34;</span>, <span style="color:#a6e22e">name</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">call</span>(<span style="color:#e6db74">&#34;Meet&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">person</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Chris&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">person</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Calling, Meet
+</span></span><span style="display:flex;"><span>Calling, Chris</span></span></code></pre></div></div>
+<p>Here, we can see that the function <code>call</code> prints the text that we have defined to call the <code>fmt.Println</code> function. We parse the function with the string literal as the anonymous function takes a parameter in the form of a string. We can parse multiple parameters to the anonymous function as we can with the normal function like slices, maps, arrays, struct, etc.</p>
+
+<h2 class="relative group">Returning values
+    <div id="returning-values" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#returning-values" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can even return values from the anonymous function if we want to instantly call the function and save the <code>returned</code> value in the variable. We can return single or multiple values as per our requirements just like any normal function in golang.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">is_divisible</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">x</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> <span style="color:#66d9ef">bool</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">res</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%T
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">is_divisible</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">is_divisible</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">is_divisible</span>(<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">divisblity_check</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">is_divisible</span>(<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%T : %t
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">divisblity_check</span>, <span style="color:#a6e22e">divisblity_check</span>) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>func(int, int) bool 
+</span></span><span style="display:flex;"><span>true
+</span></span><span style="display:flex;"><span>false
+</span></span><span style="display:flex;"><span>bool : true</span></span></code></pre></div></div>
+<p>As we can see the function has returned a boolean value and we store it in a variable <code>divisblity_check</code>, the variable which contains the function i.e. <code>is_divisible</code> can then be called, and thereby we get the returned value in the variable as a boolean as we print the type and the value of the variable <code>divisblity_check</code>. We also can see that the type of the variable <code>is_divisible</code> is of type function literal which takes <code>int, int</code> and has a return value as <code>bool</code>.</p>
+<p>We can also do one more interesting here, which we were restricted previously in the above examples. We can directly call the function and store it as a value rather than the function itself. So, we can only use the value returned from the function but can&rsquo;t call the function later.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">is_divisible</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">x</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> <span style="color:#66d9ef">bool</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">res</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>}(<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%T
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">is_divisible</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#a6e22e">is_divisible</span>) </span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bool
+</span></span><span style="display:flex;"><span>false</span></span></code></pre></div></div>
+<p>So, in the above-modified example, we have passed in the parameter instead of a callable function. This will store the returned value of the function call. So, we will store the boolean value in the <code>is_divisible</code> and we will have to pass the integer values to the function which we have parsed as <code>(13, 4)</code> to the anonymous function call.</p>
+<p>In the below example, we have created an anonymous function that takes in three parameters like <code>(string, int, string)</code> and returns a string. We have used <code>fmt.Sprintf</code> function to format the variable and store it in a variable, we then return the string. This anonymous function is then directly called and we store the returned value instead of the function.</p>
+<p>So, in this example, the <code>format_email</code> variable will store a string instead of acting it as a function as a callable object.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">format_email</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">age</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">company</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">email</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%s.%d@%s.com&#34;</span>, <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">company</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">email</span>
+</span></span><span style="display:flex;"><span>  }(<span style="color:#e6db74">&#34;john&#34;</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#34;gophersoft&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">format_email</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%T
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>,<span style="color:#a6e22e">format_email</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>john.25@gophersoft.com   
+</span></span><span style="display:flex;"><span>string</span></span></code></pre></div></div>
+<p>As we can see the <code>format_email</code> variable only returns a string instead of a callable object. We have directly parsed the parameters to the anonymous function and hence it instantly calls it and we return the string.</p>
+
+<h2 class="relative group">Passing Anonymous function to function parameters
+    <div id="passing-anonymous-function-to-function-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#passing-anonymous-function-to-function-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can even pass an anonymous function to a parameter to a function. This can be quite helpful for writing some simple logic inside a complex script. We can pass the function type as a parameter to the parameter and theere we can parse the actual data and perform the desired operation.</p>
+<p>The below example is a bit of code to write but makes a lot of sense to understand anonymous functions in golang. The function <code>get_csv</code> is a function which takes in three parameters <code>int, string, func(string)[] string</code>. The third parameter is a function literal that takes in a string and returns a slice of string. So, we are basically converting a string <code>&quot;kevin,21,john,33&quot;</code> into a slice of the slice like <code>[[kevin 21] [john 33]]</code>, this is basically separating values with <code>,</code> comma as the delimiter and then processing slices to create a single slice.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get_csv</span>(<span style="color:#a6e22e">index</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">str</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">t</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">csv</span> <span style="color:#66d9ef">string</span>)[]<span style="color:#66d9ef">string</span>) [][]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">t</span>(<span style="color:#a6e22e">str</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> [][]<span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span>&lt;len(<span style="color:#a6e22e">s</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">+=</span><span style="color:#ae81ff">2</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span> = append(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">i</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span> = append(<span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">csv_slice</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">csv</span> <span style="color:#66d9ef">string</span>) []<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">csv</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">csv_data</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">get_csv</span>(<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#34;kevin,21,john,33,george,24&#34;</span>, <span style="color:#a6e22e">csv_slice</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">csv_data</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">csv_data</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s - %s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>,<span style="color:#a6e22e">s</span>[<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">s</span>[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>  }</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>go run functions/anonymous_function.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[kevin 21] [john 33] [george 24]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kevin - 21
+</span></span><span style="display:flex;"><span>john - 33
+</span></span><span style="display:flex;"><span>george - 24</span></span></code></pre></div></div>
+<p>Let&rsquo;s break down the code one by one, we will start with the main function, where we have <code>csv_slice</code> as a function literal and is an anonymous function that takes in a string and returns a slice of string. The function returns a call to the function <a href="https://pkg.go.dev/strings#Split"  target="_blank">strings.Split</a> taking in the string from the function parameter. We then call the function <code>get_csv</code> with parameters <code>(2, &quot;kevin,21....&quot;, csv_slice)</code>, this function is defined outside the main. The function takes in three parameters as discussed and parsed from the main function and it returns a slice of type string.</p>
+<p>So, inside the <code>get_csv</code> function, we define <code>s</code> as the function call to <code>t(str)</code> which if you look carefully is a function call to <code>csv_slice</code> with parameter as a string. This function call returns a slice of strings separated by <code>,</code>. So that&rsquo;s all the logic we need to understand anonymous function from parameters. We have used a function literal to call the function from another function. In this case, the funciton is an anonymous function assigned to a variable.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#34;kevin,21,john,33,george,24&#34;
+</span></span><span style="display:flex;"><span>            ||
+</span></span><span style="display:flex;"><span>            \/
+</span></span><span style="display:flex;"><span>[kevin 21 john 33 george 24]
+</span></span><span style="display:flex;"><span>            ||
+</span></span><span style="display:flex;"><span>            \/
+</span></span><span style="display:flex;"><span>[[kevin 21] [john 33] [george 24]]</span></span></code></pre></div></div>
+<p>Further, after we have <code>s</code> which would look like <code>[kevin 21 john 33 george 24]</code> as each individual element. Thereafter we create an empty <a href="https://www.geeksforgeeks.org/slice-of-slices-in-golang/"  target="_blank">slice of slice</a> string as <code>res</code> and operate a loop through the slice jumping 2 indexes at a time. Why? because we want a slice of two elements combined. So, we also create a slice of string named <code>data</code> and we add the two components to it like <code>[kevin 21]</code> with the <a href="https://pkg.go.dev/builtin#append"  target="_blank">append</a> function, and this slice is appended to a slice of slices <code>res</code> as <code>[[kevin 21]]</code> thereby iterating over the entire slice and creating the desired slice data. We return the <code>res</code> from the function. This get&rsquo;s us back to the main function which simply iterates over the slice and we get the desired data from it.</p>
+<p>So, this is how we convert an extremely easy task to extremely complicated code :)</p>
+<p>That&rsquo;s it from this part. Reference for all the code examples and commands can be found in the <a href="https://github.com/mr-destructive/100-days-of-golang/tree/main/scripts/functions/anonymous_function.go"  target="_blank">100 days of Golang</a> GitHub repository.</p>
+
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>That is it from this part, we covered a little bit about anonymous functions in golang. Anonymous functions are simply function literals that can be used to do a lot of quick operations without needing to write an explicit function in the program. Further, in the next part look into closures which are a bit complex to understand and require the understanding of anonymous functions.</p>
+<p>Thank you for reading, if you have any queries, feedback, or questions, you can freely ask me on my social handles. Happy Coding :)</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2022-07-24-GO-17-Anonymous-functions.md"
+          data-oid-likes="likes_posts/2022-07-24-GO-17-Anonymous-functions.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/django-deploy-railway-nixpacks/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Deploying Django Project with Railway Nixpacks
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-07-16T16:15:00&#43;00:00">July 16, 2022</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/django-htmx-crud/">
+              <span class="leading-6">
+                Django + HTMX CRUD application&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-07-31T12:30:00&#43;00:00">July 31, 2022</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

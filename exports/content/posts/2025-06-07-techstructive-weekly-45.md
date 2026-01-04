@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-06-07","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #45","type":"newsletter", "slug": "techstructive-weekly-45"}
+---
+type: newsletter
+title: "Techstructive Weekly #45"
+date: 2025-06-07T00:00:00
+slug: "techstructive-weekly-45"
+---
 
 ## Week #45
 
@@ -107,6 +112,6 @@ Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts
 
 Thanks for reading Techstructive Weekly! This post is public, so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]

@@ -1,21 +1,15 @@
-{
-  "type": "posts",
-  "title": "Deploying Django Project with Railway Nixpacks",
-  "description": "Configuring and Seting up nixpacks for deploying django project on Railway app. Interacting with the nixpacks CLI for building and creating deployable django applications.",
-  "date": "2022-07-16 16:15:00",
-  "status": "published",
-  "slug": "django-deploy-railway-nixpacks",
-  "tags": [
-    "django",
-    "python",
-    "railway"
-  ],
-  "image_url": "https://meetgor-cdn.pages.dev/django-deploy-railway-nixpacks.png",
-  "series": [
-    "Django-Deployment",
-    "Django-Series"
-  ]
-}
+---
+type: posts
+title: "Deploying Django Project with Railway Nixpacks"
+date: 2022-07-16T16:15:00
+slug: "django-deploy-railway-nixpacks"
+series: ["Django-Deployment"]
+tags:
+  - django
+  - python
+  - railway
+image_url: https://meetgor-cdn.pages.dev/django-deploy-railway-nixpacks.png
+---
 
 ## Introduction
 

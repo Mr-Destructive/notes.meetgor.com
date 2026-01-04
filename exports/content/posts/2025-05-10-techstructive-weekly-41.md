@@ -1,12 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-05-10",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #41",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-41"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #41"
+date: 2025-05-10T00:00:00
+slug: "techstructive-weekly-41"
+---
 
 ## Week #41
 

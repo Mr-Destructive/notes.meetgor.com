@@ -1,16 +1,13 @@
-{
-  "type": "posts",
-  "title": "Connecting LibSQL database with Python",
-  "description": "",
-  "status": "draft",
-  "date": "2023-11-30 20:45:00",
-  "tags": [
-    "libsql",
-    "python"
-  ],
-  "slug": "libsql-python",
-  "image_url": "https://meetgor-cdn.pages.dev/connect-libsql-with-python.png"
-}
+---
+type: posts
+title: "Connecting LibSQL database with Python"
+date: 2023-11-30T20:45:00
+slug: "libsql-python"
+tags:
+  - libsql
+  - python
+image_url: https://meetgor-cdn.pages.dev/connect-libsql-with-python.png
+---
 
 ## Introduction
 

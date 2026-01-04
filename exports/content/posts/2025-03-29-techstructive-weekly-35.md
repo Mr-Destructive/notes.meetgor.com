@@ -1,11 +1,9 @@
-{
-  "title": "Techstructive Weekly #35",
-  "post_dir": "newsletter",
-  "type": "newsletter",
-  "status": "published",
-  "slug": "techstructive-weekly-35",
-  "date": "2025-03-29"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #35"
+date: 2025-03-29T00:00:00
+slug: "techstructive-weekly-35"
+---
 
 ## Week #35
 

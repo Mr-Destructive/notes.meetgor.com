@@ -1,23 +1,16 @@
-{
-  "type": "posts",
-  "title": "Django Basics: What is it?",
-  "subtitle": "Understanding what and why of the Django framework",
-  "date": "2021-11-16 20:45:00 +0530",
-  "status": "published",
-  "tags": [
-    "django",
-    "python",
-    "web-development"
-  ],
-  "slug": "django-basics-intro",
-  "image_url": "https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643289206/blogmedia/gbq3rlfat3erbxocn7yn.png",
-  "series": [
-    "Django-Basics",
-    "Django-Series"
-  ],
-  "series_description": "Understand the fundamentals of backend web development with Django web framework."
-}
-
+---
+type: posts
+title: "Django Basics: What is it?"
+subtitle: "Understanding what and why of the Django framework"
+date: 2021-11-16T20:45:00+05:30
+slug: "django-basics-intro"
+series: ["Django-Basics"]
+tags:
+  - django
+  - python
+  - web-development
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643289206/blogmedia/gbq3rlfat3erbxocn7yn.png
+---
 
 ## Introduction
 

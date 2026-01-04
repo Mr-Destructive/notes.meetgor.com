@@ -314,8 +314,9 @@ func handlePosts(w http.ResponseWriter, r *http.Request, db *db.DB, id, action s
 		}
 
 		// Fetch title and image from link if empty and type is "link"
-		if (req.Title == "" || req.Title == nil) && req.TypeID == "link" {
-			if metadata, ok := req.Metadata.(map[string]interface{}); ok {
+		if req.Title == "" && req.TypeID == "link" {
+			var metadata map[string]interface{}
+			if err := json.Unmarshal(req.Metadata, &metadata); err == nil && metadata != nil {
 				if sourceURL, exists := metadata["source_url"].(string); exists && sourceURL != "" {
 					pageMeta := fetchPageMetadata(sourceURL)
 					if pageMeta.Title != "" {

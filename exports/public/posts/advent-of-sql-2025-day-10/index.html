@@ -1,0 +1,1193 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Advent of SQL 2025 Day 10: Misdelivered Presents &middot; Notes</title>
+    <meta name="title" content="Advent of SQL 2025 Day 10: Misdelivered Presents &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,advent-of-sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/advent-of-sql-2025-day-10/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/advent-of-sql-2025-day-10/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Advent of SQL 2025 Day 10: Misdelivered Presents">
+  <meta property="og:description" content="Advent of SQL, Day 10 - Misdelivered Presents # It’s already day 10? We just need 5 more days now! Whoa! that flew by swiftly.
+Let’s pull in the data.
+This is the SQL for day 10 in SQLite.
+DROP TABLE IF EXISTS misdelivered_presents; DROP TABLE IF EXISTS deliveries; CREATE TABLE deliveries ( id INT PRIMARY KEY, child_name TEXT, delivery_location TEXT, gift_name TEXT, scheduled_at TIMESTAMP ); CREATE TABLE misdelivered_presents ( id INT PRIMARY KEY, child_name TEXT, delivery_location TEXT, gift_name TEXT, scheduled_at TIMESTAMP, flagged_at TIMESTAMP, reason TEXT ); INSERT INTO deliveries (id, child_name, delivery_location, gift_name, scheduled_at) VALUES (1, &#39;Omar Q.&#39;, &#39;45 Maple Street&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 21:09:00&#39;), (2, &#39;Sofia K.&#39;, &#39;77 Snowflake Road&#39;, &#39;plush reindeer&#39;, &#39;2025-12-24 18:35:00&#39;), (3, &#39;Mila N.&#39;, &#39;The Vibes&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 21:09:00&#39;), (4, &#39;Elias M.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;board game&#39;, &#39;2025-12-24 20:31:00&#39;), (5, &#39;Ravi P.&#39;, &#39;45 Maple Street&#39;, &#39;wooden train set&#39;, &#39;2025-12-24 18:23:00&#39;), (6, &#39;Jonah W.&#39;, &#39;77 Snowflake Road&#39;, &#39;plush reindeer&#39;, &#39;2025-12-24 20:34:00&#39;), (7, &#39;Ava J.&#39;, &#39;123 Evergreen Lane&#39;, &#39;board game&#39;, &#39;2025-12-24 21:03:00&#39;), (8, &#39;Omar Q.&#39;, &#39;77 Snowflake Road&#39;, &#39;board game&#39;, &#39;2025-12-24 18:56:00&#39;), (9, &#39;Nia G.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 21:27:00&#39;), (10, &#39;Zara S.&#39;, &#39;North Pole Annex&#39;, &#39;wooden train set&#39;, &#39;2025-12-24 20:58:00&#39;), (11, &#39;Ravi P.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;puzzle box&#39;, &#39;2025-12-24 18:39:00&#39;), (12, &#39;Jonah W.&#39;, &#39;123 Evergreen Lane&#39;, &#39;puzzle box&#39;, &#39;2025-12-24 18:23:00&#39;), (13, &#39;Ravi P.&#39;, &#39;North Pole Annex&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 21:36:00&#39;), (14, &#39;Lena F.&#39;, &#39;North Pole Annex&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 21:26:00&#39;), (15, &#39;Ava J.&#39;, &#39;North Pole Annex&#39;, &#39;snow globe&#39;, &#39;2025-12-24 18:31:00&#39;), (16, &#39;Elias M.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;robot toy&#39;, &#39;2025-12-24 20:21:00&#39;), (17, &#39;Sofia K.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 20:27:00&#39;), (18, &#39;Jonah W.&#39;, &#39;77 Snowflake Road&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 20:49:00&#39;), (19, &#39;Jonah W.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;art supplies&#39;, &#39;2025-12-24 21:38:00&#39;), (20, &#39;Jonah W.&#39;, &#39;123 Evergreen Lane&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 19:11:00&#39;); INSERT INTO misdelivered_presents (id, child_name, delivery_location, gift_name, scheduled_at, flagged_at, reason) VALUES (601, &#39;Priya D.&#39;, &#39;The Vibes&#39;, &#39;plush reindeer&#39;, &#39;2025-12-24 14:00:00&#39;, &#39;2025-12-24 14:05:00&#39;, &#39;Invalid delivery location&#39;), (602, &#39;Lena F.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-22 06:00:00&#39;, &#39;2025-12-22 06:05:00&#39;, &#39;Invalid delivery location&#39;), (603, &#39;Caleb O.&#39;, &#39;Drifting Igloo&#39;, &#39;board game&#39;, &#39;2025-12-24 06:00:00&#39;, &#39;2025-12-24 06:05:00&#39;, &#39;Invalid delivery location&#39;), (604, &#39;Mateo C.&#39;, &#39;The Vibes&#39;, &#39;art supplies&#39;, &#39;2025-12-22 04:00:00&#39;, &#39;2025-12-22 04:05:00&#39;, &#39;Invalid delivery location&#39;), (605, &#39;Hiro T.&#39;, &#39;The Vibes&#39;, &#39;robot toy&#39;, &#39;2025-12-24 08:00:00&#39;, &#39;2025-12-24 08:05:00&#39;, &#39;Invalid delivery location&#39;), (606, &#39;Priya D.&#39;, &#39;Volcano Rim&#39;, &#39;puzzle box&#39;, &#39;2025-12-22 08:00:00&#39;, &#39;2025-12-22 08:05:00&#39;, &#39;Invalid delivery location&#39;), (607, &#39;Nia G.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-24 01:00:00&#39;, &#39;2025-12-24 01:05:00&#39;, &#39;Invalid delivery location&#39;), (608, &#39;Elias M.&#39;, &#39;Drifting Igloo&#39;, &#39;board game&#39;, &#39;2025-12-24 01:00:00&#39;, &#39;2025-12-24 01:05:00&#39;, &#39;Invalid delivery location&#39;), (609, &#39;Ravi P.&#39;, &#39;Volcano Rim&#39;, &#39;board game&#39;, &#39;2025-12-24 02:00:00&#39;, &#39;2025-12-24 02:05:00&#39;, &#39;Invalid delivery location&#39;), (610, &#39;Hiro T.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;science kit&#39;, &#39;2025-12-23 20:00:00&#39;, &#39;2025-12-23 20:05:00&#39;, &#39;Invalid delivery location&#39;), (611, &#39;Priya D.&#39;, &#39;Drifting Igloo&#39;, &#39;puzzle box&#39;, &#39;2025-12-22 21:00:00&#39;, &#39;2025-12-22 21:05:00&#39;, &#39;Invalid delivery location&#39;), (612, &#39;Hiro T.&#39;, &#39;Volcano Rim&#39;, &#39;art supplies&#39;, &#39;2025-12-23 09:00:00&#39;, &#39;2025-12-23 09:05:00&#39;, &#39;Invalid delivery location&#39;), (613, &#39;Jonah W.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-24 01:00:00&#39;, &#39;2025-12-24 01:05:00&#39;, &#39;Invalid delivery location&#39;), (614, &#39;Omar Q.&#39;, &#39;Volcano Rim&#39;, &#39;art supplies&#39;, &#39;2025-12-22 01:00:00&#39;, &#39;2025-12-22 01:05:00&#39;, &#39;Invalid delivery location&#39;), (615, &#39;Omar Q.&#39;, &#39;Drifting Igloo&#39;, &#39;science kit&#39;, &#39;2025-12-23 20:00:00&#39;, &#39;2025-12-23 20:05:00&#39;, &#39;Invalid delivery location&#39;), (616, &#39;Omar Q.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 12:00:00&#39;, &#39;2025-12-24 12:05:00&#39;, &#39;Invalid delivery location&#39;), (617, &#39;Zara S.&#39;, &#39;Volcano Rim&#39;, &#39;wooden train set&#39;, &#39;2025-12-24 12:00:00&#39;, &#39;2025-12-24 12:05:00&#39;, &#39;Invalid delivery location&#39;), (618, &#39;Omar Q.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;teddy bear&#39;, &#39;2025-12-23 15:00:00&#39;, &#39;2025-12-23 15:05:00&#39;, &#39;Invalid delivery location&#39;), (619, &#39;Caleb O.&#39;, &#39;The Vibes&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 14:00:00&#39;, &#39;2025-12-24 14:05:00&#39;, &#39;Invalid delivery location&#39;), (620, &#39;Nia G.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-23 03:00:00&#39;, &#39;2025-12-23 03:05:00&#39;, &#39;Invalid delivery location&#39;); SELECT * FROM deliveries; SELECT * FROM misdelivered_presents; We have two tables. Almost the same with critical logical distinction among them and one extra column.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-25T15:30:00+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:32:35+05:30">
+    <meta property="article:tag" content="Sqlite">
+    <meta property="article:tag" content="Sql">
+    <meta property="article:tag" content="Advent-of-Sql">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of SQL 2025 Day 10: Misdelivered Presents">
+  <meta name="twitter:description" content="Advent of SQL, Day 10 - Misdelivered Presents # It’s already day 10? We just need 5 more days now! Whoa! that flew by swiftly.
+Let’s pull in the data.
+This is the SQL for day 10 in SQLite.
+DROP TABLE IF EXISTS misdelivered_presents; DROP TABLE IF EXISTS deliveries; CREATE TABLE deliveries ( id INT PRIMARY KEY, child_name TEXT, delivery_location TEXT, gift_name TEXT, scheduled_at TIMESTAMP ); CREATE TABLE misdelivered_presents ( id INT PRIMARY KEY, child_name TEXT, delivery_location TEXT, gift_name TEXT, scheduled_at TIMESTAMP, flagged_at TIMESTAMP, reason TEXT ); INSERT INTO deliveries (id, child_name, delivery_location, gift_name, scheduled_at) VALUES (1, &#39;Omar Q.&#39;, &#39;45 Maple Street&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 21:09:00&#39;), (2, &#39;Sofia K.&#39;, &#39;77 Snowflake Road&#39;, &#39;plush reindeer&#39;, &#39;2025-12-24 18:35:00&#39;), (3, &#39;Mila N.&#39;, &#39;The Vibes&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 21:09:00&#39;), (4, &#39;Elias M.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;board game&#39;, &#39;2025-12-24 20:31:00&#39;), (5, &#39;Ravi P.&#39;, &#39;45 Maple Street&#39;, &#39;wooden train set&#39;, &#39;2025-12-24 18:23:00&#39;), (6, &#39;Jonah W.&#39;, &#39;77 Snowflake Road&#39;, &#39;plush reindeer&#39;, &#39;2025-12-24 20:34:00&#39;), (7, &#39;Ava J.&#39;, &#39;123 Evergreen Lane&#39;, &#39;board game&#39;, &#39;2025-12-24 21:03:00&#39;), (8, &#39;Omar Q.&#39;, &#39;77 Snowflake Road&#39;, &#39;board game&#39;, &#39;2025-12-24 18:56:00&#39;), (9, &#39;Nia G.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 21:27:00&#39;), (10, &#39;Zara S.&#39;, &#39;North Pole Annex&#39;, &#39;wooden train set&#39;, &#39;2025-12-24 20:58:00&#39;), (11, &#39;Ravi P.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;puzzle box&#39;, &#39;2025-12-24 18:39:00&#39;), (12, &#39;Jonah W.&#39;, &#39;123 Evergreen Lane&#39;, &#39;puzzle box&#39;, &#39;2025-12-24 18:23:00&#39;), (13, &#39;Ravi P.&#39;, &#39;North Pole Annex&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 21:36:00&#39;), (14, &#39;Lena F.&#39;, &#39;North Pole Annex&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 21:26:00&#39;), (15, &#39;Ava J.&#39;, &#39;North Pole Annex&#39;, &#39;snow globe&#39;, &#39;2025-12-24 18:31:00&#39;), (16, &#39;Elias M.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;robot toy&#39;, &#39;2025-12-24 20:21:00&#39;), (17, &#39;Sofia K.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 20:27:00&#39;), (18, &#39;Jonah W.&#39;, &#39;77 Snowflake Road&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 20:49:00&#39;), (19, &#39;Jonah W.&#39;, &#39;Frost Hollow Cabin&#39;, &#39;art supplies&#39;, &#39;2025-12-24 21:38:00&#39;), (20, &#39;Jonah W.&#39;, &#39;123 Evergreen Lane&#39;, &#39;storybook collection&#39;, &#39;2025-12-24 19:11:00&#39;); INSERT INTO misdelivered_presents (id, child_name, delivery_location, gift_name, scheduled_at, flagged_at, reason) VALUES (601, &#39;Priya D.&#39;, &#39;The Vibes&#39;, &#39;plush reindeer&#39;, &#39;2025-12-24 14:00:00&#39;, &#39;2025-12-24 14:05:00&#39;, &#39;Invalid delivery location&#39;), (602, &#39;Lena F.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-22 06:00:00&#39;, &#39;2025-12-22 06:05:00&#39;, &#39;Invalid delivery location&#39;), (603, &#39;Caleb O.&#39;, &#39;Drifting Igloo&#39;, &#39;board game&#39;, &#39;2025-12-24 06:00:00&#39;, &#39;2025-12-24 06:05:00&#39;, &#39;Invalid delivery location&#39;), (604, &#39;Mateo C.&#39;, &#39;The Vibes&#39;, &#39;art supplies&#39;, &#39;2025-12-22 04:00:00&#39;, &#39;2025-12-22 04:05:00&#39;, &#39;Invalid delivery location&#39;), (605, &#39;Hiro T.&#39;, &#39;The Vibes&#39;, &#39;robot toy&#39;, &#39;2025-12-24 08:00:00&#39;, &#39;2025-12-24 08:05:00&#39;, &#39;Invalid delivery location&#39;), (606, &#39;Priya D.&#39;, &#39;Volcano Rim&#39;, &#39;puzzle box&#39;, &#39;2025-12-22 08:00:00&#39;, &#39;2025-12-22 08:05:00&#39;, &#39;Invalid delivery location&#39;), (607, &#39;Nia G.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-24 01:00:00&#39;, &#39;2025-12-24 01:05:00&#39;, &#39;Invalid delivery location&#39;), (608, &#39;Elias M.&#39;, &#39;Drifting Igloo&#39;, &#39;board game&#39;, &#39;2025-12-24 01:00:00&#39;, &#39;2025-12-24 01:05:00&#39;, &#39;Invalid delivery location&#39;), (609, &#39;Ravi P.&#39;, &#39;Volcano Rim&#39;, &#39;board game&#39;, &#39;2025-12-24 02:00:00&#39;, &#39;2025-12-24 02:05:00&#39;, &#39;Invalid delivery location&#39;), (610, &#39;Hiro T.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;science kit&#39;, &#39;2025-12-23 20:00:00&#39;, &#39;2025-12-23 20:05:00&#39;, &#39;Invalid delivery location&#39;), (611, &#39;Priya D.&#39;, &#39;Drifting Igloo&#39;, &#39;puzzle box&#39;, &#39;2025-12-22 21:00:00&#39;, &#39;2025-12-22 21:05:00&#39;, &#39;Invalid delivery location&#39;), (612, &#39;Hiro T.&#39;, &#39;Volcano Rim&#39;, &#39;art supplies&#39;, &#39;2025-12-23 09:00:00&#39;, &#39;2025-12-23 09:05:00&#39;, &#39;Invalid delivery location&#39;), (613, &#39;Jonah W.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-24 01:00:00&#39;, &#39;2025-12-24 01:05:00&#39;, &#39;Invalid delivery location&#39;), (614, &#39;Omar Q.&#39;, &#39;Volcano Rim&#39;, &#39;art supplies&#39;, &#39;2025-12-22 01:00:00&#39;, &#39;2025-12-22 01:05:00&#39;, &#39;Invalid delivery location&#39;), (615, &#39;Omar Q.&#39;, &#39;Drifting Igloo&#39;, &#39;science kit&#39;, &#39;2025-12-23 20:00:00&#39;, &#39;2025-12-23 20:05:00&#39;, &#39;Invalid delivery location&#39;), (616, &#39;Omar Q.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 12:00:00&#39;, &#39;2025-12-24 12:05:00&#39;, &#39;Invalid delivery location&#39;), (617, &#39;Zara S.&#39;, &#39;Volcano Rim&#39;, &#39;wooden train set&#39;, &#39;2025-12-24 12:00:00&#39;, &#39;2025-12-24 12:05:00&#39;, &#39;Invalid delivery location&#39;), (618, &#39;Omar Q.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;teddy bear&#39;, &#39;2025-12-23 15:00:00&#39;, &#39;2025-12-23 15:05:00&#39;, &#39;Invalid delivery location&#39;), (619, &#39;Caleb O.&#39;, &#39;The Vibes&#39;, &#39;teddy bear&#39;, &#39;2025-12-24 14:00:00&#39;, &#39;2025-12-24 14:05:00&#39;, &#39;Invalid delivery location&#39;), (620, &#39;Nia G.&#39;, &#39;Abandoned Lighthouse&#39;, &#39;board game&#39;, &#39;2025-12-23 03:00:00&#39;, &#39;2025-12-23 03:05:00&#39;, &#39;Invalid delivery location&#39;); SELECT * FROM deliveries; SELECT * FROM misdelivered_presents; We have two tables. Almost the same with critical logical distinction among them and one extra column.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Advent of SQL 2025 Day 10: Misdelivered Presents",
+    "headline": "Advent of SQL 2025 Day 10: Misdelivered Presents",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/advent-of-sql-2025-day-10/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-25T15:30:00\u002b05:30",
+    "datePublished": "2025-12-25T15:30:00\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:32:35\u002b05:30",
+    
+    "keywords": ["sqlite","sql","advent-of-sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1995"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Advent of SQL 2025 Day 10: Misdelivered Presents
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-25T15:30:00&#43;05:30">December 25, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1995 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Advent of SQL, Day 10 - Misdelivered Presents
+    <div id="advent-of-sql-day-10---misdelivered-presents" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#advent-of-sql-day-10---misdelivered-presents" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>It&rsquo;s already day 10? We just need 5 more days now! Whoa! that flew by swiftly.</p>
+<p>Let&rsquo;s pull in the data.</p>
+<p>This is the SQL for day 10 in SQLite.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> misdelivered_presents;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> deliveries;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> deliveries (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    child_name TEXT,
+</span></span><span style="display:flex;"><span>    delivery_location TEXT,
+</span></span><span style="display:flex;"><span>    gift_name TEXT,
+</span></span><span style="display:flex;"><span>    scheduled_at <span style="color:#66d9ef">TIMESTAMP</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> misdelivered_presents (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    child_name TEXT,
+</span></span><span style="display:flex;"><span>    delivery_location TEXT,
+</span></span><span style="display:flex;"><span>    gift_name TEXT,
+</span></span><span style="display:flex;"><span>    scheduled_at <span style="color:#66d9ef">TIMESTAMP</span>,
+</span></span><span style="display:flex;"><span>    flagged_at <span style="color:#66d9ef">TIMESTAMP</span>,
+</span></span><span style="display:flex;"><span>    reason TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> deliveries (id, child_name, delivery_location, gift_name, scheduled_at) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Omar Q.&#39;</span>, <span style="color:#e6db74">&#39;45 Maple Street&#39;</span>, <span style="color:#e6db74">&#39;storybook collection&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:09:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Sofia K.&#39;</span>, <span style="color:#e6db74">&#39;77 Snowflake Road&#39;</span>, <span style="color:#e6db74">&#39;plush reindeer&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 18:35:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Mila N.&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>, <span style="color:#e6db74">&#39;storybook collection&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:09:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Elias M.&#39;</span>, <span style="color:#e6db74">&#39;Frost Hollow Cabin&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 20:31:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;Ravi P.&#39;</span>, <span style="color:#e6db74">&#39;45 Maple Street&#39;</span>, <span style="color:#e6db74">&#39;wooden train set&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 18:23:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;Jonah W.&#39;</span>, <span style="color:#e6db74">&#39;77 Snowflake Road&#39;</span>, <span style="color:#e6db74">&#39;plush reindeer&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 20:34:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;Ava J.&#39;</span>, <span style="color:#e6db74">&#39;123 Evergreen Lane&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:03:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;Omar Q.&#39;</span>, <span style="color:#e6db74">&#39;77 Snowflake Road&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 18:56:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;Nia G.&#39;</span>, <span style="color:#e6db74">&#39;Frost Hollow Cabin&#39;</span>, <span style="color:#e6db74">&#39;teddy bear&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:27:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;Zara S.&#39;</span>, <span style="color:#e6db74">&#39;North Pole Annex&#39;</span>, <span style="color:#e6db74">&#39;wooden train set&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 20:58:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#39;Ravi P.&#39;</span>, <span style="color:#e6db74">&#39;Frost Hollow Cabin&#39;</span>, <span style="color:#e6db74">&#39;puzzle box&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 18:39:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;Jonah W.&#39;</span>, <span style="color:#e6db74">&#39;123 Evergreen Lane&#39;</span>, <span style="color:#e6db74">&#39;puzzle box&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 18:23:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">13</span>, <span style="color:#e6db74">&#39;Ravi P.&#39;</span>, <span style="color:#e6db74">&#39;North Pole Annex&#39;</span>, <span style="color:#e6db74">&#39;storybook collection&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:36:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;Lena F.&#39;</span>, <span style="color:#e6db74">&#39;North Pole Annex&#39;</span>, <span style="color:#e6db74">&#39;teddy bear&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:26:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#39;Ava J.&#39;</span>, <span style="color:#e6db74">&#39;North Pole Annex&#39;</span>, <span style="color:#e6db74">&#39;snow globe&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 18:31:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;Elias M.&#39;</span>, <span style="color:#e6db74">&#39;Frost Hollow Cabin&#39;</span>, <span style="color:#e6db74">&#39;robot toy&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 20:21:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">17</span>, <span style="color:#e6db74">&#39;Sofia K.&#39;</span>, <span style="color:#e6db74">&#39;Frost Hollow Cabin&#39;</span>, <span style="color:#e6db74">&#39;teddy bear&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 20:27:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;Jonah W.&#39;</span>, <span style="color:#e6db74">&#39;77 Snowflake Road&#39;</span>, <span style="color:#e6db74">&#39;storybook collection&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 20:49:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">19</span>, <span style="color:#e6db74">&#39;Jonah W.&#39;</span>, <span style="color:#e6db74">&#39;Frost Hollow Cabin&#39;</span>, <span style="color:#e6db74">&#39;art supplies&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 21:38:00&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;Jonah W.&#39;</span>, <span style="color:#e6db74">&#39;123 Evergreen Lane&#39;</span>, <span style="color:#e6db74">&#39;storybook collection&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 19:11:00&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> misdelivered_presents
+</span></span><span style="display:flex;"><span>(id, child_name, delivery_location, gift_name, scheduled_at, flagged_at, reason)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">601</span>, <span style="color:#e6db74">&#39;Priya D.&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>, <span style="color:#e6db74">&#39;plush reindeer&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 14:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 14:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">602</span>, <span style="color:#e6db74">&#39;Lena F.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 06:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 06:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">603</span>, <span style="color:#e6db74">&#39;Caleb O.&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 06:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 06:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">604</span>, <span style="color:#e6db74">&#39;Mateo C.&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>, <span style="color:#e6db74">&#39;art supplies&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 04:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 04:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">605</span>, <span style="color:#e6db74">&#39;Hiro T.&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>, <span style="color:#e6db74">&#39;robot toy&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 08:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 08:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">606</span>, <span style="color:#e6db74">&#39;Priya D.&#39;</span>, <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;puzzle box&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 08:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 08:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">607</span>, <span style="color:#e6db74">&#39;Nia G.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 01:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 01:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">608</span>, <span style="color:#e6db74">&#39;Elias M.&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 01:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 01:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">609</span>, <span style="color:#e6db74">&#39;Ravi P.&#39;</span>, <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 02:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 02:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">610</span>, <span style="color:#e6db74">&#39;Hiro T.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;science kit&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 20:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 20:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">611</span>, <span style="color:#e6db74">&#39;Priya D.&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;puzzle box&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 21:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 21:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">612</span>, <span style="color:#e6db74">&#39;Hiro T.&#39;</span>, <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;art supplies&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 09:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 09:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">613</span>, <span style="color:#e6db74">&#39;Jonah W.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 01:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 01:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">614</span>, <span style="color:#e6db74">&#39;Omar Q.&#39;</span>, <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;art supplies&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 01:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-22 01:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">615</span>, <span style="color:#e6db74">&#39;Omar Q.&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;science kit&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 20:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 20:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">616</span>, <span style="color:#e6db74">&#39;Omar Q.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;teddy bear&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 12:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 12:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">617</span>, <span style="color:#e6db74">&#39;Zara S.&#39;</span>, <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;wooden train set&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 12:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 12:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">618</span>, <span style="color:#e6db74">&#39;Omar Q.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;teddy bear&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 15:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 15:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">619</span>, <span style="color:#e6db74">&#39;Caleb O.&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>, <span style="color:#e6db74">&#39;teddy bear&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 14:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-24 14:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">620</span>, <span style="color:#e6db74">&#39;Nia G.&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;board game&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 03:00:00&#39;</span>, <span style="color:#e6db74">&#39;2025-12-23 03:05:00&#39;</span>, <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> deliveries;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> misdelivered_presents;</span></span></code></pre></div></div>
+<p>We have two tables. Almost the same with critical logical distinction among them and one extra column.</p>
+<p>Let&rsquo;s see the problem to check it.</p>
+
+<h2 class="relative group">Problem
+    <div id="problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<blockquote><p>Clean-up the deliveries table to remove any records where the delivery_location is &lsquo;Volcano Rim&rsquo;, &lsquo;Drifting Igloo&rsquo;, &lsquo;Abandoned Lighthouse&rsquo;, &lsquo;The Vibes&rsquo;.</p>
+<p>Move those records to the misdelivered_presents with all the same columns as deliveries plus a flagged_at column with the current time and a reason column with &ldquo;Invalid delivery location&rdquo; listed as the reason for each moved record.</p>
+<p>Make sure your final step shows the misdelivered_presents records that you just moved (i.e. don&rsquo;t include any existing records from the misdelivered_presents table).</p>
+</blockquote><p>Ok, this looks some easy problem.</p>
+<ul>
+<li>SELECT some data</li>
+<li>INSERT that data into other table</li>
+<li>DELETE that data from the original table</li>
+<li>SELECT the newly inserted data in the other table</li>
+</ul>
+<p>Right?</p>
+<p>Unless!</p>
+<blockquote><p>Santa turned to you.</p>
+<p>“I don’t want this done in five steps,” he said. “And I don’t want any re-selecting. Move the problem presents out of the delivery system, log them in the vault, and show me exactly what you moved.”</p>
+</blockquote><p>Ouch Santa! Don&rsquo;t be lazy! Be smart he says! Huhh!</p>
+<p>Ok, at least let&rsquo;s check both the tables, how many rows they have, and the rows that we want to move around.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> delivery_count <span style="color:#66d9ef">FROM</span> deliveries;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> misdelivered_present_count <span style="color:#66d9ef">FROM</span> misdelivered_presents;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> misdelivered_deliveries_count
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> deliveries 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
+</span></span><span style="display:flex;"><span>    delivery_location <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;The Vibes&#39;</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> misdelivered_present_count
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> misdelivered_presents
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
+</span></span><span style="display:flex;"><span>    delivery_location <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;The Vibes&#39;</span>
+</span></span><span style="display:flex;"><span>    );</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM deliveries;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 600      |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM misdelivered_presents;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 50       |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM deliveries WHERE delivery_location IN (&#39;Volcano Rim&#39;, &#39;Drifting Igloo&#39;, &#39;Abandoned Lighthouse&#39;, &#39;The Vibes&#39;);
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 103      |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM misdelivered_presents WHERE delivery_location  IN (&#39;Volcano Rim&#39;, &#39;Drifting Igloo&#39;, &#39;Abandoned Lighthouse&#39;, &#39;The Vibes&#39;);
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 50       |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>OK, so we need to delete the <code>103</code> records from the <code>deliveries</code> table and move them into the <code>misdelivered_presents</code> at the same time.</p>
+<p>How are we going to do that in SQLite.</p>
+<p>We can try</p>
+<ul>
+<li>DELETE FROM deliveries with a SELECT from deliveries</li>
+<li>Then INSERT the deleted data into misdelivered_presents</li>
+</ul>
+<p>Could that work?</p>
+<p>Let&rsquo;s see</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> moved <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">DELETE</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> deliveries
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">WHERE</span> delivery_location <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;The Vibes&#39;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    RETURNING 
+</span></span><span style="display:flex;"><span>        id, 
+</span></span><span style="display:flex;"><span>        child_name, 
+</span></span><span style="display:flex;"><span>        delivery_location, 
+</span></span><span style="display:flex;"><span>        gift_name, 
+</span></span><span style="display:flex;"><span>        scheduled_at, 
+</span></span><span style="display:flex;"><span>        datetime(<span style="color:#e6db74">&#39;now&#39;</span>) <span style="color:#66d9ef">AS</span> flagged_at, 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span> <span style="color:#66d9ef">AS</span> reason
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> moved;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"></code></pre></div></div>
+<p>Ops! Can&rsquo;t generate a CTE with delete in it.</p>
+<p>That&rsquo;s nasty. Thought that could shove it in the insert into the misdelivered table.</p>
+<p>But it should be other way then?</p>
+<p>Insert first and then use the data to delete?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> inserted_data <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> misdelivered_presents (id, child_name, delivery_location, gift_name, scheduled_at)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">SELECT</span> id, child_name, delivery_location, gift_name, scheduled_at
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> deliveries
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> delivery_location <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> deliveries
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> delivery_location <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH inserted_data AS (
+</span></span><span style="display:flex;"><span>  INSERT INTO misdelivered_presents (id, child_name, delivery_location, gift_name, scheduled_at)
+</span></span><span style="display:flex;"><span>  SELECT id, child_name, delivery_location, gift_name, scheduled_at
+</span></span><span style="display:flex;"><span>  FROM deliveries
+</span></span><span style="display:flex;"><span>  WHERE delivery_location IN (&#39;Volcano Rim&#39;, &#39;Drifting Igloo&#39;, &#39;Abandoned Lighthouse&#39;, &#39;The Vibes&#39;)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>DELETE FROM deliveries
+</span></span><span style="display:flex;"><span>WHERE delivery_location IN (&#39;Volcano Rim&#39;, &#39;Drifting Igloo&#39;, &#39;Abandoned Lighthouse&#39;, &#39;The Vibes&#39;);
+</span></span><span style="display:flex;"><span>Parse error: near &#34;INSERT&#34;: syntax error
+</span></span><span style="display:flex;"><span>  rt the selected rows into misdelivered_presents   INSERT INTO misdelivered_pre
+</span></span><span style="display:flex;"><span>                                      error here ---^
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Tried it, didn&rsquo;t work</p>
+<p>Quoting the documentation here.</p>
+<blockquote><p>Common Table Expressions or CTEs act like temporary views that exist only for the duration of a single SQL statement. There are two kinds of common table expressions: &ldquo;ordinary&rdquo; and &ldquo;recursive&rdquo;. Ordinary common table expressions are helpful for making queries easier to understand by factoring subqueries out of the main SQL statement. Recursive common table expressions provide the ability to do hierarchical or recursive queries of trees and graphs, a capability that is not otherwise available in the SQL language.</p>
+</blockquote><p>I think it doesn&rsquo;t support CTEs with delete or insert! Sigh!</p>
+<p>Now?</p>
+<p>BEGIN COMMIT? Atomic Transactions?</p>
+<p>Yeah!</p>
+<p>Santa wanted it in one go right? That&rsquo;s not possible in SQLite but at least everything will happen or nothing will.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> misdelivered_deliveries <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> deliveries 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> delivery_location <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;The Vibes&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> misdelivered_presents (
+</span></span><span style="display:flex;"><span>    id, 
+</span></span><span style="display:flex;"><span>    child_name,
+</span></span><span style="display:flex;"><span>    delivery_location, 
+</span></span><span style="display:flex;"><span>    gift_name, 
+</span></span><span style="display:flex;"><span>    scheduled_at, 
+</span></span><span style="display:flex;"><span>    flagged_at, 
+</span></span><span style="display:flex;"><span>    reason
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    id,
+</span></span><span style="display:flex;"><span>    child_name,
+</span></span><span style="display:flex;"><span>    delivery_location,
+</span></span><span style="display:flex;"><span>    gift_name,
+</span></span><span style="display:flex;"><span>    scheduled_at,
+</span></span><span style="display:flex;"><span>    DATETIME(<span style="color:#e6db74">&#39;now&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> misdelivered_deliveries
+</span></span><span style="display:flex;"><span>RETURNING <span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> deliveries 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> id <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> id <span style="color:#66d9ef">FROM</span> deliveries 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> delivery_location <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span>;</span></span></code></pre></div></div>
+<p>So here, we defined the CTE that selects data from <code>deliveries</code> and uses it to insert into the <code>misdelivered_deliveries</code> table. Then a separate query to delete that data from the <code>deliveries</code> table.</p>
+<p>Yeah! I mean I don&rsquo;t think there could be other way to it!</p>
+<p>We might or can use triggers to insert into one table when inserted in one table. But I think that is too much of a farfetched solution. We might create a trigger and instantly delete it as it could populate unwanted data if kept in the database.</p>
+
+<h3 class="relative group">Trigger to insert when deleted
+    <div id="trigger-to-insert-when-deleted" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trigger-to-insert-when-deleted" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can create a <code>TRIGGER</code> to insert into <code>misdelivered_presents</code> when something is deleted from <code>deliveries</code> table. We will separately have to delete the  records from the <code>deliveries</code> table. But the insert will happen automatically after the deletion.</p>
+<p>Opening a fresh instance of the database!</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TRIGGER</span> move_misdelivered_presents
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ON</span> deliveries
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHEN</span> <span style="color:#66d9ef">OLD</span>.delivery_location <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> misdelivered_presents (
+</span></span><span style="display:flex;"><span>        id, child_name, delivery_location, gift_name, 
+</span></span><span style="display:flex;"><span>        scheduled_at, flagged_at, reason
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">VALUES</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">OLD</span>.id, <span style="color:#66d9ef">OLD</span>.child_name, <span style="color:#66d9ef">OLD</span>.delivery_location, <span style="color:#66d9ef">OLD</span>.gift_name, 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">OLD</span>.scheduled_at, DATETIME(<span style="color:#e6db74">&#39;now&#39;</span>), <span style="color:#e6db74">&#39;Invalid delivery location&#39;</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;</span></span></code></pre></div></div>
+<p>This will create the trigger to insert the row into <code>misdelivered_presents</code> table when deleted from the <code>deliveries</code> table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> deliveries 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> delivery_location <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;Volcano Rim&#39;</span>, <span style="color:#e6db74">&#39;Drifting Igloo&#39;</span>, <span style="color:#e6db74">&#39;Abandoned Lighthouse&#39;</span>, <span style="color:#e6db74">&#39;The Vibes&#39;</span>)
+</span></span><span style="display:flex;"><span>RETURNING <span style="color:#f92672">*</span>;</span></span></code></pre></div></div>
+<p>Ops! We are returning from the DELETE statement which is wrong as the problem stated to select from the <code>misdelivered_presents</code> table.</p>
+<blockquote><p>Make sure your final step shows the misdelivered_presents records that you just moved (i.e. don&rsquo;t include any existing records from the misdelivered_presents table).</p>
+</blockquote><p>This is invalid then!</p>
+<p>Though its not technically atomic. It happens before the delete, so it can mess up things.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; .read day10-inserts.sql
+</span></span><span style="display:flex;"><span>sqlite&gt; .mode table 
+</span></span><span style="display:flex;"><span>sqlite&gt; CREATE TRIGGER move_misdelivered_presents
+</span></span><span style="display:flex;"><span>BEFORE DELETE ON deliveries
+</span></span><span style="display:flex;"><span>FOR EACH ROW
+</span></span><span style="display:flex;"><span>WHEN OLD.delivery_location IN (&#39;Volcano Rim&#39;, &#39;Drifting Igloo&#39;, &#39;Abandoned Lighthouse&#39;, &#39;The Vibes&#39;)
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>    INSERT INTO misdelivered_presents (
+</span></span><span style="display:flex;"><span>        id, child_name, delivery_location, gift_name, 
+</span></span><span style="display:flex;"><span>        scheduled_at, flagged_at, reason
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    VALUES (
+</span></span><span style="display:flex;"><span>        OLD.id, OLD.child_name, OLD.delivery_location, OLD.gift_name, 
+</span></span><span style="display:flex;"><span>        OLD.scheduled_at, DATETIME(&#39;now&#39;), &#39;Invalid delivery location&#39;
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>END;
+</span></span><span style="display:flex;"><span>sqlite&gt; DELETE FROM deliveries 
+</span></span><span style="display:flex;"><span>WHERE delivery_location IN (&#39;Volcano Rim&#39;, &#39;Drifting Igloo&#39;, &#39;Abandoned Lighthouse&#39;, &#39;The Vibes&#39;)
+</span></span><span style="display:flex;"><span>RETURNING *;
+</span></span><span style="display:flex;"><span>+-----+------------+----------------------+----------------------+---------------------+
+</span></span><span style="display:flex;"><span>| id  | child_name |  delivery_location   |      gift_name       |    scheduled_at     |
+</span></span><span style="display:flex;"><span>+-----+------------+----------------------+----------------------+---------------------+
+</span></span><span style="display:flex;"><span>| 3   | Mila N.    | The Vibes            | storybook collection | 2025-12-24 21:09:00 |
+</span></span><span style="display:flex;"><span>| 22  | Lena F.    | Abandoned Lighthouse | plush reindeer       | 2025-12-24 19:08:00 |
+</span></span><span style="display:flex;"><span>| 23  | Mila N.    | Abandoned Lighthouse | storybook collection | 2025-12-24 20:42:00 |
+</span></span><span style="display:flex;"><span>| 29  | Mateo C.   | Volcano Rim          | plush reindeer       | 2025-12-24 21:44:00 |
+</span></span><span style="display:flex;"><span>| 31  | Nia G.     | Drifting Igloo       | robot toy            | 2025-12-24 19:57:00 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 582 | Zara S.    | The Vibes            | teddy bear           | 2025-12-24 21:20:00 |
+</span></span><span style="display:flex;"><span>| 585 | Layla B.   | Abandoned Lighthouse | wooden train set     | 2025-12-24 18:39:00 |
+</span></span><span style="display:flex;"><span>| 587 | Nia G.     | Volcano Rim          | storybook collection | 2025-12-24 18:35:00 |
+</span></span><span style="display:flex;"><span>| 596 | Omar Q.    | Abandoned Lighthouse | puzzle box           | 2025-12-24 19:28:00 |
+</span></span><span style="display:flex;"><span>+-----+------------+----------------------+----------------------+---------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; DROP TRIGGER move_misdelivered_presents;
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM deliveries;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 497      |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT COUNT(*) FROM misdelivered_presents;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| 153      |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>So, it gets the result but I don&rsquo;t think the <code>TRIGGER</code> is a solution to this.</p>
+<p>In SQLite, Atomic transaction using begin and end is the only thing to go for right?</p>
+<p>Some one prove Santa that it can&rsquo;t be done in SQLite in one query? Please!</p>
+<p>That&rsquo;s it from day 10, I have spent enough time on this, banging my head on the sqlite shell!</p>
+<p>Off to day 11 tomorrow!</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-12-25-advent-of-sql-day-10-misdelivered-presents.md"
+          data-oid-likes="likes_posts/2025-12-25-advent-of-sql-day-10-misdelivered-presents.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-9/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Advent of SQL 2025 Day 9: Evergreen Market Orders
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-24T15:30:00&#43;05:30">December 24, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-11/">
+              <span class="leading-6">
+                Advent of SQL 2025 Day 11: Behavior Score&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-26T15:30:00&#43;05:30">December 26, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

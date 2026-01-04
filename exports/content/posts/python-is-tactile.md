@@ -1,9 +1,7 @@
-{
-    "date":"2025-03-08",
-    "status":"published",
-    "title":"python is tactile",
-    "type":"thoughts"
-}
-
+---
+type: thoughts
+title: "python is tactile"
+date: 2025-03-08T00:00:00
+---
 
 Python is tactile

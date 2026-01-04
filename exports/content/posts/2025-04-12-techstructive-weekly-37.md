@@ -1,11 +1,9 @@
-{
-  "title": "Techstructive Weekly #37",
-  "post_dir": "newsletter",
-  "type": "newsletter",
-  "status": "published",
-  "slug": "techstructive-weekly-36",
-  "date": "2025-04-12"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #37"
+date: 2025-04-12T00:00:00
+slug: "techstructive-weekly-36"
+---
 
 ## Week #37
 
@@ -72,10 +70,10 @@ Happy Coding :)
 
 ---
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

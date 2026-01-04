@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-07-05","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #49","type":"newsletter", "slug": "techstructive-weekly-49"}
+---
+type: newsletter
+title: "Techstructive Weekly #49"
+date: 2025-07-05T00:00:00
+slug: "techstructive-weekly-49"
+---
 
 ## Week #49
 
@@ -109,7 +114,7 @@ A week a bit of no new models, nothing fancy launches. Finally, we get a week or
 
 Thanks for reading Techstructive Weekly! This post is public, so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 ---
 

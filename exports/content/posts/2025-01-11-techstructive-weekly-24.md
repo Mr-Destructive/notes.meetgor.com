@@ -68,10 +68,10 @@ For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsl
 
 That’s it from this 24th edition of my weekly learning, hope you enjoyed it, and leave comments on what you think about some of my takes or any feedback.
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

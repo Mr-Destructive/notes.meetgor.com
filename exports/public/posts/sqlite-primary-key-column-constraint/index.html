@@ -1,0 +1,1224 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>SQLite SQL: PRIMARY KEY column constraint &middot; Notes</title>
+    <meta name="title" content="SQLite SQL: PRIMARY KEY column constraint &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/sqlite-primary-key-column-constraint/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/sqlite-primary-key-column-constraint/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="SQLite SQL: PRIMARY KEY column constraint">
+  <meta property="og:description" content="The PRIMARY KEY column constraint # The PRIMARY KEY constraint is not actually a column constraint, it is a table constraint. But in this section, we’ll only learn about how to handle single column-level PRIMARY KEY.
+The PRIMARY KEY column constraint is a constraint that ensures that a column contains unique values and is the PRIMARY way to distinguish between all the rows of that table.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-04T15:32:35+05:30">
+    <meta property="article:tag" content="Sqlite">
+    <meta property="article:tag" content="Sql">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SQLite SQL: PRIMARY KEY column constraint">
+  <meta name="twitter:description" content="The PRIMARY KEY column constraint # The PRIMARY KEY constraint is not actually a column constraint, it is a table constraint. But in this section, we’ll only learn about how to handle single column-level PRIMARY KEY.
+The PRIMARY KEY column constraint is a constraint that ensures that a column contains unique values and is the PRIMARY way to distinguish between all the rows of that table.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "SQLite SQL: PRIMARY KEY column constraint",
+    "headline": "SQLite SQL: PRIMARY KEY column constraint",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/sqlite-primary-key-column-constraint/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-09-13T00:00:00\u002b00:00",
+    "datePublished": "2025-09-13T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-04T15:32:35\u002b05:30",
+    
+    "keywords": ["sqlite","sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2908"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        SQLite SQL: PRIMARY KEY column constraint
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-09-13T00:00:00&#43;00:00">September 13, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2908 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">14 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">The PRIMARY KEY column constraint
+    <div id="the-primary-key-column-constraint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-primary-key-column-constraint" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The PRIMARY KEY constraint is not actually a column constraint, it is a table constraint. But in this section, we&rsquo;ll only learn about how to handle single column-level <code>PRIMARY KEY</code>.</p>
+<p>The <a href="https://sqlite.org/lang_createtable.html#the_primary_key"  target="_blank">PRIMARY KEY</a> column constraint is a constraint that ensures that a column contains unique values and is the <code>PRIMARY</code> way to distinguish between all the rows of that table.</p>
+<p>From the documentation:</p>
+<blockquote><p>Each table in SQLite may have at most one PRIMARY KEY. If the keywords PRIMARY KEY are added to a column definition, then the primary key for the table consists of that single column. Or, if a PRIMARY KEY clause is specified as a table-constraint, then the primary key of the table consists of the list of columns specified as part of the PRIMARY KEY clause. The PRIMARY KEY clause must contain only column names — the use of expressions in an indexed-column of a PRIMARY KEY is not supported. An error is raised if more than one PRIMARY KEY clause appears in a CREATE TABLE statement. The PRIMARY KEY is optional for ordinary tables but is required for WITHOUT ROWID tables.<br>
+If a table has a single column primary key and the declared type of that column is &ldquo;INTEGER&rdquo; and the table is not a WITHOUT ROWID table, then the column is known as an INTEGER PRIMARY KEY. See below for a description of the special properties and behaviors associated with an INTEGER PRIMARY KEY.<br>
+Each row in a table with a primary key must have a unique combination of values in its primary key columns. For the purposes of determining the uniqueness of primary key values, NULL values are considered distinct from all other values, including other NULLs. If an INSERT or UPDATE statement attempts to modify the table content so that two or more rows have identical primary key values, that is a constraint violation.<br>
+According to the SQL standard, PRIMARY KEY should always imply NOT NULL. Unfortunately, due to a bug in some early versions, this is not the case in SQLite. Unless the column is an INTEGER PRIMARY KEY or the table is a WITHOUT ROWID table or a STRICT table or the column is declared NOT NULL, SQLite allows NULL values in a PRIMARY KEY column. SQLite could be fixed to conform to the standard, but doing so might break legacy applications. Hence, it has been decided to merely document the fact that SQLite allows NULLs in most PRIMARY KEY columns.</p>
+</blockquote><p>Here is what I think in short:</p>
+<ul>
+<li>Used to identify the rows of a table. Hence must be unique</li>
+<li>At most one primary key per table (default rowid, multiple primary key not allowed)</li>
+<li>Primary key can be a combination of multiple columns or even single column</li>
+<li>Only column names allowed (not expressions)</li>
+<li>Required for WITHOUT ROWID</li>
+<li>INTEGER PRIMARY KEY special behavior</li>
+<li>NULL behavior (SQLite quirk vs SQL standard)</li>
+</ul>
+
+<h2 class="relative group">Creating a simple table
+    <div id="creating-a-simple-table" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-a-simple-table" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>By default, if you don&rsquo;t  create a column in a table as a <code>PRIMARY KEY</code>, it is automatically assumed that <code>rowid</code> will be used as the unique identifier for that table.</p>
+<p>Let&rsquo;s create a simple table with columns like <code>username</code> and <code>email</code>, non of which are <code>PRIMARY KEY</code> explicitly mentioned.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> users (
+</span></span><span style="display:flex;"><span>    username TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    email TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Now, let&rsquo;s insert a few columns and check what we can observe.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;jim&#39;</span>, <span style="color:#e6db74">&#39;jim@abc.com&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;jack&#39;</span>, <span style="color:#e6db74">&#39;jack@abc.com&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As, you can see, we have populated the table with <code>username</code> and <code>email</code> columns.</p>
+<p>But wait, there should be <code>rowid</code> right? It is there but its a hidden column (do not touch it).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>You can see the <code>rowid</code> column in the output.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE users (
+</span></span><span style="display:flex;"><span>    username TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    email TEXT NOT NULL
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; .mode table
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jim&#39;, &#39;jim@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jack&#39;, &#39;jack@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM users;
+</span></span><span style="display:flex;"><span>+----------+--------------+
+</span></span><span style="display:flex;"><span>| username |    email     |
+</span></span><span style="display:flex;"><span>+----------+--------------+
+</span></span><span style="display:flex;"><span>| jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 2     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>The rowid is used as a primary key for the table, this means it will take the max of the current state of the table and use the next number as its rowid.</p>
+<p>We can verify that if we try to insert a duplicate value/record/row in the <code>users</code> table:</p>
+<p>Let&rsquo;s insert the <code>jack</code> as the user and check if it inserts it, as it would have errored if the username or the email was the primary key, as this value is duplicated. But the <code>username</code> and <code>email</code> are not the <code>PRIMARY KEY</code> in this table, hence it will happily insert it.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;jack&#39;</span>, <span style="color:#e6db74">&#39;jack@abc.com&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As, you can see it inserted the value and the <code>rowid</code> is now <code>3</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 2     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jack&#39;, &#39;jack@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 2     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>| 3     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>What would happen if the middle values are deleted?</p>
+<p>let&rsquo;s delete the row with <code>rowid</code> <code>2</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> users <span style="color:#66d9ef">WHERE</span> rowid <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As, you can see, the <code>rowid</code> <code>2</code> is deleted. The <code>rowid</code> will still take the max of the current state of the table, and will use the next number as the <code>rowid</code> which in this state should be <code>4</code>.</p>
+<p>Let&rsquo;s insert a new record and check if the <code>rowid</code> is the max of the current state of the table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;jill&#39;</span>, <span style="color:#e6db74">&#39;jill@abc.com&#39;</span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As you can see, the <code>rowid</code> is now <code>4</code>.</p>
+<p>Let&rsquo;s delete that and insert one more.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> users <span style="color:#66d9ef">WHERE</span> rowid <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>Now, that the max row of the table is <code>3</code> but we had <code>4</code> earlier, we need to check what could be the next rowid?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;jill&#39;</span>, <span style="color:#e6db74">&#39;jill@abc.com&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>Ok, as you can see, the <code>rowid</code> is now <code>4</code>. It is reusing the previous <code>rowid</code> value, which might be an issue, very rarely but this is a expected behaviour.</p>
+<p>Which gives us the answer that there is maybe a quirk or a limitation of <code>rowid</code> that it can insert values which are max of the rowid in the current state.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 2     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>| 3     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; DELETE FROM users WHERE rowid = 2;
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 3     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jill&#39;, &#39;jill@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 3     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>| 4     | jill     | jill@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; DELETE FROM users WHERE rowid = 4;
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 3     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;joe&#39;, &#39;joe@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| rowid | username |    email     |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>| 1     | jim      | jim@abc.com  |
+</span></span><span style="display:flex;"><span>| 3     | jack     | jack@abc.com |
+</span></span><span style="display:flex;"><span>| 4     | joe      | joe@abc.com  |
+</span></span><span style="display:flex;"><span>+-------+----------+--------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>Ok, that was a wired tangent, but worth noting.<br>
+We will check how to fix it with the <code>AUTOINCREMENT</code> clause in the future posts.</p>
+<p>Now, let&rsquo;s create a <code>PRIMARY KEY</code> column that we can safely call a primary key.</p>
+
+<h2 class="relative group">Creating a column as primary key
+    <div id="creating-a-column-as-primary-key" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-a-column-as-primary-key" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To create a column as a <code>PRIMARY KEY</code> we need to simply add the <code>PRIMARY KEY</code> constraint to the column.</p>
+<p>Let&rsquo;s create a simple table with columns like <code>username</code> and <code>email</code>, and here <code>email</code> is the primary key.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> users (
+</span></span><span style="display:flex;"><span>    username TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    email TEXT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Mentioning <code>PRIMARY KEY</code> with email means that each record needs to have a unique <code>email</code>.</p>
+<p>If you attach a <code>PRIMARY KEY</code> to a column, the <code>UNIQUE</code> constraint is also added automatically. So, saying <code>email TEXT PRIMARY KEY UNIQUE</code> is redundant.</p>
+<p>Let&rsquo;s try inserting default values to the users.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">VALUES</span>;</span></span></code></pre></div></div>
+<p>As you can see, this will fail as the <code>username</code> is a <code>NOT NULL</code> column.</p>
+<p>OK, let&rsquo;s just satisfy that <code>NOT NULL</code> constraint for username.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>);</span></span></code></pre></div></div>
+<p>OK, that inserted the value.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>But, the email is empty! Becuase we didn&rsquo;t specify it? Yes, it is a text field, and a primary key, so you need to handle that. What about the rowid?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As you can see, the rowid is <code>1</code> and email is empty.</p>
+<p>That&rsquo;s worth noting that <code>rowid</code> will be populated independently of the <code>PRIMARY KEY</code> column. But if speicifed as <code>WITHOUT ROWID</code> in the table creation, it won&rsquo;t be there.</p>
+<p>Now, let&rsquo;s insert the same record again. We have said the <code>email</code> is a <code>PRIMARY KEY</code>, so it will be unique right? RIGHT?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>);</span></span></code></pre></div></div>
+<p>Surprisingly, it inserted that too.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>The email is empty for both the rows, but the username is same, so the <code>email</code> is NULL, and you guessed it right, <code>NULL</code> is identified as <code>UNIQUE</code>. That is a bad schema design. The users table had a text key as a primary key, and we need to add <code>NOT NULL</code> to the <code>PRIMARY KEY</code> column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE users (
+</span></span><span style="display:flex;"><span>    username TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    email TEXT PRIMARY KEY
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users DEFAULT VALUES;
+</span></span><span style="display:flex;"><span>Runtime error: NOT NULL constraint failed: users.username (19)
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username) VALUES(&#39;james&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM users;
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>| username | email |
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>| james    |       |
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username) VALUES(&#39;james&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM users;
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>| username | email |
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>| james    |       |
+</span></span><span style="display:flex;"><span>| james    |       |
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username) VALUES(&#39;jack&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM users;
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>| username | email |
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>| james    |       |
+</span></span><span style="display:flex;"><span>| james    |       |
+</span></span><span style="display:flex;"><span>| jack     |       |
+</span></span><span style="display:flex;"><span>+----------+-------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<blockquote><p>NOTE: NOT NULL is only added automatically for <code>INTEGER PRIMARY KEY</code> column, which means the column becomes an alias for the <code>rowid</code> table.</p>
+</blockquote>
+<h2 class="relative group">PRIMARY KEY with NOT NULL
+    <div id="primary-key-with-not-null" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#primary-key-with-not-null" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>It turns out that <code>NOT NULL</code> is only added automatically for <code>INTEGER PRIMARY KEY</code> column, so for rest of the combination of <code>PRIMARY KEY</code> columns we need to explicitly add the <code>NOT NULL</code> constraint.</p>
+<p>So, let&rsquo;s add that:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> users;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> users (
+</span></span><span style="display:flex;"><span>    username TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    email TEXT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>Now, let&rsquo;s try inserting default values to the users.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">VALUES</span>;</span></span></code></pre></div></div>
+<p>As you can see, this will fail as the <code>username</code> is a <code>NOT NULL</code> column. As we knew in the first attempt.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>);</span></span></code></pre></div></div>
+<p>OK, that is what we expected, it should fail, as have not specified the <code>email</code> column, as that is a primary key and it cannot be null. I mean it could be if we wanted to, but that is not expected to behave.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>, <span style="color:#e6db74">&#39;james@abc.com&#39;</span>);</span></span></code></pre></div></div>
+<p>Ok, this should insert it successfully.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As you can see, we have populated the table with <code>username</code> and <code>email</code> columns. This is the perfect thing to setup.</p>
+<p>The <code>rowid</code> will still be there as discussed, the <code>email</code> now is the <code>PRIMARY KEY</code> which means any duplicate string email will be constraint violation.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>, <span style="color:#e6db74">&#39;james@abc.com&#39;</span>);</span></span></code></pre></div></div>
+<p>As you can see, this will fail, as we have already inserted a record with the same email. This is expected as we noted that the <code>PRIMARY KEY</code> automatically adds the <code>UNIQUE</code> constraint to the column.</p>
+<p>Similary, we can check a few other things.</p>
+<p>Like if we try to insert a record with the same username but different email:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>, <span style="color:#e6db74">&#39;james_new@abc.com&#39;</span>);</span></span></code></pre></div></div>
+<p>This will succeed, as we have not specified the <code>username</code> as primary key, and it is ok to not have unique values for it.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE users (
+</span></span><span style="display:flex;"><span>    username TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    email TEXT PRIMARY KEY NOT NULL
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users DEFAULT VALUES;
+</span></span><span style="display:flex;"><span>Runtime error: NOT NULL constraint failed: users.username (19)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username) VALUES(&#39;james&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: NOT NULL constraint failed: users.email (19)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;james&#39;, &#39;james@abc.com&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+---------------+
+</span></span><span style="display:flex;"><span>| rowid | username |     email     |
+</span></span><span style="display:flex;"><span>+-------+----------+---------------+
+</span></span><span style="display:flex;"><span>| 1     | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+---------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;james&#39;, &#39;james@abc.com&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: UNIQUE constraint failed: users.email (19)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;james&#39;, &#39;james_new@abc.com&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+-------------------+
+</span></span><span style="display:flex;"><span>| rowid | username |       email       |
+</span></span><span style="display:flex;"><span>+-------+----------+-------------------+
+</span></span><span style="display:flex;"><span>| 1     | james    | james@abc.com     |
+</span></span><span style="display:flex;"><span>| 2     | james    | james_new@abc.com |
+</span></span><span style="display:flex;"><span>+-------+----------+-------------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jill&#39;, &#39;james_new@abc.com&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: UNIQUE constraint failed: users.email (19)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jill&#39;, &#39;jill@abc.com&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+-------+----------+-------------------+
+</span></span><span style="display:flex;"><span>| rowid | username |       email       |
+</span></span><span style="display:flex;"><span>+-------+----------+-------------------+
+</span></span><span style="display:flex;"><span>| 1     | james    | james@abc.com     |
+</span></span><span style="display:flex;"><span>| 2     | james    | james_new@abc.com |
+</span></span><span style="display:flex;"><span>| 3     | jill     | jill@abc.com      |
+</span></span><span style="display:flex;"><span>+-------+----------+-------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>That is how we primary key works, atleast the basic of it.</p>
+
+<h2 class="relative group">INTEGER PRIMARY KEY
+    <div id="integer-primary-key" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#integer-primary-key" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This is a special case where the column defined as <code>PRIMARY KEY</code> with INTEGER type becomes an alias to the <code>rowid</code> and hence we will have both <code>UNIQUE</code> and <code>NOT NULL</code> constraints added to it.</p>
+<p>Let&rsquo;s create a table with <code>INTEGER PRIMARY KEY</code> column.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> users (
+</span></span><span style="display:flex;"><span>    user_id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    username TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    email TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>In this table <code>users</code> we have <code>user_id</code> which is <code>INTEGER PRIMARY KEY</code> column. It is an alias for the <code>rowid</code> table as we&rsquo;ll see.</p>
+<p>Now, let&rsquo;s insert some data and check what we can observe.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">VALUES</span>;</span></span></code></pre></div></div>
+<p>Obivously, this will fail, as we have not specified the <code>username</code> and <code>email</code> as <code>NOT NULL</code>, and we haven&rsquo;t specified in the insertion.</p>
+<p>Let&rsquo;s specify both and check if it can violate any constraints.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>, <span style="color:#e6db74">&#39;james@abc.com&#39;</span>);</span></span></code></pre></div></div>
+<p>As you can see, we successfully inserted the record, as we have specified the <code>username</code> and <code>email</code> as <code>NOT NULL</code> and the primary key which is <code>user_id</code> and it will automatically get populated. The <code>user_id</code> will be automatically populated as it will be a alias to the <code>rowid</code> column, and we know it will populate automatically for each inserted value for each row, by incrementing the max row id at that point.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As you can see, the <code>user_id</code> is <code>1</code> and <code>username</code> is <code>james</code> and <code>email</code> is <code>james@abc.com</code>. But what is <code>rowid</code>?</p>
+<p>Let&rsquo;s check that too.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> rowid, <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;</span></span></code></pre></div></div>
+<p>As you can see, the <code>user_id</code> is <code>1</code> but the rowid has become the <code>user_id</code> which is basically an alias for the <code>rowid</code>.</p>
+<p>Let&rsquo;s see if we can add more records.</p>
+<p>Let&rsquo;s try adding the same record again.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users(username, email) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;james&#39;</span>, <span style="color:#e6db74">&#39;james@abc.com&#39;</span>);</span></span></code></pre></div></div>
+<p>Interestingly, this works, because we have not specified the <code>user_id</code> as <code>PRIMARY KEY</code> and inserting duplicate username and email should not violate any constraints unless we have specified as <code>UNIQUE</code> or others.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; CREATE TABLE users (
+</span></span><span style="display:flex;"><span>    user_id INTEGER PRIMARY KEY,
+</span></span><span style="display:flex;"><span>    username TEXT NOT NULL,
+</span></span><span style="display:flex;"><span>    email TEXT NOT NULL
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users DEFAULT VALUES;
+</span></span><span style="display:flex;"><span>Runtime error: NOT NULL constraint failed: users.username (19)
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username) VALUES(&#39;james&#39;);
+</span></span><span style="display:flex;"><span>Runtime error: NOT NULL constraint failed: users.email (19)
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;james&#39;, &#39;james@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT * FROM users;
+</span></span><span style="display:flex;"><span>+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| user_id | username |     email     |
+</span></span><span style="display:flex;"><span>+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| 1       | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| user_id | user_id | username |     email     |
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| 1       | 1       | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;james&#39;, &#39;james@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| user_id | user_id | username |     email     |
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| 1       | 1       | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>| 2       | 2       | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; INSERT INTO users(username, email) VALUES(&#39;jill&#39;, &#39;jill@abc.com&#39;);
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT rowid, * FROM users;
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| user_id | user_id | username |     email     |
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>| 1       | 1       | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>| 2       | 2       | james    | james@abc.com |
+</span></span><span style="display:flex;"><span>| 3       | 3       | jill     | jill@abc.com  |
+</span></span><span style="display:flex;"><span>+---------+---------+----------+---------------+
+</span></span><span style="display:flex;"><span>sqlite&gt;</span></span></code></pre></div></div>
+<p>So that is how <code>INTEGER PRIMARY KEY</code> works.</p>
+<p>You can add <code>PRIMARY KEY</code> to any column, but you need to ensure that it doesn&rsquo;t violate the constraint of allowing duplicate enties.</p>
+<p>We know that the <code>PRIMARY KEY</code> is not a column specific constraint. It is table wide constraint, we&rsquo;ll check out the table wide constraint that is combinational constraint in the next section.</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-09-13-primary-key-column-constraint.md"
+          data-oid-likes="likes_posts/2025-09-13-primary-key-column-constraint.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/techstructive-weekly-59/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Techstructive Weekly #59
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-13T00:00:00&#43;00:00">September 13, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-primary-key-table-constraint/">
+              <span class="leading-6">
+                SQLite SQL: PRIMARY KEY table constraint&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-09-14T00:00:00&#43;00:00">September 14, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,12 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-05-24",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #43",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-43"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #43"
+date: 2025-05-24T00:00:00
+slug: "techstructive-weekly-43"
+---
 
 ## Week #43
 

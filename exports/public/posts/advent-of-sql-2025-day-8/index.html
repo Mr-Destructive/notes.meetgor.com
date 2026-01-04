@@ -1,0 +1,1743 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Advent of SQL 2025 Day 8: Product Catalog &middot; Notes</title>
+    <meta name="title" content="Advent of SQL 2025 Day 8: Product Catalog &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="sqlite,sql,advent-of-sql,">
+  
+  
+  
+  <link rel="canonical" href="/posts/advent-of-sql-2025-day-8/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/advent-of-sql-2025-day-8/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Advent of SQL 2025 Day 8: Product Catalog">
+  <meta property="og:description" content="Advent of SQL - Day 8, Product Catalog # Whopsies! This is day 8.
+Let’s get straigh…
+HOOH! We need to clean up some SQL for running in SQLite.
+sed -i &#39;s/TIMESTAMP[[:space:]]*//g&#39; day8-inserts-sqlite.sql Just cleaning up TIMESTAMP in INSERT before the date value.
+Here we go:
+The SQL to run in SQLite.
+DROP TABLE IF EXISTS price_changes; DROP TABLE IF EXISTS products; CREATE TABLE products ( product_id INT PRIMARY KEY, product_name TEXT ); CREATE TABLE price_changes ( id INT PRIMARY KEY, product_id INT, price NUMERIC(10,2), effective_timestamp ); INSERT INTO products (product_id, product_name) VALUES (1, &#39;Deluxe Sled&#39;), (2, &#39;Holiday Trail Mix Trio&#39;), (3, &#39;Premium Cinnamon Roasted Almonds&#39;), (4, &#39;Deluxe Wrapping Paper&#39;), (5, &#39;Deluxe Roasted Cashews&#39;), (6, &#39;Festive Cookware Set&#39;), (7, &#39;Deluxe Mug&#39;), (8, &#39;Premium Sled&#39;), (9, &#39;Essential Sled&#39;), (10, &#39;Family Snow Boots&#39;), (11, &#39;Family Dark Chocolate Almonds&#39;), (12, &#39;Premium Festive Scarf&#39;), (13, &#39;Essential Cookie Decorating Kit&#39;), (14, &#39;Festive White Chocolate Popcorn&#39;), (15, &#39;Cozy Puzzle&#39;), (16, &#39;Holiday Cheddar Popcorn&#39;), (17, &#39;Premium Board Game&#39;), (18, &#39;Deluxe Pecan Praline Bites&#39;), (19, &#39;Cozy Almond Brittle&#39;), (20, &#39;Winter Sled&#39;); INSERT INTO price_changes (id, product_id, price, effective_timestamp) VALUES (1, 1, 148.28, &#39;2025-12-01 05:25:35&#39;), (2, 1, 148.63, &#39;2025-12-02 18:15:33&#39;), (3, 1, 126.78, &#39;2025-12-02 18:40:38&#39;), (4, 1, 119.12, &#39;2025-12-03 10:14:35&#39;), (5, 1, 98.57, &#39;2025-12-04 04:14:31&#39;), (6, 1, 88.49, &#39;2025-12-06 19:02:40&#39;), (7, 1, 80.88, &#39;2025-12-07 10:43:54&#39;), (8, 1, 78.88, &#39;2025-12-08 06:45:39&#39;), (9, 1, 80.24, &#39;2025-12-08 16:11:11&#39;), (10, 1, 73.9, &#39;2025-12-10 14:33:43&#39;), (11, 1, 88.2, &#39;2025-12-12 02:21:09&#39;), (12, 1, 99.03, &#39;2025-12-12 02:58:14&#39;), (13, 1, 100.18, &#39;2025-12-14 15:58:03&#39;), (14, 1, 106.91, &#39;2025-12-16 01:51:05&#39;), (15, 1, 109.25, &#39;2025-12-16 16:01:53&#39;), (16, 2, 29.54, &#39;2025-12-03 14:21:10&#39;), (17, 2, 34.33, &#39;2025-12-03 19:14:31&#39;), (18, 2, 39.08, &#39;2025-12-04 06:13:48&#39;), (19, 2, 32.71, &#39;2025-12-04 18:33:17&#39;), (20, 2, 31.71, &#39;2025-12-05 22:36:14&#39;), (21, 2, 28.88, &#39;2025-12-06 02:42:02&#39;), (22, 2, 23.14, &#39;2025-12-07 09:46:54&#39;), (23, 2, 25.65, &#39;2025-12-07 10:03:45&#39;), (24, 2, 27.06, &#39;2025-12-07 14:39:15&#39;), (25, 2, 24.48, &#39;2025-12-07 20:08:05&#39;), (26, 2, 26.84, &#39;2025-12-09 07:44:32&#39;), (27, 2, 27.39, &#39;2025-12-13 06:25:19&#39;), (28, 2, 26.6, &#39;2025-12-14 10:16:34&#39;), (29, 2, 21.38, &#39;2025-12-15 16:20:20&#39;), (30, 2, 17.75, &#39;2025-12-16 09:28:13&#39;); We can get started.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-23T15:30:00+05:30">
+    <meta property="article:modified_time" content="2026-01-04T15:32:35+05:30">
+    <meta property="article:tag" content="Sqlite">
+    <meta property="article:tag" content="Sql">
+    <meta property="article:tag" content="Advent-of-Sql">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of SQL 2025 Day 8: Product Catalog">
+  <meta name="twitter:description" content="Advent of SQL - Day 8, Product Catalog # Whopsies! This is day 8.
+Let’s get straigh…
+HOOH! We need to clean up some SQL for running in SQLite.
+sed -i &#39;s/TIMESTAMP[[:space:]]*//g&#39; day8-inserts-sqlite.sql Just cleaning up TIMESTAMP in INSERT before the date value.
+Here we go:
+The SQL to run in SQLite.
+DROP TABLE IF EXISTS price_changes; DROP TABLE IF EXISTS products; CREATE TABLE products ( product_id INT PRIMARY KEY, product_name TEXT ); CREATE TABLE price_changes ( id INT PRIMARY KEY, product_id INT, price NUMERIC(10,2), effective_timestamp ); INSERT INTO products (product_id, product_name) VALUES (1, &#39;Deluxe Sled&#39;), (2, &#39;Holiday Trail Mix Trio&#39;), (3, &#39;Premium Cinnamon Roasted Almonds&#39;), (4, &#39;Deluxe Wrapping Paper&#39;), (5, &#39;Deluxe Roasted Cashews&#39;), (6, &#39;Festive Cookware Set&#39;), (7, &#39;Deluxe Mug&#39;), (8, &#39;Premium Sled&#39;), (9, &#39;Essential Sled&#39;), (10, &#39;Family Snow Boots&#39;), (11, &#39;Family Dark Chocolate Almonds&#39;), (12, &#39;Premium Festive Scarf&#39;), (13, &#39;Essential Cookie Decorating Kit&#39;), (14, &#39;Festive White Chocolate Popcorn&#39;), (15, &#39;Cozy Puzzle&#39;), (16, &#39;Holiday Cheddar Popcorn&#39;), (17, &#39;Premium Board Game&#39;), (18, &#39;Deluxe Pecan Praline Bites&#39;), (19, &#39;Cozy Almond Brittle&#39;), (20, &#39;Winter Sled&#39;); INSERT INTO price_changes (id, product_id, price, effective_timestamp) VALUES (1, 1, 148.28, &#39;2025-12-01 05:25:35&#39;), (2, 1, 148.63, &#39;2025-12-02 18:15:33&#39;), (3, 1, 126.78, &#39;2025-12-02 18:40:38&#39;), (4, 1, 119.12, &#39;2025-12-03 10:14:35&#39;), (5, 1, 98.57, &#39;2025-12-04 04:14:31&#39;), (6, 1, 88.49, &#39;2025-12-06 19:02:40&#39;), (7, 1, 80.88, &#39;2025-12-07 10:43:54&#39;), (8, 1, 78.88, &#39;2025-12-08 06:45:39&#39;), (9, 1, 80.24, &#39;2025-12-08 16:11:11&#39;), (10, 1, 73.9, &#39;2025-12-10 14:33:43&#39;), (11, 1, 88.2, &#39;2025-12-12 02:21:09&#39;), (12, 1, 99.03, &#39;2025-12-12 02:58:14&#39;), (13, 1, 100.18, &#39;2025-12-14 15:58:03&#39;), (14, 1, 106.91, &#39;2025-12-16 01:51:05&#39;), (15, 1, 109.25, &#39;2025-12-16 16:01:53&#39;), (16, 2, 29.54, &#39;2025-12-03 14:21:10&#39;), (17, 2, 34.33, &#39;2025-12-03 19:14:31&#39;), (18, 2, 39.08, &#39;2025-12-04 06:13:48&#39;), (19, 2, 32.71, &#39;2025-12-04 18:33:17&#39;), (20, 2, 31.71, &#39;2025-12-05 22:36:14&#39;), (21, 2, 28.88, &#39;2025-12-06 02:42:02&#39;), (22, 2, 23.14, &#39;2025-12-07 09:46:54&#39;), (23, 2, 25.65, &#39;2025-12-07 10:03:45&#39;), (24, 2, 27.06, &#39;2025-12-07 14:39:15&#39;), (25, 2, 24.48, &#39;2025-12-07 20:08:05&#39;), (26, 2, 26.84, &#39;2025-12-09 07:44:32&#39;), (27, 2, 27.39, &#39;2025-12-13 06:25:19&#39;), (28, 2, 26.6, &#39;2025-12-14 10:16:34&#39;), (29, 2, 21.38, &#39;2025-12-15 16:20:20&#39;), (30, 2, 17.75, &#39;2025-12-16 09:28:13&#39;); We can get started.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Advent of SQL 2025 Day 8: Product Catalog",
+    "headline": "Advent of SQL 2025 Day 8: Product Catalog",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/advent-of-sql-2025-day-8/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-23T15:30:00\u002b05:30",
+    "datePublished": "2025-12-23T15:30:00\u002b05:30",
+    
+    "dateModified": "2026-01-04T15:32:35\u002b05:30",
+    
+    "keywords": ["sqlite","sql","advent-of-sql"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "4767"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Advent of SQL 2025 Day 8: Product Catalog
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-23T15:30:00&#43;05:30">December 23, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>4767 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">23 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Advent of SQL - Day 8, Product Catalog
+    <div id="advent-of-sql---day-8-product-catalog" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#advent-of-sql---day-8-product-catalog" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Whopsies! This is day 8.</p>
+<p>Let&rsquo;s get straigh&hellip;</p>
+<p>HOOH! We need to clean up some SQL for running in SQLite.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s/TIMESTAMP[[:space:]]*//g&#39;</span> day8-inserts-sqlite.sql</span></span></code></pre></div></div>
+<p>Just cleaning up <code>TIMESTAMP</code> in <code>INSERT</code> before the date value.</p>
+<p>Here we go:<br>
+The SQL to run in SQLite.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> price_changes;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> products;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> products (
+</span></span><span style="display:flex;"><span>    product_id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    product_name TEXT
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> price_changes (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    product_id INT,
+</span></span><span style="display:flex;"><span>    price NUMERIC(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>    effective_timestamp 
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> products (product_id, product_name) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Deluxe Sled&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Holiday Trail Mix Trio&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Premium Cinnamon Roasted Almonds&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Deluxe Wrapping Paper&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;Deluxe Roasted Cashews&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;Festive Cookware Set&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;Deluxe Mug&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;Premium Sled&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;Essential Sled&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;Family Snow Boots&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#39;Family Dark Chocolate Almonds&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;Premium Festive Scarf&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">13</span>, <span style="color:#e6db74">&#39;Essential Cookie Decorating Kit&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;Festive White Chocolate Popcorn&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#39;Cozy Puzzle&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;Holiday Cheddar Popcorn&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">17</span>, <span style="color:#e6db74">&#39;Premium Board Game&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;Deluxe Pecan Praline Bites&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">19</span>, <span style="color:#e6db74">&#39;Cozy Almond Brittle&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;Winter Sled&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> price_changes (id, product_id, price, effective_timestamp) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">148</span>.<span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;2025-12-01 05:25:35&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">148</span>.<span style="color:#ae81ff">63</span>, <span style="color:#e6db74">&#39;2025-12-02 18:15:33&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">126</span>.<span style="color:#ae81ff">78</span>, <span style="color:#e6db74">&#39;2025-12-02 18:40:38&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">119</span>.<span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;2025-12-03 10:14:35&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">98</span>.<span style="color:#ae81ff">57</span>, <span style="color:#e6db74">&#39;2025-12-04 04:14:31&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">88</span>.<span style="color:#ae81ff">49</span>, <span style="color:#e6db74">&#39;2025-12-06 19:02:40&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">80</span>.<span style="color:#ae81ff">88</span>, <span style="color:#e6db74">&#39;2025-12-07 10:43:54&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">78</span>.<span style="color:#ae81ff">88</span>, <span style="color:#e6db74">&#39;2025-12-08 06:45:39&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">80</span>.<span style="color:#ae81ff">24</span>, <span style="color:#e6db74">&#39;2025-12-08 16:11:11&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">73</span>.<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;2025-12-10 14:33:43&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">88</span>.<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;2025-12-12 02:21:09&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">99</span>.<span style="color:#ae81ff">03</span>, <span style="color:#e6db74">&#39;2025-12-12 02:58:14&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>.<span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;2025-12-14 15:58:03&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">106</span>.<span style="color:#ae81ff">91</span>, <span style="color:#e6db74">&#39;2025-12-16 01:51:05&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">109</span>.<span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;2025-12-16 16:01:53&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">29</span>.<span style="color:#ae81ff">54</span>, <span style="color:#e6db74">&#39;2025-12-03 14:21:10&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">34</span>.<span style="color:#ae81ff">33</span>, <span style="color:#e6db74">&#39;2025-12-03 19:14:31&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">39</span>.<span style="color:#ae81ff">08</span>, <span style="color:#e6db74">&#39;2025-12-04 06:13:48&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">32</span>.<span style="color:#ae81ff">71</span>, <span style="color:#e6db74">&#39;2025-12-04 18:33:17&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">31</span>.<span style="color:#ae81ff">71</span>, <span style="color:#e6db74">&#39;2025-12-05 22:36:14&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">28</span>.<span style="color:#ae81ff">88</span>, <span style="color:#e6db74">&#39;2025-12-06 02:42:02&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">23</span>.<span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;2025-12-07 09:46:54&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">25</span>.<span style="color:#ae81ff">65</span>, <span style="color:#e6db74">&#39;2025-12-07 10:03:45&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">27</span>.<span style="color:#ae81ff">06</span>, <span style="color:#e6db74">&#39;2025-12-07 14:39:15&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">24</span>.<span style="color:#ae81ff">48</span>, <span style="color:#e6db74">&#39;2025-12-07 20:08:05&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">26</span>.<span style="color:#ae81ff">84</span>, <span style="color:#e6db74">&#39;2025-12-09 07:44:32&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">27</span>.<span style="color:#ae81ff">39</span>, <span style="color:#e6db74">&#39;2025-12-13 06:25:19&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">26</span>.<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;2025-12-14 10:16:34&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">21</span>.<span style="color:#ae81ff">38</span>, <span style="color:#e6db74">&#39;2025-12-15 16:20:20&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">17</span>.<span style="color:#ae81ff">75</span>, <span style="color:#e6db74">&#39;2025-12-16 09:28:13&#39;</span>);</span></span></code></pre></div></div>
+<p>We can get started.</p>
+
+<h2 class="relative group">Problem
+    <div id="problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<blockquote><p>Generate a report, using the products and <code>price_changes</code> tables for leadership that returns the <code>product_name</code>, <code>current_price</code>, <code>previous_price</code>, and the difference between the current and previous prices</p>
+</blockquote><p>So what we need is</p>
+<ul>
+<li>product_name</li>
+<li>current_price (latest)</li>
+<li>previous_price (just before the latest)</li>
+<li>price_difference = current - previous</li>
+</ul>
+<p>Again we have to meddle with dates, maybe, maybe not!</p>
+
+<h3 class="relative group">With CTEs and JOINs
+    <div id="with-ctes-and-joins" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#with-ctes-and-joins" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Let&rsquo;s start with the simplest approach. We need 2 prices, the latest(highest date timestamp) and the 2nd latest (the 2nd highest date timestamp). We can get the first pretty easily, but what about the second?</p>
+<p>Well, if we get the first, then the second should be easy to get right? Right? Because it will be just before it. Well not directly.</p>
+<p>Let&rsquo;s first grab the max timestamp.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    product_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; SELECT product_id, MAX(effective_timestamp) AS max_ts
+</span></span><span style="display:flex;"><span>        FROM price_changes
+</span></span><span style="display:flex;"><span>        GROUP BY product_id;
+</span></span><span style="display:flex;"><span>+------------+---------------------+
+</span></span><span style="display:flex;"><span>| product_id |       max_ts        |
+</span></span><span style="display:flex;"><span>+------------+---------------------+
+</span></span><span style="display:flex;"><span>| 1          | 2025-12-16 16:01:53 |
+</span></span><span style="display:flex;"><span>| 2          | 2025-12-16 09:28:13 |
+</span></span><span style="display:flex;"><span>| 3          | 2025-12-15 03:20:11 |
+</span></span><span style="display:flex;"><span>| 4          | 2025-12-16 01:33:41 |
+</span></span><span style="display:flex;"><span>| 5          | 2025-12-12 10:11:48 |
+</span></span><span style="display:flex;"><span>| 6          | 2025-12-15 11:31:40 |
+</span></span><span style="display:flex;"><span>| 7          | 2025-12-16 03:00:51 |
+</span></span><span style="display:flex;"><span>| 8          | 2025-12-15 22:33:48 |
+</span></span><span style="display:flex;"><span>| 9          | 2025-12-15 20:05:34 |
+</span></span><span style="display:flex;"><span>| 10         | 2025-12-15 20:53:45 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 139        | 2025-12-16 04:46:33 |
+</span></span><span style="display:flex;"><span>| 140        | 2025-12-16 21:19:30 |
+</span></span><span style="display:flex;"><span>| 141        | 2025-12-15 09:50:36 |
+</span></span><span style="display:flex;"><span>| 142        | 2025-12-16 18:39:51 |
+</span></span><span style="display:flex;"><span>| 143        | 2025-12-15 07:27:06 |
+</span></span><span style="display:flex;"><span>| 144        | 2025-12-16 16:25:16 |
+</span></span><span style="display:flex;"><span>| 146        | 2025-12-13 07:07:19 |
+</span></span><span style="display:flex;"><span>| 148        | 2025-12-16 09:30:11 |
+</span></span><span style="display:flex;"><span>| 149        | 2025-12-13 16:40:21 |
+</span></span><span style="display:flex;"><span>| 150        | 2025-12-13 08:24:43 |
+</span></span><span style="display:flex;"><span>+------------+---------------------+</span></span></code></pre></div></div>
+<p>We got all the timestamp&rsquo;s for each product. But we wanted the prices. Well we can&rsquo;t grab the price here, since we are grouping!</p>
+<p>We can use the timestamp as we are selecting the <code>MAX</code> aggregate function however among the many rows for single product how do we group the price? <code>MIN</code>, <code>MAX</code>, <code>AVG</code>, but that&rsquo;s not we want, we just want the price for that timestamp.</p>
+<p>Well, we need to join to the same table for that timestamp and grab the price.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    price_changes.product_id,
+</span></span><span style="display:flex;"><span>    price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>    price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_ts
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>        product_id, 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">AS</span> latest_price_change
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_change.product_id
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_change.latest_timestamp;</span></span></code></pre></div></div>
+<p>Here, we first specify what we want</p>
+<ul>
+<li><code>product_id</code></li>
+<li><code>current_price</code> which is the price for the</li>
+<li><code>latest_timestamp</code> which is the latest time recorded for the product price.</li>
+</ul>
+<p>We are grouping this by <code>product_id</code> since there are price recorded and various timestamps. We need to get the latest timestamp.<br>
+So, we do a nested query to join the latest timestamp and join the price with the same timestamp.</p>
+<p>This condition <code>price_changes.effective_timestamp = latest_price_change.latest_timestamp</code> helps us get the <code>price</code> for the <code>latest_timestamp</code>. We first get each timestamp for the product and then find its max, so that&rsquo;s the inner query from which we joined this table to. Self join with the different thing to find.</p>
+<p>This gives us 2 things.</p>
+<ul>
+<li>Product id</li>
+<li>Price for the latest timestamp</li>
+</ul>
+<p>We don&rsquo;t really want the timestamp in the final result, its just a criteria or a intermediate value to get the current and the previous prices for each product.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; 
+</span></span><span style="display:flex;"><span>sqlite&gt; SELECT 
+</span></span><span style="display:flex;"><span>    price_changes.product_id,
+</span></span><span style="display:flex;"><span>    price_changes.price AS current_price,
+</span></span><span style="display:flex;"><span>    price_changes.effective_timestamp AS latest_ts
+</span></span><span style="display:flex;"><span>FROM price_changes
+</span></span><span style="display:flex;"><span>JOIN (
+</span></span><span style="display:flex;"><span>    SELECT 
+</span></span><span style="display:flex;"><span>        product_id, 
+</span></span><span style="display:flex;"><span>        MAX(effective_timestamp) AS latest_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    GROUP BY product_id
+</span></span><span style="display:flex;"><span>) AS latest_price_change
+</span></span><span style="display:flex;"><span>  ON price_changes.product_id = latest_price_change.product_id
+</span></span><span style="display:flex;"><span> AND price_changes.effective_timestamp = latest_price_change.latest_timestamp;
+</span></span><span style="display:flex;"><span>+------------+---------------+---------------------+
+</span></span><span style="display:flex;"><span>| product_id | current_price |      latest_ts      |
+</span></span><span style="display:flex;"><span>+------------+---------------+---------------------+
+</span></span><span style="display:flex;"><span>| 1          | 109.25        | 2025-12-16 16:01:53 |
+</span></span><span style="display:flex;"><span>| 2          | 17.75         | 2025-12-16 09:28:13 |
+</span></span><span style="display:flex;"><span>| 3          | 143.65        | 2025-12-15 03:20:11 |
+</span></span><span style="display:flex;"><span>| 4          | 98.51         | 2025-12-16 01:33:41 |
+</span></span><span style="display:flex;"><span>| 5          | 124.04        | 2025-12-12 10:11:48 |
+</span></span><span style="display:flex;"><span>| 6          | 84.14         | 2025-12-15 11:31:40 |
+</span></span><span style="display:flex;"><span>| 7          | 123.09        | 2025-12-16 03:00:51 |
+</span></span><span style="display:flex;"><span>| 8          | 221.06        | 2025-12-15 22:33:48 |
+</span></span><span style="display:flex;"><span>| 9          | 255.88        | 2025-12-15 20:05:34 |
+</span></span><span style="display:flex;"><span>| 10         | 57.99         | 2025-12-15 20:53:45 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 139        | 16.41         | 2025-12-16 04:46:33 |
+</span></span><span style="display:flex;"><span>| 140        | 173.05        | 2025-12-16 21:19:30 |
+</span></span><span style="display:flex;"><span>| 141        | 69.97         | 2025-12-15 09:50:36 |
+</span></span><span style="display:flex;"><span>| 142        | 35.05         | 2025-12-16 18:39:51 |
+</span></span><span style="display:flex;"><span>| 143        | 153.94        | 2025-12-15 07:27:06 |
+</span></span><span style="display:flex;"><span>| 144        | 118.21        | 2025-12-16 16:25:16 |
+</span></span><span style="display:flex;"><span>| 146        | 54.73         | 2025-12-13 07:07:19 |
+</span></span><span style="display:flex;"><span>| 148        | 107.81        | 2025-12-16 09:30:11 |
+</span></span><span style="display:flex;"><span>| 149        | 72.6          | 2025-12-13 16:40:21 |
+</span></span><span style="display:flex;"><span>| 150        | 138.66        | 2025-12-13 08:24:43 |
+</span></span><span style="display:flex;"><span>+------------+---------------+---------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Now, we need to the price before this max timestamp. How do we get it?</p>
+<p>We need to again join? Yes&hellip;</p>
+<p>We need to subquery the timestamp just before it. But how will we get the max timestamp for each product. Well that&rsquo;s what we wrote above.</p>
+<p>We can convert that to a CTE.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> latest <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> (                                                   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> product_id, <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> max_timestamp
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> latest;</span></span></code></pre></div></div>
+<p>We just got the same thing, however we can now use <code>latest</code> as a temporary table in the query.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> latest <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> (                                                   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> product_id, <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> max_timestamp
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">MAX</span>(price_changes.effective_timestamp) <span style="color:#66d9ef">AS</span> previous_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> price_changes.product_id
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> previous <span style="color:#66d9ef">JOIN</span> latest <span style="color:#66d9ef">ON</span> previous.product_id <span style="color:#f92672">=</span> latest.product_id;</span></span></code></pre></div></div>
+<p>So, ok, this is getting long.</p>
+<p>Just we added this</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    price_changes.product_id,
+</span></span><span style="display:flex;"><span>    price_changes.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">MAX</span>(price_changes.effective_timestamp) <span style="color:#66d9ef">AS</span> previous_timestamp
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
+</span></span><span style="display:flex;"><span>    price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> price_changes.product_id</span></span></code></pre></div></div>
+<p>This won&rsquo;t work as we need the latest table which we converted to CTE.</p>
+<p>So, to get the 2nd highest or latest timestamp for each product, we do this.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> latest <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> (                                                   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> product_id, <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> max_timestamp
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>) 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">MAX</span>(price_changes.effective_timestamp) <span style="color:#66d9ef">AS</span> previous_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> price_changes.product_id;</span></span></code></pre></div></div>
+<p>We use:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span> <span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp</span></span></code></pre></div></div>
+<p>To get match the timestamp which will exclude the latest timestamp and that way we can again get the <code>MAX(price_changes.effective_timestamp) AS previous_timestamp</code> for the subset of the timestamp.</p>
+<p>This gives us all the previous timestamps i.e. the price just before the max timestamp for each product.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH latest AS (
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp AS latest_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN (                                                   
+</span></span><span style="display:flex;"><span>        SELECT product_id, MAX(effective_timestamp) AS max_timestamp
+</span></span><span style="display:flex;"><span>        FROM price_changes
+</span></span><span style="display:flex;"><span>        GROUP BY product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     AND price_changes.effective_timestamp = latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>) 
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS previous_price,
+</span></span><span style="display:flex;"><span>           MAX(price_changes.effective_timestamp) AS previous_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN latest
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest.product_id
+</span></span><span style="display:flex;"><span>    WHERE price_changes.effective_timestamp &lt; latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    GROUP BY price_changes.product_id;
+</span></span><span style="display:flex;"><span>+------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>| product_id | previous_price | previous_timestamp  |
+</span></span><span style="display:flex;"><span>+------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>| 1          | 106.91         | 2025-12-16 01:51:05 |
+</span></span><span style="display:flex;"><span>| 2          | 21.38          | 2025-12-15 16:20:20 |
+</span></span><span style="display:flex;"><span>| 3          | 159.65         | 2025-12-14 09:52:09 |
+</span></span><span style="display:flex;"><span>| 4          | 105.6          | 2025-12-14 14:09:20 |
+</span></span><span style="display:flex;"><span>| 5          | 129.23         | 2025-12-12 04:08:45 |
+</span></span><span style="display:flex;"><span>| 6          | 88.97          | 2025-12-15 02:13:04 |
+</span></span><span style="display:flex;"><span>| 7          | 127.14         | 2025-12-13 07:25:12 |
+</span></span><span style="display:flex;"><span>| 8          | 241.99         | 2025-12-14 19:31:40 |
+</span></span><span style="display:flex;"><span>| 9          | 259.56         | 2025-12-12 12:47:13 |
+</span></span><span style="display:flex;"><span>| 10         | 64.88          | 2025-12-15 10:52:34 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 140        | 157.02         | 2025-12-09 17:58:07 |
+</span></span><span style="display:flex;"><span>| 141        | 73.88          | 2025-12-13 14:35:53 |
+</span></span><span style="display:flex;"><span>| 142        | 30.25          | 2025-12-16 13:44:42 |
+</span></span><span style="display:flex;"><span>| 143        | 143.04         | 2025-12-11 10:08:13 |
+</span></span><span style="display:flex;"><span>| 144        | 114.22         | 2025-12-15 17:33:37 |
+</span></span><span style="display:flex;"><span>| 146        | 65.71          | 2025-12-10 15:50:14 |
+</span></span><span style="display:flex;"><span>| 148        | 101.09         | 2025-12-15 05:37:27 |
+</span></span><span style="display:flex;"><span>| 149        | 86.31          | 2025-12-13 13:18:14 |
+</span></span><span style="display:flex;"><span>| 150        | 123.61         | 2025-12-12 10:49:22 |
+</span></span><span style="display:flex;"><span>+------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Now, we need to join both of these on the same product id, to fetch both previous and current timestamp as well as the price.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> previous <span style="color:#66d9ef">JOIN</span> latest <span style="color:#66d9ef">ON</span> previous.product_id <span style="color:#f92672">=</span> latest.product_id;</span></span></code></pre></div></div>
+<p>Simple</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> latest <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> (                                                   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> product_id, <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> max_timestamp
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">MAX</span>(price_changes.effective_timestamp) <span style="color:#66d9ef">AS</span> previous_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> price_changes.product_id 
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> previous <span style="color:#66d9ef">JOIN</span> latest <span style="color:#66d9ef">ON</span> previous.product_id <span style="color:#f92672">=</span> latest.product_id;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH latest AS (
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp AS latest_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN (                                                   
+</span></span><span style="display:flex;"><span>        SELECT product_id, MAX(effective_timestamp) AS max_timestamp
+</span></span><span style="display:flex;"><span>        FROM price_changes
+</span></span><span style="display:flex;"><span>        GROUP BY product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     AND price_changes.effective_timestamp = latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous AS (
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS previous_price,
+</span></span><span style="display:flex;"><span>           MAX(price_changes.effective_timestamp) AS previous_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN latest
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest.product_id
+</span></span><span style="display:flex;"><span>    WHERE price_changes.effective_timestamp &lt; latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    GROUP BY price_changes.product_id
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT * FROM previous JOIN latest ON previous.product_id = latest.product_id;
+</span></span><span style="display:flex;"><span>+------------+----------------+---------------------+------------+---------------+---------------------+
+</span></span><span style="display:flex;"><span>| product_id | previous_price | previous_timestamp  | product_id | current_price |  latest_timestamp   |
+</span></span><span style="display:flex;"><span>+------------+----------------+---------------------+------------+---------------+---------------------+
+</span></span><span style="display:flex;"><span>| 1          | 106.91         | 2025-12-16 01:51:05 | 1          | 109.25        | 2025-12-16 16:01:53 |
+</span></span><span style="display:flex;"><span>| 2          | 21.38          | 2025-12-15 16:20:20 | 2          | 17.75         | 2025-12-16 09:28:13 |
+</span></span><span style="display:flex;"><span>| 3          | 159.65         | 2025-12-14 09:52:09 | 3          | 143.65        | 2025-12-15 03:20:11 |
+</span></span><span style="display:flex;"><span>| 4          | 105.6          | 2025-12-14 14:09:20 | 4          | 98.51         | 2025-12-16 01:33:41 |
+</span></span><span style="display:flex;"><span>| 5          | 129.23         | 2025-12-12 04:08:45 | 5          | 124.04        | 2025-12-12 10:11:48 |
+</span></span><span style="display:flex;"><span>| 6          | 88.97          | 2025-12-15 02:13:04 | 6          | 84.14         | 2025-12-15 11:31:40 |
+</span></span><span style="display:flex;"><span>| 7          | 127.14         | 2025-12-13 07:25:12 | 7          | 123.09        | 2025-12-16 03:00:51 |
+</span></span><span style="display:flex;"><span>| 8          | 241.99         | 2025-12-14 19:31:40 | 8          | 221.06        | 2025-12-15 22:33:48 |
+</span></span><span style="display:flex;"><span>| 9          | 259.56         | 2025-12-12 12:47:13 | 9          | 255.88        | 2025-12-15 20:05:34 |
+</span></span><span style="display:flex;"><span>| 10         | 64.88          | 2025-12-15 10:52:34 | 10         | 57.99         | 2025-12-15 20:53:45 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 139        | 15.26          | 2025-12-12 03:43:32 | 139        | 16.41         | 2025-12-16 04:46:33 |
+</span></span><span style="display:flex;"><span>| 140        | 157.02         | 2025-12-09 17:58:07 | 140        | 173.05        | 2025-12-16 21:19:30 |
+</span></span><span style="display:flex;"><span>| 141        | 73.88          | 2025-12-13 14:35:53 | 141        | 69.97         | 2025-12-15 09:50:36 |
+</span></span><span style="display:flex;"><span>| 142        | 30.25          | 2025-12-16 13:44:42 | 142        | 35.05         | 2025-12-16 18:39:51 |
+</span></span><span style="display:flex;"><span>| 143        | 143.04         | 2025-12-11 10:08:13 | 143        | 153.94        | 2025-12-15 07:27:06 |
+</span></span><span style="display:flex;"><span>| 144        | 114.22         | 2025-12-15 17:33:37 | 144        | 118.21        | 2025-12-16 16:25:16 |
+</span></span><span style="display:flex;"><span>| 146        | 65.71          | 2025-12-10 15:50:14 | 146        | 54.73         | 2025-12-13 07:07:19 |
+</span></span><span style="display:flex;"><span>| 148        | 101.09         | 2025-12-15 05:37:27 | 148        | 107.81        | 2025-12-16 09:30:11 |
+</span></span><span style="display:flex;"><span>| 149        | 86.31          | 2025-12-13 13:18:14 | 149        | 72.6          | 2025-12-13 16:40:21 |
+</span></span><span style="display:flex;"><span>| 150        | 123.61         | 2025-12-12 10:49:22 | 150        | 138.66        | 2025-12-13 08:24:43 |
+</span></span><span style="display:flex;"><span>+------------+----------------+---------------------+------------+---------------+---------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Now, we are getting somewhere, we just need to find the difference right?</p>
+<p>Yes, but more JOINs</p>
+<p>We need the product_name from the <code>product</code> table. Almost forgot that table exists?</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> 
+</span></span><span style="display:flex;"><span>    products 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> latest 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> latest.product_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> previous 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> previous.product_id;</span></span></code></pre></div></div>
+<p>We need both right? So, we need to fetch the product id and join for the latest and the previous table from the CTE, joining on the <code>product_id</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> latest <span style="color:#66d9ef">AS</span> (                                        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> (                                                   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> product_id, <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> max_timestamp
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">MAX</span>(price_changes.effective_timestamp) <span style="color:#66d9ef">AS</span> previous_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> price_changes.product_id
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> 
+</span></span><span style="display:flex;"><span>    products 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> latest 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> latest.product_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> previous 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> previous.product_id;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH latest AS (                                        
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp AS latest_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN (                                                   
+</span></span><span style="display:flex;"><span>        SELECT product_id, MAX(effective_timestamp) AS max_timestamp
+</span></span><span style="display:flex;"><span>        FROM price_changes
+</span></span><span style="display:flex;"><span>        GROUP BY product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     AND price_changes.effective_timestamp = latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous AS (
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS previous_price,
+</span></span><span style="display:flex;"><span>           MAX(price_changes.effective_timestamp) AS previous_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN latest
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest.product_id
+</span></span><span style="display:flex;"><span>    WHERE price_changes.effective_timestamp &lt; latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    GROUP BY price_changes.product_id
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT * FROM products JOIN latest ON products.product_id = latest.product_id 
+</span></span><span style="display:flex;"><span>   ...&gt; LEFT JOIN previous ON products.product_id = previous.product_id;
+</span></span><span style="display:flex;"><span>+------------+-----------------------------------+------------+---------------+---------------------+------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>| product_id |           product_name            | product_id | current_price |  latest_timestamp   | product_id | previous_price | previous_timestamp  |
+</span></span><span style="display:flex;"><span>+------------+-----------------------------------+------------+---------------+---------------------+------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>| 1          | Deluxe Sled                       | 1          | 109.25        | 2025-12-16 16:01:53 | 1          | 106.91         | 2025-12-16 01:51:05 |
+</span></span><span style="display:flex;"><span>| 2          | Holiday Trail Mix Trio            | 2          | 17.75         | 2025-12-16 09:28:13 | 2          | 21.38          | 2025-12-15 16:20:20 |
+</span></span><span style="display:flex;"><span>| 3          | Premium Cinnamon Roasted Almonds  | 3          | 143.65        | 2025-12-15 03:20:11 | 3          | 159.65         | 2025-12-14 09:52:09 |
+</span></span><span style="display:flex;"><span>| 4          | Deluxe Wrapping Paper             | 4          | 98.51         | 2025-12-16 01:33:41 | 4          | 105.6          | 2025-12-14 14:09:20 |
+</span></span><span style="display:flex;"><span>| 5          | Deluxe Roasted Cashews            | 5          | 124.04        | 2025-12-12 10:11:48 | 5          | 129.23         | 2025-12-12 04:08:45 |
+</span></span><span style="display:flex;"><span>| 6          | Festive Cookware Set              | 6          | 84.14         | 2025-12-15 11:31:40 | 6          | 88.97          | 2025-12-15 02:13:04 |
+</span></span><span style="display:flex;"><span>| 7          | Deluxe Mug                        | 7          | 123.09        | 2025-12-16 03:00:51 | 7          | 127.14         | 2025-12-13 07:25:12 |
+</span></span><span style="display:flex;"><span>| 8          | Premium Sled                      | 8          | 221.06        | 2025-12-15 22:33:48 | 8          | 241.99         | 2025-12-14 19:31:40 |
+</span></span><span style="display:flex;"><span>| 9          | Essential Sled                    | 9          | 255.88        | 2025-12-15 20:05:34 | 9          | 259.56         | 2025-12-12 12:47:13 |
+</span></span><span style="display:flex;"><span>| 10         | Family Snow Boots                 | 10         | 57.99         | 2025-12-15 20:53:45 | 10         | 64.88          | 2025-12-15 10:52:34 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 140        | Classic Mug                       | 140        | 173.05        | 2025-12-16 21:19:30 | 140        | 157.02         | 2025-12-09 17:58:07 |
+</span></span><span style="display:flex;"><span>| 141        | Family Fruit Assortment           | 141        | 69.97         | 2025-12-15 09:50:36 | 141        | 73.88          | 2025-12-13 14:35:53 |
+</span></span><span style="display:flex;"><span>| 142        | Classic Ornament                  | 142        | 35.05         | 2025-12-16 18:39:51 | 142        | 30.25          | 2025-12-16 13:44:42 |
+</span></span><span style="display:flex;"><span>| 143        | Essential Ornament                | 143        | 153.94        | 2025-12-15 07:27:06 | 143        | 143.04         | 2025-12-11 10:08:13 |
+</span></span><span style="display:flex;"><span>| 144        | Premium Trail Mix Trio            | 144        | 118.21        | 2025-12-16 16:25:16 | 144        | 114.22         | 2025-12-15 17:33:37 |
+</span></span><span style="display:flex;"><span>| 146        | Premium Book Collection           | 146        | 54.73         | 2025-12-13 07:07:19 | 146        | 65.71          | 2025-12-10 15:50:14 |
+</span></span><span style="display:flex;"><span>| 148        | Cozy Trail Mix Trio               | 148        | 107.81        | 2025-12-16 09:30:11 | 148        | 101.09         | 2025-12-15 05:37:27 |
+</span></span><span style="display:flex;"><span>| 149        | Family Cheddar Popcorn            | 149        | 72.6          | 2025-12-13 16:40:21 | 149        | 86.31          | 2025-12-13 13:18:14 |
+</span></span><span style="display:flex;"><span>| 150        | Holiday Headphones                | 150        | 138.66        | 2025-12-13 08:24:43 | 150        | 123.61         | 2025-12-12 10:49:22 |
+</span></span><span style="display:flex;"><span>+------------+-----------------------------------+------------+---------------+---------------------+------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Now, we just want</p>
+<ul>
+<li>product_name</li>
+<li>previous_price</li>
+<li>current_price</li>
+<li>difference of current_price and previous price</li>
+</ul>
+<p>So,</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> latest <span style="color:#66d9ef">AS</span> (                                        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp <span style="color:#66d9ef">AS</span> latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> (                                                   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> product_id, <span style="color:#66d9ef">MAX</span>(effective_timestamp) <span style="color:#66d9ef">AS</span> max_timestamp
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">AND</span> price_changes.effective_timestamp <span style="color:#f92672">=</span> latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">MAX</span>(price_changes.effective_timestamp) <span style="color:#66d9ef">AS</span> previous_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">JOIN</span> latest
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">ON</span> price_changes.product_id <span style="color:#f92672">=</span> latest.product_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> price_changes.effective_timestamp <span style="color:#f92672">&lt;</span> latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> price_changes.product_id
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    products.product_name, 
+</span></span><span style="display:flex;"><span>    latest.current_price, 
+</span></span><span style="display:flex;"><span>    previous.previous_price, 
+</span></span><span style="display:flex;"><span>    (latest.current_price <span style="color:#f92672">-</span> previous.previous_price) <span style="color:#66d9ef">as</span> price_difference
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> 
+</span></span><span style="display:flex;"><span>    products 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> latest 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> latest.product_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> previous 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> previous.product_id;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH latest AS (                                        
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS current_price,
+</span></span><span style="display:flex;"><span>           price_changes.effective_timestamp AS latest_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN (                                                   
+</span></span><span style="display:flex;"><span>        SELECT product_id, MAX(effective_timestamp) AS max_timestamp
+</span></span><span style="display:flex;"><span>        FROM price_changes
+</span></span><span style="display:flex;"><span>        GROUP BY product_id
+</span></span><span style="display:flex;"><span>    ) latest_price_changes                             
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest_price_changes.product_id
+</span></span><span style="display:flex;"><span>     AND price_changes.effective_timestamp = latest_price_changes.max_timestamp
+</span></span><span style="display:flex;"><span>),  previous AS (
+</span></span><span style="display:flex;"><span>    SELECT price_changes.product_id,
+</span></span><span style="display:flex;"><span>           price_changes.price AS previous_price,
+</span></span><span style="display:flex;"><span>           MAX(price_changes.effective_timestamp) AS previous_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>    JOIN latest
+</span></span><span style="display:flex;"><span>      ON price_changes.product_id = latest.product_id
+</span></span><span style="display:flex;"><span>    WHERE price_changes.effective_timestamp &lt; latest.latest_timestamp
+</span></span><span style="display:flex;"><span>    GROUP BY price_changes.product_id
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT 
+</span></span><span style="display:flex;"><span>    products.product_name, latest.current_price, previous.previous_price, (latest.current_price - previous.previous_price) as price_difference
+</span></span><span style="display:flex;"><span>FROM 
+</span></span><span style="display:flex;"><span>    products 
+</span></span><span style="display:flex;"><span>JOIN latest 
+</span></span><span style="display:flex;"><span>    ON products.product_id = latest.product_id 
+</span></span><span style="display:flex;"><span>LEFT JOIN previous 
+</span></span><span style="display:flex;"><span>    ON products.product_id = previous.product_id;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+-----------------------------------+---------------+----------------+-------------------+
+</span></span><span style="display:flex;"><span>|           product_name            | current_price | previous_price | price_difference  |
+</span></span><span style="display:flex;"><span>+-----------------------------------+---------------+----------------+-------------------+
+</span></span><span style="display:flex;"><span>| Deluxe Sled                       | 109.25        | 106.91         | 2.34              |
+</span></span><span style="display:flex;"><span>| Holiday Trail Mix Trio            | 17.75         | 21.38          | -3.63             |
+</span></span><span style="display:flex;"><span>| Premium Cinnamon Roasted Almonds  | 143.65        | 159.65         | -16.0             |
+</span></span><span style="display:flex;"><span>| Deluxe Wrapping Paper             | 98.51         | 105.6          | -7.08999999999999 |
+</span></span><span style="display:flex;"><span>| Deluxe Roasted Cashews            | 124.04        | 129.23         | -5.18999999999998 |
+</span></span><span style="display:flex;"><span>| Festive Cookware Set              | 84.14         | 88.97          | -4.83             |
+</span></span><span style="display:flex;"><span>| Deluxe Mug                        | 123.09        | 127.14         | -4.05             |
+</span></span><span style="display:flex;"><span>| Premium Sled                      | 221.06        | 241.99         | -20.93            |
+</span></span><span style="display:flex;"><span>| Essential Sled                    | 255.88        | 259.56         | -3.68000000000001 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| Classic Ornament                  | 35.05         | 30.25          | 4.8               |
+</span></span><span style="display:flex;"><span>| Essential Ornament                | 153.94        | 143.04         | 10.9              |
+</span></span><span style="display:flex;"><span>| Premium Trail Mix Trio            | 118.21        | 114.22         | 3.98999999999999  |
+</span></span><span style="display:flex;"><span>| Premium Book Collection           | 54.73         | 65.71          | -10.98            |
+</span></span><span style="display:flex;"><span>| Cozy Trail Mix Trio               | 107.81        | 101.09         | 6.72              |
+</span></span><span style="display:flex;"><span>| Family Cheddar Popcorn            | 72.6          | 86.31          | -13.71            |
+</span></span><span style="display:flex;"><span>| Holiday Headphones                | 138.66        | 123.61         | 15.05             |
+</span></span><span style="display:flex;"><span>+-----------------------------------+---------------+----------------+-------------------+
+</span></span><span style="display:flex;"><span>sqlite&gt; </span></span></code></pre></div></div>
+<p>Oh ok! That is it!</p>
+<p>CTEs and some nasty number of JOINs.</p>
+<p>Can we do it some other ways?</p>
+<p>Of course we can, and we will</p>
+
+<h3 class="relative group">ROW NUMBER - Window Function
+    <div id="row-number---window-function" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#row-number---window-function" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can even use some window functions because we are doing things per product so we can leverage <a href="https://sqlite.org/windowfunctions.html#:~:text=in%20window%20functions%3A-,row_number%28%29,-The%20number%20of"  target="_blank">ROW_NUMBER</a> in our case.</p>
+<blockquote><p>ROW_NUMBER: The number of the row within the current partition. Rows are numbered starting from 1 in the order defined by the ORDER BY clause in the window definition, or in arbitrary order otherwise.</p>
+</blockquote><p>So, we can partition by <code>product_id</code> in the <code>price_changes</code> table and order by the timestamp (latest first i.e. descending) and grab the first two prices.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> ranked_prices <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>           ROW_NUMBER() OVER (
+</span></span><span style="display:flex;"><span>               PARTITION <span style="color:#66d9ef">BY</span> price_changes.product_id
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> price_changes.effective_timestamp <span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span>           ) <span style="color:#66d9ef">AS</span> row_number
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> ranked_prices;</span></span></code></pre></div></div>
+<p>Here, we just partitioned the price table based on the latest to oldest timestamp (descending) and added the other column <code>row_number</code> that will be further used to get the <code>previous</code> and the <code>current</code> price and time.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH ranked_prices AS (
+</span></span><span style="display:flex;"><span>    SELECT price_changes.*,
+</span></span><span style="display:flex;"><span>           ROW_NUMBER() OVER (
+</span></span><span style="display:flex;"><span>               PARTITION BY price_changes.product_id
+</span></span><span style="display:flex;"><span>               ORDER BY price_changes.effective_timestamp DESC
+</span></span><span style="display:flex;"><span>           ) AS row_number
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT
+</span></span><span style="display:flex;"><span>    *
+</span></span><span style="display:flex;"><span>FROM ranked_prices;
+</span></span><span style="display:flex;"><span>+------+------------+--------+---------------------+------------+
+</span></span><span style="display:flex;"><span>|  id  | product_id | price  | effective_timestamp | row_number |
+</span></span><span style="display:flex;"><span>+------+------------+--------+---------------------+------------+
+</span></span><span style="display:flex;"><span>| 15   | 1          | 109.25 | 2025-12-16 16:01:53 | 1          |
+</span></span><span style="display:flex;"><span>| 14   | 1          | 106.91 | 2025-12-16 01:51:05 | 2          |
+</span></span><span style="display:flex;"><span>| 13   | 1          | 100.18 | 2025-12-14 15:58:03 | 3          |
+</span></span><span style="display:flex;"><span>| 12   | 1          | 99.03  | 2025-12-12 02:58:14 | 4          |
+</span></span><span style="display:flex;"><span>| 11   | 1          | 88.2   | 2025-12-12 02:21:09 | 5          |
+</span></span><span style="display:flex;"><span>| 10   | 1          | 73.9   | 2025-12-10 14:33:43 | 6          |
+</span></span><span style="display:flex;"><span>| 9    | 1          | 80.24  | 2025-12-08 16:11:11 | 7          |
+</span></span><span style="display:flex;"><span>| 8    | 1          | 78.88  | 2025-12-08 06:45:39 | 8          |
+</span></span><span style="display:flex;"><span>| 7    | 1          | 80.88  | 2025-12-07 10:43:54 | 9          |
+</span></span><span style="display:flex;"><span>| 6    | 1          | 88.49  | 2025-12-06 19:02:40 | 10         |
+</span></span><span style="display:flex;"><span>| 5    | 1          | 98.57  | 2025-12-04 04:14:31 | 11         |
+</span></span><span style="display:flex;"><span>| 4    | 1          | 119.12 | 2025-12-03 10:14:35 | 12         |
+</span></span><span style="display:flex;"><span>| 3    | 1          | 126.78 | 2025-12-02 18:40:38 | 13         |
+</span></span><span style="display:flex;"><span>| 2    | 1          | 148.63 | 2025-12-02 18:15:33 | 14         |
+</span></span><span style="display:flex;"><span>| 1    | 1          | 148.28 | 2025-12-01 05:25:35 | 15         |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 1260 | 149        | 167.1  | 2025-12-01 06:36:43 | 15         |
+</span></span><span style="display:flex;"><span>| 1288 | 150        | 138.66 | 2025-12-13 08:24:43 | 1          |
+</span></span><span style="display:flex;"><span>| 1287 | 150        | 123.61 | 2025-12-12 10:49:22 | 2          |
+</span></span><span style="display:flex;"><span>| 1286 | 150        | 141.8  | 2025-12-10 07:06:06 | 3          |
+</span></span><span style="display:flex;"><span>| 1285 | 150        | 122.16 | 2025-12-09 20:01:54 | 4          |
+</span></span><span style="display:flex;"><span>| 1284 | 150        | 122.06 | 2025-12-06 22:27:41 | 5          |
+</span></span><span style="display:flex;"><span>| 1283 | 150        | 128.6  | 2025-12-06 13:03:18 | 6          |
+</span></span><span style="display:flex;"><span>| 1282 | 150        | 154.72 | 2025-12-05 08:15:08 | 7          |
+</span></span><span style="display:flex;"><span>| 1281 | 150        | 170.3  | 2025-12-04 15:25:50 | 8          |
+</span></span><span style="display:flex;"><span>| 1280 | 150        | 156.51 | 2025-12-03 19:11:12 | 9          |
+</span></span><span style="display:flex;"><span>| 1279 | 150        | 161.93 | 2025-12-02 02:47:10 | 10         |
+</span></span><span style="display:flex;"><span>| 1278 | 150        | 174.36 | 2025-12-02 01:39:14 | 11         |
+</span></span><span style="display:flex;"><span>| 1277 | 150        | 180.17 | 2025-12-01 20:36:02 | 12         |
+</span></span><span style="display:flex;"><span>| 1276 | 150        | 164.35 | 2025-12-01 07:09:29 | 13         |
+</span></span><span style="display:flex;"><span>| 1275 | 150        | 141    | 2025-12-01 01:29:46 | 14         |
+</span></span><span style="display:flex;"><span>+------+------------+--------+---------------------+------------+</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> ranked_prices <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> price_changes.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>           ROW_NUMBER() OVER (
+</span></span><span style="display:flex;"><span>               PARTITION <span style="color:#66d9ef">BY</span> price_changes.product_id
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> price_changes.effective_timestamp <span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span>           ) <span style="color:#66d9ef">AS</span> row_number
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    products.product_name,
+</span></span><span style="display:flex;"><span>    current_price.price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>    previous_price.price <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>    current_price.price <span style="color:#f92672">-</span> previous_price.price <span style="color:#66d9ef">AS</span> price_difference
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> products
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> ranked_prices <span style="color:#66d9ef">AS</span> current_price
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> current_price.product_id
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">AND</span> current_price.row_number <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> ranked_prices <span style="color:#66d9ef">AS</span> previous_price
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> previous_price.product_id
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">AND</span> previous_price.row_number <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;</span></span></code></pre></div></div>
+<p>This is pretty simple, we just get</p>
+<ul>
+<li>the <code>current_price</code> as <code>row_number = 1</code> from the <code>ranked_prices</code> CTE</li>
+<li>the <code>previous_price</code> as <code>row_number = 2</code> from the <code>ranked_prices</code> CTE</li>
+</ul>
+<p>We got all we needed as:</p>
+<ul>
+<li><code>products.product_name</code></li>
+<li><code>current_price.price AS current_price</code></li>
+<li><code>previous_price.price AS previous_price</code></li>
+<li><code>current_price.price - previous_price.price AS price_difference</code></li>
+</ul>
+<p>So, this is how <code>ROW_NUMBER</code> can be used here.</p>
+
+<h3 class="relative group">With LEAD LAG - Window Functions
+    <div id="with-lead-lag---window-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#with-lead-lag---window-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can also use [LEAD](<a href="https://sqlite.org/windowfunctions.html#:~:text=does%20not%20exist.-,lead%28expr%29,-lead%28expr%2C%20offset%29"  target="_blank">https://sqlite.org/windowfunctions.html#:~:text=does%20not%20exist.-,lead(expr),-lead(expr%2C%20offset)</a> and [LAG](<a href="https://sqlite.org/windowfunctions.html#:~:text=a%20part%20of.-,lag%28expr%29,-lag%28expr%2C%20offset%29"  target="_blank">https://sqlite.org/windowfunctions.html#:~:text=a%20part%20of.-,lag(expr),-lag(expr%2C%20offset)</a> window functions here. We can specifically use <code>LAG</code> as it was a challenge to get the second latest timestamped price.</p>
+<p>We will partition the <code>price_changes</code> table on the <code>product_id</code> and order it by the <code>effective_timestamp</code>. This will give us the row before the timestamp of the current one, so the first row for each product can be empty (if sorted in ascending order of timestamp since there is no before row for the first row)</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span> <span style="color:#66d9ef">WITH</span> lagged_prices <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        product_id,
+</span></span><span style="display:flex;"><span>        price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>        LAG(price) OVER (
+</span></span><span style="display:flex;"><span>            PARTITION <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> effective_timestamp
+</span></span><span style="display:flex;"><span>        ) <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>        effective_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> lagged_prices;</span></span></code></pre></div></div>
+<p>Here, we simply selected the data that we need, <code>product_id</code>, <code>price</code> as the <code>current_price</code> since we can order by latest timestamp.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sqlite&gt; WITH lagged_prices AS (
+</span></span><span style="display:flex;"><span>    SELECT
+</span></span><span style="display:flex;"><span>        product_id,
+</span></span><span style="display:flex;"><span>        price AS current_price,
+</span></span><span style="display:flex;"><span>        LAG(price) OVER (
+</span></span><span style="display:flex;"><span>            PARTITION BY product_id
+</span></span><span style="display:flex;"><span>            ORDER BY effective_timestamp
+</span></span><span style="display:flex;"><span>        ) AS previous_price,
+</span></span><span style="display:flex;"><span>        effective_timestamp
+</span></span><span style="display:flex;"><span>    FROM price_changes
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>SELECT * FROM lagged_prices;
+</span></span><span style="display:flex;"><span>+------------+---------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>| product_id | current_price | previous_price | effective_timestamp |
+</span></span><span style="display:flex;"><span>+------------+---------------+----------------+---------------------+
+</span></span><span style="display:flex;"><span>| 1          | 148.28        |                | 2025-12-01 05:25:35 |
+</span></span><span style="display:flex;"><span>| 1          | 148.63        | 148.28         | 2025-12-02 18:15:33 |
+</span></span><span style="display:flex;"><span>| 1          | 126.78        | 148.63         | 2025-12-02 18:40:38 |
+</span></span><span style="display:flex;"><span>| 1          | 119.12        | 126.78         | 2025-12-03 10:14:35 |
+</span></span><span style="display:flex;"><span>| 1          | 98.57         | 119.12         | 2025-12-04 04:14:31 |
+</span></span><span style="display:flex;"><span>| 1          | 88.49         | 98.57          | 2025-12-06 19:02:40 |
+</span></span><span style="display:flex;"><span>| 1          | 80.88         | 88.49          | 2025-12-07 10:43:54 |
+</span></span><span style="display:flex;"><span>| 1          | 78.88         | 80.88          | 2025-12-08 06:45:39 |
+</span></span><span style="display:flex;"><span>| 1          | 80.24         | 78.88          | 2025-12-08 16:11:11 |
+</span></span><span style="display:flex;"><span>| 1          | 73.9          | 80.24          | 2025-12-10 14:33:43 |
+</span></span><span style="display:flex;"><span>| 1          | 88.2          | 73.9           | 2025-12-12 02:21:09 |
+</span></span><span style="display:flex;"><span>| 1          | 99.03         | 88.2           | 2025-12-12 02:58:14 |
+</span></span><span style="display:flex;"><span>| 1          | 100.18        | 99.03          | 2025-12-14 15:58:03 |
+</span></span><span style="display:flex;"><span>| 1          | 106.91        | 100.18         | 2025-12-16 01:51:05 |
+</span></span><span style="display:flex;"><span>| 1          | 109.25        | 106.91         | 2025-12-16 16:01:53 |
+</span></span><span style="display:flex;"><span>| 2          | 29.54         |                | 2025-12-03 14:21:10 |
+</span></span><span style="display:flex;"><span>| 2          | 34.33         | 29.54          | 2025-12-03 19:14:31 |
+</span></span><span style="display:flex;"><span>| 2          | 39.08         | 34.33          | 2025-12-04 06:13:48 |
+</span></span><span style="display:flex;"><span>| 2          | 32.71         | 39.08          | 2025-12-04 18:33:17 |
+</span></span><span style="display:flex;"><span>| 2          | 31.71         | 32.71          | 2025-12-05 22:36:14 |
+</span></span><span style="display:flex;"><span>| 2          | 28.88         | 31.71          | 2025-12-06 02:42:02 |
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>| 149        | 101.03        | 98.4           | 2025-12-10 00:37:46 |
+</span></span><span style="display:flex;"><span>| 149        | 95.68         | 101.03         | 2025-12-13 01:10:53 |
+</span></span><span style="display:flex;"><span>| 149        | 86.31         | 95.68          | 2025-12-13 13:18:14 |
+</span></span><span style="display:flex;"><span>| 149        | 72.6          | 86.31          | 2025-12-13 16:40:21 |
+</span></span><span style="display:flex;"><span>| 150        | 141           |                | 2025-12-01 01:29:46 |
+</span></span><span style="display:flex;"><span>| 150        | 164.35        | 141            | 2025-12-01 07:09:29 |
+</span></span><span style="display:flex;"><span>| 150        | 180.17        | 164.35         | 2025-12-01 20:36:02 |
+</span></span><span style="display:flex;"><span>| 150        | 174.36        | 180.17         | 2025-12-02 01:39:14 |
+</span></span><span style="display:flex;"><span>| 150        | 161.93        | 174.36         | 2025-12-02 02:47:10 |
+</span></span><span style="display:flex;"><span>| 150        | 156.51        | 161.93         | 2025-12-03 19:11:12 |
+</span></span><span style="display:flex;"><span>| 150        | 170.3         | 156.51         | 2025-12-04 15:25:50 |
+</span></span><span style="display:flex;"><span>| 150        | 154.72        | 170.3          | 2025-12-05 08:15:08 |
+</span></span><span style="display:flex;"><span>| 150        | 128.6         | 154.72         | 2025-12-06 13:03:18 |
+</span></span><span style="display:flex;"><span>| 150        | 122.06        | 128.6          | 2025-12-06 22:27:41 |
+</span></span><span style="display:flex;"><span>| 150        | 122.16        | 122.06         | 2025-12-09 20:01:54 |
+</span></span><span style="display:flex;"><span>| 150        | 141.8         | 122.16         | 2025-12-10 07:06:06 |
+</span></span><span style="display:flex;"><span>| 150        | 123.61        | 141.8          | 2025-12-12 10:49:22 |
+</span></span><span style="display:flex;"><span>| 150        | 138.66        | 123.61         | 2025-12-13 08:24:43 |
+</span></span><span style="display:flex;"><span>+------------+---------------+----------------+---------------------+</span></span></code></pre></div></div>
+<p>Then we can join. The conditions are important to filter.</p>
+<ul>
+<li>we get the lagged time stamp where we want the max of the timestamp since the latest timestamp will have the lagging timestamp for it from the CTE of lagged_prices and current_price as well.</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    products.product_name,
+</span></span><span style="display:flex;"><span>    lagged_prices.current_price,
+</span></span><span style="display:flex;"><span>    lagged_prices.previous_price,
+</span></span><span style="display:flex;"><span>    lagged_prices.current_price <span style="color:#f92672">-</span> lagged_prices.previous_price <span style="color:#66d9ef">AS</span> price_difference
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> products
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> lagged_prices
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> lagged_prices.product_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> lagged_prices.effective_timestamp <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(effective_timestamp)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> product_id <span style="color:#f92672">=</span> products.product_id
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> lagged_prices <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        product_id,
+</span></span><span style="display:flex;"><span>        price <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>        LAG(price) OVER (
+</span></span><span style="display:flex;"><span>            PARTITION <span style="color:#66d9ef">BY</span> product_id
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> effective_timestamp
+</span></span><span style="display:flex;"><span>        ) <span style="color:#66d9ef">AS</span> previous_price,
+</span></span><span style="display:flex;"><span>        effective_timestamp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    products.product_name,
+</span></span><span style="display:flex;"><span>    lagged_prices.current_price,
+</span></span><span style="display:flex;"><span>    lagged_prices.previous_price,
+</span></span><span style="display:flex;"><span>    lagged_prices.current_price <span style="color:#f92672">-</span> lagged_prices.previous_price <span style="color:#66d9ef">AS</span> price_difference
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> products
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> lagged_prices
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ON</span> products.product_id <span style="color:#f92672">=</span> lagged_prices.product_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> lagged_prices.effective_timestamp <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(effective_timestamp)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> product_id <span style="color:#f92672">=</span> products.product_id
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>This yields the same result.</p>
+<p>This is all big, any smaller queries?</p>
+<p>Not quite small.</p>
+
+<h3 class="relative group">LIMIT OFFSET and CTE
+    <div id="limit-offset-and-cte" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#limit-offset-and-cte" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Well here&rsquo;s a little short, but quite dirty.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>       current_price <span style="color:#f92672">-</span> previous_price <span style="color:#66d9ef">AS</span> price_difference
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        products.product_name,
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">SELECT</span> price
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">WHERE</span> price_changes.product_id <span style="color:#f92672">=</span> products.product_id
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> effective_timestamp <span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">AS</span> current_price,
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">SELECT</span> price
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">FROM</span> price_changes
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">WHERE</span> price_changes.product_id <span style="color:#f92672">=</span> products.product_id
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> effective_timestamp <span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">OFFSET</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">AS</span> previous_price
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> products
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div></div>
+<p>This basically grabs the  price from the latest timestamp and the 2nd timestamp with offset and wraps it in a CTE to compute the difference.</p>
+<p>Pretty slick if you ask me.</p>
+<p>But hey! I am done for this!</p>
+<p>It was a great problem.</p>
+<p>Getting data behind certain data is quite relatable and challenging enough to explore window functions and what not.</p>
+<p>That&rsquo;s it from day 8.</p>
+<p>See you tomorrow for day 9!</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2025-12-23-advent-of-sql-day-08-product-catalog.md"
+          data-oid-likes="likes_posts/2025-12-23-advent-of-sql-day-08-product-catalog.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-7/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Advent of SQL 2025 Day 7: Polar Express Mixin
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-22T15:30:00&#43;05:30">December 22, 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/advent-of-sql-2025-day-9/">
+              <span class="leading-6">
+                Advent of SQL 2025 Day 9: Evergreen Market Orders&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-24T15:30:00&#43;05:30">December 24, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

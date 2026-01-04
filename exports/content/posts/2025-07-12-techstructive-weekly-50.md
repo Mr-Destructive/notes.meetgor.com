@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-07-12","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #50","type":"newsletter", "slug": "techstructive-weekly-50"}
+---
+type: newsletter
+title: "Techstructive Weekly #50"
+date: 2025-07-12T00:00:00
+slug: "techstructive-weekly-50"
+---
 
 ## Week #50
 
@@ -109,11 +114,11 @@ As expected, there was a model release this week, if you have been following the
 
 That’s it from the week 50, we are close on the one year anniversary of this newsletter. Wow! a whole year has been gone in writing these newsletters, didn’t expect it to be that quick.
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 ---
 

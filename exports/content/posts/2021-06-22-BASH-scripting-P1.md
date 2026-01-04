@@ -1,20 +1,14 @@
-{
-  "type": "posts",
-  "title": "BASH Scripting Guide - PART - 1",
-  "subtitle": "The quick basic guide on foundational concepts of Bash scripting.",
-  "date": "2021-06-22 16:37:28 +0530",
-  "status": "published",
-  "tags": [
-    "bash"
-  ],
-  "slug": "bash-guide-p1",
-  "image_url": "https://meetgor-cdn.pages.dev/bash-scripting-guide-p1.webp",
-  "series": [
-    "BASH Scripting Guide"
-  ],
-  "series_description": "BASH scripting, exploring the concpets and some general use-cases of certain commands and tools. Coverig from simple concpets to complex statements in BASH."
-}
-
+---
+type: posts
+title: "BASH Scripting Guide - PART - 1"
+subtitle: "The quick basic guide on foundational concepts of Bash scripting."
+date: 2021-06-22T16:37:28+05:30
+slug: "bash-guide-p1"
+series: ["BASH Scripting Guide"]
+tags:
+  - bash
+image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p1.webp
+---
 
 ## Introduction
 If you are new to BASH and Linux, don't you worry the community is the driving force here. If someone's stuck somewhere, the platforms, forums, and blogs are ready to help anyone there. BASH is a short term of Bourne-Again Shell, it is a shell interface that has much more capabilities and functions than the simple Bourne shell(sh). It has some quite remarkable features and it is even capable of calling itself a programming language in some sense.
@@ -248,4 +242,4 @@ Function in Bash can also return multiple values at once but that can be buggy a
 
  So, that is the basics of Bash functions covered. 
 
-This is it from the Bash scripting guide Part-1, I'll cover more topics in the upcoming parts of the series. 
+This is it from the Bash scripting guide Part-1, I'll cover more topics in the upcoming parts of the series.

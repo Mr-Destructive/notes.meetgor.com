@@ -1,12 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-09-20",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #60",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-60"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #60"
+date: 2025-09-20T00:00:00
+slug: "techstructive-weekly-60"
+---
 
 ## Weekly #60
 
@@ -147,11 +144,11 @@ That was a heck of a long week. Lot of tech things happening. It will get even m
 
 ---
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.
 

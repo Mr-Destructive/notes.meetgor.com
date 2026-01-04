@@ -1,0 +1,1615 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en-us">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Golang Web: POST Method &middot; Notes</title>
+    <meta name="title" content="Golang Web: POST Method &middot; Notes">
+  
+
+  
+  
+    <meta name="description" content="A collection of technical notes and posts">
+  
+  
+    <meta name="keywords" content="go,">
+  
+  
+  
+  <link rel="canonical" href="/posts/golang-web-post-method/">
+  
+
+  
+  
+    <meta name="author" content="Meet Gor">
+  
+  
+
+  
+  <meta property="og:url" content="/posts/golang-web-post-method/">
+  <meta property="og:site_name" content="Notes">
+  <meta property="og:title" content="Golang Web: POST Method">
+  <meta property="og:description" content="Introduction # In this section of the series, we will be exploring how to send a POST HTTP request in golang. We will understand how to send a basic POST request, create an HTTP request, and parse json, structs into the request body, add headers, etc in the following sections of this post. We will understand how to marshal the golang struct/types into JSON format, send files in the request, and handle form data with examples of each in this article. Let’s answer a few questions first.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-03-10T20:15:00+00:00">
+    <meta property="article:modified_time" content="2026-01-03T21:39:39+05:30">
+    <meta property="article:tag" content="Go">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Golang Web: POST Method">
+  <meta name="twitter:description" content="Introduction # In this section of the series, we will be exploring how to send a POST HTTP request in golang. We will understand how to send a basic POST request, create an HTTP request, and parse json, structs into the request body, add headers, etc in the following sections of this post. We will understand how to marshal the golang struct/types into JSON format, send files in the request, and handle form data with examples of each in this article. Let’s answer a few questions first.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c61736128cfa071f52268b924e8b8c8dff7f9e962caae1e812053e9e023a4e1c1c95239d517406a4002933de9dd5ad84667956aa9d4230a25024e7e502058ca1.css"
+    integrity="sha512-xhc2Eoz6Bx9SJouSTouMjf9/npYsquHoEgU&#43;ngI6ThwclSOdUXQGpAApM96d1a2EZnlWqp1CMKJQJOflAgWMoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Golang Web: POST Method",
+    "headline": "Golang Web: POST Method",
+    
+    "inLanguage": "en-us",
+    "url" : "/posts/golang-web-post-method/",
+    "author" : {
+      "@type": "Person",
+      "name": "Meet Gor"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-03-10T20:15:00\u002b00:00",
+    "datePublished": "2024-03-10T20:15:00\u002b00:00",
+    
+    "dateModified": "2026-01-03T21:39:39\u002b05:30",
+    
+    "keywords": ["go"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "4651"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Notes
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Golang Web: POST Method
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-10T20:15:00&#43;00:00">March 10, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>4651 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">22 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Meet Gor
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section of the series, we will be exploring how to send a <code>POST</code> HTTP request in golang. We will understand how to send a basic POST request, create an HTTP request, and parse json, structs into the request body, add headers, etc in the following sections of this post. We will understand how to marshal the golang struct/types into JSON format, send files in the request, and handle form data with examples of each in this article. Let&rsquo;s answer a few questions first.</p>
+
+<h2 class="relative group">What is a POST request?
+    <div id="what-is-a-post-request" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-is-a-post-request" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>POST method is a type of request that is used to send data to a server(a machine on the internet).</p>
+<p>Imagine you are placing an order at a restaurant. With a GET request, it would be like asking the waiter, &ldquo;What kind of pizza do you have?&rdquo; The waiter would respond by telling you the menu options (the information retrieved from the server).</p>
+<p>However, a POST request is more like giving your completed order to the waiter. You tell them the specific pizza you want, its size, and any additional toppings (the data you send). The waiter then takes this information (POST request) back to the kitchen (the server) to process it (fulfill your order).</p>
+<p>In the world of web development, POST requests are often used for things like:</p>
+<p>Submitting forms (e.g., contact forms, login forms) Uploading files (e.g., photos, videos) Creating new accounts Sending data to be processed (e.g., online purchases)</p>
+<p>Here&rsquo;s an example of what the POST request might look like in this scenario:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">POST</span> <span style="color:#e6db74">/api/order</span> <span style="color:#e6db74">HTTP/1.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Host:</span> <span style="color:#e6db74">example.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Content-Type:</span> <span style="color:#e6db74">application/json</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Content-Length:</span> <span style="color:#ae81ff">123</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;userID&#34;:</span> <span style="color:#ae81ff">123</span><span style="color:#e6db74">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;orderID&#34;:</span> <span style="color:#ae81ff">456</span><span style="color:#e6db74">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;items&#34;:</span> <span style="color:#e6db74">[</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;itemID&#34;:</span> <span style="color:#ae81ff">789</span><span style="color:#e6db74">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;name&#34;:</span> <span style="color:#e6db74">&#34;Pizza&#34;,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;quantity&#34;:</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">}</span><span style="color:#e6db74">,</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;itemID&#34;:</span> <span style="color:#ae81ff">999</span><span style="color:#e6db74">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;name&#34;:</span> <span style="color:#e6db74">&#34;Burger&#34;,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;quantity&#34;:</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">}</span></span></span></code></pre></div></div>
+<p>In this example:</p>
+<ul>
+<li>The <code>POST</code> method is used to send data to the server.</li>
+<li>The <code>/api/order</code> is the endpoint of the server.</li>
+<li>The <code>application/json</code> is the content type of the request.</li>
+<li>The <code>123</code> is the content length of the request.</li>
+<li>The <code>{&quot;userID&quot;: 123, &quot;orderID&quot;: 456, &quot;items&quot;: [{&quot;itemID&quot;: 789, &quot;name&quot;: &quot;Pizza&quot;, &quot;quantity&quot;: 2}, {&quot;itemID&quot;: 999, &quot;name&quot;: &quot;Burger&quot;, &quot;quantity&quot;: 1}]}</code> is the body of the request.</li>
+</ul>
+
+<h2 class="relative group">Why the need for a POST request?
+    <div id="why-the-need-for-a-post-request" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-the-need-for-a-post-request" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the world of HTTP requests, we use the POST method to securely send data from a client (like a user&rsquo;s browser) to a server. This is crucial because the GET method, while convenient for retrieving data, has limitations:</p>
+<p>Imagine you are in registering for an event via Google form, you type in your details on the webpage like name, email, address, phone number, and other personal details. If the website/app was using the <code>GET</code> method to send the request to register or do any other authentication/privacy-related requests, it could expose the data in the URL itself. It would be something along the lines <a href="https://form.google.com/register/%3Cform-name%3E-%3Cid%3E/?name=John&amp;phone_number=1234567890"  target="_blank"><code>https://form.google.com/register/&lt;form-name&gt;-&lt;id&gt;/?name=John&amp;phone_number=1234567890</code></a>, if a user maliciously sniffs into your network and inspects the URL, your data will be exposed. That is the reason we need <code>POST</code> a method.</p>
+
+<h2 class="relative group">How a POST method works?
+    <div id="how-a-post-method-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-a-post-method-works" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <a href="https://www.rfc-editor.org/rfc/rfc9110#POST"  target="_blank">POST</a> request is used to send data to a server to create or update(there is a separate method for updating) a resource. The client(browser/other APIs) sends a POST request to the server&rsquo;s API endpoint with the data in the request body. This data can be in formats like JSON, XML, or form data. The server processes the POST request, validates and parses the data in the request body, makes any changes or creates resources based on that data, and returns a response. The response would contain a status code indicating the success or failure of the operation and may contain the newly created or updated resource in the response body. The client must check the response status code to verify the outcome and process the response accordingly. Unlike GET, POST can create new resources on the server. The body of a POST contains the data for creation while the URL identifies the resource to be created. Overall, POST transfers data to the server for processing, creation or updating of resources.</p>
+<p>The status code is usually <code>201</code> indicating the resource is successfully created or <code>200</code> for just indicating success.</p>
+<p>Some common steps for creating and sending a POST request as a developer include:</p>
+<ul>
+<li>
+<p>Defining the API endpoint</p>
+</li>
+<li>
+<p>Clarifying the data format (json, language native objects, xml , text, form-data, etc)</p>
+</li>
+<li>
+<p>Converting / Marshalling the data</p>
+</li>
+<li>
+<p>Attaching header for <code>Content-Type</code> as key and value as the format of the data type (e.g. <code>application/json</code> for json)</p>
+</li>
+<li>
+<p>Sending the request</p>
+</li>
+</ul>
+<p>The above steps are general for creating and sending a POST request, they are not specific to Golang. For golang specific steps, we need to dive a bit deeper, let&rsquo;s get started.</p>
+
+<h2 class="relative group">Basic POST method in Golang
+    <div id="basic-post-method-in-golang" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#basic-post-method-in-golang" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To send a POST request in golang, we need to use the <code>http</code> package. The <code>http</code> package has the <code>Post</code> method, which takes in 3 parameters, namely the URL, the Content-Type, and the Body. The body can be <code>nil</code> if the URL endpoint doesn&rsquo;t necessarily require a body. The <code>Content-Type</code> is the string, since we are just touching on how the Post request is constructed, we will see what the <code>Content-Type</code> string value should be in the later sections.</p>
+<blockquote><p><a href="http://http.Post"  target="_blank">http.Post</a>(URL, Content-Type, Body)</p>
+</blockquote><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://reqres.in/api/users&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// POST request</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ideally the Content-Type header should be set to the relevant format</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// resp, err := http.Post(apiURL, &#34;application/json&#34;, nil)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">201</span>
+</span></span><span style="display:flex;"><span>&amp;<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">201</span> Created
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">201</span>
+</span></span><span style="display:flex;"><span>    HTTP/2.0
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    map<span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>        Access-Control-Allow-Origin:<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        Cf-Cache-Status:<span style="color:#f92672">[</span>DYNAMIC<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        Cf-Ray:<span style="color:#f92672">[</span>861cd9aec8223e4b-BOM<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        Content-Length:<span style="color:#f92672">[</span>50<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        Content-Type:<span style="color:#f92672">[</span>application/json; charset<span style="color:#f92672">=</span>utf-8<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        Date:<span style="color:#f92672">[</span>Sat, <span style="color:#ae81ff">09</span> Mar <span style="color:#ae81ff">2024</span> 17:40:28 GMT<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        Server:<span style="color:#f92672">[</span>cloudflare<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        ...
+</span></span><span style="display:flex;"><span>        ...
+</span></span><span style="display:flex;"><span>        ...
+</span></span><span style="display:flex;"><span>        X-Powered-By:<span style="color:#f92672">[</span>Express<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>0xc00017c180<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>    false
+</span></span><span style="display:flex;"><span>    false
+</span></span><span style="display:flex;"><span>    map<span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>    0xc000156000
+</span></span><span style="display:flex;"><span>    0xc00012a420
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span></span></span></code></pre></div></div>
+<p>The above code is sending the <code>POST</code> request to the <a href="https://reqres.in/api/users"  target="_blank"><code>https://reqres.in/api/users</code></a> endpoint with an empty body and no specific format for <code>Content-Type</code> header. The response is according to the <a href="https://pkg.go.dev/net/http#Response"  target="_blank">Response</a> structure. We can see we got <code>201</code> status, which indicates the server received the POST request successfully, the API is a dummy api, so we don&rsquo;t care about the data we are processing, we are just using the API as a placeholder for sending the POST request.</p>
+<p>We can use <code>map[string]interface{}</code> it to pass the data in the request body. The <code>json.Marshal</code> method is used to convert the map into JSON format. We will look into the details shortly in the next few examples.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bytes&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://reqres.in/api/users&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">bodyMap</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;morpheus&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;job&#34;</span>: <span style="color:#e6db74">&#34;leader&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">requestBody</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">bodyMap</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">body</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBuffer</span>(<span style="color:#a6e22e">requestBody</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">201</span></span></span></code></pre></div></div>
+<p>The above code sends the <code>POST</code> request to the <a href="https://reqres.in/api/users"  target="_blank"><code>https://reqres.in/api/users</code></a> endpoint with the data in the request body in JSON format.</p>
+
+<h2 class="relative group">Creating a POST request in Golang
+    <div id="creating-a-post-request-in-golang" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-a-post-request-in-golang" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We can construct the POST request with the <a href="https://pkg.go.dev/net/http#NewRequest"  target="_blank">NewRequest</a> method. The method takes in 3 parameters, namely the <code>method</code> (e.g. <code>POST</code>, <code>GET</code>), the <code>URL</code> and the <code>body</code> (if there is any). We can then add extra information to the headers or the Request object after constructing the basic HTTP <a href="https://pkg.go.dev/net/http#Request"  target="_blank">Request</a> object.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://reqres.in/api/users&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">MethodPost</span>, <span style="color:#a6e22e">apiURL</span>, <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//fmt.Println(resp)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">201</span></span></span></code></pre></div></div>
+<p>In the above example, we have created an HTTP Request as the <code>POST</code> method, with <a href="https://reqres.in/api/users"  target="_blank"><code>https://reqres.in/api/users</code></a> as the URL, and no body. This constructs an HTTP Request object, which can be sent as the parameter to the <a href="http://http.DefaultClient.Do"  target="_blank">http.DefaultClient.Do</a> method, which is the default client for the request we sent in the earlier examples as <code>http.Get</code> or <a href="http://http.Post"  target="_blank"><code>http.Post</code></a> methods. We can implement a custom client as well, and then apply <code>Do</code> the method with the request parameters. The <code>Do</code> method returns the <code>Request</code> object or the <code>error</code> if any.</p>
+<p>More on the customizing Client will be explained in a separate post in the series.</p>
+<p>The response is also in the same format as the <a href="https://pkg.go.dev/net/http#Response"  target="_blank">Response</a> structure that we have seen earlier. This section of the series aims to construct a post request, and not to parse the response, we have already understood the parsing of the response in the <a href="https://www.meetgor.com/golang-web-get-method/#?:~:text=Parsing%20the%20JSON%20body%20with%20structs"  target="_blank">Get method</a> section of the series.</p>
+
+<h3 class="relative group">Parsing objects to JSON for POST method request
+    <div id="parsing-objects-to-json-for-post-method-request" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-objects-to-json-for-post-method-request" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We might have a golang object that we want to send as a body to an API in the POST request, for that we need to convert the golang struct object to JSON. We can do this by using the <a href="https://pkg.go.dev/encoding/json#Marshal"  target="_blank">Marshal</a> or the <a href="https://pkg.go.dev/encoding/json#Encoder.Encode"  target="_blank">Encode</a> method for serialization of the golang struct object to JSON.</p>
+
+<h4 class="relative group">Using Marshal method
+    <div id="using-marshal-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#using-marshal-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>Marshaling is the process of converting data from a data structure into a format suitable for transmission over a network or for storage. It&rsquo;s commonly used to convert native objects in a programming language into a serialized format, typically a byte stream, that can be transmitted or stored efficiently. You might get a question here, what is the difference between <code>Marshalling</code> and <code>Serialization</code>? Well, Serialization, is a broader term that encompasses marshalling. It refers to the process of converting an object or data structure into a format that can be stored or transmitted and later reconstructed into the original object. Serialization may involve converting data into byte streams, XML, JSON, or other formats. So, in summary, marshaling specifically deals with converting native objects into a format suitable for transmission, while serialization encompasses the broader process of preparing data for storage or transmission.</p>
+<p>The <code>json</code> package has the <a href="https://pkg.go.dev/encoding/json#Marshal"  target="_blank">Marshal</a> method that converts the golang object into JSON. The <code>Marshal</code> method takes in a parameter as the struct object with type <code>any</code> and returns a byte slice <code>[]byte</code> and error (if any).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bytes&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;name&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Salary</span> <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;salary&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Age</span>    <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;age&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">User</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Name</span>:   <span style="color:#e6db74">&#34;Alice&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Salary</span>: <span style="color:#ae81ff">50000</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Age</span>:    <span style="color:#ae81ff">25</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://dummy.restapiexample.com/api/v1/create&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// marshalling process</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// converting Go specific data structure/types to JSON</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">bodyBytes</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">bodyBytes</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// reading json into a buffer/in-memory</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">body</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBuffer</span>(<span style="color:#a6e22e">bodyBytes</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// post request</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span><span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Alice&#34;</span>,<span style="color:#e6db74">&#34;salary&#34;</span>:50000,<span style="color:#e6db74">&#34;age&#34;</span>:25<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">200</span></span></span></code></pre></div></div>
+<p>In the above example, we have created a struct <code>User</code> with fields <code>Name</code>, <code>Salary</code>, and <code>Age</code>, the json tags will help label each key in JSON with the tag for the respective fields in the struct. We create an object <code>user</code> of a type <code>User</code> with the values as <code>Alice</code>, <code>50000</code>, and <code>25</code> respectively.</p>
+<p>We call the <code>json.Marshal</code> method with the parameter <code>user</code> that represents the struct object <code>User</code>, the method returns a slice of bytes, or an error either or both could be nil. If we try to see the stringified representation of the byte slice, we can see something like <code>{&quot;name&quot;:&quot;Alice&quot;,&quot;salary&quot;:50000,&quot;age&quot;:25}</code> which is a JSON string for the user struct. We can&rsquo;t parse the byte slice as the body in the POST request, we need the <code>io.Reader</code> object, so we can load the byte slice <code>bodyBytes</code> into a buffer and parse that as a body for the POST request.</p>
+<p>We then send a <code>POST</code> request to the endpoint <a href="https://dummy.restapiexample.com/api/v1/create"  target="_blank"><code>https://dummy.restapiexample.com/api/v1/create</code></a> with the content type as <code>application/json</code> and with the body as <code>body</code> which was a <code>io.Reader</code> object as an in-memory buffer.</p>
+<p>In brief, we can summarize the marshaling of the golang object into JSON with <code>Marshal</code> function as the following steps:</p>
+<ul>
+<li>
+<p>Defining the structure as per the request body</p>
+</li>
+<li>
+<p>Creating the struct object for parsing the data as body to the request</p>
+</li>
+<li>
+<p>Calling the <code>json.Marshal</code> function to convert the object to JSON (parameter as the struct object <code>any</code> type)</p>
+</li>
+<li>
+<p>Loading the byte slice into a buffer with <code>bytes.NewBuffer()</code></p>
+</li>
+<li>
+<p>Sending the POST request to the endpoint with the body as the <code>io.Reader</code> object and content type as <code>application/json</code></p>
+</li>
+</ul>
+
+<h4 class="relative group">Using Encode method
+    <div id="using-encode-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#using-encode-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>We can even use the <a href="https://pkg.go.dev/encoding/json#Encoder.Encode"  target="_blank">Encoder.Encode</a> method to parse the golang struct object to JSON. Firstly, we should have the struct defined as per the request body that the particular API takes, we can make use of the json tags, omitempty, omit(-) options to make the marshaling process work accordingly. We can then create the object of that particular struct with the data we require to be created as a resource with the POST request on that API service.</p>
+<p>Thereafter we can create an empty buffer object with <a href="https://pkg.go.dev/bytes#Buffer"  target="_blank">bytes.Buffer</a>, this buffer object would be used to initialize the <a href="https://pkg.go.dev/encoding/json#Encoder"  target="_blank">Encoder</a> object with the <a href="https://pkg.go.dev/encoding/json#NewEncoder"  target="_blank">NewEncoder</a> method. This would give access to the <a href="https://pkg.go.dev/encoding/json#Encoder.Encode"  target="_blank">Encode</a> method, which is used to take in the struct object (<code>any</code> type) and this will populate the buffer we initialized with the <code>NewEncoder</code> method.</p>
+<p>Later we can access that buffer to parse it to the Post request as the body. Let&rsquo;s understand it better with an example.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bytes&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Salary</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Age</span>    <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">User</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Name</span>:   <span style="color:#e6db74">&#34;Alice&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Salary</span>: <span style="color:#ae81ff">50000</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Age</span>:    <span style="color:#ae81ff">25</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://dummy.restapiexample.com/api/v1/create&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bodyBuffer</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">encoder</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">bodyBuffer</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">encoder</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">bodyBuffer</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p>Over here, we have created a struct <code>User</code> with fields <code>Name</code>, <code>Salary</code>, and <code>Age</code>, we initialize the <code>user</code> as the object of the <code>User</code> struct. Then we create a buffer <code>bodyBuffer</code> of type <code>bytes.Buffer</code> this is the actual buffer that we will send as the body. Further, we initialize the <code>Encoder</code> object as <code>encoder</code> with the <code>json.NewEncoder</code> method by parsing the reference of <code>bodyBuffer</code> as the parameter. Since <code>bytes.Buffer</code> implements the <code>io.Writer</code> interface, we can pass the <code>bodyBuffer</code> to the <code>NewEncoder</code> method. This will create the <code>Encoder</code> object which in turn will give us access to the <code>Encode</code> method, where we will parse the struct instance and it will populate the buffer with which we initialized the <code>Encoder</code> object earlier.</p>
+<p>Now, we have the <code>encode</code> object, this gives us the access to <code>Encode</code> method, we call the <code>Encode</code> method with the parameter of <code>user</code> which is a User struct instance/object. The Encode method will populate the <code>bodyBuffer</code> object or it will result in an error if anything goes wrong (the data is incorrectly parsed or is not in the required format).</p>
+<p>We can call the <code>Post</code> method with the initialized URL, the <code>Content-Type</code> as <code>application/json</code> since we have converted the struct instance to JSON object, and the body as the reference to the buffer as <code>&amp;bodyBuffer</code></p>
+<p>So, the steps for parsing struct instances into JSON objects with the <code>Encoder.Encode</code> method is as follows:</p>
+<ul>
+<li>
+<p>Defining the structure as per the request body</p>
+</li>
+<li>
+<p>Creating the struct object for parsing the data as body to the request</p>
+</li>
+<li>
+<p>Creating an empty <code>bytes.Buffer</code> object as an in-memory buffer</p>
+</li>
+<li>
+<p>Initializing the <code>Encoder</code> object with <code>NewEncoder</code> method by parsing the reference of <code>bodyBuffer</code> as the parameter</p>
+</li>
+<li>
+<p>Calling the <code>Encode</code> method with the parameter of struct instance/object</p>
+</li>
+<li>
+<p>Sending the POST request to the endpoint with the content type as <code>application/json</code> and body as the reference to the buffer</p>
+</li>
+</ul>
+<p>The results are the same as the above example just the way we have parsed the struct instance to JSON object is different.</p>
+
+<h3 class="relative group">Parsing JSON to POST request
+    <div id="parsing-json-to-post-request" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-json-to-post-request" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We have seen how we can parse golang struct instances to JSON and then send the post request, but what if we had the JSON string already with us, and we want to send the request? Well, that&rsquo;s much easier, right? We already have parsed the JSON string to the Post request by loading the slice of bytes into a buffer, so we just need to convert the string to a slice of bytes which is quite an easy task, and then load that byte slice to the buffer.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bytes&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// dummy api</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://dummy.restapiexample.com/api/v1/create&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// json data</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">data</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;name&#34;: &#34;Alice&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;job&#34;: &#34;Teacher&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">body</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBuffer</span>([]byte(<span style="color:#a6e22e">data</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// POST request</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<p>In the example above, we already have a JSON string <code>data</code> with keys as <code>name</code> and <code>job</code> but it is not JSON, it is a stringified JSON. We can convert the stringified JSON to a slice of bytes using the <code>[]byte</code> function. Further, we have used the <code>bytes.NewBuffer</code> method to load the byte slice into an <code>io.Reader</code> object. This object returned by the <code>bytes.NewBuffer</code> will serve as the body for the POST request.</p>
+
+<h3 class="relative group">Parsing JSON to objects in Golang from POST method response
+    <div id="parsing-json-to-objects-in-golang-from-post-method-response" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsing-json-to-objects-in-golang-from-post-method-response" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bytes&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;io&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;name&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Salary</span> <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;salary&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Age</span>    <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;age&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ID</span>     <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;id,omitempty&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">UserResponse</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Status</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;status&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Data</span>   <span style="color:#a6e22e">User</span>   <span style="color:#e6db74">`json:&#34;data&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">User</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Name</span>:   <span style="color:#e6db74">&#34;Alice&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Salary</span>: <span style="color:#ae81ff">50000</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Age</span>:    <span style="color:#e6db74">&#34;25&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://dummy.restapiexample.com/api/v1/create&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// marshalling process</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// converting Go specific data structure/types to JSON</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">bodyBytes</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">bodyBytes</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// reading json into a buffer/in-memory</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">body</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBuffer</span>(<span style="color:#a6e22e">bodyBytes</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// post request</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">resp</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Read response body</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">respBody</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// unmarshalling process</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// converting JSON to Go specific data structure/types</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">userResponse</span> <span style="color:#a6e22e">UserResponse</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">respBody</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">userResponse</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">userResponse</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">userResponse</span>.<span style="color:#a6e22e">Data</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">{success</span> {<span style="color:#f92672">Alice</span> <span style="color:#ae81ff">50000</span> <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">3239</span><span style="color:#960050;background-color:#1e0010">}}</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">Alice</span> <span style="color:#ae81ff">50000</span> <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">577</span><span style="color:#960050;background-color:#1e0010">}</span></span></span></code></pre></div></div>
+<p>The above example is a POST request with a struct instance being loaded as a JSON string and then sent as a buffer to the API endpoint, it also reads the response body with a specific structure <code>UserResponse</code> and unmarshalled the <code>resp.Body</code> from the <code>io.Reader</code> as <code>respBody</code> and then loads into <code>userResponse</code> object. This example gives an entire process of what we have understood in the JSON data parsing for a POST request.</p>
+
+<h3 class="relative group">Sending Form data in a POST request
+    <div id="sending-form-data-in-a-post-request" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sending-form-data-in-a-post-request" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We can also send data to a POST request in the form of a form, the form which we use in the HTML. Golang has a <code>net/url</code> package to parse the form data. The form data is sent in the <code>application/x-www-form-urlencoded</code> format.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;io&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/url&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;strings&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ResponseLogin</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Token</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;token&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// dummy api</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://reqres.in/api/login&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Define form data</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">formData</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Values</span>{}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;email&#34;</span>, <span style="color:#e6db74">&#34;eve.holt@reqres.in&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;password&#34;</span>, <span style="color:#e6db74">&#34;cityslicka&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Encode the form data</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">Encode</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">reqBody</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">Encode</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">reqBody</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Make a POST request with form data</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#e6db74">&#34;application/x-www-form-urlencoded&#34;</span>, <span style="color:#a6e22e">reqBody</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Print response status code</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Status Code:&#34;</span>, <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Read response body</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">respBody</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">token</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ResponseLogin</span>{}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">respBody</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">token</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">token</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>email<span style="color:#f92672">=</span>eve.holt%40reqres.in&amp;password<span style="color:#f92672">=</span>cityslicka
+</span></span><span style="display:flex;"><span>&amp;<span style="color:#f92672">{</span>email<span style="color:#f92672">=</span>eve.holt%40reqres.in&amp;password<span style="color:#f92672">=</span>cityslicka <span style="color:#ae81ff">0</span> -1<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Status Code: <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>QpwL5tke4Pnpja7X4<span style="color:#f92672">}</span></span></span></code></pre></div></div>
+<p>In the above example, we set a <code>formData</code> with the values of <code>email</code> and <code>password</code> which are <code>url.Values</code> object. The <code>url.Values</code> the object is used to store the key-value pairs of the form data. The <code>formData</code> is encoded with the <code>url.Encode</code> method, We load the encoded string to a <code>buffer</code> with <code>strings.NewReader</code> which implements the <code>io.Reader</code> interface, so that way we can pass that object as the body to the post request.</p>
+<p>We send the <code>POST</code> request to the endpoint <a href="https://reqres.in/api/login"  target="_blank"><code>https://reqres.in/api/login</code></a> with the content type as <code>application/x-www-form-urlencoded</code> and with the body as <code>reqBody</code> which implements the <code>io.Reader</code> interface as an in-memory buffer. The response from the request is read into the buffer with <code>io.ReadAll</code> method and we can <code>Unmarshal</code> the stream of bytes as a buffer into the <code>ResponseLogin</code> struct object.</p>
+<p>The output shows the <code>formData</code> as encoded string <code>email=eve.holt%</code><a href="http://40reqres.in"  target="_blank"><code>40reqres.in</code></a><code>&amp;password=cityslicka</code> as <code>@</code> is encoded to <code>%40</code>, then we wrap the <code>formData</code> in a <code>strings.NewReader</code> object which is a buffer that implements <code>io.Reader</code> interface, hence we can see the result as the object. The status code for the request is <code>200</code> indicating the server received the <code>form-data</code> in the body and upon unmarshalling, we get the token as a response to the POST request which was a dummy login API.</p>
+<p>This way we have parsed the form-data to the body of a POST request.</p>
+
+<h3 class="relative group">Sending File in a POST request
+    <div id="sending-file-in-a-post-request" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sending-file-in-a-post-request" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>We have covered, parsing text, JSON, and form data, and now we need to move into sending files in a POST request. We can use the <code>multipart</code> package to parse files into the request body and set appropriate headers for reading the file from the API services.</p>
+<p>We first read the file contents <a href="http://os.Open"  target="_blank"><code>os.Open</code></a> which returns a reference to the <code>file</code> object or an error. We create an empty <code>bytes.Buffer</code> object as <code>body</code> which will be populated later. The <a href="https://pkg.go.dev/mime/multipart#NewWriter"  target="_blank">multipart.NewWriter</a> method takes in the <code>io.Writer</code> object which will be the <code>body</code> as it is an <code>bytes.Buffer</code> object that implements the <code>io.Writer</code> interface. This will initialize the <a href="https://pkg.go.dev/mime/multipart#Writer"  target="_blank">Writer</a> object in the <code>multipart</code> package.</p>
+<p>We create a <code>form-field</code> in the <code>Writer</code> object with the <a href="https://pkg.go.dev/mime/multipart#Writer.CreateFormFile"  target="_blank">CreateFormFile</a> method, which takes in the <code>fieldName</code> as the name of the field, and the <code>fileName</code> as the name of the file which will be read later in the multipart form. The method returns either the part or the error. The <code>part</code> is an object that implements the <code>io.Writer</code> interface.</p>
+<p>Since we have stored the file contents in the <code>file</code> object, we copy the contents into the <code>form-field</code> with the <a href="https://pkg.go.dev/io#Copy"  target="_blank">Copy</a> method. Since the <code>part</code> return from the <code>CreateFormFile</code> was implementing the <code>io.Writer</code> interface, we can use it to Copy the contents from source to destination. The source is the <code>io.Reader</code> object and the destination is the <code>io.Writer</code> object, the destination for the <code>Copy</code> method is the first parameter, the source is the second parameter.</p>
+<p>This Copy method will populate the buffer initialized earlier in the <code>NewWriter</code> method. This will give us a buffer that has the file contents in it. We can pass this buffer to the POST request with the <code>body</code> parameter. We also need to make sure we close the <code>Writer</code> object after copying the contents of the file. We can extract the type of file which will serve as the <code>Content-Type</code> of the request.</p>
+<p>Let&rsquo;s clear the explanation with an example.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bytes&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;io&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;mime/multipart&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;os&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ResponseFile</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Files</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;files&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">apiURL</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://postman-echo.com/post&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fileName</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;sample.csv&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">fileName</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">body</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>{}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">writer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">multipart</span>.<span style="color:#a6e22e">NewWriter</span>(<span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">part</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">writer</span>.<span style="color:#a6e22e">CreateFormFile</span>(<span style="color:#e6db74">&#34;csvFile&#34;</span>, <span style="color:#a6e22e">fileName</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">part</span>, <span style="color:#a6e22e">file</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentType</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">writer</span>.<span style="color:#a6e22e">FormDataContentType</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">contentType</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">writer</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">resp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#a6e22e">apiURL</span>, <span style="color:#a6e22e">contentType</span>, <span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Status Code:&#34;</span>, <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">StatusCode</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">respBody</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Body</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">token</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ResponseFile</span>{}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">respBody</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">token</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">token</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">token</span>.<span style="color:#a6e22e">Files</span>[<span style="color:#a6e22e">fileName</span>])
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>multipart/form-data; boundary<span style="color:#f92672">=</span>7e0eacfff890be395eba19c70415c908124b503a56f23ebeec0ab3c665ca
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>--619671ea2c0aa47ca6664a7cda422169d73f3b8a089c659203f5413d03de
+</span></span><span style="display:flex;"><span>Content-Disposition: form-data; name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;csvFile&#34;</span>; filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample.csv&#34;</span>
+</span></span><span style="display:flex;"><span>Content-Type: application/octet-stream
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>User,City,Age,Country
+</span></span><span style="display:flex;"><span>Alex Smith,Los Angeles,20,USA
+</span></span><span style="display:flex;"><span>John Doe,New York,30,USA
+</span></span><span style="display:flex;"><span>Jane Smith,Paris,25,France
+</span></span><span style="display:flex;"><span>Bob Johnson,London,40,UK
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>--619671ea2c0aa47ca6664a7cda422169d73f3b8a089c659203f5413d03de--
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Status Code: <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>map<span style="color:#f92672">[</span>sample.csv:data:application/octet-stream;base64,VXNlcixDaXR5LEFnZSxDb3VudHJ5CkFsZXggU21pdGgsTG9zIEFuZ2VsZXMsMjAsVVNBCkpvaG4gRG9lLE5ldyBZb3JrLDMwLFVTQQpKYW5lIFNtaXRoLFBhmlzLDI1LEZyYW5jZQpCb2IgSm9obnNvbixMb25kb24sNDAsVUsK<span style="color:#f92672">]}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data:application/octet-stream;base64,VXNlcixDaXR5LEFnZSxDb3VudHJ5CkFsZXggU21pdGgsTG9zIEFuZ2VsZXMsMjAsVVNBCkpvaG4gRG9lLE5ldyBZb3JrLDMwLFVTQQpKYW5lIFNtaXRoLFBhmlzLDI1LEZyYW5jZQpCb2IgSm9obnNvbixMb25kb24sNDAsVUsK</span></span></code></pre></div></div>
+<p>In the above example, we first read the file <code>sample.csv</code> into the <code>file</code> object with <a href="http://os.Open"  target="_blank"><code>os.Open</code></a> method, this will return a reference to the file object or return an error if any arises while opening the file.</p>
+<p>Then we create an empty buffer <code>bytes.Buffer</code> object which will serve as the body of the post request later as it will get populated with the file contents in the form of <code>multipart/form-data</code>.</p>
+<p>We initialize the <code>Writer</code> object with <code>multipart.NewWriter</code> method which takes in the empty buffer as the parameter, we parse the <code>body</code> as the parameter. The method will return a reference to the <code>multipart.Writer</code> object.</p>
+<p>With the <code>Writer</code> object we access the <code>CreateFormFile</code> method which takes in the <code>fieldName</code> as the name of the field, and the <code>fileName</code> as the name of the file. The method will return either the part or an error. The <code>part</code> in this case, is the reference to the <code>io.Writer</code> object that will be used to write the contents from the uploaded file.</p>
+<p>Then, we can use the <code>io.Copy</code> method to copy the contents from the <code>io.Reader</code> object to the <code>io.Writer</code> object. The source is the <code>io.Reader</code> object and the destination is the <code>io.Writer</code> object. The first parameter is however the destination and the second parameter is the source. In the example, we call <code>io.Copy(part, file)</code> which will copy the contents of <code>file</code> to the <code>part</code> buffer.</p>
+<p>We get the <code>Content-Type</code> by calling the <a href="https://pkg.go.dev/mime/multipart#Writer.FormDataContentType"  target="_blank">Writer.FormDataContentType</a> method. This returns us <code>multipart/form-data; boundary=7e0eacfff890be395eba19c70415c908124b503a56f23ebeec0ab3c665ca</code> which will serve the <code>Content-Type</code> for the Post request.</p>
+<p>We need to make sure we close the <code>Writer</code> object with the <code>Close</code> method.</p>
+<p>We just print the <code>body.String()</code> to get a look at what the actual body looks like, we can see there is a form for the file as a <code>form-data</code> with keys like <code>Content-Type</code>, <code>Content-Disposition</code>, etc. The file has the <code>Content-Type</code> as <code>application/octet-stream</code> and the actual content is rendered in the output.</p>
+<p>The dummy API responds with a 200 status code and also sends the JSON data with the name of the file as the key and the value as the <code>base64</code> encoded value of the file contents. This indicates that we were able to upload the file to the server API using a POST request. Well done!</p>
+<p>I have also included some more examples of POST requests with files <a href="https://github.com/Mr-Destructive/100-days-of-golang/blob/main/web/methods/post/file_2.go"  target="_blank">here</a> which extends the above example by taking the encoded values and decoding to get the actual contents of the file back.</p>
+
+<h2 class="relative group">Best Practices for POST method
+    <div id="best-practices-for-post-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#best-practices-for-post-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Here are some of the best practices for the POST method which are followed to make sure you consume or create the POST request in the most secure, efficient, and graceful way.</p>
+
+<h3 class="relative group">Always Close the Response Body
+    <div id="always-close-the-response-body" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#always-close-the-response-body" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Ensure that you close the response body after reading from it. Use <code>defer response.Body.Close()</code> to automatically close the body when the surrounding function returns. This is crucial for releasing associated resources like network connections or file descriptors. Failure to close the response body can lead to memory leaks, particularly with a large volume of requests. Properly closing the body prevents resource exhaustion and maintains efficient memory usage.</p>
+
+<h3 class="relative group">Client Customization
+    <div id="client-customization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#client-customization" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Utilize the <a href="https://pkg.go.dev/net/http#Client"  target="_blank">Client</a> struct to customize the HTTP client behavior. By using a custom client, you can set timeouts, headers, user agents, and other configurations without modifying the <code>DefaultClient</code> provided by the <code>http</code> package. This approach allows for flexibility and avoids repetitive adjustments to the client configuration for each request.</p>
+
+<h3 class="relative group">Set Content-Type Appropriately
+    <div id="set-content-type-appropriately" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-content-type-appropriately" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Ensure that you set the <code>Content-Type</code> header according to the request payload. Correctly specifying the Content-Type is crucial for the server to interpret the request payload correctly. Failing to set the Content-Type header accurately may result in the server rejecting the request. Always verify and match the Content-Type header with the content being sent in the POST request to ensure smooth communication with the server.</p>
+
+<h2 class="relative group">Reference
+    <div id="reference" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reference" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p><a href="https://www.postman.com/postman/workspace/postman-answers/documentation/13455110-00378d5c-5b08-4813-98da-bc47a2e6021d"  target="_blank">Postman POST API</a> (For POST request with file upload)</p>
+</li>
+<li>
+<p><a href="https://pkg.go.dev/net/http"  target="_blank">Golang net/http Package</a></p>
+</li>
+</ul>
+
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>That&rsquo;s it from this post of the series, a post on the POST method in golang :)</p>
+<p>We have covered topics like creating basic post requests, Marshalling golang types into JSON format, parsing form data, sending a POST request with files, and best practices for the POST method. Hope you found this article helpful. If you have any queries, questions, or feedback, please let me know in the comments or on my social handles.</p>
+<p>Happy Coding :)</p>
+
+          
+          
+          
+        </div>
+        
+        
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2024-03-09-Golang-POST-Method.md"
+          data-oid-likes="likes_posts/2024-03-09-Golang-POST-Method.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/golang-sort-package-basic/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Golang: Sort Package Introduction
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2024-01-15T22:30:00&#43;00:00">January 15, 2024</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/sqlite-inline-custom-separator/">
+              <span class="leading-6">
+                SQLite importing CSV with custom separator&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2024-03-15T22:30:00&#43;00:00">March 15, 2024</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Meet Gor
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,13 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-10-18",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #64",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-64"
-}
-
+---
+type: newsletter
+title: "Techstructive Weekly #64"
+date: 2025-10-18T00:00:00
+slug: "techstructive-weekly-64"
+---
 
 ## Week #64
 

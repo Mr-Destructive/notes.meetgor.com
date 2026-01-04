@@ -1,12 +1,9 @@
-{
-    "author":"meet",
-    "date":"2025-12-13",
-    "post_dir":"newsletter",
-    "status":"published",
-    "title": "Techstructive Weekly #72",
-    "type":"newsletter",
-    "slug": "techstructive-weekly-72"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #72"
+date: 2025-12-13T00:00:00
+slug: "techstructive-weekly-72"
+---
 
 ## Week #72
 
@@ -138,8 +135,8 @@ See you next week!
 
 Happy Coding
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
-[Share Techstructive Weekly](%%share_pub_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

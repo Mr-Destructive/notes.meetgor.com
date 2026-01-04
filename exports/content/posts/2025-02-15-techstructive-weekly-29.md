@@ -53,6 +53,6 @@ That’s it from this 29th edition of my weekly learning, I hope you enjoyed it,
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

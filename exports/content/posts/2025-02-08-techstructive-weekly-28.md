@@ -66,11 +66,11 @@ Double click to interact with video
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-731) and for software development/coding articles, join [daily.dev](http://daily.dev/).
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 That’s it from this 28th edition of my weekly learning, I hope you enjoyed it, and leave comments on what you think about some of my takes or any feedback.
 

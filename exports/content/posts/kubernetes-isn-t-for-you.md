@@ -1,11 +1,9 @@
-{
-  "title": "Kubernetes isn't for you",
-  "post_dir": "thoughts",
-  "type": "thoughts",
-  "status": "published",
-  "slug": "kubernetes-isn-t-for-you",
-  "date": "2025-07-27"
-}
+---
+type: thoughts
+title: "Kubernetes isn't for you"
+date: 2025-07-27T00:00:00
+slug: "kubernetes-isn-t-for-you"
+---
 
 [https://sliplane.io/blog/kubernetes-isnt-for-you](https://sliplane.io/blog/kubernetes-isnt-for-you)
 
@@ -44,4 +42,4 @@ If you want to use it for the purpose of learning it, please do use it.
 
 Kubernetes as usual is a tool like others, you can't use one tool everywhere. Where bash scripts work, they just work, where they don't they fall apart too, kubernetes works like a charm. 
 
-Use your grug brains a little and choose wisely! In the end, who the hell cares if you use kubernetes or bash scripts to scale if your users are happy? 
+Use your grug brains a little and choose wisely! In the end, who the hell cares if you use kubernetes or bash scripts to scale if your users are happy?

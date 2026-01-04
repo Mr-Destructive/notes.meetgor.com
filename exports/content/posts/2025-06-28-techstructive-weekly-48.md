@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-06-28","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #48","type":"newsletter", "slug": "techstructive-weekly-48"}
+---
+type: newsletter
+title: "Techstructive Weekly #48"
+date: 2025-06-28T00:00:00
+slug: "techstructive-weekly-48"
+---
 
 ## Week #48
 
@@ -114,11 +119,11 @@ I have read the book, the war of art, and this quote speaks to me like fire. Som
 
 There are lot of things happening for tooling around these LLMs, no model launches hopefully for a few weeks. But the launches from Google are just not stopping, constant in the news. Anthropic is now trying to expand in different directions after anchoring their flagship model.
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 ---
 

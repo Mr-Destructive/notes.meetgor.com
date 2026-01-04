@@ -1,1 +1,463 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Notes</title><link>/tags/</link><description>Recent content in Tags on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2026 Meet Gor</copyright><lastBuildDate>Sat, 03 Jan 2026 13:50:51 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Api</title><link>/tags/api/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/tags/api/</guid><description/></item><item><title>Snippet</title><link>/tags/snippet/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/tags/snippet/</guid><description/></item><item><title>Test</title><link>/tags/test/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/tags/test/</guid><description/></item><item><title>Updated</title><link>/tags/updated/</link><pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate><guid>/tags/updated/</guid><description/></item><item><title>Go</title><link>/tags/go/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>/tags/go/</guid><description/></item><item><title>Programming</title><link>/tags/programming/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>/tags/programming/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Notes</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Developer-Life</title>
+      <link>/tags/developer-life/</link>
+      <pubDate>Wed, 31 Dec 2025 00:15:00 +0000</pubDate>
+      
+      <guid>/tags/developer-life/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Advent-of-Sql</title>
+      <link>/tags/advent-of-sql/</link>
+      <pubDate>Sun, 28 Dec 2025 20:30:00 +0530</pubDate>
+      
+      <guid>/tags/advent-of-sql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sql</title>
+      <link>/tags/sql/</link>
+      <pubDate>Sun, 28 Dec 2025 20:30:00 +0530</pubDate>
+      
+      <guid>/tags/sql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sqlite</title>
+      <link>/tags/sqlite/</link>
+      <pubDate>Sun, 28 Dec 2025 20:30:00 +0530</pubDate>
+      
+      <guid>/tags/sqlite/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tmux</title>
+      <link>/tags/tmux/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tmux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>/tags/git/</link>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>/tags/go/</link>
+      <pubDate>Sun, 12 Jan 2025 20:30:00 +0000</pubDate>
+      
+      <guid>/tags/go/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Advent-of-Code</title>
+      <link>/tags/advent-of-code/</link>
+      <pubDate>Wed, 11 Dec 2024 23:45:00 +0000</pubDate>
+      
+      <guid>/tags/advent-of-code/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aoc</title>
+      <link>/tags/aoc/</link>
+      <pubDate>Wed, 11 Dec 2024 23:45:00 +0000</pubDate>
+      
+      <guid>/tags/aoc/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aoc-2024</title>
+      <link>/tags/aoc-2024/</link>
+      <pubDate>Wed, 11 Dec 2024 23:45:00 +0000</pubDate>
+      
+      <guid>/tags/aoc-2024/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hows</title>
+      <link>/tags/hows/</link>
+      <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hows/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Wed, 27 Nov 2024 22:15:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Libsql</title>
+      <link>/tags/libsql/</link>
+      <pubDate>Thu, 31 Oct 2024 21:45:00 +0000</pubDate>
+      
+      <guid>/tags/libsql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Turso</title>
+      <link>/tags/turso/</link>
+      <pubDate>Thu, 31 Oct 2024 21:45:00 +0000</pubDate>
+      
+      <guid>/tags/turso/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Sun, 21 Jul 2024 22:45:00 +0000</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Web-Development</title>
+      <link>/tags/web-development/</link>
+      <pubDate>Sun, 21 Jul 2024 22:45:00 +0000</pubDate>
+      
+      <guid>/tags/web-development/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/tags/github/</link>
+      <pubDate>Fri, 22 Mar 2024 22:30:00 +0000</pubDate>
+      
+      <guid>/tags/github/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>/tags/vim/</link>
+      <pubDate>Sat, 06 Jan 2024 20:15:00 +0000</pubDate>
+      
+      <guid>/tags/vim/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Curl</title>
+      <link>/tags/curl/</link>
+      <pubDate>Wed, 15 Nov 2023 17:30:00 +0000</pubDate>
+      
+      <guid>/tags/curl/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>/tags/database/</link>
+      <pubDate>Wed, 15 Nov 2023 17:30:00 +0000</pubDate>
+      
+      <guid>/tags/database/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Typescript</title>
+      <link>/tags/typescript/</link>
+      <pubDate>Sun, 13 Aug 2023 20:00:00 +0000</pubDate>
+      
+      <guid>/tags/typescript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Appwrite</title>
+      <link>/tags/appwrite/</link>
+      <pubDate>Fri, 14 Jul 2023 22:00:00 +0000</pubDate>
+      
+      <guid>/tags/appwrite/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>/tags/react/</link>
+      <pubDate>Fri, 14 Jul 2023 22:00:00 +0000</pubDate>
+      
+      <guid>/tags/react/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Thu, 22 Jun 2023 15:00:00 +0000</pubDate>
+      
+      <guid>/tags/golang/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>/tags/django/</link>
+      <pubDate>Sun, 05 Feb 2023 17:15:00 +0000</pubDate>
+      
+      <guid>/tags/django/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Htmx</title>
+      <link>/tags/htmx/</link>
+      <pubDate>Sun, 05 Feb 2023 17:15:00 +0000</pubDate>
+      
+      <guid>/tags/htmx/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hashnode</title>
+      <link>/tags/hashnode/</link>
+      <pubDate>Sat, 31 Dec 2022 12:15:00 +0000</pubDate>
+      
+      <guid>/tags/hashnode/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Postgres</title>
+      <link>/tags/postgres/</link>
+      <pubDate>Thu, 10 Nov 2022 22:10:00 +0000</pubDate>
+      
+      <guid>/tags/postgres/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>DBMS</title>
+      <link>/tags/dbms/</link>
+      <pubDate>Sun, 07 Aug 2022 20:30:00 +0000</pubDate>
+      
+      <guid>/tags/dbms/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Railway</title>
+      <link>/tags/railway/</link>
+      <pubDate>Sat, 16 Jul 2022 16:15:00 +0000</pubDate>
+      
+      <guid>/tags/railway/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Lua</title>
+      <link>/tags/lua/</link>
+      <pubDate>Mon, 11 Jul 2022 22:30:00 +0000</pubDate>
+      
+      <guid>/tags/lua/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>/tags/api/</link>
+      <pubDate>Sat, 25 Jun 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/tags/api/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Tue, 24 May 2022 22:30:00 +0000</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Web-Scrapping</title>
+      <link>/tags/web-scrapping/</link>
+      <pubDate>Fri, 25 Feb 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/tags/web-scrapping/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>/tags/bash/</link>
+      <pubDate>Fri, 05 Nov 2021 20:50:00 +0530</pubDate>
+      
+      <guid>/tags/bash/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Fri, 05 Nov 2021 20:50:00 +0530</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>/tags/networking/</link>
+      <pubDate>Fri, 05 Nov 2021 20:50:00 +0530</pubDate>
+      
+      <guid>/tags/networking/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hacktoberfest</title>
+      <link>/tags/hacktoberfest/</link>
+      <pubDate>Thu, 28 Oct 2021 20:10:00 +0530</pubDate>
+      
+      <guid>/tags/hacktoberfest/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Open-Source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Thu, 28 Oct 2021 20:10:00 +0530</pubDate>
+      
+      <guid>/tags/open-source/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>/tags/flask/</link>
+      <pubDate>Sun, 24 Oct 2021 19:00:00 +0530</pubDate>
+      
+      <guid>/tags/flask/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Machine-Learning</title>
+      <link>/tags/machine-learning/</link>
+      <pubDate>Wed, 29 Sep 2021 15:30:07 +0530</pubDate>
+      
+      <guid>/tags/machine-learning/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 23 Sep 2021 19:33:52 +0530</pubDate>
+      
+      <guid>/tags/c&#43;&#43;/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Object-Oriented-Programming</title>
+      <link>/tags/object-oriented-programming/</link>
+      <pubDate>Thu, 23 Sep 2021 19:33:52 +0530</pubDate>
+      
+      <guid>/tags/object-oriented-programming/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Auth0</title>
+      <link>/tags/auth0/</link>
+      <pubDate>Fri, 27 Aug 2021 23:45:00 +0530</pubDate>
+      
+      <guid>/tags/auth0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Sun, 25 Jul 2021 16:44:59 +0000</pubDate>
+      
+      <guid>/tags/javascript/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

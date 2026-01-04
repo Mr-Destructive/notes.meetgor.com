@@ -1,18 +1,13 @@
-{
-  "type": "posts",
-  "title": "Golang Web: URL Parsing",
-  "description": "Understanding the fundamentals of web development with URL parsing in Golang. Intro to the net package in golang.",
-  "date": "2023-09-05 21:30:00",
-  "status": "published",
-  "slug": "golang-web-url-parsing",
-  "tags": [
-    "go"
-  ],
-  "series": [
-    "100-days-of-golang"
-  ],
-  "image_url": "https://meetgor-cdn.pages.dev/100-days-of-golang/golang-032-url-parsing.png"
-}
+---
+type: posts
+title: "Golang Web: URL Parsing"
+date: 2023-09-05T21:30:00
+slug: "golang-web-url-parsing"
+series: ["100-days-of-golang"]
+tags:
+  - go
+image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-032-url-parsing.png
+---
 
 ## Introduction
 

@@ -1,21 +1,16 @@
-{
-  "type": "posts",
-  "title": "Django Basics: Database Configurations",
-  "subtitle": "Understanding and configuring Database for the project and migrating to the database",
-  "date": "2022-01-21T16:40:34",
-  "status": "published",
-  "tags": [
-    "python",
-    "django",
-    "web-development"
-  ],
-  "slug": "django-database-conf",
-  "image_url": "https://res.cloudinary.com/dgpxbrwoz/image/upload/v1642339267/blogmedia/djbasics-8-db_pvulqh.png",
-  "series": [
-    "Django-Basics",
-    "Django-Series"
-  ]
-}
+---
+type: posts
+title: "Django Basics: Database Configurations"
+subtitle: "Understanding and configuring Database for the project and migrating to the database"
+date: 2022-01-21T16:40:34
+slug: "django-database-conf"
+series: ["Django-Basics"]
+tags:
+  - python
+  - django
+  - web-development
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1642339267/blogmedia/djbasics-8-db_pvulqh.png
+---
 
 ## Introduction
 

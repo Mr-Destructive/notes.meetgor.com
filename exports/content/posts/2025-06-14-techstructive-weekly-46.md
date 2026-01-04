@@ -1,4 +1,9 @@
-{"author":"meet","date":"2025-06-14","post_dir":"newsletter","status":"published","title": "Techstructive Weekly #46","type":"newsletter", "slug": "techstructive-weekly-46"}
+---
+type: newsletter
+title: "Techstructive Weekly #46"
+date: 2025-06-14T00:00:00
+slug: "techstructive-weekly-46"
+---
 
 ## Week #46
 
@@ -136,7 +141,7 @@ Phew, what a week, nothing much in releases, but the cloudflare x google cloud o
 
 For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-750) (#750 edition), and for software development/coding articles, join [daily.dev](http://daily.dev/).
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 ---
 

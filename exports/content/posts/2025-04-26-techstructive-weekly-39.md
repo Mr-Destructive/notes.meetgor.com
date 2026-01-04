@@ -1,11 +1,9 @@
-{
-  "title": "Techstructive Weekly #39",
-  "post_dir": "newsletter",
-  "type": "newsletter",
-  "status": "published",
-  "slug": "techstructive-weekly-39",
-  "date": "2025-04-26"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #39"
+date: 2025-04-26T00:00:00
+slug: "techstructive-weekly-39"
+---
 
 ## Week #39
 
@@ -86,7 +84,7 @@ For more interesting articles, check out the [hackernewsletter](https://buttondo
 
 That’s it from the #39th week of this newsletter. It was a slow-down week and finally will be streaming over the weekend for interesting stuff. See you next time.
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading.
 
@@ -94,6 +92,6 @@ Happy Vibe Coding :)
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

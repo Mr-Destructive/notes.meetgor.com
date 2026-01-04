@@ -1,12 +1,513 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on Notes</title><link>/tags/go/</link><description>Recent content in Go on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2026 Meet Gor</copyright><lastBuildDate>Sat, 03 Jan 2026 19:09:34 +0530</lastBuildDate><atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started with Go</title><link>/posts/getting-started-go/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/getting-started-go/</guid><description>&lt;p&gt;Go is a powerful language for building web applications.&lt;/p&gt;
-
-&lt;h2 class="relative group"&gt;Installation
- &lt;div id="installation" class="anchor"&gt;&lt;/div&gt;
- 
- &lt;span
- class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
- &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#installation" aria-label="Anchor"&gt;#&lt;/a&gt;
- &lt;/span&gt;
- 
-&lt;/h2&gt;
-&lt;p&gt;Download from golang.org&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Notes</title>
+    <link>/tags/go/</link>
+    <description>Recent content in Go on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Golang Web: DELETE Method</title>
+      <link>/posts/golang-web-delete-method/</link>
+      <pubDate>Sun, 12 Jan 2025 20:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-web-delete-method/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We have explored GET, POST, PUT, and PATCH methods in our previous entries for this series. It is the final entry for all the HTTP methods which is going to be the &lt;code&gt;DELETE&lt;/code&gt; method. In this entry of the series, we will take a view on how to construct and request an HTTP DELETE Method to an API Endpoint.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Web: PATCH Method</title>
+      <link>/posts/golang-web-patch-method/</link>
+      <pubDate>Sat, 11 Jan 2025 20:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-web-patch-method/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In previous sections of this series, we&amp;rsquo;ve covered the GET, POST, and PUT methods. Now, we will explore the PATCH method, which differs from the others in several key ways. The PATCH method is somewhat more flexible and depends on how the server or API you&amp;rsquo;re working with is designed.&lt;/p&gt;&#xA;&lt;p&gt;In this section, we&amp;rsquo;ll focus on understanding what the PATCH method is and how to use it. While we will dive deeper into building and structuring a full CRUD API later in the series, the focus here will be on the what and why of the PATCH method, not the how.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Advent of Code Day 5 in Golang: Ordering Pages</title>
+      <link>/posts/aoc-2024-day-5/</link>
+      <pubDate>Wed, 11 Dec 2024 23:45:00 +0000</pubDate>
+      
+      <guid>/posts/aoc-2024-day-5/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It is day 5 of the advent of code, and today we have an interesting problem of ordering pages. Let’s dive into the problem and how I approached it. It was a pretty simple problem if thought it peacefully, otherwise, it would get into a map, list, and indices mess.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Input&#xA;    &lt;div id=&#34;input&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#input&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the input for day 5, we have two sections, The first defines the rules for ordering the pages, specifically which page should come before which and the second contains the actual order of pages.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Advent of Code Day 4 in Golang: Finding XMAS and X-MAS</title>
+      <link>/posts/aoc-2024-day-4/</link>
+      <pubDate>Mon, 09 Dec 2024 20:45:00 +0000</pubDate>
+      
+      <guid>/posts/aoc-2024-day-4/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Moving on to day 4, we have a grid problem in front of us, we are given some numbers in the form of a grid, i.e. some rows and columns with some upper case letters. What we need to do is to find is the word &lt;code&gt;XMAS&lt;/code&gt; in any direction (up, left, down, right, diagonals), and in the second part we need to find the word &lt;code&gt;MAS&lt;/code&gt; forming an X.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Advent of Code Day 3 in Golang: Do Or Don’t Regex</title>
+      <link>/posts/aoc-2024-day-3/</link>
+      <pubDate>Sat, 07 Dec 2024 20:45:00 +0000</pubDate>
+      
+      <guid>/posts/aoc-2024-day-3/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Well, it is day 3 of the advent of code 2024, and I have been doing it on live streams. I am behind two days but working through them one by one. So far, I have learned a lot of things in Go. Let’s dive in for the day 3.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Part 1&#xA;    &lt;div id=&#34;part-1&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#part-1&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Part one to any AOC problem seems straightforward, but as soon as part two is revealed, the real implementation starts to break the sweat (if you weren’t optimistic or thoughtful)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Advent of Code Day 2 in Golang: Slicing and Dicing Reports</title>
+      <link>/posts/aoc-2024-day-2/</link>
+      <pubDate>Mon, 02 Dec 2024 20:45:00 +0000</pubDate>
+      
+      <guid>/posts/aoc-2024-day-2/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;So, this is day 2 of the Advent of Code 2024 in Golang, and we will be exploring my approach and solution for the same. The problem was not as easy but was pretty simple after implemented and found correct.&lt;/p&gt;&#xA;&lt;p&gt;You can check out my solutions &lt;a href=&#34;https://github.com/Mr-Destructive/advent_of_code/blob/main/2024/src/day02/main.go&#34;  target=&#34;_blank&#34;&gt;here on GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Part 1&#xA;    &lt;div id=&#34;part-1&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#part-1&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We have been given some lines called reports, and each report has a bunch of levels. and the requirement of the report is that it needs to be either strictly increasing or decreasing by a factor of at least 1 or at most 3.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Advent of Code, 2024, Day 1 in Golang: Historian Hysteria</title>
+      <link>/posts/aoc-2024-day-1/</link>
+      <pubDate>Sun, 01 Dec 2024 20:45:00 +0000</pubDate>
+      
+      <guid>/posts/aoc-2024-day-1/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Hello everyone, it’s that time of the year, Advent of Code, I will be solving this year as well with Golang. In previous years I have been doing Advent of Code but was not able to keep up with the pace and left it midway (not even halfway). This year however I am determined and want to solve all the problems as much as I can.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Building Golang from Source v1.23 and Above</title>
+      <link>/posts/golang-build-from-source-1-24-above/</link>
+      <pubDate>Tue, 19 Nov 2024 23:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-build-from-source-1-24-above/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Are you excited to try out the latest golang version, or test out your changes (cooking some serious stuff?), or install some random golang version? Then let’s explore one of the easiest ways to install golang on your system (Linux).&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Building Go from source 1.23+&#xA;    &lt;div id=&#34;building-go-from-source-123&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#building-go-from-source-123&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The process for installing and building golang from source is quite simple.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Use Embedded Replicas of LibSQL Database hosted on Turso with a Golang Application</title>
+      <link>/posts/turso-libsql-embedded-replicas-golang/</link>
+      <pubDate>Thu, 31 Oct 2024 21:45:00 +0000</pubDate>
+      
+      <guid>/posts/turso-libsql-embedded-replicas-golang/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the Let&amp;rsquo;s Go with Turso series. In this series, we will learn how to interact with LibSQL databases with Golang. In the past article of the series, we explored how to connect remote/local LibSQL database in golang.&lt;/p&gt;&#xA;&lt;p&gt;With this section, we will specifally dive into understanding how to create, connect, and query local embedded replicas of LibSQL database hosted on Turso with a Golang application.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Connect LibSQL Database hosted on Turso in a Golang Application</title>
+      <link>/posts/turso-libsql-db-golang/</link>
+      <pubDate>Mon, 30 Sep 2024 23:45:00 +0000</pubDate>
+      
+      <guid>/posts/turso-libsql-db-golang/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the new series in Golang, Let&amp;rsquo;s Go with Turso. In this series, we will learn how to interact with LibSQL databases with Golang. We will connect with a remote/local LibSQL database, create Embedded replicas, set up a local LibSQL database, and so much more as we explore and find out more features of LibSQL.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Safely using Maps in Golang: Differences in declaration and initialization</title>
+      <link>/posts/golang-safely-using-maps/</link>
+      <pubDate>Sat, 31 Aug 2024 18:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-safely-using-maps/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week, I was working on one of the API wrapper packages for golang, and that dealt with sending post requests with URL encoded values, setting cookies, and all the fun stuff. However, while I was constructing the body, I was using &lt;a href=&#34;https://pkg.go.dev/net/url#Values&#34;  target=&#34;_blank&#34;&gt;url.Value&lt;/a&gt; type to construct the body, and use that to add and set key-value pairs. However, I was getting a wired &lt;code&gt;nil&lt;/code&gt; pointer reference error in some of the parts, I thought it was because of some of the variables I set manually. However, by debugging closer, I found out a common pitfall or bad practice of just declaring a type but initializing it and that causing &lt;code&gt;nil&lt;/code&gt; reference errors.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Web: PUT Method</title>
+      <link>/posts/golang-web-put-method/</link>
+      <pubDate>Sat, 15 Jun 2024 18:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-web-put-method/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this section of the series, we will be exploring how to send a &lt;code&gt;PUT&lt;/code&gt; HTTP request in golang. We will understand how to send a basic PUT request, create an HTTP request, update a resource on a server, parsing the content from struct to json, headers, etc in the following section of this post.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What is a PUT Method&#xA;    &lt;div id=&#34;what-is-a-put-method&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-is-a-put-method&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A PUT method is a type of request that is used to update or modify an entire resource on a server/database.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Web: POST Method</title>
+      <link>/posts/golang-web-post-method/</link>
+      <pubDate>Sun, 10 Mar 2024 20:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-web-post-method/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this section of the series, we will be exploring how to send a &lt;code&gt;POST&lt;/code&gt; HTTP request in golang. We will understand how to send a basic POST request, create an HTTP request, and parse json, structs into the request body, add headers, etc in the following sections of this post. We will understand how to marshal the golang struct/types into JSON format, send files in the request, and handle form data with examples of each in this article. Let&amp;rsquo;s answer a few questions first.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Sort Package Introduction</title>
+      <link>/posts/golang-sort-package-basic/</link>
+      <pubDate>Mon, 15 Jan 2024 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-sort-package-basic/</guid>
+      <description>&lt;p&gt;I have been learning Golang for around 2 years now, and I have never paid attention to the sort package, can you believe that! Where was this package hiding?&lt;/p&gt;&#xA;&lt;p&gt;The &lt;code&gt;sort&lt;/code&gt; package provides convenient methods for sorting slices and user-defined collections in Go. Here&amp;rsquo;s a quick overview of what it can do:&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Sorting Slices&#xA;    &lt;div id=&#34;sorting-slices&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sorting-slices&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;To sort a slice of builtin types like ints, strings, etc, you can simply call &lt;code&gt;sort.Slice()&lt;/code&gt;:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Test Output JSON</title>
+      <link>/posts/golang-test-output-json/</link>
+      <pubDate>Mon, 01 Jan 2024 21:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-test-output-json/</guid>
+      <description>&lt;p&gt;I just discovered that we can generate a JSON output of test results in Golang. I found this &lt;a href=&#34;https://youtu.be/cf72gMBrsI0?t=80&#34;  target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s take a fresh simple example.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jsontest&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jsontest&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;testing&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestHello&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;testing&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;T&lt;/span&gt;) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;want&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Logf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;got: %q&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;want&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Errorf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;got: %q, want: %q&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;want&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Here, we have a function &lt;code&gt;hello&lt;/code&gt; that simply returns a string, the &lt;code&gt;TestHello&lt;/code&gt; function in the &lt;code&gt;jsontest&lt;/code&gt; package will check if the returned string is correctly returned or not.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Web: GET Method</title>
+      <link>/posts/golang-web-get-method/</link>
+      <pubDate>Sat, 28 Oct 2023 20:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-web-get-method/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this section of the series, we will be exploring how to send a &lt;code&gt;GET&lt;/code&gt; HTTP request in golang. We will be understanding how to send a basic GET request, create an HTTP request and customize the client, add headers, read the response body, etc in the following sections of this post.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What is a GET method?&#xA;    &lt;div id=&#34;what-is-a-get-method&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-is-a-get-method&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP#Request_methods&#34;  target=&#34;_blank&#34;&gt;GET&lt;/a&gt; method in the context of an HTTP request is an action that is used to obtain data/resources. The &lt;code&gt;GET&lt;/code&gt; method is used in a web application to get a resource like an HTML page, image, video, media, etc.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Web: URL Parsing</title>
+      <link>/posts/golang-web-url-parsing/</link>
+      <pubDate>Tue, 05 Sep 2023 21:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-web-url-parsing/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We have done around 32 posts on the fundamental concepts in golang, With that basic foundation, I&amp;rsquo;d like to start with the new section of this series which will be a major one as &lt;code&gt;web-development&lt;/code&gt;. This section will have nearly 40-50 posts, this will cover the fundamental concepts for web development like APIs, Database integrations, Authentication and Authorizations, Web applications, static sites, etc.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Channels</title>
+      <link>/posts/golang-channels/</link>
+      <pubDate>Mon, 28 Aug 2023 21:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-channels/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this part of the series, we will be continuing with the concurrency features of golang with channels. In the last post, we covered the fundamentals of go routines and wait groups. By leveraging those understood concepts, we will explore channels to communicate the data between various go routines.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What are Channels&#xA;    &lt;div id=&#34;what-are-channels&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-are-channels&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A golang Channel is like a pipe that lets goroutines communicate. It lets you pass values from one goroutine to another. Channels are typed i.e. you declare them with &lt;code&gt;chan&lt;/code&gt; keyword followed by the type to be sent and received (e.g. &lt;code&gt;chan int&lt;/code&gt;). The &lt;code&gt;chan&lt;/code&gt; type specifies the type of values that will be passed through the channel. We will explore the detailed technicalities soon. Right now, we need to just focus on what problem is channels solving.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Go Routines and WaitGroups</title>
+      <link>/posts/golang-go-routines/</link>
+      <pubDate>Sat, 29 Jul 2023 15:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-go-routines/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;One of the key features that set Go apart from many other languages is its native support for Goroutines - lightweight concurrent functions that can run concurrently and efficiently manage concurrency tasks. Goroutines are an essential aspect of Go&amp;rsquo;s concurrency model, enabling developers to build highly concurrent and performant applications effortlessly.&lt;/p&gt;&#xA;&lt;p&gt;In this blog post, we will dive into the world of Goroutines and explore how they work, why they are essential for concurrent programming in Go, and how they can greatly improve the responsiveness and efficiency of your applications. This post will cover go routines and a primer on wait groups, in the next article we will be looking deeply into channels where all these three things can be demonstrated and understood in a better and more useful way.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Generics</title>
+      <link>/posts/golang-generics/</link>
+      <pubDate>Sun, 23 Jul 2023 13:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-generics/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 29th post of the series, we will be looking into generics in Golang. Generics were added in Golang version 1.18, so they are quite new in the world of Golang but the concept is quite old in other programming languages.&lt;/p&gt;&#xA;&lt;p&gt;Generics provide a powerful toolset for writing more expressive and concise code that can handle a wide range of data types. With generics, we can write reusable algorithms, data structures, and functions that work seamlessly with various types, without sacrificing type safety.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Date and Time</title>
+      <link>/posts/golang-date-time/</link>
+      <pubDate>Mon, 19 Jun 2023 18:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-date-time/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 28th post of the series, I will be exploring date and time handling in Golang. We will be covering the following topics:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Date and Time parsing&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Time Duration&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Time and Date Arithmetic&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Timezones&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sleep and Tickers&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This will cover most of the methods and properties used extensively in general use cases related to time and date operations.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Random Numbers</title>
+      <link>/posts/golang-random-numbers/</link>
+      <pubDate>Sun, 14 May 2023 14:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-random-numbers/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 27th post of the series, we will be looking into random number generation in golang. We will be exploring how to create a random number, generate random numbers within a range, shuffle slices/arrays, and generate random strings, float, and bytes.&lt;/p&gt;&#xA;&lt;p&gt;There are two types of random number generation processes in software pseudo-random numbers and cryptographically secure pseudo-random number generation.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Regex</title>
+      <link>/posts/golang-regex/</link>
+      <pubDate>Wed, 22 Mar 2023 12:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-regex/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this 26th part of the series, we will be covering the basics of using regular expressions in golang. This article will cover the basic operations like matching, finding, replacing, and sub-matches in a regular expression pattern from string source or file content. This will have examples for each of the concepts and similar variants will follow the same ideology in self-exploring the syntax.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Command Line Arguments</title>
+      <link>/posts/golang-command-line-args/</link>
+      <pubDate>Sat, 07 Jan 2023 21:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-command-line-args/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 25th post of the series, we will be taking a look into parsing of command line arguments in golang. We will be exploring how to do the basics of parsing and using the positional parameters or arguments from the command line in the program. By using standard library packages like &lt;code&gt;os&lt;/code&gt; and &lt;code&gt;flag&lt;/code&gt;, we can make powerful yet easy-to-build CLI apps and programs.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: File Write</title>
+      <link>/posts/golang-file-write/</link>
+      <pubDate>Sun, 18 Dec 2022 15:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-file-write/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 24th post of the series, we will be taking a look at how we can perform write operations to a file using golang. We will be using the &lt;code&gt;os&lt;/code&gt; package in most operations along with &lt;code&gt;bufio&lt;/code&gt; text manipulations. We will be performing write operations like appending, deleting, and replacing a file using golang. We will be heavily leveraging standard library packages like &lt;code&gt;os&lt;/code&gt;, &lt;code&gt;bufio&lt;/code&gt;, &lt;code&gt;bytes&lt;/code&gt; and &lt;code&gt;fmt&lt;/code&gt;. We will also be looking into overwriting and string formatting to a file.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Read a Rss Feed with a URL in Golang</title>
+      <link>/posts/golang-read-rss-feed/</link>
+      <pubDate>Fri, 11 Nov 2022 22:45:00 +0000</pubDate>
+      
+      <guid>/posts/golang-read-rss-feed/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Reding Rss Feed&#xA;    &lt;div id=&#34;reding-rss-feed&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#reding-rss-feed&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We can use golang&amp;rsquo;s &lt;a href=&#34;https://pkg.go.dev/encoding/xml&#34;  target=&#34;_blank&#34;&gt;encoding/xml&lt;/a&gt; package to read a Rss feed. Though we have to be speicific of what type of structure the Rss feed has, so it is not dynamic but it works really well with structs. I have covered a few nuances of reading XML file in the &lt;a href=&#34;https://www.meetgor.com/golang-config-file-read/#reading-xml-file&#34;  target=&#34;_blank&#34;&gt;config file reading&lt;/a&gt; post of the 100 days of golang series.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: JSON YAML TOML (config) File Reading.</title>
+      <link>/posts/golang-config-file-read/</link>
+      <pubDate>Tue, 01 Nov 2022 23:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-config-file-read/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Reading specific file types (JSON, YAML, TOML)&#xA;    &lt;div id=&#34;reading-specific-file-types-json-yaml-toml&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#reading-specific-file-types-json-yaml-toml&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the previous post, we have seen how to read files in golang, in this extended post of that part, we will look into reading some specific files used for configuration and storing data like JSON, YAML, TOML, CSV, etc.&lt;/p&gt;&#xA;&lt;p&gt;We will see how to read files and get individual pieces in the files. We&amp;rsquo;ll use packages like &lt;code&gt;os&lt;/code&gt;, &lt;code&gt;ioutil&lt;/code&gt; and &lt;code&gt;encoding&lt;/code&gt; to perform reading operations on file and file objects.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: File Reading</title>
+      <link>/posts/golang-file-read/</link>
+      <pubDate>Sun, 23 Oct 2022 23:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-file-read/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 22nd post of the series, we will be looking into the file-handling process in golang, in the next few posts, we will cover the operations on file using golang. In this first entry of the file handling sub-series, we will understand the &lt;code&gt;READ&lt;/code&gt; operation with files. We will see different ways to read a file, it can be word by word, line by line, or even custom chink by chunk.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Paths</title>
+      <link>/posts/golang-paths/</link>
+      <pubDate>Sun, 02 Oct 2022 12:45:00 +0000</pubDate>
+      
+      <guid>/posts/golang-paths/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 21st post of the series, we will be exploring the file paths in golang, we will be exploring how we can deal with paths. By using packages like &lt;code&gt;os&lt;/code&gt;, &lt;code&gt;path&lt;/code&gt;, &lt;code&gt;io&lt;/code&gt;, we can work with file systems and operating system-specific details. In this section, we will see how to resolve paths, details from paths, extract relative or absolute paths, iterate over file systems, etc.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Error Handling</title>
+      <link>/posts/golang-error-handling/</link>
+      <pubDate>Sat, 17 Sep 2022 20:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-error-handling/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Error handling is quite an important feature of any programming language to improve the quality and transparency between the user and the application. By raising appropriate error messages, the user can get a clear idea about the things happening in the interface as well as the application can handle the errors with appropriate actions.&lt;/p&gt;&#xA;&lt;p&gt;In the 20th post of the series, we will be exploring the concept of error handling in golang. From this article, we will be able to learn the fundamentals of error or exception handling in golang, create custom error classes, raise and ignore error messages, and exit or redirect the flow of state of the application when an error is raised.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Interfaces</title>
+      <link>/posts/golang-interfaces/</link>
+      <pubDate>Sat, 10 Sep 2022 17:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-interfaces/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 19th post of the series, we will be taking a look into interfaces in golang. Interfaces allow us to create function signatures common to different structs or types. So, we can allow multiple structs to have a common interface(method) that can have different implementations.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What are Interfaces&#xA;    &lt;div id=&#34;what-are-interfaces&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-are-interfaces&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Interface as the name suggests is a way to create methods that are common to different structures or types but can have different implementations. It&amp;rsquo;s an interface to define the method or function signatures but not the implementation. Let&amp;rsquo;s take an example of &lt;code&gt;Laptop&lt;/code&gt; and &lt;code&gt;Phone&lt;/code&gt; having the functionality of wifi. We can connect to wifi more or the less in a similar way on both devices. The implementation behind the functionality might be different but they share the same operation. The WiFi can act as an interface for both devices to connect to the internet.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Closures</title>
+      <link>/posts/golang-closures/</link>
+      <pubDate>Thu, 11 Aug 2022 18:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-closures/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the previous part of the series, we covered &lt;a href=&#34;https://meetgor.com/golang-anonymous-functions/&#34;  target=&#34;_blank&#34;&gt;anonymous functions&lt;/a&gt; and in this section, we will look into &lt;code&gt;closures&lt;/code&gt; which are quite a cool concept for various things. Closures are basically a function that returns a function instead of a value, so basically we will leverage anonymous functions for creating closures.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Simple Closures&#xA;    &lt;div id=&#34;simple-closures&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#simple-closures&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A simple closure can be constructed for understanding how we can use closures in golang. We will return a function from a function, that is a simple closure. So, in the below code example, we have created a function &lt;code&gt;gophy()&lt;/code&gt; which takes no parameters but returns a function that returns a &lt;code&gt;string&lt;/code&gt;.  The function simply returns an anonymous function that returns a string.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Anonymous Functions</title>
+      <link>/posts/golang-anonymous-functions/</link>
+      <pubDate>Sun, 24 Jul 2022 18:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-anonymous-functions/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We have looked at the defer keyword in golang in the &lt;a href=&#34;https://www.meetgor.com/golang-defer/&#34;  target=&#34;_blank&#34;&gt;previous&lt;/a&gt; part of the series, in this section, we will understand how we can use anonymous functions in golang. We will explore how to declare and use anonymous functions with a few examples.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What are Anonymous Functions&#xA;    &lt;div id=&#34;what-are-anonymous-functions&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-are-anonymous-functions&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Anonymous functions are quite simple to understand, we don&amp;rsquo;t define a function, we declare it and call it instantly. An anonymous function doesn&amp;rsquo;t have a name so hence it is called an anonymous function. As a normal function it can take in parameters and return values. With anonymous functions, we can bind the operations to a variable or a constant as a literal(value). If an anonymous function takes in a parameter, it needs to be parsed immediately after the end of the function body. We will see how we define the syntax and specifications of the anonymous functions in golang.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Defer</title>
+      <link>/posts/golang-defer/</link>
+      <pubDate>Wed, 29 Jun 2022 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-defer/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this part of the series, we will be taking a look at the &lt;code&gt;defer&lt;/code&gt; keyword in golang. The defer keyword is used for delaying the function call in a particular block of program(function or a loop).&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Defer Keyword&#xA;    &lt;div id=&#34;defer-keyword&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#defer-keyword&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;defer&lt;/code&gt; keyword is an interesting keyword in golang, it basically holds up the execution of the statement until all the statements around the local scope has been executed. It is basically like a stack holding the execution of statements. You can have multiple defer keywords in the single code block(function or a loop), those will be called by the principle of &lt;strong&gt;first in last out&lt;/strong&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: String Manipulation</title>
+      <link>/posts/golang-strings/</link>
+      <pubDate>Tue, 28 Jun 2022 22:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-strings/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the 15th post of the Series, we will be looking into the details of the String manipulation and performing types of operations in Golang. We will explore string manipulation, concatenation, helper functions, etc. which will help in working with strings in Golang.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;String Concatenation&#xA;    &lt;div id=&#34;string-concatenation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#string-concatenation&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;String Concatenation refers to the combining and formatting of strings in Golang. We can combine multiple strings and formating the way we display the strings in Golang. We have a few ways and functions to concatenate strings in Golang.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Mutable and Immutable Data Types</title>
+      <link>/posts/golang-mutable-immutable/</link>
+      <pubDate>Tue, 21 Jun 2022 21:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-mutable-immutable/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this 14th Post of the 100 days of GOlang, we will be understanding about the mutable and immutable data types in Golang. Firstly, we will understand the concept of mutability and understand the differences in mutable and immutable data types, further we will explore which data types in Golang are Mutable and Immutable.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Mutable Data Type&#xA;    &lt;div id=&#34;mutable-data-type&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#mutable-data-type&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Mutable data type is a data type which can be modified without reallocating any chunk of the memory assigned at the time of initialization. In simple words, a variable is mutable if its value can be altered without reallocating itself to a new memory space.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Operators</title>
+      <link>/posts/golang-operators/</link>
+      <pubDate>Sat, 07 May 2022 20:33:38 +0000</pubDate>
+      
+      <guid>/posts/golang-operators/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this 13th part of the series, we will be exploring the fundamentals of operators in Golang. We will be exploring the basics of operators and the various types like Arithmetic, Bitwise, Comparison, Assignment operators in Golang.&lt;/p&gt;&#xA;&lt;p&gt;Operators are quite fundamentals in any programming language. Operators are basically expressions or a set of character(s) to perform certain fundamental tasks. They allow us to perform certain trivial operations with a simple expression or character. There are quite a few operators in Golang to perform various operations.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Math Package</title>
+      <link>/posts/golang-math/</link>
+      <pubDate>Mon, 25 Apr 2022 20:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-math/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Moving on in the 100 days of golang series, we can take a look into the math package in golang&amp;rsquo;s standard library. In programming, math is quite critical aspect, we need to perform certain mathematical operations quite regularly so golang&amp;rsquo;s standard library has a package for serving some quite commonly used math functions and procedures. We&amp;rsquo;ll take a look at some of the basic and common functions which are available in the math package.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Packages</title>
+      <link>/posts/golang-packages/</link>
+      <pubDate>Fri, 22 Apr 2022 22:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-packages/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this 11th part of the series, we will be covering packages in golang. Package is a cool way to organize code in large projects. We can create a separate file which can include certain helper functions or variables from other files or scripts. There are couple of types of packages like packages from the standard library, open sourced community packages and custom packages that you can build of your own. In this particular section, we will be covering the fundamentals of packages and exploring the standard library in golang.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Pointers</title>
+      <link>/posts/golang-pointers/</link>
+      <pubDate>Tue, 19 Apr 2022 23:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-pointers/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the tenth part of the series, we will be looking into an interesting concept in programming i.e. Pointer. It&amp;rsquo;s a simple thing but a really powerful concept. Using pointers we can do several things very easily rather than writing a lot of code for a simple thing. We will be looking into basic concepts like declaration, referencing, de-referencing, and some examples on passing by reference, along with a pointer to struct instances.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Structs</title>
+      <link>/posts/golang-structs/</link>
+      <pubDate>Thu, 14 Apr 2022 22:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-structs/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Moving on to the 9th part of the series, we will be understanding structs in golang. Structs are an important aspect of programming in Golang, they provide a way to define custom types and add functionality to them. We will be understanding the basics of operating on structs like declaration, initialization and adding functional logic into those structs.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Functions</title>
+      <link>/posts/golang-functions/</link>
+      <pubDate>Wed, 13 Apr 2022 09:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-functions/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the eighth part of the series, we will be exploring functions in golang. We will be diving into some basics of functions in golang like declaration, definition and calling. We won&amp;rsquo;t be exploring all the topics of functions as it is quite a large topic to cover in one shot. So, building from the base, we will be starting from the basic declaration to simple return statements.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Maps</title>
+      <link>/posts/golang-maps/</link>
+      <pubDate>Tue, 12 Apr 2022 20:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-maps/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the seventh part of the series, we will be covering Maps. We have covered some basic data structures like arrays and slices, and now we can move into maps or hash tables. Maps allow us to store key-value pairs of a particular type. In this part of the series, we will be covering the basics of Maps in Golang like declaration, iteration, and Creating, updating, and deleting keys from the map.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Slices</title>
+      <link>/posts/golang-slices/</link>
+      <pubDate>Thu, 07 Apr 2022 09:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-slices/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the sixth part of the series, we will be covering slices. Slices are almost like arrays but have a lot of advantages over them, including flexibility and control over them. We can adjust the size and capacity of the data which we will store at a place using slices. We will be covering basic declaration, initialization, capacity in slices, iteration, and accessing the elements of the slices.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Arrays</title>
+      <link>/posts/golang-arrays/</link>
+      <pubDate>Wed, 06 Apr 2022 09:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-arrays/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this fifth section of Golang, we will be understanding the basics of arrays. We will be covering some basic operations on arrays like declaration, initialization, modifications, and iterating over an array.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Declaring Arrays&#xA;    &lt;div id=&#34;declaring-arrays&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#declaring-arrays&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Arrays are type of data structure that allow us to store multiple items at continuous memory locations of the same type. In golang, we can create arrays similar to any variable but by adding a few bits and pieces like the &lt;code&gt;[]&lt;/code&gt; square braces, length of the array, values, etc. In golang, we cannot resize the length once it is initialized.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Input</title>
+      <link>/posts/golang-input/</link>
+      <pubDate>Tue, 05 Apr 2022 09:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-input/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In this fourth section of Golang, we will be understanding the basics of user input. In golang, we can get user input with several functions most of which are similar to the &lt;code&gt;C&lt;/code&gt; programming language like &lt;code&gt;scanf&lt;/code&gt;. This type of input is quite powerful and gives more control on the input to be received.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Scan Function&#xA;    &lt;div id=&#34;scan-function&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#scan-function&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://pkg.go.dev/fmt#Scan&#34;  target=&#34;_blank&#34;&gt;Scan&lt;/a&gt; function helps in getting a value with space as delimiter i.e. The input is stored before a space is encountered. This means the input is only limited to adding a space or a new line. We can use the function by passing the reference to the variable we are going to store the input value. So, we can have a basic input in Golang as follows:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Conditionals and Loops</title>
+      <link>/posts/golang-conditionals-loops/</link>
+      <pubDate>Mon, 04 Apr 2022 09:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-conditionals-loops/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Moving to the fourth part, we will be doing conditional statements and loops in golang. We will be seeing the basics of conditional statements like if-else and switch along with loops like for, while, and range-based loops. We won&amp;rsquo;t be covering iterating over arrays in a loop as this requires an understanding of arrays.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Conditional statements&#xA;    &lt;div id=&#34;conditional-statements&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#conditional-statements&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Conditional statements are quite a fundamental aspect of learning a programming language. In golang, we have if-else conditional statements as well as switch cases. We will be exploring both of them in this section. Firstly, we will dive into if-else statements which are quite easy to understand.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Variables and Types</title>
+      <link>/posts/golang-variables/</link>
+      <pubDate>Sun, 03 Apr 2022 10:45:00 +0000</pubDate>
+      
+      <guid>/posts/golang-variables/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the third part of the series, we will be covering the fundamentals for learning any programming language i.e. variables and data types. We will be covering from data types to variable declaration. We won&amp;rsquo;t be seeing each and every detail related to the data types as some of them require a knowledge of loops and other topics, so that can be left for the different part.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Installation and Hello-World</title>
+      <link>/posts/hello-golang/</link>
+      <pubDate>Sat, 02 Apr 2022 16:36:33 +0000</pubDate>
+      
+      <guid>/posts/hello-golang/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Moving on to the second day, we will be installing and setting up Go lang on our systems. The installation and setup are quite simple and not much demonstration is required, so further in the article, I will also make a hello-world program in GO. We will explore the basic program in GO and how to compile, run and build a GO program in this section.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: What and Why?</title>
+      <link>/posts/golang-intro/</link>
+      <pubDate>Fri, 01 Apr 2022 10:00:00 +0000</pubDate>
+      
+      <guid>/posts/golang-intro/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This is the first entry in my 100 days of Go lang challenge. I will share the things I will learn each day for 100 days related to Golang or its configuration in my environment. In this post, we will understand what is golang and why you should learn it. It&amp;rsquo;s not an in-depth guide but a high-level overview for understanding the context of learning Go lang.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

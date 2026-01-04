@@ -1,11 +1,9 @@
-{
-  "title": "Techstructive Weekly #38",
-  "post_dir": "newsletter",
-  "type": "newsletter",
-  "status": "published",
-  "slug": "techstructive-weekly-38",
-  "date": "2025-04-19"
-}
+---
+type: newsletter
+title: "Techstructive Weekly #38"
+date: 2025-04-19T00:00:00
+slug: "techstructive-weekly-38"
+---
 
 ## Week #38
 
@@ -124,11 +122,11 @@ Let us breathe!
 
 For more interesting articles, check out the [hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-742) for the week edition [#742](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-742), for even more software development/coding articles, join [daily.dev](http://daily.dev/).
 
-[Leave a comment](%%half_magic_comments_url%%)
+[REMOVED]
 
 Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
 
-[Share](%%share_url%%)
+[REMOVED]
 
 ---
 
