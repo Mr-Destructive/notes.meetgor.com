@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Error Handling"
 date: 2022-09-17T20:15:00
 slug: "golang-error-handling"

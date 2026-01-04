@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Admin Section"
 subtitle: "Exploring and Interacting with the Django's built-in Admin Section"
 date: 2022-01-26T22:25:00+05:30

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Scrapping the meaning of a word from dictionary.com using BASH script."
 subtitle: "Using some shell tools and utilities to understand web scrapping and making a script to scrap a webpage."
 date: 2021-07-27T11:45:03+05:30

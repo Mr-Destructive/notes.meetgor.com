@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang Web: URL Parsing"
 date: 2023-09-05T21:30:00
 slug: "golang-web-url-parsing"

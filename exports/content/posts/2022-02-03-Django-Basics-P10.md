@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: CRUD API"
 subtitle: "Understanding the entire workflow of creating a app in django and making a CRUD API"
 date: 2022-02-03T23:45:00+05:30

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django + HTMX CRUD application"
 date: 2022-07-31T12:30:00
 slug: "django-htmx-crud"

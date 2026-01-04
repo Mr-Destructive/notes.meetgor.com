@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Feedparser: Python package for reading RSS feeds"
 date: 2022-03-26T15:45:00
 slug: "python-feedparser"

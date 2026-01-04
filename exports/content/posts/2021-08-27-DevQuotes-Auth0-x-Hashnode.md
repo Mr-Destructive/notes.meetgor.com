@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Dev Quotes: A platform for developers to quote and get inspired - Auth0 x Hashnode Hackathon"
 subtitle: "A platform created in a Hackathon for developer to get motivated by some fun and inspireing quotes."
 date: 2021-08-27T23:45:00+05:30

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Setting up Vim for BASH Scripting"
 subtitle: "VIM + BASH = Killer Speed Automation"
 date: 2021-06-10T04:52:07+05:30

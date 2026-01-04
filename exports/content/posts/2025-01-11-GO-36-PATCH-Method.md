@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang Web: PATCH Method"
 date: 2025-01-11T20:30:00
 slug: "golang-web-patch-method"

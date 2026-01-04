@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Setup and Installation"
 subtitle: "Setting up environment and installing Django framework"
 date: 2021-11-20T16:30:00+05:30

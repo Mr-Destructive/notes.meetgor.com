@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: Registers"
 subtitle: "The guide in understanding Vim registers and where your text gets stored after copying or deleting."
 date: 2021-07-21T23:41:57+05:30

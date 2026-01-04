@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "What's in Techstructive Blog"
 subtitle: "Explaining my blog's scope and finding my niche as a technical writer."
 date: 2021-09-19T15:00:00+05:30

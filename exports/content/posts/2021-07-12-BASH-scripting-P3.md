@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "BASH Scripting Guide - PART - 3"
 subtitle: "Exploring some advance features, underrated tools and utilities in BASH."
 date: 2021-07-12T23:16:13+05:30

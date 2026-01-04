@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Neovim + Sourcegraph Cody Plugin Integration"
 date: 2024-01-06T20:15:00
 slug: "neovim-sourcegraph-cody"

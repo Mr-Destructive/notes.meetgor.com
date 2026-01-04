@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "My Journey as a Technical Writer"
 subtitle: "How and Why I became started writing articles and became a novice technical writer."
 date: 2021-09-14T19:30:37+05:30

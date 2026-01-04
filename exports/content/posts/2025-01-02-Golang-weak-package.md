@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang weak package"
 date: 2025-01-02T00:00:00
 ---

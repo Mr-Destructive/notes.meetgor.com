@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "NGINX Survival Guide: Serving Web Applications"
 date: 2024-07-21T22:45:00
 slug: "nginx-02-web-servers"

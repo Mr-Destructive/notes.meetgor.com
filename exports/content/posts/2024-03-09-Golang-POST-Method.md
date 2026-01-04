@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang Web: POST Method"
 date: 2024-03-10T20:15:00
 slug: "golang-web-post-method"

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: Buffers"
 subtitle: "Understanding the basic unit of Vim for working with files."
 date: 2021-08-11T20:24:29+05:30

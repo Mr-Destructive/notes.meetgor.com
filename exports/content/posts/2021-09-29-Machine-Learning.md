@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "What is Machine Learning?"
 subtitle: "Understanding the concept and process of Machine Learning. "
 date: 2021-09-29T15:30:07+05:30

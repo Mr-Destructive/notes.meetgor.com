@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Random Numbers"
 date: 2023-05-14T14:30:00
 slug: "golang-random-numbers"

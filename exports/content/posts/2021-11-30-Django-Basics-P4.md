@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Views and URLS"
 subtitle: "Creating and Understanding working of views and urls in Django"
 date: 2021-11-30T12:03:00+05:30

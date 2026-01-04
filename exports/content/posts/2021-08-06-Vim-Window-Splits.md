@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: Window Splits"
 subtitle: "Learning to create, navigate in Window splits in Vim"
 date: 2021-08-06T15:40:49+05:30

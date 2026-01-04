@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "NGINX Basics and Setup"
 date: 2024-01-14T18:15:00
 slug: "nginx-01-basics"

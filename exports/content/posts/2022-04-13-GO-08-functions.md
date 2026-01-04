@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Functions"
 date: 2022-04-13T09:00:00
 slug: "golang-functions"

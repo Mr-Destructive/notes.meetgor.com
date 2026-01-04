@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: What is it?"
 subtitle: "Understanding what and why of the Django framework"
 date: 2021-11-16T20:45:00+05:30

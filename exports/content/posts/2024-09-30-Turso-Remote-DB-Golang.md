@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Connect LibSQL Database hosted on Turso in a Golang Application"
 date: 2024-09-30T23:45:00
 slug: "turso-libsql-db-golang"

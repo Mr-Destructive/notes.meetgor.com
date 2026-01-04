@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: File Write"
 date: 2022-12-18T15:15:00
 slug: "golang-file-write"

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang Web: GET Method"
 date: 2023-10-28T20:15:00
 slug: "golang-web-get-method"

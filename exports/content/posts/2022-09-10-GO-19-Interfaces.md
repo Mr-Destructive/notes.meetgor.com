@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Interfaces"
 date: 2022-09-10T17:30:00
 slug: "golang-interfaces"

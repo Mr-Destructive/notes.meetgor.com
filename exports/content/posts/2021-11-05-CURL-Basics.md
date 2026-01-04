@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Basics of curl command"
 subtitle: "An short simple introductory guide to the curl command"
 date: 2021-11-05T20:50:00+05:30

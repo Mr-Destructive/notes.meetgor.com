@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Anonymous Functions"
 date: 2022-07-24T18:15:00
 slug: "golang-anonymous-functions"

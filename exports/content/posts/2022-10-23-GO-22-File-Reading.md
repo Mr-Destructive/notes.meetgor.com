@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: File Reading"
 date: 2022-10-23T23:15:00
 slug: "golang-file-read"

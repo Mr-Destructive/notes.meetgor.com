@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Templates"
 subtitle: "Rendering templates/html docs in the Django project/app"
 date: 2021-12-14T16:45:00+05:30

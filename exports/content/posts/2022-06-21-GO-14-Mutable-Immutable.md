@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Mutable and Immutable Data Types"
 date: 2022-06-21T21:00:00
 slug: "golang-mutable-immutable"

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django + PostgreSQL Deployment on Heroku"
 date: 2022-05-15T20:00:00
 slug: "django-deploy-heroku"

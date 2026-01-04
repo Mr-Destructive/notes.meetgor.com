@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang Web: DELETE Method"
 date: 2025-01-12T20:30:00
 slug: "golang-web-delete-method"

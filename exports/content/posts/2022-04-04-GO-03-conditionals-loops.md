@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Conditionals and Loops"
 date: 2022-04-04T09:00:00
 slug: "golang-conditionals-loops"

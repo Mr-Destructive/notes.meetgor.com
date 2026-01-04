@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Configure Neovim in Lua"
 date: 2022-07-09T20:30:00
 slug: "neovim-vimscript-to-lua"

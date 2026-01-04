@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Operators"
 date: 2022-05-07T20:33:38
 slug: "golang-operators"

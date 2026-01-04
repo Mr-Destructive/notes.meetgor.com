@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Creating a Chat Application with Django and HTMX"
 date: 2023-02-05T17:15:00
 slug: "django-htmx-chat-app"

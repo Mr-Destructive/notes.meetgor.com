@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Folder Structure"
 subtitle: "Understanding the folder structure of Django Projects and Applications"
 date: 2021-11-24T15:45:00+05:30

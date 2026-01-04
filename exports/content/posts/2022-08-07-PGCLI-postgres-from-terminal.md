@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "PGCLI: Postgres from the terminal"
 date: 2022-08-07T20:30:00
 slug: "pgcli-pg-from-terminal"

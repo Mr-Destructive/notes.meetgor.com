@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Variables and Types"
 date: 2022-04-03T10:45:00
 slug: "golang-variables"

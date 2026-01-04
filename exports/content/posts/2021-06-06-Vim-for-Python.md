@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Setting up Vim for Python"
 subtitle: "For the python programmers who need speed!"
 date: 2021-06-06T11:35:25+05:30

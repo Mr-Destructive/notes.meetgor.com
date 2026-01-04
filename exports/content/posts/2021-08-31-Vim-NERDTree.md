@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: NERDTree"
 subtitle: "Customizing the NERDTree plugin in Vim for enhancing file management and navigation."
 date: 2021-08-31T20:45:06+05:30

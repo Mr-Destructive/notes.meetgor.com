@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: Enhancing Editing Speed"
 subtitle: "Improving the way you edit code in Vim."
 date: 2021-07-18T16:52:17+05:30

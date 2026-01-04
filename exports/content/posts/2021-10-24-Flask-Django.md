@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Flask and Django - the backend web frameworks"
 subtitle: "Understanding the concept of backend web frameworks like Django and Flask."
 date: 2021-10-24T19:00:00+05:30

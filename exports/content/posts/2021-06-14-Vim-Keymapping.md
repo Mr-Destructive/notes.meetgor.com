@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: Keymapping Guide"
 subtitle: "A comprehensive guide for getting started with key bindings in Vim"
 date: 2021-06-14T15:27:44+05:30

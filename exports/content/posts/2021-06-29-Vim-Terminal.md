@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Vim: Terminal Integration"
 subtitle: "To feel and live in Vim with the terminal."
 date: 2021-06-29T15:21:11+05:30

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang Web: PUT Method"
 date: 2024-06-15T18:30:00
 slug: "golang-web-put-method"

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django + Auth0 Quick Setup"
 subtitle: "A simple BASH script to set up a basic Django project with authentication integrated using Auth0."
 date: 2021-09-28T20:08:47+05:30

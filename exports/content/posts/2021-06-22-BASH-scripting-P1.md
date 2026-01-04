@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "BASH Scripting Guide - PART - 1"
 subtitle: "The quick basic guide on foundational concepts of Bash scripting."
 date: 2021-06-22T16:37:28+05:30

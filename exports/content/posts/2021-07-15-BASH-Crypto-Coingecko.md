@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Cryptocurrency Price Scrapping using BASH and Coingecko API"
 subtitle: "Know the price of your favorite cryptocurrency coin/token in your national currency from your terminal using bash shell and Coingecko crypto API."
 date: 2021-07-15T17:56:47+05:30

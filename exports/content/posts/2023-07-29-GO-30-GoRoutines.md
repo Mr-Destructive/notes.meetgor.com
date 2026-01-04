@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Golang: Go Routines and WaitGroups"
 date: 2023-07-29T15:15:00
 slug: "golang-go-routines"

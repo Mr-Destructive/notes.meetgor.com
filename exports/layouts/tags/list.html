@@ -1,0 +1,28 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "list" }}
+  {{/* Header */}}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{/* Tags Grid */}}
+  {{ if gt .Data.Terms.Len 0 }}
+    <section class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {{ range .Data.Terms.ByCount }}
+        <a href="{{ .Page.RelPermalink }}" class="block p-4 border border-neutral-200 dark:border-neutral-700 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition">
+          <div class="font-semibold text-neutral-900 dark:text-neutral-100">{{ .Term }}</div>
+          <div class="text-sm text-neutral-500 dark:text-neutral-400">{{ .Count }} post{{ if ne .Count 1 }}s{{ end }}</div>
+        </a>
+      {{ end }}
+    </section>
+  {{ else }}
+    <section class="mt-10 prose dark:prose-invert">
+      <p class="py-8 border-t">
+        <em>No tags found</em>
+      </p>
+    </section>
+  {{ end }}
+{{ end }}

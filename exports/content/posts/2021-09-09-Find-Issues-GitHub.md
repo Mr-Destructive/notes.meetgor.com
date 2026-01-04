@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Filter and Find an Issue on GitHub"
 subtitle: "A quick guide to filter and sort issues as per your interest/skills on GitHub"
 date: 2021-09-09T17:42:30+05:30

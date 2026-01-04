@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Static Files"
 subtitle: "Loading Static Files in a Django project/app"
 date: 2021-12-27T22:45:00+05:30

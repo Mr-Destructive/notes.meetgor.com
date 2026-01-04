@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Connecting LibSQL database with Python"
 date: 2023-11-30T20:45:00
 slug: "libsql-python"

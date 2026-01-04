@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Learning BASH by making a Number game"
 subtitle: "Understaning BASH concepts by making a number game"
 date: 2021-07-08T19:50:35+05:30

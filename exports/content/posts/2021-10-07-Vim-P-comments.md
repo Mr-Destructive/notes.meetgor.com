@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Comment/Uncomment Code: Vim for Programmers"
 subtitle: "A short guide to comment/uncomment chunks of code effectively in Vim"
 date: 2021-10-07T16:45:42+05:30

@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "BASH Scripting Guide - PART - 2"
 subtitle: "Parsing and Managing data using Bash"
 date: 2021-07-02T15:57:34+05:30

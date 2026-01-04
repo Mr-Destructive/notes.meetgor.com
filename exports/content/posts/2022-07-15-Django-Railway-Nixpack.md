@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Deploying Django Project with Railway Nixpacks"
 date: 2022-07-16T16:15:00
 slug: "django-deploy-railway-nixpacks"

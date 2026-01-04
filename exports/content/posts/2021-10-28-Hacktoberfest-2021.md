@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Hacktoberfest 2021"
 subtitle: "Sharing my contribution and experience as a second hacktoberfest"
 date: 2021-10-28T20:10:00+05:30

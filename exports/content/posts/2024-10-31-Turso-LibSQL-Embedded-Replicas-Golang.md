@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Use Embedded Replicas of LibSQL Database hosted on Turso with a Golang Application"
 date: 2024-10-31T21:45:00
 slug: "turso-libsql-embedded-replicas-golang"

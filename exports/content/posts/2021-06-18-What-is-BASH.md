@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "What is BASH?"
 subtitle: "A guide to performing wizardry in the terminal"
 date: 2021-06-18T02:12:07

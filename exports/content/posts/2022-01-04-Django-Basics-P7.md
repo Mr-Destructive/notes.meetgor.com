@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Creating Models"
 subtitle: "Understanding and Structuring a Database Schema with Models in Django"
 date: 2022-01-04T22:15:00+05:30

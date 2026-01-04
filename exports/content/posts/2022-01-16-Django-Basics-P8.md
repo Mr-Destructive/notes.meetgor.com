@@ -1,5 +1,5 @@
 ---
-type: posts
+type: post
 title: "Django Basics: Database Configurations"
 subtitle: "Understanding and configuring Database for the project and migrating to the database"
 date: 2022-01-21T16:40:34
