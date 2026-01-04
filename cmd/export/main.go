@@ -87,9 +87,25 @@ func main() {
 			tags = post.Tags.String
 		}
 
+		// Parse and format date properly for Hugo
+		dateStr := post.CreatedAt
+		parsedDate, dateErr := time.Parse("2006-01-02 15:04:05", dateStr)
+		if dateErr != nil {
+			// Try parsing ISO format
+			parsedDate, dateErr = time.Parse("2006-01-02T15:04:05Z", dateStr)
+			if dateErr != nil {
+				// Fallback to just the date part
+				dateStr = post.CreatedAt[:10]
+			} else {
+				dateStr = parsedDate.Format("2006-01-02T15:04:05Z07:00")
+			}
+		} else {
+			dateStr = parsedDate.Format("2006-01-02T15:04:05Z07:00")
+		}
+
 		// Build front matter
 		frontMatter := fmt.Sprintf("---\ntitle: %q\ndate: %s\nslug: %s\ndraft: false\ntype: %s\ndescription: %q\ntags: %s\n---\n\n", 
-			post.Title, post.CreatedAt[:10], post.Slug, typeID, excerpt, tags)
+			post.Title, dateStr, post.Slug, typeID, excerpt, tags)
 
 		// Write file - trim content to remove leading/trailing whitespace
 		filePath := filepath.Join(postsDir, post.Slug+".md")
