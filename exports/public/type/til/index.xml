@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Til on Notes</title>
+    <link>/type/til/</link>
+    <description>Recent content in Til on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sun, 04 Jan 2026 15:49:51 +0530</lastBuildDate><atom:link href="/type/til/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tmux scroll mode select and copy</title>
+      <link>/posts/2025-07-30-tmux-scroll-mode-select-and-copy/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-07-30-tmux-scroll-mode-select-and-copy/</guid>
+      <description>&lt;p&gt;I have found scrolling in tmux is a bit unconventional. Maybe its just me, but sometimes, the terminal interfaces are different, sometimes they are a bit wired, I use Ghostty right now, so selection without tmux works a charm, but the moment I am in tmux, ahmm, it kind of breaks.&lt;/p&gt;&#xA;&lt;p&gt;The selection of text doesn&amp;rsquo;t work with the mouse atleast, so I thought, I need a keyboard centric selection and copying mechanism, and dug in this rabit hole. Turns out, tmux is way better in selection then zellij, the multiplexer I had been using due to scroll and selection issues in terminal interfaces.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Getting Python version in a UV project</title>
+      <link>/posts/getting-python-version-in-a-uv-project/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/getting-python-version-in-a-uv-project/</guid>
+      <description>&lt;p&gt;I was live streaming, creating a AI Coding Agent from scratch in Python. I was excited to create the agent. You can watch the &lt;a href=&#34;https://youtube.com/clip/Ugkx2AcRqaYcMgAqZgtA2k48iYb8sJf9VL6F?si=XTtC2zFs2Kloia0L&#34;  target=&#34;_blank&#34;&gt;livestream&lt;/a&gt; here.&lt;/p&gt;&#xA;&lt;p&gt;Anyways, the thing is the uv python project has a &lt;code&gt;. python_version&lt;/code&gt; file that will store the python version.&lt;/p&gt;&#xA;&lt;p&gt;I thought, it might be used from &lt;code&gt;pyproject.toml&lt;/code&gt;, or other setup files. But that is really neat from uv.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Add hunks: only line specific changes with git add -p</title>
+      <link>/posts/add-hunks-only-line-specific-changes-with-git-add-p/</link>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/add-hunks-only-line-specific-changes-with-git-add-p/</guid>
+      <description>&lt;p&gt;I had made the changes for a future release, next set of changes so to speak in git terms. Then, I encountered a bug while testing the previous changes. Now, I could have&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Open VS Code and add that little &lt;code&gt;+&lt;/code&gt; icon in the gutter to fix the bug&lt;/li&gt;&#xA;&lt;li&gt;Create a separate branch with stashed changes for this new feature&lt;/li&gt;&#xA;&lt;li&gt;Use GitSigns in NeoVim&lt;/li&gt;&#xA;&lt;li&gt;Use &lt;code&gt;git add -p&lt;/code&gt; to stage &lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging&#34;  target=&#34;_blank&#34;&gt;hunks&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The last one was a gem given by ChatGPT, and then I went a bit rabbit hole for reading about it and it turns out it&amp;rsquo;s real!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Format JSON in Vim with JQ</title>
+      <link>/posts/format-json-in-vim-with-jq/</link>
+      <pubDate>Sat, 05 Apr 2025 12:33:15 +0000</pubDate>
+      
+      <guid>/posts/format-json-in-vim-with-jq/</guid>
+      <description>&lt;p&gt;We can use&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;:%!jq .&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;To instantly format a json file opened in vim/neovim.&#xA;I relied on online foramtter and opening vscode for formatting.&#xA;But this quick tool just saves a lot of hassle. Opening VS Co** == shutting down the laptop, it clogs the memory badly, so I avoid opening VS Co** as much as possible.&lt;/p&gt;&#xA;&lt;p&gt;Yes, to use this, you need to have &lt;a href=&#34;https://jqlang.org/&#34;&gt;jq&lt;/a&gt; installed on your system.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Zellij Open Scrollback Edit mode</title>
+      <link>/posts/zellij-open-scrollback-edit-mode/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/zellij-open-scrollback-edit-mode/</guid>
+      <description>&lt;p&gt;I was looking at a long list of logs, (debugging of course).&lt;/p&gt;&#xA;&lt;p&gt;I had a list of transactions&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Two list of transactions, one as ground truth and other as predicted.  Transactions is a list of object(dictionary or map), each object has fields like date, amount, description, etc.&lt;/li&gt;&#xA;&lt;li&gt;Those objects in a list need not necessarily be in order, however I do want to compare them, how to do that?&lt;/li&gt;&#xA;&lt;li&gt;I decided to sort them based on date(one field in that object).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Then for each date, I group the transactions and this would narrow down the search space for comparison of one-one transaction, since now I can compare which of the ones are closely matching, the date will be a exact match the amount should also be, the description can be fuzzily matched.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Sample TIL</title>
+      <link>/posts/first_til/</link>
+      <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/first_til/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;What I learned&#xA;    &lt;div id=&#34;what-i-learned&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-i-learned&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This is the content of the TIL&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Conclusion&#xA;    &lt;div id=&#34;conclusion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#conclusion&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Happy Coding :)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Gotcha with Chained Assignment in Python</title>
+      <link>/posts/python-chain-assignment-gotcha/</link>
+      <pubDate>Wed, 27 Nov 2024 22:15:00 +0000</pubDate>
+      
+      <guid>/posts/python-chain-assignment-gotcha/</guid>
+      <description>&lt;p&gt;I was writing some Python code and wanted to initialize a few variables to an empty list. Instead of creating separate lists for each variable, I decided to use chained assignments like this:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;It seems okay, nothing new, we are just assigning a, b, and c as an empty list. But notice the problem if you can.&lt;/p&gt;&#xA;&lt;p&gt;If we try to change the value of b, what do you think is going to happen?&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Building Golang from Source v1.23 and Above</title>
+      <link>/posts/golang-build-from-source-1-24-above/</link>
+      <pubDate>Tue, 19 Nov 2024 23:15:00 +0000</pubDate>
+      
+      <guid>/posts/golang-build-from-source-1-24-above/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Are you excited to try out the latest golang version, or test out your changes (cooking some serious stuff?), or install some random golang version? Then let’s explore one of the easiest ways to install golang on your system (Linux).&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Building Go from source 1.23+&#xA;    &lt;div id=&#34;building-go-from-source-123&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#building-go-from-source-123&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The process for installing and building golang from source is quite simple.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Adding SSH Keys for Multiple Accounts in Git</title>
+      <link>/posts/git-ssh-multiple-accounts/</link>
+      <pubDate>Fri, 22 Mar 2024 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/git-ssh-multiple-accounts/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s  say you have multiple github accounts. One for your personal projects, one for your company that you work at, and one other remote repository account (let&amp;rsquo;s say gitlab).&lt;/p&gt;&#xA;&lt;p&gt;You are juggling with multiple accounts, you should not waste much time and pick a SSH from those remote repository and pull it in your local machine, that makes the process just smooth and saves a ton of time.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Create a SSH Key&#xA;    &lt;div id=&#34;create-a-ssh-key&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#create-a-ssh-key&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;To create a SSH key, in linux you can use &lt;code&gt;ssh-keygen&lt;/code&gt; command.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Turn Python dictionary into a neat CSV table</title>
+      <link>/posts/python-dict-to-csv-table/</link>
+      <pubDate>Wed, 20 Mar 2024 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/python-dict-to-csv-table/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Populating a Python dict having a table-like structure to a CSV&#xA;    &lt;div id=&#34;populating-a-python-dict-having-a-table-like-structure-to-a-csv&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#populating-a-python-dict-having-a-table-like-structure-to-a-csv&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Today, I want to share with you a neat trick I recently discovered for populating a CSV file with data in a table-like structure using Python.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Writing Key-Value Pairs to a CSV Row&#xA;    &lt;div id=&#34;writing-key-value-pairs-to-a-csv-row&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#writing-key-value-pairs-to-a-csv-row&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Firstly, let&amp;rsquo;s discuss the &lt;code&gt;write_key_value&lt;/code&gt; function. This function allows us to write key-value pairs to a CSV row. It&amp;rsquo;s particularly useful when dealing with metrics or data that can be represented as simple pairs.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>SQLite importing CSV with custom separator</title>
+      <link>/posts/sqlite-inline-custom-separator/</link>
+      <pubDate>Fri, 15 Mar 2024 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite-inline-custom-separator/</guid>
+      <description>&lt;p&gt;explaination about how i learned how to write a command for importing a csv&lt;br&gt;&#xA;into a sqlite3 db with cusotm Separator with a single command inline&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I was exploring some Issues that I can solve given the context of the problem and the intution for the solution.&lt;/p&gt;&#xA;&lt;p&gt;I have some github repositories that I always look for to learn more. Some of them are:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Sort Package Introduction</title>
+      <link>/posts/golang-sort-package-basic/</link>
+      <pubDate>Mon, 15 Jan 2024 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-sort-package-basic/</guid>
+      <description>&lt;p&gt;I have been learning Golang for around 2 years now, and I have never paid attention to the sort package, can you believe that! Where was this package hiding?&lt;/p&gt;&#xA;&lt;p&gt;The &lt;code&gt;sort&lt;/code&gt; package provides convenient methods for sorting slices and user-defined collections in Go. Here&amp;rsquo;s a quick overview of what it can do:&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Sorting Slices&#xA;    &lt;div id=&#34;sorting-slices&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sorting-slices&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;To sort a slice of builtin types like ints, strings, etc, you can simply call &lt;code&gt;sort.Slice()&lt;/code&gt;:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang: Test Output JSON</title>
+      <link>/posts/golang-test-output-json/</link>
+      <pubDate>Mon, 01 Jan 2024 21:30:00 +0000</pubDate>
+      
+      <guid>/posts/golang-test-output-json/</guid>
+      <description>&lt;p&gt;I just discovered that we can generate a JSON output of test results in Golang. I found this &lt;a href=&#34;https://youtu.be/cf72gMBrsI0?t=80&#34;  target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s take a fresh simple example.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jsontest&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jsontest&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;testing&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestHello&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;testing&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;T&lt;/span&gt;) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;want&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Logf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;got: %q&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;want&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Errorf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;got: %q, want: %q&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;got&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;want&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Here, we have a function &lt;code&gt;hello&lt;/code&gt; that simply returns a string, the &lt;code&gt;TestHello&lt;/code&gt; function in the &lt;code&gt;jsontest&lt;/code&gt; package will check if the returned string is correctly returned or not.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>LibSQL: Query a remote Turso database with cURL</title>
+      <link>/posts/libsql-query-remote-db/</link>
+      <pubDate>Wed, 15 Nov 2023 17:30:00 +0000</pubDate>
+      
+      <guid>/posts/libsql-query-remote-db/</guid>
+      <description>&lt;p&gt;If you are using a local &lt;a href=&#34;https://turso.tech/libsql&#34;  target=&#34;_blank&#34;&gt;libsql&lt;/a&gt; database, it is quite easy to query the database, but for a remote or a database on a hosted cloud platform like &lt;a href=&#34;https://turso.tech/&#34;  target=&#34;_blank&#34;&gt;turso&lt;/a&gt;, we can use other clients or the api itself to query the data.&lt;/p&gt;&#xA;&lt;p&gt;We can use the turso cli to get the authentication token for the database and then query the database.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Turso CLI&#xA;    &lt;div id=&#34;turso-cli&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#turso-cli&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Using the &lt;a href=&#34;https://docs.turso.tech/reference/turso-cli&#34;  target=&#34;_blank&#34;&gt;turso-cli&lt;/a&gt; to access the turso platform. We will use turso cli to create a libsql database, create authentication tokens, and query the db.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Read a Rss Feed with a URL in Golang</title>
+      <link>/posts/golang-read-rss-feed/</link>
+      <pubDate>Fri, 11 Nov 2022 22:45:00 +0000</pubDate>
+      
+      <guid>/posts/golang-read-rss-feed/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Reding Rss Feed&#xA;    &lt;div id=&#34;reding-rss-feed&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#reding-rss-feed&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We can use golang&amp;rsquo;s &lt;a href=&#34;https://pkg.go.dev/encoding/xml&#34;  target=&#34;_blank&#34;&gt;encoding/xml&lt;/a&gt; package to read a Rss feed. Though we have to be speicific of what type of structure the Rss feed has, so it is not dynamic but it works really well with structs. I have covered a few nuances of reading XML file in the &lt;a href=&#34;https://www.meetgor.com/golang-config-file-read/#reading-xml-file&#34;  target=&#34;_blank&#34;&gt;config file reading&lt;/a&gt; post of the 100 days of golang series.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Create a Non-Clustered Index in Django with Postgres as DB</title>
+      <link>/posts/django-non-clustered-index-pg/</link>
+      <pubDate>Thu, 10 Nov 2022 22:10:00 +0000</pubDate>
+      
+      <guid>/posts/django-non-clustered-index-pg/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;What is a non-clustered index?&#xA;    &lt;div id=&#34;what-is-a-non-clustered-index&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-is-a-non-clustered-index&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A non-clustered index is a seperate structure than an actual table in the database, it stores the non-clustered index key(the column which we want to sort in the table), and a pointer to the actual values based on the index key. So, non-clustered indexes do not change the physical order of the table records, instead it holds a structure that can provide a easier and distinct way to fetch objects based on a particular column as the primary key in the structure.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Django Bulk Update QuerySet objects</title>
+      <link>/posts/django-bulk-update-queryset/</link>
+      <pubDate>Mon, 31 Oct 2022 18:00:00 +0000</pubDate>
+      
+      <guid>/posts/django-bulk-update-queryset/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s say, I have a lots of objects which I want to update with a particular field or fields. We can use the &lt;a href=&#34;https://docs.djangoproject.com/en/4.1/ref/models/querysets/#bulk-update&#34;  target=&#34;_blank&#34;&gt;bulk_update&lt;/a&gt; method with the model name.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# blog/models.py&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; django.db &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; models&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ARTICLE_STATUS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PUBLISHED&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Published&amp;#34;&lt;/span&gt;),&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DRAFT&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Draft&amp;#34;&lt;/span&gt;),&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Article&lt;/span&gt;(models&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Model):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; models&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;CharField(max_length&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;128&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    description &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; models&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;CharField(max_length&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;512&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    content &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; models&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TextField()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    status &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; models&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;CharField(max_length&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;, choices&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ARTICLE_STATUS, default&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DRAFT&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;__str__&lt;/span&gt;(self):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s say we have a simple model &lt;code&gt;Article&lt;/code&gt; with a few typical attributes like &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;description&lt;/code&gt;, &lt;code&gt;content&lt;/code&gt;, and &lt;code&gt;status&lt;/code&gt;. We have the status as a choice field from two options as &lt;code&gt;Draft&lt;/code&gt; and &lt;code&gt;Published&lt;/code&gt;. It could be a boolean field, but that looks too gross for a article status.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Python Pipreqs: Generate requirements file from the imported packages</title>
+      <link>/posts/python-pipreqs/</link>
+      <pubDate>Wed, 14 Sep 2022 21:57:30 +0000</pubDate>
+      
+      <guid>/posts/python-pipreqs/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pypi.org/project/pipreqs/&#34;  target=&#34;_blank&#34;&gt;Pipreqs&lt;/a&gt; is a python package that allows us to list all the pacakges which are imported in a python project. This is a great package for reducing the amount of redundant packages for a project.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Install pipreqs&#xA;    &lt;div id=&#34;install-pipreqs&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#install-pipreqs&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;You can install pipreqs with one of the many ways with pip, pipx, or any other pacakge management tool. I personally use pipreqs with &lt;code&gt;pipx&lt;/code&gt; as it remains isolated from the rest of my project dependencies.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Django: Get list of all models and associated fields in a django project</title>
+      <link>/posts/django-list-models/</link>
+      <pubDate>Tue, 02 Aug 2022 15:30:00 +0000</pubDate>
+      
+      <guid>/posts/django-list-models/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Context&#xA;    &lt;div id=&#34;context&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#context&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s say we want the list of all the models and associated attributes in all the applications of a django project, we can do that using the &lt;a href=&#34;https://docs.djangoproject.com/en/4.0/ref/applications/&#34;  target=&#34;_blank&#34;&gt;django.apps&lt;/a&gt; with apps method.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Get all the models in a project&#xA;    &lt;div id=&#34;get-all-the-models-in-a-project&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#get-all-the-models-in-a-project&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;To fetch all the models, we can use the &lt;a href=&#34;https://docs.djangoproject.com/en/4.0/ref/applications/#django.apps.AppConfig.get_models&#34;  target=&#34;_blank&#34;&gt;get_models&lt;/a&gt; methods, it will return a list of model classes in all the entire project(all applications). We can import all the models in the django project with the command:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Django Blog DevLog: Load Frontmatter data into Template/Model Form Fields</title>
+      <link>/posts/django-form-load-frontmatter/</link>
+      <pubDate>Mon, 01 Aug 2022 20:30:00 +0000</pubDate>
+      
+      <guid>/posts/django-form-load-frontmatter/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I have an Article Form where I load my post into it directly, it might have frontmatter. So what I wish to achieve is when I paste in the content, the frontmatter should be picked up and it should render the form fields like &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;description&lt;/code&gt;, and then also remove the frontmatter from the content.&lt;/p&gt;&#xA;&lt;p&gt;To do that, we will require a model to work with and a form based on that model. We will exclude a few fields from that model so as to process these attributes on the server side. I am working on my Blog project which is a simple Django application.  You can get the source code for the project on the &lt;a href=&#34;https://github.com/mr-destructive/techstructive-blog/&#34;  target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Map Vimscript Keymaps to Lua with a single function</title>
+      <link>/posts/vimscript-to-lua-keymapper/</link>
+      <pubDate>Mon, 11 Jul 2022 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/vimscript-to-lua-keymapper/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction&#xA;    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Are you bored of writing all the keymaps from vimscript to lua? Try the below function to create all your keymaps to lua equivalent maps in Neovim.&lt;/p&gt;&#xA;&lt;p&gt;Take your vimscript keymaps and put them in lua don&amp;rsquo;t write any lua for it ;)&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;The Lua Function&#xA;    &lt;div id=&#34;the-lua-function&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#the-lua-function&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The below-provided snippet is a lua function that takes in a table of strings(list of strings), the strings will be your keymaps. The function then maps these keymaps using lua functions. You don&amp;rsquo;t have to type out all the keymaps by yourself. It can also print out the lua equivalent function calls required to map the existing keymaps from vimscript to lua runtime in Neovim. Though it won&amp;rsquo;t handle all the options, we have passed in a default value to the keymap.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Django App from Scratch Using Docker with Debian Base Image</title>
+      <link>/posts/django-app-from-scratch/</link>
+      <pubDate>Tue, 24 May 2022 22:30:00 +0000</pubDate>
+      
+      <guid>/posts/django-app-from-scratch/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Pull a Fresh Debian Image&#xA;    &lt;div id=&#34;pull-a-fresh-debian-image&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#pull-a-fresh-debian-image&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Create a docker container from a Debian image, the following command can be used to pull a debain 11-slim image and create a container of it, also enter into the container in a interactive environment &lt;code&gt;-it&lt;/code&gt; mode.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -v $(pwd):/var/www --rm -it -p 8001:80 debian:11-slim&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Create a Django App from Shell script&#xA;    &lt;div id=&#34;create-a-django-app-from-shell-script&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#create-a-django-app-from-shell-script&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Now, since we are inside a Debian container, we can enter a few commands, you can refer to the Mark Gibney&amp;rsquo;s &lt;a href=&#34;https://github.com/no-gravity/web_app_from_scratch&#34;  target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt; for the script.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Autoformat Python file with Black after saving in Vim</title>
+      <link>/posts/vim-python-black-autoformat/</link>
+      <pubDate>Tue, 29 Mar 2022 20:40:53 +0000</pubDate>
+      
+      <guid>/posts/vim-python-black-autoformat/</guid>
+      <description>&lt;p&gt;If you are like me who writes Python very badly, it has empty lines with whitespaces, no proper format in assigning variables, not formatted according to &lt;a href=&#34;https://peps.python.org/pep-0008/&#34;  target=&#34;_blank&#34;&gt;PEP 8&lt;/a&gt; standards, and you use Vim as your text editor then my friend you need a autocmd badly for it.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Install Black in Python&#xA;    &lt;div id=&#34;install-black-in-python&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#install-black-in-python&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Install the &lt;a href=&#34;https://pypi.org/project/black/&#34;  target=&#34;_blank&#34;&gt;black&lt;/a&gt; package in python globally or locally as per your preferences.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Python: Search and Replace in File</title>
+      <link>/posts/python-search-replace-file/</link>
+      <pubDate>Mon, 28 Mar 2022 18:59:30 +0000</pubDate>
+      
+      <guid>/posts/python-search-replace-file/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Searching and Replacing the text in a File&#xA;    &lt;div id=&#34;searching-and-replacing-the-text-in-a-file&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#searching-and-replacing-the-text-in-a-file&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Using simple python semantics, we can perform search and replace in a file. Firstly, we will define the file name, along with the words to search and replace. After defining the sets of variables, we will open the file in &lt;code&gt;r+&lt;/code&gt; mode i.e. we can perform read as well as write operations in the file.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Vim: Get the Text from Visual Selection</title>
+      <link>/posts/vim-get-visual-text/</link>
+      <pubDate>Sat, 05 Mar 2022 17:25:37 +0000</pubDate>
+      
+      <guid>/posts/vim-get-visual-text/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Using Registers&#xA;    &lt;div id=&#34;using-registers&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#using-registers&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We can get the selected text in a variable in Vim Script using registers.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vimscript&#34; data-lang=&#34;vimscript&#34;&gt;normal gv&amp;#34;xy&#xA;let context = getreg(&amp;#34;x&amp;#34;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;Lets break down the command&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;normal mode -&amp;gt; gv -&amp;gt; (y)ank text -&amp;gt; to the &amp;#34;x&amp;#34; register&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               |                  |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               |               Copy the contents into x register(or any register you like)    &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               |                  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            Select the previously selected text   &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Here, we are entering normal mode and selecting text which was previously selected and yank the contents into a register in this case we are using (x) register, it can be any register.&lt;br&gt;&#xA;Now to get the contents of that register we can use the function &lt;code&gt;getreg(&amp;quot;register_name&amp;quot;)&lt;/code&gt; or use &lt;code&gt;&amp;quot;xp&amp;quot;&lt;/code&gt; to paste the contents of the &lt;code&gt;x&lt;/code&gt; register or more generally for any register(&lt;code&gt;&amp;quot;&amp;lt;register-name&amp;gt;p&lt;/code&gt;).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dockerize a Django project</title>
+      <link>/posts/dockerize-django-prj/</link>
+      <pubDate>Wed, 02 Mar 2022 19:12:51 +0000</pubDate>
+      
+      <guid>/posts/dockerize-django-prj/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Dockerize a Django project&#xA;    &lt;div id=&#34;dockerize-a-django-project&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dockerize-a-django-project&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We can run our Django projects in a Docker Container by creating a Docker image for our project. It is really easy and intuitive to create a Dockerfile for any given application as it really is a matter of writing commands in a file and basically running it is a isolated environment. To create a Docker image, we first need a Dockerfile. A Dockerfile is simply a Blueprint to create a image in Docker. In this file we specify the instructions/commands/environment variables to create a image for our app to run.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Docker Port Forwarding</title>
+      <link>/posts/docker-port-forward/</link>
+      <pubDate>Tue, 01 Mar 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/posts/docker-port-forward/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Docker Port Forwarding&#xA;    &lt;div id=&#34;docker-port-forwarding&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#docker-port-forwarding&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Port forwarding is a process to redirect the communication of one address to other.&lt;br&gt;&#xA;It is also known as Port Binding.&lt;br&gt;&#xA;We can use &lt;code&gt;-p&lt;/code&gt; command to use port forwarding in our local Docker environment.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 8000:8000 django-app&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;The first port number is the local machine port and followed by a &lt;code&gt;:&lt;/code&gt; is the container port number.&lt;br&gt;&#xA;SO, the request from the container port are forwarded to the local/outside world in the docker environment.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

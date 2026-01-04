@@ -8,6 +8,9 @@ enableGitInfo = true
   description = "A collection of technical notes and posts"
   enableAnimation = false
   mainSections = ["posts"]
+
+[taxonomies]
+  type = "type"
   
 [params.author]
   name = "Meet Gor"

@@ -24,163 +24,16 @@
     </div>
   </header>
 
-  {{/* Article Grid - Grouped by Type */}}
+  {{/* All Posts Archive */}}
   {{ if gt .Pages 0 }}
-    {{ $cardView := .Params.cardView | default (site.Params.list.cardView | default false) }}
-    {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (site.Params.list.cardViewScreenWidth | default false) }}
-
-    {{/* Create slices for each type */}}
-    {{ $sqlog := slice }}
-    {{ $newsletter := slice }}
-    {{ $projects := slice }}
-    {{ $til := slice }}
-    {{ $work := slice }}
-    {{ $thoughts := slice }}
-    {{ $links := slice }}
-    {{ $other := slice }}
-
-    {{/* Categorize posts by type */}}
-    {{ range .Pages }}
-      {{ $type := .Params.type | default "post" | lower }}
-      {{ if eq $type "sqlog" }}
-        {{ $sqlog = $sqlog | append . }}
-      {{ else if eq $type "newsletter" }}
-        {{ $newsletter = $newsletter | append . }}
-      {{ else if eq $type "projects" }}
-        {{ $projects = $projects | append . }}
-      {{ else if eq $type "til" }}
-        {{ $til = $til | append . }}
-      {{ else if eq $type "work" }}
-        {{ $work = $work | append . }}
-      {{ else if eq $type "thoughts" }}
-        {{ $thoughts = $thoughts | append . }}
-      {{ else if eq $type "link" }}
-        {{ $links = $links | append . }}
-      {{ else }}
-        {{ $other = $other | append . }}
-      {{ end }}
-    {{ end }}
-
-    {{/* Display SQLOG Section */}}
-    {{ if $sqlog }}
+    {{ range .Pages.GroupByDate "2006" }}
       <section class="space-y-10 w-full">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">SQLog</h2>
-        {{ range $sqlog.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
+        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">{{ .Key }}</h2>
+        {{ range .Pages }}
+          {{ partial "article-link/simple.html" . }}
         {{ end }}
       </section>
     {{ end }}
-
-    {{/* Display Newsletter Section */}}
-    {{ if $newsletter }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">Newsletter</h2>
-        {{ range $newsletter.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
-    {{/* Display Projects Section */}}
-    {{ if $projects }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">Projects</h2>
-        {{ range $projects.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
-    {{/* Display TIL Section */}}
-    {{ if $til }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">TIL (Today I Learned)</h2>
-        {{ range $til.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
-    {{/* Display Work Section */}}
-    {{ if $work }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">Work</h2>
-        {{ range $work.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
-    {{/* Display Thoughts Section */}}
-    {{ if $thoughts }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">Thoughts</h2>
-        {{ range $thoughts.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
-    {{/* Display Links Section */}}
-    {{ if $links }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">Interesting Links</h2>
-        {{ range $links.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
-    {{/* Display Other Section */}}
-    {{ if $other }}
-      <section class="space-y-10 w-full mt-12">
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">Other</h2>
-        {{ range $other.GroupByDate "2006" }}
-          <div>
-            <h3 class="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">{{ .Key }}</h3>
-            {{ range .Pages }}
-              {{ partial "article-link/simple.html" . }}
-            {{ end }}
-          </div>
-        {{ end }}
-      </section>
-    {{ end }}
-
   {{/* else: .Pages not greater to zero */}}
   {{ else }}
     <section class="mt-10 prose dark:prose-invert">

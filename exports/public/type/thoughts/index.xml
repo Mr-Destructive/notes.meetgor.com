@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts on Notes</title>
+    <link>/type/thoughts/</link>
+    <description>Recent content in Thoughts on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sun, 04 Jan 2026 15:49:51 +0530</lastBuildDate><atom:link href="/type/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Is Tom Riddle&#39;s Diary like an LLM?</title>
+      <link>/posts/2025-12-13-tom-riddle-diary-as-llms/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-12-13-tom-riddle-diary-as-llms/</guid>
+      <description>&lt;p&gt;I was reading Harry Potter, the chambers of secret, the book for the first time and I came across this quote.&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;“Never trust anything that can think for itself if you can’t see where it keeps its brain”&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash; Mr. Arthur Weasley, &lt;a href=&#34;https://www.goodreads.com/quotes/718814-never-trust-anything-that-can-think-for-itself-if-you&#34;  target=&#34;_blank&#34;&gt;Harry Potter and the Chambers of secret&lt;/a&gt; (Chapter 18)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;The quote just rang the bells in me against LLM. Doesn&amp;rsquo;t it hit? Why do I feel guilty like Ginny who had been writing to the dark lord.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Test after resolving merge conflicts</title>
+      <link>/posts/2025-10-17-test-after-resolving-merge-conflicts/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-10-17-test-after-resolving-merge-conflicts/</guid>
+      <description>&lt;p&gt;Its a beautiful sunny Monday, you had prepared changes well tested on Friday. But today, just for today, Bill had to merge their hotfix into your changes as well. Well, they did.&lt;/p&gt;&#xA;&lt;p&gt;And I didn&amp;rsquo;t bother about it. It had some merge conflicts which Bill resolves happily (I thought). Everything is green, but some things are red, due to the size of PR I thought, (+3079 -789) changes. Phew!&lt;/p&gt;&#xA;&lt;p&gt;Merged and deployed.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>OpenAI releases Open Weight models GPT-OSS</title>
+      <link>/posts/openai-open-weight-oss-model/</link>
+      <pubDate>Wed, 06 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/openai-open-weight-oss-model/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;&lt;a href=&#34;https://openai.com/index/introducing-gpt-oss/&#34;  target=&#34;_blank&#34;&gt;Introducing gpt-oss&lt;/a&gt;&#xA;    &lt;div id=&#34;introducing-gpt-oss&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#introducing-gpt-oss&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I ran a few tests on the 20B parameter&lt;/p&gt;&#xA;&lt;p&gt;Some of the live footage is here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=3aiJN2uGmZk&#34;  target=&#34;_blank&#34;&gt;Reviewing GPT-OSS Model 20B&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/3aiJN2uGmZk&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Overview&#xA;    &lt;div id=&#34;overview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#overview&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;20 and 120 billion parameters&lt;/li&gt;&#xA;&lt;li&gt;June 2024 knowledge cutoff&lt;/li&gt;&#xA;&lt;li&gt;Reasoning (low/medium/high)&lt;/li&gt;&#xA;&lt;li&gt;128k context length (same as gpt-4, llama-3.1, mistral-large)&lt;/li&gt;&#xA;&lt;li&gt;Tool and Function calling&lt;/li&gt;&#xA;&lt;li&gt;Apache 2.0 open source license&lt;/li&gt;&#xA;&lt;li&gt;MXFP4 quantization (runs on 16GB of memory)&lt;/li&gt;&#xA;&lt;li&gt;Uses &lt;a href=&#34;https://cookbook.openai.com/articles/openai-harmony&#34;  target=&#34;_blank&#34;&gt;o200k_harmony&lt;/a&gt; tokenizer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Quirky Prompts&#xA;    &lt;div id=&#34;quirky-prompts&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#quirky-prompts&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Give a number between 1 and 100&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;42&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Just Fucking use kubernetes</title>
+      <link>/posts/just-fucking-use-kubernetes/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/just-fucking-use-kubernetes/</guid>
+      <description>&lt;p&gt;Just fucking use Kubernetes - &lt;a href=&#34;https://waylonwalker.com/just-fucking-use-kubernetes/&#34;  target=&#34;_blank&#34;&gt;https://waylonwalker.com/just-fucking-use-kubernetes/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This is the opposite post of &lt;a href=&#34;https://sliplane.io/blog/kubernetes-isnt-for-you&#34;  target=&#34;_blank&#34;&gt;this&lt;/a&gt;, that I shared my thoughts on &lt;a href=&#34;https://www.meetgor.com/thoughts/kubernetes-isn-t-for-you/&#34;  target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I had mostly agreed to not use Kubernetes, of course I stated it depends. And this post just perfectly summarizes what those conditions of when to use kubernetes are.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You need to scale on day 1 (your app is small but not your ambitions)&lt;/li&gt;&#xA;&lt;li&gt;Reliability and Rollback&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Yes, those are very specific requirements to use kubernetes. But those are not just 2 needs, there are more and even I don&amp;rsquo;t know when can you pull the trigger to shift to kubernetes.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes isn&#39;t for you</title>
+      <link>/posts/kubernetes-isn-t-for-you/</link>
+      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/kubernetes-isn-t-for-you/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sliplane.io/blog/kubernetes-isnt-for-you&#34;  target=&#34;_blank&#34;&gt;https://sliplane.io/blog/kubernetes-isnt-for-you&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;dev.to link: &lt;a href=&#34;https://dev.to/code42cate/kubernetes-isnt-for-you-2c2m&#34;  target=&#34;_blank&#34;&gt;https://dev.to/code42cate/kubernetes-isnt-for-you-2c2m&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Kubernetes isn&amp;rsquo;t for you&#xA;    &lt;div id=&#34;kubernetes-isnt-for-you&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#kubernetes-isnt-for-you&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I almost agree with this, if your end goal is to get an app or product up and running as fast as possible.&lt;/p&gt;&#xA;&lt;p&gt;The post rightly mentioned the points that come in the way of deployment:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Complexity and Learning curve&lt;/li&gt;&#xA;&lt;li&gt;Managing the platform instead of building the product&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I think these two are good enough reasons to not use Kubernetes.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>A draft post</title>
+      <link>/posts/a-draft-post/</link>
+      <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/a-draft-post/</guid>
+      <description>&lt;p&gt;Hello, this is a draft post&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>I kind of hate Agentic IDEs for the sake of productivity</title>
+      <link>/posts/i-kind-of-hate-agentic-ides-for-the-sake-of-productivity/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/i-kind-of-hate-agentic-ides-for-the-sake-of-productivity/</guid>
+      <description>&lt;p&gt;This is May 2025, we are halfway through 2025. And tech world has gone a 180-degree turn in how developers are working. With the rise of Agentic IDEs (yes, that is a deliberate buzzword, I am using) like Windsurf, Cursor, Lovable, Bolt, Claude code, Warp, Amp code, whatever agent in the loop.&lt;/p&gt;&#xA;&lt;p&gt;I am not saying any of those are good or bad, they have their own quirks and preferences. Just like I love Vim and you hate it, or loving VS Co**. Maybe that war would happen to some extent, but developers, we are in crisis. No time to have text-editor wars. Because the craft is at stake.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Appwrite is now Full-Stack-as-a-Service with Sites</title>
+      <link>/posts/appwrite-launches-sites-hosting/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/appwrite-launches-sites-hosting/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;What is (was) Appwrite&#xA;    &lt;div id=&#34;what-is-was-appwrite&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-is-was-appwrite&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Appwrite started out as a Backend-as-a-Service (BaaS) and in many ways, it still is. It offered things like databases, authentication, file storage, and cloud functions, basically the complexity of backend for an application. One of its biggest strengths? It’s fully open source and self-hostable!&lt;/p&gt;&#xA;&lt;p&gt;This was Appwrite ages ago, but today, they are not just Backend as a service, they now have &lt;a href=&#34;https://appwrite.io/blog/post/announcing-appwrite-sites&#34;  target=&#34;_blank&#34;&gt;sites&lt;/a&gt;, you can deploy single page applications to Appwrite. And that is the MOAT of Appwrite, Appwrite quietly emerged as a powerful contender behind the likes of Vercel and in just a few years, it’s become a compelling all-in-one stack.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Robots Generate, Humans Manifest</title>
+      <link>/posts/robots-generate-humans-manifest/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/robots-generate-humans-manifest/</guid>
+      <description>&lt;p&gt;To,&lt;br&gt;&#xA;New Graduates or Students (or whoever is scared of AI)&lt;/p&gt;&#xA;&lt;p&gt;You’ve probably noticed the AI buzz lately, the chatbots, image generators, and tools that seem to do everything. If you haven’t, good for you! It means you’re not glued to your phone, and that’s a win. But for those who’ve felt the hype or the creep, it’s hard to ignore. People are shouting about an AI revolution, some with awe, others with warnings. It’s changing things fast, and I want to share what I see as a junior software developer living in this wild moment. However, if you had heard about it, surely you would have felt the creep.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Friction is necessary in our lives, more the solutions, more the problems.</title>
+      <link>/posts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/</guid>
+      <description>&lt;p&gt;LINK: &lt;a href=&#34;https://cassidoo.co/post/introduce-friction/&#34;&gt;https://cassidoo.co/post/introduce-friction&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I agree to this post, when I didn&#39;t had the phone, I was much creative, much more bored.&#xA;I don&#39;t know if it was just that or it feels life was filled with much more satisfaction and bonding.&lt;/p&gt;&#xA;&lt;p&gt;People including me have become a bit too distant, too focused on productivity. There are too many things to serve ourselves with, reducing the interactions, the wait, the memories.&lt;/p&gt;&#xA;&lt;p&gt;Yes, we need to bring friction back in our lives.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Zellij Open Scrollback Edit mode</title>
+      <link>/posts/zellij-scrollback-edit-mode/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/zellij-scrollback-edit-mode/</guid>
+      <description>&lt;p&gt;I was looking at a long list of logs, (debugging of course).&lt;/p&gt;&#xA;&lt;p&gt;I had a list of transactions&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Two lists of transactions, one as ground truth and other as predicted.  Transactions is a list of object(dictionary or map), each object has fields like date, amount, description, etc.&lt;/li&gt;&#xA;&lt;li&gt;Those objects in a list need not necessarily be in order, however I do want to compare them, how to do that?&lt;/li&gt;&#xA;&lt;li&gt;I decided to sort them based on date(one field in that object).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Then for each date, I group the transactions and this would narrow down the search space for comparison of one-one transaction, since now I can compare which of the ones are closely matching, the date will be a exact match the amount should also be, the description can be fuzzily matched.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>https://evolveasdev.com/blogs/guide/learn-go-templates-a-practical-guide-to-layouts-data-binding-and-rendering</title>
+      <link>/posts/https-evolveasdev-com-blogs-guide-learn-go-templates-a-practical-guide-to-layouts-data-binding-and-rendering/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/https-evolveasdev-com-blogs-guide-learn-go-templates-a-practical-guide-to-layouts-data-binding-and-rendering/</guid>
+      <description>&lt;p&gt;A well written and concise guide on template parsing with golang.&lt;br&gt;&#xA;I used to get confused with parsing and rendering the template, this makes it really clear by showing bit-sized examples.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Using custom functions is a high-value tip, I can see myself using those for string-related functions like title case, stringify, date parsing, etc.&lt;/li&gt;&#xA;&lt;li&gt;Another great example is the templates, we can create partials for reusability.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Must read for golang beginners.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>youre screwed unless you take action</title>
+      <link>/posts/dear-student-yes-ai-is-here-you-re-screwed-unless-you-take-action/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/dear-student-yes-ai-is-here-you-re-screwed-unless-you-take-action/</guid>
+      <description>&lt;p&gt;Interesting read,&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;If you graduated last year and are entering the workforce this year, then it doesn&amp;rsquo;t unless you take action. It&amp;rsquo;s a COVID19 moment in life again.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;have edge over others&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;Understand that time is on your side if you take action. You have about a year, maybe less. Whatever you do - do not squander it. Your edge right now is a large majority of software engineers have not discovered what you have. When they do - it&amp;rsquo;s game over unless you have an edge.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>python is tactile</title>
+      <link>/posts/python-is-tactile/</link>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python-is-tactile/</guid>
+      <description>&lt;p&gt;Python is tactile&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
