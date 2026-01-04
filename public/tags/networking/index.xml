@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Networking on Notes</title><link>/tags/networking/</link><description>Recent content in Networking on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 15:49:51 +0530</lastBuildDate><atom:link href="/tags/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>Basics of curl command</title><link>/posts/curl-basics/</link><pubDate>Fri, 05 Nov 2021 20:50:00 +0530</pubDate><guid>/posts/curl-basics/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;We all might have used the curl command but might be unaware of it. It&amp;rsquo;s super old&lt;br&gt;
+and still serves a great purpose. It has been available since 1996 and still is&lt;br&gt;
+widely used in many embedded technologies, web API testing, CLI applications,&lt;br&gt;
+etc. In this article, we&amp;rsquo;ll see some basics of using the curl command along with&lt;br&gt;
+its applications.&lt;/p&gt;
+&lt;h2 id="what-is-the-curl-command"&gt;What is the curl command?&lt;/h2&gt;
+&lt;p&gt;Curl or cURL command is the utility or tool to access the internet from the command&lt;br&gt;
+line interface using various protocols. This looks trivial but it can blow up&lt;br&gt;
+your mind! Most people use this tool for fetching and processing the&lt;br&gt;
+data from the servers/internet from their terminal without the browser but&lt;br&gt;
+there is a lot more to it. It is used in various embedded devices for accessing&lt;br&gt;
+the network in a lightweight and accessible way. Let&amp;rsquo;s see how you can use the curl&lt;br&gt;
+command from the very basics.&lt;/p&gt;</description></item></channel></rss>
