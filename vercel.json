@@ -1,5 +1,5 @@
 {
-  "buildCommand": "ls -la public",
+  "buildCommand": "",
   "outputDirectory": "public",
   "framework": null
 }
