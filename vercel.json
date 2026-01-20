@@ -1,8 +1,5 @@
 {
-  "buildCommand": "cd exports && hugo",
+  "buildCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.139.3/hugo_extended_0.139.3_Linux-x86_64.tar.gz | tar xz && ./hugo version && cd exports && ../hugo",
   "outputDirectory": "exports/public",
-  "framework": null,
-  "env": {
-    "HUGO_VERSION": "0.139.3"
-  }
+  "framework": null
 }
