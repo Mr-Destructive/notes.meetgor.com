@@ -34,14 +34,14 @@ jobs:
         run: |
           if [ -d "exports/content/posts" ]; then
             count=$(find exports/content/posts -name "*.md" | wc -l)
-            echo "✓ Exported $count posts"
+            echo "[OK] Exported $count posts"
             ls -la exports/content/posts/
             if [ "$count" -eq 0 ]; then
-              echo "⚠ Warning: No posts exported from Turso. This might indicate a connection issue."
-              echo "  Will use existing posts if available."
+              echo "[WARN] No posts exported from Turso. This might indicate a connection issue."
+              echo "       Will use existing posts if available."
             fi
           else
-            echo "⚠ No posts exported"
+            echo "[WARN] No posts exported"
           fi
 
       - name: Commit and push changes
@@ -62,26 +62,26 @@ jobs:
           hugo-version: '0.154.0'
           extended: true
 
-      - name: Backup current public directory
+      - name: Backup current exports/public directory
         run: |
-          cp -r public public.backup 2>/dev/null || true
-          echo "✓ Backed up current public directory"
+          cp -r exports/public exports/public.backup 2>/dev/null || true
+          echo "[OK] Backed up current exports/public directory"
 
       - name: Build Hugo site
         run: |
           cd exports
-          hugo --minify --destination ../public
-          echo "✓ Built $(find ../public -name '*.html' | wc -l) HTML files"
+          hugo --minify
+          echo "[OK] Built $(find public -name '*.html' | wc -l) HTML files"
       
       - name: Verify posts page was generated
         run: |
-          if [ ! -f "public/posts/index.html" ] || [ ! -s "public/posts/index.html" ]; then
-            echo "⚠ Posts page is empty or missing, restoring from backup"
-            if [ -f "public.backup/posts/index.html" ]; then
-              cp public.backup/posts/index.html public/posts/index.html
-              echo "✓ Restored posts page from backup"
+          if [ ! -f "exports/public/posts/index.html" ] || [ ! -s "exports/public/posts/index.html" ]; then
+            echo "[WARN] Posts page is empty or missing, restoring from backup"
+            if [ -f "exports/public.backup/posts/index.html" ]; then
+              cp exports/public.backup/posts/index.html exports/public/posts/index.html
+              echo "[OK] Restored posts page from backup"
             else
-              echo "ERROR: Cannot restore posts page, no backup available"
+              echo "[ERROR] Cannot restore posts page, no backup available"
               exit 1
             fi
           fi
@@ -90,9 +90,9 @@ jobs:
         run: |
           git config user.name "Blog Sync Bot"
           git config user.email "bot@blog.local"
-          git add public/
+          git add exports/public/
           if git diff --cached --quiet; then
-            echo "No changes to public/"
+            echo "No changes to exports/public/"
           else
             git commit -m "Build: update site with latest posts"
             git pull --rebase
