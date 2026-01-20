@@ -1,5 +1,6 @@
 package main
 
+// CMS with fetch metadata button for newsletters
 import (
 	"context"
 	"database/sql"
