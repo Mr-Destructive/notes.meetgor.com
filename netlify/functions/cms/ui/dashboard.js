@@ -68,24 +68,34 @@ function renderPosts() {
     container.innerHTML = `
         <div class="posts-list">
             ${filtered.map(post => `
-                <div class="post-item ${post.status || 'draft'}" onclick="editPost('${post.id}')">
-                    <div class="post-info">
-                        <h3>${escapeHtml(post.title)}</h3>
-                        <div class="post-meta">
-                            <span class="post-status ${post.status || 'draft'}">
-                                ${post.status || 'draft'}
-                            </span>
-                            <span>${post.type_id || 'article'}</span>
-                            <span>${formatDate(post.created_at)}</span>
-                            ${post.updated_at && post.updated_at !== post.created_at ? `
-                                <span>Updated: ${formatDate(post.updated_at)}</span>
-                            ` : ''}
+                <div class="post-item ${post.status || 'draft'}">
+                    <div class="post-item-header">
+                        <div>
+                            <h3>
+                                <span class="post-type-badge ${post.type_id || 'article'}">${post.type_id || 'article'}</span>
+                                ${escapeHtml(post.title || 'Untitled')}
+                            </h3>
+                            <div class="post-meta">
+                                <span class="post-status ${post.status || 'draft'}">
+                                    ${post.status || 'draft'}
+                                </span>
+                                <span>${formatDate(post.created_at)}</span>
+                                ${post.updated_at && post.updated_at !== post.created_at ? `
+                                    <span>Updated: ${formatDate(post.updated_at)}</span>
+                                ` : ''}
+                            </div>
+                        </div>
+                        <div class="post-item-actions" onclick="event.stopPropagation()">
+                            <button class="action-btn" onclick="viewPost('${post.id}')">View</button>
+                            <button class="action-btn" onclick="editPost('${post.id}')">Edit</button>
+                            <button class="action-btn delete" onclick="deletePost('${post.id}')">Delete</button>
                         </div>
                     </div>
-                    <div class="post-actions" onclick="event.stopPropagation()">
-                        <button class="action-btn" onclick="editPost('${post.id}')">Edit</button>
-                        <button class="action-btn delete" onclick="deletePost('${post.id}')">Delete</button>
+                    ${post.excerpt || post.content ? `
+                    <div class="post-item-preview">
+                        ${escapeHtml((post.excerpt || post.content || '').substring(0, 200))}...
                     </div>
+                    ` : ''}
                 </div>
             `).join('')}
         </div>
@@ -142,6 +152,10 @@ function filterPosts(status) {
     event.target.classList.add('active');
 
     renderPosts();
+}
+
+async function viewPost(postId) {
+    navigateTo(`/view?id=${postId}`);
 }
 
 async function editPost(postId) {

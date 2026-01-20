@@ -1,5 +1,8 @@
 {
-  "buildCommand": "",
-  "outputDirectory": "public",
-  "framework": null
+  "buildCommand": "cd exports && hugo",
+  "outputDirectory": "exports/public",
+  "framework": null,
+  "env": {
+    "HUGO_VERSION": "0.139.3"
+  }
 }

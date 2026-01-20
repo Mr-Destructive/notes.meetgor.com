@@ -9,10 +9,10 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #f5f5f5;
-            padding: 20px;
+            padding: 10px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 8px;
@@ -20,36 +20,62 @@
             overflow: hidden;
         }
         .header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .header h1 { font-size: 24px; }
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #95a5a6;
+        }
+        .status-dot.saved { background: #27ae60; }
+        .status-dot.saving { background: #f39c12; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
         .logout-btn {
             background: #e74c3c;
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
         }
         .logout-btn:hover { background: #c0392b; }
+        .logout-btn.secondary {
+            background: #3498db;
+        }
+        .logout-btn.secondary:hover {
+            background: #2980b9;
+        }
 
         .content {
             display: grid;
-            grid-template-columns: 1fr 300px;
+            grid-template-columns: 1fr 320px;
             gap: 20px;
             padding: 20px;
+            height: calc(100vh - 200px);
         }
 
         .editor-section {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            overflow-y: auto;
         }
 
         .form-group {
@@ -61,27 +87,30 @@
         .form-group label {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 14px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
             font-family: inherit;
             font-size: 14px;
             background-color: white;
+            transition: border-color 0.2s;
         }
 
         .form-group select {
             appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
             background-repeat: no-repeat;
-            background-position: right 8px center;
-            background-size: 20px;
-            padding-right: 32px;
+            background-position: right 12px center;
+            background-size: 18px;
+            padding-right: 36px;
         }
 
         .form-group input:focus,
@@ -103,17 +132,19 @@
             gap: 10px;
             padding: 15px;
             background: #f9f9f9;
-            border-bottom: 1px solid #eee;
+            border-radius: 6px;
+            border: 1px solid #eee;
             flex-wrap: wrap;
         }
 
         .editor-toolbar button {
-            padding: 8px 16px;
+            padding: 10px 16px;
             border: 1px solid #ddd;
             border-radius: 4px;
             background: white;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: 500;
             transition: all 0.2s;
         }
 
@@ -133,45 +164,54 @@
             background: #229954;
         }
 
+        .editor-toolbar button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         .sidebar {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            overflow-y: auto;
         }
 
         .sidebar-section {
             background: #f9f9f9;
             padding: 15px;
-            border-radius: 4px;
+            border-radius: 6px;
             border: 1px solid #eee;
         }
 
         .sidebar-section h3 {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
             color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .tags-input {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 8px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
             background: white;
+            min-height: 40px;
         }
 
         .tag {
             background: #3498db;
             color: white;
-            padding: 4px 8px;
-            border-radius: 3px;
+            padding: 4px 10px;
+            border-radius: 4px;
             font-size: 12px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
         .tag button {
@@ -181,12 +221,22 @@
             cursor: pointer;
             padding: 0;
             font-size: 16px;
+            line-height: 1;
         }
 
         .alert {
-            padding: 15px;
-            border-radius: 4px;
+            padding: 12px 15px;
+            border-radius: 6px;
             margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .alert.error {
@@ -201,15 +251,82 @@
             border: 1px solid #27ae60;
         }
 
+        .alert.info {
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #1976d2;
+        }
+
+        .alert-icon {
+            flex-shrink: 0;
+        }
+
         .form-group label input[type="checkbox"] {
             margin-right: 8px;
             cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .type-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 1024px) {
+            .header h1 { font-size: 20px; }
+            .content {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .sidebar {
+                max-height: 400px;
+            }
         }
 
         @media (max-width: 768px) {
-            .content {
-                grid-template-columns: 1fr;
+            body { padding: 5px; }
+            .header {
+                padding: 12px 15px;
+                flex-direction: column;
+                align-items: flex-start;
             }
+            .header h1 { font-size: 18px; }
+            .content {
+                padding: 15px;
+                gap: 15px;
+            }
+            .editor-toolbar {
+                padding: 12px;
+                gap: 8px;
+            }
+            .editor-toolbar button {
+                padding: 8px 12px;
+                font-size: 12px;
+                flex: 1;
+                min-width: 70px;
+            }
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container { border-radius: 0; }
+            .header { padding: 10px 12px; }
+            .header h1 { font-size: 16px; }
+            .content { padding: 12px; gap: 12px; }
+            .editor-toolbar button { padding: 6px 10px; font-size: 11px; }
+            .sidebar-section { padding: 12px; }
         }
     </style>
 </head>
@@ -220,9 +337,15 @@
     </script>
     <div class="container">
         <div class="header">
-            <h1>📝 Blog Editor</h1>
-            <div style="display: flex; gap: 10px;">
-                <button class="logout-btn" style="background: #3498db;" onclick="window.location.href='/dashboard'">← Dashboard</button>
+            <div>
+                <h1>Blog Editor</h1>
+                <span class="header-status">
+                    <span class="status-dot saved" id="statusDot"></span>
+                    <span id="statusText">Ready</span>
+                </span>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button class="logout-btn secondary" onclick="window.location.href='/dashboard'">[Back] Dashboard</button>
                 <button class="logout-btn" onclick="logout()">Logout</button>
             </div>
         </div>
@@ -265,20 +388,25 @@
                     <textarea id="excerpt" placeholder="Short summary (optional)" rows="3"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label for="content">Content *</label>
-                    <textarea id="content" placeholder="Post content..." style="min-height: 400px;"> </textarea>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                    <div class="form-group">
+                        <label for="content">Content (Markdown) *</label>
+                        <textarea id="content" placeholder="Write in markdown..." style="min-height: 300px; font-family: 'Monaco', 'Menlo', monospace;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Preview (HTML)</label>
+                        <div id="preview" style="border: 2px solid #e0e0e0; border-radius: 6px; padding: 15px; min-height: 300px; overflow-y: auto; background: #fafafa; font-size: 14px; line-height: 1.6;"></div>
+                    </div>
                 </div>
 
                 <div id="typeSpecificFields"></div>
 
                 <div class="editor-toolbar">
-                    <button type="button" class="primary" onclick="savePost()">💾 Save as Draft</button>
+                    <button type="button" class="primary" onclick="saveDraft()">Save as Draft</button>
                     <button type="button" class="primary" onclick="publishPost()" style="background: #e74c3c; border-color: #e74c3c;">
-                        🚀 Publish
+                        Publish
                     </button>
-                    <button type="button" onclick="previewPost()">👁️ Preview</button>
-                    <button type="button" onclick="resetForm()">↺ Reset</button>
+                    <button type="button" onclick="resetForm()">Reset</button>
                 </div>
             </div>
 
@@ -308,6 +436,14 @@
                             <input type="checkbox" id="isFeatured">
                             Featured Post
                         </label>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Post Info</h3>
+                    <div id="postInfo" style="font-size: 12px; color: #666;">
+                        <div>Created: <span id="createdDate">Not saved</span></div>
+                        <div style="margin-top: 5px;">Updated: <span id="updatedDate">Not saved</span></div>
                     </div>
                 </div>
 

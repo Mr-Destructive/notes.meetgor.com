@@ -124,7 +124,7 @@ func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRes
 	}
 	
 	// Serve UI files for legacy routes
-	if fullPath == "login" || fullPath == "dashboard" || fullPath == "editor" || 
+	if fullPath == "login" || fullPath == "dashboard" || fullPath == "editor" || fullPath == "view" ||
 	   fullPath == "editor.js" || fullPath == "dashboard.js" {
 		return serveUI(fullPath)
 	}
@@ -214,6 +214,8 @@ func lambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRes
 		return handleTags(req, ctx, queries)
 	case "exports":
 		return handleExports(req, ctx, queries, id)
+	case "metadata":
+		return handleMetadata(req, ctx)
 	default:
 		return respondError(404, "Resource not found"), nil
 	}
@@ -1495,6 +1497,9 @@ func serveUI(page string) (events.APIGatewayProxyResponse, error) {
 	case "editor.js":
 		filename = "ui/editor.js"
 		contentType = "application/javascript; charset=utf-8"
+	case "view":
+		filename = "ui/view.html"
+		contentType = "text/html; charset=utf-8"
 	case "login", "":
 		filename = "ui/login.html"
 		contentType = "text/html; charset=utf-8"
@@ -1516,6 +1521,44 @@ func serveUI(page string) (events.APIGatewayProxyResponse, error) {
 			"Access-Control-Allow-Origin": "*",
 		},
 	}, nil
+}
+
+// handleMetadata handles URL metadata extraction
+func handleMetadata(req events.APIGatewayProxyRequest, ctx context.Context) (events.APIGatewayProxyResponse, error) {
+	if req.HTTPMethod != "GET" {
+		return respondError(405, "Method not allowed"), nil
+	}
+
+	// Require auth
+	token := ""
+	if authHeader, ok := req.Headers["Authorization"]; ok {
+		token = strings.TrimPrefix(authHeader, "Bearer ")
+	}
+	if token == "" {
+		return respondError(401, "Unauthorized"), nil
+	}
+
+	// Get URL from query params
+	url := req.QueryStringParameters["url"]
+	if url == "" {
+		return respondError(400, "Missing url parameter"), nil
+	}
+
+	// Validate URL
+	if !strings.HasPrefix(url, "http://") && !strings.HasPrefix(url, "https://") {
+		url = "https://" + url
+	}
+
+	// Fetch metadata
+	metadata := fetchPageMetadata(url)
+
+	// Return enhanced metadata response
+	return respondJSON(200, map[string]interface{}{
+		"title":       metadata.Title,
+		"description": metadata.Description,
+		"image":       metadata.Image,
+		"url":         url,
+	}), nil
 }
 
 // Helper functions

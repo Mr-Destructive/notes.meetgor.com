@@ -2,6 +2,49 @@
 let currentPostId = null;
 let tags = [];
 let isEditMode = false;
+let autoSaveInterval = null;
+let isDirty = false;
+let isSaving = false;
+
+// Simple markdown to HTML converter
+function markdownToHtml(markdown) {
+  if (!markdown) return '';
+  
+  let html = markdown
+    // Headers
+    .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.*?)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.*?)$/gm, '<h1>$1</h1>')
+    // Bold
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/__（.*?)__/g, '<strong>$1</strong>')
+    // Italic
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/_(.*?)_/g, '<em>$1</em>')
+    // Links
+    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
+    // Code blocks
+    .replace(/```(.*?)```/gs, '<pre><code>$1</code></pre>')
+    // Inline code
+    .replace(/`(.*?)`/g, '<code>$1</code>')
+    // Line breaks
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>');
+  
+  // Wrap in paragraphs
+  if (html && !html.startsWith('<h') && !html.startsWith('<pre')) {
+    html = '<p>' + html + '</p>';
+  }
+  
+  return html;
+}
+
+// Update preview as user types
+function updatePreview() {
+  const content = document.getElementById('content').value;
+  const preview = document.getElementById('preview');
+  preview.innerHTML = markdownToHtml(content);
+}
 
 // Post type templates with required fields
 const POST_TEMPLATES = {
@@ -18,7 +61,7 @@ const POST_TEMPLATES = {
     description: 'Review of a book, movie, or product'
   },
   thought: {
-    fields: [],
+    fields: ['source_url'],
     titleRequired: false,
     contentRequired: true,
     description: 'Quick thoughts and reflections'
@@ -84,6 +127,23 @@ const POST_TEMPLATES = {
     description: 'Experiment or project'
   }
 };
+
+// Fetch metadata from URL
+async function fetchUrlMetadata(url) {
+  try {
+    const response = await fetch(`${window.API_URL}/metadata?url=${encodeURIComponent(url)}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
+      }
+    });
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch (e) {
+    console.warn('Could not fetch metadata:', e);
+  }
+  return null;
+}
 
 function changePostType() {
   const type = document.getElementById('postType').value;
@@ -157,8 +217,8 @@ function changePostType() {
         `;
       } else if (field === 'source_url') {
         group.innerHTML = `
-          <label for="${field}">Source URL *</label>
-          <input type="url" id="${field}" placeholder="https://example.com" required onchange="updateTitleFromUrl()">
+          <label for="${field}">Source URL ${(document.getElementById('postType').value === 'link' || document.getElementById('postType').value === 'thought') ? '*' : ''}</label>
+          <input type="url" id="${field}" placeholder="https://example.com" onchange="updateFromUrl()" onblur="updateFromUrl()">
         `;
       } else {
         group.innerHTML = `
@@ -172,6 +232,8 @@ function changePostType() {
     
     container.appendChild(section);
   }
+  
+  markDirty();
 }
 
 function formatFieldName(field) {
@@ -181,24 +243,70 @@ function formatFieldName(field) {
     .join(' ');
 }
 
-function updateTitleFromUrl() {
+async function updateFromUrl() {
   const type = document.getElementById('postType').value;
-  if (type === 'link') {
-    const sourceUrl = document.getElementById('source_url')?.value;
-    if (sourceUrl && !document.getElementById('title').value) {
-      try {
-        const url = new URL(sourceUrl);
-        // Try to extract a meaningful title from the URL
-        const hostname = url.hostname.replace('www.', '');
-        const pathname = url.pathname.split('/').filter(p => p).pop() || hostname;
-        document.getElementById('title').value = pathname
-          .replace(/[-_]/g, ' ')
-          .replace(/\.[^.]+$/, '')
-          .replace(/\b\w/g, l => l.toUpperCase());
-      } catch (e) {
-        // Invalid URL, skip auto-titling
+  const sourceUrl = document.getElementById('source_url')?.value;
+  
+  if (!sourceUrl) return;
+  
+  try {
+    const url = new URL(sourceUrl);
+    const title = document.getElementById('title');
+    const excerpt = document.getElementById('excerpt');
+    
+    // Try to fetch metadata from URL
+    showStatus('Fetching metadata...', 'info');
+    const metadata = await fetchUrlMetadata(sourceUrl);
+    
+    if (metadata) {
+      // Auto-fill title if empty
+      if (!title.value && metadata.title) {
+        title.value = metadata.title;
       }
+      
+      // Auto-fill excerpt if empty
+      if (!excerpt.value && metadata.description) {
+        excerpt.value = metadata.description;
+      }
+      
+      // Store author info in metadata
+      if (metadata.author && !document.getElementById('author')?.value) {
+        const authorField = document.getElementById('author');
+        if (authorField) {
+          authorField.value = metadata.author;
+        }
+      }
+      
+      showStatus('Metadata loaded', 'success');
+    } else {
+      // Fallback: extract title from hostname
+      const hostname = url.hostname.replace('www.', '');
+      if (!title.value) {
+        title.value = hostname.charAt(0).toUpperCase() + hostname.slice(1);
+      }
+      showStatus('Using domain name as title', 'info');
     }
+    
+    // Auto-generate slug from URL if not set
+    if (!document.getElementById('slug').value) {
+      document.getElementById('slug').value = generateSlugFromUrl(url);
+    }
+  } catch (e) {
+    console.warn('Error parsing URL:', e);
+  }
+}
+
+function generateSlugFromUrl(url) {
+  try {
+    const pathname = url.pathname.split('/').filter(p => p).pop() || url.hostname.replace('www.', '');
+    return pathname
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim();
+  } catch (e) {
+    return '';
   }
 }
 
@@ -215,11 +323,13 @@ function addTag() {
   tags.push(tag);
   input.value = '';
   renderTags();
+  markDirty();
 }
 
 function removeTag(tag) {
   tags = tags.filter(t => t !== tag);
   renderTags();
+  markDirty();
 }
 
 function renderTags() {
@@ -242,27 +352,24 @@ function getMetadata() {
       const input = document.getElementById(field);
       if (input) {
         if (field === 'items') {
-          // Split items by newline and filter empty
           const items = input.value
             .split('\n')
             .map(i => i.trim())
             .filter(i => i);
           if (items.length > 0) {
-            metadata.items = items;
+            metadata[field] = items;
           }
-        } else if (field === 'is_private') {
-          metadata.is_private = input.checked;
         } else if (field === 'tools') {
-          // Handle comma-separated tools
           const tools = input.value
             .split(',')
             .map(t => t.trim())
             .filter(t => t);
           if (tools.length > 0) {
-            metadata.tools = tools;
+            metadata[field] = tools;
           }
+        } else if (field === 'is_private') {
+          metadata[field] = input.checked;
         } else if (input.value) {
-          // Only add non-empty fields
           metadata[field] = input.value;
         }
       }
@@ -272,20 +379,37 @@ function getMetadata() {
   return metadata;
 }
 
-async function savePost() {
-  const type = document.getElementById('postType').value;
-  const template = POST_TEMPLATES[type];
+function generateUniqueId() {
+  return `draft-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+}
+
+async function saveDraft() {
   const title = document.getElementById('title').value.trim();
   const content = document.getElementById('content').value.trim();
+  const type = document.getElementById('postType').value;
+  
+  if (!content && !title) {
+    showAlert('Add at least some content or a title', 'error');
+    return;
+  }
+  
+  await performSave(false);
+}
+
+async function publishPost() {
+  const type = document.getElementById('postType').value;
+  const title = document.getElementById('title').value.trim();
+  const content = document.getElementById('content').value.trim();
+  const template = POST_TEMPLATES[type];
   
   // Validate required fields
   if (template.titleRequired && !title) {
-    showAlert('Title is required for this post type', 'error');
+    showAlert('Title is required to publish', 'error');
     return;
   }
   
   if (template.contentRequired && !content) {
-    showAlert('Content is required for this post type', 'error');
+    showAlert('Content is required to publish', 'error');
     return;
   }
 
@@ -298,16 +422,46 @@ async function savePost() {
     }
   }
   
+  await performSave(true);
+}
+
+async function performSave(isPublish = false) {
+  if (isSaving) return;
+  
+  isSaving = true;
+  updateStatus('saving');
+  
+  const type = document.getElementById('postType').value;
+  const title = document.getElementById('title').value.trim();
+  const slug = document.getElementById('slug').value.trim();
+  
+  // Auto-generate slug if missing
+  let finalSlug = slug;
+  if (!finalSlug) {
+    if (title) {
+      finalSlug = generateSlug(title);
+    } else {
+      // Use unique ID for untitled drafts
+      finalSlug = generateUniqueId();
+    }
+  }
+  
+  // Update title with unique ID if it's a new draft without title
+  let finalTitle = title;
+  if (!finalTitle && !isPublish && !isEditMode) {
+    finalTitle = `Draft ${generateUniqueId().slice(6, 13)}`;
+  }
+  
   const postData = {
     type_id: type,
-    title: title || null,
-    slug: document.getElementById('slug').value || generateSlug(title || 'untitled'),
+    title: finalTitle || null,
+    slug: finalSlug,
     excerpt: document.getElementById('excerpt').value.trim() || null,
-    content: content || null,
-    status: 'draft',
+    content: document.getElementById('content').value.trim() || null,
+    status: isPublish ? 'published' : 'draft',
     tags: tags,
     metadata: getMetadata(),
-    is_featured: false
+    is_featured: document.getElementById('isFeatured').checked
   };
   
   try {
@@ -333,77 +487,82 @@ async function savePost() {
     const data = await response.json();
     currentPostId = data.id;
     isEditMode = true;
-    showAlert('✓ Post saved as draft', 'success');
+    
+    // Update slug and title in form
+    document.getElementById('slug').value = data.slug;
+    document.getElementById('title').value = data.title;
+    
+    isDirty = false;
+    updateStatus('saved');
+    
+    if (isPublish) {
+      showAlert('Post published successfully', 'success');
+    } else {
+      showAlert('Draft saved', 'success');
+    }
   } catch (error) {
+    updateStatus('error');
     showAlert(error.message || 'Save failed', 'error');
+  } finally {
+    isSaving = false;
   }
 }
 
-async function publishPost() {
-  const type = document.getElementById('postType').value;
-  const template = POST_TEMPLATES[type];
-  const title = document.getElementById('title').value.trim();
-  const content = document.getElementById('content').value.trim();
-  
-  // Validate required fields
-  if (template.titleRequired && !title) {
-    showAlert('Title is required to publish', 'error');
-    return;
-  }
-  
-  if (template.contentRequired && !content) {
-    showAlert('Content is required to publish', 'error');
-    return;
-  }
+function markDirty() {
+  isDirty = true;
+  updateStatus('unsaved');
+}
 
-  // For link posts, require source_url
-  if (type === 'link') {
-    const sourceUrl = document.getElementById('source_url')?.value;
-    if (!sourceUrl) {
-      showAlert('Source URL is required for link posts', 'error');
-      return;
-    }
-  }
+function updateStatus(status) {
+  const dot = document.getElementById('statusDot');
+  const text = document.getElementById('statusText');
   
-  const postData = {
-    type_id: type,
-    title: title || null,
-    slug: document.getElementById('slug').value || generateSlug(title || 'untitled'),
-    excerpt: document.getElementById('excerpt').value.trim() || null,
-    content: content || null,
-    status: 'published',
-    tags: tags,
-    metadata: getMetadata(),
-    is_featured: document.getElementById('isFeatured').checked
+  if (!dot || !text) return;
+  
+  dot.className = 'status-dot';
+  
+  switch (status) {
+    case 'saved':
+      dot.classList.add('saved');
+      text.textContent = 'Saved';
+      break;
+    case 'saving':
+      dot.classList.add('saving');
+      text.textContent = 'Saving...';
+      break;
+    case 'unsaved':
+      text.textContent = 'Unsaved changes';
+      break;
+    case 'error':
+      dot.style.background = '#e74c3c';
+      text.textContent = 'Error saving';
+      break;
+    default:
+      dot.classList.add('saved');
+      text.textContent = 'Ready';
+  }
+}
+
+function showAlert(message, type) {
+  const alert = document.getElementById('alert');
+  
+  const prefixes = {
+    success: '[OK]',
+    error: '[ERROR]',
+    info: '[INFO]'
   };
   
-  try {
-    const token = localStorage.getItem('auth_token');
-    const url = currentPostId 
-      ? `${window.API_URL}/posts/${currentPostId}`
-      : `${window.API_URL}/posts`;
-    
-    const response = await fetch(url, {
-      method: currentPostId ? 'PUT' : 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify(postData)
-    });
-    
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.error || 'Publish failed');
-    }
-    
-    const data = await response.json();
-    currentPostId = data.id;
-    isEditMode = true;
-    showAlert('🚀 Post published!', 'success');
-  } catch (error) {
-    showAlert(error.message || 'Publish failed', 'error');
-  }
+  alert.className = `alert ${type}`;
+  alert.innerHTML = `<span class="alert-icon">${prefixes[type] || ''}</span> <span>${escapeHtml(message)}</span>`;
+  
+  setTimeout(() => {
+    alert.textContent = '';
+    alert.className = '';
+  }, 4000);
+}
+
+function showStatus(message, type) {
+  showAlert(message, type || 'info');
 }
 
 function previewPost() {
@@ -426,7 +585,10 @@ function resetForm() {
     // Clear type-specific fields
     document.getElementById('typeSpecificFields').innerHTML = '';
     
+    isDirty = false;
+    updateStatus('ready');
     showAlert('Form cleared', 'success');
+    updatePreview();
   }
 }
 
@@ -440,16 +602,6 @@ function generateSlug(title) {
     .trim();
 }
 
-function showAlert(message, type) {
-  const alert = document.getElementById('alert');
-  alert.className = `alert ${type}`;
-  alert.textContent = message;
-  setTimeout(() => {
-    alert.textContent = '';
-    alert.className = '';
-  }, 5000);
-}
-
 function escapeHtml(text) {
   const map = {
     '&': '&amp;',
@@ -461,10 +613,53 @@ function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, m => map[m]);
 }
 
+function formatDate(dateString) {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
 function logout() {
   localStorage.removeItem('auth_token');
   window.location.href = '/login';
 }
+
+// Mark form as dirty on any input change
+document.addEventListener('input', (e) => {
+  if (!isSaving) {
+    markDirty();
+  }
+  // Update preview when content changes
+  if (e.target.id === 'content') {
+    updatePreview();
+  }
+});
+
+document.addEventListener('change', () => {
+  if (!isSaving) {
+    markDirty();
+  }
+});
+
+// Auto-save drafts every 5 minutes
+function startAutoSave() {
+  autoSaveInterval = setInterval(() => {
+    if (isDirty && !isSaving) {
+      saveDraft();
+    }
+  }, 5 * 60 * 1000); // 5 minutes
+}
+
+// Stop auto-save on unload
+window.addEventListener('beforeunload', () => {
+  if (autoSaveInterval) clearInterval(autoSaveInterval);
+});
 
 // Check auth on page load
 window.addEventListener('load', async () => {
@@ -484,6 +679,10 @@ window.addEventListener('load', async () => {
   } else {
     changePostType(); // Initialize type-specific fields for new post
   }
+  
+  // Start auto-save
+  startAutoSave();
+  updateStatus('ready');
 });
 
 async function loadPostForEditing(postId) {
@@ -532,9 +731,7 @@ async function loadPostForEditing(postId) {
       try {
         let metadata = {};
         
-        // Handle both string and object metadata
         if (typeof post.metadata === 'string') {
-          // Try to parse if it's a string
           if (post.metadata && post.metadata !== '{}' && !post.metadata.includes('[object Object]')) {
             try {
               metadata = JSON.parse(post.metadata);
@@ -555,11 +752,9 @@ async function loadPostForEditing(postId) {
             const input = document.getElementById(field);
             if (input && metadata[field] !== undefined && metadata[field] !== null) {
               if (field === 'items') {
-                // items should be an array
                 const items = Array.isArray(metadata[field]) ? metadata[field] : [metadata[field]];
                 input.value = items.join('\n');
               } else if (field === 'tools') {
-                // tools should be an array or comma-separated
                 const tools = Array.isArray(metadata[field]) ? metadata[field] : [metadata[field]];
                 input.value = tools.join(', ');
               } else if (field === 'is_private') {
@@ -575,7 +770,21 @@ async function loadPostForEditing(postId) {
       }
     }
 
-    showAlert(`✓ Editing: ${post.title || 'Untitled'}`, 'success');
+    isDirty = false;
+    updateStatus('saved');
+    
+    // Show post info
+    if (post.created_at) {
+      document.getElementById('createdDate').textContent = formatDate(post.created_at);
+    }
+    if (post.updated_at) {
+      document.getElementById('updatedDate').textContent = formatDate(post.updated_at);
+    }
+    
+    // Update preview
+    updatePreview();
+    
+    showAlert('Editing: ' + (post.title || 'Untitled'), 'success');
   } catch (error) {
     showAlert(error.message || 'Failed to load post', 'error');
   }
