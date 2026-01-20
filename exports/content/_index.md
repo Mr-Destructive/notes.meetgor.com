@@ -7,56 +7,50 @@ A collection of technical notes and posts
 
 ## Browse by Type
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+<style>
+.post-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-<a href="/type/post/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">📝</span>
-<strong>Articles & Posts</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(112 posts)</span>
+.post-type-link {
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.post-type-link:hover {
+  border-color: #3b82f6;
+  background-color: #f8fafc;
+}
+
+.post-type-title {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.post-type-count {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+</style>
+
+<div class="post-types">
+<a href="/posts/" class="post-type-link">
+<span class="post-type-title">All Posts</span>
+<span class="post-type-count">Browse all</span>
 </a>
-
-<a href="/type/sqlog/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">🔍</span>
-<strong>SQLog</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(50+ posts)</span>
-</a>
-
-<a href="/type/newsletter/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">📮</span>
-<strong>Newsletter</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(34 posts)</span>
-</a>
-
-<a href="/type/projects/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">🚀</span>
-<strong>Projects</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(14 posts)</span>
-</a>
-
-<a href="/type/til/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">💡</span>
-<strong>TIL</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(12 posts)</span>
-</a>
-
-<a href="/type/work/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">💼</span>
-<strong>Work</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(3 posts)</span>
-</a>
-
-<a href="/type/thoughts/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">🧠</span>
-<strong>Thoughts</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(3 posts)</span>
-</a>
-
-<a href="/type/link/" style="padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor=''">
-<span style="font-size: 2rem;">🔗</span>
-<strong>Links</strong>
-<span style="font-size: 0.875rem; color: #6b7280;">(1 post)</span>
-</a>
-
 </div>
 
-Or view the [complete archive](/posts/)
+Or view by category at `/type/`

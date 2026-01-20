@@ -88,6 +88,9 @@ function renderPosts() {
                         <div class="post-item-actions" onclick="event.stopPropagation()">
                             <button class="action-btn" onclick="viewPost('${post.id}')">View</button>
                             <button class="action-btn" onclick="editPost('${post.id}')">Edit</button>
+                            ${(post.type_id === 'link' || post.type_id === 'thought') && post.metadata ? `
+                            <button class="action-btn fetch" onclick="fetchMetadataForPost('${post.id}')">Fetch</button>
+                            ` : ''}
                             <button class="action-btn delete" onclick="deletePost('${post.id}')">Delete</button>
                         </div>
                     </div>
@@ -234,4 +237,103 @@ function escapeHtml(text) {
         "'": '&#039;'
     };
     return text.replace(/[&<>"']/g, m => map[m]);
+}
+
+async function fetchMetadataForPost(postId) {
+    try {
+        const token = localStorage.getItem('auth_token');
+        
+        // Get the post to extract source_url
+        const getResponse = await fetch(`${API_URL}/posts/${postId}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        
+        if (!getResponse.ok) {
+            throw new Error('Failed to load post');
+        }
+        
+        const post = await getResponse.json();
+        let sourceUrl = null;
+        
+        // Extract source_url from metadata
+        if (post.metadata) {
+            try {
+                const metadata = typeof post.metadata === 'string' ? JSON.parse(post.metadata) : post.metadata;
+                sourceUrl = metadata.source_url;
+            } catch (e) {}
+        }
+        
+        if (!sourceUrl) {
+            showAlert('No source URL found for this post', 'error');
+            return;
+        }
+        
+        // Fetch metadata from the URL
+        showAlert('[INFO] Fetching metadata...', 'info');
+        const metadataResponse = await fetch(`${API_URL}/metadata?url=${encodeURIComponent(sourceUrl)}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        
+        if (!metadataResponse.ok) {
+            throw new Error('Failed to fetch metadata from URL');
+        }
+        
+        const fetchedMetadata = await metadataResponse.json();
+        
+        // Update post with fetched metadata
+        const generateSlug = (title) => {
+            if (!title) return '';
+            return title
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .trim();
+        };
+        
+        const updates = {
+            title: post.title || fetchedMetadata.title || '',
+            slug: post.slug || generateSlug(fetchedMetadata.title || ''),
+            excerpt: post.excerpt || fetchedMetadata.description || ''
+        };
+        
+        // Merge metadata
+        let metadata = {};
+        if (post.metadata) {
+            try {
+                metadata = typeof post.metadata === 'string' ? JSON.parse(post.metadata) : post.metadata;
+            } catch (e) {}
+        }
+        metadata.source_url = sourceUrl;
+        if (fetchedMetadata.title) metadata.title = fetchedMetadata.title;
+        if (fetchedMetadata.description) metadata.description = fetchedMetadata.description;
+        if (fetchedMetadata.author) metadata.author = fetchedMetadata.author;
+        
+        // Update the post
+        const updateResponse = await fetch(`${API_URL}/posts/${postId}`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ...post,
+                ...updates,
+                metadata: metadata
+            })
+        });
+        
+        if (!updateResponse.ok) {
+            throw new Error('Failed to update post');
+        }
+        
+        showAlert('[OK] Metadata fetched and updated', 'success');
+        loadPosts(); // Refresh the post list
+    } catch (error) {
+        showAlert('[ERROR] ' + (error.message || 'Failed to fetch metadata'), 'error');
+    }
 }

@@ -20,21 +20,21 @@
     </item>
     
     <item>
-      <title>Article</title>
-      <link>/type/article/</link>
-      <pubDate>Sat, 03 Jan 2026 12:20:00 +0000</pubDate>
+      <title>Post</title>
+      <link>/type/post/</link>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>/type/article/</guid>
+      <guid>/type/post/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Post</title>
-      <link>/type/post/</link>
-      <pubDate>Wed, 31 Dec 2025 00:15:00 +0000</pubDate>
+      <title>Article</title>
+      <link>/type/article/</link>
+      <pubDate>Sat, 03 Jan 2026 12:20:00 +0000</pubDate>
       
-      <guid>/type/post/</guid>
+      <guid>/type/article/</guid>
       <description></description>
       
     </item>

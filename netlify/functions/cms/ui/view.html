@@ -52,6 +52,14 @@
             background: #2980b9;
         }
 
+        .fetch-button {
+            background: #27ae60;
+        }
+
+        .fetch-button:hover {
+            background: #229954;
+        }
+
         .loading {
             text-align: center;
             padding: 40px;
@@ -308,6 +316,7 @@
         <div class="header">
             <h1>View Post</h1>
             <div class="header-nav">
+                <button class="fetch-button" id="fetchBtn" style="display:none;" onclick="fetchMetadata()">[Fetch]</button>
                 <button onclick="editPost()">[Edit]</button>
                 <button onclick="goBack()">[Back]</button>
             </div>
@@ -354,17 +363,32 @@
         }
 
         function renderPost() {
-            const post = currentPost;
-            
-            let tagsHtml = '';
-            if (post.tags) {
-                try {
-                    const tags = JSON.parse(post.tags);
-                    if (Array.isArray(tags)) {
-                        tagsHtml = tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
-                    }
-                } catch (e) {}
-            }
+             const post = currentPost;
+             
+             // Show fetch button only for link or thought posts with source_url
+             const fetchBtn = document.getElementById('fetchBtn');
+             if (fetchBtn && (post.type_id === 'link' || post.type_id === 'thought')) {
+                 let hasSourceUrl = false;
+                 if (post.metadata) {
+                     try {
+                         const metadata = typeof post.metadata === 'string' ? JSON.parse(post.metadata) : post.metadata;
+                         if (metadata.source_url) {
+                             hasSourceUrl = true;
+                         }
+                     } catch (e) {}
+                 }
+                 fetchBtn.style.display = hasSourceUrl ? 'block' : 'none';
+             }
+             
+             let tagsHtml = '';
+             if (post.tags) {
+                 try {
+                     const tags = JSON.parse(post.tags);
+                     if (Array.isArray(tags)) {
+                         tagsHtml = tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+                     }
+                 } catch (e) {}
+             }
 
             let metadataHtml = '';
             if (post.metadata) {
@@ -491,6 +515,96 @@
 
         function goBack() {
             window.location.href = '/dashboard';
+        }
+
+        async function fetchMetadata() {
+            if (!currentPost) return;
+
+            try {
+                const token = localStorage.getItem('auth_token');
+                let sourceUrl = null;
+
+                // Extract source_url from metadata
+                if (currentPost.metadata) {
+                    try {
+                        const metadata = typeof currentPost.metadata === 'string' ? JSON.parse(currentPost.metadata) : currentPost.metadata;
+                        sourceUrl = metadata.source_url;
+                    } catch (e) {}
+                }
+
+                if (!sourceUrl) {
+                    alert('[ERROR] No source URL found for this post');
+                    return;
+                }
+
+                alert('[INFO] Fetching metadata...');
+
+                // Fetch metadata from the URL
+                const metadataResponse = await fetch(`${API_URL}/metadata?url=${encodeURIComponent(sourceUrl)}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (!metadataResponse.ok) {
+                    throw new Error('Failed to fetch metadata from URL');
+                }
+
+                const fetchedMetadata = await metadataResponse.json();
+
+                // Generate slug from title
+                const generateSlug = (title) => {
+                    if (!title) return '';
+                    return title
+                        .toLowerCase()
+                        .replace(/[^\w\s-]/g, '')
+                        .replace(/\s+/g, '-')
+                        .replace(/-+/g, '-')
+                        .trim();
+                };
+
+                // Prepare updates
+                const updates = {
+                    title: currentPost.title || fetchedMetadata.title || '',
+                    slug: currentPost.slug || generateSlug(fetchedMetadata.title || ''),
+                    excerpt: currentPost.excerpt || fetchedMetadata.description || ''
+                };
+
+                // Merge metadata
+                let metadata = {};
+                if (currentPost.metadata) {
+                    try {
+                        metadata = typeof currentPost.metadata === 'string' ? JSON.parse(currentPost.metadata) : currentPost.metadata;
+                    } catch (e) {}
+                }
+                metadata.source_url = sourceUrl;
+                if (fetchedMetadata.title) metadata.title = fetchedMetadata.title;
+                if (fetchedMetadata.description) metadata.description = fetchedMetadata.description;
+                if (fetchedMetadata.author) metadata.author = fetchedMetadata.author;
+
+                // Update the post
+                const updateResponse = await fetch(`${API_URL}/posts/${currentPost.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        ...currentPost,
+                        ...updates,
+                        metadata: metadata
+                    })
+                });
+
+                if (!updateResponse.ok) {
+                    throw new Error('Failed to update post');
+                }
+
+                alert('[OK] Metadata fetched and updated');
+                loadPost(); // Reload the post to show updates
+            } catch (error) {
+                alert('[ERROR] ' + (error.message || 'Failed to fetch metadata'));
+            }
         }
 
         // Load post on page load
