@@ -1,0 +1,47 @@
+name: Import Substack Posts (Weekly)
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Weekly on Monday at 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  import-rss:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23'
+
+      - name: Run RSS Import
+        run: |
+          go run ./cmd/import-rss/main.go
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Blog Sync Bot"
+          git config user.email "bot@blog.local"
+          git add exports/content/posts/
+          if git diff --cached --quiet; then
+            echo "No new posts to commit"
+          else
+            git commit -m "chore: import new posts from Substack RSS"
+            git push
+            echo "changes_pushed=true" >> $GITHUB_ENV
+          fi
+
+      - name: Trigger Sync and Build
+        if: env.changes_pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run sync-posts-turso.yml
