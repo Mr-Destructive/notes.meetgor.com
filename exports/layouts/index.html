@@ -14,7 +14,7 @@
     
     {{ range sort $types }}
       {{ $type := . }}
-      <a href="{{ $.Site.BaseURL }}type/{{ $type }}/" style="padding: 1.25rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; text-decoration: none; color: inherit; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-align: center;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <a href="{{ $.Site.BaseURL }}types/{{ $type }}/" style="padding: 1.25rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; text-decoration: none; color: inherit; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-align: center;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#e5e7eb'">
         <strong style="color: #1f2937; font-size: 0.95rem; text-transform: capitalize;">{{ $type }}</strong>
       </a>
     {{ end }}

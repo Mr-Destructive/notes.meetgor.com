@@ -12,7 +12,7 @@ enableGitInfo = true
 [taxonomies]
   tag = "tags"
   category = "categories"
-  type = "type"
+  type = "types"
   
 [params.author]
   name = "Meet Gor"
