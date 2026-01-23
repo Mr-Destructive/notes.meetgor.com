@@ -10,7 +10,6 @@
 /bin/
 /dist/
 /public/
-/exports/public/
 *.o
 *.a
 *.out

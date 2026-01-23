@@ -10,6 +10,8 @@ enableGitInfo = true
   mainSections = ["posts"]
 
 [taxonomies]
+  tag = "tags"
+  category = "categories"
   type = "type"
   
 [params.author]
