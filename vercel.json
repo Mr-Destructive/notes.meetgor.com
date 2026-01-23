@@ -1,5 +1,4 @@
 {
-  "buildCommand": "",
-  "outputDirectory": "exports/public",
-  "framework": null
+  "version": 2,
+  "outputDirectory": "exports/public"
 }

@@ -1,7 +1,7 @@
 [build]
   command = "CGO_ENABLED=0 go build -o netlify/functions/cms ./netlify/functions/cms/main.go"
   functions = "netlify/functions"
-  publish = "public"
+  publish = "exports/public"
 
 [[redirects]]
   from = "/api/*"
