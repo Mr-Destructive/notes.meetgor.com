@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "cp -r public/* .",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "."
 }

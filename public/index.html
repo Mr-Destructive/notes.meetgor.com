@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - Technical Notes & Posts</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        h1 { margin-bottom: 0.5rem; }
+        .subtitle { color: #666; margin-bottom: 2rem; }
+        .post-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .type-card { border: 1px solid #ddd; border-radius: 8px; padding: 2rem; text-align: center; transition: all 0.3s; }
+        .type-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-4px); }
+        .type-card a { text-decoration: none; color: inherit; }
+        .type-card strong { display: block; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .type-card .count { color: #999; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <h1>Notes & Technical Posts</h1>
+    <p class="subtitle">A collection of technical notes, articles, links, and newsletters</p>
+    
+    <div class="post-types">
+        <div class="type-card">
+            <a href="/type/post/">
+                <strong>📝 Posts</strong>
+                <span class="count">Technical articles & notes</span>
+            </a>
+        </div>
+        <div class="type-card">
+            <a href="/type/link/">
+                <strong>🔗 Links</strong>
+                <span class="count">Curated resources & references</span>
+            </a>
+        </div>
+        <div class="type-card">
+            <a href="/type/newsletter/">
+                <strong>📧 Newsletter</strong>
+                <span class="count">Weekly technical digests</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
