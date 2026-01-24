@@ -853,6 +853,76 @@ window.addEventListener('load', () => {
 	renderHTML(w, "text/html", htmlContent)
 }
 
+// HandleSeriesEditor serves the series editor form
+func HandleSeriesEditor(w http.ResponseWriter, r *http.Request, database *db.DB, seriesID string) {
+	html := `
+<style>
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 500; font-size: 14px; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid #e5e5e5; border-radius: 6px; font-family: inherit; font-size: 14px; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #0a0a0a; box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.05); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-actions { display: flex; gap: 10px; margin-top: 30px; }
+.btn { padding: 8px 16px; border: 1px solid #e5e5e5; border-radius: 6px; background: white; cursor: pointer; transition: all 0.15s; text-decoration: none; font-size: 13px; font-weight: 500; }
+.btn-primary { background: #0a0a0a; color: white; border: none; }
+.btn-primary:hover { background: #1a1a1a; }
+.btn-secondary { background: white; }
+</style>
+
+<form style="background: white; border-radius: 8px; border: 1px solid #e5e5e5; padding: 20px;">
+	<div class="form-group">
+		<label for="series-name">Series Name *</label>
+		<input type="text" id="series-name" name="name" required>
+	</div>
+
+	<div class="form-group">
+		<label for="series-slug">Slug *</label>
+		<input type="text" id="series-slug" name="slug" required>
+	</div>
+
+	<div class="form-group">
+		<label for="series-description">Description</label>
+		<textarea id="series-description" name="description"></textarea>
+	</div>
+
+	<div class="form-actions">
+		<button type="button" class="btn btn-primary" onclick="saveSeries()">Save Series</button>
+		<button type="button" class="btn btn-secondary" onclick="htmx.ajax('GET', '/admin/series', {target: '#main-content'})">Cancel</button>
+	</div>
+</form>
+
+<script>
+function saveSeries() {
+	const name = document.getElementById('series-name').value;
+	const slug = document.getElementById('series-slug').value;
+	const description = document.getElementById('series-description').value;
+
+	if (!name || !slug) {
+		alert('Name and slug are required');
+		return;
+	}
+
+	const data = { name, slug, description };
+	const seriesId = '` + seriesID + `';
+	const method = seriesId ? 'PUT' : 'POST';
+	const url = seriesId ? '/api/series/' + seriesId : '/api/series';
+
+	fetch(url, {
+		method: method,
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(data)
+	})
+	.then(r => r.ok ? r.json() : Promise.reject('Failed'))
+	.then(() => {
+		htmx.ajax('GET', '/admin/series', {target: '#main-content'});
+	})
+	.catch(err => alert('Error: ' + err));
+}
+</script>
+	`
+	renderHTML(w, "text/html", html)
+}
+
 // HandleExportPage serves the export interface
 func HandleExportPage(w http.ResponseWriter, r *http.Request, database *db.DB) {
 	html := `
