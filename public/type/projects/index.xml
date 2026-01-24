@@ -1,90 +1,153 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on Notes</title><link>/type/projects/</link><description>Recent content in Projects on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/type/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>MindsDB GraphQL API (Grafbase)</title><link>/posts/mindsdb-grafbase/</link><pubDate>Sun, 13 Aug 2023 20:00:00 +0000</pubDate><guid>/posts/mindsdb-grafbase/</guid><description>&lt;p&gt;A GraphQL API for MindsDB using Grafbase that allows you to interact with MindsDB databases, projects, models, and more through a GraphQL interface.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Typescript&lt;/li&gt;
-&lt;li&gt;Grafbase&lt;/li&gt;
-&lt;li&gt;GraphQL&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Utility-Studio</title><link>/posts/utility-studio/</link><pubDate>Fri, 14 Jul 2023 22:00:00 +0000</pubDate><guid>/posts/utility-studio/</guid><description>&lt;p&gt;A application to perform extraction of information from web, youtube, or document links, download video/audio from youtube links, and summarize the text content.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Refine (React, NextJS)&lt;/li&gt;
-&lt;li&gt;Appwrite (Functions, Storage)&lt;/li&gt;
-&lt;li&gt;Typescript&lt;/li&gt;
-&lt;li&gt;Python (Cloud Functions)&lt;/li&gt;
-&lt;li&gt;Material UI&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Google Generative AI PaLM2 Golang SDK(Client)</title><link>/posts/palm_go_sdk/</link><pubDate>Thu, 22 Jun 2023 15:00:00 +0000</pubDate><guid>/posts/palm_go_sdk/</guid><description>&lt;p&gt;A Golang Client (Wrapper) for the PaLM2 API.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Hugging Chat Golang SDK(Client)</title><link>/posts/hugging_chat_go_sdk/</link><pubDate>Wed, 17 May 2023 19:00:00 +0000</pubDate><guid>/posts/hugging_chat_go_sdk/</guid><description>&lt;p&gt;A Golang Client (Wrapper) for the Hugging Chat.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>MindsDB Golang SDK(Client)</title><link>/posts/mindsdb-go-sdk/</link><pubDate>Sat, 08 Apr 2023 10:00:00 +0000</pubDate><guid>/posts/mindsdb-go-sdk/</guid><description>&lt;p&gt;A Golang Client (Wrapper) for the MindsDB API.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Django-Mermaid</title><link>/posts/django-mermaid/</link><pubDate>Wed, 03 Aug 2022 16:44:59 +0000</pubDate><guid>/posts/django-mermaid/</guid><description>&lt;p&gt;Create ER Diagrams (Entity Relationship Diagrams) of your Django projects related to different models of associated applications in Mermaid.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Django&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>DJ Notes</title><link>/posts/djnotes/</link><pubDate>Sat, 25 Jun 2022 16:44:59 +0000</pubDate><guid>/posts/djnotes/</guid><description>&lt;p&gt;A note taking application with features like markdown, syntax highlighting and filtering.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Django&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>APTUI</title><link>/posts/aptui/</link><pubDate>Wed, 22 Jun 2022 17:00:00 +0000</pubDate><guid>/posts/aptui/</guid><description>&lt;p&gt;A terminal client interface for testing and working with APIs and web requests.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Python
-&lt;ul&gt;
-&lt;li&gt;Textual&lt;/li&gt;
-&lt;li&gt;Rich&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Lingo</title><link>/posts/lingo/</link><pubDate>Fri, 27 May 2022 17:00:00 +0000</pubDate><guid>/posts/lingo/</guid><description>&lt;p&gt;A simple link-tree clone in Golang. Create links for your website, blog, or social media handles from a single place for others to view.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;Tailwind-CSS&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Crossposter</title><link>/posts/crossposter/</link><pubDate>Fri, 25 Feb 2022 16:44:59 +0000</pubDate><guid>/posts/crossposter/</guid><description>&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Python Pacakges&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Podevcast</title><link>/posts/podevcast/</link><pubDate>Fri, 25 Feb 2022 16:44:59 +0000</pubDate><guid>/posts/podevcast/</guid><description>&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Python Pacakges
-&lt;ul&gt;
-&lt;li&gt;feedparser&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Netlify&lt;/li&gt;
-&lt;li&gt;GitHub Actions&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>BackChat</title><link>/posts/backchat/</link><pubDate>Mon, 31 Jan 2022 12:00:00 +0000</pubDate><guid>/posts/backchat/</guid><description>&lt;p&gt;A simple chat/messaging app created for exploring HTMX and django-channels.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Django&lt;/li&gt;
-&lt;li&gt;Django-Channels&lt;/li&gt;
-&lt;li&gt;Daphne&lt;/li&gt;
-&lt;li&gt;HTMX&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>DevQuotes</title><link>/posts/dev-quotes/</link><pubDate>Wed, 25 Aug 2021 23:45:00 +0000</pubDate><guid>/posts/dev-quotes/</guid><description>&lt;p&gt;A simple quote/post sharing app created for exploring Django.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Django&lt;/li&gt;
-&lt;li&gt;Bootstrap&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>World Atlas</title><link>/posts/world-atlas/</link><pubDate>Sun, 25 Jul 2021 16:44:59 +0000</pubDate><guid>/posts/world-atlas/</guid><description>&lt;p&gt;A simple word game using some django in the backend and javascript for frontend.&lt;/p&gt;
-&lt;p&gt;Tech stack:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Django&lt;/li&gt;
-&lt;li&gt;Django-Rest-Framework&lt;/li&gt;
-&lt;li&gt;Javascript&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Django rest framework as an api for most of the operations in the game like:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Validating a user input place from database&lt;/li&gt;
-&lt;li&gt;Listing out all places from a given letter&lt;/li&gt;
-&lt;li&gt;Get a random place from a given letter&lt;/li&gt;
-&lt;li&gt;CRUD endpoint for the places in the database.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;API Link: &lt;a href="https://djangonaut.pythonanywhere.com/world-atlas/api/"&gt;https://djangonaut.pythonanywhere.com/world-atlas/api/&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Notes</title>
+    <link>/type/projects/</link>
+    <description>Recent content in Projects on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/type/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MindsDB GraphQL API (Grafbase)</title>
+      <link>/posts/mindsdb-grafbase/</link>
+      <pubDate>Sun, 13 Aug 2023 20:00:00 +0000</pubDate>
+      
+      <guid>/posts/mindsdb-grafbase/</guid>
+      <description>&lt;p&gt;A GraphQL API for MindsDB using Grafbase that allows you to interact with MindsDB databases, projects, models, and more through a GraphQL interface.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Typescript&lt;/li&gt;&#xA;&lt;li&gt;Grafbase&lt;/li&gt;&#xA;&lt;li&gt;GraphQL&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Utility-Studio</title>
+      <link>/posts/utility-studio/</link>
+      <pubDate>Fri, 14 Jul 2023 22:00:00 +0000</pubDate>
+      
+      <guid>/posts/utility-studio/</guid>
+      <description>&lt;p&gt;A application to perform extraction of information from web, youtube, or document links, download video/audio from youtube links, and summarize the text content.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Refine (React, NextJS)&lt;/li&gt;&#xA;&lt;li&gt;Appwrite (Functions, Storage)&lt;/li&gt;&#xA;&lt;li&gt;Typescript&lt;/li&gt;&#xA;&lt;li&gt;Python (Cloud Functions)&lt;/li&gt;&#xA;&lt;li&gt;Material UI&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Google Generative AI PaLM2 Golang SDK(Client)</title>
+      <link>/posts/palm_go_sdk/</link>
+      <pubDate>Thu, 22 Jun 2023 15:00:00 +0000</pubDate>
+      
+      <guid>/posts/palm_go_sdk/</guid>
+      <description>&lt;p&gt;A Golang Client (Wrapper) for the PaLM2 API.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Golang&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hugging Chat Golang SDK(Client)</title>
+      <link>/posts/hugging_chat_go_sdk/</link>
+      <pubDate>Wed, 17 May 2023 19:00:00 +0000</pubDate>
+      
+      <guid>/posts/hugging_chat_go_sdk/</guid>
+      <description>&lt;p&gt;A Golang Client (Wrapper) for the Hugging Chat.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Golang&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>MindsDB Golang SDK(Client)</title>
+      <link>/posts/mindsdb-go-sdk/</link>
+      <pubDate>Sat, 08 Apr 2023 10:00:00 +0000</pubDate>
+      
+      <guid>/posts/mindsdb-go-sdk/</guid>
+      <description>&lt;p&gt;A Golang Client (Wrapper) for the MindsDB API.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Golang&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Django-Mermaid</title>
+      <link>/posts/django-mermaid/</link>
+      <pubDate>Wed, 03 Aug 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/posts/django-mermaid/</guid>
+      <description>&lt;p&gt;Create ER Diagrams (Entity Relationship Diagrams) of your Django projects related to different models of associated applications in Mermaid.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Python&lt;/li&gt;&#xA;&lt;li&gt;Django&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>DJ Notes</title>
+      <link>/posts/djnotes/</link>
+      <pubDate>Sat, 25 Jun 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/posts/djnotes/</guid>
+      <description>&lt;p&gt;A note taking application with features like markdown, syntax highlighting and filtering.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Django&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>APTUI</title>
+      <link>/posts/aptui/</link>
+      <pubDate>Wed, 22 Jun 2022 17:00:00 +0000</pubDate>
+      
+      <guid>/posts/aptui/</guid>
+      <description>&lt;p&gt;A terminal client interface for testing and working with APIs and web requests.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Python&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Textual&lt;/li&gt;&#xA;&lt;li&gt;Rich&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Lingo</title>
+      <link>/posts/lingo/</link>
+      <pubDate>Fri, 27 May 2022 17:00:00 +0000</pubDate>
+      
+      <guid>/posts/lingo/</guid>
+      <description>&lt;p&gt;A simple link-tree clone in Golang. Create links for your website, blog, or social media handles from a single place for others to view.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Golang&lt;/li&gt;&#xA;&lt;li&gt;Tailwind-CSS&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Crossposter</title>
+      <link>/posts/crossposter/</link>
+      <pubDate>Fri, 25 Feb 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/posts/crossposter/</guid>
+      <description>&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Python&lt;/li&gt;&#xA;&lt;li&gt;Python Pacakges&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Podevcast</title>
+      <link>/posts/podevcast/</link>
+      <pubDate>Fri, 25 Feb 2022 16:44:59 +0000</pubDate>
+      
+      <guid>/posts/podevcast/</guid>
+      <description>&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Python&lt;/li&gt;&#xA;&lt;li&gt;Python Pacakges&#xA;&lt;ul&gt;&#xA;&lt;li&gt;feedparser&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Netlify&lt;/li&gt;&#xA;&lt;li&gt;GitHub Actions&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BackChat</title>
+      <link>/posts/backchat/</link>
+      <pubDate>Mon, 31 Jan 2022 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/backchat/</guid>
+      <description>&lt;p&gt;A simple chat/messaging app created for exploring HTMX and django-channels.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Django&lt;/li&gt;&#xA;&lt;li&gt;Django-Channels&lt;/li&gt;&#xA;&lt;li&gt;Daphne&lt;/li&gt;&#xA;&lt;li&gt;HTMX&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>DevQuotes</title>
+      <link>/posts/dev-quotes/</link>
+      <pubDate>Wed, 25 Aug 2021 23:45:00 +0000</pubDate>
+      
+      <guid>/posts/dev-quotes/</guid>
+      <description>&lt;p&gt;A simple quote/post sharing app created for exploring Django.&lt;/p&gt;&#xA;&lt;p&gt;Tech Stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Django&lt;/li&gt;&#xA;&lt;li&gt;Bootstrap&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>World Atlas</title>
+      <link>/posts/world-atlas/</link>
+      <pubDate>Sun, 25 Jul 2021 16:44:59 +0000</pubDate>
+      
+      <guid>/posts/world-atlas/</guid>
+      <description>&lt;p&gt;A simple word game using some django in the backend and javascript for frontend.&lt;/p&gt;&#xA;&lt;p&gt;Tech stack:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Django&lt;/li&gt;&#xA;&lt;li&gt;Django-Rest-Framework&lt;/li&gt;&#xA;&lt;li&gt;Javascript&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Django rest framework as an api for most of the operations in the game like:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Validating a user input place from database&lt;/li&gt;&#xA;&lt;li&gt;Listing out all places from a given letter&lt;/li&gt;&#xA;&lt;li&gt;Get a random place from a given letter&lt;/li&gt;&#xA;&lt;li&gt;CRUD endpoint for the places in the database.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;API Link: &lt;a href=&#34;https://djangonaut.pythonanywhere.com/world-atlas/api/&#34;  target=&#34;_blank&#34;&gt;https://djangonaut.pythonanywhere.com/world-atlas/api/&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

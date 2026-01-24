@@ -1,44 +1,153 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Link on Notes</title><link>/type/link/</link><description>Recent content in Link on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 19 Jan 2026 12:50:40 +0000</lastBuildDate><atom:link href="/type/link/index.xml" rel="self" type="application/rss+xml"/><item><title>The recurring dream of replacing developers</title><link>/posts/the-recurring-dream-of-replacing-developers/</link><pubDate>Mon, 19 Jan 2026 11:40:36 +0000</pubDate><guid>/posts/the-recurring-dream-of-replacing-developers/</guid><description>&lt;ul&gt;
-&lt;li&gt;what a flashback, everything makes sense.&lt;/li&gt;
-&lt;li&gt;Programming is not mechanical&lt;/li&gt;
-&lt;li&gt;yet people tried hard to make solve for it as it was mechanical&lt;/li&gt;
-&lt;li&gt;COBOL made syntax readable. CASE tools eliminated typing. Visual tools eliminated syntax. AI can now generate entire functions from descriptions&lt;/li&gt;
-&lt;li&gt;Each advancement addressed a real friction point. Yet the fundamental challenge persists because it’s not mechanical. It’s intellectual. Software development is thinking made tangible&lt;/li&gt;
-&lt;li&gt;Just sheer facts those two. We need to find a way around using AI not away from it.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Typical PDF document</title><link>/posts/a-typical-pdf-document/</link><pubDate>Mon, 12 Jan 2026 13:19:04 +0000</pubDate><guid>/posts/a-typical-pdf-document/</guid><description>&lt;p&gt;This is cool, i&amp;rsquo;ve read a lot of these and working at docsumo, makes me want to read about them more.&lt;/p&gt;</description></item><item><title>Don't Fall into the ANTI AI HYPE</title><link>/posts/dont-fall-into-the-anti-ai-hype/</link><pubDate>Mon, 12 Jan 2026 06:34:28 +0000</pubDate><guid>/posts/dont-fall-into-the-anti-ai-hype/</guid><description>&lt;p&gt;This is interesting and it comes at the right time&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;facts are facts, and AI is going to change programming forever&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It does not matter if this or the other CEO of some unicorn is telling you something that is off putting, or absurd. Programming changed forever, anyway.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What is the social solution, then? Innovation can&amp;rsquo;t be taken back after all. I believe we should vote for governments that recognize what is happening, and are willing to support those who will remain jobless. And, the more people get fired, the more political pressure there will be to vote for those who will guarantee a certain degree of protection. But I also look forward to the good AI could bring: new progress in science, that could help lower the suffering of the human condition, which is not always happy.&lt;/p&gt;</description></item><item><title>What happens when you start taking creativity seriously</title><link>/posts/what-happens-when-you-start-taking-creativity-seriously/</link><pubDate>Thu, 08 Jan 2026 13:42:27 +0000</pubDate><guid>/posts/what-happens-when-you-start-taking-creativity-seriously/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;You have to defend your creativity&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;That just triggered me up.&lt;/p&gt;
-&lt;p&gt;Sachin Tendulkar didn&amp;rsquo;t became a God of Cricket by accident, he defended his goal, he played to his strength and not defend his weakness.&lt;/p&gt;
-&lt;p&gt;That doesn&amp;rsquo;t mean you can avoid responsibilities, you can pursue your career without neglecting duties, it proved by people.&lt;/p&gt;</description></item><item><title>Why we have inflated expectations, 6 feet 7 inches</title><link>/posts/what-is-6-feet-7-inches/</link><pubDate>Thu, 08 Jan 2026 12:12:42 +0000</pubDate><guid>/posts/what-is-6-feet-7-inches/</guid><description>&lt;p&gt;This is so true&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In the 1990s, a “middle-class job” was enough to buy a house. Being “6 feet” was enough to be tall.&lt;/p&gt;
-&lt;p&gt;In the 2020s, the middle has been hollowed out.&lt;/p&gt;
-&lt;p&gt;To be “wealthy” now requires a crypto-exit or a tech IPO (The Economic 6’7”).&lt;/p&gt;
-&lt;p&gt;To be “famous” requires global virality (The Social 6’7”).&lt;/p&gt;
-&lt;p&gt;To be “attractive” requires filters and surgery (The Aesthetic 6’7”).&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>A conversation between a developer and a kid</title><link>/posts/dialuge-between-dev-and-kid/</link><pubDate>Thu, 08 Jan 2026 12:05:49 +0000</pubDate><guid>/posts/dialuge-between-dev-and-kid/</guid><description>&lt;p&gt;This is hilariously funny.&lt;br&gt;
-What a real developer is? Who knows languages? No, who knows how to code, No! A developer is someone who sticks to a problem when everyone has given up.&lt;br&gt;
-This conversation feels like me and my friend. My friend is the reason I am here today. He knew programming well. I was inspired from him, he gave me advice to learn one programming language, I was boasting about python, C and C++. I feel like a kid here. That was 7 years ago, time flies by.&lt;/p&gt;</description></item><item><title>Printf Debugging in Go with Q</title><link>/posts/q-but-for-go-printf-debugging/</link><pubDate>Thu, 08 Jan 2026 12:05:49 +0000</pubDate><guid>/posts/q-but-for-go-printf-debugging/</guid><description>&lt;p&gt;This is cool, we make logging a mess. For logs we need to have separate scripts to get relevant data. How much chaos it can be.&lt;/p&gt;</description></item><item><title>On not using Django in 2026 due to AI?</title><link>/posts/on-not-using-django-in-2026/</link><pubDate>Thu, 08 Jan 2026 11:26:00 +0000</pubDate><guid>/posts/on-not-using-django-in-2026/</guid><description>&lt;p&gt;I don&amp;rsquo;t quite get it. Maybe its true. Django provided a good start but then it was like a lock in.&lt;/p&gt;
-&lt;p&gt;With LLMs its quite easy to generate the boilerplatey code that django provides out of the box, so that demand is lost?&lt;/p&gt;
-&lt;p&gt;Its not the only reason django is here right? It has extensions, best python community and even more best documentation.&lt;/p&gt;
-&lt;p&gt;I think it will be the best framework to build with LLMs in the future if the ecosystem continues to improve&lt;/p&gt;</description></item><item><title>Fear is not advocacy</title><link>/posts/ai-advocacy-should-not-be-fear-or-fomo/</link><pubDate>Mon, 05 Jan 2026 15:46:54 +0000</pubDate><guid>/posts/ai-advocacy-should-not-be-fear-or-fomo/</guid><description>&lt;p&gt;This is real advice. People are hyping about the next workflow to 100x our productivity. Its ok to be 1x and still push less bugs than 100x and push 1000 bugs.&lt;/p&gt;</description></item><item><title>Distinguishing yourself early in your career as a developer</title><link>/posts/distinguish-yourself-as-a-developer/</link><pubDate>Sun, 04 Jan 2026 15:42:22 +0000</pubDate><guid>/posts/distinguish-yourself-as-a-developer/</guid><description>&lt;p&gt;This is cool advice. I like writing, side projects, oss, reading, and making stuff. It just shows the passionate flowing out.&lt;/p&gt;</description></item><item><title>The fear of not growing due to AI</title><link>/posts/fear-of-not-growing-due-to-ai/</link><pubDate>Sun, 04 Jan 2026 15:18:35 +0000</pubDate><guid>/posts/fear-of-not-growing-due-to-ai/</guid><description>&lt;p&gt;Ah! This is a developer trying to love his craft, yet the people are cruel to not respect it. They just want to solve problems; no one cares, they are right, but empathy is traded for business value.&lt;/p&gt;</description></item><item><title>you have everything you need</title><link>/posts/you-have-everything-and-nothing/</link><pubDate>Sun, 04 Jan 2026 15:11:04 +0000</pubDate><guid>/posts/you-have-everything-and-nothing/</guid><description>&lt;p&gt;Man, that was a heck of an article to read. I continued reading it because I found it relatable to Minecraft.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You open a world, you have an empty inventory&lt;/li&gt;
-&lt;li&gt;Still you believe you can win the game&lt;/li&gt;
-&lt;li&gt;Without anything, &amp;ldquo;Kya lekar aya jagath me, kya lekar jayega&amp;rdquo; vibes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;True, read it, it will change your perspective on reasoning for failure in a good way.&lt;/p&gt;</description></item><item><title>Interstitial Journaling</title><link>/posts/interstitial-journaling/</link><pubDate>Sun, 04 Jan 2026 15:01:37 +0000</pubDate><guid>/posts/interstitial-journaling/</guid><description>&lt;p&gt;This is cool, maybe a little too much time aware, maybe doing it too much is bad, but still, a good way to break the mental procrastination cycle&lt;br&gt;
-I think we can get a idea or get aware of the amount of time we wasted or done something good, and act on it accordingly. A nice trick for the brain&lt;/p&gt;
-&lt;p&gt;9:45: Wrap up the standup&lt;br&gt;
-9:54: Log clearing&lt;br&gt;
-10:15: Call with manager about the task&lt;br&gt;
-10:33: Felt bad&lt;/p&gt;</description></item><item><title>GitHub - davidfowl/tally: Let agents classify your bank transactions.</title><link>/posts/tally-transaction-ai-tool/</link><pubDate>Sat, 03 Jan 2026 14:29:56 +0000</pubDate><guid>/posts/tally-transaction-ai-tool/</guid><description>&lt;p&gt;A cool tool to check how it made it&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Link on Notes</title>
+    <link>/type/link/</link>
+    <description>Recent content in Link on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Mon, 19 Jan 2026 12:50:40 +0000</lastBuildDate><atom:link href="/type/link/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The recurring dream of replacing developers</title>
+      <link>/posts/the-recurring-dream-of-replacing-developers/</link>
+      <pubDate>Mon, 19 Jan 2026 11:40:36 +0000</pubDate>
+      
+      <guid>/posts/the-recurring-dream-of-replacing-developers/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;what a flashback, everything makes sense.&lt;/li&gt;&#xA;&lt;li&gt;Programming is not mechanical&lt;/li&gt;&#xA;&lt;li&gt;yet people tried hard to make solve for it as it was mechanical&lt;/li&gt;&#xA;&lt;li&gt;COBOL made syntax readable. CASE tools eliminated typing. Visual tools eliminated syntax. AI can now generate entire functions from descriptions&lt;/li&gt;&#xA;&lt;li&gt;Each advancement addressed a real friction point. Yet the fundamental challenge persists because it’s not mechanical. It’s intellectual. Software development is thinking made tangible&lt;/li&gt;&#xA;&lt;li&gt;Just sheer facts those two. We need to find a way around using AI not away from it.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Typical PDF document</title>
+      <link>/posts/a-typical-pdf-document/</link>
+      <pubDate>Mon, 12 Jan 2026 13:19:04 +0000</pubDate>
+      
+      <guid>/posts/a-typical-pdf-document/</guid>
+      <description>&lt;p&gt;This is cool, i&amp;rsquo;ve read a lot of these and working at docsumo, makes me want to read about them more.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Don&#39;t Fall into the ANTI AI HYPE</title>
+      <link>/posts/dont-fall-into-the-anti-ai-hype/</link>
+      <pubDate>Mon, 12 Jan 2026 06:34:28 +0000</pubDate>
+      
+      <guid>/posts/dont-fall-into-the-anti-ai-hype/</guid>
+      <description>&lt;p&gt;This is interesting and it comes at the right time&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;facts are facts, and AI is going to change programming forever&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;It does not matter if this or the other CEO of some unicorn is telling you something that is off putting, or absurd. Programming changed forever, anyway.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;What is the social solution, then? Innovation can&amp;rsquo;t be taken back after all. I believe we should vote for governments that recognize what is happening, and are willing to support those who will remain jobless. And, the more people get fired, the more political pressure there will be to vote for those who will guarantee a certain degree of protection. But I also look forward to the good AI could bring: new progress in science, that could help lower the suffering of the human condition, which is not always happy.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>What happens when you start taking creativity seriously</title>
+      <link>/posts/what-happens-when-you-start-taking-creativity-seriously/</link>
+      <pubDate>Thu, 08 Jan 2026 13:42:27 +0000</pubDate>
+      
+      <guid>/posts/what-happens-when-you-start-taking-creativity-seriously/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;You have to defend your creativity&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;That just triggered me up.&lt;/p&gt;&#xA;&lt;p&gt;Sachin Tendulkar didn&amp;rsquo;t became a God of Cricket by accident, he defended his goal, he played to his strength and not defend his weakness.&lt;/p&gt;&#xA;&lt;p&gt;That doesn&amp;rsquo;t mean you can avoid responsibilities, you can pursue your career without neglecting duties, it proved by people.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Why we have inflated expectations, 6 feet 7 inches</title>
+      <link>/posts/what-is-6-feet-7-inches/</link>
+      <pubDate>Thu, 08 Jan 2026 12:12:42 +0000</pubDate>
+      
+      <guid>/posts/what-is-6-feet-7-inches/</guid>
+      <description>&lt;p&gt;This is so true&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;In the 1990s, a “middle-class job” was enough to buy a house. Being “6 feet” was enough to be tall.&lt;/p&gt;&#xA;&lt;p&gt;In the 2020s, the middle has been hollowed out.&lt;/p&gt;&#xA;&lt;p&gt;To be “wealthy” now requires a crypto-exit or a tech IPO (The Economic 6’7”).&lt;/p&gt;&#xA;&lt;p&gt;To be “famous” requires global virality (The Social 6’7”).&lt;/p&gt;&#xA;&lt;p&gt;To be “attractive” requires filters and surgery (The Aesthetic 6’7”).&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>A conversation between a developer and a kid</title>
+      <link>/posts/dialuge-between-dev-and-kid/</link>
+      <pubDate>Thu, 08 Jan 2026 12:05:49 +0000</pubDate>
+      
+      <guid>/posts/dialuge-between-dev-and-kid/</guid>
+      <description>&lt;p&gt;This is hilariously funny.&lt;br&gt;&#xA;What a real developer is? Who knows languages? No, who knows how to code, No! A developer is someone who sticks to a problem when everyone has given up.&lt;br&gt;&#xA;This conversation feels like me and my friend. My friend is the reason I am here today. He knew programming well. I was inspired from him, he gave me advice to learn one programming language, I was boasting about python, C and C++. I feel like a kid here. That was 7 years ago, time flies by.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Printf Debugging in Go with Q</title>
+      <link>/posts/q-but-for-go-printf-debugging/</link>
+      <pubDate>Thu, 08 Jan 2026 12:05:49 +0000</pubDate>
+      
+      <guid>/posts/q-but-for-go-printf-debugging/</guid>
+      <description>&lt;p&gt;This is cool, we make logging a mess. For logs we need to have separate scripts to get relevant data. How much chaos it can be.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>On not using Django in 2026 due to AI?</title>
+      <link>/posts/on-not-using-django-in-2026/</link>
+      <pubDate>Thu, 08 Jan 2026 11:26:00 +0000</pubDate>
+      
+      <guid>/posts/on-not-using-django-in-2026/</guid>
+      <description>&lt;p&gt;I don&amp;rsquo;t quite get it. Maybe its true. Django provided a good start but then it was like a lock in.&lt;/p&gt;&#xA;&lt;p&gt;With LLMs its quite easy to generate the boilerplatey code that django provides out of the box, so that demand is lost?&lt;/p&gt;&#xA;&lt;p&gt;Its not the only reason django is here right? It has extensions, best python community and even more best documentation.&lt;/p&gt;&#xA;&lt;p&gt;I think it will be the best framework to build with LLMs in the future if the ecosystem continues to improve&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Fear is not advocacy</title>
+      <link>/posts/ai-advocacy-should-not-be-fear-or-fomo/</link>
+      <pubDate>Mon, 05 Jan 2026 15:46:54 +0000</pubDate>
+      
+      <guid>/posts/ai-advocacy-should-not-be-fear-or-fomo/</guid>
+      <description>&lt;p&gt;This is real advice. People are hyping about the next workflow to 100x our productivity. Its ok to be 1x and still push less bugs than 100x and push 1000 bugs.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Distinguishing yourself early in your career as a developer</title>
+      <link>/posts/distinguish-yourself-as-a-developer/</link>
+      <pubDate>Sun, 04 Jan 2026 15:42:22 +0000</pubDate>
+      
+      <guid>/posts/distinguish-yourself-as-a-developer/</guid>
+      <description>&lt;p&gt;This is cool advice. I like writing, side projects, oss, reading, and making stuff. It just shows the passionate flowing out.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The fear of not growing due to AI</title>
+      <link>/posts/fear-of-not-growing-due-to-ai/</link>
+      <pubDate>Sun, 04 Jan 2026 15:18:35 +0000</pubDate>
+      
+      <guid>/posts/fear-of-not-growing-due-to-ai/</guid>
+      <description>&lt;p&gt;Ah! This is a developer trying to love his craft, yet the people are cruel to not respect it. They just want to solve problems; no one cares, they are right, but empathy is traded for business value.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>you have everything you need</title>
+      <link>/posts/you-have-everything-and-nothing/</link>
+      <pubDate>Sun, 04 Jan 2026 15:11:04 +0000</pubDate>
+      
+      <guid>/posts/you-have-everything-and-nothing/</guid>
+      <description>&lt;p&gt;Man, that was a heck of an article to read. I continued reading it because I found it relatable to Minecraft.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You open a world, you have an empty inventory&lt;/li&gt;&#xA;&lt;li&gt;Still you believe you can win the game&lt;/li&gt;&#xA;&lt;li&gt;Without anything, &amp;ldquo;Kya lekar aya jagath me, kya lekar jayega&amp;rdquo; vibes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;True, read it, it will change your perspective on reasoning for failure in a good way.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Interstitial Journaling</title>
+      <link>/posts/interstitial-journaling/</link>
+      <pubDate>Sun, 04 Jan 2026 15:01:37 +0000</pubDate>
+      
+      <guid>/posts/interstitial-journaling/</guid>
+      <description>&lt;p&gt;This is cool, maybe a little too much time aware, maybe doing it too much is bad, but still, a good way to break the mental procrastination cycle&lt;br&gt;&#xA;I think we can get a idea or get aware of the amount of time we wasted or done something good, and act on it accordingly. A nice trick for the brain&lt;/p&gt;&#xA;&lt;p&gt;9:45: Wrap up the standup&lt;br&gt;&#xA;9:54: Log clearing&lt;br&gt;&#xA;10:15: Call with manager about the task&lt;br&gt;&#xA;10:33: Felt bad&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>GitHub - davidfowl/tally: Let agents classify your bank transactions.</title>
+      <link>/posts/tally-transaction-ai-tool/</link>
+      <pubDate>Sat, 03 Jan 2026 14:29:56 +0000</pubDate>
+      
+      <guid>/posts/tally-transaction-ai-tool/</guid>
+      <description>&lt;p&gt;A cool tool to check how it made it&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

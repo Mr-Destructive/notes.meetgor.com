@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on Notes</title><link>/tags/typescript/</link><description>Recent content in Typescript on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>MindsDB GraphQL API (Grafbase)</title><link>/posts/mindsdb-grafbase/</link><pubDate>Sun, 13 Aug 2023 20:00:00 +0000</pubDate><guid>/posts/mindsdb-grafbase/</guid><description>&lt;p&gt;A GraphQL API for MindsDB using Grafbase that allows you to interact with MindsDB databases, projects, models, and more through a GraphQL interface.&lt;/p&gt;
+&lt;p&gt;Tech Stack:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Typescript&lt;/li&gt;
+&lt;li&gt;Grafbase&lt;/li&gt;
+&lt;li&gt;GraphQL&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Utility-Studio</title><link>/posts/utility-studio/</link><pubDate>Fri, 14 Jul 2023 22:00:00 +0000</pubDate><guid>/posts/utility-studio/</guid><description>&lt;p&gt;A application to perform extraction of information from web, youtube, or document links, download video/audio from youtube links, and summarize the text content.&lt;/p&gt;
+&lt;p&gt;Tech Stack:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refine (React, NextJS)&lt;/li&gt;
+&lt;li&gt;Appwrite (Functions, Storage)&lt;/li&gt;
+&lt;li&gt;Typescript&lt;/li&gt;
+&lt;li&gt;Python (Cloud Functions)&lt;/li&gt;
+&lt;li&gt;Material UI&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

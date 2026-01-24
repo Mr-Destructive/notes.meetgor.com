@@ -1,157 +1,763 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Newsletter on Notes</title><link>/type/newsletter/</link><description>Recent content in Newsletter on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 16:25:41 +0530</lastBuildDate><atom:link href="/type/newsletter/index.xml" rel="self" type="application/rss+xml"/><item><title>Techstructive Weekly #74</title><link>/posts/techstructive-weekly-74/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-74/</guid><description>&lt;h2 id="week-74"&gt;Week #74&lt;/h2&gt;
-&lt;p&gt;It was winding down week, 2025, ending slowly, the biggest irony. The year was full of fast-paced, unprecedented models just dropping here and there. It was hard to keep up with the progress. It was getting overwhelming, no one is used to such a level of information. I was dreading with so much power in our hands. I couldn’t handle it and refrained it and thought it was better to focus on learning new things. I kept using AI tools at work, not by choice, but initially through force but then through necessity.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #73</title><link>/posts/techstructive-weekly-73/</link><pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-73/</guid><description>&lt;h2 id="week-73"&gt;Week 73&lt;/h2&gt;
-&lt;p&gt;A pretty slow and sluggish week, but some momentum carried in the end. There was a disappointment after a glimmer of excitement when gemini 3 Flash dropped for the experiments that I was running for extraction of documents. It was maybe just the timing, but after this seeing code execution from chats, it was amazing. A good end to the work week.&lt;/p&gt;
-&lt;p&gt;I have continued to write Advent of SQL for the past 4 days, and brought back the streak of writing &lt;a href="https://meetgor.com/sqlog"&gt;SQLog&lt;/a&gt;. I was not able to ship some code over the past weekend. But this weekend, I am pumped. I have time sorted out. Would be shipping some improvements in the website. Oh! I actually added snowball and particles based on season on &lt;a href="meetgor.com"&gt;my website&lt;/a&gt; (only index and post pages).&lt;/p&gt;</description></item><item><title>Techstructive Weekly #72</title><link>/posts/techstructive-weekly-72/</link><pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-72/</guid><description>&lt;h2 id="week-72"&gt;Week #72&lt;/h2&gt;
-&lt;p&gt;A good productive week (I am not sure, I am saying that in the last month of 2025). I would be writing a yearly review in a couple of weeks and this week might lift my spirits up. I was fresh, given time off from work, not really, but given the time to experiment.&lt;/p&gt;
-&lt;p&gt;I read a lot, fiction, technical, even philosophical, and random Hacker News articles. I read 2 books of Harry Potter. I haven’t read Harry Potter, I have watched the first 3 movies, but not books. I enjoyed it, it was subtly different from movies, I missed the quote “What an Idiot” from the movies, it was not in the book, i was disappointed but the atmospheric adventures was amazing read.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 71</title><link>/posts/2025-12-06-techstructive-weekly-71/</link><pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/2025-12-06-techstructive-weekly-71/</guid><description>&lt;h2 id="week-71"&gt;Week #71&lt;/h2&gt;
-&lt;p&gt;It was a roller-coaster week. Half of the week, it was travelling and outside. The rest was coping with AI news and code agents. Getting back to work after a week is a bit stressful and brings a bit of hurdle of health. I wasn’t quite well for a couple of days after the trip, and couldn’t really work at my 100% best. So, this weekend I would be pacing up, slowing down when needed to rest with ease. I have a few plans for Advent of Code, I haven’ gotten the time to solve even the first problem, looking forward to the weekend to keeping up with it.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 70</title><link>/posts/2025-11-29-techstructive-weekly-70/</link><pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/2025-11-29-techstructive-weekly-70/</guid><description>&lt;h2 id="week-70"&gt;Week #70&lt;/h2&gt;
-&lt;p&gt;As I wrote last week, I would be travelling and out on a break due to weddings at my contry side place, cousins wedding, som heavy travelling no tech access for most of the time. However I had atleast 4 days of work covered so I have few tidbits to share. Weekends, three days of the week and taking leave on evening on wednesday.&lt;/p&gt;
-&lt;p&gt;I played around with vllms , new different models for different thins ranging from ad hock coding tasks, proper code editing, and document extraction usecases. Didn’t find time to read or watch much.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 69</title><link>/posts/2025-11-22-techstructive-weekly-69/</link><pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/2025-11-22-techstructive-weekly-69/</guid><description>&lt;h2 id="week-69"&gt;Week #69&lt;/h2&gt;
-&lt;p&gt;It was a good week. That’s what I can say. I continued writing. I experimented with quite a lot of things. VLLMs, new models, new approaches, tactics, and read a lot of articles as usual.&lt;/p&gt;
-&lt;p&gt;As I was in the GCP Cloud Log Explorer TUI in the bubbletea golang app, I vibe-coded it, I wanted to feel it. No, I am not using that to publish on GitHub. I would make one from bare hands, what to put in the model, on the screen, when to update what, which keybindings to add where, I will think about each of them and code from scratch. My goal is to learn and build, not just build.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 68</title><link>/posts/2025-11-15-techstructive-weekly-68/</link><pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/2025-11-15-techstructive-weekly-68/</guid><description>&lt;h2 id="week-68"&gt;Week #68&lt;/h2&gt;
-&lt;p&gt;It was a great week. A consistent clean week. I wrote around 9k words on my project. I feel good again. I didn’t do much on the weekends as usual. I am slowing down. I did a lot of things at work, experiments, and more experiments on VLLMs and parsing documents. It’s fun times. I think for this weekend, I have plans as this post will cover what my mind is fixated on for the moment, Golang and TUIs, and a pain that is daily buzzing me, cleaning log files to get the actual data. LLMs are good at it, but take a bit of time for such trivial things.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 67</title><link>/posts/2025-11-08-techstructive-weekly-67/</link><pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/2025-11-08-techstructive-weekly-67/</guid><description>&lt;h2 id="week-67"&gt;Week #67&lt;/h2&gt;
-&lt;p&gt;It was a slow and steady week. New habits are emerging. It was a pleasant experience, I felt good, I kept myself out of the social media and content spiral doom-scrolling. Why? Because something changed the perspective of action and effect, the piece I was missing was intention.&lt;/p&gt;
-&lt;h3 id="action-intention-and-effect"&gt;Action, Intention, and Effect&lt;/h3&gt;
-&lt;p&gt;I heard or read somewhere, that we feel anxious or we waste our time, not because of motivation, rather due to the lack of intentionality of the actions. If you are going to the web with a clear focus and a objective, no force or urge can stop you. Motivation helps but doesn’t carry you all the way. Its not one emotion or quality thing, rather all-hands together approach. You solely can’t rely on focus either, you need your inner fire, you need purpose, you need energy, you need the skills to do it. Nothing comes on its own with a single cause-effect, its a multi-dimensional world of action and effect.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 66</title><link>/posts/2025-11-01-techstructive-weekly-66/</link><pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate><guid>/posts/2025-11-01-techstructive-weekly-66/</guid><description>&lt;h2 id="week-66"&gt;Week #66&lt;/h2&gt;
-&lt;p&gt;It was a silent week, chipping away the days like wasted days. I didn’t do much, honestly, it was tiring and draining. I spent the weekend outside, had a few chores to complete, and didn’t quite get the time to sit at peace. This weekend too, looks the same. Post Diwali rituals, guests, and functions.&lt;/p&gt;
-&lt;p&gt;I have long left the SQLog to decay, but I intend to pick it back up from tomorrow. Lot of things to do, little mental energy left.&lt;/p&gt;</description></item><item><title>Techstructive Weekly 65</title><link>/posts/2025-10-25-techstructive-weekly-65/</link><pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate><guid>/posts/2025-10-25-techstructive-weekly-65/</guid><description>&lt;h2 id="week-65"&gt;Week #65&lt;/h2&gt;
-&lt;p&gt;A happy gloom Diwali, gone in a woosh. We are in a different year. 2082 Vikram Samvat, If you are into that. Felt a bit sad, a bit happy. Not sure what the next year might have in offer. Hopefully it would be for the good.&lt;/p&gt;
-&lt;p&gt;Compared to last tear, I find myself happier, but lost at the same time. I have found a cure to my writing slump atlast and trying to wrestle a writing routine. It looks a bit promising, 2 months to end 2025, still a comeback on the edge. This year was wild, I had severe anxiety and it kept throwing AI LLM Models every day, all day. Each day felt like waking up from existential crisis, but here I am writing it, the sixty fifth edition. More to come.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #64</title><link>/posts/techstructive-weekly-64/</link><pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-64/</guid><description>&lt;h2 id="week-64"&gt;Week #64&lt;/h2&gt;
-&lt;p&gt;It was a pretty busy week, not from a work perspective but from the chaotic household perspective. It is Diwali this weekend and next week. So, the preparations, the cleaning of homes, were done past weekend. It actually took my whole Sunday, sweet Sunday, and even half of Saturday. Hh! I read a lot of books, though. I found a great book that fits the vibe I wanted while being in the atmosphere of Diwali.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #63</title><link>/posts/techstructive-weekly-63/</link><pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-63/</guid><description>&lt;h2 id="week-63"&gt;Week #63&lt;/h2&gt;
-&lt;p&gt;It was a fun week. After a long, a long I have had the time to rip-off a code base hands on and do something beyond pushing a feature, it was about reforming how a thing is approached. I felt really good. There are always rough days, but these days, the days that give you pain but that pain is satisfying. At the end of each day of the week, I had gone and came out of bed brimming full of ideas and questions to talk and sit through. Felt I was back to the grind.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #62</title><link>/posts/techstructive-weekly-62/</link><pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-62/</guid><description>&lt;h2 id="week-62"&gt;Week #62&lt;/h2&gt;
-&lt;p&gt;It was a great week. I didn’t knew I would say that at the start of the week. But hell yes, a promotion, finally. A hope at the end of the tunnel. Hard work pays off in the end. I kept believing and finally able to bring smile on my loved ones.&lt;/p&gt;
-&lt;p&gt;I quoted last week about home, a family, is not something that is by blood, rather it is the group of people who strive for each others success, for uplifting each other, when one falls down the other roots for him or her, when its harsh time, everyone steps back and stays together. And I was able to experience just that. The true value and meaning of a family and life.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #61</title><link>/posts/techstructive-weekly-61/</link><pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-61/</guid><description>&lt;h2 id="week-61"&gt;Week #61&lt;/h2&gt;
-&lt;p&gt;A bit of slow and disappointing week on a personal note. I tried my best to be a backend developer but was not worthy of being one, I was stranded as a product developer. I am not saying I hate being a product developer, it just gets too menial and boring once you know the limitations and the quirks of a product.&lt;/p&gt;
-&lt;p&gt;Apart from the grill, I learnt a lot about tokenization. I also continued to write occasionally about SQLite in the SQLog, three more entries. Wasn’t able to livestream due to guests and was unwell for the weekend with cold.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #60</title><link>/posts/techstructive-weekly-60/</link><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-60/</guid><description>&lt;h2 id="weekly-60"&gt;Weekly #60&lt;/h2&gt;
-&lt;p&gt;Another great week, consistently learning SQL, developing another streak for solving problems on FreeCodeCamp with Javascript and Python, reading instead of doomscrolling.&lt;/p&gt;
-&lt;p&gt;I have been learning about SQL since maybe 10 weeks now and finding myself in a good position, for the past 4 weeks I have written posts every day and it has helped me get back to the technical writing flow.&lt;/p&gt;
-&lt;p&gt;On the work side, it was a fun week, tinkering with a system that is already working decently and wanted it to get the most of it, turning the bits and knobs of a system is so cool.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #59</title><link>/posts/techstructive-weekly-59/</link><pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-59/</guid><description>&lt;h2 id="week-59"&gt;Week #59&lt;/h2&gt;
-&lt;p&gt;Another productive week, a lot shipped, almost all critical bugs fixed, the launch looks great. Wrote daily for another week about SQLite/SQL. Adding up 24 posts. Read it &lt;a href="https://www.meetgor.com/sqlog/"&gt;here&lt;/a&gt;. Generating a lot of ideas, getting back to journaling, reading instead of consuming videos and doomscrolling. It is getting better day by day. I have completed my yearly goal of reading 12 books. Still 3 more months to go, would be almost at 15-18 books.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #58</title><link>/posts/techstructive-weekly-58/</link><pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-58/</guid><description>&lt;h2 id="week-58"&gt;Week #58&lt;/h2&gt;
-&lt;p&gt;What a week, almost broke prod for half an hour! On Monday, can you believe it? I didn’t but that was a bug. Patched it and moved on. Had a consistent posting and learning sessions daily for an hour about SQL and SQLite. Feels good.&lt;/p&gt;
-&lt;p&gt;Had an situation where knowing javascript was a big deal and I don’t feel like writing javascript, it just doesn’t appeal to me, I guess I have to amp that up. Anyways, one more reason added for hating javascript, its unavoidable.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #57</title><link>/posts/techstructive-weekly-57/</link><pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-57/</guid><description>&lt;h2 id="week-57"&gt;Week #57&lt;/h2&gt;
-&lt;p&gt;It was a fun week, really doubled down on learning SQLite and SQL. Shipped a bit of code and had fun creating improving metrics on the work side of things. Able to see 10% improvement in the things I have been working on the past few months. Really a good vibe week. I finally broke the barrier or imposter syndrome and whatever it might be called it while using the AI-assisted/vibe coding things.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #56</title><link>/posts/techstructive-weekly-56/</link><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-56/</guid><description>&lt;h2 id="week-56"&gt;Week #56&lt;/h2&gt;
-&lt;p&gt;A simple yet rewarding week. Continuing the learning path of SQL, and taking it to a next level with consistent posting of log like posts, reading a ton of hackernews articles, researching about AI generated images metadata, and a lot of python code.&lt;/p&gt;
-&lt;p&gt;I will try to take a break this weekend, try to think what I want to see myself in the next 5 years, 3 years, and 1 year. I really want to think what I am and want to be as a person. Thanks to the post that I read this week, also will continue with SQL lessons or even take a course or certification.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #55</title><link>/posts/techstructive-weekly-55/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-55/</guid><description>&lt;h2 id="week-55"&gt;Week #55&lt;/h2&gt;
-&lt;p&gt;A clean week, it was a festive week. Saturday was Raksha Bandhan, so almost half of the day was spent in those rituals and getting in and out of the house and guests.&lt;/p&gt;
-&lt;p&gt;Sunday was mundane as I just sat back and took a break to detox the technical things I have been doing over that last week. Then hard hitting monday came where I was frustrated with AI vibes, that left me a headache and sore throat for the next day. Took a leave for the day and was feeling better on Wednesday, cradled a few more vibe coding sessions, this time more focused on my code expertise and drove the LLM to do certain things in certain limited ways, and it worked better.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #54</title><link>/posts/techstructive-weekly-54/</link><pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-54/</guid><description>&lt;h2 id="week-54"&gt;Week #54&lt;/h2&gt;
-&lt;p&gt;What a week! LLM models all over the place, gpt this, gpt that.Anyways, I find myself in a better place by avoiding AI in some places and using at its full potential at certain place, it took some time to realise it, but its kind of working now.&lt;/p&gt;
-&lt;p&gt;I don’t use AI to build the side projects like one shot, but use AI to help me understand certain topic, do something myself and converse with it about what it means, and what gaps I have in it. Using AI (cursor) at my work to speed things up and staying calm and letting things happen.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #53</title><link>/posts/techstructive-weekly-53/</link><pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-53/</guid><description>&lt;h2 id="week-53"&gt;Week #53&lt;/h2&gt;
-&lt;p&gt;A pretty slow moving week, but a lot of consumption. I watched and read a lot of resources on SQL, databases and backend in general. I want to understand SQL to learn what is the fundamental unit in CRUD apps, which I think is a SQL query.&lt;/p&gt;
-&lt;p&gt;Writing SQL query by hand in 2025 might be obsolete, but that 2% or 5% of the queries are pain in the ass to get LLMs write, that’s when the knowledge the depth, the legs of the PI shaped learning helps and make you feel alive, after weeks of existential crisis. I’ll keep learning SQL for the time being.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #52</title><link>/posts/techstructive-weekly-52/</link><pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-52/</guid><description>&lt;h2 id="week-52"&gt;Week #52&lt;/h2&gt;
-&lt;p&gt;Finally a rewarding week, after 2 week of slogs. I / We were able to make the client happy after having gone through hundreds of issues and wired experiments. I was involved when the bug was introduced, but I had clarified that is this what we want, and at that time the answer was yes! Still in the end I was the one biting teeth and on the burn.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #51</title><link>/posts/techstructive-weekly-51/</link><pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-51/</guid><description>&lt;h2 id="week-51"&gt;Week #51&lt;/h2&gt;
-&lt;p&gt;Another hectic week, the work seems unstoppable and almost killing my back. Had to work almost 12 hours at stretch to get something in production. Not the best of times to be working at. Especially when life puts you in wired position, not just in work but in mental situation, you have to believe in yourself and amidst that every other bit of things happen.&lt;/p&gt;
-&lt;h3 id="random-thought"&gt;Random Thought&lt;/h3&gt;
-&lt;p&gt;I was working away some bugs and fixing issues which was created for some other purpose at the time of initial prototype. But as the time evolved, it changed and deviated from the initial purpose, so fixed the current problem at hand. But people then point out your decisions. I felt grieved, lost, and most importantly wrong. But then things clarify, working all the possibilities of blunder out. Only problem was the decision made by the person in front of me when I asked the question in the past. But it was my fault in the end today. Not blaming anyone, just letting my thoughts out that people are too quick to judge and blame you when things go wrong rather than clarifying what they discussed first. World is cruel for the symphatic, for the humble, for the kind. It’s just is life. Can’t do much. But will you with one inspiration if you are lashed out at and the tides are against you.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #50</title><link>/posts/techstructive-weekly-50/</link><pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-50/</guid><description>&lt;h2 id="week-50"&gt;Week #50&lt;/h2&gt;
-&lt;p&gt;A bit of boring week, had a lot of hopes starting on Monday, but it just tumbled down. Also broke the 15 day long writing streak. It all just falls apart, I want to change things now. I work remotely, and not able to balance work-life and personal life, its just too exhausting. I get self-doubt creep up with this, am I really a sustainable developer, can I not continue development for the next 10 years even? It is starting to haunt me. I know it would be temporary, imposter syndrome feeling, but need to really change the flow of my daily routine to get a mindset shift.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #49</title><link>/posts/techstructive-weekly-49/</link><pubDate>Sat, 05 Jul 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-49/</guid><description>&lt;h2 id="week-49"&gt;Week #49&lt;/h2&gt;
-&lt;p&gt;I’ll keep this week short, I have a lot to learn, and too little time. I have been studying SQL in detail, practising problem sets over the week. Taking a few more courses on Redis, Python, and more SQL.&lt;/p&gt;
-&lt;p&gt;One interesting thing, I kept on with my creative writing endeavour and made 14 days streak, writing with an average of 1200 words a day. So, I am roughly at 20k words after 15 days on my novel. This could be my first novel, could be even ready by the end of July if I keep going after it. Sounds exciting to me. Can’t wait to complete it.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #48</title><link>/posts/techstructive-weekly-48/</link><pubDate>Sat, 28 Jun 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-48/</guid><description>&lt;h2 id="week-48"&gt;Week #48&lt;/h2&gt;
-&lt;p&gt;An fruitful week, not much on tech created, but a lot of learning and revising about the first principal thinking.&lt;/p&gt;
-&lt;p&gt;I tried to create a Pocket clone in Typescript with some AI-assisted (a bit of vibe coding) because I don’t like writing frontend. I failed a few times, and even my network seems to be off for a while, so I had to scrape that idea and stop streaming for the weekend. So, it didn’t quite work out. Instead this weekend I’ll only stream on Saturday to start one project.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #47</title><link>/posts/techstructive-weekly-47/</link><pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-47/</guid><description>&lt;h2 id="week-47"&gt;Week #47&lt;/h2&gt;
-&lt;p&gt;It was a exciting and exhaustive week, in a good way. I was able to almost complete a working AI Chatbot Application, start writing routine for an hour, get inspiration for more project ideas, and a lot of learning in tid-bits around LLMs.&lt;/p&gt;
-&lt;p&gt;This can’t be more exciting. A week or two before I was drenched in anxiety and negativity around LLMs as replacement for developers, but that’s far from reality and considering them as tools sounds so fun. I feel excited so much so that I feel I have no time to squeeze the energy.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #46</title><link>/posts/techstructive-weekly-46/</link><pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-46/</guid><description>&lt;h2 id="week-46"&gt;Week #46&lt;/h2&gt;
-&lt;p&gt;Life takes turns pretty quickly. I was here last week, complaining about life and here I am today, feeling grateful for whatever happened to me.&lt;/p&gt;
-&lt;p&gt;I took decisions last week and by mid-week, I was seeing results, like actual results. And I was just thrilled to experience it, when you decide to change, the universe listens and blesses you with opportunities. I am grateful for the things blessed to me through the week. Even if I fail next week, I have a head start to keep going and break the shackles one day.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #45</title><link>/posts/techstructive-weekly-45/</link><pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-45/</guid><description>&lt;h2 id="week-45"&gt;Week #45&lt;/h2&gt;
-&lt;p&gt;This week was exciting at first, but slowly it went on the extreme bad spectrum for me, leaving a spot for taking a bold decision.&lt;/p&gt;
-&lt;p&gt;Almost on the verge of a burnout or a big decision. Its been 3 months now, the first sparkle was created and now I think its high time to take the big decision. It’s no longer rash, but it’s a long thought decision.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #44</title><link>/posts/techstructive-weekly-44/</link><pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-44/</guid><description>&lt;h2 id="week-44"&gt;Week #44&lt;/h2&gt;
-&lt;p&gt;It was week of comeback. 1 videos and 2 live streams, back on track. Though lost the steam in the middle of the week. Still fresh and excited to get hands on projects this weekend.&lt;/p&gt;
-&lt;p&gt;Appwrite Sites? Android Apps for LLMs? AI Agents with some specific goals?&lt;/p&gt;
-&lt;p&gt;We’ll roll the die and let’s nature take where it wants to. We’ll start though, I realized it at the end of last week. No brainer right, once I start something, it quickly makes me addicted to completing it and the thing in between is curiosity and consistency. Not hamering buzzwords, but truly, I just started to record the video for pydantic AI and I created a few examples, within an hour I had 7 examples created. Some of which I had to discard, but nonetheless, enough material for a video to record.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #43</title><link>/posts/techstructive-weekly-43/</link><pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-43/</guid><description>&lt;h2 id="week-43"&gt;Week #43&lt;/h2&gt;
-&lt;p&gt;What a whirlwind of a week. This was expected, nothing new. New week, new models, every day feels closer to losing the developer job. But everytime, AI sucks and human grug brain works.&lt;/p&gt;
-&lt;p&gt;This week, I took a step back and tried to ease myself out from this AI slop. Want to really plan the things out and start the grind again. Need to re-align my core values and get back to the consistent and curious flaming torch in guiding myself in the AI abyss.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #42</title><link>/posts/techstructive-weekly-42/</link><pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-42/</guid><description>&lt;h2 id="week-42"&gt;Week #42&lt;/h2&gt;
-&lt;p&gt;It has been a nasty week, both physically and emotionally. I am sick right now, still somehow finding the right amount of energy to pump this edition out. I have a sore throat and fever. Twitchy eyes in the cold make things worse.&lt;/p&gt;
-&lt;p&gt;But emotionally, I have been on the battlefield, it seems. The battle has started between my heart and mind. The one that cares about the craft, my soul, and the other about the ego, duties and responsibilities, fame, the thing that I am right now. It’s intense, I am barely able to breathe and think. It’s making me doubt myself, my decisions, my efforts, and my existence.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #41</title><link>/posts/techstructive-weekly-41/</link><pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-41/</guid><description>&lt;h2 id="week-41"&gt;Week #41&lt;/h2&gt;
-&lt;p&gt;A slow-moving week overall. I had some spiritual realizations, not major, but enough to clear mental clutter and ease the overthinking through action, without worrying about results&lt;/p&gt;
-&lt;p&gt;The past weekend was too boring; I was not able to do anything fancy. Didn’t live stream, nor create a video. I think videos are not my thing for the moment, It takes too much energy to edit and polish my voice, and I don’t see enough return on that investment right now.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #40</title><link>/posts/techstructive-weekly-40/</link><pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-40/</guid><description>&lt;h2 id="week-40"&gt;Week #40&lt;/h2&gt;
-&lt;p&gt;What a week, I knew the silence was just temporary, it would come at once, thankfully it was not too much releases to keep track of. There was, however, one release of a model (or a family of models) from Alibaba Cloud with the Qwen suite of models, that overthrew the Meta AI LLama Models from the SOTA standard for open source models.&lt;/p&gt;
-&lt;p&gt;This week, I explored a bit about LLMs and how to operate with them effectively, thanks to the prompt engineering masterclass from Anthropic. I created a bunch of things, leaving aside my fear and procrastination. This week, I was a bit self-critical of myself but was able to break through the chains and took some hard decisions and executed, the results? Not sure, maybe good, might not work. But that is not in my hands; whatever was, is done. Time to move ahead and explore this AI revolution firsthand.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #39</title><link>/posts/techstructive-weekly-39/</link><pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-39/</guid><description>&lt;h2 id="week-39"&gt;Week #39&lt;/h2&gt;
-&lt;p&gt;A pretty active week, learning more about LLMs without getting distracted by a new model release (somehow this week there were no major releases by any provider, we can breathe).&lt;/p&gt;
-&lt;p&gt;This week, I truly explored the capabilities of LLMs, and to be honest, I was shocked. Moments before we thinking of a solution and pasted the problem in the LLM chat, with thinking and it was able to point out the exact solution. It was a subtle thing, but it makes humans wonder what their purpose is in life. I am kidding, of course, there are lot of things to improve upon as a human and a developer.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #38</title><link>/posts/techstructive-weekly-38/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-38/</guid><description>&lt;h2 id="week-38"&gt;Week #38&lt;/h2&gt;
-&lt;p&gt;A week after ages, I finally had some energy, some spark back. I am actually overwhelmed with this AI revolution, too many ideas, too little mental space, its just moving too fast. Like I feel, I was just in this newsletter yesterday, and here I am a week gone with so many things launched, dropped, and bomb shelled.&lt;/p&gt;
-&lt;h3 id="speed-in-the-ai-revolution"&gt;Speed in the AI Revolution&lt;/h3&gt;
-&lt;p&gt;Yes, AI launches feel like a bomb shell being dropped, in a good way, but can someone tell these AI companies to take a breath? At this pace, we all will be juggling models all the time. New models every week, deprecation of previous models, new ways to interact with tools, it’s just creating an endless cycle of progress. Yes, we might be progressing in better human intelligence,e but at the cost of letting too many possibilities just dying out due to speed.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #37</title><link>/posts/techstructive-weekly-36/</link><pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-36/</guid><description>&lt;h2 id="week-37"&gt;Week #37&lt;/h2&gt;
-&lt;p&gt;A bit of a hectic week. For the past quarter, the weeks have been quite rough, and this is continuing this month too. Need to really breathe air, and take my mind off for a while. But something hurts to quit and take a rest. Bad habits are really hard to break, like not creating a video is becoming my bad habit, really deciding to take action and actual action is the biggest difference.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #36</title><link>/posts/techstructive-weekly-36/</link><pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-36/</guid><description>&lt;h2 id="week-36"&gt;Week #36&lt;/h2&gt;
-&lt;p&gt;Was quite a work-holic week, did a lot of things this week. Debugging, prompting, scripting, flying through a random codebase and number crunching. I felt good, I am genuinely curious about Agents now and want to experiment a lot this weekend. Will have a video or two about it.&lt;/p&gt;
-&lt;p&gt;Finally it was a week, a little slow down after a 2 back to back weeks of AI launching and breaking the expectations. The image generation, gemma models, gemini 2.5 and mistral OCR, and what not have been released in the last stretch of first quarter of 2025. Phew! it was a heck of a quarter, that went in a jiffy.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #35</title><link>/posts/techstructive-weekly-35/</link><pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-35/</guid><description>&lt;h2 id="week-35"&gt;Week #35&lt;/h2&gt;
-&lt;p&gt;It has been quite a busy week, with some ups and downs at work. Another Friday release, a lot of patching and end-moment clutches to get it on time. I am not bragging, it is not good, but it is unavoidable at times, I am so proud that I was able to deliver it, despite having a weird situation in life.&lt;/p&gt;
-&lt;p&gt;Life is tough, there was a rough day this week in my life, things just get worse and worse, and then get a little hope. That hope might be too tiny, not enough to heal the mind, but enough to carry life. It is tough, I need to stand and stay strong and find a way out because I am destined to be great.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #33</title><link>/posts/2025-03-15-techstructive-weekly-33/</link><pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate><guid>/posts/2025-03-15-techstructive-weekly-33/</guid><description>&lt;h2 id="week-33"&gt;Week #33&lt;/h2&gt;
-&lt;p&gt;Finally a bit of stress reliving week. After constant hustle at work, this week felt a little less stressful (not stress as that stress, just too much cognitive load to handle). However I made 2 releases happen, a few experiments and brainstorming for cracking a problem.&lt;/p&gt;
-&lt;h3 id="work"&gt;Work&lt;/h3&gt;
-&lt;p&gt;This week made me realise, I sometimes do things. I was asked to figure out a metric that we need to provide to a customer based on their customers data, they basically need to understand the data of the customer, however the data is too much and they forward to us to extract and analyse on top of that. So, my job was to figure out the requirement of them, they need to understand the pattern in the data of the customer and that is not quite easy.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #34</title><link>/posts/techstructive-weekly-34/</link><pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-34/</guid><description>&lt;h1 id="week-34"&gt;Week #34&lt;/h1&gt;
-&lt;p&gt;It was a pretty busy and productive week. After three hectic weeks of research, hacking, scripting, implementing, Google Sheets, and Python Vulture coding an API, I made a few releases. Yes, that is the normal role of a software engineer at a startup. I get to wear multiple hats: analysing, writing, debugging, scripting, testing, and obviously communicating effectively.&lt;/p&gt;
-&lt;p&gt;I was able to complete the implementation successfully. The release somehow happened on a Friday evening, which I am skeptical about, but it happened without any hiccups, a few minor ones. It will all be well if it ends well.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #32</title><link>/posts/2025-03-01-techstructive-weekly-32/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>/posts/2025-03-01-techstructive-weekly-32/</guid><description>&lt;h2 id="week-32"&gt;Week #32&lt;/h2&gt;
-&lt;p&gt;Weeks of chaos have left me on the brink of burnout, with no time to breathe or reflect. Didn’t get much time to just sit and think, just had to complete a few hacks here and there to get the demo running, poor management and blind eyeing.&lt;/p&gt;
-&lt;p&gt;I am a bit stressed at the moment, not able to do anything, occupied in work from 9 to 12. Yes, that is a bit stressful and hectic to carry this daily.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #31</title><link>/posts/2025-03-01-techstructive-weekly-31/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>/posts/2025-03-01-techstructive-weekly-31/</guid><description>&lt;h2 id="week-31"&gt;Week #31&lt;/h2&gt;
-&lt;p&gt;What a week, again, a bit of thump and bumps, a bit of scare at work.&lt;/p&gt;
-&lt;p&gt;Last week was hectic, this week was continuing that bump in increased responsibilities. I think I might be transitioning from Junior to Senior, but the mindset might be of a junior, need to step up.&lt;/p&gt;
-&lt;p&gt;Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.&lt;/p&gt;
-&lt;p&gt;Might be the first time I felt a bit pressured, making me doubt myself, negative thoughts, quitting decisions, etc are flowing in my mind. Nothing bad, just wired stuff happening in life, it’s tough to live life sometimes, its hard to show it, no one knows what you and your family is going through in life, before they lash out and ruin it further. No one has patience and empathy anymore.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #30</title><link>/posts/2025-02-22-techstructive-weekly-30/</link><pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate><guid>/posts/2025-02-22-techstructive-weekly-30/</guid><description>&lt;h2 id="week-30"&gt;Week #30&lt;/h2&gt;
-&lt;p&gt;What a week captain! Realized this on Wednesday truly. A bit of exhausting yet exciting week, it was a wild ride, true but learnt a lot. A lot of mistakes popping up at once.&lt;/p&gt;
-&lt;p&gt;I had to scamper and get things done, not just do it, but do it correct, not only do it correct , but also do it more, that was exaggerated, but yes, it was a bit taxing at some point, but the reward? I don’t care, I did my best (to some extent) and I am leaving the result to nature, really can’t control that now. A lot of intense debugging sessions, pair programming, side scripting, a lot of fun conversations and moments, it was worth it.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #29</title><link>/posts/2025-02-15-techstructive-weekly-29/</link><pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate><guid>/posts/2025-02-15-techstructive-weekly-29/</guid><description>&lt;h2 id="week-29"&gt;Week #29&lt;/h2&gt;
-&lt;p&gt;It was a fun week. There was a bit of laziness, for sure, but also some work done. I didn’t create a video this week and took a bit of a break. I think it is as important to upskill as it is to maintain streaks of uploading.&lt;/p&gt;
-&lt;h3 id="quote-of-the-week"&gt;Quote of the week&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&amp;ldquo;The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.&amp;rdquo;&lt;/em&gt;&lt;br&gt;
-— Alvin Toffler&lt;/p&gt;</description></item><item><title>Techstructive Weekly #28</title><link>/posts/2025-02-08-techstructive-weekly-28/</link><pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate><guid>/posts/2025-02-08-techstructive-weekly-28/</guid><description>&lt;h2 id="week-28"&gt;Week #28&lt;/h2&gt;
-&lt;p&gt;This week was a bit frustrating, but I really want to continue what I am working on. However, life is pushing me in a different direction, and I am so confused. I have responsibilities to perform and situations to tackle. It is a bit hard to live ahead, but I will stay with my three pillars: curiosity, consistency, and grit.&lt;/p&gt;
-&lt;p&gt;This week, I created one video, and that’s it. It was just a bit of a hectic weekend, so I didn’t have much free time. However, on weekdays, I was able to learn about subdomains, LLMs, and more. I read a lot about writing, and at this point, I am overwhelmed with writing advice. I think it is high time to write consistently.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #27</title><link>/posts/2025-02-01-techstructive-weekly-27/</link><pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate><guid>/posts/2025-02-01-techstructive-weekly-27/</guid><description>&lt;h2 id="week-27"&gt;Week #27&lt;/h2&gt;
-&lt;p&gt;It was a bit of lazy day, not that lazy though, did a lot of things while being lazy. I had been doing a lot of things in the past few weeks, so this week I decided to take things a little slowly. If I just keep on being that productive, it would be a burnout soon.&lt;/p&gt;
-&lt;p&gt;So, I created a new kind of video using a presentation-style approach, wrote a bit of python, and debugged it a ton, and now I see why tests are handy. I don’t have to debug the issue every time I make a change here, If run tests, I know exactly which test failed and where to look out for so easily.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #26</title><link>/posts/2025-01-25-techstructive-weekly-26/</link><pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/2025-01-25-techstructive-weekly-26/</guid><description>&lt;h2 id="week-26"&gt;Week #26&lt;/h2&gt;
-&lt;p&gt;This week was really fun and exciting, I am continuing with more productive weeks. I was able to fix a lot of things this week. I created three videos this week. Worked on the side project with 2 live streams. Was able to demonstrate to the team at my work about the AI Agents. It was a great week.&lt;/p&gt;
-&lt;p&gt;Next week I am planning to wrap up the series of CRUD Applications with Golang, Netlify cloud functions, and LibSQL by adding authentication and authorization.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #25</title><link>/posts/2025-01-18-techstructive-weekly-25/</link><pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/2025-01-18-techstructive-weekly-25/</guid><description>&lt;h2 id="week-25"&gt;Week #25&lt;/h2&gt;
-&lt;p&gt;It was an exciting week, I did complete a lot of things on my work side, I had a bit of change in the routine of my work, an hour early, which makes me really productive and gets a lot of things done quite early and more importantly, I am now able to dedicate myself more time to learning new things.&lt;/p&gt;
-&lt;p&gt;This week, I didn’t release any videos, I was a bit exhausted and wanted to slow down a little, but I was not sitting idle, I was evaluating a project idea for some future videos, and the project is ready. Next week, expect some high-quality and in-depth videos.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #24</title><link>/posts/2025-01-11-techstructive-weekly-24/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/2025-01-11-techstructive-weekly-24/</guid><description>&lt;h2 id="week-24"&gt;Week #24&lt;/h2&gt;
-&lt;p&gt;It was an exciting week. I was pretty excited from the end of the past week with a new beginning to my work-life goal. After completing one, I have a new challenge in front of me: diving into the world of cutting-edge LLMs, agents, and Workflow. This can’t be more exciting.&lt;/p&gt;
-&lt;p&gt;This week, I was researching and exploring the frameworks, libraries and tools to create Agentic Workflows with LLMs, I can’t share much, but I see myself creating content around the things I will learn at my work/day job.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #23</title><link>/posts/2025-01-04-techstructive-weekly-23/</link><pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/2025-01-04-techstructive-weekly-23/</guid><description>&lt;p&gt;We are in 2025! Happy New Year&lt;/p&gt;
-&lt;p&gt;It feels good to carry this newsletter through the year from July 2024 to January 2025 and counting ….&lt;/p&gt;
-&lt;h2 id="week-23"&gt;Week #23&lt;/h2&gt;
-&lt;p&gt;It was a huge roaring start to the year, I created a video on the 1st, and that too a big video, I put in everything I could know about the thing I wanted to talk about in little as I could, and it&amp;rsquo;s gaining views and is likely to spike as the Golang 1.24 release date approaches. 200 IQ move there.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #22</title><link>/posts/2024-12-28-techstructive-weekly-22/</link><pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate><guid>/posts/2024-12-28-techstructive-weekly-22/</guid><description>&lt;p&gt;This is the last edition for 2024; the next edition will be on 3rd January 2025.&lt;/p&gt;
-&lt;p&gt;This week again was a bit slow or not much happened. I recorded 2 videos and did a live stream to solve some pending problems and that was it. At work, I completed the thing that I was supposed to do this quarter and I couldn’t be happier, definitely, there are things to improve on, but I like where I stand.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #21</title><link>/posts/2024-12-21-techstructive-weekly-21/</link><pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate><guid>/posts/2024-12-21-techstructive-weekly-21/</guid><description>&lt;h2 id="week-21"&gt;Week #21&lt;/h2&gt;
-&lt;p&gt;It was a nice week. I explored OpenAI stuff, fixed some issues in nested code structure, remade some Hugo sites, and did a bit of reading.&lt;/p&gt;
-&lt;p&gt;There were a lot of debugging sessions. I wanted to solve the advent of code but struggled for 10 days. Yes, and I have been struggling for 15 days at the blog event. I am still hoping to clear a few problems over the weekend. I am also looking to write some articles over the weekend. The weekend seems like a bit of high hope, but let’s see how much I can pull off. I also need to implement a quick project for my blog writing.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #20</title><link>/posts/2024-12-14-techstructive-weekly-20/</link><pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate><guid>/posts/2024-12-14-techstructive-weekly-20/</guid><description>&lt;h2 id="week-20"&gt;Week #20&lt;/h2&gt;
-&lt;p&gt;This week was a slow-moving week, it was a time when we see winters in Mumbai, just for a couple of days and that made me too lazy to wake up early which in turn ruined the entire day. It was that type of week, but good progress.&lt;/p&gt;
-&lt;p&gt;I wrote a few articles following the advent of code for days 1,2,3,4 and 5, and a couple are in progress.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #19</title><link>/posts/techstructive-weekly-19/</link><pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-19/</guid><description>&lt;h2 id="week-19"&gt;Week #19&lt;/h2&gt;
-&lt;p&gt;It was a pretty good week, with 2 videos published, 1 short created, and 4 live streams done, and 3 days of AOC solved. Phew!&lt;/p&gt;
-&lt;p&gt;On Saturday last week, I experimented with Netlify cloud functions in Golang and also for Turso’s LibSQL Database, and that went pretty well. Then started a livestream for the SSG in Golang, and completed the feed loading. Then on Sunday it was AOC Day 1, where I live-streamed it, created the video, and also scheduled the Netlify cloud functions video for Monday.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #18</title><link>/posts/techstructive-weekly-18/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-18/</guid><description>&lt;h2 id="week-18"&gt;Week #18&lt;/h2&gt;
-&lt;p&gt;It was a great week, if I could call it a hard-working week, it would be appropriate. I started the week (the weekends) by streaming, creating a video, and planning a few more videos for the next week. Then starting the week with deep intense programming sessions, a couple of flow states during the week made the mind feel accomplished and excited.&lt;/p&gt;
-&lt;p&gt;After releasing the code that I had been working on for so long in the past week, this week was about taking a new approach to the initial implementation, and it was smooth, it felt good, I was able to change the code that I had written faster and iterate on it quickly. This gave me the confidence that I can write production-ready and readable code. I am not that bad, there is a lot to improve on but quite a good feeling to live with and continue the work.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #17</title><link>/posts/techstructive-weekly-17/</link><pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-17/</guid><description>&lt;h2 id="week-17"&gt;Week #17&lt;/h2&gt;
-&lt;p&gt;What a week, had written code through all the days, thought a lot about solving certain issues, integrated reviewed changes, and also wrote and created a video on the weekend.&lt;/p&gt;
-&lt;p&gt;This was the week of releasing the thing that I have been building over the span of the past 2 months and really felt good this Thursday to release it. Tested it and worked perfectly, now on to a new set of experiments and building on top of the thing in the upcoming weeks or months even, exciting times ahead.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #16</title><link>/posts/techstructive-weekly-16/</link><pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-16/</guid><description>&lt;h2 id="week-16"&gt;Week #16&lt;/h2&gt;
-&lt;p&gt;This week was really productive, was able to make the code I have been writing for the past 2 months and experiments that have been doing into a deployable and ready to launch code. I finally feel a bit satisfied by my efforts, feel the motivation back, the curiosity back. I had an intense focus or flow state this week, I did not create any content this week as I was out on Sunday and was really tired on Saturday.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #15</title><link>/posts/techstructive-weekly-15/</link><pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-15/</guid><description>&lt;h2 id="week-15"&gt;Week #15&lt;/h2&gt;
-&lt;p&gt;A wonderful week, bringing back the joy of programming, after some slumpy weeks, a refreshing and mind challenging week. The start was drowzy after a long weekend, but as the week progressed, I had to shift gears and complete the things that took some deep concentration and thinking, finally the results were worth the efforts. Everything in its place, the reward for the focus and hard work.&lt;/p&gt;
-&lt;p&gt;After a live stream and video creation in the end of week last week, I didn’t do much on Sunday, just took a break and spent the diwali removing the negativity in life. I am not mentioning it enough but I continue the writing routine, 35 days and counting, the writing streak is un-broken, I completed one section of writing of 21 days and now moving on to another section of 17 days, combining a total of (9+21+5(till date)) 35 articles. This is the motivation for me waking up everyday, writing will get me to the places I can dream of.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #14</title><link>/posts/techstructive-weekly-14/</link><pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-14/</guid><description>&lt;h2 id="week-14"&gt;Week #14&lt;/h2&gt;
-&lt;p&gt;This was an excellent week, I created one video, posted one article, did a live stream setup went live for an hour on Twitch and Youtube, and did some exercise as well—writing of course with the 4th consecutive week.&lt;/p&gt;
-&lt;p&gt;The week was super-productive to start with, like I had a dream Sunday, I went on a walk in the morning, 6:30 AM, right? I have been procrastinating for months, but finally started doing since this Sunday. And I cannot say how much benefit I had from these walks like there is some energy flowing in me after I come from the walk. There is the fire ignited back, the curiosity flying back, the spark is back and with the habits like this newsletter and others in place, It looks like a dream routine, and it gets better and better. Not gonna Jinx it for the next week.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #13</title><link>/posts/techstructive-weekly-13/</link><pubDate>Sat, 26 Oct 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-13/</guid><description>&lt;h2 id="week-13"&gt;Week #13&lt;/h2&gt;
-&lt;p&gt;This was a pretty rough week, some mundane tasks at work, not that mundane but felt off track on the mind. Nothing going on in my life, just that the past things that have happened have slowed down and now feel the sense of pain and consequences in the future. Don’t know what I am talking really, but as always there is hope in me, I am continuing to write a mythological blog of mine for almost 21 days which is 3 weeks, yes that is a daily one post. At least some things in life are good.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #12</title><link>/posts/techstructive-weekly-12/</link><pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-12/</guid><description>&lt;h2 id="week-12"&gt;Week #12&lt;/h2&gt;
-&lt;p&gt;This week, was a bit of a realization that I need to improve as a junior developer, I need to do something important and exciting. These past few months have been tiring mentally, but need to up the effort and get some serious business rolling in.&lt;/p&gt;
-&lt;p&gt;I will be looking to write more articles based on the videos I create in the upcoming months.&lt;/p&gt;
-&lt;p&gt;This week, I worked a bit harder than usual, to do my two modes of being. One as a developer, and the other as a writer, I have been writing non-fictional, spiritual, and mythological writing on the side for almost 2 weeks now. I feel really positive, I am able to get things done quickly and appreciate life more gratefully.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #11</title><link>/posts/techstructive-weekly-11/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-11/</guid><description>&lt;h2 id="week-11"&gt;Week #11&lt;/h2&gt;
-&lt;p&gt;This week was good in terms of writing. I started a new endeavor: a blog. It is not technical; it is related to mythology and finding its meaning in the modern world. I kept a consistent writing routine for nine days. Nine posts in nine days looks like a good start for my writing routine. I will try to continue this routine throughout the month.&lt;/p&gt;
-&lt;p&gt;Moving on to the technical things, I wrote a lot less code than usual but read a lot of code for debugging and understanding existing flows.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #10</title><link>/posts/techstructive-weekly-10/</link><pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-10/</guid><description>&lt;h2 id="week-10"&gt;Week #10&lt;/h2&gt;
-&lt;p&gt;Wrapping up the third quarter with a burst of energy! This week felt more mentally demanding, but as the week closed, I realized that even small progress is still progress. Sometimes, numbers don’t tell the whole story—they can shift perceptions or even mislead. I believe in valuing the journey more than the destination, and this week’s coding, learning, and creating was worth more than any metric can show.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #9</title><link>/posts/techstructive-weekly-9/</link><pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-9/</guid><description>&lt;h2 id="week-9"&gt;Week #9&lt;/h2&gt;
-&lt;p&gt;This week was a bit of refreshing as I was able to write some code, bunch of experimentation and feeling a bit back after some slump in the past week. Need to get one video out this weekend to get into the habit. This October I will be trying to build my own writing routine, it won’t be for technical articles, but I won’t be surprised if I find it helpful to write more technical articles.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #8</title><link>/posts/techstructive-weekly-8/</link><pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-8/</guid><description>&lt;h2 id="week-8"&gt;Week #8&lt;/h2&gt;
-&lt;p&gt;This week was quite a slow one for me, I didn’t write much code, but I did some thinking and debugging deep into configurations. I want to say this, that’s it, not in the mood for a rant this week.&lt;/p&gt;
-&lt;h2 id="quote-of-the-week"&gt;Quote of the week&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Courage doesn&amp;rsquo;t always roar. Sometimes courage is the quiet voice at the end of the day saying, ‘I will try again tomorrow.’”&lt;/p&gt;
-&lt;p&gt;— Mary Anne Radmacher&lt;/p&gt;</description></item><item><title>Techstructive Weekly #7</title><link>/posts/techstructive-weekly-7/</link><pubDate>Sat, 14 Sep 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-7/</guid><description>&lt;h2 id="week-7"&gt;Week #7&lt;/h2&gt;
-&lt;p&gt;This week was a bit mentally tough but technically productive, pushed some efforts to get the project up and integrated fully and tested it out. Not good with the numbers but overall, that looked promising, and again excited for next week’s challenge.&lt;/p&gt;
-&lt;p&gt;This week is special because I created and uploaded my first YouTube video! On Sunday, I did everything from recording to creating the thumbnail, voiceover, and editing. It took about six hours for a six-minute video, but it’s a solid start for future videos. I’d love any feedback you have, so please check it out!&lt;/p&gt;</description></item><item><title>Techstructive Weekly #6</title><link>/posts/techstructive-weekly-6/</link><pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-6/</guid><description>&lt;h2 id="week-6"&gt;Week #6&lt;/h2&gt;
-&lt;p&gt;This week was all about diving deep into the details of my projects. After weeks of building, I spent this week debugging and testing everything, pushing things to the next level. My goal was to have a working demo by the end of the week, which I started on Wednesday—and I’m happy to report that I almost hit the mark. There’s always room for improvement, but the testing phase went as planned, and the hypothesis is holding up.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #5</title><link>/posts/techstructive-weekly-5/</link><pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-5/</guid><description>&lt;h2 id="week-5"&gt;Week #5&lt;/h2&gt;
-&lt;p&gt;This week felt like a slog, with many challenges and frustrations. However, by the end of the week, I found my stride and got excited about the direction I’m heading. It&amp;rsquo;s amazing how quickly things can shift from feeling like the end of the world to experiencing a burst of excitement.&lt;/p&gt;
-&lt;p&gt;I also managed to get the side project of the &lt;a href="https://github.com/Mr-Destructive/meta-ai-golang"&gt;Meta AI API wrapper&lt;/a&gt; in Golang correctly, over the weekend will polish this project and also fix the bug in the Chat GPT anonymous client in Python.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #4</title><link>/posts/techstructive-weekly-4/</link><pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-4/</guid><description>&lt;h2 id="techstructive-weekly-4"&gt;Techstructive Weekly #4&lt;/h2&gt;
-&lt;p&gt;It was an exhilarating week for me, learned a lot of stuff, wrote a lot of code, pushed a lot of bugs, and tweeted a lot. This week, I wrote a lot of Python scripts at my work for experimentation setup and testing a lot of things, I was learning and prototyping my idea of Audiofy with Appwrite cloud, and read some inspiring articles.&lt;/p&gt;
-&lt;p&gt;Let’s refresh the developer’s life a bit and think philosophically.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #3</title><link>/posts/techstructive-weekly-3/</link><pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-3/</guid><description>&lt;h2 id="techstructive-weekly-3"&gt;Techstructive Weekly #3&lt;/h2&gt;
-&lt;p&gt; The week was really tiring for me for some reasons, was not able to work on the side projects. I actually spent some time with my family and cousin who came over the weeks for festivals. However, on the work side of things, I was able to learn a few things about NGINX, pdf parsing and product specific features.&lt;/p&gt;
-&lt;p&gt;The upcoming week(end) will be actually fun, as I finally have some free time to write some blogs, hopefully will be able to have some things to showcase and share next week about the things I explored or failed at those things.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #2</title><link>/posts/techstructive-weekly-2/</link><pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-2/</guid><description>&lt;h2 id="week-2"&gt;Week #2&lt;/h2&gt;
-&lt;p&gt;This week I made some mistakes at my job (well they were the week before) but they got caught after the review. I learned how powerful reviews could be at catching flaws in code. I also caught a bug while pair programming, it was a mixed feeling as a developer for me this week.&lt;/p&gt;
-&lt;p&gt;In the end, I would recommend debugging your code thrice, yes not once, not twice but thrice, and also make sure to forcefully make the code flow reach the section of your changes, if that is a bit of an edge case thing.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #1</title><link>/posts/techstructive-weekly-1/</link><pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-1/</guid><description>&lt;h1 id="week-1"&gt;Week #1&lt;/h1&gt;
-&lt;p&gt;This week, I had a ton of fun on the side as I finally made the MVP of a side project. An SSG with a Content Management System-like interface. an SSG with an editor that syncs up the posts from a database.&lt;/p&gt;
-&lt;p&gt;In this process, I learned about Cloudflare workers and golang. At work, I had some thinking and experimentation with LLMs.&lt;/p&gt;
-&lt;p&gt;Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.&lt;/p&gt;</description></item><item><title>Techstructive Weekly #0</title><link>/posts/techstructive-weekly-0/</link><pubDate>Sat, 27 Jul 2024 00:00:00 +0000</pubDate><guid>/posts/techstructive-weekly-0/</guid><description>&lt;h2 id="week-0"&gt;Week #0&lt;/h2&gt;
-&lt;p&gt;This week was about writing one of the much-procrastinated blog posts, starting a YouTube channel, and going through some heavy debugging sessions with my colleagues at work.&lt;/p&gt;
-&lt;h3 id="quote-of-the-week"&gt;Quote of the week&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It’s harder to say things which are easier to do, and easier to say things which are harder to do&lt;br&gt;
-(It’s just my random thought converted to a quote)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Seriously think about this quote, it is easier to say I will go to the gym daily, and read books, but working on them is it hard. Why is the harder to say that I am scrolling through Twitter, and Instagram, having burnout, but taking action against it is sheer a change in mindset?&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newsletter on Notes</title>
+    <link>/type/newsletter/</link>
+    <description>Recent content in Newsletter on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Meet Gor</copyright>
+    <lastBuildDate>Sun, 04 Jan 2026 16:25:41 +0530</lastBuildDate><atom:link href="/type/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Techstructive Weekly #74</title>
+      <link>/posts/techstructive-weekly-74/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-74/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #74&#xA;    &lt;div id=&#34;week-74&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-74&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was winding down week, 2025, ending slowly, the biggest irony. The year was full of fast-paced, unprecedented models just dropping here and there. It was hard to keep up with the progress. It was getting overwhelming, no one is used to such a level of information. I was dreading with so much power in our hands. I couldn’t handle it and refrained it and thought it was better to focus on learning new things. I kept using AI tools at work, not by choice, but initially through force but then through necessity.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #73</title>
+      <link>/posts/techstructive-weekly-73/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-73/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week 73&#xA;    &lt;div id=&#34;week-73&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-73&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A pretty slow and sluggish week, but some momentum carried in the end. There was a disappointment after a glimmer of excitement when gemini 3 Flash dropped for the experiments that I was running for extraction of documents. It was maybe just the timing, but after this seeing code execution from chats, it was amazing. A good end to the work week.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #72</title>
+      <link>/posts/techstructive-weekly-72/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-72/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #72&#xA;    &lt;div id=&#34;week-72&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-72&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A good productive week (I am not sure, I am saying that in the last month of 2025). I would be writing a yearly review in a couple of weeks and this week might lift my spirits up. I was fresh, given time off from work, not really, but given the time to experiment.&lt;/p&gt;&#xA;&lt;p&gt;I read a lot, fiction, technical, even philosophical, and random Hacker News articles. I read 2 books of Harry Potter. I haven’t read Harry Potter, I have watched the first 3 movies, but not books. I enjoyed it, it was subtly different from movies, I missed the quote “What an Idiot” from the movies, it was not in the book, i was disappointed but the atmospheric adventures was amazing read.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 71</title>
+      <link>/posts/2025-12-06-techstructive-weekly-71/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-12-06-techstructive-weekly-71/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #71&#xA;    &lt;div id=&#34;week-71&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-71&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a roller-coaster week. Half of the week, it was travelling and outside. The rest was coping with AI news and code agents. Getting back to work after a week is a bit stressful and brings a bit of hurdle of health. I wasn’t quite well for a couple of days after the trip, and couldn’t really work at my 100% best. So, this weekend I would be pacing up, slowing down when needed to rest with ease. I have a few plans for Advent of Code, I haven’ gotten the time to solve even the first problem, looking forward to the weekend to keeping up with it.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 70</title>
+      <link>/posts/2025-11-29-techstructive-weekly-70/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-11-29-techstructive-weekly-70/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #70&#xA;    &lt;div id=&#34;week-70&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-70&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;As I wrote last week, I would be travelling and out on a break due to weddings at my contry side place, cousins wedding, som heavy travelling no tech access for most of the time. However I had atleast 4 days of work covered so I have few tidbits to share. Weekends, three days of the week and taking leave on evening on wednesday.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 69</title>
+      <link>/posts/2025-11-22-techstructive-weekly-69/</link>
+      <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-11-22-techstructive-weekly-69/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #69&#xA;    &lt;div id=&#34;week-69&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-69&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a good week. That’s what I can say. I continued writing. I experimented with quite a lot of things. VLLMs, new models, new approaches, tactics, and read a lot of articles as usual.&lt;/p&gt;&#xA;&lt;p&gt;As I was in the GCP Cloud Log Explorer TUI in the bubbletea golang app, I vibe-coded it, I wanted to feel it. No, I am not using that to publish on GitHub. I would make one from bare hands, what to put in the model, on the screen, when to update what, which keybindings to add where, I will think about each of them and code from scratch. My goal is to learn and build, not just build.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 68</title>
+      <link>/posts/2025-11-15-techstructive-weekly-68/</link>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-11-15-techstructive-weekly-68/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #68&#xA;    &lt;div id=&#34;week-68&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-68&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a great week. A consistent clean week. I wrote around 9k words on my project. I feel good again. I didn’t do much on the weekends as usual. I am slowing down. I did a lot of things at work, experiments, and more experiments on VLLMs and parsing documents. It’s fun times. I think for this weekend, I have plans as this post will cover what my mind is fixated on for the moment, Golang and TUIs, and a pain that is daily buzzing me, cleaning log files to get the actual data. LLMs are good at it, but take a bit of time for such trivial things.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 67</title>
+      <link>/posts/2025-11-08-techstructive-weekly-67/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-11-08-techstructive-weekly-67/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #67&#xA;    &lt;div id=&#34;week-67&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-67&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a slow and steady week. New habits are emerging. It was a pleasant experience, I felt good, I kept myself out of the social media and content spiral doom-scrolling. Why? Because something changed the perspective of action and effect, the piece I was missing was intention.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Action, Intention, and Effect&#xA;    &lt;div id=&#34;action-intention-and-effect&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#action-intention-and-effect&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I heard or read somewhere, that we feel anxious or we waste our time, not because of motivation, rather due to the lack of intentionality of the actions. If you are going to the web with a clear focus and a objective, no force or urge can stop you. Motivation helps but doesn’t carry you all the way. Its not one emotion or quality thing, rather all-hands together approach. You solely can’t rely on focus either, you need your inner fire, you need purpose, you need energy, you need the skills to do it. Nothing comes on its own with a single cause-effect, its a multi-dimensional world of action and effect.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 66</title>
+      <link>/posts/2025-11-01-techstructive-weekly-66/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-11-01-techstructive-weekly-66/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #66&#xA;    &lt;div id=&#34;week-66&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-66&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a silent week, chipping away the days like wasted days. I didn’t do much, honestly, it was tiring and draining. I spent the weekend outside, had a few chores to complete, and didn’t quite get the time to sit at peace. This weekend too, looks the same. Post Diwali rituals, guests, and functions.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly 65</title>
+      <link>/posts/2025-10-25-techstructive-weekly-65/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-10-25-techstructive-weekly-65/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #65&#xA;    &lt;div id=&#34;week-65&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-65&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A happy gloom Diwali, gone in a woosh. We are in a different year. 2082 Vikram Samvat, If you are into that. Felt a bit sad, a bit happy. Not sure what the next year might have in offer. Hopefully it would be for the good.&lt;/p&gt;&#xA;&lt;p&gt;Compared to last tear, I find myself happier, but lost at the same time. I have found a cure to my writing slump atlast and trying to wrestle a writing routine. It looks a bit promising, 2 months to end 2025, still a comeback on the edge. This year was wild, I had severe anxiety and it kept throwing AI LLM Models every day, all day. Each day felt like waking up from existential crisis, but here I am writing it, the sixty fifth edition. More to come.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #64</title>
+      <link>/posts/techstructive-weekly-64/</link>
+      <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-64/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #64&#xA;    &lt;div id=&#34;week-64&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-64&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a pretty busy week, not from a work perspective but from the chaotic household perspective. It is Diwali this weekend and next week. So, the preparations, the cleaning of homes, were done past weekend. It actually took my whole Sunday, sweet Sunday, and even half of Saturday. Hh! I read a lot of books, though. I found a great book that fits the vibe I wanted while being in the atmosphere of Diwali.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #63</title>
+      <link>/posts/techstructive-weekly-63/</link>
+      <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-63/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #63&#xA;    &lt;div id=&#34;week-63&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-63&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a fun week. After a long, a long I have had the time to rip-off a code base hands on and do something beyond pushing a feature, it was about reforming how a thing is approached. I felt really good. There are always rough days, but these days, the days that give you pain but that pain is satisfying. At the end of each day of the week, I had gone and came out of bed brimming full of ideas and questions to talk and sit through. Felt I was back to the grind.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #62</title>
+      <link>/posts/techstructive-weekly-62/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-62/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #62&#xA;    &lt;div id=&#34;week-62&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-62&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a great week. I didn’t knew I would say that at the start of the week. But hell yes, a promotion, finally. A hope at the end of the tunnel. Hard work pays off in the end. I kept believing and finally able to bring smile on my loved ones.&lt;/p&gt;&#xA;&lt;p&gt;I quoted last week about home, a family, is not something that is by blood, rather it is the group of people who strive for each others success, for uplifting each other, when one falls down the other roots for him or her, when its harsh time, everyone steps back and stays together. And I was able to experience just that. The true value and meaning of a family and life.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #61</title>
+      <link>/posts/techstructive-weekly-61/</link>
+      <pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-61/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #61&#xA;    &lt;div id=&#34;week-61&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-61&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A bit of slow and disappointing week on a personal note. I tried my best to be a backend developer but was not worthy of being one, I was stranded as a product developer. I am not saying I hate being a product developer, it just gets too menial and boring once you know the limitations and the quirks of a product.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #60</title>
+      <link>/posts/techstructive-weekly-60/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-60/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Weekly #60&#xA;    &lt;div id=&#34;weekly-60&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#weekly-60&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Another great week, consistently learning SQL, developing another streak for solving problems on FreeCodeCamp with Javascript and Python, reading instead of doomscrolling.&lt;/p&gt;&#xA;&lt;p&gt;I have been learning about SQL since maybe 10 weeks now and finding myself in a good position, for the past 4 weeks I have written posts every day and it has helped me get back to the technical writing flow.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #59</title>
+      <link>/posts/techstructive-weekly-59/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-59/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #59&#xA;    &lt;div id=&#34;week-59&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-59&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Another productive week, a lot shipped, almost all critical bugs fixed, the launch looks great. Wrote daily for another week about SQLite/SQL. Adding up 24 posts. Read it &lt;a href=&#34;https://www.meetgor.com/sqlog/&#34;  target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Generating a lot of ideas, getting back to journaling, reading instead of consuming videos and doomscrolling. It is getting better day by day. I have completed my yearly goal of reading 12 books. Still 3 more months to go, would be almost at 15-18 books.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #58</title>
+      <link>/posts/techstructive-weekly-58/</link>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-58/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #58&#xA;    &lt;div id=&#34;week-58&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-58&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a week, almost broke prod for half an hour! On Monday, can you believe it? I didn’t but that was a bug. Patched it and moved on. Had a consistent posting and learning sessions daily for an hour about SQL and SQLite. Feels good.&lt;/p&gt;&#xA;&lt;p&gt;Had an situation where knowing javascript was a big deal and I don’t feel like writing javascript, it just doesn’t appeal to me, I guess I have to amp that up. Anyways, one more reason added for hating javascript, its unavoidable.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #57</title>
+      <link>/posts/techstructive-weekly-57/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-57/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #57&#xA;    &lt;div id=&#34;week-57&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-57&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a fun week, really doubled down on learning SQLite and SQL. Shipped a bit of code and had fun creating improving metrics on the work side of things. Able to see 10% improvement in the things I have been working on the past few months. Really a good vibe week. I finally broke the barrier or imposter syndrome and whatever it might be called it while using the AI-assisted/vibe coding things.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #56</title>
+      <link>/posts/techstructive-weekly-56/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-56/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #56&#xA;    &lt;div id=&#34;week-56&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-56&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A simple yet rewarding week. Continuing the learning path of SQL, and taking it to a next level with consistent posting of log like posts, reading a ton of hackernews articles, researching about AI generated images metadata, and a lot of python code.&lt;/p&gt;&#xA;&lt;p&gt;I will try to take a break this weekend, try to think what I want to see myself in the next 5 years, 3 years, and 1 year. I really want to think what I am and want to be as a person. Thanks to the post that I read this week, also will continue with SQL lessons or even take a course or certification.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #55</title>
+      <link>/posts/techstructive-weekly-55/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-55/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #55&#xA;    &lt;div id=&#34;week-55&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-55&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A clean week, it was a festive week. Saturday was Raksha Bandhan, so almost half of the day was spent in those rituals and getting in and out of the house and guests.&lt;/p&gt;&#xA;&lt;p&gt;Sunday was mundane as I just sat back and took a break to detox the technical things I have been doing over that last week. Then hard hitting monday came where I was frustrated with AI vibes, that left me a headache and sore throat for the next day. Took a leave for the day and was feeling better on Wednesday, cradled a few more vibe coding sessions, this time more focused on my code expertise and drove the LLM to do certain things in certain limited ways, and it worked better.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #54</title>
+      <link>/posts/techstructive-weekly-54/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-54/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #54&#xA;    &lt;div id=&#34;week-54&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-54&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a week! LLM models all over the place, gpt this, gpt that.Anyways, I find myself in a better place by avoiding AI in some places and using at its full potential at certain place, it took some time to realise it, but its kind of working now.&lt;/p&gt;&#xA;&lt;p&gt;I don’t use AI to build the side projects like one shot, but use AI to help me understand certain topic, do something myself and converse with it about what it means, and what gaps I have in it. Using AI (cursor) at my work to speed things up and staying calm and letting things happen.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #53</title>
+      <link>/posts/techstructive-weekly-53/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-53/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #53&#xA;    &lt;div id=&#34;week-53&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-53&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A pretty slow moving week, but a lot of consumption. I watched and read a lot of resources on SQL, databases and backend in general. I want to understand SQL to learn what is the fundamental unit in CRUD apps, which I think is a SQL query.&lt;/p&gt;&#xA;&lt;p&gt;Writing SQL query by hand in 2025 might be obsolete, but that 2% or 5% of the queries are pain in the ass to get LLMs write, that’s when the knowledge the depth, the legs of the PI shaped learning helps and make you feel alive, after weeks of existential crisis. I’ll keep learning SQL for the time being.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #52</title>
+      <link>/posts/techstructive-weekly-52/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-52/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #52&#xA;    &lt;div id=&#34;week-52&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-52&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Finally a rewarding week, after 2 week of slogs. I / We were able to make the client happy after having gone through hundreds of issues and wired experiments. I was involved when the bug was introduced, but I had clarified that is this what we want, and at that time the answer was yes! Still in the end I was the one biting teeth and on the burn.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #51</title>
+      <link>/posts/techstructive-weekly-51/</link>
+      <pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-51/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #51&#xA;    &lt;div id=&#34;week-51&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-51&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Another hectic week, the work seems unstoppable and almost killing my back. Had to work almost 12 hours at stretch to get something in production. Not the best of times to be working at. Especially when life puts you in wired position, not just in work but in mental situation, you have to believe in yourself and amidst that every other bit of things happen.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #50</title>
+      <link>/posts/techstructive-weekly-50/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-50/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #50&#xA;    &lt;div id=&#34;week-50&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-50&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A bit of boring week, had a lot of hopes starting on Monday, but it just tumbled down. Also broke the 15 day long writing streak. It all just falls apart, I want to change things now. I work remotely, and not able to balance work-life and personal life, its just too exhausting. I get self-doubt creep up with this, am I really a sustainable developer, can I not continue development for the next 10 years even? It is starting to haunt me. I know it would be temporary, imposter syndrome feeling, but need to really change the flow of my daily routine to get a mindset shift.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #49</title>
+      <link>/posts/techstructive-weekly-49/</link>
+      <pubDate>Sat, 05 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-49/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #49&#xA;    &lt;div id=&#34;week-49&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-49&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I’ll keep this week short, I have a lot to learn, and too little time. I have been studying SQL in detail, practising problem sets over the week. Taking a few more courses on Redis, Python, and more SQL.&lt;/p&gt;&#xA;&lt;p&gt;One interesting thing, I kept on with my creative writing endeavour and made 14 days streak, writing with an average of 1200 words a day. So, I am roughly at 20k words after 15 days on my novel. This could be my first novel, could be even ready by the end of July if I keep going after it. Sounds exciting to me. Can’t wait to complete it.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #48</title>
+      <link>/posts/techstructive-weekly-48/</link>
+      <pubDate>Sat, 28 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-48/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #48&#xA;    &lt;div id=&#34;week-48&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-48&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;An fruitful week, not much on tech created, but a lot of learning and revising about the first principal thinking.&lt;/p&gt;&#xA;&lt;p&gt;I tried to create a Pocket clone in Typescript with some AI-assisted (a bit of vibe coding) because I don’t like writing frontend. I failed a few times, and even my network seems to be off for a while, so I had to scrape that idea and stop streaming for the weekend. So, it didn’t quite work out. Instead this weekend I’ll only stream on Saturday to start one project.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #47</title>
+      <link>/posts/techstructive-weekly-47/</link>
+      <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-47/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #47&#xA;    &lt;div id=&#34;week-47&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-47&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a exciting and exhaustive week, in a good way. I was able to almost complete a working AI Chatbot Application, start writing routine for an hour, get inspiration for more project ideas, and a lot of learning in tid-bits around LLMs.&lt;/p&gt;&#xA;&lt;p&gt;This can’t be more exciting. A week or two before I was drenched in anxiety and negativity around LLMs as replacement for developers, but that’s far from reality and considering them as tools sounds so fun. I feel excited so much so that I feel I have no time to squeeze the energy.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #46</title>
+      <link>/posts/techstructive-weekly-46/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-46/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #46&#xA;    &lt;div id=&#34;week-46&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-46&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Life takes turns pretty quickly. I was here last week, complaining about life and here I am today, feeling grateful for whatever happened to me.&lt;/p&gt;&#xA;&lt;p&gt;I took decisions last week and by mid-week, I was seeing results, like actual results. And I was just thrilled to experience it, when you decide to change, the universe listens and blesses you with opportunities. I am grateful for the things blessed to me through the week. Even if I fail next week, I have a head start to keep going and break the shackles one day.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #45</title>
+      <link>/posts/techstructive-weekly-45/</link>
+      <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-45/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #45&#xA;    &lt;div id=&#34;week-45&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-45&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was exciting at first, but slowly it went on the extreme bad spectrum for me, leaving a spot for taking a bold decision.&lt;/p&gt;&#xA;&lt;p&gt;Almost on the verge of a burnout or a big decision. Its been 3 months now, the first sparkle was created and now I think its high time to take the big decision. It’s no longer rash, but it’s a long thought decision.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #44</title>
+      <link>/posts/techstructive-weekly-44/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-44/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #44&#xA;    &lt;div id=&#34;week-44&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-44&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was week of comeback. 1 videos and 2 live streams, back on track. Though lost the steam in the middle of the week. Still fresh and excited to get hands on projects this weekend.&lt;/p&gt;&#xA;&lt;p&gt;Appwrite Sites? Android Apps for LLMs? AI Agents with some specific goals?&lt;/p&gt;&#xA;&lt;p&gt;We’ll roll the die and let’s nature take where it wants to. We’ll start though, I realized it at the end of last week. No brainer right, once I start something, it quickly makes me addicted to completing it and the thing in between is curiosity and consistency. Not hamering buzzwords, but truly, I just started to record the video for pydantic AI and I created a few examples, within an hour I had 7 examples created. Some of which I had to discard, but nonetheless, enough material for a video to record.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #43</title>
+      <link>/posts/techstructive-weekly-43/</link>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-43/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #43&#xA;    &lt;div id=&#34;week-43&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-43&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a whirlwind of a week. This was expected, nothing new. New week, new models, every day feels closer to losing the developer job. But everytime, AI sucks and human grug brain works.&lt;/p&gt;&#xA;&lt;p&gt;This week, I took a step back and tried to ease myself out from this AI slop. Want to really plan the things out and start the grind again. Need to re-align my core values and get back to the consistent and curious flaming torch in guiding myself in the AI abyss.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #42</title>
+      <link>/posts/techstructive-weekly-42/</link>
+      <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-42/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #42&#xA;    &lt;div id=&#34;week-42&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-42&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It has been a nasty week, both physically and emotionally. I am sick right now, still somehow finding the right amount of energy to pump this edition out. I have a sore throat and fever. Twitchy eyes in the cold make things worse.&lt;/p&gt;&#xA;&lt;p&gt;But emotionally, I have been on the battlefield, it seems. The battle has started between my heart and mind. The one that cares about the craft, my soul, and the other about the ego, duties and responsibilities, fame, the thing that I am right now. It’s intense, I am barely able to breathe and think. It’s making me doubt myself, my decisions, my efforts, and my existence.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #41</title>
+      <link>/posts/techstructive-weekly-41/</link>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-41/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #41&#xA;    &lt;div id=&#34;week-41&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-41&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A slow-moving week overall. I had some spiritual realizations, not major, but enough to clear mental clutter and ease the overthinking through action, without worrying about results&lt;/p&gt;&#xA;&lt;p&gt;The past weekend was too boring; I was not able to do anything fancy. Didn’t live stream, nor create a video. I think videos are not my thing for the moment, It takes too much energy to edit and polish my voice, and I don’t see enough return on that investment right now.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #40</title>
+      <link>/posts/techstructive-weekly-40/</link>
+      <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-40/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #40&#xA;    &lt;div id=&#34;week-40&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-40&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a week, I knew the silence was just temporary, it would come at once, thankfully it was not too much releases to keep track of. There was, however, one release of a model (or a family of models) from Alibaba Cloud with the Qwen suite of models, that overthrew the Meta AI LLama Models from the SOTA standard for open source models.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #39</title>
+      <link>/posts/techstructive-weekly-39/</link>
+      <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-39/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #39&#xA;    &lt;div id=&#34;week-39&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-39&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A pretty active week, learning more about LLMs without getting distracted by a new model release (somehow this week there were no major releases by any provider, we can breathe).&lt;/p&gt;&#xA;&lt;p&gt;This week, I truly explored the capabilities of LLMs, and to be honest, I was shocked. Moments before we thinking of a solution and pasted the problem in the LLM chat, with thinking and it was able to point out the exact solution. It was a subtle thing, but it makes humans wonder what their purpose is in life. I am kidding, of course, there are lot of things to improve upon as a human and a developer.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #38</title>
+      <link>/posts/techstructive-weekly-38/</link>
+      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-38/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #38&#xA;    &lt;div id=&#34;week-38&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-38&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A week after ages, I finally had some energy, some spark back. I am actually overwhelmed with this AI revolution, too many ideas, too little mental space, its just moving too fast. Like I feel, I was just in this newsletter yesterday, and here I am a week gone with so many things launched, dropped, and bomb shelled.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #37</title>
+      <link>/posts/techstructive-weekly-36/</link>
+      <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-36/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #37&#xA;    &lt;div id=&#34;week-37&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-37&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A bit of a hectic week. For the past quarter, the weeks have been quite rough, and this is continuing this month too. Need to really breathe air, and take my mind off for a while. But something hurts to quit and take a rest. Bad habits are really hard to break, like not creating a video is becoming my bad habit, really deciding to take action and actual action is the biggest difference.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #36</title>
+      <link>/posts/techstructive-weekly-36/</link>
+      <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-36/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #36&#xA;    &lt;div id=&#34;week-36&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-36&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Was quite a work-holic week, did a lot of things this week. Debugging, prompting, scripting, flying through a random codebase and number crunching. I felt good, I am genuinely curious about Agents now and want to experiment a lot this weekend. Will have a video or two about it.&lt;/p&gt;&#xA;&lt;p&gt;Finally it was a week, a little slow down after a 2 back to back weeks of AI launching and breaking the expectations. The image generation, gemma models, gemini 2.5 and mistral OCR, and what not have been released in the last stretch of first quarter of 2025. Phew! it was a heck of a quarter, that went in a jiffy.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #35</title>
+      <link>/posts/techstructive-weekly-35/</link>
+      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-35/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #35&#xA;    &lt;div id=&#34;week-35&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-35&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It has been quite a busy week, with some ups and downs at work. Another Friday release, a lot of patching and end-moment clutches to get it on time. I am not bragging, it is not good, but it is unavoidable at times, I am so proud that I was able to deliver it, despite having a weird situation in life.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #33</title>
+      <link>/posts/2025-03-15-techstructive-weekly-33/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-03-15-techstructive-weekly-33/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #33&#xA;    &lt;div id=&#34;week-33&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-33&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Finally a bit of stress reliving week. After constant hustle at work, this week felt a little less stressful (not stress as that stress, just too much cognitive load to handle). However I made 2 releases happen, a few experiments and brainstorming for cracking a problem.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Work&#xA;    &lt;div id=&#34;work&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#work&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;This week made me realise, I sometimes do things. I was asked to figure out a metric that we need to provide to a customer based on their customers data, they basically need to understand the data of the customer, however the data is too much and they forward to us to extract and analyse on top of that. So, my job was to figure out the requirement of them, they need to understand the pattern in the data of the customer and that is not quite easy.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #34</title>
+      <link>/posts/techstructive-weekly-34/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-34/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Week #34&#xA;    &lt;div id=&#34;week-34&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-34&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;It was a pretty busy and productive week. After three hectic weeks of research, hacking, scripting, implementing, Google Sheets, and Python Vulture coding an API, I made a few releases. Yes, that is the normal role of a software engineer at a startup. I get to wear multiple hats: analysing, writing, debugging, scripting, testing, and obviously communicating effectively.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #32</title>
+      <link>/posts/2025-03-01-techstructive-weekly-32/</link>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-03-01-techstructive-weekly-32/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #32&#xA;    &lt;div id=&#34;week-32&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-32&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Weeks of chaos have left me on the brink of burnout, with no time to breathe or reflect. Didn’t get much time to just sit and think, just had to complete a few hacks here and there to get the demo running, poor management and blind eyeing.&lt;/p&gt;&#xA;&lt;p&gt;I am a bit stressed at the moment, not able to do anything, occupied in work from 9 to 12. Yes, that is a bit stressful and hectic to carry this daily.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #31</title>
+      <link>/posts/2025-03-01-techstructive-weekly-31/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-03-01-techstructive-weekly-31/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #31&#xA;    &lt;div id=&#34;week-31&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-31&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a week, again, a bit of thump and bumps, a bit of scare at work.&lt;/p&gt;&#xA;&lt;p&gt;Last week was hectic, this week was continuing that bump in increased responsibilities. I think I might be transitioning from Junior to Senior, but the mindset might be of a junior, need to step up.&lt;/p&gt;&#xA;&lt;p&gt;Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #30</title>
+      <link>/posts/2025-02-22-techstructive-weekly-30/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-02-22-techstructive-weekly-30/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #30&#xA;    &lt;div id=&#34;week-30&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-30&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a week captain! Realized this on Wednesday truly. A bit of exhausting yet exciting week, it was a wild ride, true but learnt a lot. A lot of mistakes popping up at once.&lt;/p&gt;&#xA;&lt;p&gt;I had to scamper and get things done, not just do it, but do it correct, not only do it correct , but also do it more, that was exaggerated, but yes, it was a bit taxing at some point, but the reward? I don’t care, I did my best (to some extent) and I am leaving the result to nature, really can’t control that now. A lot of intense debugging sessions, pair programming, side scripting, a lot of fun conversations and moments, it was worth it.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #29</title>
+      <link>/posts/2025-02-15-techstructive-weekly-29/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-02-15-techstructive-weekly-29/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #29&#xA;    &lt;div id=&#34;week-29&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-29&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a fun week. There was a bit of laziness, for sure, but also some work done. I didn’t create a video this week and took a bit of a break. I think it is as important to upskill as it is to maintain streaks of uploading.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Quote of the week&#xA;    &lt;div id=&#34;quote-of-the-week&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#quote-of-the-week&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;&amp;ldquo;The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;— Alvin Toffler&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #28</title>
+      <link>/posts/2025-02-08-techstructive-weekly-28/</link>
+      <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-02-08-techstructive-weekly-28/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #28&#xA;    &lt;div id=&#34;week-28&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-28&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was a bit frustrating, but I really want to continue what I am working on. However, life is pushing me in a different direction, and I am so confused. I have responsibilities to perform and situations to tackle. It is a bit hard to live ahead, but I will stay with my three pillars: curiosity, consistency, and grit.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #27</title>
+      <link>/posts/2025-02-01-techstructive-weekly-27/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-02-01-techstructive-weekly-27/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #27&#xA;    &lt;div id=&#34;week-27&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-27&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a bit of lazy day, not that lazy though, did a lot of things while being lazy. I had been doing a lot of things in the past few weeks, so this week I decided to take things a little slowly. If I just keep on being that productive, it would be a burnout soon.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #26</title>
+      <link>/posts/2025-01-25-techstructive-weekly-26/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-01-25-techstructive-weekly-26/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #26&#xA;    &lt;div id=&#34;week-26&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-26&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was really fun and exciting, I am continuing with more productive weeks. I was able to fix a lot of things this week. I created three videos this week. Worked on the side project with 2 live streams. Was able to demonstrate to the team at my work about the AI Agents. It was a great week.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #25</title>
+      <link>/posts/2025-01-18-techstructive-weekly-25/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-01-18-techstructive-weekly-25/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #25&#xA;    &lt;div id=&#34;week-25&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-25&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was an exciting week, I did complete a lot of things on my work side, I had a bit of change in the routine of my work, an hour early, which makes me really productive and gets a lot of things done quite early and more importantly, I am now able to dedicate myself more time to learning new things.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #24</title>
+      <link>/posts/2025-01-11-techstructive-weekly-24/</link>
+      <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-01-11-techstructive-weekly-24/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #24&#xA;    &lt;div id=&#34;week-24&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-24&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was an exciting week. I was pretty excited from the end of the past week with a new beginning to my work-life goal. After completing one, I have a new challenge in front of me: diving into the world of cutting-edge LLMs, agents, and Workflow. This can’t be more exciting.&lt;/p&gt;&#xA;&lt;p&gt;This week, I was researching and exploring the frameworks, libraries and tools to create Agentic Workflows with LLMs, I can’t share much, but I see myself creating content around the things I will learn at my work/day job.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #23</title>
+      <link>/posts/2025-01-04-techstructive-weekly-23/</link>
+      <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2025-01-04-techstructive-weekly-23/</guid>
+      <description>&lt;p&gt;We are in 2025! Happy New Year&lt;/p&gt;&#xA;&lt;p&gt;It feels good to carry this newsletter through the year from July 2024 to January 2025 and counting ….&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Week #23&#xA;    &lt;div id=&#34;week-23&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-23&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a huge roaring start to the year, I created a video on the 1st, and that too a big video, I put in everything I could know about the thing I wanted to talk about in little as I could, and it&amp;rsquo;s gaining views and is likely to spike as the Golang 1.24 release date approaches. 200 IQ move there.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #22</title>
+      <link>/posts/2024-12-28-techstructive-weekly-22/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2024-12-28-techstructive-weekly-22/</guid>
+      <description>&lt;p&gt;This is the last edition for 2024; the next edition will be on 3rd January 2025.&lt;/p&gt;&#xA;&lt;p&gt;This week again was a bit slow or not much happened. I recorded 2 videos and did a live stream to solve some pending problems and that was it. At work, I completed the thing that I was supposed to do this quarter and I couldn’t be happier, definitely, there are things to improve on, but I like where I stand.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #21</title>
+      <link>/posts/2024-12-21-techstructive-weekly-21/</link>
+      <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2024-12-21-techstructive-weekly-21/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #21&#xA;    &lt;div id=&#34;week-21&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-21&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a nice week. I explored OpenAI stuff, fixed some issues in nested code structure, remade some Hugo sites, and did a bit of reading.&lt;/p&gt;&#xA;&lt;p&gt;There were a lot of debugging sessions. I wanted to solve the advent of code but struggled for 10 days. Yes, and I have been struggling for 15 days at the blog event. I am still hoping to clear a few problems over the weekend. I am also looking to write some articles over the weekend. The weekend seems like a bit of high hope, but let’s see how much I can pull off. I also need to implement a quick project for my blog writing.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #20</title>
+      <link>/posts/2024-12-14-techstructive-weekly-20/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2024-12-14-techstructive-weekly-20/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #20&#xA;    &lt;div id=&#34;week-20&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-20&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was a slow-moving week, it was a time when we see winters in Mumbai, just for a couple of days and that made me too lazy to wake up early which in turn ruined the entire day. It was that type of week, but good progress.&lt;/p&gt;&#xA;&lt;p&gt;I wrote a few articles following the advent of code for days 1,2,3,4 and 5, and a couple are in progress.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #19</title>
+      <link>/posts/techstructive-weekly-19/</link>
+      <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-19/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #19&#xA;    &lt;div id=&#34;week-19&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-19&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a pretty good week, with 2 videos published, 1 short created, and 4 live streams done, and 3 days of AOC solved. Phew!&lt;/p&gt;&#xA;&lt;p&gt;On Saturday last week, I experimented with Netlify cloud functions in Golang and also for Turso’s LibSQL Database, and that went pretty well. Then started a livestream for the SSG in Golang, and completed the feed loading. Then on Sunday it was AOC Day 1, where I live-streamed it, created the video, and also scheduled the Netlify cloud functions video for Monday.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #18</title>
+      <link>/posts/techstructive-weekly-18/</link>
+      <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-18/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #18&#xA;    &lt;div id=&#34;week-18&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-18&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was a great week, if I could call it a hard-working week, it would be appropriate. I started the week (the weekends) by streaming, creating a video, and planning a few more videos for the next week. Then starting the week with deep intense programming sessions, a couple of flow states during the week made the mind feel accomplished and excited.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #17</title>
+      <link>/posts/techstructive-weekly-17/</link>
+      <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-17/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #17&#xA;    &lt;div id=&#34;week-17&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-17&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;What a week, had written code through all the days, thought a lot about solving certain issues, integrated reviewed changes, and also wrote and created a video on the weekend.&lt;/p&gt;&#xA;&lt;p&gt;This was the week of releasing the thing that I have been building over the span of the past 2 months and really felt good this Thursday to release it. Tested it and worked perfectly, now on to a new set of experiments and building on top of the thing in the upcoming weeks or months even, exciting times ahead.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #16</title>
+      <link>/posts/techstructive-weekly-16/</link>
+      <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-16/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #16&#xA;    &lt;div id=&#34;week-16&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-16&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was really productive, was able to make the code I have been writing for the past 2 months and experiments that have been doing into a deployable and ready to launch code. I finally feel a bit satisfied by my efforts, feel the motivation back, the curiosity back. I had an intense focus or flow state this week, I did not create any content this week as I was out on Sunday and was really tired on Saturday.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #15</title>
+      <link>/posts/techstructive-weekly-15/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-15/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #15&#xA;    &lt;div id=&#34;week-15&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-15&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A wonderful week, bringing back the joy of programming, after some slumpy weeks, a refreshing and mind challenging week. The start was drowzy after a long weekend, but as the week progressed, I had to shift gears and complete the things that took some deep concentration and thinking, finally the results were worth the efforts. Everything in its place, the reward for the focus and hard work.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #14</title>
+      <link>/posts/techstructive-weekly-14/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-14/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #14&#xA;    &lt;div id=&#34;week-14&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-14&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This was an excellent week, I created one video, posted one article, did a live stream setup went live for an hour on Twitch and Youtube, and did some exercise as well—writing of course with the 4th consecutive week.&lt;/p&gt;&#xA;&lt;p&gt;The week was super-productive to start with, like I had a dream Sunday, I went on a walk in the morning, 6:30 AM, right? I have been procrastinating for months, but finally started doing since this Sunday. And I cannot say how much benefit I had from these walks like there is some energy flowing in me after I come from the walk. There is the fire ignited back, the curiosity flying back, the spark is back and with the habits like this newsletter and others in place, It looks like a dream routine, and it gets better and better. Not gonna Jinx it for the next week.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #13</title>
+      <link>/posts/techstructive-weekly-13/</link>
+      <pubDate>Sat, 26 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-13/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #13&#xA;    &lt;div id=&#34;week-13&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-13&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This was a pretty rough week, some mundane tasks at work, not that mundane but felt off track on the mind. Nothing going on in my life, just that the past things that have happened have slowed down and now feel the sense of pain and consequences in the future. Don’t know what I am talking really, but as always there is hope in me, I am continuing to write a mythological blog of mine for almost 21 days which is 3 weeks, yes that is a daily one post. At least some things in life are good.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #12</title>
+      <link>/posts/techstructive-weekly-12/</link>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-12/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #12&#xA;    &lt;div id=&#34;week-12&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-12&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week, was a bit of a realization that I need to improve as a junior developer, I need to do something important and exciting. These past few months have been tiring mentally, but need to up the effort and get some serious business rolling in.&lt;/p&gt;&#xA;&lt;p&gt;I will be looking to write more articles based on the videos I create in the upcoming months.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #11</title>
+      <link>/posts/techstructive-weekly-11/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-11/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #11&#xA;    &lt;div id=&#34;week-11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-11&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was good in terms of writing. I started a new endeavor: a blog. It is not technical; it is related to mythology and finding its meaning in the modern world. I kept a consistent writing routine for nine days. Nine posts in nine days looks like a good start for my writing routine. I will try to continue this routine throughout the month.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #10</title>
+      <link>/posts/techstructive-weekly-10/</link>
+      <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-10/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #10&#xA;    &lt;div id=&#34;week-10&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-10&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Wrapping up the third quarter with a burst of energy! This week felt more mentally demanding, but as the week closed, I realized that even small progress is still progress. Sometimes, numbers don’t tell the whole story—they can shift perceptions or even mislead. I believe in valuing the journey more than the destination, and this week’s coding, learning, and creating was worth more than any metric can show.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #9</title>
+      <link>/posts/techstructive-weekly-9/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-9/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #9&#xA;    &lt;div id=&#34;week-9&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-9&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was a bit of refreshing as I was able to write some code, bunch of experimentation and feeling a bit back after some slump in the past week. Need to get one video out this weekend to get into the habit. This October I will be trying to build my own writing routine, it won’t be for technical articles, but I won’t be surprised if I find it helpful to write more technical articles.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #8</title>
+      <link>/posts/techstructive-weekly-8/</link>
+      <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-8/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #8&#xA;    &lt;div id=&#34;week-8&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-8&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was quite a slow one for me, I didn’t write much code, but I did some thinking and debugging deep into configurations. I want to say this, that’s it, not in the mood for a rant this week.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Quote of the week&#xA;    &lt;div id=&#34;quote-of-the-week&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#quote-of-the-week&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;“Courage doesn&amp;rsquo;t always roar. Sometimes courage is the quiet voice at the end of the day saying, ‘I will try again tomorrow.’”&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #7</title>
+      <link>/posts/techstructive-weekly-7/</link>
+      <pubDate>Sat, 14 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-7/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #7&#xA;    &lt;div id=&#34;week-7&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-7&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was a bit mentally tough but technically productive, pushed some efforts to get the project up and integrated fully and tested it out. Not good with the numbers but overall, that looked promising, and again excited for next week’s challenge.&lt;/p&gt;&#xA;&lt;p&gt;This week is special because I created and uploaded my first YouTube video! On Sunday, I did everything from recording to creating the thumbnail, voiceover, and editing. It took about six hours for a six-minute video, but it’s a solid start for future videos. I’d love any feedback you have, so please check it out!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #6</title>
+      <link>/posts/techstructive-weekly-6/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-6/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #6&#xA;    &lt;div id=&#34;week-6&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-6&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was all about diving deep into the details of my projects. After weeks of building, I spent this week debugging and testing everything, pushing things to the next level. My goal was to have a working demo by the end of the week, which I started on Wednesday—and I’m happy to report that I almost hit the mark. There’s always room for improvement, but the testing phase went as planned, and the hypothesis is holding up.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #5</title>
+      <link>/posts/techstructive-weekly-5/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-5/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #5&#xA;    &lt;div id=&#34;week-5&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-5&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week felt like a slog, with many challenges and frustrations. However, by the end of the week, I found my stride and got excited about the direction I’m heading. It&amp;rsquo;s amazing how quickly things can shift from feeling like the end of the world to experiencing a burst of excitement.&lt;/p&gt;&#xA;&lt;p&gt;I also managed to get the side project of the &lt;a href=&#34;https://github.com/Mr-Destructive/meta-ai-golang&#34;  target=&#34;_blank&#34;&gt;Meta AI API wrapper&lt;/a&gt; in Golang correctly, over the weekend will polish this project and also fix the bug in the Chat GPT anonymous client in Python.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #4</title>
+      <link>/posts/techstructive-weekly-4/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-4/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Techstructive Weekly #4&#xA;    &lt;div id=&#34;techstructive-weekly-4&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#techstructive-weekly-4&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It was an exhilarating week for me, learned a lot of stuff, wrote a lot of code, pushed a lot of bugs, and tweeted a lot. This week, I wrote a lot of Python scripts at my work for experimentation setup and testing a lot of things, I was learning and prototyping my idea of Audiofy with Appwrite cloud, and read some inspiring articles.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #3</title>
+      <link>/posts/techstructive-weekly-3/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-3/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Techstructive Weekly #3&#xA;    &lt;div id=&#34;techstructive-weekly-3&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#techstructive-weekly-3&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt; The week was really tiring for me for some reasons, was not able to work on the side projects. I actually spent some time with my family and cousin who came over the weeks for festivals. However, on the work side of things, I was able to learn a few things about NGINX, pdf parsing and product specific features.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #2</title>
+      <link>/posts/techstructive-weekly-2/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-2/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #2&#xA;    &lt;div id=&#34;week-2&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-2&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week I made some mistakes at my job (well they were the week before) but they got caught after the review. I learned how powerful reviews could be at catching flaws in code. I also caught a bug while pair programming, it was a mixed feeling as a developer for me this week.&lt;/p&gt;&#xA;&lt;p&gt;In the end, I would recommend debugging your code thrice, yes not once, not twice but thrice, and also make sure to forcefully make the code flow reach the section of your changes, if that is a bit of an edge case thing.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #1</title>
+      <link>/posts/techstructive-weekly-1/</link>
+      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-1/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Week #1&#xA;    &lt;div id=&#34;week-1&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-1&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;This week, I had a ton of fun on the side as I finally made the MVP of a side project. An SSG with a Content Management System-like interface. an SSG with an editor that syncs up the posts from a database.&lt;/p&gt;&#xA;&lt;p&gt;In this process, I learned about Cloudflare workers and golang. At work, I had some thinking and experimentation with LLMs.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Techstructive Weekly #0</title>
+      <link>/posts/techstructive-weekly-0/</link>
+      <pubDate>Sat, 27 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/techstructive-weekly-0/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Week #0&#xA;    &lt;div id=&#34;week-0&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#week-0&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This week was about writing one of the much-procrastinated blog posts, starting a YouTube channel, and going through some heavy debugging sessions with my colleagues at work.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Quote of the week&#xA;    &lt;div id=&#34;quote-of-the-week&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#quote-of-the-week&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;It’s harder to say things which are easier to do, and easier to say things which are harder to do&lt;br&gt;&#xA;(It’s just my random thought converted to a quote)&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
