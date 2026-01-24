@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/posts/">Posts</a></li>
+                <li><a href="/links/">Links</a></li>
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="/quotes/">Quotes</a></li>
+                <li><a href="/thoughts/">Thoughts</a></li>
+                <li><a href="/tags/">Tags</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+        <p>&copy; {{ now.Year }}</p>
+    </footer>
+</body>
+</html>

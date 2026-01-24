@@ -13,6 +13,7 @@ require (
 	github.com/antlr4-go/antlr/v4 v4.13.0 // indirect
 	github.com/aws/aws-lambda-go v1.51.1 // indirect
 	github.com/coder/websocket v1.8.12 // indirect
+	github.com/jgthms/bulma v0.0.0-20251203104051-68ff0ad283e6 // indirect
 	github.com/libsql/sqlite-antlr4-parser v0.0.0-20240327125255-dbf53b6cbf06 // indirect
 	github.com/tursodatabase/go-libsql v0.0.0-20251219133454-43644db490ff // indirect
 	github.com/tursodatabase/libsql-client-go v0.0.0-20251219100830-236aa1ff8acc // indirect
