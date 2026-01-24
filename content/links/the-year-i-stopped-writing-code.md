@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/Ge8LoXfJJdA" rel="nofollow ugc noopener">The year I stopped writing code</a></p><ul><li><p>This is interesting and eye opening. It actually gave me the reason to be active while working with LLMs.</p></li><li><p>Reviewing is h
+ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">The year I stopped writing codeThis is interesting and eye opening. It actually gave me the reason to be active while working with LLMs.Reviewing is h
 
 **Source:** techstructive-weekly-76
-

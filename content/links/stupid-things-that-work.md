@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-mmunication. Blogs don't really fit that quite well in my opinion, but yes distinct parts of the blog could be collaborated.</p></li></ul></li><li><p><a href="https://ryanglover.net/blog/stupid-things-that-work" rel="nofollow ugc noopener">Stupid things that work</a></p><ul><li><p>I mean why not? looping one billion times in javascript makes your computer warm, fine. I would rather install and run Android studio t
+13. [Stupid things that work](https://ryanglover.net/blog/stupid-things-that-work)
+    - I mean why not? looping one billion times in javascript makes your computer warm, fine. I would rather install and run Android studio than touch javascript. These days, running a local model around 3-5 Billion parameters (on 8GB ram) could easily burn your computer not just warm it.
+
+### Interesting bits
 
 **Source:** techstructive-weekly-56
-

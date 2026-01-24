@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-20/openai-announces-new-o3-model/" rel="nofollow ugc noopener">Open AI launches o3 models</a><span>: Another day, another model</span></p></li><li><p><a href="https://techcrunch.com/2024/12/18/github-launches-a-free-version-of-its-copilot/" rel="nofollow ugc noopener">GitHub Launches Copilot with free access</a><span>: Nothing major, codeium is already free and good enough</span></p></li></ul><p><span>For more news, follow the </span><a href="https://buttondo
+- [GitHub Launches Copilot with free access](https://techcrunch.com/2024/12/18/github-launches-a-free-version-of-its-copilot/): Nothing major, codeium is already free and good enough
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-726) and for software development/coding articles, join [daily.dev](http://daily.dev/)
 
 **Source:** techstructive-weekly-21
-

@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-l be times when you will struggle to wake up, even fear to live, but it is the one who goes through it and still does it anyway.</p><p></p><ul><li><p><a href="https://shilin.ca/my-second-year-without-job/" rel="nofollow ugc noopener">Shilin's Second Year without a job</a><span>:</span></p><p>This was a surprising read, I can’t believe that it is possible to live life without having a consistent stream of income. I just
+- [Shilin's Second Year without a job](https://shilin.ca/my-second-year-without-job/):
+  This was a surprising read, I can’t believe that it is possible to live life without having a consistent stream of income. I just feel it is not for me and my lifestyle, I can’t live like that.
 
 **Source:** techstructive-weekly-21
-

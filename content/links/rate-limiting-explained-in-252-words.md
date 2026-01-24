@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-r efficient concurrency and eviction, Also client-managed sharding enables distributed caching without server communication.</p></li></ol></li><li><p><a href="https://www.systemdesignbutsimple.com/p/rate-limiting-in-1-diagram-and-252-words" rel="nofollow ugc noopener">Rate Limiting explained in 252 words</a></p><blockquote><p>how many requests a user or client can make in a given period </p></blockquote><p>And not control of how much a user can consume ov
+8. [Rate Limiting explained in 252 words](https://www.systemdesignbutsimple.com/p/rate-limiting-in-1-diagram-and-252-words)
+  > how many requests a user or client can make in a given period
+  And not control of how much a user can consume over a longer period
 
 **Source:** techstructive-weekly-52
-

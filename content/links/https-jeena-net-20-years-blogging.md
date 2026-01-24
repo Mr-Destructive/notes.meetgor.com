@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-v class="embedded-post-meta">a year ago · 16 likes · 6 comments · Alejandro Piad Morffis</div></a></div><ul><li><p><span>20 years of blogging: </span><a href="https://jeena.net/20-years-blogging" rel="nofollow ugc noopener">https://jeena.net/20-years-blogging</a></p><p>This shows how one must approach blogging as a developer, just be selfish, write for yourself first, if it helps others, that is the bonus and
+* 20 years of blogging: [https://jeena.net/20-years-blogging](https://jeena.net/20-years-blogging)
+    
+    This shows how one must approach blogging as a developer, just be selfish, write for yourself first, if it helps others, that is the bonus and the reward for you. Don't make your expectations too high, the rewards come over time, make a routine, just dump your thoughts if feeling a bit overwhelmed, it will help.
 
 **Source:** techstructive-weekly-3
-

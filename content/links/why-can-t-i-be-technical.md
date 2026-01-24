@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ually is solving, no one has yet shown the problem before the solution. I might find and write it myself one day (day one?).</p></li></ul></li><li><p><a href="https://www.fightforthehuman.com/why-i-cannot-be-technical" rel="nofollow ugc noopener">Why can’t I be technical</a></p><ul><li><p>I didn’t completely read this, but this makes an interesting point, that we need to understand the opposite end of the thinking on the
+* [Why can’t I be technical](https://www.fightforthehuman.com/why-i-cannot-be-technical)?
+    
+    * I didn’t completely read this, but this makes an interesting point, that we need to understand the opposite end of the thinking on the thing we are working on, kind of wired but that makes sense now.
 
 **Source:** techstructive-weekly-40
-

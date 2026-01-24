@@ -10,7 +10,19 @@ draft: false
 
 ## Context
 
-or describes every act of robots learning with the example of his kids is really touching and makes it so human. Worth my time.</span></p></li><li><p><a href="https://newsletter.francofernando.com/p/writing-as-as-software-engineer" rel="nofollow ugc noopener">Writing as a software engineer</a><span>:</span></p></li></ul><div data-attrs="{&quot;id&quot;:144946286,&quot;url&quot;:&quot;https://newsletter.francofernando.com/p/writing-as-as-sof
+* [Writing as a software engineer](https://newsletter.francofernando.com/p/writing-as-as-software-engineer):
+    
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/157b59b0-a7e4-4f31-8d83-9a2034b2ff4e_354x354.png align="left")
+
+[The Polymathic Engineer](https://newsletter.francofernando.com/p/writing-as-as-software-engineer?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+
+[Writing as as software engineer](https://newsletter.francofernando.com/p/writing-as-as-software-engineer?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+
+[Hi Friends…](https://newsletter.francofernando.com/p/writing-as-as-software-engineer?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+
+[Read more](https://newsletter.francofernando.com/p/writing-as-as-software-engineer?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+
+[11 days ago · 31 likes · 5 comments · Franco Fernando](https://newsletter.francofernando.com/p/writing-as-as-software-engineer?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
 **Source:** techstructive-weekly-20
-

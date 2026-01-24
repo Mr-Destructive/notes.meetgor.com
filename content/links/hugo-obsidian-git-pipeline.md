@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-s.</p></li><li><p>The process is so quick that the magic is not even noticable, but yes that is one rabbit hole to dig into.</p></li></ol></li><li><p><a href="https://hugo.insanelogs.xyz/posts/hugo-pipeline/" rel="nofollow ugc noopener">Hugo + Obsidian + Git Pipeline</a></p><ol><li><p>This blog gave me a idea to simplify my static site generator, instead of syncing with the database from github, I can just simply use
+9. [Hugo + Obsidian + Git Pipeline](https://hugo.insanelogs.xyz/posts/hugo-pipeline/)
+    1. This blog gave me a idea to simplify my static site generator, instead of syncing with the database from github, I can just simply use a sqlite file and sync to the database an vice versa. Right now the problem is on the inconsistency in github content vs the database, so after having an in-memory or local file that can reside at any time on the repo, it would be easier to pull, push changes to the remote repository.
 
 **Source:** techstructive-weekly-55
-

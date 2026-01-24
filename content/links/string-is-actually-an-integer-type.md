@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-Rust (or any other framework or language)</p></li><li><p>It’s an Electron app (or using a particular framework or language)</p></li></ul></li><li><p><a href="https://youtu.be/VSiPVZcTQTo" rel="nofollow ugc noopener">STRING is actually an integer type</a></p><ul><li><p>Everything is flexible unless you type strict</p></li><li><p>SQLite is flexible, as I have said its a double-edged sword until you don’
+- [STRING is actually an integer type](https://youtu.be/VSiPVZcTQTo)
+    - Everything is flexible unless you type strict
+    - SQLite is flexible, as I have said its a double-edged sword until you don’t want it to be.Double click to interact with video
 
 **Source:** techstructive-weekly-72
-

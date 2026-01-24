@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-post, there are so many things to dive into and how SQLite is the database that just works and not just works but also shines.</span></p></li><li><p><a href="https://stanbright.com/time-spent-programming/" rel="nofollow ugc noopener">Time spent programming is often time well spent</a></p><blockquote><p>Programming is often more fun than the alternative uses of my time.</p></blockquote><p>Programming is really fun, the joy of creati
+* [Time spent programming is often time well spent](https://stanbright.com/time-spent-programming/)
+    
+    > Programming is often more fun than the alternative uses of my time.
+    
+    Programming is really fun, the joy of creating something and the satisfaction of completing or figuring out by yourself hits different and cannot be replaced with anything else.
 
 **Source:** techstructive-weekly-18
-

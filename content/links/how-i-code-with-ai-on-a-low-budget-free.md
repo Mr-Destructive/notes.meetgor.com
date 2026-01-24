@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-y or local file that can reside at any time on the repo, it would be easier to pull, push changes to the remote repository. </p></li></ol></li><li><p><a href="https://wuu73.org/blog/aiguide1.html" rel="nofollow ugc noopener">How I code with AI on a low budget/free</a></p><ol><li><p>I need to try Cline, claude code router and qwen models. I have been sleeping on local hosted models, nit entirely though. I have a low
+10. [How I code with AI on a low budget/free](https://wuu73.org/blog/aiguide1.html)
+    1. I need to try Cline, claude code router and qwen models. I have been sleeping on local hosted models, nit entirely though. I have a low spec laptop, 8GB RAM, so can’t use a model beyond 2 or 4 Billion parameter.
+    2. Kimi also has an API and a free credits, might as well give it a shot to use claude code for quick improvements to some projects.
 
 **Source:** techstructive-weekly-55
-

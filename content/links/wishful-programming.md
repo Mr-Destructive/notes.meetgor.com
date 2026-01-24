@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/Qr1lYJmBTWI" rel="nofollow ugc noopener">Wishful programming</a></p><ul><li><p>This is so intuitive. I think Mitchel Hashimto too recommends this. He just prints out the things that he wants to get finally out and
+- [Wishful programming](https://youtu.be/Qr1lYJmBTWI)
+    - This is so intuitive. I think Mitchel Hashimto too recommends this. He just prints out the things that he wants to get finally out and works to reverse engineer how it can be programmed. Mind blowing idea but quite simple to follow.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-55
-

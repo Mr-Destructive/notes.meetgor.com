@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-v></h2><blockquote><p><span>&quot;Learning is not attained by chance, it must be sought for with ardor and attended to with diligence.&quot; – </span><a href="https://en.wikiquote.org/wiki/Abigail_Adams" rel="nofollow ugc noopener">Abigail Adams</a></p></blockquote><p>Not every week is the same, if it is then you are not learning, you are not growing. Stepping outside of the comfort zone is the w
+v>&quot;Learning is not attained by chance, it must be sought for with ardor and attended to with diligence.&quot; – Abigail AdamsNot every week is the same, if it is then you are not learning, you are not growing. Stepping outside of the comfort zone is the w
 
 **Source:** techstructive-weekly-4
-

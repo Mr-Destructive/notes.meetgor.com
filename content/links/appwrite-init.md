@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-s/guides/structured-outputs" rel="nofollow ugc noopener">Structured Response</a><span> from Function Calls in Open AI API Calls</span></p></li><li><p><a href="https://appwrite.io/init" rel="nofollow ugc noopener">Appwrite Init</a><span>: Some special releases from the Appwrite Team in the upcoming weeks. Make sure to grab your ticket. Golang's support for cloud functions is con
+* [Appwrite Init](https://appwrite.io/init): Some special releases from the Appwrite Team in the upcoming weeks. Make sure to grab your ticket. Golang's support for cloud functions is confirmed!
 
 **Source:** techstructive-weekly-2
-

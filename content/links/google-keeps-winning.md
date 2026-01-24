@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://youtu.be/m8fe5hOVFAU" rel="nofollow ugc noopener">Google keeps winning</a></p><ul><li><p>Gemini 2.5 Pro and Flash are killing it with the new improvements</p></li><li><p>Gemini is getting integrated into almost everything at
+- [Google keeps winning](https://youtu.be/m8fe5hOVFAU)
+    - Gemini 2.5 Pro and Flash are killing it with the new improvements
+    - Gemini is getting integrated into almost everything at Google
+  Double click to interact with video
 
 **Source:** techstructive-weekly-43
-

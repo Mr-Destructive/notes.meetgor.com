@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-a full time job, I suddenly had a lot of time, I realized i needed to dump my learning somewhere and I was following </span><span data-state="closed"><a href="https://open.substack.com/pub/thorstenball" target="_blank" rel="noopener" data-attrs="{&quot;name&quot;:&quot;Register Spill&quot;,&quot;id&quot;:1543843,&quot;type&quot;:&quot;pub&quot;,&quot;url&quot;:&quot;https://open.substack.com/pub/thorstenball?utm_source=mentions&quot;,&quot;uuid&quot;:&quot;61cce4a7-a4fe-4209-b595-061842b3d20c&quot;}" data-component-name="MentionPub" class="mention-pnpTE1">Register Spill</a></span><span>  by </span><span data-state="closed"><a href="https://open.substack.com/users/1234646-thorsten-ball?utm_source=mentions" target="_blank"
+6. [I read more than I write, do you?](https://enombic.com/read-more-than-write)
+    1. Yes, this is true for me too. Reading needs to be more or rather at certain point, balanced from writing.
+    2. You can’t just keep on reading and produce nothing. You will have to reflect on what you have consumed. This newsletter is exactly that.
+    3. After I got a full time job, I suddenly had a lot of time, I realized i needed to dump my learning somewhere and I was following Register Spill by Thorsten Ball and quickly felt the urge to log my reading and interesting things I find throughout the week. There were a lot of things, I took for granted, they got lost and most of the things didn’t stick. I started this and it helped me realize the ample amount of time I have to learn, explore and tinker on stuff. It was liberating. Hence writing the 72nd edition of this. Its fun.
 
 **Source:** techstructive-weekly-72
-

@@ -10,7 +10,15 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://youtu.be/qf0GqRz-c74?si=HZ_1yav_DFOzyiOn" rel="nofollow ugc noopener">SQLite’s WAL Mode is faster than DELETE Mode</a></p><ul><li><p>This is so well explained, first showed everything what each one is and then the benchmark just makes everything clear.</p></li><li><p>
+- [SQLite’s WAL Mode is faster than DELETE Mode](https://youtu.be/qf0GqRz-c74?si=HZ_1yav_DFOzyiOn)
+    - This is so well explained, first showed everything what each one is and then the benchmark just makes everything clear.
+    - The WAL mode basically writes the changes in a separate file and merges to the original db file whenever required, hence there is no overhead when reading or writing multiple writers or readers.
+    - The delete mode is like a backup, a journal, it keeps pages of the data that are to be changed and after it is committed it deletes the file, that clearly looks slow.
+
+Double click to interact with video
+
+## Learnt
+
+A few things I learnt while at my work and majorly side-questing after work:
 
 **Source:** techstructive-weekly-52
-

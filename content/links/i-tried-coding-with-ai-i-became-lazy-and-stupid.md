@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-ike engineering was booming after the industrial revolution, AI management might be a field that would be full of potential.</p></li></ol></li><li><p><a href="https://thomasorus.com/i-tried-coding-with-ai-i-became-lazy-and-stupid" rel="nofollow ugc noopener">I tried coding with AI, I became lazy and stupid</a></p><ol><li><p>I have tried it too, I use it, but yes I have found myself in the author’s place.</p></li><li><p>It helps but only in that fine moment,
+4. [I tried coding with AI, I became lazy and stupid](https://thomasorus.com/i-tried-coding-with-ai-i-became-lazy-and-stupid)
+    1. I have tried it too, I use it, but yes I have found myself in the author’s place.
+    2. It helps but only in that fine moment, after the work is done, I don’t feel rewarded, I don’t feel fulfilled, I didn’t learn anything, barely any dopamine.
+    3. I am better polishing off my skills
 
 **Source:** techstructive-weekly-55
-

@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><strong><a href="https://x.com/karpathy/status/1909308143156240538" rel="nofollow ugc noopener">Power to the people: How LLMs flip the script on technology diffusion</a><span>:</span></strong></p><p>This is a nice article written by AI Lord Andrej Karpathy, this nicely explains the current situation of the AI trend an
+- [**Power to the people: How LLMs flip the script on technology diffusion**](https://x.com/karpathy/status/1909308143156240538)**:**
+  This is a nice article written by AI Lord Andrej Karpathy, this nicely explains the current situation of the AI trend and how it is the reverse of every other revolution. An interesting perspective to think of and be grateful for living in this phase.
 
 **Source:** techstructive-weekly-37
-

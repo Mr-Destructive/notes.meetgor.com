@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://deplet.ing/the-copilot-delusion/" rel="nofollow ugc noopener">The Copilot Dillusion:</a><span> </span></p><ul><li><p>This was like a word of caution of getting too much reliant on AI for coding</p></li><li><p>Coding with AI is all well an
+- [The Copilot Dillusion:](https://deplet.ing/the-copilot-delusion/)
+    - This was like a word of caution of getting too much reliant on AI for coding
+    - Coding with AI is all well and good, but the thinking part still is in the heads of the developer. It can’t think beyond a certain capability.
+    - Till now, its fair to say from this post that, AI is most safer in the hands of developers than laymen for coding. It’s not gone that far that managers can vibe code and ship everyday.
+    - Maybe someday it will, but there will be the need of developers in pushing it and nudging it to get the most of it.
 
 **Source:** techstructive-weekly-44
-

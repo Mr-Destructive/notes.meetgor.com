@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-I cannot keep my mind away. I need to breathe and let it go, will try over the weekend and continue if it makes me happier.</p></li></ul></li><li><p><a href="http://scattered-thoughts.net/writing/sql-needed-structure/" rel="nofollow ugc noopener">SQL Needed structure</a></p><ul><li><p>This is a bad take, What is more structured than SQL? If you are trying to get heirarchial data in SQL, you will be comprising redundan
+5. [SQL Needed structure](http://scattered-thoughts.net/writing/sql-needed-structure/)
+    - This is a bad take, What is more structured than SQL? If you are trying to get heirarchial data in SQL, you will be comprising redundancy. Like literally for the ease of the access, you will duplicate json blobs everywhere. I work in that environment and know the pains of those queries. I won’t recommend MongoDB ever to anyone. Just use structured data, it would be a one time investment on schema design, but it sustains and is much easier and predictable.
+    - It could have been other things like sharding, I would have agreed, but this nope.
 
 **Source:** techstructive-weekly-58
-

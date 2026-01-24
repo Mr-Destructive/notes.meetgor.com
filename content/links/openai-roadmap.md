@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-low ugc noopener">Golang 1.24 released</a><span>: I have created 3 videos about splitsequence, json omit tag, and weak package.</span></p></li><li><p><a href="https://community.openai.com/t/openai-roadmap-and-characters/1119160" rel="nofollow ugc noopener">OpenAI roadmap</a><span>: This is big, the GPT-5 will be the last model for GPT family, i.e. the next models will be thinking-based and not just predicting the next tok
+- [OpenAI roadmap](https://community.openai.com/t/openai-roadmap-and-characters/1119160): This is big, the GPT-5 will be the last model for GPT family, i.e. the next models will be thinking-based and not just predicting the next token-like models, I mean those will be token prediction only but the way the final token will come as final will be lot more nuanced and not silly. Instead of us prompting it again (this is wrong, what about this <placeholder> case??) it will think thoroughly and give the result.
 
 **Source:** techstructive-weekly-29
-

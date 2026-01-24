@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/zduSFxRajkE" rel="nofollow ugc noopener">Tokenization from scratch from Andrej Karapathy</a></p><ul><li><p>What a beautiful piece of content. Archive and store it in a museum. The depth with which he explained it, the low-level details, the p
+- [Tokenization from scratch from Andrej Karapathy](https://youtu.be/zduSFxRajkE)
+    - What a beautiful piece of content. Archive and store it in a museum. The depth with which he explained it, the low-level details, the pythonic bits, is so fun and contagious to watch, and feel.
+    - I learnt a few tricks about interaction with LLMs and understood certain quirks. This could give a intuition for why certain LLMs won’t be able to give good completions for certain tasks.
+    - I also don’t quite liked the Sentence piece tokenization logic. But I can see where it could be probably come handy, in PDFs for example, the scope of sentence is well defined. In arbitrary piece of text on the internet, it might not be.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-61
-

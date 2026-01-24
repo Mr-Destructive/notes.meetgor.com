@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://vickiboykis.com/2024/02/28/gguf-the-long-way-around/" rel="nofollow ugc noopener">GGUF, the file format for storing LLM model weights</a><span> </span></p><ul><li><p>I wanted to evaluate a idea for a project. Running models from a file, and this file format is what I needed. Using this
+* [GGUF is the file format for storing LLM model weights](https://vickiboykis.com/2024/02/28/gguf-the-long-way-around/)
+    
+    * I wanted to evaluate an idea for a project. Running models from a file, and this file format is what I needed. Using this format and a binding with llama.cpp and other libraries, this can be used for inference later to actually run the model
 
 **Source:** techstructive-weekly-40
-

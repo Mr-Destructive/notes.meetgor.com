@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
->Editor is just a tool, it can’t code on its own(in 2025, still needs prompting), similarly to use it, it needs preferences.</p></li></ol></li><li><p><a href="https://boundaryml.com/blog/structured-outputs-create-false-confidence" rel="nofollow ugc noopener">Structured output can create fake confidence</a></p><ol><li><p>Spicy take and true! Somewhat true</p></li><li><p>If your task is complex to get things out from image, or understand the context, it m
+5. [Structured output can create fake confidence](https://boundaryml.com/blog/structured-outputs-create-false-confidence)
+    1. Spicy take and true! Somewhat true
+    2. If your task is complex to get things out from image, or understand the context, it might hinder the quality.
+    3. But if your task is to simply do something straightforward tool calls, structured output beats everything.
 
 **Source:** techstructive-weekly-74
-

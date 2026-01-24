@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-article, I agree that a few blogs are lying between markdown and rich content. I also love to express ideas that markdown might limit.</p></li><li><p><a href="https://devcenter.upsun.com/posts/go-124/?ref=dailydev" rel="nofollow ugc noopener">The Golang 1.24 release is looking seriously awesome</a><br/><span>I don’t think this is a big release, yes there are a few cool little things that are added up in the standard library. But nothing groundbr
+- [The Golang 1.24 release is looking seriously awesome](https://devcenter.upsun.com/posts/go-124/?ref=dailydev)  
+  I don’t think this is a big release, yes there are a few cool little things that are added up in the standard library. But nothing groundbreaking as the 1.23 and 1.21 releases.
 
 **Source:** techstructive-weekly-21
-

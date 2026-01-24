@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-span class="embedded-post-cta">Read more</span></div><div class="embedded-post-meta">10 months ago · 5 likes · Tom Elliott</div></a></div></li><li><p><a href="https://tpaschalis.me/shallow-vs-deep-interfaces/" rel="nofollow ugc noopener">Deep vs Shallow Go Interfaces</a><span>: Deep interfaces are really easy and flexible to understand which is really a good observation. The shallow interfaces are the ones that are qu
+* [Deep vs Shallow Go Interfaces](https://tpaschalis.me/shallow-vs-deep-interfaces/): Deep interfaces are really easy and flexible to understand which is really a good observation. The shallow interfaces are the ones that are quirky but unavoidable, we need to have some level of basement laid in order to make it work, otherwise,it will be all deep interfaces with too many implementation trees. That I don’t like.
 
 **Source:** techstructive-weekly-35
-

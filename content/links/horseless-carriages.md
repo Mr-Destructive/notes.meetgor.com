@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://koomen.dev/essays/horseless-carriages/" rel="nofollow ugc noopener">Horseless Carriages</a><span> : </span></p><ul><li><p>This was a great read. People making AI-based applications are too naive to understand the actual technology behind LLM
+* [Horseless Carriages](https://koomen.dev/essays/horseless-carriages/) :
+    
+    * This was a great read. People making AI-based applications are too naive to understand the actual technology behind LLM and how the approach needs to be changed.
+        
+    * Right now, it is the assumption that the developer is attached to the system prompt; however, LLMs at this stage need customisation from the user perspective and ndo ot have the dependency on the developer.
+        
+    * The shift in developer-user responsibility is quite unnoticed, and this article highlights that effectively.
 
 **Source:** techstructive-weekly-40
-

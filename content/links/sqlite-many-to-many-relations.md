@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-><li><p><a href="https://www.meetgor.com/sqlog/sqlite-self-join-relations" rel="nofollow ugc noopener">SQLite: Self Join Relations</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-many-to-many-relations" rel="nofollow ugc noopener">SQLite: Many to Many Relations</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-one-to-one-relations" rel="nofollow ugc noopener">SQLite: One to One Relations</a></p></
+>SQLite: Self Join RelationsSQLite: Many to Many RelationsSQLite: One to One Relations</
 
 **Source:** techstructive-weekly-60
-

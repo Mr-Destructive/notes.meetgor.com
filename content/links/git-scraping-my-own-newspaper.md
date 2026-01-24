@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-y" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li><li><p><a href="https://youtu.be/AD_re1aAqJw?si=7XepOSyOx-v8ccU0" rel="nofollow ugc noopener">Git Scraping my own Newspaper</a></p><ul><li><p>That’s pretty interesting, git scrapper based newspaper, wow, I want to make this, I want to aggregate my favorite blogs and platforms
+* [Git Scraping my own Newspaper](https://youtu.be/AD_re1aAqJw?si=7XepOSyOx-v8ccU0)
+    
+    * That’s pretty interesting, git scrapper-based newspaper, wow, I want to make this, I want to aggregate my favorite blogs and platforms to get the most up-to-date content. Content these days is overloaded.
 
 **Source:** techstructive-weekly-35
-

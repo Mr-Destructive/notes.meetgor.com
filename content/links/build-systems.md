@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-lly, are these big companies talking about AGI and care about the values, and slopping users with a bare minimum experience?</p></li></ul></li><li><p><a href="https://yoginibende.com/p/build-systems" rel="nofollow ugc noopener">Build systems</a></p><ul><li><p>In short, you should not use AI slop, pretty obvious</p><div data-attrs="{&quot;id&quot;:163923315,&quot;url&quot;:&quot;https://yogini
+- [Build systems](https://yoginibende.com/p/build-systems)
+    - In short, you should not use AI slop, pretty obvious[Behind the ScreenBuild SystemsEveryone around us, even people far from the world of tech and startups, are talking about AI. From social media to mainstream news, WhatsApp groups to coffee chats, there is always some mention of AI…Read more2 months ago · 2 likes · Yogini Bende](https://yoginibende.com/p/build-systems?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
 **Source:** techstructive-weekly-43
-

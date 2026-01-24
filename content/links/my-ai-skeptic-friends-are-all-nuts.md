@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://fly.io/blog/youre-all-nuts/" rel="nofollow ugc noopener">My AI Skeptic friends are all nuts</a></p><ul><li><p>This was a hot post on Hacker News for a week, rightly so, it is partial and follows an experienced developer talking about how LLMs ar
+- [My AI Skeptic friends are all nuts](https://fly.io/blog/youre-all-nuts/)
+    - This was a hot post on Hacker News for a week, rightly so, it is partial and follows an experienced developer talking about how LLMs are useful as a tool and not a job replacer.
+    - I love one point, which is this quote:
+      > Often, LLMs will drop you precisely at that golden moment where shit almost works, and development means tweaking code and immediately seeing things work better. That dopamine hit is why I code.
+      I have talked about it previously, and it resonates with me too. I haven’t tried it to the extreme yet. But this is what it is supposed to be doing, if done and used correctly.
+    - Caring about the craft is what the author rightly meant to keep LLM out of the loop. He compares with the woodworking; if you treat woodworking as a hobby, then you should care about the tiny details and fine refinements. That is not something for LLM to take care.
+    - Junior level output of these LLM is a bit scary. It makes juniors a place of bother.
 
 **Source:** techstructive-weekly-45
-

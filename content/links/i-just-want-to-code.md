@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-ly don’t feel that there will be such periods created for developers by most companies, since they only see money as output.</p></li></ul></li><li><p><a href="https://www.zachbellay.com/daily/i-just-want-to-code/?ref=dailydev" rel="nofollow ugc noopener">I just want to code</a></p><ul><li><p>I honestly feel this way, the war between your heart and mind.</p></li><li><p>What a coincidence, I am on a war, turns out, everyone is
+- [I just want to code](https://www.zachbellay.com/daily/i-just-want-to-code/?ref=dailydev)
+    - I honestly feel this way, the war between your heart and mind.
+    - What a coincidence, I am on a war, turns out, everyone is too. Everyone is fighting the control of the mind over the heart, the ego over the soul.
+    - The author of this post has really put it well, just read that post, instead of this rambling.
 
 **Source:** techstructive-weekly-42
-

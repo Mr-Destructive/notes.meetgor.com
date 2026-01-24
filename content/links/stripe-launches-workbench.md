@@ -10,7 +10,17 @@ draft: false
 
 ## Context
 
-f="https://si.inc/hertz-dev/" rel="nofollow ugc noopener">Hertz.dev</a><span> launches the conversational audio generator model</span></p></li><li><p><a href="https://stripe.com/blog/workbench-a-new-way-to-debug-monitor-and-grow-your-stripe-integration" rel="nofollow ugc noopener">Stripe launches Workbench</a><span>: A new way to debug, monitor, and grow your Stripe integration</span></p><p></p></li></ul><p><span>For more news, follow the </span><a href="ht
+* [Stripe launches Workbench](https://stripe.com/blog/workbench-a-new-way-to-debug-monitor-and-grow-your-stripe-integration): A new way to debug, monitor, and grow your Stripe integration
+    
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-721) and for daily developer articles, join [daily.dev](http://daily.dev)
+
+That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!
+
+[Leave a comment](https://techstructively.substack.com/p/techstructive-weekly-15/comments)
+
+Thank you for reading, let’s catch up in the next week.
+
+Happy Coding :)
 
 **Source:** techstructive-weekly-15
-

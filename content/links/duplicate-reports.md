@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ought its existence from their imaginations and manifestation, you need to validate and prove the thing you wanted to build.</p></li></ol></li><li><p><a href="https://thedailywtf.com/articles/duplicate-reports" rel="nofollow ugc noopener">Duplicate Reports</a></p><ol><li><p>Testing guys is the vibe of AI, testing code is becoming apparent as AI can produce code in matter of seconds. Learning the fundamental
+2. [Duplicate Reports](https://thedailywtf.com/articles/duplicate-reports)
+    
+    1. Testing guys is the vibe of AI, testing code is becoming apparent as AI can produce code in matter of seconds. Learning the fundamentals has never been so vital.
 
 **Source:** techstructive-weekly-73
-

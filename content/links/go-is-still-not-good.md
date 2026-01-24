@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-ed to know why this needs to be done and done correctly. Then things take shape, curiosity out performs every other emotion.</p></li></ul></li><li><p><a href="https://blog.habets.se/2025/07/Go-is-still-not-good.html" rel="nofollow ugc noopener">Go is still not good</a></p><ul><li><p>I can agree to only one points here especially the standard library swallowing exceptions part. That sometimes is little on the border
+3. [Go is still not good](https://blog.habets.se/2025/07/Go-is-still-not-good.html)
+    - I can agree to only one points here especially the standard library swallowing exceptions part. That sometimes is little on the border of Go's philosophy vs the actual issue. Just read the f-ing manual would be the argument, but it kind of becomes too verbose and critical if mishandled.
 
 **Source:** techstructive-weekly-56
-

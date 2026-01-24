@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-It creates a sense of motion and drive us from the overthinking and procrastination that would have consumed and stalled us.</p></li></ul></li><li><p><a href="https://developers.cloudflare.com/r2/how-r2-works/" rel="nofollow ugc noopener">How Cloudflare’s R2 actually works</a></p><ul><li><p>It now makes sense that how R2 is ideal for storing and frequently accessing large amounts of binary or media like data.</p></li></ul><
+6. [How Cloudflare’s R2 actually works](https://developers.cloudflare.com/r2/how-r2-works/)
+    - It now makes sense that how R2 is ideal for storing and frequently accessing large amounts of binary or media like data.
 
 **Source:** techstructive-weekly-50
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-="https://www.meetgor.com/sqlog/sqlite-mode-dot-command-separators/" rel="nofollow ugc noopener">Output Mode Separator dot command</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-dot-command-header/" rel="nofollow ugc noopener">Header toggle dot command</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-create-table/" rel="nofollow ugc noopener">SQL: Create basic table </a></p></li><li><p><
+="https://www.meetgor.com/sqlog/sqlite-mode-dot-command-separators/" rel="nofollow ugc noopener">Output Mode Separator dot commandHeader toggle dot commandSQL: Create basic table <
 
 **Source:** techstructive-weekly-58
-

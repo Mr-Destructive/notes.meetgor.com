@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://duncan.dev/post/art-of-saying-no" rel="nofollow ugc noopener">The art of saying no</a><span>: This post is so accurate in describing the feeling while doing AI assisted development. We have to constantly sift through hundreds of suggest
+1. [The art of saying no](https://duncan.dev/post/art-of-saying-no): This post is so accurate in describing the feeling while doing AI assisted development. We have to constantly sift through hundreds of suggestions or ideas to get the one that we are looking for, and that is not easy and comforting at first. However, just like debugging intuitively, accepting suggestions and vibing would become a intuition based activity, it just takes a few misses and hits, some trials and explorations of how these LLMs work.
 
 **Source:** techstructive-weekly-47
-

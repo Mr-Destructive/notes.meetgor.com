@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-i><p><a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/" rel="nofollow ugc noopener">Meta launches Llama 4</a><span> (actually </span><a href="https://www.theverge.com/meta/645012/meta-llama-4-maverick-benchmarks-gaming" rel="nofollow ugc noopener">games the lmarena</a><span>)</span></p></li><li><p><span>Google drops some serious projects and protocol: </span><a href="https://blog.google/products/google-cloud/next-20
+- [Meta launches Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) (actually [games the lmarena](https://www.theverge.com/meta/645012/meta-llama-4-maverick-benchmarks-gaming))
 
 **Source:** techstructive-weekly-37
-

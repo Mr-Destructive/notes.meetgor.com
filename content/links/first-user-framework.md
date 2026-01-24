@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-em-solving skills? Maybe, but that’s just not how my brain likes to solve problems; my brain works when it sees the problem.</p></li></ul></li><li><p><a href="https://vishnubharathi.codes/blog/first-user-framework" rel="nofollow ugc noopener">First User Framework</a></p><ul><li><p>If there is no user, that is not a solution; it is a problem you are inventing yourself.</p></li><li><p>If you are developing something
+- [First User Framework](https://vishnubharathi.codes/blog/first-user-framework)
+    - If there is no user, that is not a solution; it is a problem you are inventing yourself.
+    - If you are developing something for yourself, don’t do it right away. If you have the time and capacity to keep up with the learning and work-life balance, then do it without thinking. But if you are already burnt out, maybe just don’t, it might lead you nowhere.
+    - If you have one user, start building it. If you have at least a user, there is already a feedback loop developed once you build it. The instant feedback input and the validation part makes it addictive.
 
 **Source:** techstructive-weekly-45
-

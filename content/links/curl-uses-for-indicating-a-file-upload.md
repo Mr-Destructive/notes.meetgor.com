@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ed under-the-hood to send and save request. Hence I felt the need to look up how to parse files into the httpx request object. </span></p></li><li><p><a href="https://stackoverflow.com/questions/12667797/using-curl-to-upload-post-data-with-files" rel="nofollow ugc noopener">Curl uses `@`  for indicating a file upload</a><span> in a request form data. That is like a decision they have made, a choice, that could be something else as well. However the community is suppor
+- [Curl uses `@` for indicating a file upload](https://stackoverflow.com/questions/12667797/using-curl-to-upload-post-data-with-files) in a request form data. That is like a decision they have made, a choice, that could be something else as well. However the community is supportive and adheres to the convention that is followed in all the places, rather the systems are designed around it.
+
+## Tech News
 
 **Source:** techstructive-weekly-33
-

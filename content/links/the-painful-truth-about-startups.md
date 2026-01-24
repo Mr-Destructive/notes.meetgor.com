@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://youtu.be/lWsZT-2pQL4" rel="nofollow ugc noopener">The painful truth about startups</a></p><ul><li><p>OK, it was a harsh journey. Success is not overnight, its just a preparation for a overnight success. Uploadthing, round, picthing, and
+- [The painful truth about startups](https://youtu.be/lWsZT-2pQL4)
+    - OK, it was a harsh journey. Success is not overnight, its just a preparation for a overnight success. Uploadthing, round, picthing, and so many thing, and then finally T3 chat (chat thing, better chat), that made it.
+    - The salary looks like it will be life worth income. Man! india has a really low income-expense ratio.
+    - Just nerd out about the things I love, that’s what I am doing here.
+
+Double click to interact with video
+
+## Learnt
 
 **Source:** techstructive-weekly-54
-

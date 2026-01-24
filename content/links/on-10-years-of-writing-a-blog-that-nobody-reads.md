@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://flowtwo.io/post/on-10-years-of-writing-a-blog-nobody-reads" rel="nofollow ugc noopener">On 10 years of writing a blog that nobody reads</a></p><ul><li><p>Interesting take on writing in the age of AI, relating to breathe, inhale -> read, exhale -> review and reflect</p></li></ul></li><li><
+[On 10 years of writing a blog that nobody reads](https://flowtwo.io/post/on-10-years-of-writing-a-blog-nobody-reads)- Interesting take on writing in the age of AI, relating to breathe, inhale -&gt; read, exhale -&gt; review and reflect
+
+[All it takes is for one to work out](https://alearningaday.blog/2025/11/28/all-it-takes-is-for-one-to-work-out-2/)- Yes, this is true. For it to happen though you might have to attempt 99 shots, good or bad, doesn’t matter, that’s what the journey is about. Figuring and Learning things through action.
 
 **Source:** techstructive-weekly-71
-

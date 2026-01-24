@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/mRWLQGMGY80" rel="nofollow ugc noopener">Tokens are getting expensive</a></p><ul><li><p>Geez, that is a lot of money. Models are really a way to fool and cash out money from people, these AI labs have just turned LLMs to be
+- [Tokens are getting expensive](https://youtu.be/mRWLQGMGY80)
+    - Geez, that is a lot of money. Models are really a way to fool and cash out money from people, these AI labs have just turned LLMs to be money making machines.
+
+Didn’t watch anything apart from this in tech, read a lot of things this week, so off out of social media for a while.
+
+## Learnt
 
 **Source:** techstructive-weekly-56
-

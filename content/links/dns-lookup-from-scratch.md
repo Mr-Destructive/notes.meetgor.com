@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/CHaEdVIF2_M" rel="nofollow ugc noopener">DNS Lookup from scratch </a></p><ul><li><p>This was a refreshing post, it made me think, </p></li><li><p>Programming is not dead yet.</p></li><li><p>I have lost the motivation in
+- [DNS Lookup from scratch](https://youtu.be/CHaEdVIF2_M)
+    - This was a refreshing post, it made me think,
+    - Programming is not dead yet.
+    - I have lost the motivation in streaming because of AI, no one would watch someone code something for hours, but this is bringing that back.
+    - The joy, the delight, the satisfaction of coding your own DNS from scratch in C, elite programmer. I would recommend subscribing this guy, full of energy.
 
 **Source:** techstructive-weekly-59
-

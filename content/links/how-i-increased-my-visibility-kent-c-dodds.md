@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-are not only hired based on what you say, but also what your impact says, your brand, your online presence, and actual skills.</span></p></li><li><p><a href="https://kentcdodds.com/blog/how-i-increased-my-visibility" rel="nofollow ugc noopener">How I increased my visibility: Kent C. Dodds</a><br/><span>To increase visibility, you need to put it out there. To be seen by others, you have to show your skills and struggles in public. This is t
+* [How I increased my visibility: Kent C. Dodds](https://kentcdodds.com/blog/how-i-increased-my-visibility)  
+    To increase visibility, you need to put it out there. To be seen by others, you have to show your skills and struggles in public. This is to a point article showing practical experience in his journey.
 
 **Source:** techstructive-weekly-18
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key" rel="nofollow ugc noopener">SQLite: One to Many Relation with Foreign Key</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-self-join-relations" rel="nofollow ugc noopener">SQLite: Self Join Relations</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-many-to-many-relations" rel="nofollow ugc noopener">SQLite: Many to Many Relations</a></
+://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key" rel="nofollow ugc noopener">SQLite: One to Many Relation with Foreign KeySQLite: Self Join RelationsSQLite: Many to Many Relations</
 
 **Source:** techstructive-weekly-60
-

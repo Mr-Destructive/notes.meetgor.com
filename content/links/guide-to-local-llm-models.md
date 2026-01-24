@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-where generating html from LLM is getting easier (not cheaper yet!) than generating it by code, whew! What a time to be in.</p></li></ol></li><li><p><a href="https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude" rel="nofollow ugc noopener">Guide to Local LLM Models</a></p><ol><li><p>Ok, the VRAM and RAM is somethign is quite critical. If you have less RAM and much VRAM, its no use, you need to have sufficient RAM in
+7. [Guide to Local LLM Models](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude)
+    1. Ok, the VRAM and RAM is somethign is quite critical. If you have less RAM and much VRAM, its no use, you need to have sufficient RAM in order to run a good enough model, VRAM wouldn’t handle it.
 
 **Source:** techstructive-weekly-74
-

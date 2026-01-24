@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-li><p><a href="https://docs.anthropic.com/en/docs/claude-code/hooks" rel="nofollow ugc noopener">Claude Code now can support hooks</a></p></li><li><p><a href="https://gemini.google/overview/video-generation/" rel="nofollow ugc noopener">Google’s Veo 3 launches worldwide for Pro/Ultra Tier</a></p><p></p></li></ul><div><hr/></div><p>A week a bit of no new models, nothing fancy launches. Finally, we get a week or two before it gets wild. It’s
+- [Google’s Veo 3 launches worldwide for Pro/Ultra Tier](https://gemini.google/overview/video-generation/)
+
+---
+
+A week a bit of no new models, nothing fancy launches. Finally, we get a week or two before it gets wild. It’s time to reflect and build something meaningful. It’s time to learn and plant the seeds that will help in the future.
+
+[Leave a comment](https://techstructively.substack.com/p/techstructive-weekly-49/comments)
 
 **Source:** techstructive-weekly-49
-

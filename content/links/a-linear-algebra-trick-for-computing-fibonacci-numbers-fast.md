@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-rom the surface, it feels a bit hurting, it should be reframed to make it more informative and actionable instead of attacking.</span></p></li><li><p><a href="https://blog.codingconfessions.com/p/a-linear-algebra-trick-for-fibonacci-numbers" rel="nofollow ugc noopener">A Linear Algebra Trick for computing Fibonacci Numbers Fast</a><span>: An interesting way to compute Fibonacci numbers. A nice matrix multiplication trick.</span></p></li><li><p><a href="https://steveklabnik.com/w
+3. [A Linear Algebra Trick for computing Fibonacci Numbers Fast](https://blog.codingconfessions.com/p/a-linear-algebra-trick-for-fibonacci-numbers): An interesting way to compute Fibonacci numbers. A nice matrix multiplication trick.
 
 **Source:** techstructive-weekly-47
-

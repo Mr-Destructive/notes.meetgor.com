@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://techcrunch.com/2024/12/24/google-is-using-anthropics-claude-to-improve-its-gemini-ai/" rel="nofollow ugc noopener">Google using Anthropic Claude AI to train its own AI</a><span>: This is gross, wild, I mean we all expected this to happen at some point, but from Google, really? Ai using AI to get more AI. Google has neve
+- [Google using Anthropic Claude AI to train its own AI](https://techcrunch.com/2024/12/24/google-is-using-anthropics-claude-to-improve-its-gemini-ai/): This is gross, wild, I mean we all expected this to happen at some point, but from Google, really? Ai using AI to get more AI. Google has never been in the race to be honest in this AI hype (well now its over 2 years, we can stop calling it hype, AI ERA). Bard couldn’t keep up with GPT 3.5 and hence they renamed to Gemini and still gemini is not comparable to OpenAI or Claude. Makes sense they are using Claude to train the new model (what will be its name, -2 steps from GPT :)
 
 **Source:** techstructive-weekly-22
-

@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/5Z0RCxDZdrE" rel="nofollow ugc noopener">Interview with Varun Mohan, Co-founder and CEO of Windsurf</a></p><ul><li><p>An insightful conversation with prompting questions which are quite relevant in today’s tech world</p></li><li><p>He had a weird take o
+- [Interview with Varun Mohan, Co-founder and CEO of Windsurf](https://youtu.be/5Z0RCxDZdrE)
+    - An insightful conversation with prompting questions which are quite relevant in today’s tech world
+    - He had a weird take on hiring, might be too overstrech employees’ health
+          - Until the people are dehydrated, then we only look for help in terms of hiring. That is not a good way to put that, I think, it looks a bit cruel even if he might not mean it.
+    - Changing from GPU providers to AI Editor, betting on that is pretty dope.
+  Double click to interact with video
 
 **Source:** techstructive-weekly-39
-

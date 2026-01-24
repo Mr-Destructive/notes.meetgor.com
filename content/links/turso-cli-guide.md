@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/-uNWDCr9mMk?si=ek92CeDVpa2h9wfC" rel="nofollow ugc noopener">Turso CLI Guide</a><span>: Interacting with LibSQL databases on the Turso platform</span></p><ul><li><p><span>I just created the first video on ShotCut tool, a local vid
+7.07-7.07l-1.72 1.71">Turso CLI Guide: Interacting with LibSQL databases on the Turso platformI just created the first video on ShotCut tool, a local vid
 
 **Source:** techstructive-weekly-28
-

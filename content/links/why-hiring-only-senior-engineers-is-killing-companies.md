@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-to learn the process, don’t hold yourself back just because you’d think people would judge you, they will judge you anyways.</p></li></ul></li><li><p><a href="https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies" rel="nofollow ugc noopener">Why hiring only senior engineers is killing companies</a></p><ul><li><p>Juniors with AI tools might be worth more then seniors, because of their adoption and open-mindedness.  </p></li></ul></li><li><p><a hr
+8. [Why hiring only senior engineers is killing companies](https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies)
+    - Juniors with AI tools might be worth more then seniors, because of their adoption and open-mindedness.
 
 **Source:** techstructive-weekly-62
-

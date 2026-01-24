@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/3VuM1GCadt4" rel="nofollow ugc noopener">Advice for juniors on manager-engineer relation and Theo’s experience (must watch)</a></p><ul><li><p>TLDR: Don’t try to do the job that you are not asked, if the environment is pulling each other down.</p></li><li><p>It’s doesn’t mean y
+* [Advice for juniors on manager-engineer relation and Theo’s experience (must watch)](https://youtu.be/3VuM1GCadt4)
+    
+    * TLDR: Don’t try to do a job that you are not asked, if the environment is pulling each other down.
+        
+    * It doesn’t mean you are not following your curiosity or doing the things you are excited to do, rather than knowing when to and when not to.
 
 **Source:** techstructive-weekly-40
-

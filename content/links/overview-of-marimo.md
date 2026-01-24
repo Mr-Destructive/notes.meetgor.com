@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-y" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li><li><p><a href="https://youtu.be/3N6lInzq5MI?si=kEqeaHpAiQaadVFN" rel="nofollow ugc noopener">Overview of Marimo</a><span>:</span></p><p><span>Marimo is a powerful tool to have in these times. LLMs are chained and this will help build better workflows, rather help i
+- [Overview of Marimo](https://youtu.be/3N6lInzq5MI?si=kEqeaHpAiQaadVFN):
+  Marimo is a powerful tool to have in these times. LLMs are chained and this will help build better workflows, rather help in experimentation and iteration. Having to work with graph related scripts, with graph designed platform is the best way to move ahead.Double click to interact with video
+
+## Learnt
 
 **Source:** techstructive-weekly-33
-

@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/09E-tVAUqQw" rel="nofollow ugc noopener">Why do databases store data in B+ Trees</a></p><ul><li><p>Everything is about intuition it seems, you see a problem, you think for a while, you think of a ideal scenario and you just scramble u
+- [Why do databases store data in B+ Trees](https://youtu.be/09E-tVAUqQw)
+    - Everything is about intuition it seems, you see a problem, you think for a while, you think of a ideal scenario and you just scramble up a solution by adding the good parts and discarding the bad parts.
+    - This was the same, for why database use B+ Trees. Because we need to optimise for any arbitrary access for data as well as for range queries.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-53
-

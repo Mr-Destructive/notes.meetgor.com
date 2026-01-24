@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://youtu.be/Xdkwc26763M?si=kiI3dxdb1CobMwUs" rel="nofollow ugc noopener">Aaron Francis on The Software Huddle</a></p><p>He is a all round good guy. This podcast is really inspiring to learn and be consistent at it, he has gone from Accountant to launching his own
+* [Aaron Francis on The Software Huddle](https://youtu.be/Xdkwc26763M?si=kiI3dxdb1CobMwUs)
+    
+    He is a all round good guy. This podcast is really inspiring to learn and be consistent at it, he has gone from Accountant to launching his own company as a developer, speaker, educator, and database master.
+    
+
+## Learnt
 
 **Source:** techstructive-weekly-19
-

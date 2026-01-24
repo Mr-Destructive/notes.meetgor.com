@@ -10,7 +10,14 @@ draft: false
 
 ## Context
 
-hink), but having that kindness and insight about the person we are interacting with sets us apart as an effective engineer.</p></li></ul></li><li><p><a href="https://www.saiyangrowthletter.com/p/habits-i-recommend-to-succeed-as" rel="nofollow ugc noopener">Habits I recommend to a software developer</a></p><ul><li><p>Reading a book</p></li><li><p>Build projects (keep building)</p></li><li><p>Write to reflect the learnings</p></li><li><p>Learn and bui
+* [Habits I recommend to a software developer](https://www.saiyangrowthletter.com/p/habits-i-recommend-to-succeed-as)
+    
+    * Reading a book
+        
+    * Build projects (keep building)
+        
+    * Write to reflect the learnings
+        
+    * Learn and build in public
 
 **Source:** techstructive-weekly-40
-

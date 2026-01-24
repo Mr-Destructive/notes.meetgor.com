@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://youtu.be/qGH8gKdpZMQ" rel="nofollow ugc noopener">Bublesort is useful</a></p><ol><li><p>Yes, this is kind of nuts</p></li><li><p>Buble sort is the lowkey high value thing to learn and know of.</p></li><li><p>VIsualizing any
+1. [Bublesort is useful](https://youtu.be/qGH8gKdpZMQ)
+    1. Yes, this is kind of nuts
+    2. Buble sort is the lowkey high value thing to learn and know of.
+    3. VIsualizing any sorting algorithm really makes you understand the flow better and it clicks almost everytime.Double click to interact with video
 
 **Source:** techstructive-weekly-74
-

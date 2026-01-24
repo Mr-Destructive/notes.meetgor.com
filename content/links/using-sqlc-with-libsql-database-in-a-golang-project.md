@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-he learnings from the knowledge that I gained from making the video and adding more examples and use-cases.</span></p></li><li><p><span>Video: </span><a href="https://www.youtube.com/watch?v=mv1vCqUy_5o" rel="nofollow ugc noopener">Using SQLC with LibSQL Database in a Golang Project</a><span>:  </span><br/><span>Created a video after 3 weeks, but felt good after creating this. This is the fourth video in the </span><a href="https://y
+* Video: [Using SQLC with LibSQL Database in a Golang Project](https://www.youtube.com/watch?v=mv1vCqUy_5o):  
+    Created a video after 3 weeks, but felt good after creating this. This is the fourth video in the [Let’s Go with Turso](https://youtube.com/playlist?list=PLMVgNvnU9WlE6H-Vk2gXq96bAkyNWXkNI&si=hiHaL1rI7Lv4Wmhf) Series.
 
 **Source:** techstructive-weekly-14
-

@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ll be a skill to work with LLMs in few years. I admire Simon Wilson for this, he just tries wild things to make it work for him.</p><p></p><ul><li><p><a href="https://devagr.me/blog/senior" rel="nofollow ugc noopener">Year in Review: Dev Agarwal</a><span>:</span></p></li></ul><p>This was a heart-touching review, I can relate to it, you will have everything before there will be nothing. This is th
+- [Year in Review: Dev Agarwal](https://devagr.me/blog/senior):
+
+This was a heart-touching review, I can relate to it, you will have everything before there will be nothing. This is the cycle, life is a miss and a bliss. There will be times you jump ahead in the day, but there will be times when you will struggle to wake up, even fear to live, but it is the one who goes through it and still does it anyway.
 
 **Source:** techstructive-weekly-21
-

@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-bout them, make changes, remove and write it yourself if needed. It can write code, but cannot build software solution. Yet!</p></li></ul></li><li><p><a href="https://fly.io/blog/everyone-write-an-agent/" rel="nofollow ugc noopener">You should write an agent</a></p><ul><li><p>A good one. You need to experience the thing in order to have an opinion. That’s quite obvious. But people coming on conclusions about
+- Using LLMs to increase the things that we can experiment with is a good tool and direction. But then you need to plan, think, fail and iterate. It cannot be just prompt and done. You need to sit and read the things it generates, think about them, make changes, remove and write it yourself if needed. It can write code, but cannot build software solution. Yet!
+
+[You should write an agent](https://fly.io/blog/everyone-write-an-agent/)- A good one. You need to experience the thing in order to have an opinion. That’s quite obvious. But people coming on conclusions about AI and LLMs don’t quite think that way. They do one thing and generalize their opinion. Generalization of experiences is not good.
 
 **Source:** techstructive-weekly-67
-

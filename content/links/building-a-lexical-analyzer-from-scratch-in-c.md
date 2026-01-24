@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ut flowing with the excitement and energy is also helpful not always but can be done to improve the fun and memorable parts.</p></li></ul></li><li><p><a href="https://devlogs.xyz/blog/building-a-lexical-analyzer-from-scratch" rel="nofollow ugc noopener">Building a lexical analyzer from scratch in C</a></p><ul><li><p>This actually cleared up how to write lexers from scratch. I was wondering if that was bunch of if-else to parse each tokens, but we do
+4. [Building a lexical analyzer from scratch in C](https://devlogs.xyz/blog/building-a-lexical-analyzer-from-scratch)
+    - This actually cleared up how to write lexers from scratch. I was wondering if that was bunch of if-else to parse each tokens, but we do have to group the kind of tokens and then write specific conditions on how to parse them. Now that makes a lot of sense.
+    - Worth exploring more by writing my own markdown parser, even adding more features and syntax. If your soul screams to write your own flavour of markdown, let the muse take over you. This month or one day, not this weekend though.
 
 **Source:** techstructive-weekly-60
-

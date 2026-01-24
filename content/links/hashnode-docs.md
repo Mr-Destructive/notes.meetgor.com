@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://hashnode.com/blog/announcing-docs-by-hashnode-the-content-engine-for-api-and-product-documentation" rel="nofollow ugc noopener">Hashnode Docs</a><span>:  The content engine for API and product documentation. </span><br/><span>This brings me in awe with the Hashnode speed and quality of developm
+* [Hashnode Docs](https://hashnode.com/blog/announcing-docs-by-hashnode-the-content-engine-for-api-and-product-documentation): The content engine for API and product documentation.  
+    This brings me in awe with the Hashnode speed and quality of development. The love with which they craft these products is truly commendable, they have the best free tiers for doing almost anything related to writing as a developer.
 
 **Source:** techstructive-weekly-5
-

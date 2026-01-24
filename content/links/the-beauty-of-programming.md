@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://www.brynmawr.edu/inside/academic-information/departments-programs/computer-science/beauty-programming" rel="nofollow ugc noopener">The beauty of Programming</a></p><ul><li><p>I love this post, it propagates the love of programming really well.</p></li><li><p>It shows why someone is so driven and addicted in a
+1. [The beauty of Programming](https://www.brynmawr.edu/inside/academic-information/departments-programs/computer-science/beauty-programming)
+    - I love this post, it propagates the love of programming really well.
+    - It shows why someone is so driven and addicted in a good way to programming, it feels like he can create anything. Someone might say, i just change characters in a file and make things happen with the machines.
+
+  > you can be God. On a small scale
+    - I love the problem from the Gaussian sum.
+      > It’s still hard to explain what can be so fascinating about beating your head against the wall for three days, not knowing how to solve something the better way, the beautiful way. But once you find that way, it’s the greatest feeling in the world.
+    - Yes this is the quote I live for and die for, it is the thing that gets me up from the bed each day.
 
 **Source:** techstructive-weekly-62
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-s://github.com/Mr-Destructive/meta_ai_api_tool_call" rel="nofollow ugc noopener">meta-ai-api tool-call</a><span> python package</span></p></li><li><p><a href="https://agentic-calculator.vercel.app/" rel="nofollow ugc noopener">Agentic Calculator</a><span>: LLM with math tools using Pydnatic AI and Vercel</span></p><ul><li><p>LLM: Meta AI Llama 4 (on API Wrapper with tool calls)</p></li><li><p>Age
+s://github.com/Mr-Destructive/meta_ai_api_tool_call" rel="nofollow ugc noopener">meta-ai-api tool-call python packageAgentic Calculator: LLM with math tools using Pydnatic AI and VercelLLM: Meta AI Llama 4 (on API Wrapper with tool calls)Age
 
 **Source:** techstructive-weekly-40
-

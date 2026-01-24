@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-t gives me headache. I prefer JSON Instead. Also the helm package manager is written in Golang, I want to dive deeper into K8s.</span></p></li><li><p><a href="https://www.morling.dev/blog/this-ai-agent-should-have-been-sql-query/" rel="nofollow ugc noopener">This AI Agent should have been a SQL Query</a><span>: This one was more like Apache Flink comparison and walkthrough, maybe as a example but it was good.</span></p></li></ol><h2 class="header-anch
+7. [This AI Agent should have been a SQL Query](https://www.morling.dev/blog/this-ai-agent-should-have-been-sql-query/): This one was more like Apache Flink comparison and walkthrough, maybe as a example but it was good.
 
 **Source:** techstructive-weekly-47
-

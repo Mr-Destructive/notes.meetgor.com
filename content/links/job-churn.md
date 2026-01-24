@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-t not deeper, its shallow, brittle and hallucinated. Failure-based learning is more valuable then productive driven success.</p></li></ul></li><li><p><a href="https://seths.blog/2025/08/job-churn/" rel="nofollow ugc noopener">Job Churn</a></p><ul><li><p>Hope, is what the article gives. If the history has thought us something, then it will repeat itself and we will have jobs disappearing
+- [Job Churn](https://seths.blog/2025/08/job-churn/)
+    - Hope, is what the article gives. If the history has thought us something, then it will repeat itself and we will have jobs disappearing and appearing again, in a different form and domains.
 
 **Source:** techstructive-weekly-57
-

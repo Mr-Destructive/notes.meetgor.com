@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-hy even the maintainer would require you to create a PR and all the overhead in between understanding your thoughts on this.</p></li></ul></li><li><p><a href="https://www.cloudsquid.io/blog/ocr-is-legacy-tech" rel="nofollow ugc noopener">OCR is Legacy tech</a></p><ul><li><p>Maybe it is, but not completely. There will be need of low cost easy document extractions. Yes, if the cost factor goes down, OCR would
+- [OCR is Legacy tech](https://www.cloudsquid.io/blog/ocr-is-legacy-tech)
+    - Maybe it is, but not completely. There will be need of low cost easy document extractions. Yes, if the cost factor goes down, OCR would be obsolete.
+    - I work in these domain, and can say, a lot of things are changing quite rapidly, LLMs and VLLMs are taking the extraction industry by storm.
+    - Its quite easy to one shot an extraction with VLLMs given the intricated details might be missed by OCR and with VLLMs, its like a brain powered visual detector. It really understands the context and its knowledge really comes in the clutch to parse almost any type of document.
+    - Really excited to see where my journey leads in this development
 
 **Source:** techstructive-weekly-57
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-iffy but thats it, I think we will be replaced with the people who can understand the business better and not by any LLM. True.</span></p></li><li><p><a href="https://blog.yossarian.net/2025/01/10/Be-aware-of-the-Makefile-effect" rel="nofollow ugc noopener">Beware of the Makefile Effect</a><span>: Adding already solved problem to your code is not bad, but randomly yanking and making a saphagetti of the codes surely is a problem. But the
+- [Beware of the Makefile Effect](https://blog.yossarian.net/2025/01/10/Be-aware-of-the-Makefile-effect): Adding already solved problem to your code is not bad, but randomly yanking and making a saphagetti of the codes surely is a problem. But the counter point to that would be, how to know if the thing we are copying is actually good, that sense need to be developed and I think that comes with time and experience and mistakes.
 
 **Source:** techstructive-weekly-32
-

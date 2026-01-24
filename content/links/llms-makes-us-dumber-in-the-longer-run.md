@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-relief, to hear or sorry read it. Every word of this article is healing me. I will write a separate thought on this article.</p></li></ul></li><li><p><a href="https://desunit.com/blog/in-the-long-run-llms-make-us-dumber" rel="nofollow ugc noopener">LLMs makes us dumber in the longer run</a></p><blockquote><p> The comfort we get when offloading our cognitive load to LLMs is bad for us. Cognitive load should exist, and if we reduce it too
+9. [LLMs makes us dumber in the longer run](https://desunit.com/blog/in-the-long-run-llms-make-us-dumber)
+  > The comfort we get when offloading our cognitive load to LLMs is bad for us. Cognitive load should exist, and if we reduce it too much – if we stop thinking – we can actually unlearn how to think.
+    - Well said. Consistent reliance on AI is and will distinguish some human from an honest caring human.
 
 **Source:** techstructive-weekly-56
-

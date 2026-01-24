@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://martinfowler.com/articles/llm-learning-loop.html" rel="nofollow ugc noopener">Learning loops and LLMs</a></p><ul><li><p>This is a true analogy. This is highlighting about the world relating software development with a assembly line.</p></li></ul></li></ol
+[Learning loops and LLMs](https://martinfowler.com/articles/llm-learning-loop.html)- This is a true analogy. This is highlighting about the world relating software development with a assembly line.
+
+In software, design emerges through implementation. We often need to write code before we can even understand the right design. The feedback from code is our primary guide. Much of this cannot be done in isolation.
 
 **Source:** techstructive-weekly-67
-

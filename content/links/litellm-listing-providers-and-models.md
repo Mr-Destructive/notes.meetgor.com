@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-n</p></li><li><p>FastAPI for backend, Bun/React for Frontend</p></li><li><p>Thinking of using a per-user database with Turso</p></li></ul></li><li><p><a href="https://meetgor.substack.com/p/litellm-list-all-llm-providers-and?r=1hoe7f" rel="nofollow ugc noopener">LiteLLM listing providers and models</a></p><ul><li><p>This is a rough draft version of the post.</p></li><li><p>I have worked together the way to list down the providers and models</p></li>
+nFastAPI for backend, Bun/React for FrontendThinking of using a per-user database with TursoLiteLLM listing providers and modelsThis is a rough draft version of the post.I have worked together the way to list down the providers and models
 
 **Source:** techstructive-weekly-46
-

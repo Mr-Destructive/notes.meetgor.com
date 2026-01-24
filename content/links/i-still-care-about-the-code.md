@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-looks of the post, its a bit of complex thing to be working at, not hard, but you need time and patience to get used to it.</p></li></ul></li><li><p><a href="https://martinfowler.com/articles/exploring-gen-ai/i-still-care-about-the-code.html" rel="nofollow ugc noopener">I still care about the code</a></p><ul><li><p><span>This is so well put, LLMs are not compilers or interpreters, they still are unreliable. I mean </span><s>software is unreliable</
+3. [I still care about the code](https://martinfowler.com/articles/exploring-gen-ai/i-still-care-about-the-code.html)
+    - This is so well put, LLMs are not compilers or interpreters, they still are unreliable. I mean ~~software is unreliable~~, **untested software is unreliable** but LLM generated code is on the extreme end of black holes.
+    - Hallucination is a things, I am not talking about on-surface wrong things, I am talking about deep and little details, that right now only human developers can craft.
 
 **Source:** techstructive-weekly-50
-

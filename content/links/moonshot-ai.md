@@ -10,7 +10,16 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="http://Moonshot.ai" rel="nofollow ugc noopener">Moonshot.ai</a><span> releases </span><a href="https://moonshotai.github.io/Kimi-K2/thinking.html" rel="nofollow ugc noopener">Kimi K2 Thinking model</a></p></li></u
+- It as simple as this
+
+`year, month, day = 2025, 11, 05
+if month &lt; 3:
+   month = month + 12
+   year = year - 1
+k = year % 100
+j = year // 100
+day_digit = (day + (13 * (month+1)) // 5 + k + k // 4 + j // 4 + 5 * j) % 7
+# 0 is Saturday, 1 is Sunday and so on.`## Tech News
+[Moonshot.ai](http://Moonshot.ai) releases [Kimi K2 Thinking model](https://moonshotai.github.io/Kimi-K2/thinking.html)For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/770/) (#770th edition), and for software development/coding articles, join [daily.dev](http://daily.dev).It was a fun start of the penultimate month of 2025. Hopefully, the rest of the month go just like this and I will have most of my goals of the year completed.
 
 **Source:** techstructive-weekly-67
-

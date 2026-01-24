@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-f="https://orencodes.io/how-to-deploy-fastapi-with-docker-and-k3s/" rel="nofollow ugc noopener">Deploy FastAPI with Docker and K3s</a></p></li><li><p><a href="https://bsky.app/profile/paulbjensen.bsky.social/post/3lwwyngwmhc2u" rel="nofollow ugc noopener">Ask LLMs what time it is</a></p><ul><li><p>Prompt</p><blockquote><p>What is the time?</p></blockquote></li></ul></li></ul><p></p><h2 class="header-anchor-post">Watched<div class=
+- [Ask LLMs what time it is](https://bsky.app/profile/paulbjensen.bsky.social/post/3lwwyngwmhc2u)
+    - Prompt
+      > What is the time?
 
 **Source:** techstructive-weekly-56
-

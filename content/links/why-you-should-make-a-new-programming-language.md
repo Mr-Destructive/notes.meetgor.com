@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-idea that I made a few weeks back that could be fitted into this domain. Basically an organisation-level blogs for individuals.</span></p></li><li><p><a href="https://ntietz.com/blog/you-should-make-a-new-terrible-programming-language/" rel="nofollow ugc noopener">Why you should make a New programming language</a><span>: This blog actually hit me and gave me a hint of my old project of Substack Markdown Parser. So have started to read a couple of blogs and book
+* [Why you should make a New programming language](https://ntietz.com/blog/you-should-make-a-new-terrible-programming-language/): This blog actually hit me and gave me a hint of my old project of Substack Markdown Parser. So have started to read a couple of blogs and books mentioned in this blog to start understanding interpreters.
 
 **Source:** techstructive-weekly-4
-

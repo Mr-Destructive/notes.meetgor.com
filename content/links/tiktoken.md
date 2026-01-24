@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-2 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><span> </span><a href="https://github.com/openai/tiktoken" rel="nofollow ugc noopener">TikToken</a><span> the tokeniser that powers GPT and its family of models: I want to explore this and create a project around it. I learnt that is the model that
+* [TikToken](https://github.com/openai/tiktoken) the tokeniser that powers GPT and its family of models: I want to explore this and create a project around it. I learnt that is the model that actually determines the number of tokens passed around the chats while interacting with the LLMs.
 
 **Source:** techstructive-weekly-15
-

@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-de, run it, if it works, fine, but if it doesn’t work, then debug it (printf debugging) and fix it and leave, we don’t test.</p></li></ul></li><li><p><a href="https://thedailywtf.com/articles/one-last-id" rel="nofollow ugc noopener">One last id</a></p><ul><li><p>Man! SQL is tricky sometimes. The number of abstractions people create in the dialects is so jarring. It really breaks stuff.</p><p></p
+8. [One last id](https://thedailywtf.com/articles/one-last-id)
+    - Man! SQL is tricky sometimes. The number of abstractions people create in the dialects is so jarring. It really breaks stuff.
 
 **Source:** techstructive-weekly-61
-

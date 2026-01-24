@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://thedailywtf.com/articles/the-modern-job-hunt-part-1" rel="nofollow ugc noopener">The modern job hunt: Part 1</a></p><ul><li><p>This was a heart warming and hope-giving post. For a person struggling with jobs, finding a new hope is something that this post absolu
+1. [The modern job hunt: Part 1](https://thedailywtf.com/articles/the-modern-job-hunt-part-1)
+    - This was a heart warming and hope-giving post. For a person struggling with jobs, finding a new hope is something that this post absolutely gave in abundance.
+    - The comparison of a walk to garbage collection is so funny. Job search as a searching algorithm.
+    - I also like the two different contrasting thoughts and way of thinking about the situation, from
+      > *This job search is a hopeless, unending slog!*TO*Yes, this will end. Everything ends.*
+    - This hits home. Truly a great post, Eagerly awaiting for a second part. Subscribed to the RSS feed only to know the feed isn’t updated.
 
 **Source:** techstructive-weekly-58
-

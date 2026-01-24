@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li></ol></li><li><p><a href="https://youtu.be/Jlqzy02k6B8" rel="nofollow ugc noopener">The Fundamentals by Kelsey Hightower</a></p><ol><li><p>Ahh! How many people will say this, but yet we can’t follow it</p></li><li><p>Everything boils down to the fundamentals, having the bas
+2. [The Fundamentals by Kelsey Hightower](https://youtu.be/Jlqzy02k6B8)
+    1. Ahh! How many people will say this, but yet we can’t follow it
+    2. Everything boils down to the fundamentals, having the basic thing to understand when something goes wrong. Rather we make it complex in order to be percieved as smart and even oversmart.Double click to interact with video
 
 **Source:** techstructive-weekly-74
-

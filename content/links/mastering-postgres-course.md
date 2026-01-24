@@ -10,7 +10,17 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://www.pan.utiitsl.com/PAN_ONLINE/homereprint" rel="nofollow ugc noopener">Mastering Postgres Course</a><span> by </span><a href="https://aaronfrancis.com/" rel="nofollow ugc noopener">Aaron Francis</a><span>: I have been lately watching the course video
+* [Mastering Postgres Course](https://www.pan.utiitsl.com/PAN_ONLINE/homereprint) by [Aaron Francis](https://aaronfrancis.com/): I have been lately watching the course videos of PostgreSQL by Aaron Francis. The quality of content is top-notch, and everything taught is driven by proof, this is really sticking and excellent. HIGHLY RECOMMEND IT!
+    
+
+For tech news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-719) and for daily developer articles, join [daily.dev](http://daily.dev)
+
+That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!
+
+Thank you for reading, let’s catch up in the next week.
+
+[Leave a comment](https://techstructively.substack.com/p/techstructive-weekly-12/comments)
+
+Happy Coding :)
 
 **Source:** techstructive-weekly-12
-

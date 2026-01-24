@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-omputing Fibonacci Numbers Fast</a><span>: An interesting way to compute Fibonacci numbers. A nice matrix multiplication trick.</span></p></li><li><p><a href="https://steveklabnik.com/writing/a-tale-of-two-claudes/" rel="nofollow ugc noopener">A tale of two Claudes</a><span>: A completely honest and realistic take. </span></p><ol><li><p>Claude cannot work with Tailwind 4</p></li><li><p>Claude works well with compile
+4. [A tale of two Claudes](https://steveklabnik.com/writing/a-tale-of-two-claudes/): A completely honest and realistic take.
+    1. Claude cannot work with Tailwind 4
+    2. Claude works well with compiler and gnarly debugging memory related issues
+    3. This is really cool to be aware of, we can use LLMs to guide us in the situations when we are not sure. Because it will speed things up and probably reach conclusions much faster and we can then decide if that conclusion was right or not, rather than spending hours in the gnarly bugs.
+    4. Someone said it, LLMs are thinking too fast, so we should think slow, what a perfect sentence.
 
 **Source:** techstructive-weekly-47
-

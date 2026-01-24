@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://youtu.be/6TMPWvPG5GA" rel="nofollow ugc noopener">Vibe coding are three types</a></p><ul><li><p>I know and care about the code</p></li><li><p>I know the code but don’t care enough</p></li><li><p>I don’t know what I am doing</p></li
+- [Vibe coding are three types](https://youtu.be/6TMPWvPG5GA)
+    - I know and care about the code
+    - I know the code but don’t care enough
+    - I don’t know what I am doing
+    - Developers, let’s focus on the first 2 and we should be fine, the 3rd one is a luxury as a hobby.
+
+
+## Tech News
 
 **Source:** techstructive-weekly-58
-

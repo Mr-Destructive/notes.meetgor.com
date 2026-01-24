@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-at acts according to the conditions and interaction with the environment, I can relate it so well and sticks to me due to that.</span></p></li><li><p><a href="https://fastapi.tiangolo.com/async/" rel="nofollow ugc noopener">FastAPI Documentation: Concurrency and Async/Await</a><span>:  This was clear and the example provided are indeed helpful and relatable. I read this to understand the architecture these frameworks for cre
+- [FastAPI Documentation: Concurrency and Async/Await](https://fastapi.tiangolo.com/async/): This was clear and the example provided are indeed helpful and relatable. I read this to understand the architecture these frameworks for creating agentic workflows are using. I had a confusion about async and asyncio, so just read this and got absolutely cleared.
+
+## Wrote
 
 **Source:** techstructive-weekly-24
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-on the code quality vs cost race here if they don’t launch a great model in a couple of months (We all know they will)</span></p></li></ul><ul><li><p><a href="https://help.openai.com/en/articles/10877094-creating-images-on-sora" rel="nofollow ugc noopener">OpenAI’s Sora becomes available for free users for image generation</a><span>: I heard this yesterday, and I thought it was not there already seems it was there since 1st April. Not sure.</span></p></li><li><p><a href="ht
+- [OpenAI’s Sora becomes available for free users for image generation](https://help.openai.com/en/articles/10877094-creating-images-on-sora): I heard this yesterday, and I thought it was not there already seems it was there since 1st April. Not sure.
 
 **Source:** techstructive-weekly-41
-

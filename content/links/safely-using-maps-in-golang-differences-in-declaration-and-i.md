@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://www.meetgor.com/golang-safely-using-maps/" rel="nofollow ugc noopener">Safely using Maps in Golang: Differences in declaration and initialization</a><br/><span> I said in the previous newsletter that I would write this article and I did it in the previous weekend. The title I thought versus what is
+* [Safely using Maps in Golang: Differences in declaration and initialization](https://www.meetgor.com/golang-safely-using-maps/)  
+    I said in the previous newsletter that I would write this article and I did it in the previous weekend. The title I thought versus what is actually there is quite different, I had a very specific problem with `url.Values` getting nil pointer access if not initiated, but I found out the underlying type is a map in golang, So this learning became applicable to maps in general. This is the reason I like to write blog posts, I get a deeper understanding of the problems and solutions than what I thought I knew of.
 
 **Source:** techstructive-weekly-6
-

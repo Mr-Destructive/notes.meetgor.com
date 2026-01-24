@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://github.com/Mr-Destructive/dummy-json-patch" rel="nofollow ugc noopener">Code for dummy json patch API</a><span>: This is a dummy, a demonstration-only API, will add  a documentation page and more to it as I write the Golang HTTP PATCH method article. Host
+- [Code for dummy json patch API](https://github.com/Mr-Destructive/dummy-json-patch): This is a dummy, a demonstration-only API, will add a documentation page and more to it as I write the Golang HTTP PATCH method article. Hosted on netlify, took some time to understand the patch request and constructed the json-patch endpoint, will also add in a json merge patch endpoint.
 
 **Source:** techstructive-weekly-24
-

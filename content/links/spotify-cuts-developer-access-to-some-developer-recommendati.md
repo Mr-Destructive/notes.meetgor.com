@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-random thing is happening in the world of AI, someone beats the other buzzing model by little margins. Exciting times in 2025.</span></p></li><li><p><a href="https://techcrunch.com/2024/11/27/spotify-cuts-developer-access-to-several-of-its-recommendation-features/" rel="nofollow ugc noopener">Spotify cuts developer access to some developer recommendation APIs</a><br/><span>This is bad, and looks like the possible issues moving ahead in this AI driven internet.</span></p></li><li><p><a href="https://techcrunch.
+* [Spotify cuts developer access to some developer recommendation APIs](https://techcrunch.com/2024/11/27/spotify-cuts-developer-access-to-several-of-its-recommendation-features/)  
+    This is bad, and looks like the possible issues moving ahead in this AI driven internet.
 
 **Source:** techstructive-weekly-18
-

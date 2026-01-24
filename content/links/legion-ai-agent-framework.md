@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-y" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li><li><p><a href="https://youtu.be/1bxNuY_a1xo" rel="nofollow ugc noopener">Legion AI Agent Framework</a><br/><span>This frameworks looks so like other frameworks, not sure why make one so much fuss about. I mean I get it, for learning purposes it is so c
+- [Legion AI Agent Framework](https://youtu.be/1bxNuY_a1xo)  
+  This frameworks looks so like other frameworks, not sure why make one so much fuss about. I mean I get it, for learning purposes it is so cool, even I would like to try making one, but committing to it as a publicly available project as a real project and not a silly side project, seems a engagement bait or something. Just do it man.Double click to interact with video
+
+---
+
+## Learnt
 
 **Source:** techstructive-weekly-31
-

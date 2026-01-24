@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-ine tuned request. If the API or the resources are JSON based, this type of PATCH Reuqest is quite suitable and recommended.</p></li></ul></li><li><p><a href="https://www.meetgor.com/golang-web-delete-method/" rel="nofollow ugc noopener">Golang Web: DELETE Method</a><span> (38th post in 100 days of Golang Series)</span></p><p>This felt quite short, after writing the mammoth article on PATCH.  It was simple yet I w
+- [Golang Web: DELETE Method](https://www.meetgor.com/golang-web-delete-method/) (38th post in 100 days of Golang Series)
+  This felt quite short, after writing the mammoth article on PATCH. It was simple yet I wanted to complete the whole HTTP Method Suite. Now the next article will be diving deeper into the HTTP Clients and creating APIs.
 
 **Source:** techstructive-weekly-25
-

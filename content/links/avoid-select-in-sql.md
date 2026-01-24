@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-span>: I found this while researching for INODE busting from the video of the Git course walkthrough from Primeagen on Boot.dev</span></p></li><li><p><a href="https://x.com/hnasr/status/1856745402399359315" rel="nofollow ugc noopener">Avoid Select * in SQL</a><span>: This is really helpful, always need to be explicit instead of being lazy or over-cautious in case would need that field in the future. There a
+* [Avoid Select \* in SQL](https://x.com/hnasr/status/1856745402399359315): This is really helpful, always need to be explicit instead of being lazy or over-cautious in case would need that field in the future. There are two things here, one is being explicit and the other is dynamic for future changes, just in case the other fields might be required later.
 
 **Source:** techstructive-weekly-16
-

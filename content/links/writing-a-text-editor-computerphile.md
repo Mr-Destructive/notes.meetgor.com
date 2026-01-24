@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/g2hiVp6oPZc" rel="nofollow ugc noopener">Writing a Text Editor  - Computerphile</a></p><ul><li><p>Interesting that text editors use Gap buffers. Its like a temporary register (block of memory) used to append text characters while the
+- [Writing a Text Editor - Computerphile](https://youtu.be/g2hiVp6oPZc)
+    - Interesting that text editors use Gap buffers. Its like a temporary register (block of memory) used to append text characters while the user edits (adds) to the file and then it gets saved, the remaining empty part is truncated. Clever data structure.
+    - He explained it so nicely, the approach, the problem and then a new intuition, again a limitation, then a proper intuition.
+    - Vi uses linked linked like data structure for editing, very interesting.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-53
-

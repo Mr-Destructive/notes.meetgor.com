@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-<ul><li><p><a href="https://www.meetgor.com/sqlog/sqlite-cd-dot-command/" rel="nofollow ugc noopener">Change directory dot command</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-mode-dot-command/" rel="nofollow ugc noopener">Output Mode dot command</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-mode-dot-command-separators/" rel="nofollow ugc noopener">Output Mode Separator dot comm
+Change directory dot commandOutput Mode dot commandOutput Mode Separator dot comm
 
 **Source:** techstructive-weekly-58
-

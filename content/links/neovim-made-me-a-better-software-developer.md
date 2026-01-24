@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://www.youtube.com/watch?v=5u604lTkGAY" rel="nofollow ugc noopener">Neovim made me a better software developer</a><br/><span>This is a great talk by a Neovim contributor and documentation reader TJ,, if you use Neovim/Vim and don’t know TJ, shame on you! He explai
+* [Neovim made me a better software developer](https://www.youtube.com/watch?v=5u604lTkGAY)  
+    This is a great talk by a Neovim contributor and documentation reader TJ,, if you use Neovim/Vim and don’t know TJ, shame on you! He explains what are the factors that contribute to a better software developer, all the points are so well thought out and backed up by facts. So, highly recommend checking that out.
 
 **Source:** techstructive-weekly-20
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-ps://www.meetgor.com/sqlog/sqlite-primary-key-column-constraint" rel="nofollow ugc noopener">SQLite: PRIMARY KEY column constraint</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-primary-key-table-constraint" rel="nofollow ugc noopener">SQLite: PRIMARY KEY table constraint</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-foreign-key-table-constraint" rel="nofollow ugc noopener">SQLite: Foreign KEY table cons
+ps://www.meetgor.com/sqlog/sqlite-primary-key-column-constraint" rel="nofollow ugc noopener">SQLite: PRIMARY KEY column constraintSQLite: PRIMARY KEY table constraintSQLite: Foreign KEY table cons
 
 **Source:** techstructive-weekly-60
-

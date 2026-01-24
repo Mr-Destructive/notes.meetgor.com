@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li></ul></li></ul><p></p><ul><li><p><a href="https://youtu.be/AWZ9AgjPfwo?si=Il7M0Ba0w8nWjh7q" rel="nofollow ugc noopener">Dopamine Driven Development</a></p><ul><li><p>Passing tests, GitHub action tick, first try especially, different error message all gives dopamine, and that is not a cheap dopamine,
+- [Dopamine Driven Development](https://youtu.be/AWZ9AgjPfwo?si=Il7M0Ba0w8nWjh7q)
+    - Passing tests, GitHub action tick, first try especially, different error message all gives dopamine, and that is not a cheap dopamine, its a value to effort cost.
+
+Double click to interact with video
+
+## Learnt
 
 **Source:** techstructive-weekly-46
-

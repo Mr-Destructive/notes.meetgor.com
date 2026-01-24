@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-ased</a><span>:</span></p><ul><li><p>This has some cool features like generated virtual column as default generated columns.</p></li></ul></li><li><p><a href="https://planetscale.com/blog/planetscale-for-postgres-is-generally-available" rel="nofollow ugc noopener">Planetscale makes Postgres Generally Available</a></p><ul><li><p>This is a big one, they are going all in postgres.</p></li></ul></li><li><p><a href="https://github.blog/changelog/2025-09-25-github-co
+- [Planetscale makes Postgres Generally Available](https://planetscale.com/blog/planetscale-for-postgres-is-generally-available)
+    - This is a big one, they are going all in postgres.
 
 **Source:** techstructive-weekly-61
-

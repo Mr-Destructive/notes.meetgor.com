@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/7bvBVBy_CrM" rel="nofollow ugc noopener">I hate myself more for seeing this, than I hate javascript</a></p><ul><li><p>This is gross. I really hate seeing this now. I can’t bare this.</p></li><li><p>I mean, javascript is a good language, but why people j
+- [I hate myself more for seeing this, than I hate javascript](https://youtu.be/7bvBVBy_CrM)
+    - This is gross. I really hate seeing this now. I can’t bare this.
+    - I mean, javascript is a good language, but why people just used it and didn’t improve it. The author developed it in a week, weren’t the industry leaders a bit mature to make it better? The Java developers have fixed things from it, but the thing that was copied to Javascript is still ain’t? This goes back to the meme of pillars holding the bigger stones.
+
+Double click to interact with video
+
+## Learnt
 
 **Source:** techstructive-weekly-61
-

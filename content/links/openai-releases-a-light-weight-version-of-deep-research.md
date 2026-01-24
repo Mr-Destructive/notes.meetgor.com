@@ -10,7 +10,14 @@ draft: false
 
 ## Context
 
-//openai.com/index/image-generation-api/" rel="nofollow ugc noopener">OpenAI makes the image generation model available in the API</a></p></li><li><p><a href="https://techcrunch.com/2025/04/24/openai-rolls-out-a-lightweight-version-of-its-chatgpt-deep-research-tool/" rel="nofollow ugc noopener">OpenAI releases a light-weight version of Deep Research</a></p></li></ul><p><span>For more interesting articles, check out the </span><a href="https://buttondown.com/hacker-newsletter/archive/hacker-newsletter
+- [OpenAI releases a light-weight version of Deep Research](https://techcrunch.com/2025/04/24/openai-rolls-out-a-lightweight-version-of-its-chatgpt-deep-research-tool/)
+
+For more interesting articles, check out the [hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-743) for the week edition [#743](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-743), for even more software development/coding articles, join [daily.dev](http://daily.dev/).
+
+---
+
+That’s it from the #39th week of this newsletter. It was a slow-down week and finally will be streaming over the weekend for interesting stuff. See you next time.
+
+[REMOVED]
 
 **Source:** techstructive-weekly-39
-

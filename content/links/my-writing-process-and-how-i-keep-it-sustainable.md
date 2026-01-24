@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-f Golang is high and it makes sense, it is a simple language. Simple to read and write, and the one that scales as well.</p></li><li><p><span> </span><a href="https://ntietz.com/blog/my-writing-process-and-how-i-keep-it-sustainable/" rel="nofollow ugc noopener">My writing process, and how I keep it sustainable</a><span>: </span><br/><span>I am inspired by this article, the author claims to write everything in one go (not everything but the meat of the post) tha
+- [My writing process, and how I keep it sustainable](https://ntietz.com/blog/my-writing-process-and-how-i-keep-it-sustainable/):   
+  I am inspired by this article, the author claims to write everything in one go (not everything but the meat of the post) that is true for me. I just flush out my thoughts in one sitting too, however, my editing process is haywire, and haphazard. I usually don’t revise, I am not a professional technical writer, but when I do I do editing as they come.
 
 **Source:** techstructive-weekly-29
-

@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><span>Google Releases </span><a href="https://blog.google/products/gemini/gemini-3/" rel="nofollow ugc noopener">Gemini 3,</a><span> </span><a href="https://antigravity.google/" rel="nofollow ugc noopener">Antigravity</a><span>, and </span><a href="https://blog.google/technol
+- For input it’s an easy thing, but for making it generate the TOON Structure is no easy thing.
+
+## Tech News
+Google Releases [Gemini 3,](https://blog.google/products/gemini/gemini-3/) [Antigravity](https://antigravity.google/), and [Nano Banana](https://blog.google/technology/ai/nano-banana-pro/)- This is quite a hell of a release week. New Model, an AI Coding assistant IDE, and an image generation/editing tool.
+
+[OpenAI Releases GPT 5.1](https://openai.com/index/gpt-5-1/)- Is there a day when these companies held themselves back from releasing their own slight better models just to get a few eyeballs.
 
 **Source:** techstructive-weekly-69
-

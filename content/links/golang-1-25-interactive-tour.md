@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-stand how it reads, I read its thoughts and think and leave them. Next time, I be a little considerate about those mistakes.</p></li></ul></li><li><p><a href="https://antonz.org/go-1-25/" rel="nofollow ugc noopener">Golang 1.25 interactive tour</a></p><ul><li><p>The json v2 package and the in-depth explanations are helpful in quick understanding of the changes. It has given me a good view on wha
+5. [Golang 1.25 interactive tour](https://antonz.org/go-1-25/)
+    - The json v2 package and the in-depth explanations are helpful in quick understanding of the changes. It has given me a good view on what is changing and is enough motivation for me to tinker on my own and create other examples.
 
 **Source:** techstructive-weekly-48
-

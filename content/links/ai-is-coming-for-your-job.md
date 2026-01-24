@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/RIvIpILrNXE" rel="nofollow ugc noopener">AI is coming for your job</a><span>:</span></p><ul><li><p>It’s far from that, as per Simon Wilson, the people with the domain expertise leveraging these tools and LLMs will be at
+- [AI is coming for your job](https://youtu.be/RIvIpILrNXE):
+    - It’s far from that, as per Simon Wilson, the people with the domain expertise leveraging these tools and LLMs will be at the forefront and take the most advantage of the assistance.
+    - It has cut the development or creation speed to almost half or even lower. This takes off the tedious efforts or menial work and puts humans heading the creative space.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-45
-

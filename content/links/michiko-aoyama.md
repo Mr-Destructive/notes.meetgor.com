@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-say that it was the book, but it's how you read a book that is most valuable, rather than any power it might have itself.&quot;</p><p><span>— </span><a href="https://www.goodreads.com/author/quotes/18144498.Michiko_Aoyama" rel="nofollow ugc noopener">Michiko Aoyama</a></p><p><a href="https://www.goodreads.com/author/quotes/18144498.Michiko_Aoyama" rel="nofollow ugc noopener">(Author of What You Are Looking For Is in
+say that it was the book, but it's how you read a book that is most valuable, rather than any power it might have itself.&quot;— Michiko Aoyama(Author of What You Are Looking For Is in
 
 **Source:** techstructive-weekly-57
-

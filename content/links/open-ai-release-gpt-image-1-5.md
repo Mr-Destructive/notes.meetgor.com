@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-sition into full on AI systems. I don’t know if it would lead to good or bad outcomes but a good step from Google.</p></li></ul></li></ul></li><li><p><a href="https://openai.com/index/new-chatgpt-images-is-here/" rel="nofollow ugc noopener">Open AI release GPT Image 1.5</a></p><ul><li><p>Competition is harsh here, Nano-banana is so good. yet its a little behind now. I don’t know much about Nano banana Pro, but Image 1.5
+* [Open AI release GPT Image 1.5](https://openai.com/index/new-chatgpt-images-is-here/)
+    
+    * Competition is harsh here, Nano-banana is so good. yet its a little behind now. I don't know much about Nano banana Pro, but Image 1.5 might fall behind in its speed. Look at Nano banana, its zip zap image, Imagen is a slog. Not sure from the API though.
 
 **Source:** techstructive-weekly-73
-

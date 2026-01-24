@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-give enough brain space to understand and sit with the problem, to let developers cook (as in think and do their own stuff).</p></li></ul></li><li><p><a href="https://world.hey.com/dhh/give-me-ai-slop-over-human-sludge-any-day-8c4b747d" rel="nofollow ugc noopener">Give me AI slop over human sludge any day</a></p><ul><li><p>True. I can see this over X, Youtube, people create cringe worthy content. AI content yet lifeless, can said to be informational the le
+3. [Give me AI slop over human sludge any day](https://world.hey.com/dhh/give-me-ai-slop-over-human-sludge-any-day-8c4b747d)
+    - True. I can see this over X, Youtube, people create cringe worthy content. AI content yet lifeless, can said to be informational the least. That also has cringe element but a little lesser I think.
 
 **Source:** techstructive-weekly-63
-

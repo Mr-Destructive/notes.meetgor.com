@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-ref="https://www.meetgor.com/sqlog/sqlite-collate-column-modifier" rel="nofollow ugc noopener">SQLite SQL: Collate Column Modifier</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-create-temp-table" rel="nofollow ugc noopener">SQLite SQL: Create Temporary Table</a></p></li></ul><h2 class="header-anchor-post">Read<div class="pencraft pc-display-flex pc-alignItems-center pc-position-absolute pc-reset header-anchor
+ref="https://www.meetgor.com/sqlog/sqlite-collate-column-modifier" rel="nofollow ugc noopener">SQLite SQL: Collate Column ModifierSQLite SQL: Create Temporary TableRead<div class="pencraft pc-display-flex pc-alignItems-center pc-position-absolute pc-reset header-anchor
 
 **Source:** techstructive-weekly-61
-

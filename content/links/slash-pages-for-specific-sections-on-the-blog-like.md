@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
->Replace github with gitingest</a><span> for getting a single string value for all the file contents, useful for LLM prompting.</span></p></li><li><p><a href="https://thoughts.waylonwalker.com/post/494" rel="nofollow ugc noopener">Slash pages for specific sections on the blog like </a></p><ul><li><p>/now</p></li><li><p>/colophon</p></li><li><p>/links, etc</p></li></ul></li></ul><p>I am about to create a thoughts/link blog page for m
+- [Slash pages for specific sections on the blog like](https://thoughts.waylonwalker.com/post/494)
+    - /now
+    - /colophon
+    - /links, etc
+
+I am about to create a thoughts/link blog page for my site. Moving my site out of an SSG is the new year norm I believe, I moved my site from Jekyll to Markata 2 years ago, and now it seems the correct time. I don’t have any problems with Markata, I just want to use Golang for all the things I make, it feels good (not biased).
+
+## Tech News
 
 **Source:** techstructive-weekly-24
-

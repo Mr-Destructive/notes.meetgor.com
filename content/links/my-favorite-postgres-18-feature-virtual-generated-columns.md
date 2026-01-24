@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://tselai.com/virtual-gencolumns" rel="nofollow ugc noopener">My Favorite Postgres 18 feature: Virtual generated columns</a><span>:</span></p><ul><li><p>I agree to this, there are pros and cons of both. Stored makes write heavier but are read efficient. Virtual makes it wri
+1. [My Favorite Postgres 18 feature: Virtual generated columns](https://tselai.com/virtual-gencolumns):
+    - I agree to this, there are pros and cons of both. Stored makes write heavier but are read efficient. Virtual makes it write easier and read heavier. You have trade-offs, you need to decide based on the computation that impacts how you want the column to be generated.
+    - I don’t like the notion of JSON flattening in Postgres. Postgres is not a database that would be ideal for that kind of data. I know there are tons and tons of support for JSON, but tables and JSON, I can’t bare it at once. Those two are just separate entities for me. Maybe they are useful in one-off values, not not much. Switch to NoSQL if you have that lengthy data.
 
 **Source:** techstructive-weekly-60
-

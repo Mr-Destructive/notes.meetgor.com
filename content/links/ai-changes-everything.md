@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-g for LLM to take care.</p></li><li><p>Junior level output of these LLM is a bit scary. It makes juniors a place of bother. </p></li></ul></li><li><p><a href="https://lucumr.pocoo.org/2025/6/4/changes/" rel="nofollow ugc noopener">AI changes everything</a></p><ul><li><p>Everyone seems to be positive about AI, I am not against it, its good, but its moving too fast.</p><blockquote><p>I encourage you not m
+- [AI changes everything](https://lucumr.pocoo.org/2025/6/4/changes/)
+    - Everyone seems to be positive about AI, I am not against it, its good, but its moving too fast.
+      > I encourage you not meet that moment with cynicism or fear: meet it with curiosity, responsibility and the conviction that this future will be bright and worth embracing.
 
 **Source:** techstructive-weekly-45
-

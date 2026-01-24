@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-l screams to write your own flavour of markdown, let the muse take over you. This month or one day, not this weekend though.</p></li></ul></li><li><p><a href="https://alexwlchan.net/2025/bookmarks-static-site/" rel="nofollow ugc noopener">Creating a static site for all my bookmarks</a></p><ul><li><p>I am very much this kind of person, I want to access my bookmarks and the linkblog too.</p></li><li><p>I am developing it, but can’t ma
+5. [Creating a static site for all my bookmarks](https://alexwlchan.net/2025/bookmarks-static-site/)
+    - I am very much this kind of person, I want to access my bookmarks and the linkblog too.
+    - I am developing it, but can’t make it polished enough to be usable. I had created linkblog.netlify.app. This is work in progress, anyone can add but I would like to add the authentication, but that again creates a friction element, this all constraint bother me then.
 
 **Source:** techstructive-weekly-60
-

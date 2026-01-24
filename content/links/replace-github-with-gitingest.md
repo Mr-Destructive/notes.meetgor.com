@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-ere the payload is a JSON body with the fields and values you want to update (like put but only the fields to update)</span></p></li></ul></li><li><p><a href="https://thoughts.waylonwalker.com/post/517" rel="nofollow ugc noopener">Replace github with gitingest</a><span> for getting a single string value for all the file contents, useful for LLM prompting.</span></p></li><li><p><a href="https://thoughts.waylonwa
+- [Replace github with gitingest](https://thoughts.waylonwalker.com/post/517) for getting a single string value for all the file contents, useful for LLM prompting.
 
 **Source:** techstructive-weekly-24
-

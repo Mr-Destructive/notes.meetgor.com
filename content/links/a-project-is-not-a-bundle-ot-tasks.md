@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://secondthoughts.ai/p/a-project-is-not-a-bundle-of-tasks" rel="nofollow ugc noopener">A project is not a bundle ot tasks</a></p><ul><li><p>This is one of the best and practically grounded takes on the progress on AI. If it can’t make a decision that lasts longer, it might c
+[A project is not a bundle ot tasks](https://secondthoughts.ai/p/a-project-is-not-a-bundle-of-tasks)- This is one of the best and practically grounded takes on the progress on AI. If it can’t make a decision that lasts longer, it might collapse eventually. AI Coding has improved over the last year for sure, but is it there? Not really. A developer still has to understand the logic, think about the AI answers, there has to be a human intuition and judgement to make its way to a sustainable solution.
 
 **Source:** techstructive-weekly-69
-

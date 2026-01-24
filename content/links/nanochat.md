@@ -10,7 +10,18 @@ draft: false
 
 ## Context
 
-><ul><li><p>This is big. I am making this my default AI coding assistant from next week. I would be trying out a few things.</p></li></ul></li><li><p><a href="https://github.com/karpathy/nanochat" rel="nofollow ugc noopener">Nanochat</a></p><ul><li><p>Looks like a great way to learn about how models are trained. A very thought-through learning resource as well as a production-grade mo
+- [Nanochat](https://github.com/karpathy/nanochat)
+    - Looks like a great way to learn about how models are trained. A very thought-through learning resource as well as a production-grade model builder.
+    - Unfortunately, I don’t have GPUs, so I cannot run it to test my hypothesis.
+
+---
+
+Happy Diwali!
+
+That’s it for this week. Hope you have a great Diwali, happy new year (Indian business new year, Vikram Samvat 2082)
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-767) (#767th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
+
+Happy Coding :)
 
 **Source:** techstructive-weekly-64
-

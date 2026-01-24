@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-, but yes, the performance is the order of magnitude higher which makes a point for the progress humans have made in computing.</span></p></li><li><p><a href="https://alvaromontoro.com/blog/68068/human-writing-in-the-age-of-ai" rel="nofollow ugc noopener">Human writing in the age of AI</a><span>: This is a truthful article, we are growing ourselves in the photocopies of photocopies (using ai to summarise content written by ai). At some
+- [Human writing in the age of AI](https://alvaromontoro.com/blog/68068/human-writing-in-the-age-of-ai): This is a truthful article, we are growing ourselves in the photocopies of photocopies (using ai to summarise content written by ai). At some point, there will come a time, when humans will need human content and that’s when there will be a search for a gold rush, the authentic content rush. It’s time now, to make hay while the sun shines, it might be the last time when humans are valued before they are not and again they are. Be in the dark standing to help others when the darkness seems to take over.
 
 **Source:** techstructive-weekly-24
-

@@ -10,7 +10,16 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://neilthanedar.com/youre-not-burnt-out-youre-existentially-starving/" rel="nofollow ugc noopener">You’re not burning out, you’re essentially starving</a></p><ul><li><p>This was a good one</p></li></ul><blockquote><p><strong>When you truly chase your highest potential, everything you thought was burnout
+1. [You’re not burning out, you’re essentially starving](https://neilthanedar.com/youre-not-burnt-out-youre-existentially-starving/)
+    - This was a good one
+
+  > **When you truly chase your highest potential, everything you thought was burnout will melt away.** Because you weren’t suffering from too much work, you were suffering from too little truly important work. Like a boy who thought he was full until dessert arrives, you’ll suddenly find your hunger return!
+  Some really good points
+  > Pause once a month to make sure you’re still on the right track. Stop once a year to triple-check you’re on the right track. But never get off this path towards your highest potential. Anything else will starve you existentially
+  This is true
+  > **We’re optimizing for less suffering instead of more meaning.**
+  Yes
+  > **I woke up today so excited to get to work thinking it was Monday morning already.** Instead of jumping right into it, I spent all morning making breakfast and playing with my kids, then wrote this post. When I’m writing about something personal, 1,000+ words can easily flow for me in an afternoon.
+  Just read the post!
 
 **Source:** techstructive-weekly-74
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-g-thoughts-language-model" rel="nofollow ugc noopener">Claude shares the research behind the thinking capability of the chat model</a></p></li><li><p><a href="https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/" rel="nofollow ugc noopener">Gemini crushes OpenAI’s model benchmarks with its 2.5 model</a></p></li><li><p><a href="https://www.alibabacloud.com/blog/alibaba-cloud-releases-qwen2-5-omni-7b-an-end-to-end-multimodal-ai-model_602095" rel="nofol
+* [Gemini crushes OpenAI’s model benchmarks with its 2.5 model](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/)
 
 **Source:** techstructive-weekly-35
-

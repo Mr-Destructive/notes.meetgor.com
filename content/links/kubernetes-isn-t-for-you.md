@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-r Hardened Images start with a dramatically reduced attack surface, up to 95% smaller, to limit exposure from the outset.</p></blockquote></li><li><p><a href="https://dev.to/code42cate/kubernetes-isnt-for-you-2c2m" rel="nofollow ugc noopener">Kubernetes isn’t for you</a></p><ul><li><p>Kubernetes is made for the scale of google, where they have millions, billions of request per minute. Not for your 100 user startup. Tr
+8. [Kubernetes isn’t for you](https://dev.to/code42cate/kubernetes-isnt-for-you-2c2m)
+    - Kubernetes is made for the scale of google, where they have millions, billions of request per minute. Not for your 100 user startup. True, if the scale keep growing, or you have micro-service architecture, but if you have a bare-bones project and not many user-base, then sticking to simple traditional deployment is good enough
+    - I hate when people use shiny things for making themselves look like they know what they are doing, the soy devs, the gigachad 100x developers, and they only know what a pod actually means in a cluster.
+    - Why make things complex, it feels great at first for our egoistic brain, but believe me the complexity will hurt you in the long run. Maybe it will save you too if you are actually growing at scale. But the trade-off you need to decide.
 
 **Source:** techstructive-weekly-48
-

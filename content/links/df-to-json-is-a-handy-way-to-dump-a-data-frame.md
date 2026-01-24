@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-span><code>type point struct {x int; y int}</code><span> INSTEAD OF THIS DAMN THING </span><code>[]int{}</code><span> .</span></p></li><li><p><strong><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_json.html" rel="nofollow ugc noopener">df to_json is a handy way to dump a data frame</a></strong><span> when looking for something very minute or finding some pattern</span></p><p><span>I discovered that </span><code>df.to_json</code><spa
+* [**df to\_json is a handy way to dump a data frame**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_json.html) when looking for something very minute or finding some pattern
+    
+    I discovered that [`df.to`](http://df.to)`_json` is a function available to dump out a data frame to a JSON file which is quite nice and handy. I did use it to export a data frame in a notebook to a file while I was debugging a few things, and this function came in like a savior in the sea of lots of data.
 
 **Source:** techstructive-weekly-20
-

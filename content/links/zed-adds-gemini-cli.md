@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://zed.dev/blog/bring-your-own-agent-to-zed" rel="nofollow ugc noopener">Zed adds Gemini CLI</a><span> as a support for </span><a href="https://agentclientprotocol.com/overview/introduction" rel="nofollow ugc noopener">A2A</a><span> protocol</spa
+- [Zed adds Gemini CLI](https://zed.dev/blog/bring-your-own-agent-to-zed) as a support for [A2A](https://agentclientprotocol.com/overview/introduction) protocol
 
 **Source:** techstructive-weekly-57
-

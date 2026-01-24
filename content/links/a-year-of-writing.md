@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-r/><span>I have just skimmed through this post, haven’t really read it entirely but I think it will be important to go through.</span></p></li><li><p><a href="https://organizingautomation.substack.com/p/a-year-of-writing?ref=dailydev" rel="nofollow ugc noopener">A year of writing</a><br/><span>This was a practical post.</span></p><ul><li><p>Publishing requires courage</p></li><li><p>Fear can be overcome by practise</p></li><li><p>
+- [A year of writing](https://organizingautomation.substack.com/p/a-year-of-writing?ref=dailydev)  
+  This was a practical post.
+    - Publishing requires courage
+    - Fear can be overcome by practise
+    - Hobby of creation will over do the activity of consumption[![](https://substackcdn.com/image/fetch/$s_!CpXu!,w_56,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8334a217-b96b-4626-8000-3c096654ec6a_144x144.png)Organizing AutomationA year of writing As the year comes to an end, it is a natural time to reflect on all of the things I have done. One new hobby I picked up in 2024 was the writing this blog. I’m taking some time to reflect, for my own understanding and also to help out others who might be considering the same…Read more6 months ago · 2 likes · Milan van Stiphout](https://organizingautomation.substack.com/p/a-year-of-writing?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
 
 **Source:** techstructive-weekly-27
-

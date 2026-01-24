@@ -10,8 +10,21 @@ draft: false
 
 ## Context
 
-s.</span></p></li><li><p><strong>Setting a Github Pages on GitHub Actions Workflow</strong><span>: </span><br/><span>I used this snippet in my </span><a href="https://github.com/Mr-Destructive/tuxo/blob/main/.github/workflows/cronjob.yml" rel="nofollow ugc noopener">Tuxo SSG</a><span>, which would serve as the output directory of the generated SSG files to GitHub Pages.</span></p><pre><code>    - name: GitHub Pages
-      uses
+* **Setting a Github Pages on GitHub Actions Workflow**:  
+    I used this snippet in my [Tuxo SSG](https://github.com/Mr-Destructive/tuxo/blob/main/.github/workflows/cronjob.yml), which would serve as the output directory of the generated SSG files to GitHub Pages.
+    
+    ```go
+        - name: GitHub Pages
+          uses: crazy-max/ghaction-github-pages@v3
+          with:
+            target_branch: output-branch
+            build_dir: my_app/
+            jekyll: false
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    ```
+    
+
+## Tech News
 
 **Source:** techstructive-weekly-1
-

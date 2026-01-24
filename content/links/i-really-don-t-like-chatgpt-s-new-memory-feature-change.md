@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-it’s kind of weird to use them.</p></li><li><p>I don’t like the review part, it feels like a daunting task</p></li><li><p> </p></li></ul></li><li><p><a href="https://simonwillison.net/2025/May/21/chatgpt-new-memory/" rel="nofollow ugc noopener">I really don’t like ChatGPT’s new memory feature change</a></p><ul><li><p>I haven’t used this, but I can understand the feeling of this</p></li><li><p>This looks like a feature without a button, a default feat
+- [I really don’t like ChatGPT’s new memory feature change](https://simonwillison.net/2025/May/21/chatgpt-new-memory/)
+    - I haven’t used this, but I can understand the feeling of this
+    - This looks like a feature without a button, a default feature. Really, are these big companies talking about AGI and care about the values, and slopping users with a bare minimum experience?
 
 **Source:** techstructive-weekly-43
-

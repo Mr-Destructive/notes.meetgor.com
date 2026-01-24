@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-representation of what is changing or what the crux of the presentation is, not just adding visuals just for the sake of it.</p></li></ul></li><li><p><a href="https://jalexine.github.io/on-doing-things.html" rel="nofollow ugc noopener">On doing things</a></p><ul><li><p>I don’t know nature is hinting this week to me to just do things. Right, I’ll do it.</p></li></ul></li></ol><blockquote><p>Sometimes id
+- Adding pictures add value, but I think it should be a concise representation of what is changing or what the crux of the presentation is, not just adding visuals just for the sake of it.
+
+[On doing things](https://jalexine.github.io/on-doing-things.html)- I don’t know nature is hinting this week to me to just do things. Right, I’ll do it.
+
+Sometimes ideas come when you stop trying to force them.
 
 **Source:** techstructive-weekly-68
-

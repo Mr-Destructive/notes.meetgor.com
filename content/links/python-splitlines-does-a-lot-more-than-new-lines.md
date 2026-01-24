@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-the progress.</p></li><li><p>Yes, sometimes experience hurts. And having the perfectionist mindset might be a little harsh.</p></li></ul></li><li><p><a href="https://yossarian.net/til/post/python-s-splitlines-does-a-lot-more-than-just-newlines/" rel="nofollow ugc noopener">Python splitlines does a lot more than new lines</a></p><ul><li><p>Wow, I knew this, but realising it again as I forgot how split and splitlines is like a magic function. You never know you need that le
+7. [Python splitlines does a lot more than new lines](https://yossarian.net/til/post/python-s-splitlines-does-a-lot-more-than-just-newlines/)
+    - Wow, I knew this, but realising it again as I forgot how split and splitlines is like a magic function. You never know you need that level of magic at times, but sometimes you do.
+    - This is something I love and hate about python.
 
 **Source:** techstructive-weekly-63
-

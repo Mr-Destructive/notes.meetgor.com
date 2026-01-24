@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><p>Some of the things happening in tech, hot and smoking.</p><ul><li><p><a href="https://qwenlm.github.io/blog/qwen3-coder/" rel="nofollow ugc noopener">Qwen-3 Coder</a><span>: It seems we have now a whole bunch of terminal based ai code war. Claude Code, Codex (does anyone use it?), Warp, Ampcode, Gemini CLI, now Qwe
+- [Qwen-3 Coder](https://qwenlm.github.io/blog/qwen3-coder/): It seems we have now a whole bunch of terminal based ai code war. Claude Code, Codex (does anyone use it?), Warp, Ampcode, Gemini CLI, now Qwen.
 
 **Source:** techstructive-weekly-52
-

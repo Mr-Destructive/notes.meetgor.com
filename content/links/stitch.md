@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-ul><li><p><span>Google with </span><a href="https://blog.google/technology/google-labs/jules/" rel="nofollow ugc noopener">Jules</a><span> and </span><a href="https://stitch.withgoogle.com/" rel="nofollow ugc noopener">Stitch</a></p></li><li><p><a href="https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/" rel="nofollow ugc noopener">Google’s Flow with Veo 3</
+- Google with [Jules](https://blog.google/technology/google-labs/jules/) and [Stitch](https://stitch.withgoogle.com/)
 
 **Source:** techstructive-weekly-43
-

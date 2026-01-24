@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-ure="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p></li><li><p><a href="https://youtu.be/mgWOMu2yo_U?si=Aq8jJJ4w2-TgwkDo" rel="nofollow ugc noopener">FreeCodeCamp (Quincy Larson) interview with Tech with Tim</a><br/><span>This is a good talk, while growing up as a developer, I watched Tim while learning Python and Django, so he has been a teacher to me in som
+* [FreeCodeCamp (Quincy Larson) interview with Tech with Tim](https://youtu.be/mgWOMu2yo_U?si=Aq8jJJ4w2-TgwkDo)  
+    This is a good talk, while growing up as a developer, I watched Tim while learning Python and Django, so he has been a teacher to me in some way or the other, and seeing his raw thoughts behind his life, feels good to listen to.
 
 **Source:** techstructive-weekly-17
-

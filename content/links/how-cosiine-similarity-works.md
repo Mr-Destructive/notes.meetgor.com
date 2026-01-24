@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://tomhazledine.com/cosine-similarity/?ref=dailydev" rel="nofollow ugc noopener">How Cosiine Similarity Works</a><span>: This is a good read for understanding the cosine or vector similarity. This is really important to understand in the context of today’s fast-p
+* [How Cosiine Similarity Works](https://tomhazledine.com/cosine-similarity/?ref=dailydev): This is a good read for understanding the cosine or vector similarity. This is really important to understand in the context of today’s fast-paced AI and LLM world, understanding the tokens and the embedding similarity between them. It might not seem oblivious but having an understanding of the essence of the logic behind the things happening around you makes life a lot easier.
 
 **Source:** techstructive-weekly-16
-

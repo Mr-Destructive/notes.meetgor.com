@@ -10,7 +10,14 @@ draft: false
 
 ## Context
 
-user interaction and usage.</span></p><ul><li><p>The site seems to be taken down by Anthropic, maybe it created a backlash.</p></li></ul></li><li><p><a href="https://www.cursor.com/en/changelog" rel="nofollow ugc noopener">Cursor launches 1.0</a><span>: This makes Cursor a big product.</span></p></li></ul><p><span>For more news, follow the </span><a href="https://buttondown.com/hacker-newslett
+- [Cursor launches 1.0](https://www.cursor.com/en/changelog): This makes Cursor a big product.
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-749) (#749 edition), and for software development/coding articles, join [daily.dev](http://daily.dev/).
+
+---
+
+That’s it for this week. A bit of harsh week (Friday deploys ruined everything).
+
+let’s hope for better for the next week.
 
 **Source:** techstructive-weekly-45
-

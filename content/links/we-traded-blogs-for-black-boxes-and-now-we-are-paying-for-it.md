@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-/blockquote></li><li><p>Yes this is the quote I live for and die for, it is the thing that gets me up from the bed each day.</p></li></ul></li><li><p><a href="https://tekhne.dev/internet-resist" rel="nofollow ugc noopener">We traded blogs for black boxes and now we are paying for it</a></p><ul><li><p>We are paying for it, true, cannot stress it enough, we are just letting the humanness get away from humans. AI is doing the heavy lift
+2. [We traded blogs for black boxes and now we are paying for it](https://tekhne.dev/internet-resist)
+    - We are paying for it, true, cannot stress it enough, we are just letting the humanness get away from humans. AI is doing the heavy lifting so that we can do the laundry.
+    - Social media is just slippery slop of AI generated mess
+    - Being authentic and miserable is more important then ever, feeling human like emotions is the need of the hour.
 
 **Source:** techstructive-weekly-62
-

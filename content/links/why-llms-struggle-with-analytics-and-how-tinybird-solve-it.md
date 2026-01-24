@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-he is a database nerd.</p></li><li><p>This was a fun way to demonstrate how to hack into a rust database, sqlite internals.</p></li></ol></li><li><p><a href="https://www.tinybird.co/blog-posts/why-llms-struggle-with-analytics-and-how-we-fixed-that" rel="nofollow ugc noopener">Why LLMs struggle with analytics, and how tinybird solve it</a></p><blockquote><p> It ain’t about generating perfect queries, its about getting insights about data. </p></blockquote><ol><li><p>That’s a great way t
+4. [Why LLMs struggle with analytics, and how tinybird solve it](https://www.tinybird.co/blog-posts/why-llms-struggle-with-analytics-and-how-we-fixed-that)
+  > It ain’t about generating perfect queries, its about getting insights about data.
+    1. That’s a great way to put it.
+    2. With LLM context is really important and especially for critical things like database queries. Passing only the relevant info and cutting the fluff out is the key, but executing SQL queries in itself is that problem for the analyser.
+    3. So LLM is just solving that step but for writing the actual query from the natural language.
 
 **Source:** techstructive-weekly-52
-

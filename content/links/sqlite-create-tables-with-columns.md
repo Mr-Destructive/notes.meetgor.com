@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-increase in likes, followers and sprinkles of curiosity to learn more.</p></li><li><p>Writing about the things we learn is underrated.</p><ol><li><p><a href="https://www.meetgor.com/sqlog/sqlite-create-table-column-types/" rel="nofollow ugc noopener">SQLite: Create Tables with columns</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-create-table-column-constraint/" rel="nofollow ugc noopener">SQLite: Column Constraints<
+increase in likes, followers and sprinkles of curiosity to learn more.Writing about the things we learn is underrated.SQLite: Create Tables with columnsSQLite: Column Constraints<
 
 **Source:** techstructive-weekly-59
-

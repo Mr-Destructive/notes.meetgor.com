@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-f-topic in some discussions, that we have to get on a call, yes that happens. No one is perfect, everyone is figuring out life.</span></p></li><li><p><a href="https://x.com/yacineMTB/status/1905438163323290018" rel="nofollow ugc noopener">Learn to Code</a><span>: Kache’s Twitter (X) article: This just blew my mind. If someone is optimistic and pessimistic about AI, this guy is just one the extreme end o
+* [Learn to Code](https://x.com/yacineMTB/status/1905438163323290018): Kache’s Twitter (X) article: This just blew my mind. If someone is optimistic and pessimistic about AI, this guy is just on the extreme end of optimism. Nothing wrong with it. Every coin has two sides, no one can perfectly balance both. But I was kind of doing that, and that was leading me nowhere, after reading this, I am nudged onto the optimistic side. Like I feel there is too much to be done for me, so little time. It just pumped me up.
 
 **Source:** techstructive-weekly-35
-

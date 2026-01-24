@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/BiFt4vw1-uM" rel="nofollow ugc noopener">Claude made its own language</a></p><ul><li><p>Why? Really? It goes to show that people are ready to waste money for no reasons. And AI is far far from replacing developers.</p></li>
+- [Claude made its own language](https://youtu.be/BiFt4vw1-uM)
+    - Why? Really? It goes to show that people are ready to waste money for no reasons. And AI is far far from replacing developers.
+    - Cursed programming. Cursed vibes.
+
+
+## Learnt
 
 **Source:** techstructive-weekly-62
-

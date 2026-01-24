@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-Build projects (keep building)</p></li><li><p>Write to reflect the learnings</p></li><li><p>Learn and build in public</p><p></p></li></ul></li><li><p><a href="https://awsfundamentals.com/blog/pulumi-getting-started" rel="nofollow ugc noopener">Getting started with Pulumi</a></p><ul><li><p>I always wanted to understand Infrastructue and code, but no article helps me understand what it actually is solving, no one has yet sh
+* [Getting started with Pulumi](https://awsfundamentals.com/blog/pulumi-getting-started)
+    
+    * I always wanted to understand Infrastructure and code, but no article helps me understand what it actually solves, no one has yet shown the problem before the solution. I might find and write it myself one day (day one?).
 
 **Source:** techstructive-weekly-40
-

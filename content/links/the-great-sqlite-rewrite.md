@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-e only counterpoint I have is how you learn the things that the larger system does without using each component at its core.</p></li></ol></li><li><p><a href="https://bytes.dev/archives/407" rel="nofollow ugc noopener">The great SQLite rewrite</a></p><ol><li><p>It is a serious thing.</p></li><li><p>People at Turso are seriously building it, it’s not a honey pot, last week I think they rewarded
+4. [The great SQLite rewrite](https://bytes.dev/archives/407)
+    1. It is a serious thing.
+    2. People at Turso are seriously building it, it’s not a honey pot, last week I think they rewarded a thousand or more money to a person who actually found a bug in the Turso Rust version.
 
 **Source:** techstructive-weekly-51
-

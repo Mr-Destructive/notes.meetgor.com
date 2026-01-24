@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-/introducing-4o-image-generation/" rel="nofollow ugc noopener">OpenAI might have just fixed image generation with the new 4o Model</a></p></li><li><p><a href="https://www.anthropic.com/research/tracing-thoughts-language-model" rel="nofollow ugc noopener">Claude shares the research behind the thinking capability of the chat model</a></p></li><li><p><a href="https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/" rel="nofollow ugc noopener">Gemini
+* [Claude shares the research behind the thinking capability of the chat model](https://www.anthropic.com/research/tracing-thoughts-language-model)
 
 **Source:** techstructive-weekly-35
-

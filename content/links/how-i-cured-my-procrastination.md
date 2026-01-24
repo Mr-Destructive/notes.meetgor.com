@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-have been simplified, but such is the complexity of developers’ life, can’t simplify complex things as they are indeed complex.</span></p></li><li><p><a href="https://learnhowtolearn.org/how-i-cured-procrastination/" rel="nofollow ugc noopener">How I cured my procrastination</a><span>: This feels like an epidemic of happiness, the enthusiasm and humility in the author’s words are evident and make you jump out of the procrasti
+* [How I cured my procrastination](https://learnhowtolearn.org/how-i-cured-procrastination/): This feels like an epidemic of happiness, the enthusiasm and humility in the author’s words are evident and make you jump out of the procrastination loop hell. Worth reading.
 
 **Source:** techstructive-weekly-13
-

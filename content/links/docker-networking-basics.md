@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-is just that stack is faster in that case, but the moment you make you point the gun to yourself, you will shoot on the foot. </span></p></li><li><p><a href="https://adventofdocker.com/posts/day-10-docker-networking/" rel="nofollow ugc noopener">Docker Networking Basics</a><span>:</span><br/><span>Learning about docker is never enough, I learned about the -P which will forward all ports from the container to the host mac
+- [Docker Networking Basics](https://adventofdocker.com/posts/day-10-docker-networking/):  
+  Learning about docker is never enough, I learned about the -P which will forward all ports from the container to the host machine at random. That is wired but a good quirk to know, you never know when that might be handy.
 
 **Source:** techstructive-weekly-23
-

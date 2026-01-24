@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-.</p></li><li><p>So, the LLMs are not perfect yet, they might get a few years time down the road, but it looks far from now.</p></li></ul></li><li><p><a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html" rel="nofollow ugc noopener">How long context fail</a><span>s</span></p><ul><li><p>This was an insightful observation, must know things before working with LLMs having a large context window, or even a sh
+2. [How long context fail](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)s
+    - This was an insightful observation, must know things before working with LLMs having a large context window, or even a short for that matter.
+    - The needle in the haystack problem is not solved, and LLMs are very sensitive to getting up in a rabbit hole.
+          - Context Poisoning
+          - Context Distraction
+          - Context Confusion
+          - Context Clash
+    - All of these reasons look the same, but can mean different things in different “CONTEXT”.
 
 **Source:** techstructive-weekly-49
-

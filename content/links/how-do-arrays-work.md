@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-orking a bit wired, the mindset, the systems have kind of outgrown humans to productivity myths and its rotting thier brain.</p></li></ol></li><li><p><a href="https://nan-archive.vercel.app/how-arrays-work" rel="nofollow ugc noopener">How do arrays work?</a></p><ol><li><p>Such a sweet little blog post.</p></li><li><p>It listed the naive array logic and then also gave a better and more possibilities for th
+- Its not just AI or LLMs, but people are just working a bit wired, the mindset, the systems have kind of outgrown humans to productivity myths and its rotting thier brain.
+
+[How do arrays work?](https://nan-archive.vercel.app/how-arrays-work)- Such a sweet little blog post.
 
 **Source:** techstructive-weekly-65
-

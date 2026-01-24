@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><strong><a href="https://openai.com/index/introducing-gpt-5-2/" rel="nofollow ugc noopener">OpenAI Launches GPT-5.2</a></strong><a href="https://openai.com/index/introducing-gpt-5-2/" rel="nofollow ugc noopener"> </a></p><ul><li><p>Everyone says it will be a best model
+- [**OpenAI Launches GPT-5.2**](https://openai.com/index/introducing-gpt-5-2/)
+    - Everyone says it will be a best model for a while, and then silence. It just amalgamates into the slop. Nothing major I can see, 0.01% maybe.
 
 **Source:** techstructive-weekly-72
-

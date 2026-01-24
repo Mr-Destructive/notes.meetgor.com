@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-use it to just be a google search but simple and not ripping out my entire project into a react and python boilerplate mess.</p></li></ul></li><li><p><a href="https://www.bonnycode.com/posts/work-hard-have-fun-go-home/" rel="nofollow ugc noopener">Work Hard, have fun, go home</a></p><ul><li><p>If you have fun you can work sustainably, else no matter how trendy or shinny the technology you would use, you won’t endure it long en
+3. [Work Hard, have fun, go home](https://www.bonnycode.com/posts/work-hard-have-fun-go-home/)
+    - If you have fun you can work sustainably, else no matter how trendy or shinny the technology you would use, you won’t endure it long enough on the verge of burnout and the feeling of unsatisfied will crumble your efforts.
+    - Maintaining balance is key, but flowing with the excitement and energy is also helpful not always but can be done to improve the fun and memorable parts.
 
 **Source:** techstructive-weekly-60
-

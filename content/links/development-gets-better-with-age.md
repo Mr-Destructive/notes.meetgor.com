@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://www.allthingsdistributed.com/2025/10/better-with-age.html" rel="nofollow ugc noopener">Development gets better with age</a></p><ul><li><p>This one was really soothing one.</p><blockquote><p>The older developer isn’t worried about the barrage of new model announcements and
+1. [Development gets better with age](https://www.allthingsdistributed.com/2025/10/better-with-age.html)
+    - This one was really soothing one.
+      > The older developer isn’t worried about the barrage of new model announcements and feature releases that come out every week. He’s seen that before. New tech, same patterns.
+    - And this one
+      > Have an in-depth conversation with your customer, listen, dive deep into their challenges, suggest architectures, migrations, and tools. And sometimes, the solution will be generative AI.
 
 **Source:** techstructive-weekly-63
-

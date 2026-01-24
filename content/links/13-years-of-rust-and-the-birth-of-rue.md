@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-RAM and much VRAM, its no use, you need to have sufficient RAM in order to run a good enough model, VRAM wouldn’t handle it.</p></li></ol></li><li><p><a href="https://steveklabnik.com/writing/thirteen-years-of-rust-and-the-birth-of-rue/?ref=dailydev" rel="nofollow ugc noopener">13 Years of Rust and the birth of Rue</a></p><ol><li><p>I see this a lot! People creating something that they wanted but didn’t had the mental energy for.</p></li><li><p>I see it as draining
+8. [13 Years of Rust and the birth of Rue](https://steveklabnik.com/writing/thirteen-years-of-rust-and-the-birth-of-rue/?ref=dailydev)
+    1. I see this a lot! People creating something that they wanted but didn’t had the mental energy for.
+    2. I see it as draining rather. I can’t watch it write code for me, its a dreading feeling to be in for larger durations.
 
 **Source:** techstructive-weekly-74
-

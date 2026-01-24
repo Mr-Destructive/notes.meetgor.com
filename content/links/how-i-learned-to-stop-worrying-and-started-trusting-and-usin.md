@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-t, the mental model might not allow the freedom and might offer a bit of resistance to adoption and leverage of those tools.</p></li></ul></li><li><p><a href="https://metalbear.com/blog/claude-experience/" rel="nofollow ugc noopener">How I learned to stop worrying and started trusting and using AI Agents</a></p><ul><li><p>Yes, this is true. A year worth time in 2025, we can say, AI Agents or AI-assisted coding has become really powerful and steerable.</p>
+5. [How I learned to stop worrying and started trusting and using AI Agents](https://metalbear.com/blog/claude-experience/)
+    - Yes, this is true. A year worth time in 2025, we can say, AI Agents or AI-assisted coding has become really powerful and steerable.
+    - I also was skeptical on those AI-vibe coding apps. But then came in Cursor and took us by storm. WIndsurf, and what not VS code clones took over.
 
 **Source:** techstructive-weekly-63
-

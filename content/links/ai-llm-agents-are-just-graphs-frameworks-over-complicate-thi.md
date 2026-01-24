@@ -10,7 +10,15 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://zacharyhuang.substack.com/p/llm-agent-internal-as-a-graph-tutorial" rel="nofollow ugc noopener">AI LLM Agents are just graphs, frameworks over-complicate things</a><br/><span>This article shines like gold, it’s quite comprehensive and explains exactly what agents are. The code is precisely 100 lines of code which
+* [AI LLM Agents are just graphs, frameworks over-complicate things](https://zacharyhuang.substack.com/p/llm-agent-internal-as-a-graph-tutorial)
+    * This article shines like gold, it’s quite comprehensive and explains exactly what agents are. The code is precisely 100 lines of code which is surprising to me, was that intentional, or was that a good given luck.
+    * LLM decides for you
+    * The tools are rule-based or just procedural steps to execute
+    * Agents are like graphs, node,s and edges, one pointing to different directions after taking action or deciding what to do next.
+    * Pocket Flow
+    * [LLM Agents are simply Graph — Tutorial For Dummies](https://zacharyhuang.substack.com/p/llm-agent-internal-as-a-graph-tutorial)
+        * Ever wondered how AI agents actually work behind the scenes? This guide breaks down how agent systems are built as simple graphs - explained in the most beginner-friendly way possible…
+        * Read more
+        * 4 days ago · 59 likes · 1 comment · Zachary Huang
 
 **Source:** techstructive-weekly-34
-

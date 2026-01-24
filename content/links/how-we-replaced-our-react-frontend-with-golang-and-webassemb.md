@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-hon and golang scripts, as I have more control and it works for a lot more edge cases then figuring out string parsing on bash.</span></p></li><li><p><a href="https://dagger.io/blog/replaced-react-with-go" rel="nofollow ugc noopener">How we replaced our react frontend with Golang and Webassembly</a><span>: </span></p><p>This is the second thing I am heard about Golang this week, moving from X to Golang in some way or the other. The adoption rate
+- [How we replaced our react frontend with Golang and Webassembly](https://dagger.io/blog/replaced-react-with-go):
+  This is the second thing I am heard about Golang this week, moving from X to Golang in some way or the other. The adoption rate of Golang is high and it makes sense, it is a simple language. Simple to read and write, and the one that scales as well.
 
 **Source:** techstructive-weekly-29
-

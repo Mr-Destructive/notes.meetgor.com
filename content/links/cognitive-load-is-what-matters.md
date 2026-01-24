@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-class="embedded-post-cta">Read more</span></div><div class="embedded-post-meta">a year ago · 5 likes · Prathamesh Sonpatki</div></a></div><ul><li><p><a href="https://minds.md/zakirullin/cognitive" rel="nofollow ugc noopener">Cognitive load is what matters</a><span>:</span></p><p>This is really a nice point, making good look smart is going to cost in longer run, keep it simple and avoid the perfect code tra
+- [Cognitive load is what matters](https://minds.md/zakirullin/cognitive):
+  This is really a nice point, making good look smart is going to cost in longer run, keep it simple and avoid the perfect code trap is what I learned from this post. You might write a 200 IQ 3 lines of code, but someone else the future maintaining the code, might take 200 minutes to understand what the heck is the edge in that, which might make the cognitive load way to much than the actual business logic load.
 
 **Source:** techstructive-weekly-22
-

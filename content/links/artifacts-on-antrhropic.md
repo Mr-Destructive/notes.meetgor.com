@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-these products is truly commendable, they have the best free tiers for doing almost anything related to writing as a developer.</span></p></li><li><p><a href="https://www.anthropic.com/news/artifacts" rel="nofollow ugc noopener">Artifacts on Antrhropic</a><span>: Artifacts can be used to create, view, and iterate on platform-specific work directly within Claude.ai.</span></p></li><li><p>Buildspace is cl
+* [Artifacts on Antrhropic](https://www.anthropic.com/news/artifacts): Artifacts can be used to create, view, and iterate on platform-specific work directly within [Claude.ai](http://Claude.ai).
 
 **Source:** techstructive-weekly-5
-

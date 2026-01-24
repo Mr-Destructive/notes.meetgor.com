@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-als”, that book is about how under-the-hood sql and databases work, for that I need to learn what SQL is in the first place.</p></li></ul></li><li><p><a href="https://www.docker.com/blog/introducing-docker-hardened-images/" rel="nofollow ugc noopener">Docker launches hardened base images</a></p><ul><li><p>DHI are the new thing in docker, they help in avoiding the image bloat.</p></li><li><p>They are not just trimmed-down versions of exist
+7. [Docker launches hardened base images](https://www.docker.com/blog/introducing-docker-hardened-images/)
+    - DHI are the new thing in docker, they help in avoiding the image bloat.
+    - They are not just trimmed-down versions of existing containers, they’re built from the ground up which is really interesting to work with and help optimise the build process as well as deployment constraints.
+
+  > Docker Hardened Images start with a dramatically reduced attack surface, up to 95% smaller, to limit exposure from the outset.
 
 **Source:** techstructive-weekly-48
-

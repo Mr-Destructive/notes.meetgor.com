@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-necting technologies behind them in Golang.</p></li><li><p>This gives a great overview of what and how the APIs are created.</p></li></ul></li><li><p><a href="https://davebarry.substack.com/p/death-by-ai" rel="nofollow ugc noopener">Death by AI</a></p><ul><li><p>Woah! AI Overview mode in Google is terse at certain things. But for programming, I think it works a charm 95% of the times. yes there
+5. [Death by AI](https://davebarry.substack.com/p/death-by-ai)
+    - Woah! AI Overview mode in Google is terse at certain things. But for programming, I think it works a charm 95% of the times. yes there are pretty bad hallucinations too due to reddit and slop debates.
+    - Haven’t thought that it would mistaken a person with other person’s name and call it dead! Hillarious.
 
 **Source:** techstructive-weekly-53
-

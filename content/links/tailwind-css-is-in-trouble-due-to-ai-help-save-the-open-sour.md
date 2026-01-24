@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://github.com/tailwindlabs/tailwindcss.com/pull/2388" rel="nofollow ugc noopener">Tailwind CSS is in trouble due to AI: Help save the open source community thrive for its earnest effort.</a></p></li><li><p><a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" rel="nofo
+7.07-7.07l-1.72 1.71">Tailwind CSS is in trouble due to AI: Help save the open source community thrive for its earnest effort.<a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" rel="nofo
 
 **Source:** techstructive-weekly-76
-

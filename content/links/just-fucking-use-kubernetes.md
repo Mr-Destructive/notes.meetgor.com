@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-ter using Amp, Warp, Gemini CLI to some extent.</p></li><li><p>But this is a bit of avoiding the chores part, which is fine.</p></li></ul></li><li><p><a href="https://waylonwalker.com/just-fucking-use-kubernetes/" rel="nofollow ugc noopener">Just fucking use Kubernetes</a></p><ul><li><p>This article is true and motivating to learn Kubernetes</p></li><li><p>I read an article which was the opposite of this, not in a bad w
+5. [Just fucking use Kubernetes](https://waylonwalker.com/just-fucking-use-kubernetes/)
+    - This article is true and motivating to learn Kubernetes
+    - I read an article which was the opposite of this, not in a bad way, just a way of presenting the idea to keep it simple and avoid the complexity if not needed.
+    - This article, however, is a motivator in a couple of sense, first it says if you think the scale is low, your ambitions are low. What a statement.
+    - And also it’s an under kill if you think Kubernetes is an overkill
+    - Nice AI-generated slop, actually is good.
 
 **Source:** techstructive-weekly-49
-

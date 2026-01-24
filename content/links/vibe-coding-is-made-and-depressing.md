@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-to learn, explore and tinker on stuff. It was liberating. Hence writing the 72nd edition of this. Its fun.</span></p></li></ol></li></ol></li><li><p><a href="https://law.gmnz.xyz/vibe-coding-is-mad-depressing/" rel="nofollow ugc noopener">Vibe Coding is made and depressing</a></p><ol><li><p><span>Sigh, The frustration is quite evident</span><br/><span>> I just feel sad with how AI has bastardized my profession, which I work
+7. [Vibe Coding is made and depressing](https://law.gmnz.xyz/vibe-coding-is-mad-depressing/)
+    1. Sigh, The frustration is quite evident  
+      > I just feel sad with how AI has bastardized my profession, which I worked hard for the last 15 years. There is no best practices anymore, no proper process, no meaningful back and forth
+    2. I can even feel it with 5 years of coding, man has been doing it for 15 years! Humans gets too excited when they can produce code i think.
 
 **Source:** techstructive-weekly-72
-

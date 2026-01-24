@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ebook to a file while I was debugging a few things, and this function came in like a savior in the sea of lots of data.</span></p></li><li><p><strong><a href="https://www.grammarly.com/blog/commonly-confused-words/learned-learnt/" rel="nofollow ugc noopener">Learnt and Learned are both valid achsually</a></strong><br/><span>I use the title of this section as </span><code>LEARNT</code><span> but </span><code>LEARNED</code><span> is fine as well, and Gra
+* [**Learnt and Learned are both valid achsually**](https://www.grammarly.com/blog/commonly-confused-words/learned-learnt/)  
+    I use the title of this section as `LEARNT` but `LEARNED` is fine as well, and Grammarly makes both incorrect, he wants it to be `Learn` it is done, I have learned it this week, I am not learning it now, so please stop yelling at me about that. Then in [their article](https://www.grammarly.com/blog/commonly-confused-words/learned-learnt/), they say both are valid, what a sweet cohesion!
+    
+
+## Tech News
 
 **Source:** techstructive-weekly-20
-

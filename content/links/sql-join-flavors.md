@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-no longer a big deal in AI, they have reduced considerably over the years. It is still a problem but not what it used to be.</p></li></ul></li><li><p><a href="https://antonz.org/sql-join/" rel="nofollow ugc noopener">SQL Join flavors</a></p><ul><li><p>This was a insightful post, it helped me feed my hunger for learning more about SQL.</p></li><li><p>The qualified, natural (Actually un
+3. [SQL Join flavors](https://antonz.org/sql-join/)
+    - This was a insightful post, it helped me feed my hunger for learning more about SQL.
+    - The qualified, natural (Actually unnatural) and cross broad range of joins really helped understand the concepts better.
+    - The interactive examples are really great for those types of complex yet powerful concepts.
 
 **Source:** techstructive-weekly-48
-

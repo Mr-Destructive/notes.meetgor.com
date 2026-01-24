@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/RNDqPoZvdL8" rel="nofollow ugc noopener">Teej Devries on the Wookash Podcast</a></p><ul><li><p>I like Teej Approach, read the f-ing manual. Writing cover letter, I am not sure about the people might get negative impression of AI-w
+- [Teej Devries on the Wookash Podcast](https://youtu.be/RNDqPoZvdL8)
+    - I like Teej Approach, read the f-ing manual. Writing cover letter, I am not sure about the people might get negative impression of AI-written, but I can see the effort put in by the candidate or the desperation of getting the job.
+    - Going full time on streaming is really bold decision and he is really a great person to do just that, a real practical teacher. A true inspiration.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-57
-

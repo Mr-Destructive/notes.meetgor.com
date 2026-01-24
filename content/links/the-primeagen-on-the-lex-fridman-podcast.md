@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://www.youtube.com/watch?v=tNZnLkRBYA8" rel="nofollow ugc noopener">The Primeagen on the Lex Fridman Podcast</a><br/><span>Man, that person is a legend. </span><br/><span>I have only watched 1:30 hours of this, that is a 5-hour video, man!</span></p><ul><li><p>A
+* [The Primeagen on the Lex Fridman Podcast](https://www.youtube.com/watch?v=tNZnLkRBYA8)  
+    Man, that person is a legend.  
+    I have only watched 1:30 hours of this, that is a 5-hour video, man!
+    
+    * Addiction is something that feels like giving you satisfaction, but it never will, that is a great way to put it.
+        
+    * Work Harder, not smarter! This is the new advice (instead of working smarter, not harder) Why? Because, how would you know something is the optimal way to do it, before doing it? Skewed
 
 **Source:** techstructive-weekly-35
-

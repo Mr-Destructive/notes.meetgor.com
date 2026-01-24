@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-points, yes python’s list comprehension is an outlier at it as it needs the last bit first to understand the whole context.</p></li></ul></li><li><p><a href="https://colton.dev/blog/curing-your-ai-10x-engineer-imposter-syndrome/" rel="nofollow ugc noopener">No AI is not making Engineers 10x productive</a></p><ul><li><p>See the copium? Too much bearish on AI now. Suddenly people realise they need to put breaks to the hype and focus on improving the craf
+8. [No AI is not making Engineers 10x productive](https://colton.dev/blog/curing-your-ai-10x-engineer-imposter-syndrome/)
+    - See the copium? Too much bearish on AI now. Suddenly people realise they need to put breaks to the hype and focus on improving the craft before cracks start forming into dents and large holes.
+      > Making all your engineers feel constantly anxious about their performance is *bad for your company*. It will make your engineers not want to work for you. This is a recipe for short term thinking that will encourage engineers to max out bad metrics, like lines of code. Code review will get neglected, tech debt will compound, and in the long term the whole company will be footing the bill of those errors
+    - What a relief, to hear or sorry read it. Every word of this article is healing me. I will write a separate thought on this article.
 
 **Source:** techstructive-weekly-56
-

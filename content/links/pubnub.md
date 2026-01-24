@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><span>Learning about </span><a href="https://www.pubnub.com/guides/event-driven-architecture/" rel="nofollow ugc noopener">PubNub</a><span> in Python (Publisher Subscriber architecture) for Event-driven applications:</span><br/><span>I wanted to fix a task at my work and that requir
+- Learning about [PubNub](https://www.pubnub.com/guides/event-driven-architecture/) in Python (Publisher Subscriber architecture) for Event-driven applications:  
+  I wanted to fix a task at my work and that required me to learn about the specifics of how the application sends the message for certain event and the frontend responds to those events. It was a great little thing to learn by actually solving the bug.
 
 **Source:** techstructive-weekly-22
-

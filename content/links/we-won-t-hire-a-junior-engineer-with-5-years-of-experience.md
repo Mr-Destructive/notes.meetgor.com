@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-it is the reverse of every other revolution. An interesting perspective to think of and be grateful for living in this phase.</p></li></ul><ul><li><p><a href="https://world.hey.com/dhh/why-we-won-t-hire-a-junior-with-five-years-of-experience-0a548994" rel="nofollow ugc noopener">We won’t hire a junior engineer with 5 years of experience</a><br/><span>This is a bit scary like I am new and haven’t contributed significantly to anything. I have the fire, but life gets in the way. I am not a
+- [We won’t hire a junior engineer with 5 years of experience](https://world.hey.com/dhh/why-we-won-t-hire-a-junior-with-five-years-of-experience-0a548994)  
+  This is a bit scary like I am new and haven’t contributed significantly to anything. I have the fire, but life gets in the way. I am not a person who would give excuses. I truly am confused with life lately. The trajectory of the engineer will be seen in the early days so accurately put.
 
 **Source:** techstructive-weekly-37
-

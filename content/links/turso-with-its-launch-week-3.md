@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-ing tool with AI, I would say. Testing tools like selenium or hardcoded replay stuff, but this is the evolution of those tools.</span></p></li><li><p><a href="https://turso.tech/launch-week" rel="nofollow ugc noopener">Turso with its Launch Week 3</a><span>: Embedding support, No Cold starts, 7 SDKs added, Offline writes, this is a banger of a launch week from Turso, taking SQLite to the moon! (It
+* [Turso with its Launch Week 3](https://turso.tech/launch-week): Embedding support, No Cold starts, 7 SDKs added, Offline writes, this is a banger of a launch week from Turso, taking SQLite to the moon! (It actually is used already)
 
 **Source:** techstructive-weekly-13
-

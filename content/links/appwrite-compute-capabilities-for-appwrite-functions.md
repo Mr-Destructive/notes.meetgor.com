@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://appwrite.io/blog/post/introducing-new-compute-capabilities-appwrite-functions" rel="nofollow ugc noopener">Appwrite Compute Capabilities for Appwrite Functions</a><span>: Appwrite keeps pushing the bar for what is called an open source backend as a service.</span></p></li></ul><p></p><p><span>For more news, foll
+- [Appwrite Compute Capabilities for Appwrite Functions](https://appwrite.io/blog/post/introducing-new-compute-capabilities-appwrite-functions): Appwrite keeps pushing the bar for what is called an open source backend as a service.
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-728) and for software development/coding articles, join [daily.dev](http://daily.dev/) .
+
+That’s it from this 24th edition of my weekly learning, hope you enjoyed it, and leave comments on what you think about some of my takes or any feedback.
+
+[REMOVED]
 
 **Source:** techstructive-weekly-24
-

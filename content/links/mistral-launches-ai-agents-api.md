@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-e code part, the thinking part, the editing part of code is so reliable in Claude, however the search part I am not sure of.</p></li></ul></li><li><p><a href="https://mistral.ai/news/agents-api" rel="nofollow ugc noopener">Mistral launches AI Agents API</a></p><ul><li><p>Every company is launching remote agents</p></li><li><p>Jules from Google, Codex from OpenAI</p></li><li><p>Now mistral, they have simi
+- [Mistral launches AI Agents API](https://mistral.ai/news/agents-api)
+    - Every company is launching remote agents
+    - Jules from Google, Codex from OpenAI
+    - Now mistral, they have similar things
+          - Python code environment
+          - GitHub integration
 
 **Source:** techstructive-weekly-44
-

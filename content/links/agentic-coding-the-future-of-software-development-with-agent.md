@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://www.youtube.com/watch?v=nfOVgz_omlU" rel="nofollow ugc noopener">Agentic Coding: The future of software development with agents</a></p><ul><li><p>See, again, Claude's code and agentic tools are getting adorned by experienced developers too. This is the thing that makes me concerne
+- [Agentic Coding: The future of software development with agents](https://www.youtube.com/watch?v=nfOVgz_omlU)
+    - See, again, Claude's code and agentic tools are getting adorned by experienced developers too. This is the thing that makes me concerned about my own opinion and thoughts.
+    - It surely is powerful but it hasn’t clicked for me yet I think.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-49
-

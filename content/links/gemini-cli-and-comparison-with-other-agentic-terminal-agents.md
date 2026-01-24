@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-a" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li></ul><p></p><ul><li><p><a href="https://youtu.be/ftGPty-dQR8?si=rryJ-7UL1K2IkXCZ" rel="nofollow ugc noopener">Gemini CLI and comparison with other Agentic Terminal Agents</a></p><ul><li><p>Gemini CLI is really nice, at least for a free tier. I can use it and understand the LLMs capabilities. It helps junior developers get
+- [Gemini CLI and comparison with other Agentic Terminal Agents](https://youtu.be/ftGPty-dQR8?si=rryJ-7UL1K2IkXCZ)
+    - Gemini CLI is really nice, at least for a free tier. I can use it and understand the LLMs capabilities. It helps junior developers get a taste of the software AI can produce, but these can really get double edged sword. Juniors will only produce AI slop and never learn anything.
+    - But yes, google is trying hard to make developers happy for now.
+  Double click to interact with video
+
+## Learnt
 
 **Source:** techstructive-weekly-48
-

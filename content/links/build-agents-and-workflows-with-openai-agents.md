@@ -10,7 +10,17 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://openai.com/index/introducing-agentkit/" rel="nofollow ugc noopener">Build Agents and workflows with OpenAI Agents</a></p><ul><li><p>How many startups, ideas and products killed. People create products and open ai comes with their own platform ready for it. Except for
+- [Build Agents and workflows with OpenAI Agents](https://openai.com/index/introducing-agentkit/)
+    - How many startups, ideas and products killed. People create products and open ai comes with their own platform ready for it. Except for the API, none of their products get used that way like killing off the thing I think.
+
+It was great week. Looking for a next week which is Diwali weekend. Preparation for the festival of light will be underway. The cleaning of homes, shops, lighting, lights, new beginning, sweets, family and the nostalgia of memories of childhood.
+
+See you next week.
+
+---
+
+Happy Coding :)
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-766) (#766th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
 
 **Source:** techstructive-weekly-63
-

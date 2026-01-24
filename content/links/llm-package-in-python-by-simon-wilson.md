@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-. It worked smoothly, on my 8GB laptop. This would be quite handy in case of network issues, vendor outages and other politics.</span></p></li><li><p><a href="https://llm.datasette.io/en/stable/" rel="nofollow ugc noopener">LLM package in python by Simon Wilson</a><span>: This is neat and handy for experimenting and playing around with sophisticated techniques to solve certain problems or even debugging certain
+* [LLM package in python by Simon Wilson](https://llm.datasette.io/en/stable/): This is neat and handy for experimenting and playing around with sophisticated techniques to solve certain problems or even debugging certain hands on problems.
+    
+
+## Tidbits of Advice/Quotes/Rambling from others
+
+> “College Grads take their work as work, but self taught take it as a hobby, an interesting observation”: [Twitter](https://x.com/wagslane/status/1838791235495989590) Not trying to quote anyone just agreeing on it.
+
+## Tech News
 
 **Source:** techstructive-weekly-9
-

@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-social media has made us brain want more and more, so we need to bring that fun and content (satisfaction) in content back.</p></li></ol></li><li><p><a href="https://www.deepintodev.com/blog/how-react-works-behind-the-scenes?ref=dailydev" rel="nofollow ugc noopener">How React works behind the scenes (under the hood)</a></p><ol><li><p>Wow! What a post, I can happily say, I know something about React now. There are a lot of moving parts. I thought it was just one step
+8. [How React works behind the scenes (under the hood)](https://www.deepintodev.com/blog/how-react-works-behind-the-scenes?ref=dailydev)
+    1. Wow! What a post, I can happily say, I know something about React now. There are a lot of moving parts. I thought it was just one step compilation, but man there are layers of compilation happening in various formats/data layers I think.
+    2. The first one is JSON, the components and the apps are converted into JSON notation and then used to construct the DOM, that is fascinating, based on the reference to different components, it can decide which elements to render or re-render. There is a graph created so that it becomes easier to distinguish and make a hierarchy of the app. The virtual DOM as called is like the graph that helps in re-rendering, but the heavy lifting is done by the Fiber tree (which is a lower level abstraction) that does the actual replacement or rendering technique algorithms.
+    3. The process is so quick that the magic is not even noticable, but yes that is one rabbit hole to dig into.
 
 **Source:** techstructive-weekly-55
-

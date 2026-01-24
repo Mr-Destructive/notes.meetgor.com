@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-le the general use cases so it shouldn’t be an issue. But yes there is a genuine reason for that to not exist in the standard library.</p></li><li><p><a href="https://rwblickhan.org/newsletters/command-line-tools-i-like-2022/" rel="nofollow ugc noopener">Command line tools I Like</a><span>: rwblickhan.org</span><br/><span>This was a nice post on the aggregated tools that  the author uses most of the time and are quite handy. I als
+* [Command line tools I Like](https://rwblickhan.org/newsletters/command-line-tools-i-like-2022/): [rwblickhan.org](http://rwblickhan.org)  
+    This was a nice post on the aggregated tools that the author uses most of the time and are quite handy. I also use most of the tools everyday and would like to create a dev container for the setup of my preferred editor/tools and shells and plugins and all that good stuff.
 
 **Source:** techstructive-weekly-19
-

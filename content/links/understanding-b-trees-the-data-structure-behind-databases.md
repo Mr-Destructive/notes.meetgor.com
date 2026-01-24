@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://www.youtube.com/watch?v=K1a2Bk8NrYQ" rel="nofollow ugc noopener">Understanding B Trees: The data structure behind databases</a></p><ul><li><p>This was super cool, the way it was visualized and taught.</p></li><li><p>I adore Brain Yu, he is a master teacher. I learnt Python and
+- [Understanding B Trees: The data structure behind databases](https://www.youtube.com/watch?v=K1a2Bk8NrYQ)
+    - This was super cool, the way it was visualized and taught.
+    - I adore Brain Yu, he is a master teacher. I learnt Python and Django from him.
+    - B-trees are basically trees with an equal number of leaf nodes. No unbalanced roots. The operations to make the insertion and deletion made it really awesome for understanding.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-49
-

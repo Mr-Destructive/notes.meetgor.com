@@ -10,7 +10,23 @@ draft: false
 
 ## Context
 
-1.5 might fall behind in its speed. Look at Nano banana, its zip zap image, Imagen is a slog. Not sure from the API though.</p></li></ul></li><li><p><a href="https://astral.sh/blog/ty" rel="nofollow ugc noopener">Astral launches ty, a fast Python type checker and LSP</a></p><ul><li><p>They are single handedly taking Python ecosystem to a spin, they are crushing it.</p></li></ul></li></ul><div><hr/></div><p>That’s it f
+* [Astral launches ty, a fast Python type checker and LSP](https://astral.sh/blog/ty)
+    
+    * They are single handedly taking Python ecosystem to a spin, they are crushing it.
+        
+
+---
+
+That's it from this week, pretty much a good week. Things are shifting in software from writing code to testing it. Not sure what awaits for us, the software engineers.
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/775/) (#775th edition), and for software development/coding articles, join [daily.dev](http://daily.dev).
+
+See you next week!
+
+Happy Coding
+
+[Leave a comment](https://www.meetgor.com/newsletter/techstructive-weekly-73/%25%25half_magic_comments_url%25%25)
+
+[Share Techstructive Weekly](https://www.meetgor.com/newsletter/techstructive-weekly-73/%25%25share_pub_url%25%25)
 
 **Source:** techstructive-weekly-73
-

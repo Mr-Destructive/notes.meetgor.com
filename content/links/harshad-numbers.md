@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/dgwevhEykWQ" rel="nofollow ugc noopener">Harshad Numbers</a></p><ul><li><p>This is cool. Harshad, meaning happy numbers, they result in full integers when the divided by the number itself form the sum of its di
+- [Harshad Numbers](https://youtu.be/dgwevhEykWQ)
+    - This is cool. Harshad, meaning happy numbers, they result in full integers when the divided by the number itself form the sum of its digits.
+    - Mathematics is so infinite, this inspires me to write code and think about problems from mathematical perspective. Yes, sometimes, that gets in the way of the actual problem, but on the leisure side, its fun to play with math.
 
 **Source:** techstructive-weekly-62
-

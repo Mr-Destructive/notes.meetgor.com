@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-order to make it work, otherwise ,it will be all deep interfaces with too many implementation trees. That I don’t like.</span></p><p></p></li><li><p><a href="https://cassidoo.co/post/introduce-friction/" rel="nofollow ugc noopener">We should have more friction in our lives</a><span>: Cassidy Williams Blog: I shared this with my own </span><a href="https://dev.meetgor.com/thoughts/friction-is-necessary-in-our-lives-more-the-
+* [We should have more friction in our lives](https://cassidoo.co/post/introduce-friction/): Cassidy Williams Blog: I shared this with my own [thoughts](https://dev.meetgor.com/thoughts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/), and yes, we need to bring back some friction as well fiction (pun intended).
 
 **Source:** techstructive-weekly-35
-

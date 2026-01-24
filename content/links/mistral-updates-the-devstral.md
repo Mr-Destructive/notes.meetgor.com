@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-<span>: Cursor just updated / clarified their pricing for the individual plan and being costing a bit high for unlimited usage.</span></p></li><li><p><a href="https://mistral.ai/news/devstral-2507" rel="nofollow ugc noopener">Mistral updates the Devstral</a><span> (Coding LLM) small and medium variants: This makes the Local Coding model race a bit heated, as Devstral Small stands neck to neck with Gemini
+- [Mistral updates the Devstral](https://mistral.ai/news/devstral-2507) (Coding LLM) small and medium variants: This makes the Local Coding model race a bit heated, as Devstral Small stands neck to neck with Gemini and GPT 4.1 models.
 
 **Source:** techstructive-weekly-50
-

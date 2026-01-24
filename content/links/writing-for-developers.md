@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://rmoff.net/2023/07/19/blog-writing-for-developers/" rel="nofollow ugc noopener">Writing for developers</a><span>:</span><br/><span>This is really a good read, writing brings clarity and clarity is what shapes you to pick up correct directions while develop
+* [Writing for developers](https://rmoff.net/2023/07/19/blog-writing-for-developers/):  
+    This is really a good read, writing brings clarity and clarity is what shapes you to pick up correct directions while developing anything. All the time, I start to write an article, I ran off a tangent on one or the other interesting thing that I had no idea about and assumed I knew it.
 
 **Source:** techstructive-weekly-15
-

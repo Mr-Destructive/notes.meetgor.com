@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-, that failed as in the Appwrtie function environment, or any cloud/serverless function ecosystem there won’t be git installed.</span></p></li><li><p><a href="https://appwrite.io/docs/products/functions/develop" rel="nofollow ugc noopener">Appwrite Functions in Python</a><span>: As I have said, I have been experimenting with the Appwrite function ecosystem throughout the week on the side. I was basically trying to use
+* [Appwrite Functions in Python](https://appwrite.io/docs/products/functions/develop): As I have said, I have been experimenting with the Appwrite function ecosystem throughout the week on the side. I was basically trying to use Python functions for some prototyping ideas. I must say the documentation is really good. I learnt how to parse binary data into a response, a structure for a sample Python function, and set an appwrite json locally for functions.
 
 **Source:** techstructive-weekly-4
-

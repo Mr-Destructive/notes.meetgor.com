@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-ly dive if necessary.</p></li><li><p>Custom networks makes communication clear between containers</p><p>user names, not IPs.</p></li></ul></li><li><p><a href="https://graic.net/p/left-to-right-programming" rel="nofollow ugc noopener">Left to Right Programming</a></p><ul><li><p>If python looks odd, how about SQL? That is left to right but evaluated mostly from the right to left right? mostly I asking loosely he
+7. [Left to Right Programming](https://graic.net/p/left-to-right-programming)
+    - If python looks odd, how about SQL? That is left to right but evaluated mostly from the right to left right? mostly I asking loosely here, though aggregates might be exceptions and other things I am not aware of.
+      > Programs should be valid as they are typed.
+    - Good points, yes python’s list comprehension is an outlier at it as it needs the last bit first to understand the whole context.
 
 **Source:** techstructive-weekly-56
-

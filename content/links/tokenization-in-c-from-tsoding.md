@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/6dCqR9p0yWY" rel="nofollow ugc noopener">Tokenization in C from Tsoding</a></p><ul><li><p>This was another great livestream like tutorial. The depth with which he communicated and came up with the solution is what helped me g
+- [Tokenization in C from Tsoding](https://youtu.be/6dCqR9p0yWY)
+    - This was another great livestream like tutorial. The depth with which he communicated and came up with the solution is what helped me get better understanding of tokenization.
+    - This is an example, why learning from first fundamentals is still cool. The ability to learn and explain with confidence and comfort is remarkable quality for a developer. This is also I am still thinking about doing livestream and being able to develop something from scratch.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-61
-

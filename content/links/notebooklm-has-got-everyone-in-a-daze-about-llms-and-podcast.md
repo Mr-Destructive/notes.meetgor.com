@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-rtain applications, but more important is how to use them effectively and whether to use them or not in your specific problems.</span></p></li><li><p><a href="https://simonwillison.net/2024/Sep/29/notebooklm-audio-overview/" rel="nofollow ugc noopener">NotebookLM has got everyone in a daze about LLMs and podcasts</a><span>: I just dropped my portfolio link and it just spits out some compliments after compliments about my journey as a developer. It actually said ce
+* [NotebookLM has got everyone in a daze about LLMs and podcasts](https://simonwillison.net/2024/Sep/29/notebooklm-audio-overview/): I just dropped my portfolio link and it just spits out some compliments after compliments about my journey as a developer. It actually said certain things that I myself haven’t thought of someone viewing me, a couple of things were rubbish for sure, but it was pretty much factual.
+    
+
+## Wrote
 
 **Source:** techstructive-weekly-10
-

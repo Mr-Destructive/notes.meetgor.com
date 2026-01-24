@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-ut the fine balance between less and more context is critical, and I think it is still being fine tuned to get a sweet spot.</p></li></ul></li><li><p><a href="https://marcobambini.substack.com/p/the-secret-life-of-a-local-first" rel="nofollow ugc noopener">Secret Life of Local First Value</a></p><ul><li><p>This is lovely. So well explained what CRDTs are. It’s like a log of what happened in a  row of a table. Like column-level details of u
+4. [Secret Life of Local First Value](https://marcobambini.substack.com/p/the-secret-life-of-a-local-first)
+    - This is lovely. So well explained what CRDTs are. It’s like a log of what happened in a row of a table. Like column-level details of updation/insertion and deletion. It makes sense now.
+    - The metadata table is the crux of this structure. What would happen if the database itself crashes? That is unlikely, I think. SQLite cannot crash at least locally. Nice thinking here.
 
 **Source:** techstructive-weekly-64
-

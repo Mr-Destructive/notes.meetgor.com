@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-xt, get the result, and decide again, in a loop. Just like that. Agents are just loops over an LLM call (at least in the broader way).</p></li><li><p><a href="https://fly.io/blog/fuckin-robots/" rel="nofollow ugc noopener">Our best customers are now Robots</a></p><blockquote><p>UX > DX > RX</p></blockquote><p>A nice way to put that</p><ul><li><p><span>We first cared about </span><strong>User experience</str
+- [Our best customers are now Robots](https://fly.io/blog/fuckin-robots/)
+  > UX > DX > RX
+  A nice way to put that
+    - We first cared about **User experience** with HTML and JavaScript.
+    - Then **Developer experience** with React and god knows what frameworks
+    - Now, **Robots’ experience** with LLMs in the picture, we have MCP, A2A, and again,n god knows what will drop tomorrow
+
+  Tech is changing fast as hell.
 
 **Source:** techstructive-weekly-38
-

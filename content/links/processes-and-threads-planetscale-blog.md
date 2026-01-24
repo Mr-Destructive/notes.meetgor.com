@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-Tests, what are those? We push -f to prod</p></li><li><p>By the way, here’s the rollback script if the production is doomed.</p></li></ul></li><li><p><a href="https://planetscale.com/blog/processes-and-threads" rel="nofollow ugc noopener">Processes and Threads: Planetscale Blog</a></p><ul><li><p>This was cool actually. The interactive elements really make things so clear. They remove the textual-ness in the blog and add a depth
+4. [Processes and Threads: Planetscale Blog](https://planetscale.com/blog/processes-and-threads)
+    - This was cool actually. The interactive elements really make things so clear. They remove the textual-ness in the blog and add a depth to it.
+    - There is a clear explanation of program, process, ram, fork and low level details that are quintessential to a developer, any f-ing developer.
 
 **Source:** techstructive-weekly-61
-

@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-><p>It now makes sense that how R2 is ideal for storing and frequently accessing large amounts of binary or media like data.</p></li></ul></li><li><p><a href="https://ubuntu.com/blog/how-to-get-a-job-at-canonical" rel="nofollow ugc noopener">How to get a job at Canonical</a></p><ul><li><p>Care, Attention to detail and skills are quite the standard in any big tech company.</p></li><li><p>Interesting and exciting to see Can
+7. [How to get a job at Canonical](https://ubuntu.com/blog/how-to-get-a-job-at-canonical)
+    - Care, Attention to detail and skills are quite the standard in any big tech company.
+    - Interesting and exciting to see Canonical not using AI, at least there is hope.
 
 **Source:** techstructive-weekly-50
-

@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/T9aRN5JkmL8" rel="nofollow ugc noopener">AI Prompt Engineering: Deep dive</a></p><ul><li><p>This is a masterclass in prompt engineering. Must watch</p></li><li><p>Anthropic really cares about the craft and art of LLMs, they rea
+* [AI Prompt Engineering: Deep dive](https://youtu.be/T9aRN5JkmL8)
+    
+    * This is a masterclass in prompt engineering. Must watch
+        
+    * Anthropic really cares about the craft and art of LLMs, they really understand what to think when interfacing with an LLM.
+        
+    * First principle thinking
 
 **Source:** techstructive-weekly-40
-

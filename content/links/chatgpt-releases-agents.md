@@ -10,7 +10,12 @@ draft: false
 
 ## Context
 
-, doesn’t makes sense. At one point it looked they are rivals, even opposite mentality, but somehow they are collaborating now.</span></p></li><li><p><a href="https://openai.com/index/introducing-chatgpt-agent/" rel="nofollow ugc noopener">ChatGPT releases Agents</a><span>: This is like a thing that we all knew was coming but is late on the tables. Need to check it out if that is available for free users or not. I
+- [ChatGPT releases Agents](https://openai.com/index/introducing-chatgpt-agent/): This is like a thing that we all knew was coming but is late on the tables. Need to check it out if that is available for free users or not. If yes, then will be quite a fun thing to do and learn.
+
+---
+
+Didn’t consume much this week, produced a lot of shitty python and probably fixed a tons of bugs, but never got recognition. That’s quite a whirlwind to do, will be taking this weekend a slight self development route to upskill myself for learning SQL. I am finding it really interesting to learn SQL and contribute to SQLC, will continue on that.
+
+[REMOVED]
 
 **Source:** techstructive-weekly-51
-

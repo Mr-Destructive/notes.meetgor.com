@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-></li><li><p>Being authentic and miserable is more important then ever, feeling human like emotions is the need of the hour.</p></li></ul></li><li><p><a href="https://isomorphism.xyz/blog/2025/duolingo/" rel="nofollow ugc noopener">An opinionated critique of Duolingo</a></p><ul><li><p>Duolingo is a great app. But it is just gamification of user attention. I tried learning Japanese, and I can’t understand the language
+3. [An opinionated critique of Duolingo](https://isomorphism.xyz/blog/2025/duolingo/)
+    - Duolingo is a great app. But it is just gamification of user attention. I tried learning Japanese, and I can’t understand the language as a human, as a repeating process it is nice, but no, it doesn’t click
+    - I am using it for learning chess, so far it looks good, its like a textbook way of learning things. Nothing personalised or very sophisticated. But the UX is cool, the interaction and user feedback is smooth and top notch.
+    - It is a engineering marvel, but not on the human-like-learning path. If it can do that, it is a great app.
 
 **Source:** techstructive-weekly-62
-

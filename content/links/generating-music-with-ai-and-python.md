@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-lass="embedded-post-cta">Read more</span></div><div class="embedded-post-meta">a year ago · 9 likes · Alex Pliutau</div></a></div></li><li><p><strong><a href="https://generativeai.pub/generating-music-using-ai-and-python-d47ab834f0d4" rel="nofollow ugc noopener">Generating music with AI and Python</a></strong><span> : I actually went ahead and tried a few words to check that out. It actually creates some sound, though it takes time and is bit off t
+* [**Generating music with AI and Python**](https://generativeai.pub/generating-music-using-ai-and-python-d47ab834f0d4) : I actually went ahead and tried a few words to check that out. It actually creates some sound, though it takes time and is bit off track and I actually don’t know what would be the right words for that music that comes to my mind, so I would be experimenting with it just for fun.
 
 **Source:** techstructive-weekly-9
-

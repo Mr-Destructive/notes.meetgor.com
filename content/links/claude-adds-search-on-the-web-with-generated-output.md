@@ -10,7 +10,14 @@ draft: false
 
 ## Context
 
-videos are a bit risky at voice now. Clearly, voice is now taking over with AI, text > images > voice > ??? This is going big.</span></p></li><li><p><a href="https://www.anthropic.com/news/web-search" rel="nofollow ugc noopener">Claude adds search on the web with generated output</a><span> (only for Pro Users though)</span></p><p>I have no opinion on that since I have not tried it, but it seems like a great feature and must have s
+* [Claude adds search on the web with generated output](https://www.anthropic.com/news/web-search) (only for Pro Users though)
+
+I have no opinion on that since I have not tried it, but it seems like a great feature and must have since all other major LLMs are masters at this, especially Preplexity, Gemini, ChatGPT, etc.
+
+For more interesting articles, check out the [hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-738) for the week edition #338, for even more software development/coding articles, join [daily.dev](https://daily.dev/).
+
+That’s it from this 34th edition of my weekly learning, I hope you enjoyed it, and leave comments on what you think about some of my takes or any feedback.
+
+---
 
 **Source:** techstructive-weekly-34
-

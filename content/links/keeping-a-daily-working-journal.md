@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-HTML and say I coded a full-stack app in Golang, but really? Been there, done that. Doesn’t feel like touching the code again.</span></p></li><li><p><a href="https://blog.isquaredsoftware.com/2020/09/coding-career-advice-daily-work-journal/?ref=dailydev" rel="nofollow ugc noopener">Keeping a daily working journal</a><span>: I love this idea of journalling daily, I have a prototype of an idea that I made a few weeks back that could be fitted into this domain. Basic
+* [Keeping a daily working journal](https://blog.isquaredsoftware.com/2020/09/coding-career-advice-daily-work-journal/?ref=dailydev): I love this idea of journalling daily, I have a prototype of an idea that I made a few weeks back that could be fitted into this domain. Basically an organisation-level blogs for individuals.
 
 **Source:** techstructive-weekly-4
-

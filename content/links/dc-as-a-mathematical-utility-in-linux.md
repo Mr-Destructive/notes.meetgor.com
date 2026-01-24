@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-1"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><span>Using </span><a href="https://en.wikipedia.org/wiki/Dc_(computer_program)" rel="nofollow ugc noopener">dc as a mathematical utility in linux</a></p><ul><li><p>dc or desk calculator, a very inappropriate name.</p></li><li><p>It is a calculator  utility in linux. Its pretty basic and has only 20
+- Using [dc as a mathematical utility in linux](https://en.wikipedia.org/wiki/Dc_(computer_program))
+    - dc or desk calculator, a very inappropriate name.
+    - It is a calculator utility in linux. Its pretty basic and has only 20 odd commands, but it can do any maths operations. Apt very apt for a unix philosophy, do one thing very precisely and correctly.
 
 **Source:** techstructive-weekly-63
-

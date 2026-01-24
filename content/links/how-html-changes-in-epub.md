@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-and then takes care of them.</p></li><li><p>Software is not something you build, its something you grow. Its a slow process.</p></li></ol></li><li><p><a href="https://htmhell.dev/adventcalendar/2025/11/" rel="nofollow ugc noopener">How HTML changes in EPUB</a></p><ol><li><p>This is quite intuitive. I didn’t knew epub is a collection of XHTML documents. Its quite obvious now.</p></li><li><p>Because e-book ha
+11. [How HTML changes in EPUB](https://htmhell.dev/adventcalendar/2025/11/)
+    1. This is quite intuitive. I didn’t knew epub is a collection of XHTML documents. Its quite obvious now.
+    2. Because e-book has to be scaled from each character, so it is xhtml or some variant of it. Zooming, Changing fonts, all happens at all levels or doesn’t look good. So that is the perfect use case for it.
+
+## Created
 
 **Source:** techstructive-weekly-72
-

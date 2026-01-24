@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-r for open source community. There are quirks about the license but its pretty commendable in terms of what they have achieved.</span></p></li><li><p><a href="https://kiro.dev/blog/introducing-kiro/" rel="nofollow ugc noopener">Kiro IDE</a><span>: Amazon out of thin air just blew this up. Its almost like Cursor but with more controlled and flexible using preferences. It almost forces dev
+- [Kiro IDE](https://kiro.dev/blog/introducing-kiro/): Amazon out of thin air just blew this up. Its almost like Cursor but with more controlled and flexible using preferences. It almost forces developers to plan and thoroughly consider the most tedious and boring part (sometimes the most exciting) of the development which is defining the problem and listing the features.
 
 **Source:** techstructive-weekly-51
-

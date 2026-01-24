@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-="embedded-post-cta">Read more</span></div><div class="embedded-post-meta">3 years ago · 13 likes · 1 comment · Janvi Kalra</div></a></div><ul><li><p><a href="https://notrab.dev/blog/lfg" rel="nofollow ugc noopener">Let’s Fing Go:</a><span> </span></p><ul><li><p>This was a reflection and a way for switching and learning Go from Javascript. It is evident that Golang is the almost th
+- [Let’s Fing Go:](https://notrab.dev/blog/lfg)
+    - This was a reflection and a way for switching and learning Go from Javascript. It is evident that Golang is the almost the perfect tool for backend servers and quick simple applications. Not saying its bad for complex applications, but one must be equipped with the right set of tooling and mindset to head into a large scale application, rather than complain about writing bunch of err != nil, skill issues.
+
+### Interesting Things
 
 **Source:** techstructive-weekly-44
-

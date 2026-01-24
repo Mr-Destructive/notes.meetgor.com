@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-/p></li><li><p>The shift in developer-user responsibility is quite unnoticed, and this article highlights that effectively. </p></li></ul></li><li><p><a href="https://boz.com/articles/be-kind" rel="nofollow ugc noopener">Be Kind</a><span> : </span></p><ul><li><p>As a developer, we need to be kind, not just yes, thank you but really understand the person from other end and be humb
+* [Be Kind](https://boz.com/articles/be-kind) :
+    
+    * As a developer, we need to be kind, not just yes, thank you but really understand the person from the other end and be humble about his/her situation and feelings.
+        
+    * That might be too realistic for a developer to do (right? We are nerds, I think), but having that kindness and insight about the person we are interacting with sets us apart as an effective engineer.
 
 **Source:** techstructive-weekly-40
-

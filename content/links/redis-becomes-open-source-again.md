@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-egative or positive at the moment, but it’s kind of revolutionary to see this things. Open AI again leading this revolution.</p></li></ul></li><li><p><a href="https://redis.io/blog/agplv3/" rel="nofollow ugc noopener">Redis becomes open source again</a></p><ul><li><p>Wow! A comeback from the tiny database that holds the internet.</p></li><li><p><span>More than that, the </span><a href="https://redis.
+* [Redis becomes open source again](https://redis.io/blog/agplv3/)
+    
+    * Wow! A comeback from the tiny database that holds the internet.
+        
+    * More than that, the [v8 release](https://redis.io/blog/redis-8-ga/) sounds amazing! deep dive next week
 
 **Source:** techstructive-weekly-40
-

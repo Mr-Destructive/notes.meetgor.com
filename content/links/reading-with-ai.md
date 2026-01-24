@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-nts to write a script that I won’t care about, some code that I won’t care about after a while. That type of code is a vibe.</p></li></ul></li><li><p><a href="https://arnoldkling.substack.com/p/reading-with-ai" rel="nofollow ugc noopener">Reading with AI</a></p><ul><li><p>People are pushing AI in wired direction. By using that for activity like reading, you are defeating the whole point of reading. Non-fi
+11. [Reading with AI](https://arnoldkling.substack.com/p/reading-with-ai)
+    - People are pushing AI in wired direction. By using that for activity like reading, you are defeating the whole point of reading. Non-ficition or ficiton, if you put down the effort of going through word by word, the context, the feel to the LLM, you are doing yourself some deservice.
+
+### Interesting Links
 
 **Source:** techstructive-weekly-58
-

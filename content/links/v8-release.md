@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-s open source again</a></p><ul><li><p>Wow! A comeback from the tiny database that holds the internet.</p></li><li><p><span>More than that, the </span><a href="https://redis.io/blog/redis-8-ga/" rel="nofollow ugc noopener">v8 release</a><span> sounds amazing! deep dive next week</span></p></li></ul></li><li><p><a href="https://blog.cloudflare.com/streamable-http-mcp-servers-python/" r
+* [Redis becomes open source again](https://redis.io/blog/agplv3/)
+    
+    * Wow! A comeback from the tiny database that holds the internet.
+        
+    * More than that, the [v8 release](https://redis.io/blog/redis-8-ga/) sounds amazing! deep dive next week
 
 **Source:** techstructive-weekly-40
-

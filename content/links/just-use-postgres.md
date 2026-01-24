@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div></li></ul></li><li><p><a href="https://youtu.be/IdyK8XB2l6g" rel="nofollow ugc noopener">Just use Postgres</a></p><ul><li><p>Wow! I love this. I want to write a technical book too. It is such a great adventure to be in. But burnout seems to be stronger there.<
+- [Just use Postgres](https://youtu.be/IdyK8XB2l6g)
+    - Wow! I love this. I want to write a technical book too. It is such a great adventure to be in. But burnout seems to be stronger there.
+    - I love Postgres can be used as a message queue, gen ai application, full text search I knew and JSON was obvious.
+    - Getting deep into the tech is important, I need to focus on thing at a time.Double click to interact with video
+
+## Learnt
 
 **Source:** techstructive-weekly-72
-

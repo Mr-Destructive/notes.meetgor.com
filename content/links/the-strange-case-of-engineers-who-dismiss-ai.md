@@ -10,7 +10,19 @@ draft: false
 
 ## Context
 
-AI should scrap data from websites, but scrapping is a thing that doesn’t have a standard, or rather no one would follow it.</p></li></ol></li><li><p><a href="https://terriblesoftware.org/2025/12/19/the-strange-case-of-engineers-who-dismiss-ai/" rel="nofollow ugc noopener">The strange case of engineers who dismiss AI</a></p><ol><li></li></ol></li></ol><blockquote><p>Programming is a task; software engineering is a role</p></blockquote><ol><li><ul><li></li></ul></li></
+5. [The strange case of engineers who dismiss AI](https://terriblesoftware.org/2025/12/19/the-strange-case-of-engineers-who-dismiss-ai/)
+    
+    1. > Programming is a task; software engineering is a role
+        
+    2. > Maybe it feels threatening to their identity, I mean, your expertise is wrapped up in being someone who can write code. Some tool threatens that? Of course you want to dismiss it.
+        
+    3. Wow! What a statement. Just bangers.
+        
+    4. I like the way of relating things, the difference in AI coding tools from 2022 and 2025 are like Internet Explorer 11 and Chrome. It really is, they are also getting faster and cheaper (maybe not but still).
+        
+    5. I think I bet on it, use it to ship more.
+        
+
+## Wrote
 
 **Source:** techstructive-weekly-73
-

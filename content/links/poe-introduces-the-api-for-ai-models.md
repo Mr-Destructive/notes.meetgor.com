@@ -10,7 +10,19 @@ draft: false
 
 ## Context
 
-ed quite a few variations, 235B for thinking and instruct</p></li><li><p>Also 480 and 30 Billion variant for the Coder model</p></li></ul></li><li><p><a href="https://poe.com/blog/introducing-the-poe-api" rel="nofollow ugc noopener">POE introduces the API for AI Models</a></p><ul><li><p>I have used POE in the past, and this looks like a great addition to test out a few SOTA models for free with some limitations via the
+- [POE introduces the API for AI Models](https://poe.com/blog/introducing-the-poe-api)
+    - I have used POE in the past, and this looks like a great addition to test out a few SOTA models for free with some limitations via the API.
+
+---
+
+Phew! a lot of open source models are cooking! Everything is intuition and curiosity, and AI is still a thing to wrap our heads around, but the fundamentals are the same.
+
+See you in the next one!
+
+Happy Coding :)
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-756) (#756th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
+
+[REMOVED]
 
 **Source:** techstructive-weekly-53
-

@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><ul><li><p><a href="https://www.youtube.com/watch?v=F1CQVXA5gf0" rel="nofollow ugc noopener">Configure Neovim’s options</a><br/><span>This was another gem by Teej Devries for setting language/file type-specific configurations or options in Neovim.</span></p></li></ul><div
+* [Configure Neovim’s options](https://www.youtube.com/watch?v=F1CQVXA5gf0)  
+    This was another gem by Teej Devries for setting language/file type-specific configurations or options in Neovim.
 
 **Source:** techstructive-weekly-19
-

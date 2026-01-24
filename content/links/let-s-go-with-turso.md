@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-Golang Project</a><span>:  </span><br/><span>Created a video after 3 weeks, but felt good after creating this. This is the fourth video in the </span><a href="https://youtube.com/playlist?list=PLMVgNvnU9WlE6H-Vk2gXq96bAkyNWXkNI&amp;si=hiHaL1rI7Lv4Wmhf" rel="nofollow ugc noopener">Let’s Go with Turso</a><span> Series.</span></p><div id="youtube2-mv1vCqUy_5o" data-attrs="{&quot;videoId&quot;:&quot;mv1vCqUy_5o&quot;,&quot;startTime&quot;:null,&quot;endT
+* Video: [Using SQLC with LibSQL Database in a Golang Project](https://www.youtube.com/watch?v=mv1vCqUy_5o):  
+    Created a video after 3 weeks, but felt good after creating this. This is the fourth video in the [Let’s Go with Turso](https://youtube.com/playlist?list=PLMVgNvnU9WlE6H-Vk2gXq96bAkyNWXkNI&si=hiHaL1rI7Lv4Wmhf) Series.
 
 **Source:** techstructive-weekly-14
-

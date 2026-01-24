@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-s added, Offline writes, this is a banger of a launch week from Turso, taking SQLite to the moon! (It actually is used already)</span></p></li><li><p><a href="https://turbot.com/blog/2024/10/launch-week-6-wrap" rel="nofollow ugc noopener">Turbot with its Launch Week 6</a><span>: A great launch week for TUrbot with the v1.0 release for all flagship products like steampipe, flowpipe, and powerpipe.</span></p></li><li><p>
+* [Turbot with its Launch Week 6](https://turbot.com/blog/2024/10/launch-week-6-wrap): A great launch week for TUrbot with the v1.0 release for all flagship products like steampipe, flowpipe, and powerpipe.
 
 **Source:** techstructive-weekly-13
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-href="https://www.meetgor.com/sqlog/sqlite-create-table-column-constraint/" rel="nofollow ugc noopener">SQLite: Column Constraints</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-not-null-column-constraint/" rel="nofollow ugc noopener">SQLite: NOT NULL Constraint</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-unique-column-constraint/" rel="nofollow ugc noopener">SQLite: UNIQUE Column Constraint<
+href="https://www.meetgor.com/sqlog/sqlite-create-table-column-constraint/" rel="nofollow ugc noopener">SQLite: Column ConstraintsSQLite: NOT NULL ConstraintSQLite: UNIQUE Column Constraint<
 
 **Source:** techstructive-weekly-59
-

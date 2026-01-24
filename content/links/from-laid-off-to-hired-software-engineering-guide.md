@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-quired to understand the indexing. The last part was a bit heavy, but overall a good and in-depth article on learning indexing.</span></p></li><li><p><a href="https://newsletter.eng-leadership.com/p/from-laid-off-to-hired-a-software" rel="nofollow ugc noopener">From laid off to hired: Software engineering guide</a><br/><span>This is a good motivational post on getting hired in the era of 2024, this is a new kind of world where you are not only hired based on wha
+* [From laid off to hired: Software engineering guide](https://newsletter.eng-leadership.com/p/from-laid-off-to-hired-a-software)  
+    This is a good motivational post on getting hired in the era of 2024, this is a new kind of world where you are not only hired based on what you say, but also what your impact says, your brand, your online presence, and actual skills.
 
 **Source:** techstructive-weekly-18
-

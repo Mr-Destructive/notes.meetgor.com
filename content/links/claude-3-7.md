@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
->: Ah! another week another model, another brag on 23% improvement while others are already 50% through. Open AI its game over.</span></p></li><li><p><a href="https://www.anthropic.com/news/claude-3-7-sonnet" rel="nofollow ugc noopener">Claude 3.7</a><span>: Antrophic is leading now. These are massive gains in coding models. The AI Race is wild. The speed at which we are moving, we’ll see AGI next
+- [Claude 3.7](https://www.anthropic.com/news/claude-3-7-sonnet): Antrophic is leading now. These are massive gains in coding models. The AI Race is wild. The speed at which we are moving, we’ll see AGI next week.
+
+---
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-735) and for software development/coding articles, join [daily.dev](http://daily.dev/).
 
 **Source:** techstructive-weekly-31
-

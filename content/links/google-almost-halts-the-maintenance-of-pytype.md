@@ -10,7 +10,14 @@ draft: false
 
 ## Context
 
->Notion Releases Offline page support</p></li><li><p>xAI secretly drops Sonic Models directly into Agentic IDEs as their Coding Models</p></li><li><p><a href="https://github.com/google/pytype" rel="nofollow ugc noopener">Google almost halts the maintenance of Pytype</a><span>: Another project in the Google's Graveyard.</span></p></li></ul><div><hr/></div><p>Happy Coding :)</p><p><span>For more news, follow the </span
+- [Google almost halts the maintenance of Pytype](https://github.com/google/pytype): Another project in the Google's Graveyard.
+
+---
+
+Happy Coding :)
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-759) (#759th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
+
+[REMOVED]
 
 **Source:** techstructive-weekly-56
-

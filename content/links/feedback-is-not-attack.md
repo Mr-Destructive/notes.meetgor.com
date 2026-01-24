@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-e gnarly bugs.</p></li><li><p>Someone said it, LLMs are thinking too fast, so we should think slow, what a perfect sentence.</p></li></ol></li><li><p><a href="https://ashley.dev/posts/feedback-is-not-an-attack/" rel="nofollow ugc noopener">Feedback is not attack</a><span>: Feedback is quite a huge subject and can affect one’s relation in positive or negative way. Its not just about giving feedback, its also about
+5. [Feedback is not attack](https://ashley.dev/posts/feedback-is-not-an-attack/): Feedback is quite a huge subject and can affect one’s relation in positive or negative way. Its not just about giving feedback, its also about empathy and being able to receive and accept the feedback well.
 
 **Source:** techstructive-weekly-47
-

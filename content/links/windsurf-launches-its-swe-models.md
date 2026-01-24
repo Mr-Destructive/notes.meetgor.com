@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://windsurf.com/blog/windsurf-wave-9-swe-1" rel="nofollow ugc noopener">Windsurf launches its SWE models</a></p><ul><li><p>Looks a bit scary, but like every model we have seen, it might not be that great. But if that is, developers are on the verge of replac
+- [Windsurf launches its SWE models](https://windsurf.com/blog/windsurf-wave-9-swe-1)
+    - Looks a bit scary, but like every model we have seen, it might not be that great. But if that is, developers are on the verge of replacement at least in some percentage. But the start of AI era is here. I don’t like where this is going.
 
 **Source:** techstructive-weekly-42
-

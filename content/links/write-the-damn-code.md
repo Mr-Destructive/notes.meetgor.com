@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-way, would like to dig a little deeper here and learn more about the maths here. It hasn’t clicked all the bells for me yet.</p></li></ul></li><li><p><a href="https://antonz.org/write-code/" rel="nofollow ugc noopener">Write the damn code</a></p><ul><li><p>I am just 101% on this. I want myself to start the code, the dopamine hit, the shit show. But AI is there to help, don’t use it as a on
+5. [Write the damn code](https://antonz.org/write-code/)
+    - I am just 101% on this. I want myself to start the code, the dopamine hit, the shit show. But AI is there to help, don’t use it as a one-shot thing to create a software wand, it is a great peer, a great co-pilot, you still need to know what you are doing.
+    - Vibe coding is basically delaying the shooting yourself on the foot problem.
+    - Get involved and get into the zone.
 
 **Source:** techstructive-weekly-62
-

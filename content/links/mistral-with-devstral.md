@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-<p>Quite solid in coding task, I just tried giving it a golang file and it corrected all the errors and weird quirks it had.</p></li></ul></li><li><p><a href="https://mistral.ai/news/devstral" rel="nofollow ugc noopener">Mistral with Devstral</a></p><ul><li><p>This is a 14 GB, 23 Billion Parameter model for coding task</p></li><li><p>Not sure about performance but it requires 32 GB Ram to run,
+- [Mistral with Devstral](https://mistral.ai/news/devstral)
+    - This is a 14 GB, 23 Billion Parameter model for coding task
+    - Not sure about performance but it requires 32 GB Ram to run, so I am out of uck on that.
+    - Waiting for a slight lightweight model. Qwen is a great model in that sense.
 
 **Source:** techstructive-weekly-43
-

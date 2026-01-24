@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-to 24 hours, it will respond late obliviously, essentially it will wait for less peak hours and traffic time to respond to the request.</p><ul><li><p><a href="https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken" rel="nofollow ugc noopener">Using tiktoken to count the number of Tokens</a></p><p>I learned this to calculate the number of tokens in a particular set of requirements, which is basically some sort of cost analysis.</p><p></p>
+- [Using tiktoken to count the number of Tokens](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken)
+  I learned this to calculate the number of tokens in a particular set of requirements, which is basically some sort of cost analysis.
+
+## Tech News
 
 **Source:** techstructive-weekly-21
-

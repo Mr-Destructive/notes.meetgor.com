@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-/p><ul><li><p>Meta AI API client</p></li><li><p>Tools like read/list/edit files</p></li><li><p><span>Used the blog from ampcode (Sourcegraph): </span><a href="https://ampcode.com/how-to-build-an-agent" rel="nofollow ugc noopener">How to build Agents</a></p></li><li><p>Livestreamed it</p></li></ul><div id="youtube2-2JYqHn3oqds" data-attrs="{&quot;videoId&quot;:&quot;2JYqHn3oqds&quot;,&quot;startTime&q
+/p>Meta AI API clientTools like read/list/edit filesUsed the blog from ampcode (Sourcegraph): How to build AgentsLivestreamed it<div id="youtube2-2JYqHn3oqds" data-attrs="{&quot;videoId&quot;:&quot;2JYqHn3oqds&quot;,&quot;startTime&q
 
 **Source:** techstructive-weekly-45
-

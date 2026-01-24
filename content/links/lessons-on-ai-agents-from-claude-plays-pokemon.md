@@ -10,7 +10,20 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/CXhYDOvgpuU" rel="nofollow ugc noopener">Lessons on AI Agents from Claude plays Pokemon</a></p><ul><li><p>Wow, agents are already playing games, not exactly but quite fair I would say. Anthropic is really a lab, like they are researching LLM
+* [Lessons on AI Agents from Claude playing Pokémon](https://youtu.be/CXhYDOvgpuU)
+    
+    * Wow, agents are already playing games, not exactly, but quite fair, I would say. Anthropic is really a lab, like they are researching LLM behaviors through and through; they are technical scientists.
+        
+    * Claude plays Pokémon Red:
+        
+        * Send a screenshot of the current state
+            
+        * Describe the game mechanics
+            
+        * Ask for the action
+            
+        * Iterate
+            
+    * It’s quite a fascinating experiment. Maybe we can try with different types of games with LLMs. They tried a Pokémon-like game, because that is a very user-paced game, not a very rapid pace, or live-like games. Very smooth transitions and turn based game.
 
 **Source:** techstructive-weekly-40
-

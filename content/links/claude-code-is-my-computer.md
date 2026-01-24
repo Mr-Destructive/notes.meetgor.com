@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-and images aren’t enough for these kinds of operations like robotics, where moments are essential for learning and iteration</p></li></ul></li><li><p><a href="https://steipete.me/posts/2025/claude-code-is-my-computer" rel="nofollow ugc noopener">Claude Code is my Computer</a></p><ul><li><p>I see this with many developers, not just newbies or just soydevs, but also veteran and knowledgeable developers, too. They seem to hav
+4. [Claude Code is my Computer](https://steipete.me/posts/2025/claude-code-is-my-computer)
+    - I see this with many developers, not just newbies or just soydevs, but also veteran and knowledgeable developers, too. They seem to have a liking towards Claude code.
+    - I know the feeling I think after using Amp, Warp, Gemini CLI to some extent.
+    - But this is a bit of avoiding the chores part, which is fine.
 
 **Source:** techstructive-weekly-49
-

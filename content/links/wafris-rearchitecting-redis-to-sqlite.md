@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-, you have to show your skills and struggles in public. This is to a point article showing practical experience in his journey.</span></p></li><li><p><a href="https://wafris.org/blog/rearchitecting-for-sqlite" rel="nofollow ugc noopener">Wafris: Rearchitecting Redis to SQLite</a><br/><span>I watched a video on the Database School where a SaaS (Firewall for Web applications) provider moved from Redis to Sqlite. This is such a n
+* [Wafris: Rearchitecting Redis to SQLite](https://wafris.org/blog/rearchitecting-for-sqlite)  
+    I watched a video on the Database School where a SaaS (Firewall for Web applications) provider moved from Redis to Sqlite. This is such a nice technical post, there are so many things to dive into and how SQLite is the database that just works and not just works but also shines.
 
 **Source:** techstructive-weekly-18
-

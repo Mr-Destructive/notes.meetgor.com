@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-introducing-our-next-generation-audio-models/" rel="nofollow ugc noopener">Open AI releases new Audio Text to Speech API playground</a><span> →</span><a href="http://openai.fm/" rel="nofollow ugc noopener"> openai.fm</a><br/><span>This looks good, really good, podcasts, videos are a bit risky at voice now. Clearly, voice is now taking over with AI, text > images > voi
+* [Open AI releases new Audio Text to Speech API playground](https://openai.com/index/introducing-our-next-generation-audio-models/) → [openai.fm](openai.fm)
+    * This looks good, really good, podcasts, videos are a bit risky at voice now. Clearly, voice is taking over with AI, text > images > voice > ??? This is going big.
 
 **Source:** techstructive-weekly-34
-

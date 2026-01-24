@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-excuses. I truly am confused with life lately. The trajectory of the engineer will be seen in the early days so accurately put.</span></p></li><li><p><a href="https://world.hey.com/dhh/universal-basic-dead-end-8b7178b9" rel="nofollow ugc noopener">Universal basic dead-end</a><br/><span>We are in the AI revolution right now, just like how we had the computer revolution. People thought, everyone would lose their jobs, but ar
+- [Universal basic dead-end](https://world.hey.com/dhh/universal-basic-dead-end-8b7178b9)  
+  We are in the AI revolution right now, just like how we had the computer revolution. People thought, everyone would lose their jobs, but are we out of jobs? In fact, there are more jobs than ever. Right now, yes the market is bad, and the jobs are fewer, but does that mean AI will replace humans? If yes, you are in the wrong world.
 
 **Source:** techstructive-weekly-37
-

@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-o OpenAI it seems, I am not saying they have not worked hard, just that it could have gone worse, if ChatGPT didn’t pick up.</p></li></ol></li><li><p><a href="https://ergaster.org/posts/2025/07/09-kubernetes-black-friday/" rel="nofollow ugc noopener">Kubernetes is not just for Black Fridays</a></p><ol><li><p>I mean this is correct, I don’t want to deny this. Having a dependable system that scales is a good thing, instead of hacking a script
+3. [Kubernetes is not just for Black Fridays](https://ergaster.org/posts/2025/07/09-kubernetes-black-friday/)
+    1. I mean this is correct, I don’t want to deny this. Having a dependable system that scales is a good thing, instead of hacking a script or a pipeline for deployment or CI, creating a heavy yet robust system is worth it.
+    2. However, the only counterpoint I have is how you learn the things that the larger system does without using each component at its core.
 
 **Source:** techstructive-weekly-51
-

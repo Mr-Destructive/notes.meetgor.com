@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-hat's how the blog gets populated, and adding different things to the garden is what is addictive and feels like a gardener.</p></li></ul></li><li><p><a href="https://thehistoryoftheweb.com/do-blogs-need-to-be-so-lonely/" rel="nofollow ugc noopener">Do blogs need to be so lonely</a></p><ul><li><p>Collaborative blogging, I think hashnode tried to do it with community blogs and co-authoring. I like it but I feel that it's quite rar
+12. [Do blogs need to be so lonely](https://thehistoryoftheweb.com/do-blogs-need-to-be-so-lonely/)
+    - Collaborative blogging, I think hashnode tried to do it with community blogs and co-authoring. I like it but I feel that it's quite rare to collaborate on shared interesting topics, a podcast or a video interview might be a better fit to show the communication. Blogs don't really fit that quite well in my opinion, but yes distinct parts of the blog could be collaborated.
 
 **Source:** techstructive-weekly-56
-

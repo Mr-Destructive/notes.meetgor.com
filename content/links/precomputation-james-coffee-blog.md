@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-to understand what the heck is the edge in that, which might make the cognitive load way to much than the actual business logic load.</p></li><li><p><a href="https://jamesg.blog/2024/11/01/precomputation/" rel="nofollow ugc noopener">Precomputation - James’ Coffee Blog</a></p><p>This is also an interesting observation made by the author, SSGs, Wikipedia, rely on this reverse index, i.e. mapping sites (HTML) to URLs that
+- [Precomputation - James’ Coffee Blog](https://jamesg.blog/2024/11/01/precomputation/)
+  This is also an interesting observation made by the author, SSGs, Wikipedia, rely on this reverse index, i.e. mapping sites (HTML) to URLs that improve the response speed and load on the server, but it is not always a good idea to do that, there are uses of this in its own territory.
 
 **Source:** techstructive-weekly-22
-

@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-I am not good at frontend, i let ai do it, i do what i am good at, writing backend. Really? need to see it carefully again.</p></li></ol></li><li><p><a href="https://www.pearprogramming.blog/programming/opinions/2025/11/11/why-rails-just-stayed-with-me/" rel="nofollow ugc noopener">Growing Software</a></p><ol><li><p>What a great analogy. Software is not architect a building but its growing a garden. You don’t have a layout already built, some parts
+10. [Growing Software](https://www.pearprogramming.blog/programming/opinions/2025/11/11/why-rails-just-stayed-with-me/)
+    1. What a great analogy. Software is not architect a building but its growing a garden. You don’t have a layout already built, some parts are clear not all. Software is ever changing. You need to build something, observe and change constantly just like a gardener. Gardener doesn’t plant a bunch of plants and forgets, but rather it nurtures them, observes and then takes care of them.
+    2. Software is not something you build, its something you grow. Its a slow process.
 
 **Source:** techstructive-weekly-72
-

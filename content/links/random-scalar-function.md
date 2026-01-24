@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-, unistr and unistr_quote  scalar functions, the read dot command, and specific things about the version upgrades. </p></li></ul></li></ul><ol><li><p><a href="https://www.meetgor.com/logsql/sqlite-scalar-function-random/" rel="nofollow ugc noopener">Random Scalar Function</a></p></li><li><p><a href="https://www.meetgor.com/logsql/sqlite-randomly-order-rows/" rel="nofollow ugc noopener">Randomly order rows</a></p></li><li><
+, unistr and unistr_quote  scalar functions, the read dot command, and specific things about the version upgrades. Random Scalar FunctionRandomly order rows<
 
 **Source:** techstructive-weekly-57
-

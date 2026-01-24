@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-at little thing from fly.io, they have made everything so right, that these AI Agents just fit perfectly in their ecosystem.</p></li></ul></li><li><p><a href="https://www.oneusefulthing.org/p/using-ai-right-now-a-quick-guide" rel="nofollow ugc noopener">Using AI right now: A quick guide</a></p><ul><li><p>Gemini, ChatGPT and Claude these are the most widely adopted LLMs which are quite general purpose. But they also have nuanced quirks an
+2. [Using AI right now: A quick guide](https://www.oneusefulthing.org/p/using-ai-right-now-a-quick-guide)
+    - Gemini, ChatGPT and Claude these are the most widely adopted LLMs which are quite general purpose. But they also have nuanced quirks and preferences for certain tasks.
+    - Deep Research is a big deal and it has helped me learn a new concept every day. I use Grok AI, Gemini AI, Chat GPT and even mistral ai for specific things.
+    - Hallucinations are no longer a big deal in AI, they have reduced considerably over the years. It is still a problem but not what it used to be.
 
 **Source:** techstructive-weekly-48
-

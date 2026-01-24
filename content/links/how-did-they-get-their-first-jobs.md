@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://youtu.be/_CwpzZ8AVio?si=6VdVOSjgznwXiqUM" rel="nofollow ugc noopener">How did they get their first Jobs</a></p><ul><li><p>Teej had some serious advice, having cover letters, showing that you care is so valuable. I have started to do that (oops, I am looking
+- [How did they get their first Jobs](https://youtu.be/_CwpzZ8AVio?si=6VdVOSjgznwXiqUM)
+    - Teej had some serious advice, having cover letters, showing that you care is so valuable. I have started to do that (oops, I am looking for a job actively, trying to get a switch after a year and half at my current company)
+    - Prime had a good take, it just happened to him after he had worked and seriously worked hard enough. He was just doing his best and suddenly luck gave him a chance and he took it with both hands.
+    - The other person, forgot the name. Also had a symphatical journey.
+  Double click to interact with video
 
 **Source:** techstructive-weekly-48
-

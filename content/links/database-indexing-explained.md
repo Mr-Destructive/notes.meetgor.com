@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://computersciencesimplified.substack.com/p/database-indexing-explained" rel="nofollow ugc noopener">Database Indexing Explained</a><span>: from Computer Science Simplified Substack</span><br/><span>This was a great post, explaining the necessary context and fundamentals required t
+* [Database Indexing Explained](https://computersciencesimplified.substack.com/p/database-indexing-explained): from Computer Science Simplified Substack  
+    This was a great post, explaining the necessary context and fundamentals required to understand the indexing. The last part was a bit heavy, but overall a good and in-depth article on learning indexing.
 
 **Source:** techstructive-weekly-18
-

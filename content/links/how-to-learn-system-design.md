@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-eded, if you haven’t gone through the whole feeling, but not always, you need the drive to complete it in a sustainable way.</p></li></ul></li><li><p><a href="https://medium.com/@himanshusingour7/how-i-learned-system-design-d7444d454367" rel="nofollow ugc noopener">How to learn System Design</a></p><ul><li><p>System design, something I can see myself struggling a lot if in a interview. Need to start this approach of creating one my approach i
+8. [How to learn System Design](https://medium.com/@himanshusingour7/how-i-learned-system-design-d7444d454367)
+    - System design, something I can see myself struggling a lot if in a interview. Need to start this approach of creating one my approach in designing existing system.
 
 **Source:** techstructive-weekly-58
-

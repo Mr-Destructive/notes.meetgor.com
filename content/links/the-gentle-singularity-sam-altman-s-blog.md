@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-gods, they need assistance, and when they go berserk, its on the developer to hone on his tools and hack it out of the mess.</p></li></ul></li><li><p><a href="https://blog.samaltman.com/the-gentle-singularity" rel="nofollow ugc noopener">The Gentle Singularity: Sam Altman’s Blog</a></p><ul><li><p>Sam thinks that GPTs are powerful than any human lived on earth, is that really accurate? Maybe, in terms of knowledge, but that’s not
+- [The Gentle Singularity: Sam Altman’s Blog](https://blog.samaltman.com/the-gentle-singularity)
+    - Sam thinks that GPTs are powerful than any human lived on earth, is that really accurate? Maybe, in terms of knowledge, but that’s not truly knowledge. It does have billions of weights that somewhat represent the knowledge, but can it make sense of it? No, not yet. With tools and reasoning, maybe, but not quite without proper instructions.
+    - The other stuff is just sci-fi future prediction. I don’t think that is true, but his vision is a bit daunting if that is slightly true.
+    - He also mentions how many watts are consumed per GPT call, which is hilariously alarming.
 
 **Source:** techstructive-weekly-46
-

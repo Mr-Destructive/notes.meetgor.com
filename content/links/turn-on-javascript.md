@@ -12,21 +12,20 @@ draft: false
 
 text-decoration: underline;
         }
-    </style>
+    
 
-    <div id="nojs-banner">
-        This site requires JavaScript to run correctly. Please <a href="https://enable-javascript.com/" target="_blank">turn on JavaScript</a> or unblock scripts
-    </div>
-</noscript>
+    
+        This site requires JavaScript to run correctly. Please turn on JavaScript or unblock scripts
+    
 
 
-        
 
         
 
         
+
         
-    <script>(function(){function c(){var b=a.contentDocument||a.con
+        
+    (function(){function c(){var b=a.contentDocument||a.con
 
 **Source:** techstructive-weekly-1
-

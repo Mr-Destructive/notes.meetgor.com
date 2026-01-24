@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-s://deno.com/blog/http-imports" rel="nofollow ugc noopener">Article</a></p></li><li><p><span>Pixel by Pixel, could create a vault of articles: </span><a href="https://www.pawlean.com/vault" rel="nofollow ugc noopener">Pauline’s Blog</a></p></li><li><p><span>Row Scanning in Golang with reflect package: </span><a href="https://stackoverflow.com/questions/56525471/how-to-use-rows-scan-o
+* Pixel by Pixel, could create a vault of articles: [Pauline’s Blog](https://www.pawlean.com/vault)
 
 **Source:** techstructive-weekly-1
-

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-mode-dot-command/" rel="nofollow ugc noopener">Output Mode dot command</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-mode-dot-command-separators/" rel="nofollow ugc noopener">Output Mode Separator dot command</a></p></li><li><p><a href="https://www.meetgor.com/sqlog/sqlite-dot-command-header/" rel="nofollow ugc noopener">Header toggle dot command</a></p></li><
+p>Output Mode dot commandOutput Mode Separator dot commandHeader toggle dot command<
 
 **Source:** techstructive-weekly-58
-

@@ -10,7 +10,14 @@ draft: false
 
 ## Context
 
-oks solid and well engineered product, will be trying out this weekend, finger crossed, will get time and will be streaming it.</span></p></li><li><p><a href="https://techcrunch.com/2025/07/25/google-is-testing-a-vibe-coding-app-called-opal/" rel="nofollow ugc noopener">Google is testing an vibe coding app called Opal</a><span>: Another one. We have no shortage of these, Firebase Studio, Lovable, V0, Bolt, and what nots.</span></p></li></ul><p>I’ll leave you here, it’s
+- [Google is testing an vibe coding app called Opal](https://techcrunch.com/2025/07/25/google-is-testing-a-vibe-coding-app-called-opal/): Another one. We have no shortage of these, Firebase Studio, Lovable, V0, Bolt, and what nots.
+
+I’ll leave you here, it’s been a great week atleast on the learning side, should be more fun next week and over the weekend.
+
+---
+
+For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-755) (#755th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
+
+[REMOVED]
 
 **Source:** techstructive-weekly-52
-

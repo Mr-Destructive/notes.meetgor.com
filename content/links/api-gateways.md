@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://youtu.be/7-6F3b14baA" rel="nofollow ugc noopener">API Gateways </a></p><ul><li><p>This was a concise explanation of API Gateways</p></li><li><p>API Gateways are simply a way to route your app to the microservices you
+- [API Gateways](https://youtu.be/7-6F3b14baA)
+    - This was a concise explanation of API Gateways
+    - API Gateways are simply a way to route your app to the microservices you have, and also some gluecode like middleware and rate limiting which might be repeated across most of the microservices.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-44
-

@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-to parse binary data into a response, a structure for a sample Python function, and set an appwrite json locally for functions.</span></p></li><li><p><a href="https://python.useinstructor.com/examples/extracting_tables/" rel="nofollow ugc noopener">Table extraction from Images using GPT-4 Vision and Python</a><span>: This is something I have been researching at my work and found it interesting to read and experiment upon. I am amazed at how beautifully LLMs
+* [Table extraction from Images using GPT-4 Vision and Python](https://python.useinstructor.com/examples/extracting_tables/): This is something I have been researching at my work and found it interesting to read and experiment upon. I am amazed at how beautifully LLMs can parse and get back data.
+    
+
+## Tech News
 
 **Source:** techstructive-weekly-4
-

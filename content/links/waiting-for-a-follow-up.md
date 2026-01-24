@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-><li><p>Being low on confidence and not fake ego are so valuable, being humble has never been rarer and rewarding then ever.</p></li></ul></li><li><p><a href="https://theweeklydbrief.beehiiv.com/p/waiting-on-a-follow-up-here-s-what-i-do-96fc6d7b522603e6" rel="nofollow ugc noopener">Waiting for a Follow-up</a></p><ul><li><p>Man, this week, I am reading and watching stuff, almost as I do them, it was the analogy thing, now I am waiting for a follow-up, it en
+5. [Waiting for a Follow-up](https://theweeklydbrief.beehiiv.com/p/waiting-on-a-follow-up-here-s-what-i-do-96fc6d7b522603e6)
+    - Man, this week, I am reading and watching stuff, almost as I do them, it was the analogy thing, now I am waiting for a follow-up, it ended but still, feeling like I am walking into coincidences right and left this week.
+    - But true, looking outward helps. It creates a sense of motion and drive us from the overthinking and procrastination that would have consumed and stalled us.
 
 **Source:** techstructive-weekly-50
-

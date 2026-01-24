@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-abases that are ignored by developers, or are often mistreated while doing the actual problem-solving even on the higher level.</span></p></li><li><p><a href="https://zarar.dev/good-software-development-habits/?ref=dailydev" rel="nofollow ugc noopener">Good Software Development Habits</a><span>: These are some valuable experiences that will change the way you work as a developer to some level, it might make you a better developer.</spa
+* [Good Software Development Habits](https://zarar.dev/good-software-development-habits/?ref=dailydev): These are some valuable experiences that will change the way you work as a developer to some level, it might make you a better developer.
+    
+
+## Wrote/Created
 
 **Source:** techstructive-weekly-8
-

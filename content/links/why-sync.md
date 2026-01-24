@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-the example clear.</p></li><li><p>But really the explanations in this blog are really sketched out and make a lot of sense.</p></li></ul></li><li><p><a href="https://adamwiggins.com/posts/why-sync/" rel="nofollow ugc noopener">Why Sync?</a></p><ul><li><p>I see a lot of sync things, like sync engines, local database sync, I even myself had this issue on blog sync with database and github
+3. [Why Sync?](https://adamwiggins.com/posts/why-sync/)
+    - I see a lot of sync things, like sync engines, local database sync, I even myself had this issue on blog sync with database and github repo.
+    - My manager hit me, a quick sync? That’s a different sync of course. Sync!
 
 **Source:** techstructive-weekly-58
-

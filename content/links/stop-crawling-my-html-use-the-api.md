@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-es on external factors like datepublished and other in the schema, wired. Even Google doesn’t care about this tag! Pathetic.</p></li></ol></li><li><p><a href="https://shkspr.mobi/blog/2025/12/stop-crawling-my-html-you-dickheads-use-the-api/" rel="nofollow ugc noopener">Stop crawling my html, use the API</a></p><ol><li><p>This is so funny, the API is in front of the user.. No LLM, but its so lazy to hit the API.</p></li><li><p>Maybe we need another protoc
+4. [Stop crawling my html, use the API](https://shkspr.mobi/blog/2025/12/stop-crawling-my-html-you-dickheads-use-the-api/)
+    
+    1. This is so funny, the API is in front of the user.. No LLM, but its so lazy to hit the API.
+        
+    2. Maybe we need another protocol for how AI should scrap data from websites, but scrapping is a thing that doesn't have a standard, or rather no one would follow it.
 
 **Source:** techstructive-weekly-73
-

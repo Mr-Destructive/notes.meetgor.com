@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-e take over its spot, its more of a microservice oriented setup but still it has a lot of potential to compete in the space.</p></li></ul></li><li><p><a href="https://one-tip-a-week.beehiiv.com/p/one-tip-a-week-paste-markdown-and-copy-to-markdown-in-google-docs" rel="nofollow ugc noopener">Copy and Paste Markdown in Google Docs</a></p><ul><li><p>This was a neat trick to learn, especially if you are writing for documentation and personal notes. Also handy if you want to quickly a
+- [Copy and Paste Markdown in Google Docs](https://one-tip-a-week.beehiiv.com/p/one-tip-a-week-paste-markdown-and-copy-to-markdown-in-google-docs)
+    - This was a neat trick to learn, especially if you are writing for documentation and personal notes. Also handy if you want to quickly add something special without fluff in the doc. The keyboard centric approach helps in this markdown style.
+
+## Tech News
 
 **Source:** techstructive-weekly-47
-

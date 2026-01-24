@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-copy(replica) and get pushed to the primary database which will sync the primary and the replica. Really exited to try it out.</span></p></li><li><p><a href="http://picolm.io" rel="nofollow ugc noopener">Pico LM</a><span>: Demystifying how Language models learn. This is really cool, I want to understand how it is trained and what improves or what deteriorates the
+* [Pico LM](https://www.picolm.io/): Demystifying how Language models learn. This is really cool, I want to understand how it is trained and what improves or what deteriorates the accuracy.
 
 **Source:** techstructive-weekly-36
-

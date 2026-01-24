@@ -10,7 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ul><li><p><a href="https://www.meetgor.com/turso-libsql-db-golang/" rel="nofollow ugc noopener">Connecting a remote LibSQL database hosted on Turso in Golang</a><br/><span>This is a write-up for my first-ever YouTube video which after 3 weeks has got around 200 views which is fascinating. Hmm, numbers are wire
+* [Connecting a remote LibSQL database hosted on Turso in Golang](https://www.meetgor.com/turso-libsql-db-golang/)  
+    This is a write-up for my first-ever YouTube video which after 3 weeks has got around 200 views which is fascinating. Hmm, numbers are wired. After creating a video, the process of writing the article seems so smooth and easy as all the hard work is done, it’s just about to flush out the idea into words.
+    
+
+## Created
 
 **Source:** techstructive-weekly-10
-

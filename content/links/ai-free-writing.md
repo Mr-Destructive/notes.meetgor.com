@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-concepts better.</p></li><li><p>The interactive examples are really great for those types of complex yet powerful concepts. </p></li></ul></li><li><p><a href="https://antonz.org/ai-free/" rel="nofollow ugc noopener">AI-free Writing</a></p><ul><li><p>Anton won’t use AI for writing, I am on his side. I write this newsletter and any writing for that matter without GPT or AI. Yes, I use
+4. [AI-free Writing](https://antonz.org/ai-free/)
+    - Anton won’t use AI for writing, I am on his side. I write this newsletter and any writing for that matter without GPT or AI. Yes, I use it as a critique and help me understand how it reads, I read its thoughts and think and leave them. Next time, I be a little considerate about those mistakes.
 
 **Source:** techstructive-weekly-48
-

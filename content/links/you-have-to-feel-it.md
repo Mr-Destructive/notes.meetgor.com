@@ -10,7 +10,8 @@ draft: false
 
 ## Context
 
-heckout to the output branch and go back to the date. Its like a time machine.</p></li><li><p>I love static site generators.</p></li></ul></li><li><p><a href="https://mitchellh.com/writing/feel-it" rel="nofollow ugc noopener">You have to feel it</a></p><ul><li><p>Feel it, Just completing tasks, merging PRs, lists of metrics improved won’t help, if you don’t feel it.</p></li><li><p>Just creating f
+7. [You have to feel it](https://mitchellh.com/writing/feel-it)
+    - Feel it, Just completing tasks, merging PRs, lists of metrics improved won’t help, if you don’t feel it.
+    - Just creating for the completion is fine, sometimes needed, if you haven’t gone through the whole feeling, but not always, you need the drive to complete it in a sustainable way.
 
 **Source:** techstructive-weekly-58
-

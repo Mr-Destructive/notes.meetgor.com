@@ -10,7 +10,13 @@ draft: false
 
 ## Context
 
-1-1.71"></path></svg></button></div></div></h2><p>Some random youtube video I watched at night after work during the week and weekends:</p><ul><li><p><a href="https://youtu.be/vagyIcmIGOQ?si=WTY3YTRFF5RUL8O4" rel="nofollow ugc noopener">DHH on Lex Fridman Podcast</a></p><ul><li><p>So many hot takes and might change my perspective on software engineering</p></li><li><p>Simplify development is important than eleganc
+- [DHH on Lex Fridman Podcast](https://youtu.be/vagyIcmIGOQ?si=WTY3YTRFF5RUL8O4)
+    - So many hot takes and might change my perspective on software engineering
+    - Simplify development is important than elegance, eg. Ruby over Python, SQL over ORMs
+    - Using editor to chisel out code, and not let AI rip it.
+    - Finally someone to speak about the craft of coding, the fun of writing code alone, in the darkness, letting us spare time and let us cook.
+    - Engineering managers are meaningless for startups.
+
+Double click to interact with video
 
 **Source:** techstructive-weekly-52
-

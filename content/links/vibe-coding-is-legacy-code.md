@@ -10,7 +10,7 @@ draft: false
 
 ## Context
 
-isation explained</a></p><ul><li><p>A nice walkthrough of authorisation types, role based, attribute based and access lists.</p></li></ul></li><li><p><a href="https://blog.val.town/vibe-code" rel="nofollow ugc noopener">Vibe Coding is Legacy code</a></p><ul><li><p>This is the realisation I had last week too. I used agent like the code based agents to write a script that I won’t care about, some co
+10. [Vibe Coding is Legacy code](https://blog.val.town/vibe-code)
+    - This is the realisation I had last week too. I used agent like the code based agents to write a script that I won’t care about, some code that I won’t care about after a while. That type of code is a vibe.
 
 **Source:** techstructive-weekly-58
-

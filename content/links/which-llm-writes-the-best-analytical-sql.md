@@ -10,7 +10,11 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://www.tinybird.co/blog-posts/which-llm-writes-the-best-sql" rel="nofollow ugc noopener">Which LLM writes the best analytical SQL</a></p><ul><li><p>This was a great tutorial. It highlighted the point that “SQL is still a skill”. LLMs can generate SQL, but not analytical and efficien
+1. [Which LLM writes the best analytical SQL](https://www.tinybird.co/blog-posts/which-llm-writes-the-best-sql)
+    - This was a great tutorial. It highlighted the point that “SQL is still a skill”. LLMs can generate SQL, but not analytical and efficient queries yet.
+    - The cost is a factor, but right now it seems not worth it.
+    - I thought LLMs were replacing people writing SQL, but here we are still requiring the domain experts. The people who will roll up the sleeve and press CAPs Lock and head to write SQL.
+    - GPT models are decent in a balance of latency with accuracy, then comes Claude with high accuracy but slight slow, Gemini is good, especially the Pro, but takes time, the flash models are bad with faster times.
+    - So, the LLMs are not perfect yet, they might get a few years time down the road, but it looks far from now.
 
 **Source:** techstructive-weekly-49
-

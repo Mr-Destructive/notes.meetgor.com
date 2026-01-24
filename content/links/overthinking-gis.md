@@ -10,7 +10,9 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button></div></div></h2><ol><li><p><a href="https://scottsexton.co/post/overthinking_gis/" rel="nofollow ugc noopener">Overthinking GIS</a></p><ul><li><p>This just triggered some neurons in my brains, some horses running. I got a bit of interest in exploring GIS data. Want to play with it
+1. [Overthinking GIS](https://scottsexton.co/post/overthinking_gis/)
+    - This just triggered some neurons in my brains, some horses running. I got a bit of interest in exploring GIS data. Want to play with it, and find interesting details.
+    - This post highlighted the ways to use GIS data to get the usability of a land, basically which are fertile and usable for farming I think. But the technicality in which it was explained was clicking the right knobs at the right time with the perfect steps and images.
+    - Would be certainly writing a post in this style sometimes soon.
 
 **Source:** techstructive-weekly-53
-
