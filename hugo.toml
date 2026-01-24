@@ -1,0 +1,42 @@
+baseURL = "https://notes-meetgor-com.vercel.app/"
+languageCode = "en-us"
+title = "Notes & Posts"
+theme = "minimal"
+
+[params]
+  description = "Technical notes, articles, links and newsletters"
+  author = "Meet Gor"
+  showBreadcrumbs = true
+  showTableOfContents = true
+
+[params.colorScheme]
+  default = "light"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "Links"
+  url = "/links/"
+  weight = 3
+
+[[menu.main]]
+  name = "Newsletter"
+  url = "/newsletter/"
+  weight = 4
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 5

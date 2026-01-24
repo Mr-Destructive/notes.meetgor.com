@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Notes</title><link>/tags/golang/</link><description>Recent content in Golang on Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 15:32:35 +0530</lastBuildDate><atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Generative AI PaLM2 Golang SDK(Client)</title><link>/posts/palm_go_sdk/</link><pubDate>Thu, 22 Jun 2023 15:00:00 +0000</pubDate><guid>/posts/palm_go_sdk/</guid><description>&lt;p&gt;A Golang Client (Wrapper) for the PaLM2 API.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Hugging Chat Golang SDK(Client)</title><link>/posts/hugging_chat_go_sdk/</link><pubDate>Wed, 17 May 2023 19:00:00 +0000</pubDate><guid>/posts/hugging_chat_go_sdk/</guid><description>&lt;p&gt;A Golang Client (Wrapper) for the Hugging Chat.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>MindsDB Golang SDK(Client)</title><link>/posts/mindsdb-go-sdk/</link><pubDate>Sat, 08 Apr 2023 10:00:00 +0000</pubDate><guid>/posts/mindsdb-go-sdk/</guid><description>&lt;p&gt;A Golang Client (Wrapper) for the MindsDB API.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Lingo</title><link>/posts/lingo/</link><pubDate>Fri, 27 May 2022 17:00:00 +0000</pubDate><guid>/posts/lingo/</guid><description>&lt;p&gt;A simple link-tree clone in Golang. Create links for your website, blog, or social media handles from a single place for others to view.&lt;/p&gt;
-&lt;p&gt;Tech Stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;Tailwind-CSS&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Notes &amp; Posts</title><link>https://notes-meetgor-com.vercel.app/tags/golang/</link><description>Recent content in Golang on Notes &amp; Posts</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://notes-meetgor-com.vercel.app/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Go's Weak Package</title><link>https://notes-meetgor-com.vercel.app/posts/golang-weak-package/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://notes-meetgor-com.vercel.app/posts/golang-weak-package/</guid><description>&lt;p>Go&amp;rsquo;s weak package provides weak references for garbage collection.&lt;/p></description></item></channel></rss>
