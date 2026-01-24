@@ -14,15 +14,16 @@ import (
 )
 
 type Post struct {
-	ID        string
-	Title     string
-	Slug      string
-	Content   string
-	Excerpt   sql.NullString
-	TypeID    string
-	Status    string
-	CreatedAt string
-	Tags      sql.NullString
+	ID          string
+	Title       string
+	Slug        string
+	Content     string
+	Excerpt     sql.NullString
+	TypeID      string
+	Status      string
+	CreatedAt   string
+	PublishedAt sql.NullString
+	Tags        sql.NullString
 }
 
 func main() {
@@ -49,8 +50,8 @@ func main() {
 	}
 	cancel()
 
-	// Query posts
-	rows, err := db.Query("SELECT id, title, slug, content, excerpt, type_id, status, created_at, tags FROM posts WHERE status = 'published'")
+	// Query posts - include published_at and order by latest
+	rows, err := db.Query("SELECT id, title, slug, content, excerpt, type_id, status, created_at, published_at, tags FROM posts WHERE status = 'published' ORDER BY COALESCE(published_at, created_at) DESC")
 	if err != nil {
 		log.Fatalf("Query failed: %v", err)
 	}
@@ -59,7 +60,7 @@ func main() {
 	count := 0
 	for rows.Next() {
 		var post Post
-		if err := rows.Scan(&post.ID, &post.Title, &post.Slug, &post.Content, &post.Excerpt, &post.TypeID, &post.Status, &post.CreatedAt, &post.Tags); err != nil {
+		if err := rows.Scan(&post.ID, &post.Title, &post.Slug, &post.Content, &post.Excerpt, &post.TypeID, &post.Status, &post.CreatedAt, &post.PublishedAt, &post.Tags); err != nil {
 			log.Printf("Scan error: %v", err)
 			continue
 		}
@@ -108,13 +109,16 @@ func main() {
 
 		// Parse and format date properly for Hugo
 		dateStr := post.CreatedAt
-		// ... (keep date parsing logic)
+		if post.PublishedAt.Valid && post.PublishedAt.String != "" {
+			dateStr = post.PublishedAt.String
+		}
+
 		parsedDate, dateErr := time.Parse("2006-01-02 15:04:05", dateStr)
 		if dateErr != nil {
 			parsedDate, dateErr = time.Parse("2006-01-02T15:04:05Z", dateStr)
 			if dateErr != nil {
-				if len(post.CreatedAt) >= 10 {
-					dateStr = post.CreatedAt[:10]
+				if len(dateStr) >= 10 {
+					dateStr = dateStr[:10]
 				}
 			} else {
 				dateStr = parsedDate.Format("2006-01-02T15:04:05Z07:00")
