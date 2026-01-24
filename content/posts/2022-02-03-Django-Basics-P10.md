@@ -1,16 +1,20 @@
 ---
 type: post
-title: "Django Basics: CRUD API"
-subtitle: "Understanding the entire workflow of creating a app in django and making a CRUD API"
-date: 2022-02-03T23:45:00+05:30
-slug: "django-basics-crud-api"
-series: ["Django-Basics"]
-tags: ["frontend", "go", "python", "sql"]
-  - django
-  - python
+title: 'Django Basics: CRUD API'
+subtitle: Understanding the entire workflow of creating a app in django and making
+  a CRUD API
+date: 2022-02-03 23:45:00+05:30
+slug: django-basics-crud-api
+series:
+- Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643910006/blogmedia/yp2nvrkqkxmjzcsu0weu.png
+tags:
+- django
+- frontend
+- go
+- python
+- sql
 ---
-
 ## Introduction
 
 After understanding the admin section and setting up a database, we can finally move on to the CRUD API in Django. We will create a API in pure Django with Model Form, Class Based Views and templates. We will go in two parts in this section, first revising the workflow of the app creation and setup, the next part all about CRUD API. We'll dive into a lot of familiar topics and concepts from previous parts but there are is still a lot to learn beyond the basics. 

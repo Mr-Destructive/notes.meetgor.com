@@ -2,14 +2,13 @@
 date: 2026-01-23
 draft: false
 link: https://susam.net/writing-first-tooling-second.html
+title: Writing first tooling second
 tags:
 - frontend
 - go
 - newsletter
 - python
-title: Writing first tooling second
 ---
-
 # Writing first tooling second
 
 **Link:** https://susam.net/writing-first-tooling-second.html

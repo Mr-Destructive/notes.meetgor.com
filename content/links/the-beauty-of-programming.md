@@ -4,7 +4,6 @@ draft: false
 link: https://www.brynmawr.edu/inside/academic-information/departments-programs/computer-science/beauty-programming
 title: The beauty of Programming
 ---
-
 # The beauty of Programming
 
 **Link:** https://www.brynmawr.edu/inside/academic-information/departments-programs/computer-science/beauty-programming

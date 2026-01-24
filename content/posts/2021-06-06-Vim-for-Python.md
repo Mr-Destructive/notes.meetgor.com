@@ -1,15 +1,16 @@
 ---
 type: post
-title: "Setting up Vim for Python"
-subtitle: "For the python programmers who need speed!"
-date: 2021-06-06T11:35:25+05:30
-slug: "vim-for-python"
-tags: ["neovim", "python", "testing"]
-  - python
-  - vim
+title: Setting up Vim for Python
+subtitle: For the python programmers who need speed!
+date: 2021-06-06 11:35:25+05:30
+slug: vim-for-python
 image_url: https://meetgor-cdn.pages.dev/vim-for-python.webp
+tags:
+- neovim
+- python
+- testing
+- vim
 ---
-
 ## Introduction
 Vim is quite a powerful text editor which can add performance to the already fast typed language Python. Vim can be highly customizable and efficient to use as it has the power of **adding custom plugins and plugins managers, key mappings**, and the most critical weapon of vim - Access to the terminal straight away.
 This is not a full-featured guide of using vim for python, it's just a quick setup for using python on vim blazingly fast!!

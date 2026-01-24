@@ -6,7 +6,6 @@ preview_description: Vibe coding gets the job done, but there's no thrill in the
 preview_image: https://cassidoo.co/og-image/vibe-coding-yawn.png
 title: Vibe Coding is broring
 ---
-
 # Vibe Coding is broring
 
 **Link:** https://cassidoo.co/post/vibe-coding-yawn/

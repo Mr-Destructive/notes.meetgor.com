@@ -4,7 +4,6 @@ draft: false
 link: https://alikhil.dev/posts/the-simple-habit-that-saves-my-evenings/
 title: The simple habit that saves my day
 ---
-
 # The simple habit that saves my day
 
 **Link:** https://alikhil.dev/posts/the-simple-habit-that-saves-my-evenings/

@@ -1,10 +1,10 @@
 ---
-title: "Thoughts: Kubernetes isn’t for you"
+title: 'Thoughts: Kubernetes isn’t for you'
 date: 2026-01-24
 draft: false
-tags: ["devops"]
+tags:
+- devops
 ---
-
 # Thoughts: Kubernetes isn’t for you
 
 **Link:** https://www.meetgor.com/thoughts/kubernetes-isn-t-for-you

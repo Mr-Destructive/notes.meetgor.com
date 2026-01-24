@@ -2,12 +2,11 @@
 date: 2025-09-12
 draft: false
 link: https://youtu.be/MuzF9oQb2rI
-tags:
-- python
 title: Print function in Python
 youtube_id: MuzF9oQb2rI
+tags:
+- python
 ---
-
 # Print function in Python
 
 **Link:** https://youtu.be/MuzF9oQb2rI

@@ -1,17 +1,21 @@
 ---
 type: post
-title: "Django Basics: Admin Section"
-subtitle: "Exploring and Interacting with the Django's built-in Admin Section"
-date: 2022-01-26T22:25:00+05:30
-slug: "django-basics-admin"
-series: ["Django-Basics"]
-tags: ["go", "linux", "python", "sql", "testing"]
-  - django
-  - python
-  - web-development
+title: 'Django Basics: Admin Section'
+subtitle: Exploring and Interacting with the Django's built-in Admin Section
+date: 2022-01-26 22:25:00+05:30
+slug: django-basics-admin
+series:
+- Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643202559/blogmedia/k5oebqxixvyhn8o60qpo.png
+tags:
+- django
+- go
+- linux
+- python
+- sql
+- testing
+- web-development
 ---
-
 ## Introduction
 
 In the previous section, we configured the database in our Django project. We will move ahead and interact with the Admin Section in Django. Django has a built-in Admin Section which we can use to manage our apps and models. We will create a admin account(superuser) and try to render our custom Model in the Admin Interface. We shall further discuss the customization in the Admin section as per our requirements and necessity. 

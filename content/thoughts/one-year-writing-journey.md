@@ -1,9 +1,8 @@
 ---
-title: "One-Year Writing Journey"
+title: One-Year Writing Journey
 date: 2026-01-24
 draft: false
 ---
-
 # One-Year Writing Journey
 
 **Link:** https://eric-sandosham.medium.com/my-one-year-writing-journey-9dc4104676b4

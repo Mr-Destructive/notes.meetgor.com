@@ -1,13 +1,15 @@
 ---
 type: til
-title: "LibSQL: Query a remote Turso database with cURL"
-description: "Querying a libsql database hosted on turso with cURL. Using a remote sqlite-like db with turso api to query data."
+title: 'LibSQL: Query a remote Turso database with cURL'
+description: Querying a libsql database hosted on turso with cURL. Using a remote
+  sqlite-like db with turso api to query data.
 status: published
 slug: libsql-query-remote-db
-tags: ["linux", "sql"]
 date: 2023-11-15 17:30:00
+tags:
+- linux
+- sql
 ---
-
 If you are using a local [libsql](https://turso.tech/libsql) database, it is quite easy to query the database, but for a remote or a database on a hosted cloud platform like [turso](https://turso.tech/), we can use other clients or the api itself to query the data.
 
 We can use the turso cli to get the authentication token for the database and then query the database.

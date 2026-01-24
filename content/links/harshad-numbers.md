@@ -5,7 +5,6 @@ link: https://youtu.be/dgwevhEykWQ
 title: Harshad Numbers
 youtube_id: dgwevhEykWQ
 ---
-
 # Harshad Numbers
 
 **Link:** https://youtu.be/dgwevhEykWQ

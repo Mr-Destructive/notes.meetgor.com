@@ -6,11 +6,10 @@ preview_description: Recently, people have been asking me why I’m pausing Boo 
   on a programming language. I think it would actually be cool to write down how I
   feel.
 preview_image: https://rapha.land/assets/images/banner.jpg
+title: Craft Software that make people feel something
 tags:
 - go
-title: Craft Software that make people feel something
 ---
-
 # Craft Software that make people feel something
 
 **Link:** https://rapha.land/craft-software-that-makes-people-feel-something/

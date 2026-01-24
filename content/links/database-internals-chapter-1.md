@@ -2,12 +2,11 @@
 date: 2026-01-09
 draft: false
 link: https://www.youtube.com/live/HibHalGlIes
-tags:
-- sql
 title: Database Internals:Chapter 1
 youtube_id: live/HibHal
+tags:
+- sql
 ---
-
 # Database Internals:Chapter 1
 
 **Link:** https://www.youtube.com/live/HibHalGlIes

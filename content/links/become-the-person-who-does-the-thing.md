@@ -5,12 +5,11 @@ link: https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thi
 preview_description: 'Bad news: your internal identity dictates everything you do.
   Good news: you can change it'
 preview_image: https://fredrivett.com/api/og?title=Becoming%20the%20person%20who%20does%20the%20thing&date=2025-09-10
+title: Become the person who does the thing
 tags:
 - career
 - sql
-title: Become the person who does the thing
 ---
-
 # Become the person who does the thing
 
 **Link:** https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/

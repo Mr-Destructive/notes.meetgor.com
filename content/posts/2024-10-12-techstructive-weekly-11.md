@@ -1,11 +1,17 @@
 ---
-title: "Techstructive Weekly #11"
+title: 'Techstructive Weekly #11'
 date: 2024-10-12
-type: "newsletter"
-slug: "techstructive-weekly-11"
-tags: ["ai", "career", "frontend", "go", "newsletter", "python", "sql"]
+type: newsletter
+slug: techstructive-weekly-11
+tags:
+- ai
+- career
+- frontend
+- go
+- newsletter
+- python
+- sql
 ---
-
 ## Week #11
 
 This week was good in terms of writing. I started a new endeavor: a blog. It is not technical; it is related to mythology and finding its meaning in the modern world. I kept a consistent writing routine for nine days. Nine posts in nine days looks like a good start for my writing routine. I will try to continue this routine throughout the month.

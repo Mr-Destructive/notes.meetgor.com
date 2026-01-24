@@ -2,13 +2,12 @@
 date: 2025-10-24
 draft: false
 link: https://youtu.be/pTMvh6VzDls?si=GSEmB3KadHuv-TdD
+title: Rust and RAII Memory Management - Computerphile
+youtube_id: pTMvh6VzDls
 tags:
 - rust
 - sql
-title: Rust and RAII Memory Management - Computerphile
-youtube_id: pTMvh6VzDls
 ---
-
 # Rust and RAII Memory Management - Computerphile
 
 **Link:** https://youtu.be/pTMvh6VzDls?si=GSEmB3KadHuv-TdD

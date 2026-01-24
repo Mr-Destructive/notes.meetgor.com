@@ -1,15 +1,18 @@
 ---
 type: post
-title: "What is Machine Learning?"
-subtitle: "Understanding the concept and process of Machine Learning. "
-date: 2021-09-29T15:30:07+05:30
-slug: "ml-intro"
-tags: ["ai", "career", "frontend", "testing"]
-  - hashnode
-  - machine-learning
+title: What is Machine Learning?
+subtitle: 'Understanding the concept and process of Machine Learning. '
+date: 2021-09-29 15:30:07+05:30
+slug: ml-intro
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288219/blogmedia/uh0xyxjnpp1olfcksbza.png
+tags:
+- ai
+- career
+- frontend
+- hashnode
+- machine-learning
+- testing
 ---
-
 ## Introduction
 
 We all hear about terms like `Machine Learning`, `Artificial Intelligence`, and others, but what do they actually mean and why do you need to care about these as a developer. This won't be a perfect guide in terms of experience but surely enough to get anyone through the basics of Machine Learning.

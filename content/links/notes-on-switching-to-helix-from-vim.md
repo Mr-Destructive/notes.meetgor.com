@@ -2,12 +2,11 @@
 date: 2025-10-17
 draft: false
 link: https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/
+title: Notes on switching to Helix from Vim
 tags:
 - neovim
 - python
-title: Notes on switching to Helix from Vim
 ---
-
 # Notes on switching to Helix from Vim
 
 **Link:** https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/

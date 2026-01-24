@@ -8,7 +8,6 @@ preview_description: I saw someone earlier post about how intrusive it felt to r
 preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
 title: Blogs used to be different
 ---
-
 # Blogs used to be different
 
 **Link:** https://jetgirl.art/blogs-used-to-be-very-different/

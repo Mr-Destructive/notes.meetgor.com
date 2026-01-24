@@ -5,7 +5,6 @@ link: https://youtu.be/KJfz9ChQ0A0?si=x_9C3AzEQrk0Fy3p
 title: You’re all wrong
 youtube_id: KJfz9ChQ0A0
 ---
-
 # You’re all wrong
 
 **Link:** https://youtu.be/KJfz9ChQ0A0?si=x_9C3AzEQrk0Fy3p

@@ -1,11 +1,11 @@
 ---
 type: sqlog
 slug: sqlite-create-table-from-select
-title: "SQLite SQL: Create Table with Select"
-date: "2025-09-28"
-tags: ["sql"]
+title: 'SQLite SQL: Create Table with Select'
+date: '2025-09-28'
+tags:
+- sql
 ---
-
 ## Creating table with Select Query
 
 Sometimes you want to create a new table based on data that already exists,maybe you’re archiving old rows, generating a summary, cloning a table, or transforming data into a new structure. Doing this might require you to write a `CREATE TABLE` statement with all column definitions, then running one or more `INSERT INTO` statements to populate it. That’s a lot of work.

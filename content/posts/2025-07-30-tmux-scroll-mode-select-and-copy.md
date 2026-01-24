@@ -1,11 +1,11 @@
 ---
 type: til
-title: "Tmux scroll mode select and copy"
-date: 2025-07-30T00:00:00
-tags: ["neovim"]
-  - tmux
+title: Tmux scroll mode select and copy
+date: 2025-07-30 00:00:00
+tags:
+- neovim
+- tmux
 ---
-
 I have found scrolling in tmux is a bit unconventional. Maybe its just me, but sometimes, the terminal interfaces are different, sometimes they are a bit wired, I use Ghostty right now, so selection without tmux works a charm, but the moment I am in tmux, ahmm, it kind of breaks.
 
 The selection of text doesn't work with the mouse atleast, so I thought, I need a keyboard centric selection and copying mechanism, and dug in this rabit hole. Turns out, tmux is way better in selection then zellij, the multiplexer I had been using due to scroll and selection issues in terminal interfaces.

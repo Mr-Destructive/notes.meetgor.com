@@ -2,12 +2,11 @@
 date: 2025-09-26
 draft: false
 link: https://youtu.be/7bvBVBy_CrM
-tags:
-- frontend
 title: I hate myself more for seeing this, than I hate javascript
 youtube_id: 7bvBVBy_CrM
+tags:
+- frontend
 ---
-
 # I hate myself more for seeing this, than I hate javascript
 
 **Link:** https://youtu.be/7bvBVBy_CrM

@@ -1,14 +1,14 @@
 ---
 type: post
-title: "Golang: Operators"
-date: 2022-05-07T20:33:38
-slug: "golang-operators"
-series: ["100-days-of-golang"]
-tags: ["go"]
-  - go
+title: 'Golang: Operators'
+date: 2022-05-07 20:33:38
+slug: golang-operators
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-013-operators.png
+tags:
+- go
 ---
-
 ## Introduction 
 
 In this 13th part of the series, we will be exploring the fundamentals of operators in Golang. We will be exploring the basics of operators and the various types like Arithmetic, Bitwise, Comparison, Assignment operators in Golang.

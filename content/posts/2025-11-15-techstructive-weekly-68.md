@@ -1,11 +1,19 @@
 ---
-title: "Techstructive Weekly 68"
-type: "newsletter"
-date: 2025-11-15T00:00:00Z
+title: Techstructive Weekly 68
+type: newsletter
+date: 2025-11-15 00:00:00+00:00
 draft: false
-tags: ["ai", "career", "frontend", "go", "newsletter", "python", "rust", "sql", "testing"]
+tags:
+- ai
+- career
+- frontend
+- go
+- newsletter
+- python
+- rust
+- sql
+- testing
 ---
-
 ## Week #68
 It was a great week. A consistent clean week. I wrote around 9k words on my project. I feel good again. I didn’t do much on the weekends as usual. I am slowing down. I did a lot of things at work, experiments, and more experiments on VLLMs and parsing documents. It’s fun times. I think for this weekend, I have plans as this post will cover what my mind is fixated on for the moment, Golang and TUIs, and a pain that is daily buzzing me, cleaning log files to get the actual data. LLMs are good at it, but take a bit of time for such trivial things.
 

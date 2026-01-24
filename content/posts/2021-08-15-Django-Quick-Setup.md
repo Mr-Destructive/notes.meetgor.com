@@ -1,17 +1,18 @@
 ---
 type: post
-title: "Django Quick Setup Script"
-subtitle: "A Quick simple script to set up the Django project."
-date: 2021-08-15T18:50:46+05:30
-slug: "django-setup-script"
-tags: ["linux", "python", "sql"]
-  - django
-  - web-development
-  - python
-  - bash
+title: Django Quick Setup Script
+subtitle: A Quick simple script to set up the Django project.
+date: 2021-08-15 18:50:46+05:30
+slug: django-setup-script
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286698/blogmedia/dyfjizyq2zmdo8fk4ars.png
+tags:
+- bash
+- django
+- linux
+- python
+- sql
+- web-development
 ---
-
 ## Introduction
 
 Once you learn something very neatly and understand it very clearly, it feels like you are wasting time doing things over and over again. Same things in setting up a Django project, you feel like you could save those typing minutes by making a script. 

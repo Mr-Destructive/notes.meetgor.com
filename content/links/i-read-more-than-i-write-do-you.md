@@ -2,12 +2,11 @@
 date: 2025-12-12
 draft: false
 link: https://enombic.com/read-more-than-write
+title: I read more than I write, do you?
 tags:
 - career
 - newsletter
-title: I read more than I write, do you?
 ---
-
 # I read more than I write, do you?
 
 **Link:** https://enombic.com/read-more-than-write

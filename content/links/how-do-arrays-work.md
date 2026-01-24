@@ -7,7 +7,6 @@ preview_description: What goes on under the hood of the most popular data struct
 preview_image: https://nan.fyi/og-image/how-arrays-work.png
 title: How do arrays work?
 ---
-
 # How do arrays work?
 
 **Link:** https://nan-archive.vercel.app/how-arrays-work

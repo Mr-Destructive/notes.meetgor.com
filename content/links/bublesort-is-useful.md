@@ -5,7 +5,6 @@ link: https://youtu.be/qGH8gKdpZMQ
 title: Bublesort is useful
 youtube_id: qGH8gKdpZMQ
 ---
-
 # Bublesort is useful
 
 **Link:** https://youtu.be/qGH8gKdpZMQ

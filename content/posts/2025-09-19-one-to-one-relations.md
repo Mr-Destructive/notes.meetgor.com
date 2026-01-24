@@ -1,11 +1,11 @@
 ---
 type: sqlog
 slug: sqlite-one-to-one-relations
-title: "SQLite SQL: One to One Relations"
-date: "2025-09-19"
-tags: ["sql"]
+title: 'SQLite SQL: One to One Relations'
+date: '2025-09-19'
+tags:
+- sql
 ---
-
 ## One to One Relations
 
 I might missed this basic relationship model as I haven't really found it quite commonly used, but its still used in very specific examples.

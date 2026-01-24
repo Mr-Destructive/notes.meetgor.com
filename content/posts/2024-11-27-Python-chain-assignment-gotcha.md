@@ -1,13 +1,15 @@
 ---
 type: til
-title: "Gotcha with Chained Assignment in Python"
-description: "A lesson learned about Python's chained assignment with mutable objects, where all variables store references to the same object, leading to unexpected behaviour when one is modified."
+title: Gotcha with Chained Assignment in Python
+description: A lesson learned about Python's chained assignment with mutable objects,
+  where all variables store references to the same object, leading to unexpected behaviour
+  when one is modified.
 status: published
 slug: python-chain-assignment-gotcha
-tags: ["python"]
 date: 2024-11-27 22:15:00
+tags:
+- python
 ---
-
 I was writing some Python code and wanted to initialize a few variables to an empty list. Instead of creating separate lists for each variable, I decided to use chained assignments like this:
 
 ```python

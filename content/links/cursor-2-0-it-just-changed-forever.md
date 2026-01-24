@@ -5,7 +5,6 @@ link: https://youtu.be/VgtfpTGJmHQ
 title: 'Cursor 2.0: It just changed forever'
 youtube_id: VgtfpTGJmHQ
 ---
-
 # Cursor 2.0: It just changed forever
 
 **Link:** https://youtu.be/VgtfpTGJmHQ

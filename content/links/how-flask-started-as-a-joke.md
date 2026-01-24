@@ -5,7 +5,6 @@ link: https://youtu.be/GXJwX3tpMe0
 title: How flask started as a joke
 youtube_id: GXJwX3tpMe0
 ---
-
 # How flask started as a joke
 
 **Link:** https://youtu.be/GXJwX3tpMe0

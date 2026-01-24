@@ -2,12 +2,11 @@
 date: 2026-01-09
 draft: false
 link: https://youtu.be/Ge8LoXfJJdA
-tags:
-- ai
 title: The year I stopped writing code
 youtube_id: Ge8LoXfJJdA
+tags:
+- ai
 ---
-
 # The year I stopped writing code
 
 **Link:** https://youtu.be/Ge8LoXfJJdA

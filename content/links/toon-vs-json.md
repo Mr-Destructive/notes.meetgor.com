@@ -5,7 +5,6 @@ link: https://youtu.be/nTMP_rLZOYM
 title: TOON vs JSON
 youtube_id: nTMP_rLZOYM
 ---
-
 # TOON vs JSON
 
 **Link:** https://youtu.be/nTMP_rLZOYM

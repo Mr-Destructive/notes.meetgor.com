@@ -4,7 +4,6 @@ draft: false
 link: https://devlogs.xyz/blog/building-a-lexical-analyzer-from-scratch
 title: Building a lexical analyzer from scratch in C
 ---
-
 # Building a lexical analyzer from scratch in C
 
 **Link:** https://devlogs.xyz/blog/building-a-lexical-analyzer-from-scratch

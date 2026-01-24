@@ -1,14 +1,15 @@
 ---
 type: post
-title: "Golang: Random Numbers"
-date: 2023-05-14T14:30:00
-slug: "golang-random-numbers"
-series: ["100-days-of-golang"]
-tags: ["go", "linux"]
-  - go
+title: 'Golang: Random Numbers'
+date: 2023-05-14 14:30:00
+slug: golang-random-numbers
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-027-random-numbers.png
+tags:
+- go
+- linux
 ---
-
 ## Introduction
 
 In the 27th post of the series, we will be looking into random number generation in golang. We will be exploring how to create a random number, generate random numbers within a range, shuffle slices/arrays, and generate random strings, float, and bytes.

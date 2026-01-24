@@ -2,12 +2,11 @@
 date: 2025-09-19
 draft: false
 link: https://youtu.be/j9wvCrON3XA
-tags:
-- ai
 title: OpenAI dropped another Codex
 youtube_id: j9wvCrON3XA
+tags:
+- ai
 ---
-
 # OpenAI dropped another Codex
 
 **Link:** https://youtu.be/j9wvCrON3XA

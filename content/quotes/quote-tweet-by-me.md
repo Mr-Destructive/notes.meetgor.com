@@ -1,9 +1,8 @@
 ---
-title: "Quote tweet by me"
+title: Quote tweet by me
 date: 2026-01-24
 draft: false
 ---
-
 # Quote tweet by me
 
 **Link:** https://x.com/MeetGor21/status/1849125774277697849

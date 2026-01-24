@@ -1,16 +1,20 @@
 ---
 type: post
-title: "Connect LibSQL Database hosted on Turso in a Golang Application"
-date: 2024-09-30T23:45:00
-slug: "turso-libsql-db-golang"
-series: ["lets-go-with-turso"]
-tags: ["git", "go", "linux", "sql", "testing"]
-  - go
-  - turso
-  - libsql
+title: Connect LibSQL Database hosted on Turso in a Golang Application
+date: 2024-09-30 23:45:00
+slug: turso-libsql-db-golang
+series:
+- lets-go-with-turso
 image_url: https://meetgor-cdn.pages.dev/connect-turso-libsql-golang.png
+tags:
+- git
+- go
+- libsql
+- linux
+- sql
+- testing
+- turso
 ---
-
 ## Introduction
 
 Welcome to the new series in Golang, Let's Go with Turso. In this series, we will learn how to interact with LibSQL databases with Golang. We will connect with a remote/local LibSQL database, create Embedded replicas, set up a local LibSQL database, and so much more as we explore and find out more features of LibSQL.

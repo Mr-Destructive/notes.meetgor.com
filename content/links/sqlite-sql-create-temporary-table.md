@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-create-temp-table
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite SQL: Create Temporary Table'
 tags:
 - sql
-title: 'SQLite SQL: Create Temporary Table'
 ---
-
 # SQLite SQL: Create Temporary Table
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-create-temp-table

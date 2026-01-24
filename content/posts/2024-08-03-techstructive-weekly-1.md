@@ -1,12 +1,16 @@
 ---
-title: "Techstructive Weekly #1"
+title: 'Techstructive Weekly #1'
 date: 2024-08-03
-type: "newsletter"
-slug: "techstructive-weekly-1"
-tags: ["ai", "git", "go", "newsletter", "python", "sql"]
+type: newsletter
+slug: techstructive-weekly-1
+tags:
+- ai
+- git
+- go
+- newsletter
+- python
+- sql
 ---
-
-
 # Week #1
 
 This week, I had a ton of fun on the side as I finally made the MVP of a side project. An SSG with a Content Management System-like interface. an SSG with an editor that syncs up the posts from a database.

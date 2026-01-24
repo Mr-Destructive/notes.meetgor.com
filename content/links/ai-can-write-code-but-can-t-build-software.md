@@ -2,12 +2,11 @@
 date: 2025-10-31
 draft: false
 link: https://bytesauna.com/post/coding-vs-software-engineering
+title: AI can write code, but can’t build software
 tags:
 - ai
 - testing
-title: AI can write code, but can’t build software
 ---
-
 # AI can write code, but can’t build software
 
 **Link:** https://bytesauna.com/post/coding-vs-software-engineering

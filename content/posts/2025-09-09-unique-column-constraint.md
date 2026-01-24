@@ -2,10 +2,10 @@
 type: sqlog
 slug: sqlite-unique-column-constraint
 title: 'SQLite SQL: UNIQUE column constraint'
-date: "2025-09-09"
-tags: ["sql"]
+date: '2025-09-09'
+tags:
+- sql
 ---
-
 ## Unique Constraint
 
 The `UNIQUE` constraint ensures that a column in a table contains no duplicate values. Like, if you add an `UNIQUE` constraint to a column, then no two rows can have the exact/same value for that column.

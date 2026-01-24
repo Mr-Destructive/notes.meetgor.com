@@ -1,13 +1,16 @@
 ---
-type: til 
-title: "Django Blog DevLog: Load Frontmatter data into Template/Model Form Fields"
-description: "Rendering frontatter from content field into the Template Form field using HTMX and frontmatter libraries"
+type: til
+title: 'Django Blog DevLog: Load Frontmatter data into Template/Model Form Fields'
+description: Rendering frontatter from content field into the Template Form field
+  using HTMX and frontmatter libraries
 date: 2022-08-01 20:30:00
 status: published
 slug: django-form-load-frontmatter
-tags: ["frontend", "python", "testing"]
+tags:
+- frontend
+- python
+- testing
 ---
-
 ## Introduction
 
 I have an Article Form where I load my post into it directly, it might have frontmatter. So what I wish to achieve is when I paste in the content, the frontmatter should be picked up and it should render the form fields like `title`, `description`, and then also remove the frontmatter from the content.

@@ -2,13 +2,12 @@
 date: 2025-12-12
 draft: false
 link: https://youtu.be/IdyK8XB2l6g
+title: Just use Postgres
+youtube_id: IdyK8XB2l6g
 tags:
 - ai
 - sql
-title: Just use Postgres
-youtube_id: IdyK8XB2l6g
 ---
-
 # Just use Postgres
 
 **Link:** https://youtu.be/IdyK8XB2l6g

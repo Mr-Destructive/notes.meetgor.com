@@ -11,12 +11,11 @@ preview_description: 'Today''s anonymous submitter sends us a short snippet. The
 
   '
 preview_image: https://s3.amazonaws.com/remy.jetpackshark.com/remy-thumb.jpg
+title: Duplicate Reports
 tags:
 - ai
 - testing
-title: Duplicate Reports
 ---
-
 # Duplicate Reports
 
 **Link:** https://thedailywtf.com/articles/duplicate-reports

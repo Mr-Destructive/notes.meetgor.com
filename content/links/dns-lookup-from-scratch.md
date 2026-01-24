@@ -2,12 +2,11 @@
 date: 2025-09-12
 draft: false
 link: https://youtu.be/CHaEdVIF2_M
-tags:
-- ai
 title: DNS Lookup from scratch
 youtube_id: CHaEdVIF2_M
+tags:
+- ai
 ---
-
 # DNS Lookup from scratch
 
 **Link:** https://youtu.be/CHaEdVIF2_M

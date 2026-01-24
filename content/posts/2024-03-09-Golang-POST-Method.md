@@ -1,14 +1,17 @@
 ---
 type: post
-title: "Golang Web: POST Method"
-date: 2024-03-10T20:15:00
-slug: "golang-web-post-method"
-series: ["100-days-of-golang"]
-tags: ["career", "frontend", "go", "linux"]
-  - go
+title: 'Golang Web: POST Method'
+date: 2024-03-10 20:15:00
+slug: golang-web-post-method
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-034-post-method.png
+tags:
+- career
+- frontend
+- go
+- linux
 ---
-
 ## Introduction
 
 In this section of the series, we will be exploring how to send a `POST` HTTP request in golang. We will understand how to send a basic POST request, create an HTTP request, and parse json, structs into the request body, add headers, etc in the following sections of this post. We will understand how to marshal the golang struct/types into JSON format, send files in the request, and handle form data with examples of each in this article. Let's answer a few questions first.

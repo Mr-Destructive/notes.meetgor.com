@@ -1,11 +1,13 @@
 ---
 type: sqlog
 slug: sqlite-many-to-many-relations
-title: "SQLite SQL: Many to Many Relations"
-date: "2025-09-18"
-tags: ["ai", "rust", "sql"]
+title: 'SQLite SQL: Many to Many Relations'
+date: '2025-09-18'
+tags:
+- ai
+- rust
+- sql
 ---
-
 ## Many to Many Relations
 
 We have seen [one-to-many](https://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key/) relationship and also the [self-join](https://www.meetgor.com/sqlog/sqlite-self-join-relations) relationship.

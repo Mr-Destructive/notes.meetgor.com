@@ -2,13 +2,12 @@
 date: 2026-01-09
 draft: false
 link: https://youtu.be/UrNLVip0hSA
+title: AI codes better than me, now what?
+youtube_id: UrNLVip0hSA
 tags:
 - ai
 - career
-title: AI codes better than me, now what?
-youtube_id: UrNLVip0hSA
 ---
-
 # AI codes better than me, now what?
 
 **Link:** https://youtu.be/UrNLVip0hSA

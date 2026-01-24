@@ -1,13 +1,18 @@
 ---
-title: "Techstructive Weekly #77"
+title: 'Techstructive Weekly #77'
 date: 2026-01-16
 draft: false
-type: "post"
-categories: ["newsletter"]
-tags: ["ai", "devops", "frontend", "go", "newsletter"]
-description: "Techstructive Weekly #77"
+type: post
+categories:
+- newsletter
+description: 'Techstructive Weekly #77'
+tags:
+- ai
+- devops
+- frontend
+- go
+- newsletter
 ---
-
 Week #77
 
 It was a harsh week. Not the roughest yet tiny exhilarating with new hopes. It happens, to get the best of me, things will come towards me with force. I am welcome to those challenges and hurdles.

@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-one-to-one-relations
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite: One to One Relations'
 tags:
 - sql
-title: 'SQLite: One to One Relations'
 ---
-
 # SQLite: One to One Relations
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-one-to-one-relations

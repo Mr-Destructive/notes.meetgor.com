@@ -4,7 +4,6 @@ draft: false
 link: https://www.njbrown.com/blog/25/
 title: What would you do with 52 hours of discretionary time
 ---
-
 # What would you do with 52 hours of discretionary time
 
 **Link:** https://www.njbrown.com/blog/25/

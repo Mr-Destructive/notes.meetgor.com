@@ -5,11 +5,10 @@ link: https://marvinh.dev/blog/building-from-first-principles/
 preview_description: Web presense of Marvin Hagemeister who is a core developer of
   preactjs
 preview_image: https://marvinh.dev/media/me-twitter.jpg
+title: Building from First Principles
 tags:
 - ai
-title: Building from First Principles
 ---
-
 # Building from First Principles
 
 **Link:** https://marvinh.dev/blog/building-from-first-principles/

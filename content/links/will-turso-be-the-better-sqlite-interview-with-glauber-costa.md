@@ -2,14 +2,13 @@
 date: 2025-12-26
 draft: false
 link: https://youtu.be/1JHOY0zqNBY
+title: Will Turso be the better SQLite? Interview with Glauber Costa
+youtube_id: 1JHOY0zqNBY
 tags:
 - linux
 - rust
 - sql
-title: Will Turso be the better SQLite? Interview with Glauber Costa
-youtube_id: 1JHOY0zqNBY
 ---
-
 # Will Turso be the better SQLite? Interview with Glauber Costa
 
 **Link:** https://youtu.be/1JHOY0zqNBY

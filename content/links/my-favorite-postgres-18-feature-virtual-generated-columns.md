@@ -2,11 +2,10 @@
 date: 2025-09-19
 draft: false
 link: https://tselai.com/virtual-gencolumns
+title: 'My Favorite Postgres 18 feature: Virtual generated columns'
 tags:
 - sql
-title: 'My Favorite Postgres 18 feature: Virtual generated columns'
 ---
-
 # My Favorite Postgres 18 feature: Virtual generated columns
 
 **Link:** https://tselai.com/virtual-gencolumns

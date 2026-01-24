@@ -1,11 +1,11 @@
 ---
 type: sqlog
 slug: sqlite-collate-column-modifier
-title: "SQLite SQL: Collate Column Modifier"
-date: "2025-09-22"
-tags: ["sql"]
+title: 'SQLite SQL: Collate Column Modifier'
+date: '2025-09-22'
+tags:
+- sql
 ---
-
 ## Collate Column Modifier
 
 Collate is a modifier in SQL that specifies the column how to arrange and compare the values that would be populated in the rows.

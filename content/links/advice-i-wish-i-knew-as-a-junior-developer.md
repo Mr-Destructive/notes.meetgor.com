@@ -2,12 +2,11 @@
 date: 2025-10-03
 draft: false
 link: https://raheeljunaid.com/blog/advice-for-developers/
+title: Advice I wish I knew as a junior developer
 tags:
 - career
 - go
-title: Advice I wish I knew as a junior developer
 ---
-
 # Advice I wish I knew as a junior developer
 
 **Link:** https://raheeljunaid.com/blog/advice-for-developers/

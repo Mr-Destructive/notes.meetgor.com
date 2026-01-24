@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-foreign-key-table-constraint
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite: Foreign KEY table constraint'
 tags:
 - sql
-title: 'SQLite: Foreign KEY table constraint'
 ---
-
 # SQLite: Foreign KEY table constraint
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-foreign-key-table-constraint

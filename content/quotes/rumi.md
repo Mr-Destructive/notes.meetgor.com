@@ -1,9 +1,8 @@
 ---
-title: "Rumi"
+title: Rumi
 date: 2026-01-24
 draft: false
 ---
-
 # Rumi
 
 **Link:** https://www.goodreads.com/quotes/811906-as-you-start-to-walk-on-the-way-the-way

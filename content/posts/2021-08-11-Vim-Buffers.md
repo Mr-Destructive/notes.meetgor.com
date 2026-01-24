@@ -1,14 +1,16 @@
 ---
 type: post
-title: "Vim: Buffers"
-subtitle: "Understanding the basic unit of Vim for working with files."
-date: 2021-08-11T20:24:29+05:30
-slug: "vim-buffers"
-tags: ["frontend", "linux", "neovim"]
-  - vim
+title: 'Vim: Buffers'
+subtitle: Understanding the basic unit of Vim for working with files.
+date: 2021-08-11 20:24:29+05:30
+slug: vim-buffers
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286548/blogmedia/khj3xx5mulhotdfw7z1x.png
+tags:
+- frontend
+- linux
+- neovim
+- vim
 ---
-
 ## Introduction
 
 

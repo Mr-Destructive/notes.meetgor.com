@@ -2,12 +2,11 @@
 date: 2025-12-26
 draft: false
 link: https://www.da.vidbuchanan.co.uk/blog/annoying-text-editors.html
+title: Text editors should be worse
 tags:
 - ai
 - frontend
-title: Text editors should be worse
 ---
-
 # Text editors should be worse
 
 **Link:** https://www.da.vidbuchanan.co.uk/blog/annoying-text-editors.html

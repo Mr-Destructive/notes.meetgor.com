@@ -1,13 +1,14 @@
 ---
 type: til
-title: "Adding SSH Keys for Multiple Accounts in Git"
-description: "Setting up SSH config for using multiple accounts for Git repositories."
+title: Adding SSH Keys for Multiple Accounts in Git
+description: Setting up SSH config for using multiple accounts for Git repositories.
 status: published
 slug: git-ssh-multiple-accounts
-tags: ["git", "linux"]
 date: 2024-03-22 22:30:00
+tags:
+- git
+- linux
 ---
-
 Let's  say you have multiple github accounts. One for your personal projects, one for your company that you work at, and one other remote repository account (let's say gitlab).
 
 You are juggling with multiple accounts, you should not waste much time and pick a SSH from those remote repository and pull it in your local machine, that makes the process just smooth and saves a ton of time.

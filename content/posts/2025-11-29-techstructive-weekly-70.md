@@ -1,11 +1,13 @@
 ---
-title: "Techstructive Weekly 70"
-type: "newsletter"
-date: 2025-11-29T00:00:00Z
+title: Techstructive Weekly 70
+type: newsletter
+date: 2025-11-29 00:00:00+00:00
 draft: false
-tags: ["ai", "frontend", "newsletter"]
+tags:
+- ai
+- frontend
+- newsletter
 ---
-
 ## Week #70
 As I wrote last week, I would be travelling and out on a break due to weddings at my contry side place, cousins wedding, som heavy travelling no tech access for most of the time. However I had atleast 4 days of work covered so I have few tidbits to share. Weekends, three days of the week and taking leave on evening on wednesday.
 

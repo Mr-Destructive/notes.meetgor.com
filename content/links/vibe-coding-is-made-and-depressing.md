@@ -6,11 +6,10 @@ preview_description: "I’ve been in the mobile development industry for almost 
   \ and this AI/LLM era might be the worst.\r\n\r\nMy work are mostly freelance, gigs,\
   \ hourly, mile..."
 preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
+title: Vibe Coding is made and depressing
 tags:
 - ai
-title: Vibe Coding is made and depressing
 ---
-
 # Vibe Coding is made and depressing
 
 **Link:** https://law.gmnz.xyz/vibe-coding-is-mad-depressing/

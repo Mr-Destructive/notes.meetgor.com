@@ -8,7 +8,6 @@ preview_description: 'A common UI pattern is something like this: People do lots
 preview_image: https://nolanlawson.com/wp-content/uploads/2025/01/favicon.png?w=32
 title: The time elemet that should actually do something
 ---
-
 # The time elemet that should actually do something
 
 **Link:** https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/

@@ -2,11 +2,10 @@
 date: 2025-10-17
 draft: false
 link: https://herbertlui.net/craft-not-fame-makes-your-story-worth-telling/
+title: Craft, not fame, makes your story worth telling
 tags:
 - ai
-title: Craft, not fame, makes your story worth telling
 ---
-
 # Craft, not fame, makes your story worth telling
 
 **Link:** https://herbertlui.net/craft-not-fame-makes-your-story-worth-telling/

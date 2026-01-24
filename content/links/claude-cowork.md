@@ -2,12 +2,11 @@
 date: 2026-01-23
 draft: false
 link: https://youtu.be/D-tuQNPp0WY
-tags:
-- ai
 title: Claude Cowork
 youtube_id: D-tuQNPp0WY
+tags:
+- ai
 ---
-
 # Claude Cowork
 
 **Link:** https://youtu.be/D-tuQNPp0WY

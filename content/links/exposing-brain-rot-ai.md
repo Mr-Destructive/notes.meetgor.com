@@ -2,12 +2,11 @@
 date: 2025-10-31
 draft: false
 link: https://youtu.be/XhJYNSssqrA
-tags:
-- ai
 title: Exposing Brain Rot AI
 youtube_id: XhJYNSssqrA
+tags:
+- ai
 ---
-
 # Exposing Brain Rot AI
 
 **Link:** https://youtu.be/XhJYNSssqrA

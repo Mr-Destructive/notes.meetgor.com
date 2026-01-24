@@ -10,7 +10,6 @@ preview_description: '“Those who have a ‘Why’ to live, can bear with almos
 preview_image: https://neilthanedar.com/wp-content/uploads/Mondays-Happiness-Scale-1024x683.png
 title: You’re not burning out, you’re essentially starving
 ---
-
 # You’re not burning out, you’re essentially starving
 
 **Link:** https://neilthanedar.com/youre-not-burnt-out-youre-existentially-starving/

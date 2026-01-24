@@ -1,11 +1,17 @@
 ---
-title: "Techstructive Weekly 65"
-type: "newsletter"
-date: 2025-10-25T00:00:00Z
+title: Techstructive Weekly 65
+type: newsletter
+date: 2025-10-25 00:00:00+00:00
 draft: false
-tags: ["ai", "career", "go", "linux", "newsletter", "rust", "sql"]
+tags:
+- ai
+- career
+- go
+- linux
+- newsletter
+- rust
+- sql
 ---
-
 ## Week #65
 A happy gloom Diwali, gone in a woosh. We are in a different year. 2082 Vikram Samvat, If you are into that. Felt a bit sad, a bit happy. Not sure what the next year might have in offer. Hopefully it would be for the good.
 

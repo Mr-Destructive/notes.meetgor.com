@@ -2,12 +2,11 @@
 date: 2026-01-09
 draft: false
 link: https://riggraz.dev/dialogue-developer.html
+title: Dialogue between a developer and a kid
 tags:
 - frontend
 - python
-title: Dialogue between a developer and a kid
 ---
-
 # Dialogue between a developer and a kid
 
 **Link:** https://riggraz.dev/dialogue-developer.html

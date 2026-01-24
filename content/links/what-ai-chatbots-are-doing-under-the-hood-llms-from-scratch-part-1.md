@@ -5,11 +5,10 @@ link: https://www.gilesthomas.com/2025/08/what-ai-chatbots-are-doing-under-the-h
 preview_description: "How AI chatbots like ChatGPT work under the hood -- the post\
   \ I wish Iâ\x80\x99d found before starting 'Build a Large Language Model (from Scratch)'."
 preview_image: https://www.gilesthomas.com/images/favicons/web-app-manifest-512x512.png
+title: What AI chatbots are doing under-the-hood, LLMs from scratch part 1
 tags:
 - ai
-title: What AI chatbots are doing under-the-hood, LLMs from scratch part 1
 ---
-
 # What AI chatbots are doing under-the-hood, LLMs from scratch part 1
 
 **Link:** https://www.gilesthomas.com/2025/08/what-ai-chatbots-are-doing-under-the-hood

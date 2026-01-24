@@ -4,7 +4,6 @@ draft: false
 link: https://xydinesh.com/posts/joy-of-competent-beginner/
 title: The joy of being a competent beginner
 ---
-
 # The joy of being a competent beginner
 
 **Link:** https://xydinesh.com/posts/joy-of-competent-beginner/

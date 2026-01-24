@@ -1,12 +1,14 @@
 ---
-type: "sqlog"
-title: "Advent of SQL 2025 Day 7: Polar Express Mixin"
-slug: "advent-of-sql-2025-day-7"
+type: sqlog
+title: 'Advent of SQL 2025 Day 7: Polar Express Mixin'
+slug: advent-of-sql-2025-day-7
 date: 2025-12-22T15:30:00+0530
-series: ["advent-of-sql-2025"]
-tags: ["frontend", "sql"]
+series:
+- advent-of-sql-2025
+tags:
+- frontend
+- sql
 ---
-
 ## Advent of SQL, Day 7 - Polar Express
 
 There were a few things, I had to dig up for converting the JSON `ARRAY[]` in the statements into strings for SQLite, we can't really use list of strings in SQLite.

@@ -1,10 +1,10 @@
 ---
-title: "Can we have a moment of silence for the ones who thought Programmers were replaceable"
+title: Can we have a moment of silence for the ones who thought Programmers were replaceable
 date: 2026-01-24
 draft: false
-tags: ["newsletter"]
+tags:
+- newsletter
 ---
-
 # Can we have a moment of silence for the ones who thought Programmers were replaceable
 
 **Link:** https://the-decoder.com/openais-new-orion-model-reportedly-shows-small-gains-over-gpt-4/

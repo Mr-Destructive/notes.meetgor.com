@@ -2,10 +2,11 @@
 type: sqlog
 slug: sqlite-primary-key-column-constraint
 title: 'SQLite SQL: PRIMARY KEY column constraint'
-date: "2025-09-13"
-tags: ["frontend", "sql"]
+date: '2025-09-13'
+tags:
+- frontend
+- sql
 ---
-
 ## The PRIMARY KEY column constraint
 
 The PRIMARY KEY constraint is not actually a column constraint, it is a table constraint. But in this section, we'll only learn about how to handle single column-level `PRIMARY KEY`.

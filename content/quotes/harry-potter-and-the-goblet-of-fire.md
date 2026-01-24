@@ -1,9 +1,8 @@
 ---
-title: "Harry Potter and the Goblet of Fire"
+title: Harry Potter and the Goblet of Fire
 date: 2026-01-24
 draft: false
 ---
-
 # Harry Potter and the Goblet of Fire
 
 **Link:** https://www.goodreads.com/work/quotes/3046572

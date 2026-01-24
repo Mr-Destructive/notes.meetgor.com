@@ -2,12 +2,11 @@
 date: 2026-01-16
 draft: false
 link: https://youtu.be/5vp9ypOUgMw
-tags:
-- ai
 title: AI Assisted Coding
 youtube_id: 5vp9ypOUgMw
+tags:
+- ai
 ---
-
 # AI Assisted Coding
 
 **Link:** https://youtu.be/5vp9ypOUgMw

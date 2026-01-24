@@ -1,12 +1,14 @@
 ---
-type: "sqlog"
-title: "Advent of SQL 2025 Day 6: Days of Delight"
-slug: "advent-of-sql-2025-day-6"
+type: sqlog
+title: 'Advent of SQL 2025 Day 6: Days of Delight'
+slug: advent-of-sql-2025-day-6
 date: 2025-12-21T15:30:00+0530
-series: ["advent-of-sql-2025"]
-tags: ["frontend", "sql"]
+series:
+- advent-of-sql-2025
+tags:
+- frontend
+- sql
 ---
-
 ## Advent of SQL Day 6: Days of Delight
 
 It is day 6 of advent of SQL.

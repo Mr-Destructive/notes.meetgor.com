@@ -9,12 +9,11 @@ preview_description: One of the (many) depressing things about the "AI" future i
   who want to gobble up all the HTML for their inscrutable purposes. The thing is,
   …
 preview_image: https://shkspr.mobi/blog/wp-content/uploads/2025/10/json.webp
+title: Stop crawling my html, use the API
 tags:
 - ai
 - frontend
-title: Stop crawling my html, use the API
 ---
-
 # Stop crawling my html, use the API
 
 **Link:** https://shkspr.mobi/blog/2025/12/stop-crawling-my-html-you-dickheads-use-the-api/

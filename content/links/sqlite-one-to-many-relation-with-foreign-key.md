@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite: One to Many Relation with Foreign Key'
 tags:
 - sql
-title: 'SQLite: One to Many Relation with Foreign Key'
 ---
-
 # SQLite: One to Many Relation with Foreign Key
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key

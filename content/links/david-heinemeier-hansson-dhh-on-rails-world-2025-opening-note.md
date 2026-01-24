@@ -2,12 +2,11 @@
 date: 2025-09-19
 draft: false
 link: https://youtu.be/gcwzWzC7gUA
-tags:
-- career
 title: 'David Heinemeier Hansson (DHH) on Rails World 2025: Opening Note'
 youtube_id: gcwzWzC7gUA
+tags:
+- career
 ---
-
 # David Heinemeier Hansson (DHH) on Rails World 2025: Opening Note
 
 **Link:** https://youtu.be/gcwzWzC7gUA

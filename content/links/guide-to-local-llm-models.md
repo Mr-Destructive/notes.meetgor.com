@@ -5,11 +5,10 @@ link: https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude
 preview_description: What you need to know about local model tooling and the steps
   for setting one up yourself
 preview_image: https://substackcdn.com/image/fetch/$s_!fARn!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb194c53f-7b2b-4f74-942b-5cf1c59b32aa_1920x1080.jpeg
+title: Guide to Local LLM Models
 tags:
 - ai
-title: Guide to Local LLM Models
 ---
-
 # Guide to Local LLM Models
 
 **Link:** https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude

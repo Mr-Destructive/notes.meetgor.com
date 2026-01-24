@@ -1,15 +1,17 @@
 ---
 type: post
-title: "Hacktoberfest 2021"
-subtitle: "Sharing my contribution and experience as a second hacktoberfest"
-date: 2021-10-28T20:10:00+05:30
-slug: "hacktoberfest-2021"
-tags: ["go", "linux", "python"]
-  - open-source
-  - hacktoberfest
+title: Hacktoberfest 2021
+subtitle: Sharing my contribution and experience as a second hacktoberfest
+date: 2021-10-28 20:10:00+05:30
+slug: hacktoberfest-2021
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288673/blogmedia/qy8xrefyqcsslfppdyhp.png
+tags:
+- go
+- hacktoberfest
+- linux
+- open-source
+- python
 ---
-
 ## Introduction
 
 This was my second year as a Hacktoberfest participant, First year was very dry and not so exciting as this turned out to be a cracker of an experience. With more than month gone in with only a few contributions, the second half of October was a splendid one for me where I made a lot more than in entire 2 years.  

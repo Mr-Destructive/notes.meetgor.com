@@ -1,13 +1,20 @@
 ---
-title: "Techstructive Weekly #76"
+title: 'Techstructive Weekly #76'
 date: 2026-01-09
 draft: false
-type: "post"
-categories: ["newsletter"]
-tags: ["ai", "career", "frontend", "go", "newsletter", "python", "sql"]
-description: "Techstructive Weekly #76"
+type: post
+categories:
+- newsletter
+description: 'Techstructive Weekly #76'
+tags:
+- ai
+- career
+- frontend
+- go
+- newsletter
+- python
+- sql
 ---
-
 Week #76
 
 It was a good start to the year, finally doing something that I had struggled to do for the past year or so. AI Assisted Programming. Yeah! That was something I finally somewhat understand, and can do it without feeling a slightest of grudge or emotional drama. It took a while to realize it, but here we are. 2026!

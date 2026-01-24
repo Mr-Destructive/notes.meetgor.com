@@ -2,12 +2,11 @@
 date: 2025-09-12
 draft: false
 link: https://www.jeffwofford.com/wp/?p=2240
+title: When the Job search becomes impossible
 tags:
 - ai
 - career
-title: When the Job search becomes impossible
 ---
-
 # When the Job search becomes impossible
 
 **Link:** https://www.jeffwofford.com/wp/?p=2240

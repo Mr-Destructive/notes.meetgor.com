@@ -1,14 +1,16 @@
 ---
 type: post
-title: "Crossposting with a single script: Crossposter.sh"
-subtitle: "Crosspost on dev.to, medium.com and hashnode.com with a single click"
-date: 2021-10-31T15:45:00+05:30
-tags: ["linux", "neovim", "testing"]
-  - bash
+title: 'Crossposting with a single script: Crossposter.sh'
+subtitle: Crosspost on dev.to, medium.com and hashnode.com with a single click
+date: 2021-10-31 15:45:00+05:30
 slug: crossposter-shellscript
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288989/blogmedia/trssl38erkdbcqlnjdvp.png
+tags:
+- bash
+- linux
+- neovim
+- testing
 ---
-
 ## Introduction
 
 If you have been writing articles you know the pain to get some attention, if you have already been cross-posting your articles it usually takes some time to do that. This task can be automated with a shellscript. If you have been cross-posting articles on `medium.com`, `dev.to` and at `hashnode.com`, then I have a treat for you. 

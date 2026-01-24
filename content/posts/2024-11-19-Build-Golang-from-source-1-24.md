@@ -1,13 +1,17 @@
 ---
 type: til
-title: "Building Golang from Source v1.23 and Above"
-description: "Exploring one of the way to install and build golang from source for version 1.23 and above."
+title: Building Golang from Source v1.23 and Above
+description: Exploring one of the way to install and build golang from source for
+  version 1.23 and above.
 status: published
 slug: golang-build-from-source-1-24-above
-tags: ["git", "go", "linux", "testing"]
 date: 2024-11-19 23:15:00
+tags:
+- git
+- go
+- linux
+- testing
 ---
-
 ## Introduction
 
 Are you excited to try out the latest golang version, or test out your changes (cooking some serious stuff?), or install some random golang version? Then let’s explore one of the easiest ways to install golang on your system (Linux).

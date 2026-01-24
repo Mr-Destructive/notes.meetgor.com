@@ -1,11 +1,17 @@
 ---
-title: "Techstructive Weekly #0"
+title: 'Techstructive Weekly #0'
 date: 2024-07-27
-type: "newsletter"
-slug: "techstructive-weekly-0"
-tags: ["ai", "frontend", "git", "go", "newsletter", "python", "sql"]
+type: newsletter
+slug: techstructive-weekly-0
+tags:
+- ai
+- frontend
+- git
+- go
+- newsletter
+- python
+- sql
 ---
-
 ## Week #0
 
 This week was about writing one of the much-procrastinated blog posts, starting a YouTube channel, and going through some heavy debugging sessions with my colleagues at work.

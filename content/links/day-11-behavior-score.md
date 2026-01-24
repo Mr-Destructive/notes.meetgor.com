@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/advent-of-sql-2025-day-11
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'Day 11: Behavior Score'
 tags:
 - sql
-title: 'Day 11: Behavior Score'
 ---
-
 # Day 11: Behavior Score
 
 **Link:** https://www.meetgor.com/sqlog/advent-of-sql-2025-day-11

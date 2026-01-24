@@ -2,10 +2,10 @@
 type: sqlog
 slug: sqlite-foreign-key-table-constraint
 title: 'SQLite SQL: Foreign KEY table constraint'
-date: "2025-09-15"
-tags: ["sql"]
+date: '2025-09-15'
+tags:
+- sql
 ---
-
 ## The Foreign KEY Table constraint
 
 Foreign Keys are the fundamentals of any relational databases, as they are the ones that make the connection or the relations among the tables in our database system.

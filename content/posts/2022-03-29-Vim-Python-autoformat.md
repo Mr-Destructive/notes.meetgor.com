@@ -1,13 +1,15 @@
 ---
-type: "til"
-title: "Autoformat Python file with Black after saving in Vim"
-description: "Automatically format python code in the current file after saving the file in Vim."
+type: til
+title: Autoformat Python file with Black after saving in Vim
+description: Automatically format python code in the current file after saving the
+  file in Vim.
 date: 2022-03-29 20:40:53
 status: published
 slug: vim-python-black-autoformat
-tags: ["neovim", "python"]
+tags:
+- neovim
+- python
 ---
-
 If you are like me who writes Python very badly, it has empty lines with whitespaces, no proper format in assigning variables, not formatted according to [PEP 8](https://peps.python.org/pep-0008/) standards, and you use Vim as your text editor then my friend you need a autocmd badly for it.
 
 ## Install Black in Python

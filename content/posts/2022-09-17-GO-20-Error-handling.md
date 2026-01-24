@@ -1,14 +1,14 @@
 ---
 type: post
-title: "Golang: Error Handling"
-date: 2022-09-17T20:15:00
-slug: "golang-error-handling"
-series: ["100-days-of-golang"]
-tags: ["go"]
-  - go
+title: 'Golang: Error Handling'
+date: 2022-09-17 20:15:00
+slug: golang-error-handling
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-020-error-handling.png
+tags:
+- go
 ---
-
 ## Introduction
 
 Error handling is quite an important feature of any programming language to improve the quality and transparency between the user and the application. By raising appropriate error messages, the user can get a clear idea about the things happening in the interface as well as the application can handle the errors with appropriate actions.

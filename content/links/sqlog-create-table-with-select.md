@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-create-table-from-select/
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLog: Create Table with SELECT'
 tags:
 - sql
-title: 'SQLog: Create Table with SELECT'
 ---
-
 # SQLog: Create Table with SELECT
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-create-table-from-select/

@@ -9,11 +9,10 @@ preview_description: This short article compiles a few notes I previously shared
   book, I strongly suggest reading it in order since each chapter depends on the previous
   one. And for each chapter, I recommend the following steps.
 preview_image: https://sebastianraschka.com/images/blog/2025/reading-books/hero.jpg
+title: Recommendations for getting most from technical books
 tags:
 - frontend
-title: Recommendations for getting most from technical books
 ---
-
 # Recommendations for getting most from technical books
 
 **Link:** https://sebastianraschka.com/blog/2025/reading-books.html

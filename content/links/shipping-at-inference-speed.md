@@ -4,12 +4,11 @@ draft: false
 link: https://steipete.me/posts/2025/shipping-at-inference-speed
 preview_description: Why I stopped reading code and started watching it stream by.
 preview_image: https://steipete.me/posts/2025/shipping-at-inference-speed/index.png
+title: Shipping at inference speed
 tags:
 - ai
 - go
-title: Shipping at inference speed
 ---
-
 # Shipping at inference speed
 
 **Link:** https://steipete.me/posts/2025/shipping-at-inference-speed

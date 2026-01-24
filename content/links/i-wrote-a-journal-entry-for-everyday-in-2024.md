@@ -4,7 +4,6 @@ draft: false
 link: https://www.njbrown.com/blog/67/
 title: I wrote a journal entry for everyday in 2024
 ---
-
 # I wrote a journal entry for everyday in 2024
 
 **Link:** https://www.njbrown.com/blog/67/

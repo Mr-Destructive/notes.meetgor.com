@@ -5,11 +5,10 @@ link: https://dev.to/bekbrace/why-do-they-quit-coding--56eo?ref=dailydev
 preview_description: This is a question I’ve been wrestling with for a while—and at
   some point, I realized I’d already...
 preview_image: https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpu95xii2j0vdhpmhlgrf.png
+title: 'The AI Trap: Why do they quit coding'
 tags:
 - ai
-title: 'The AI Trap: Why do they quit coding'
 ---
-
 # The AI Trap: Why do they quit coding
 
 **Link:** https://dev.to/bekbrace/why-do-they-quit-coding--56eo?ref=dailydev

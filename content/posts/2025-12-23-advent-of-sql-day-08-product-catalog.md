@@ -1,12 +1,16 @@
 ---
-type: "sqlog"
-title: "Advent of SQL 2025 Day 8: Product Catalog"
-slug: "advent-of-sql-2025-day-8"
+type: sqlog
+title: 'Advent of SQL 2025 Day 8: Product Catalog'
+slug: advent-of-sql-2025-day-8
 date: 2025-12-23T15:30:00+0530
-series: ["advent-of-sql-2025"]
-tags: ["frontend", "go", "linux", "sql"]
+series:
+- advent-of-sql-2025
+tags:
+- frontend
+- go
+- linux
+- sql
 ---
-
 ## Advent of SQL - Day 8, Product Catalog
 
 Whopsies! This is day 8.

@@ -2,12 +2,11 @@
 date: 2026-01-23
 draft: false
 link: https://youtu.be/IcQEaopx90g
-tags:
-- ai
 title: 'Claude Cowork: AGI is here, hheh?'
 youtube_id: IcQEaopx90g
+tags:
+- ai
 ---
-
 # Claude Cowork: AGI is here, hheh?
 
 **Link:** https://youtu.be/IcQEaopx90g

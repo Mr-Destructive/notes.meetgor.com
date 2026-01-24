@@ -8,11 +8,10 @@ preview_description: In the standard libc API set there are multiple functions p
   atoi atoi() is perhaps the most common and basic one. It converts from a string
   to … Continue reading Parsing integers in C →
 preview_image: https://daniel.haxx.se/blog/wp-content/uploads/2025/11/Screenshot-2025-11-13-at-08-19-10-curl-Project-status-dashboard.png
+title: Parsing integers in C
 tags:
 - python
-title: Parsing integers in C
 ---
-
 # Parsing integers in C
 
 **Link:** https://daniel.haxx.se/blog/2025/11/13/parsing-integers-in-c/

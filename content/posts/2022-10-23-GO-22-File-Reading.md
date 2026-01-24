@@ -1,14 +1,14 @@
 ---
 type: post
-title: "Golang: File Reading"
-date: 2022-10-23T23:15:00
-slug: "golang-file-read"
-series: ["100-days-of-golang"]
-tags: ["go"]
-  - go
+title: 'Golang: File Reading'
+date: 2022-10-23 23:15:00
+slug: golang-file-read
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-022-file-read.png
+tags:
+- go
 ---
-
 ## Introduction
 
 In the 22nd post of the series, we will be looking into the file-handling process in golang, in the next few posts, we will cover the operations on file using golang. In this first entry of the file handling sub-series, we will understand the `READ` operation with files. We will see different ways to read a file, it can be word by word, line by line, or even custom chink by chunk. 

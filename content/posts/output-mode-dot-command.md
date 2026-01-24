@@ -1,11 +1,13 @@
 ---
-type: "sqlog"
-title: "SQLite dot commands: Output mode"
+type: sqlog
+title: 'SQLite dot commands: Output mode'
 slug: sqlite-mode-dot-command
 date: 2025-09-01
-tags: ["frontend", "sql", "testing"]
+tags:
+- frontend
+- sql
+- testing
 ---
-
 ## Output mode dot command
 
 The SQLite shell is a great way to test out and run bunch of queries, but the output might be squished or cluttered. You might need to view the output in a specific way, and the creators of SQLite were already hearing your screams.

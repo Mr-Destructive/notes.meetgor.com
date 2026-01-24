@@ -2,12 +2,11 @@
 date: 2025-10-24
 draft: false
 link: https://youtu.be/lXUZvyajciY
-tags:
-- ai
 title: Andrej Karapathy on Dwarkesh Patel Podcast
 youtube_id: lXUZvyajciY
+tags:
+- ai
 ---
-
 # Andrej Karapathy on Dwarkesh Patel Podcast
 
 **Link:** https://youtu.be/lXUZvyajciY

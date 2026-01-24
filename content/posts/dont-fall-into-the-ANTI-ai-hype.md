@@ -1,13 +1,13 @@
 ---
-title: "Don't Fall into the ANTI AI HYPE"
-date: 2026-01-12T06:34:28Z
+title: Don't Fall into the ANTI AI HYPE
+date: 2026-01-12 06:34:28+00:00
 slug: dont-fall-into-the-ANTI-ai-hype
 draft: false
 type: link
-description: ""
-tags: ["ai"]
+description: ''
+tags:
+- ai
 ---
-
 This is interesting and it comes at the right time
 
 > facts are facts, and AI is going to change programming forever

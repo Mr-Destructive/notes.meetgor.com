@@ -16,11 +16,10 @@ preview_description: 'Recently, I have been testing how well the newest generati
   of certain simple tasks (such as spelling out individual characters in a word) for
   a while.'
 preview_image: https://blog.burkert.me/llm-character-text-manipulation.jpg
+title: LLMs are getting better at character-level manipulation
 tags:
 - testing
-title: LLMs are getting better at character-level manipulation
 ---
-
 # LLMs are getting better at character-level manipulation
 
 **Link:** https://blog.burkert.me/posts/llm_evolution_character_manipulation/

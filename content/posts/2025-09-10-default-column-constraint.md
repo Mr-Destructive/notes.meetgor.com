@@ -2,10 +2,11 @@
 type: sqlog
 slug: sqlite-default-column-constraint
 title: 'SQLite SQL: DEFAULT column constraint'
-date: "2025-09-10"
-tags: ["frontend", "sql"]
+date: '2025-09-10'
+tags:
+- frontend
+- sql
 ---
-
 ## DEFAULT Constraint
 
 The `DEFAULT` constraint in SQLite is used to specify a default value for a column, if not provided, then the column will be populated with the `NULL` value as the default value. 

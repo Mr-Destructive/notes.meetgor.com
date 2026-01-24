@@ -1,11 +1,11 @@
 ---
 type: sqlog
 slug: sqlite-create-table-if-not-exists
-title: "SQLite SQL: Create Table If Not Exists"
-date: "2025-09-26"
-tags: ["sql"]
+title: 'SQLite SQL: Create Table If Not Exists'
+date: '2025-09-26'
+tags:
+- sql
 ---
-
 ## Creating table if not already exists
 
 The `CREATE TABLE` has one clause that we can add to create table if it doesn't exist already. So this comes handy if you already have created a table and instead of throwing an error it simply gracefully handles the query and doesn't re-create the table. 

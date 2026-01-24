@@ -2,10 +2,10 @@
 type: sqlog
 slug: sqlite-primary-key-table-constraint
 title: 'SQLite SQL: PRIMARY KEY table constraint'
-date: "2025-09-14"
-tags: ["sql"]
+date: '2025-09-14'
+tags:
+- sql
 ---
-
 ## The PRIMARY KEY Table constraint
 
 The PRIMARY KEY constraint is not actually a column constraint, it is a table constraint. In the previous section we learnt about how to handle single column-level `PRIMARY KEY`. In this section we'll understand how to use `PRIMARY KEY` as table constraint, with that we can use multiple columns to combine the key.

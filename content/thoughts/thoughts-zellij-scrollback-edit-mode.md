@@ -1,10 +1,10 @@
 ---
-title: "Thoughts: Zellij Scrollback edit mode"
+title: 'Thoughts: Zellij Scrollback edit mode'
 date: 2026-01-24
 draft: false
-tags: ["neovim"]
+tags:
+- neovim
 ---
-
 # Thoughts: Zellij Scrollback edit mode
 
 **Link:** https://dev.meetgor.com/thoughts/zellij-open-scrollback-edit-mode/

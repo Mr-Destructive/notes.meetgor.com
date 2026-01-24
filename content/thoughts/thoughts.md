@@ -1,9 +1,8 @@
 ---
-title: "thoughts"
+title: thoughts
 date: 2026-01-24
 draft: false
 ---
-
 # thoughts
 
 **Link:** https://dev.meetgor.com/thoughts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/

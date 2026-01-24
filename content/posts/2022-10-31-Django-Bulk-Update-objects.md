@@ -1,14 +1,16 @@
 ---
 type: til
-title: "Django Bulk Update QuerySet objects"
-description: "Using bulk_update to update multiple objects in one go."
+title: Django Bulk Update QuerySet objects
+description: Using bulk_update to update multiple objects in one go.
 status: published
 slug: django-bulk-update-queryset
-tags: ["go", "python", "sql", "testing"]
 date: 2022-10-31 18:00:00
+tags:
+- go
+- python
+- sql
+- testing
 ---
-
-
 Let's say, I have a lots of objects which I want to update with a particular field or fields. We can use the [bulk_update](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#bulk-update) method with the model name.
 
 ```python

@@ -8,7 +8,6 @@ preview_description: I'm usually an optimist about things. That outlook has serv
 preview_image: https://kennethreitz.org/static/images/social-card.jpg
 title: The internet is a net negative
 ---
-
 # The internet is a net negative
 
 **Link:** https://kennethreitz.org/essays/2025-12-28-the_internet_is_a_net_negative

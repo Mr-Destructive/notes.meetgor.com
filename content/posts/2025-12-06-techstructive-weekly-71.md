@@ -1,11 +1,14 @@
 ---
-title: "Techstructive Weekly 71"
-type: "newsletter"
-date: 2025-12-06T00:00:00Z
+title: Techstructive Weekly 71
+type: newsletter
+date: 2025-12-06 00:00:00+00:00
 draft: false
-tags: ["ai", "frontend", "go", "newsletter"]
+tags:
+- ai
+- frontend
+- go
+- newsletter
 ---
-
 ## Week #71
 It was a roller-coaster week. Half of the week, it was travelling and outside. The rest was coping with AI news and code agents. Getting back to work after a week is a bit stressful and brings a bit of hurdle of health. I wasn’t quite well for a couple of days after the trip, and couldn’t really work at my 100% best. So, this weekend I would be pacing up, slowing down when needed to rest with ease. I have a few plans for Advent of Code, I haven’ gotten the time to solve even the first problem, looking forward to the weekend to keeping up with it.
 

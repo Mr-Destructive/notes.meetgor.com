@@ -1,10 +1,10 @@
 ---
-title: "Thoughts on motivation and my 40 year-old career"
+title: Thoughts on motivation and my 40 year-old career
 date: 2026-01-24
 draft: false
-tags: ["career"]
+tags:
+- career
 ---
-
 # Thoughts on motivation and my 40 year-old career
 
 **Link:** https://charity.wtf/2025/07/09/thoughts-on-motivation-and-my-40-year-career/

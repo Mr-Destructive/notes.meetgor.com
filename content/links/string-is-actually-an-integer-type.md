@@ -2,12 +2,11 @@
 date: 2025-12-12
 draft: false
 link: https://youtu.be/VSiPVZcTQTo
-tags:
-- sql
 title: STRING is actually an integer type
 youtube_id: VSiPVZcTQTo
+tags:
+- sql
 ---
-
 # STRING is actually an integer type
 
 **Link:** https://youtu.be/VSiPVZcTQTo

@@ -1,13 +1,17 @@
 ---
 type: til
-title: "Read a Rss Feed with a URL in Golang"
-description: "Reading Rss Feed with a Rss XML Link/URL in golang using encoding package"
+title: Read a Rss Feed with a URL in Golang
+description: Reading Rss Feed with a Rss XML Link/URL in golang using encoding package
 status: published
 slug: golang-read-rss-feed
-tags: ["go", "linux", "neovim", "python", "sql"]
 date: 2022-11-11 22:45:00
+tags:
+- go
+- linux
+- neovim
+- python
+- sql
 ---
-
 ## Reding Rss Feed
 
 We can use golang's [encoding/xml](https://pkg.go.dev/encoding/xml) package to read a Rss feed. Though we have to be speicific of what type of structure the Rss feed has, so it is not dynamic but it works really well with structs. I have covered a few nuances of reading XML file in the [config file reading](https://www.meetgor.com/golang-config-file-read/#reading-xml-file) post of the 100 days of golang series.

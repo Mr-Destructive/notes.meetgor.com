@@ -2,11 +2,10 @@
 date: 2026-01-23
 draft: false
 link: https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04
+title: Welcome to Gas Town
 tags:
 - ai
-title: Welcome to Gas Town
 ---
-
 # Welcome to Gas Town
 
 **Link:** https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04

@@ -4,12 +4,11 @@ draft: false
 link: https://davegriffith.substack.com/p/why-software-development-fell-to
 preview_description: Not the future I was expecting, but probably the one I deserve
 preview_image: https://substackcdn.com/image/fetch/$s_!h2gW!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fdavegriffith.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D1279511392%26version%3D9
+title: Why Software Development fell to AI first
 tags:
 - ai
 - newsletter
-title: Why Software Development fell to AI first
 ---
-
 # Why Software Development fell to AI first
 
 **Link:** https://davegriffith.substack.com/p/why-software-development-fell-to

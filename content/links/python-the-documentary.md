@@ -2,14 +2,13 @@
 date: 2025-09-12
 draft: false
 link: https://youtu.be/GfH4QL4VqJ0
+title: 'Python: The documentary'
+youtube_id: GfH4QL4VqJ0
 tags:
 - ai
 - go
 - python
-title: 'Python: The documentary'
-youtube_id: GfH4QL4VqJ0
 ---
-
 # Python: The documentary
 
 **Link:** https://youtu.be/GfH4QL4VqJ0

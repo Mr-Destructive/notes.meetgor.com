@@ -1,14 +1,16 @@
 ---
 type: post
-title: "Golang: JSON YAML TOML (config) File Reading."
-date: 2022-11-01T23:00:00
-slug: "golang-config-file-read"
-series: ["100-days-of-golang"]
-tags: ["go", "neovim", "python"]
-  - go
+title: 'Golang: JSON YAML TOML (config) File Reading.'
+date: 2022-11-01 23:00:00
+slug: golang-config-file-read
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-023-config-files.png
+tags:
+- go
+- neovim
+- python
 ---
-
 ## Reading specific file types (JSON, YAML, TOML)
 
 In the previous post, we have seen how to read files in golang, in this extended post of that part, we will look into reading some specific files used for configuration and storing data like JSON, YAML, TOML, CSV, etc.

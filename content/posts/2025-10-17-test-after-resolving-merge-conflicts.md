@@ -4,9 +4,10 @@ type: thoughts
 post_dir: thoughts
 date: 2025-10-17
 status: published
-tags: ["ai", "testing"]
+tags:
+- ai
+- testing
 ---
-
 Its a beautiful sunny Monday, you had prepared changes well tested on Friday. But today, just for today, Bill had to merge their hotfix into your changes as well. Well, they did.
 
 And I didn't bother about it. It had some merge conflicts which Bill resolves happily (I thought). Everything is green, but some things are red, due to the size of PR I thought, (+3079 -789) changes. Phew!

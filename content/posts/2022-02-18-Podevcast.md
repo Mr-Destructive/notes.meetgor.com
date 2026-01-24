@@ -1,15 +1,20 @@
 ---
 type: post
-title: "Podevcast: A single source for developer podcasts"
-subtitle: "Developer podcast from a single place, a podcast player static site generated using Python : Netlify x Hashnode Hackathon"
-date: 2022-02-18T22:30:00+05:30
-slug: "podevcast-project"
-tags: ["devops", "frontend", "go", "linux", "python", "testing"]
-  - python
-  - hashnode
+title: 'Podevcast: A single source for developer podcasts'
+subtitle: 'Developer podcast from a single place, a podcast player static site generated
+  using Python : Netlify x Hashnode Hackathon'
+date: 2022-02-18 22:30:00+05:30
+slug: podevcast-project
 image_url: https://meetgor-cdn.pages.dev/podevcast-python.png
+tags:
+- devops
+- frontend
+- go
+- hashnode
+- linux
+- python
+- testing
 ---
-
 ## Introduction
 
 Hello Developers! Want to listen to programming podcasts from a single place? Podevcast is the place you should be searching for. 

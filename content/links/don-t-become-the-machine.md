@@ -8,7 +8,6 @@ preview_description: "I was recently recommended a YouTube video with the follow
 preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
 title: Don’t become the machine
 ---
-
 # Don’t become the machine
 
 **Link:** https://armeet.bearblog.dev/becoming-the-machine/

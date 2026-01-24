@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-primary-key-column-constraint
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite: PRIMARY KEY column constraint'
 tags:
 - sql
-title: 'SQLite: PRIMARY KEY column constraint'
 ---
-
 # SQLite: PRIMARY KEY column constraint
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-primary-key-column-constraint

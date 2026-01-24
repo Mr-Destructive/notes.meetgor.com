@@ -2,11 +2,10 @@
 date: 2026-01-02
 draft: false
 link: https://x.com/karpathy/status/2002118205729562949
+title: Andrej Karapathy’s 2025 LLM Year in Review
 tags:
 - ai
-title: Andrej Karapathy’s 2025 LLM Year in Review
 ---
-
 # Andrej Karapathy’s 2025 LLM Year in Review
 
 **Link:** https://x.com/karpathy/status/2002118205729562949

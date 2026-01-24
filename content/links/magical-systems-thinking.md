@@ -6,11 +6,10 @@ preview_description: Systems thinking promises to give us a toolkit to design co
   systems that work from the ground up. It fails because it ignores that systems fight
   back.
 preview_image: https://wip.gatspress.com/wp-content/uploads/2025/09/Factorio-3-scaled.jpg
+title: Magical Systems Thinking
 tags:
 - ai
-title: Magical Systems Thinking
 ---
-
 # Magical Systems Thinking
 
 **Link:** https://worksinprogress.co/issue/magical-systems-thinking/

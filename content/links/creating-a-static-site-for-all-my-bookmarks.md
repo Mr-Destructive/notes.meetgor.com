@@ -8,7 +8,6 @@ preview_description: To help me keep track of interesting links, I created a sta
 preview_image: https://alexwlchan.net/images/cards/2025/bookmarks-static-site.png
 title: Creating a static site for all my bookmarks
 ---
-
 # Creating a static site for all my bookmarks
 
 **Link:** https://alexwlchan.net/2025/bookmarks-static-site/

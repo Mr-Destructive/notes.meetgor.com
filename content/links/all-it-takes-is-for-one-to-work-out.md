@@ -8,7 +8,6 @@ preview_description: More than a decade ago, when I was applying to graduate sch
 preview_image: https://alearningaday.blog/wp-content/uploads/2017/05/cropped-alearningadaylogov6.png?w=200
 title: All it takes is for one to work out
 ---
-
 # All it takes is for one to work out
 
 **Link:** https://alearningaday.blog/2025/11/28/all-it-takes-is-for-one-to-work-out-2/

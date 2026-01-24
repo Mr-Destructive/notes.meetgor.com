@@ -1,13 +1,14 @@
 ---
-type: til 
-title: "Django: Get list of all models and associated fields in a django project"
-description: "Get the list of all the models and associated fields/attributes in a django project or an application"
+type: til
+title: 'Django: Get list of all models and associated fields in a django project'
+description: Get the list of all the models and associated fields/attributes in a
+  django project or an application
 date: 2022-08-02 15:30:00
 status: published
 slug: django-list-models
-tags: ["python"]
+tags:
+- python
 ---
-
 ## Context
 
 Let's say we want the list of all the models and associated attributes in all the applications of a django project, we can do that using the [django.apps](https://docs.djangoproject.com/en/4.0/ref/applications/) with apps method. 

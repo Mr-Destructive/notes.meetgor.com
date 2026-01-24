@@ -1,10 +1,10 @@
 ---
-title: "Thoughts: Just fucking use kubernetes"
+title: 'Thoughts: Just fucking use kubernetes'
 date: 2026-01-24
 draft: false
-tags: ["devops"]
+tags:
+- devops
 ---
-
 # Thoughts: Just fucking use kubernetes
 
 **Link:** https://www.meetgor.com/thoughts/just-fucking-use-kubernetes/

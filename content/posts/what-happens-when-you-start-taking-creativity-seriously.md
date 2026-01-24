@@ -1,13 +1,13 @@
 ---
-title: "What happens when you start taking creativity seriously"
-date: 2026-01-08T13:42:27Z
+title: What happens when you start taking creativity seriously
+date: 2026-01-08 13:42:27+00:00
 slug: what-happens-when-you-start-taking-creativity-seriously
 draft: false
 type: link
-description: ""
-tags: ["career"]
+description: ''
+tags:
+- career
 ---
-
 > You have to defend your creativity
 
 That just triggered me up.

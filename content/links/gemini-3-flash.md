@@ -2,12 +2,11 @@
 date: 2025-12-19
 draft: false
 link: https://youtu.be/rddX4GEeyvE
-tags:
-- ai
 title: Gemini 3 Flash
 youtube_id: rddX4GEeyvE
+tags:
+- ai
 ---
-
 # Gemini 3 Flash
 
 **Link:** https://youtu.be/rddX4GEeyvE

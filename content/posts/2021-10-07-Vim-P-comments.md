@@ -1,14 +1,20 @@
 ---
 type: post
-title: "Comment/Uncomment Code: Vim for Programmers"
-subtitle: "A short guide to comment/uncomment chunks of code effectively in Vim"
-date: 2021-10-07T16:45:42+05:30
-slug: "vim-un-comment-p1"
-tags: ["frontend", "go", "linux", "neovim", "python", "rust", "testing"]
-  - vim
+title: 'Comment/Uncomment Code: Vim for Programmers'
+subtitle: A short guide to comment/uncomment chunks of code effectively in Vim
+date: 2021-10-07 16:45:42+05:30
+slug: vim-un-comment-p1
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288865/blogmedia/jbs2hcaiplfvwsgrcfgl.png
+tags:
+- frontend
+- go
+- linux
+- neovim
+- python
+- rust
+- testing
+- vim
 ---
-
 ## Introduction
 
 We as programmers always fiddle with commenting out code for code testing, documenting the function of code, and most importantly debugging. So you can't wait to comment on a large chunk of code manually, as it is quite a tedious thing to do. Let's do it effectively in Vim.

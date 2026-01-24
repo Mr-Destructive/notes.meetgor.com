@@ -1,14 +1,19 @@
 ---
 type: post
-title: "Vim: NERDTree"
-subtitle: "Customizing the NERDTree plugin in Vim for enhancing file management and navigation."
-date: 2021-08-31T20:45:06+05:30
-slug: "vim-nerdtree"
-tags: ["frontend", "git", "go", "linux", "neovim"]
-  - vim
+title: 'Vim: NERDTree'
+subtitle: Customizing the NERDTree plugin in Vim for enhancing file management and
+  navigation.
+date: 2021-08-31 20:45:06+05:30
+slug: vim-nerdtree
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286953/blogmedia/pqolzpdehob0xj3sdohr.png
+tags:
+- frontend
+- git
+- go
+- linux
+- neovim
+- vim
 ---
-
 ## Introduction
 
 [NERDTree](https://github.com/preservim/nerdtree) is a great plugin in Vim for managing and navigating Files. Some might prefer fzf, telescope, and other plugins for navigation, NERDTree is not a bad option to begin within Vim. NERDTree allows you to even create/delete/move files and folders flawlessly without much effort, so it becomes a much more viable beginner's plugin.

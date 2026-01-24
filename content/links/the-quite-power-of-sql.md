@@ -2,11 +2,10 @@
 date: 2025-11-14
 draft: false
 link: https://blog.sturdystatistics.com/posts/sql/
+title: The quite power of SQL
 tags:
 - sql
-title: The quite power of SQL
 ---
-
 # The quite power of SQL
 
 **Link:** https://blog.sturdystatistics.com/posts/sql/

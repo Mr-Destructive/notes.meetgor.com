@@ -1,12 +1,12 @@
 ---
 type: til
-title: "Python: Search and Replace in File"
-date: 2022-03-28T18:59:30
-slug: "python-search-replace-file"
-tags: ["frontend", "python"]
-  - python
+title: 'Python: Search and Replace in File'
+date: 2022-03-28 18:59:30
+slug: python-search-replace-file
+tags:
+- frontend
+- python
 ---
-
 ## Searching and Replacing the text in a File
 
 Using simple python semantics, we can perform search and replace in a file. Firstly, we will define the file name, along with the words to search and replace. After defining the sets of variables, we will open the file in `r+` mode i.e. we can perform read as well as write operations in the file.

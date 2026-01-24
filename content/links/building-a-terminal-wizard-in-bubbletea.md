@@ -5,7 +5,6 @@ link: https://youtu.be/Gl31diSVP8M
 title: Building a terminal wizard in BubbleTea
 youtube_id: Gl31diSVP8M
 ---
-
 # Building a terminal wizard in BubbleTea
 
 **Link:** https://youtu.be/Gl31diSVP8M

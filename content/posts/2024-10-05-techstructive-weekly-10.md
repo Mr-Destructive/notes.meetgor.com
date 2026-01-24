@@ -1,11 +1,16 @@
 ---
-title: "Techstructive Weekly #10"
-type: "newsletter"
+title: 'Techstructive Weekly #10'
+type: newsletter
 date: 2024-10-05
-slug: "techstructive-weekly-10"
-tags: ["ai", "devops", "go", "neovim", "newsletter", "sql"]
+slug: techstructive-weekly-10
+tags:
+- ai
+- devops
+- go
+- neovim
+- newsletter
+- sql
 ---
-
 ## Week #10
 
 Wrapping up the third quarter with a burst of energy! This week felt more mentally demanding, but as the week closed, I realized that even small progress is still progress. Sometimes, numbers don’t tell the whole story—they can shift perceptions or even mislead. I believe in valuing the journey more than the destination, and this week’s coding, learning, and creating was worth more than any metric can show.

@@ -1,11 +1,12 @@
 ---
 type: sqlog
 slug: sqlite-create-temp-table
-title: "SQLite SQL: Create Temporary Table"
-date: "2025-09-24"
-tags: ["ai", "sql"]
+title: 'SQLite SQL: Create Temporary Table'
+date: '2025-09-24'
+tags:
+- ai
+- sql
 ---
-
 ## Temporary Table in SQLite
 
 A Temporary table as the name suggests, is a temporary table. It only resisdes on the database until the current session of the database.

@@ -16,12 +16,11 @@ preview_description: "He has heard the whispers, â\x80\x9Che is getting older, 
   \ space has been trained to look for red flags, scanning for things that you know\
   \ will go wrong."
 preview_image: https://www.allthingsdistributed.com/images/age.png
+title: Development gets better with age
 tags:
 - ai
 - frontend
-title: Development gets better with age
 ---
-
 # Development gets better with age
 
 **Link:** https://www.allthingsdistributed.com/2025/10/better-with-age.html

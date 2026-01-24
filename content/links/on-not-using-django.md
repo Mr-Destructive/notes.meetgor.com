@@ -6,11 +6,10 @@ preview_description: "Here's a question:\r\n\r\n\"What will generative AI do to 
   \ the tools that help you set up a project quickly and bolt on features to those\
   \ projects? Will genera..."
 preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
+title: On not using Django
 tags:
 - python
-title: On not using Django
 ---
-
 # On not using Django
 
 **Link:** https://www.natemeyvis.com/on-not-using-django-in-2026/

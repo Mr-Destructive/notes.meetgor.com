@@ -4,7 +4,6 @@ draft: false
 link: https://blog.enamya.me/posts/bcrypt-limitation
 title: How bcrypt can be unsafe for more than 72 characters
 ---
-
 # How bcrypt can be unsafe for more than 72 characters
 
 **Link:** https://blog.enamya.me/posts/bcrypt-limitation

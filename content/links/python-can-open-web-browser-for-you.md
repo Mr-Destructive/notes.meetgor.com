@@ -5,11 +5,10 @@ link: https://koaning.io/posts/python-can-open-a-webbrowser-for-you/
 preview_description: 'I have a line in my `justfile` that goes like this:  ```bash
   serve port='
 preview_image: https://koaning.io/posts/python-can-open-a-webbrowser-for-you/social.png
+title: Python can open web browser for you
 tags:
 - python
-title: Python can open web browser for you
 ---
-
 # Python can open web browser for you
 
 **Link:** https://koaning.io/posts/python-can-open-a-webbrowser-for-you/

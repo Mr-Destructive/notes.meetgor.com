@@ -6,12 +6,11 @@ preview_description: 'Every decade brings new promises: this time, we''ll finall
   make software development simple enough that we won''t need so many developers.
   From COBOL to AI, the pattern repeats. Business leaders gro...'
 preview_image: https://www.caimito.net/img/blog/the-recurring-dream-of-replacing-developers.jpg
+title: The recurring dream of replacing developers
 tags:
 - ai
 - frontend
-title: The recurring dream of replacing developers
 ---
-
 # The recurring dream of replacing developers
 
 **Link:** https://www.caimito.net/en/blog/2025/12/07/the-recurring-dream-of-replacing-developers.html

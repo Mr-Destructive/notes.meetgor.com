@@ -2,12 +2,11 @@
 date: 2025-11-21
 draft: false
 link: https://youtu.be/vrTrOCQZoQE
-tags:
-- ai
 title: The probelm with AI Slop
 youtube_id: vrTrOCQZoQE
+tags:
+- ai
 ---
-
 # The probelm with AI Slop
 
 **Link:** https://youtu.be/vrTrOCQZoQE

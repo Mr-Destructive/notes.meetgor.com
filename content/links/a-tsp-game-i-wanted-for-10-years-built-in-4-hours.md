@@ -7,11 +7,10 @@ preview_description: For a decade, I’ve wanted to build a simple game that sho
   party when someone asks “so what does your company actually do?” Something my kids
   could play and understand why dad stares at vehicle routing problems all […]
 preview_image: https://www.graphhopper.com/wp-content/uploads/2025/12/tsp-game-image.png
+title: 'A TSP game I wanted for 10 years: built in 4 hours'
 tags:
 - ai
-title: 'A TSP game I wanted for 10 years: built in 4 hours'
 ---
-
 # A TSP game I wanted for 10 years: built in 4 hours
 
 **Link:** https://www.graphhopper.com/blog/2025/12/08/a-tsp-game-10-years-in-the-making-built-in-4-hours/

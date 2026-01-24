@@ -1,11 +1,11 @@
 ---
 type: sqlog
 slug: sqlite-one-to-many-foreign-key
-title: "SQLite SQL: One to Many Relation with Foreign Key"
-date: "2025-09-16"
-tags: ["sql"]
+title: 'SQLite SQL: One to Many Relation with Foreign Key'
+date: '2025-09-16'
+tags:
+- sql
 ---
-
 ## One to Many Relation with Foreign Key
 
 Back to the question that we raised in the [previous](https://www.meetgor.com/sqlog/sqlite-foreign-key-table-constraint/) post, "What would happen if there are more than one row in the primary table that references the same id in the foreign table?"

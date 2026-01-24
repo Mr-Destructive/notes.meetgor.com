@@ -7,7 +7,6 @@ preview_description: In a world where ideas are cheap and software is cheaper, w
 preview_image: https://davekiss.com/og/ideas-are-cheap-execution-is-cheaper.png
 title: Ideas are cheap, Execution is cheaper
 ---
-
 # Ideas are cheap, Execution is cheaper
 
 **Link:** https://davekiss.com/blog/ideas-are-cheap-execution-is-cheaper/

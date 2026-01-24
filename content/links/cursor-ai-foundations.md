@@ -6,11 +6,10 @@ preview_description: A six-part video series on AI foundations, designed for beg
   to learn concepts like tokens, context, and agents. Read all chapters, check your
   knowledge...
 preview_image: https://i.ytimg.com/vi/IccjZDV93lw/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB2Mu3VSJM9QVAkFdPp0CuZYpMpCw&days_since_epoch=20477
+title: Cursor AI Foundations
 tags:
 - ai
-title: Cursor AI Foundations
 ---
-
 # Cursor AI Foundations
 
 **Link:** https://youtube.com/playlist?list=PLuI2ZfvGpzwCEXrl_K6bW5OqNpZq3HkMa&si=NmxQoNkfB8-0zCZP

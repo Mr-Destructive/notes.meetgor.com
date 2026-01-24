@@ -6,11 +6,10 @@ preview_description: It seems so rude and careless to make me, a person with tho
   ideas, humor, contradictions and life experience to read something spit out by the
   equivale...
 preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
+title: It's insulting to read your AI-generated blog post
 tags:
 - ai
-title: It's insulting to read your AI-generated blog post
 ---
-
 # It's insulting to read your AI-generated blog post
 
 **Link:** https://blog.pabloecortez.com/its-insulting-to-read-your-ai-generated-blog-post/

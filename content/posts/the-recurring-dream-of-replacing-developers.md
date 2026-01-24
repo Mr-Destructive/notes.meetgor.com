@@ -1,13 +1,13 @@
 ---
-title: "The recurring dream of replacing developers"
-date: 2026-01-19T11:40:36Z
+title: The recurring dream of replacing developers
+date: 2026-01-19 11:40:36+00:00
 slug: the-recurring-dream-of-replacing-developers
 draft: false
 type: link
-description: ""
-tags: ["ai"]
+description: ''
+tags:
+- ai
 ---
-
 - what a flashback, everything makes sense.
 - Programming is not mechanical
 - yet people tried hard to make solve for it as it was mechanical

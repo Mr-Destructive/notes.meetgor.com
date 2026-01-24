@@ -4,7 +4,6 @@ draft: false
 link: https://philipotoole.com/why-talking-to-llms-has-improved-my-thinking/
 title: Why talking to LLMs have improved my thinking
 ---
-
 # Why talking to LLMs have improved my thinking
 
 **Link:** https://philipotoole.com/why-talking-to-llms-has-improved-my-thinking/

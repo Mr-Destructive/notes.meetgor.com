@@ -7,7 +7,6 @@ preview_description: A blog where I put any experiments and thoughts concerning 
 preview_image: https://www.pearprogramming.blog/images/card-image-large.png
 title: Growing Software
 ---
-
 # Growing Software
 
 **Link:** https://www.pearprogramming.blog/programming/opinions/2025/11/11/why-rails-just-stayed-with-me/

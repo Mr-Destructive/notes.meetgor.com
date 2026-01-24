@@ -1,17 +1,20 @@
 ---
 type: post
-title: "Django Basics: Creating Models"
-subtitle: "Understanding and Structuring a Database Schema with Models in Django"
-date: 2022-01-04T22:15:00+05:30
-slug: "django-basics-models"
-series: ["Django-Basics"]
-tags: ["frontend", "go", "python", "sql"]
-  - django
-  - python
-  - web-development
+title: 'Django Basics: Creating Models'
+subtitle: Understanding and Structuring a Database Schema with Models in Django
+date: 2022-01-04 22:15:00+05:30
+slug: django-basics-models
+series:
+- Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1641315473/blogmedia/dj-7_ixfkka.png
+tags:
+- django
+- frontend
+- go
+- python
+- sql
+- web-development
 ---
-
 ## Introduction
 
 We have seen the basics of Django templating in the previous parts of the series. Now, we can move on to the more backend stuff in Django which deals with the Databases, queries, admin section, and so on. In this particular part, we'll cover the fundamental part of any application in Django i.e the `Model`. We'll understand what the model is, how to structure one, how to create relationships and add constraints on the fields, etc. 

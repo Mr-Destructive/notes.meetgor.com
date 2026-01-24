@@ -1,12 +1,15 @@
 ---
-type: "sqlog"
-title: "Advent of SQL 2025: Wish List"
-slug: "advent-of-sql-2025-day-1"
+type: sqlog
+title: 'Advent of SQL 2025: Wish List'
+slug: advent-of-sql-2025-day-1
 date: 2025-12-16T15:30:00+0530
-series: ["advent-of-sql-2025"]
-tags: ["frontend", "sql", "testing"]
+series:
+- advent-of-sql-2025
+tags:
+- frontend
+- sql
+- testing
 ---
-
 ## Learning SQLite: Advent of SQL Day 1
 
 I am trying to learn SQLite, I want to understand that database. It's quite simple yet the whole world uses it for various kinds of things ranging from developers' toy database to spaceships. What a tiny engineering marvel!

@@ -7,7 +7,6 @@ preview_description: If you have the skills, why not build your own online space
 preview_image: https://michaelenger.com/
 title: Make your own website
 ---
-
 # Make your own website
 
 **Link:** https://michaelenger.com/blog/make-your-own-website/

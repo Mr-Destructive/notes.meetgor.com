@@ -4,11 +4,10 @@ draft: false
 link: https://antonz.org/write-code/
 preview_description: You are a software engineer. Don't become a prompt refiner.
 preview_image: https://antonz.org/write-code/cover.png
+title: Write the damn code
 tags:
 - ai
-title: Write the damn code
 ---
-
 # Write the damn code
 
 **Link:** https://antonz.org/write-code/

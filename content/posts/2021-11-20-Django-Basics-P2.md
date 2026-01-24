@@ -1,17 +1,20 @@
 ---
 type: post
-title: "Django Basics: Setup and Installation"
-subtitle: "Setting up environment and installing Django framework"
-date: 2021-11-20T16:30:00+05:30
-slug: "django-basics-setup"
-series: ["Django-Basics"]
-tags: ["frontend", "go", "linux", "python"]
-  - django
-  - python
-  - web-development
+title: 'Django Basics: Setup and Installation'
+subtitle: Setting up environment and installing Django framework
+date: 2021-11-20 16:30:00+05:30
+slug: django-basics-setup
+series:
+- Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643290071/blogmedia/s8ahlep1e8lmgiboyjhz.png
+tags:
+- django
+- frontend
+- go
+- linux
+- python
+- web-development
 ---
-
 ## Introduction
 
 The crucial aspect of starting to learn any framework is the ease to set it up and Django by far is the easiest of the options out there. There is just a few lines of code to install django if you already have python installed in your system. In this article, we see how to setup a django project along with a virtual environment. 

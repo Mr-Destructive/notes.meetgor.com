@@ -6,11 +6,10 @@ preview_description: A story about how Claude, an AI coding agent, solved a comp
   Terraform schema bug in mirrord not by brute force, but by reasoning its way out
   with a helper script it wrote for itself.
 preview_image: https://metalbear.com/blog/claude-experience/thumbnail.png
+title: How I learned to stop worrying and started trusting and using AI Agents
 tags:
 - ai
-title: How I learned to stop worrying and started trusting and using AI Agents
 ---
-
 # How I learned to stop worrying and started trusting and using AI Agents
 
 **Link:** https://metalbear.com/blog/claude-experience/

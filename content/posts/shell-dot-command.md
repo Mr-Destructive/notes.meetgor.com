@@ -1,11 +1,12 @@
 ---
-type: "sqlog"
-title: "SQLite dot commands: run system shell commands"
+type: sqlog
+title: 'SQLite dot commands: run system shell commands'
 slug: sqlite-shell-dot-command
 date: 2025-08-30
-tags: ["go", "sql"]
+tags:
+- go
+- sql
 ---
-
 ## Shell dot command
 
 If you are in middle of a sqlite shell session, and you don't want to quit the shell to run arbitrary shell command, you can simply use the `.shell <command>` to execute any shell commands right from within the sqlite shell. How handy is this!

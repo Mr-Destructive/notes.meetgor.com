@@ -2,12 +2,11 @@
 date: 2025-09-19
 draft: false
 link: https://jenson.org/boring/
+title: Boring is good
 tags:
 - frontend
 - python
-title: Boring is good
 ---
-
 # Boring is good
 
 **Link:** https://jenson.org/boring/

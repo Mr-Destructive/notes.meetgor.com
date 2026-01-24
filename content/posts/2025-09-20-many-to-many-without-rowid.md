@@ -1,11 +1,13 @@
 ---
 type: sqlog
 slug: sqlite-many-to-many-table-without-rowid
-title: "SQLite SQL: Many to Many Table without RowID"
-date: "2025-09-20"
-tags: ["ai", "rust", "sql"]
+title: 'SQLite SQL: Many to Many Table without RowID'
+date: '2025-09-20'
+tags:
+- ai
+- rust
+- sql
 ---
-
 ## Many to Many Relation
 
 We saw the basic example of [Many-To-Many](https://www.meetgor.com/sqlog/sqlite-many-to-many-relations/) Relation in the second last post from this, there we just focused on the concept of the relation and not so much on the structure of the junction table.

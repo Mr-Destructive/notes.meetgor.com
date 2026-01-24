@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-create-table-column-types/
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite: Create Tables with columns'
 tags:
 - sql
-title: 'SQLite: Create Tables with columns'
 ---
-
 # SQLite: Create Tables with columns
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-create-table-column-types/

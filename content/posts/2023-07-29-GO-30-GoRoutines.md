@@ -1,14 +1,16 @@
 ---
 type: post
-title: "Golang: Go Routines and WaitGroups"
-date: 2023-07-29T15:15:00
-slug: "golang-go-routines"
-series: ["100-days-of-golang"]
-tags: ["go", "linux", "sql"]
-  - go
+title: 'Golang: Go Routines and WaitGroups'
+date: 2023-07-29 15:15:00
+slug: golang-go-routines
+series:
+- 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-030-goroutines.png
+tags:
+- go
+- linux
+- sql
 ---
-
 ## Introduction
 
 One of the key features that set Go apart from many other languages is its native support for Goroutines - lightweight concurrent functions that can run concurrently and efficiently manage concurrency tasks. Goroutines are an essential aspect of Go's concurrency model, enabling developers to build highly concurrent and performant applications effortlessly.

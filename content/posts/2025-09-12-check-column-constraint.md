@@ -2,10 +2,12 @@
 type: sqlog
 slug: sqlite-check-column-constraint
 title: 'SQLite SQL: CHECK column constraint'
-date: "2025-09-12"
-tags: ["frontend", "sql", "testing"]
+date: '2025-09-12'
+tags:
+- frontend
+- sql
+- testing
 ---
-
 ## The CHECK column constraint
 
 The [CHECK](https://sqlite.org/lang_createtable.html#check_constraints) clause is a column constraint that allows us to define certain conditions that we want to evaluate before inserting the column for the row and populate it accordingly. In this post, we will check, what this check is and when it is performed.

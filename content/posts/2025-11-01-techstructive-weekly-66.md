@@ -1,11 +1,14 @@
 ---
-title: "Techstructive Weekly 66"
-type: "newsletter"
-date: 2025-11-01T00:00:00Z
+title: Techstructive Weekly 66
+type: newsletter
+date: 2025-11-01 00:00:00+00:00
 draft: false
-tags: ["ai", "newsletter", "python", "testing"]
+tags:
+- ai
+- newsletter
+- python
+- testing
 ---
-
 ## Week #66
 It was a silent week, chipping away the days like wasted days. I didn’t do much, honestly, it was tiring and draining. I spent the weekend outside, had a few chores to complete, and didn’t quite get the time to sit at peace. This weekend too, looks the same. Post Diwali rituals, guests, and functions. 
 

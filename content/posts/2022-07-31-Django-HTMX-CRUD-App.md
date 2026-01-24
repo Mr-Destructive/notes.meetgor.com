@@ -1,16 +1,19 @@
 ---
 type: post
-title: "Django + HTMX CRUD application"
-date: 2022-07-31T12:30:00
-slug: "django-htmx-crud"
-series: ["Django-Series"]
-tags: ["frontend", "go", "python", "sql"]
-  - django
-  - htmx
-  - python
+title: Django + HTMX CRUD application
+date: 2022-07-31 12:30:00
+slug: django-htmx-crud
+series:
+- Django-Series
 image_url: https://meetgor-cdn.pages.dev/django-htmx-crud.png
+tags:
+- django
+- frontend
+- go
+- htmx
+- python
+- sql
 ---
-
 ## Introduction
 
 Gone are the days of writing Ajax requests with javascript, just add a few parameters to the HTML content tags and you will be ready for sending requests to your backend. So, we are going back in time and correcting the way we think of APIs and client/server-side rendering. We are referring to the [Hypermedia model](https://en.wikipedia.org/wiki/Hypermedia) for levering the server-side processing of data. Let's get our feets wet with this ancient but revolutionary methodology of development with [HTMX](https://htmx.org/).

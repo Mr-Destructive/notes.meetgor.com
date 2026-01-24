@@ -4,7 +4,6 @@ draft: false
 link: https://entropicthoughts.com/software-never-fails
 title: Software never Fails
 ---
-
 # Software never Fails
 
 **Link:** https://entropicthoughts.com/software-never-fails

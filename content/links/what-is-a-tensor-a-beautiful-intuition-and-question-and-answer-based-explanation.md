@@ -5,7 +5,6 @@ link: https://youtu.be/k2FP-T6S1x0
 title: What is a Tensor? A beautiful intuition and question and answer based explanation
 youtube_id: k2FP-T6S1x0
 ---
-
 # What is a Tensor? A beautiful intuition and question and answer based explanation
 
 **Link:** https://youtu.be/k2FP-T6S1x0

@@ -10,7 +10,6 @@ preview_description: 'The only way many tech workers in the US can get a long br
 preview_image: https://world.hey.com/dhh/avatar-fb368b1ee9b185dc2a09b03eabdb61678dd55244
 title: Sabbaticals keep our attrition at bay
 ---
-
 # Sabbaticals keep our attrition at bay
 
 **Link:** https://world.hey.com/dhh/sabbaticals-keep-our-attrition-at-bay-9ccba5c0

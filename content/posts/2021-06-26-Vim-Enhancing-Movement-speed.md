@@ -1,14 +1,15 @@
 ---
 type: post
-title: "Vim: Enhancing Movement Speed"
-subtitle: "Learning to Fly and Glid in Vim!"
-date: 2021-06-26T15:27:05+05:30
-slug: "vim-movement-speed"
-tags: ["go", "neovim"]
-  - vim
+title: 'Vim: Enhancing Movement Speed'
+subtitle: Learning to Fly and Glid in Vim!
+date: 2021-06-26 15:27:05+05:30
+slug: vim-movement-speed
 image_url: https://meetgor-cdn.pages.dev/vim-enchancing-moment-speed.webp
+tags:
+- go
+- neovim
+- vim
 ---
-
 ![]({{ page.image | relative_url }})
 ## Introduction
 OK! Vim and movement are like bread and butter or failed brakes. To become a proficient Vim user, you need to move in Vim very effectively. You don't have to think about doing certain things, your fingertips should automatically move without wasting time thinking about it. I am sure, it takes time and effort but OH! it is so rewarding in the end.  

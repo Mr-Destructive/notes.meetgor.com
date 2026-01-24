@@ -2,11 +2,10 @@
 date: 2025-10-10
 draft: false
 link: https://yossarian.net/til/post/python-s-splitlines-does-a-lot-more-than-just-newlines/
+title: Python splitlines does a lot more than new lines
 tags:
 - python
-title: Python splitlines does a lot more than new lines
 ---
-
 # Python splitlines does a lot more than new lines
 
 **Link:** https://yossarian.net/til/post/python-s-splitlines-does-a-lot-more-than-just-newlines/

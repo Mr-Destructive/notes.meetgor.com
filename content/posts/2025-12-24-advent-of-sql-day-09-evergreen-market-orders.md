@@ -1,12 +1,15 @@
 ---
-type: "sqlog"
-title: "Advent of SQL 2025 Day 9: Evergreen Market Orders"
-slug: "advent-of-sql-2025-day-9"
+type: sqlog
+title: 'Advent of SQL 2025 Day 9: Evergreen Market Orders'
+slug: advent-of-sql-2025-day-9
 date: 2025-12-24T15:30:00+0530
-series: ["advent-of-sql-2025"]
-tags: ["frontend", "go", "sql"]
+series:
+- advent-of-sql-2025
+tags:
+- frontend
+- go
+- sql
 ---
-
 ## Advent of SQL, Day 9 - Evergreen Market Orders
 
 We are on day 9 of advent of SQL, and I feel good so far.

@@ -1,13 +1,13 @@
 ---
 type: post
-title: "Safely using Maps in Golang: Differences in declaration and initialization"
-date: 2024-08-31T18:30:00
-slug: "golang-safely-using-maps"
-tags: ["go", "linux"]
-  - go
+title: 'Safely using Maps in Golang: Differences in declaration and initialization'
+date: 2024-08-31 18:30:00
+slug: golang-safely-using-maps
 image_url: https://meetgor-cdn.pages.dev/golang-safe-map-usage.png
+tags:
+- go
+- linux
 ---
-
 ## Introduction
 
 This week, I was working on one of the API wrapper packages for golang, and that dealt with sending post requests with URL encoded values, setting cookies, and all the fun stuff. However, while I was constructing the body, I was using [url.Value](https://pkg.go.dev/net/url#Values) type to construct the body, and use that to add and set key-value pairs. However, I was getting a wired `nil` pointer reference error in some of the parts, I thought it was because of some of the variables I set manually. However, by debugging closer, I found out a common pitfall or bad practice of just declaring a type but initializing it and that causing `nil` reference errors.

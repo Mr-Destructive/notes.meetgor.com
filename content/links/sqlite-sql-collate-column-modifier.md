@@ -4,11 +4,10 @@ draft: false
 link: https://www.meetgor.com/sqlog/sqlite-collate-column-modifier
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
+title: 'SQLite SQL: Collate Column Modifier'
 tags:
 - sql
-title: 'SQLite SQL: Collate Column Modifier'
 ---
-
 # SQLite SQL: Collate Column Modifier
 
 **Link:** https://www.meetgor.com/sqlog/sqlite-collate-column-modifier

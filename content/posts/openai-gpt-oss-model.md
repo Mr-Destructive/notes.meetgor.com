@@ -1,10 +1,9 @@
 ---
 type: thoughts
-title: "OpenAI releases Open Weight models GPT-OSS"
-date: 2025-08-06T00:00:00
-slug: "openai-open-weight-oss-model"
+title: OpenAI releases Open Weight models GPT-OSS
+date: 2025-08-06 00:00:00
+slug: openai-open-weight-oss-model
 ---
-
 # [Introducing gpt-oss](https://openai.com/index/introducing-gpt-oss/)
 
 I ran a few tests on the 20B parameter

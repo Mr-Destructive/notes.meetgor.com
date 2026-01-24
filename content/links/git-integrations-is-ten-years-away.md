@@ -2,12 +2,11 @@
 date: 2026-01-02
 draft: false
 link: https://blog.ploeh.dk/2025/12/29/git-integration-is-ten-years-away/
+title: Git Integrations is ten years away
 tags:
 - ai
 - git
-title: Git Integrations is ten years away
 ---
-
 # Git Integrations is ten years away
 
 **Link:** https://blog.ploeh.dk/2025/12/29/git-integration-is-ten-years-away/

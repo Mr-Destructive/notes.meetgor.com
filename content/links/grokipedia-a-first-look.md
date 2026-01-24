@@ -7,11 +7,10 @@ preview_description: 'To begin with my credentials for those who arrive here not
   projects, including Wikipedia.((I founded Nupedia and Wikipedia, advised the design
   and launch of Encyclopedia of Earth, founded Citizendium, and found'
 preview_image: https://larrysanger.org/wp-content/uploads/2025/10/Selection_497-1.png
+title: 'Grokipedia: A first look'
 tags:
 - ai
-title: 'Grokipedia: A first look'
 ---
-
 # Grokipedia: A first look
 
 **Link:** https://larrysanger.org/2025/10/grokipedia-a-first-look/

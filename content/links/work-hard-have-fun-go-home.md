@@ -2,11 +2,10 @@
 date: 2025-09-19
 draft: false
 link: https://www.bonnycode.com/posts/work-hard-have-fun-go-home/
+title: Work Hard, have fun, go home
 tags:
 - go
-title: Work Hard, have fun, go home
 ---
-
 # Work Hard, have fun, go home
 
 **Link:** https://www.bonnycode.com/posts/work-hard-have-fun-go-home/

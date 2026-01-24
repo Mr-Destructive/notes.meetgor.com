@@ -4,7 +4,6 @@ draft: false
 link: https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be
 title: Why Transformers must hallucinate
 ---
-
 # Why Transformers must hallucinate
 
 **Link:** https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be

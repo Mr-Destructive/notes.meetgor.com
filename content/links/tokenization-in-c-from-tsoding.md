@@ -5,7 +5,6 @@ link: https://youtu.be/6dCqR9p0yWY
 title: Tokenization in C from Tsoding
 youtube_id: 6dCqR9p0yWY
 ---
-
 # Tokenization in C from Tsoding
 
 **Link:** https://youtu.be/6dCqR9p0yWY

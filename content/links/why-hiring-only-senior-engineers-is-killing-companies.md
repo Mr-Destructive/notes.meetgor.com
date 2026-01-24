@@ -7,11 +7,10 @@ preview_description: ' Weave combines LLMs and domain-specific machine learning 
   How much AI is helping your team ship faster, if it''s having an impact on code
   quality and code reviews.'
 preview_image: https://framerusercontent.com/images/UAWlBqgQ9KQljrpb3ruIUgMqBEE.png
+title: Why hiring only senior engineers is killing companies
 tags:
 - ai
-title: Why hiring only senior engineers is killing companies
 ---
-
 # Why hiring only senior engineers is killing companies
 
 **Link:** https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies

@@ -8,7 +8,6 @@ preview_description: <ShamelessPlug> If you’re looking to get your development
 preview_image: https://codemanship.wordpress.com/wp-content/uploads/2025/11/image-7.png
 title: The future of software development is software developers
 ---
-
 # The future of software development is software developers
 
 **Link:** https://codemanship.wordpress.com/2025/11/25/the-future-of-software-development-is-software-developers/

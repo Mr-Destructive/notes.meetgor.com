@@ -1,14 +1,18 @@
 ---
 type: post
-title: "Scrapping the meaning of a word from dictionary.com using BASH script."
-subtitle: "Using some shell tools and utilities to understand web scrapping and making a script to scrap a webpage."
-date: 2021-07-27T11:45:03+05:30
-slug: "bash-dictionary-scrapper"
-tags: ["frontend", "go", "linux", "python"]
-  - bash
+title: Scrapping the meaning of a word from dictionary.com using BASH script.
+subtitle: Using some shell tools and utilities to understand web scrapping and making
+  a script to scrap a webpage.
+date: 2021-07-27 11:45:03+05:30
+slug: bash-dictionary-scrapper
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1627367329063/dabJLKcD-.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
+tags:
+- bash
+- frontend
+- go
+- linux
+- python
 ---
-
 ## Introduction
 
 Web Scraping is quite an interesting and powerful tool or skill to have in a Programmer's toolkit.  It helps in analyzing data and getting some information in various formats. Web Scraping is a process in which a user fetches a website's content using some pattern in those HTML tags and the desired content to be fetched or scraped.

@@ -1,11 +1,15 @@
 ---
-title: "Techstructive Weekly 67"
-type: "newsletter"
-date: 2025-11-08T00:00:00Z
+title: Techstructive Weekly 67
+type: newsletter
+date: 2025-11-08 00:00:00+00:00
 draft: false
-tags: ["ai", "career", "frontend", "go", "newsletter"]
+tags:
+- ai
+- career
+- frontend
+- go
+- newsletter
 ---
-
 ## Week #67
 It was a slow and steady week. New habits are emerging. It was a pleasant experience, I felt good, I kept myself out of the social media and content spiral doom-scrolling. Why? Because something changed the perspective of action and effect, the piece I was missing was intention.
 

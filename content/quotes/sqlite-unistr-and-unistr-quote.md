@@ -1,10 +1,11 @@
 ---
-title: "SQLite unistr and unistr_quote"
+title: SQLite unistr and unistr_quote
 date: 2026-01-24
 draft: false
-tags: ["frontend", "sql"]
+tags:
+- frontend
+- sql
 ---
-
 # SQLite unistr and unistr_quote
 
 **Link:** https://www.meetgor.com/logsql/sqlite-functions-unistr-and-unistr-quote/

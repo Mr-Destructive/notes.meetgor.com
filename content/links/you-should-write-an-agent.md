@@ -5,11 +5,10 @@ link: https://fly.io/blog/everyone-write-an-agent/
 preview_description: 'They''re like riding a bike: easy, and you don''t get it until
   you try.'
 preview_image: https://fly.io/blog/everyone-write-an-agent/assets/agents-cover.webp
+title: You should write an agent
 tags:
 - ai
-title: You should write an agent
 ---
-
 # You should write an agent
 
 **Link:** https://fly.io/blog/everyone-write-an-agent/

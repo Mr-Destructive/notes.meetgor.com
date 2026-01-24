@@ -9,7 +9,6 @@ preview_description: Shuffle has always been one of Spotify’s most-used featur
 preview_image: https://images.ctfassets.net/p762jor363g1/1fqQpB8LmmNrE8Ilbdl39q/9b2ce083c8f768e5824a696a6979df07/EN235_Shuffle__Making_Random_Feel_Right_with_logo.png
 title: 'Shuffle: Making random feel more human'
 ---
-
 # Shuffle: Making random feel more human
 
 **Link:** https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human?ref=dailydev

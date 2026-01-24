@@ -10,11 +10,10 @@ preview_description: 'For as long as I have published my books, one of my overar
   I have spent 10,000+ hours to create an accurate record of their work but I''m not
   complaining. The ''as-close-to-possible'''
 preview_image: https://inventingthefuture.ghost.io/content/images/2025/10/Screenshot-2025-10-29-at-11.03.23---am.png
+title: Mr. TIFF
 tags:
 - career
-title: Mr. TIFF
 ---
-
 # Mr. TIFF
 
 **Link:** https://inventingthefuture.ghost.io/mr-tiff/

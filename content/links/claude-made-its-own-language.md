@@ -2,12 +2,11 @@
 date: 2025-10-03
 draft: false
 link: https://youtu.be/BiFt4vw1-uM
-tags:
-- ai
 title: Claude made its own language
 youtube_id: BiFt4vw1-uM
+tags:
+- ai
 ---
-
 # Claude made its own language
 
 **Link:** https://youtu.be/BiFt4vw1-uM

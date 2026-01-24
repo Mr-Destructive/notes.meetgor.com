@@ -1,11 +1,11 @@
 ---
-type: "sqlog"
-title: "SQLite dot commands: change directory command"
+type: sqlog
+title: 'SQLite dot commands: change directory command'
 slug: sqlite-cd-dot-command
 date: 2025-08-31
-tags: ["sql"]
+tags:
+- sql
 ---
-
 ## Change directory dot command
 
 If you are in a sqlite shell and forgot to change directory or want to navigate to a separate directory, you can do that with the `.cd` dot command.

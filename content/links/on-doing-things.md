@@ -2,11 +2,10 @@
 date: 2025-11-14
 draft: false
 link: https://jalexine.github.io/on-doing-things.html
+title: On doing things
 tags:
 - frontend
-title: On doing things
 ---
-
 # On doing things
 
 **Link:** https://jalexine.github.io/on-doing-things.html

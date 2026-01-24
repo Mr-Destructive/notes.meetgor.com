@@ -1,15 +1,17 @@
 ---
 type: post
-title: "BASH Scripting Guide - PART - 2"
-subtitle: "Parsing and Managing data using Bash"
-date: 2021-07-02T15:57:34+05:30
-slug: "bash-guide-p2"
-series: ["BASH Scripting Guide"]
-tags: ["frontend", "linux"]
-  - bash
+title: BASH Scripting Guide - PART - 2
+subtitle: Parsing and Managing data using Bash
+date: 2021-07-02 15:57:34+05:30
+slug: bash-guide-p2
+series:
+- BASH Scripting Guide
 image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p2.webp
+tags:
+- bash
+- frontend
+- linux
 ---
-
 # Introduction
 
 In this part, topics such as switch cases, mathematical expression, arrays, and strings. This won't be an in-depth guide to understand each and every concept, but to make users aware of the things and features in Bash. This also would not be an absolute basic guide, I expect to have some basic programming knowledge such as binary systems, logical and mathematical concepts. Don't worry, you won't be bombarded with commands, I'll just explain with easy examples to get started.

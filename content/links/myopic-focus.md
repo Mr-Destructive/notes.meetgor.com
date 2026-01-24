@@ -13,11 +13,10 @@ preview_description: 'Chops was a developer for Initrode. Early on a Monday, the
 
   '
 preview_image: https://ellismorning.com/img/ellis2.jpeg
+title: Myopic Focus
 tags:
 - testing
-title: Myopic Focus
 ---
-
 # Myopic Focus
 
 **Link:** https://thedailywtf.com/articles/myopic-focus

@@ -2,10 +2,10 @@
 type: sqlog
 slug: sqlite-not-null-column-constraint
 title: 'SQLite SQL: NOT NULL column constraint'
-date: "2025-09-08"
-tags: ["sql"]
+date: '2025-09-08'
+tags:
+- sql
 ---
-
 ## NOT NULL Column constraint
 
 The `NOT NULL` constraint is a column-level constraint that will prevent the insertion/updation of a `NULL` value in that column record.

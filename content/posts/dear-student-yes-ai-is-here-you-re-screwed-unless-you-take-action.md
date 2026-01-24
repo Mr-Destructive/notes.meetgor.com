@@ -1,9 +1,8 @@
 ---
 type: thoughts
-title: "youre screwed unless you take action"
-date: 2025-03-09T00:00:00
+title: youre screwed unless you take action
+date: 2025-03-09 00:00:00
 ---
-
 Interesting read,
 
 > If you graduated last year and are entering the workforce this year, then it doesn't unless you take action. It's a COVID19 moment in life again.

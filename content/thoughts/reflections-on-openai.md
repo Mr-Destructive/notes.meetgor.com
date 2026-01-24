@@ -1,10 +1,10 @@
 ---
-title: "Reflections on OpenAI"
+title: Reflections on OpenAI
 date: 2026-01-24
 draft: false
-tags: ["go"]
+tags:
+- go
 ---
-
 # Reflections on OpenAI
 
 **Link:** https://calv.info/openai-reflections

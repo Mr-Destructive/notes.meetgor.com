@@ -2,12 +2,11 @@
 date: 2025-12-19
 draft: false
 link: https://simonwillison.net/2025/Dec/18/code-proven-to-work/
+title: Deliver Code you have proven to work as a software developer
 tags:
 - career
 - testing
-title: Deliver Code you have proven to work as a software developer
 ---
-
 # Deliver Code you have proven to work as a software developer
 
 **Link:** https://simonwillison.net/2025/Dec/18/code-proven-to-work/

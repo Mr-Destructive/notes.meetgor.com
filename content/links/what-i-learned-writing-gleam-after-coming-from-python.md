@@ -2,11 +2,10 @@
 date: 2026-01-02
 draft: false
 link: https://nohzafk.github.io/posts/2025-12-27-what-i-ve-learned-writting-gleam/
+title: What I learned writing Gleam, after coming from Python
 tags:
 - python
-title: What I learned writing Gleam, after coming from Python
 ---
-
 # What I learned writing Gleam, after coming from Python
 
 **Link:** https://nohzafk.github.io/posts/2025-12-27-what-i-ve-learned-writting-gleam/

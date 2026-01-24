@@ -8,11 +8,10 @@ preview_description: 'It''s pretty incredible that we''re able to run all these 
   all vastly behind the frontier models available for rent, and thus for most developers
   a curiosity a...'
 preview_image: https://world.hey.com/dhh/avatar-fb368b1ee9b185dc2a09b03eabdb61678dd55244
+title: Local LLMs are how nerds justify a big computer they don’t need
 tags:
 - ai
-title: Local LLMs are how nerds justify a big computer they don’t need
 ---
-
 # Local LLMs are how nerds justify a big computer they don’t need
 
 **Link:** https://world.hey.com/dhh/local-llms-are-how-nerds-now-justify-a-big-computer-they-don-t-need-af2fcb7b

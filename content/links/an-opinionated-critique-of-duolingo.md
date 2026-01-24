@@ -4,7 +4,6 @@ draft: false
 link: https://isomorphism.xyz/blog/2025/duolingo/
 title: An opinionated critique of Duolingo
 ---
-
 # An opinionated critique of Duolingo
 
 **Link:** https://isomorphism.xyz/blog/2025/duolingo/

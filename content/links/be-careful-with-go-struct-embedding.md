@@ -2,13 +2,12 @@
 date: 2025-09-26
 draft: false
 link: https://mattjhall.co.uk/posts/be-careful-with-go-struct-embedding.html
+title: Be careful with Go struct embedding
 tags:
 - frontend
 - go
 - sql
-title: Be careful with Go struct embedding
 ---
-
 # Be careful with Go struct embedding
 
 **Link:** https://mattjhall.co.uk/posts/be-careful-with-go-struct-embedding.html

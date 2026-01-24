@@ -1,15 +1,17 @@
 ---
 type: post
-title: "Filter and Find an Issue on GitHub"
-subtitle: "A quick guide to filter and sort issues as per your interest/skills on GitHub"
-date: 2021-09-09T17:42:30+05:30
-slug: "find-filter-github-issues"
-tags: ["git", "go", "python"]
-  - github
-  - open-source
+title: Filter and Find an Issue on GitHub
+subtitle: A quick guide to filter and sort issues as per your interest/skills on GitHub
+date: 2021-09-09 17:42:30+05:30
+slug: find-filter-github-issues
 image_url: https://meetgor-cdn.pages.dev/github-filter-issues.png
+tags:
+- git
+- github
+- go
+- open-source
+- python
 ---
-
 ## Introduction
 
 Are you stuck in finding an open-source project to contribute to? 

@@ -1,13 +1,16 @@
 ---
-type: til 
-title: "Django App from Scratch Using Docker with Debian Base Image"
-description: "Creating a django basic application with configuration for static files, templates and user authentication using docker and debian base image."
+type: til
+title: Django App from Scratch Using Docker with Debian Base Image
+description: Creating a django basic application with configuration for static files,
+  templates and user authentication using docker and debian base image.
 date: 2022-05-24 22:30:00
 status: published
 slug: django-app-from-scratch
-tags: ["devops", "linux", "neovim"]
+tags:
+- devops
+- linux
+- neovim
 ---
-
 ## Pull a Fresh Debian Image
 
 Create a docker container from a Debian image, the following command can be used to pull a debain 11-slim image and create a container of it, also enter into the container in a interactive environment `-it` mode. 
