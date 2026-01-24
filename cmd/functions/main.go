@@ -233,6 +233,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			handleTags(w, r, database)
 		case "exports":
 			handleExports(w, r, database)
+		case "metadata":
+			handleMetadata(w, r)
 		default:
 			respondError(w, http.StatusNotFound, "Resource not found")
 		}
@@ -533,6 +535,18 @@ func handleExportsPost(w http.ResponseWriter, r *http.Request, db *db.DB) {
 	}
 
 	respondJSON(w, http.StatusOK, result)
+}
+
+// handleMetadata fetches and returns metadata from a URL
+func handleMetadata(w http.ResponseWriter, r *http.Request) {
+	url := r.URL.Query().Get("url")
+	if url == "" {
+		respondError(w, http.StatusBadRequest, "Missing url parameter")
+		return
+	}
+
+	meta := fetchPageMetadata(url)
+	respondJSON(w, http.StatusOK, meta)
 }
 
 // serveCSSFile serves CSS files from public/css/

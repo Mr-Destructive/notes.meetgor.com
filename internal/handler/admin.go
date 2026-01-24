@@ -694,7 +694,7 @@ function updatePostType() {
 		const fieldset = document.createElement('fieldset');
 		fieldset.style.marginTop = '20px';
 		fieldset.style.paddingTop = '20px';
-		fieldset.style.borderTop = '1px solid #ddd';
+		fieldset.style.borderTop = '1px solid #e5e5e5';
 		
 		const legend = document.createElement('legend');
 		legend.textContent = 'Type-Specific Fields';
@@ -707,10 +707,34 @@ function updatePostType() {
 			const group = document.createElement('div');
 			group.className = 'form-group';
 			
+			const labelContainer = document.createElement('div');
+			labelContainer.style.display = 'flex';
+			labelContainer.style.justifyContent = 'space-between';
+			labelContainer.style.alignItems = 'center';
+			labelContainer.style.marginBottom = '6px';
+			
 			const label = document.createElement('label');
 			label.setAttribute('for', 'field-' + field.name);
 			label.textContent = field.label;
-			group.appendChild(label);
+			labelContainer.appendChild(label);
+			
+			if (field.name === 'url') {
+				const fetchBtn = document.createElement('button');
+				fetchBtn.type = 'button';
+				fetchBtn.textContent = 'Fetch Metadata';
+				fetchBtn.style.padding = '4px 10px';
+				fetchBtn.style.fontSize = '12px';
+				fetchBtn.style.background = '#0a0a0a';
+				fetchBtn.style.color = 'white';
+				fetchBtn.style.border = 'none';
+				fetchBtn.style.borderRadius = '4px';
+				fetchBtn.style.cursor = 'pointer';
+				fetchBtn.style.fontWeight = '500';
+				fetchBtn.onclick = fetchLinkMetadata;
+				labelContainer.appendChild(fetchBtn);
+			}
+			
+			group.appendChild(labelContainer);
 			
 			let input;
 			if (field.type === 'select') {
@@ -742,6 +766,47 @@ function updatePostType() {
 		
 		fieldsContainer.appendChild(fieldset);
 	}
+}
+
+function fetchLinkMetadata() {
+	const urlInput = document.getElementById('field-url');
+	const url = urlInput.value.trim();
+	
+	if (!url) {
+		alert('Please enter a URL first');
+		return;
+	}
+	
+	const btn = event.target;
+	btn.disabled = true;
+	btn.textContent = 'Fetching...';
+	
+	fetch('/api/metadata?url=' + encodeURIComponent(url))
+		.then(r => r.json())
+		.then(data => {
+			if (data.title) {
+				document.getElementById('post-title').value = data.title;
+			}
+			if (data.description) {
+				document.getElementById('post-excerpt').value = data.description;
+			}
+			if (data.title) {
+				const slug = data.title.toLowerCase()
+					.replace(/[^\w\s-]/g, '')
+					.replace(/\s+/g, '-')
+					.replace(/-+/g, '-');
+				document.getElementById('post-slug').value = slug;
+			}
+			updatePreview();
+			btn.textContent = 'Fetch Metadata';
+			btn.disabled = false;
+		})
+		.catch(err => {
+			console.error('Fetch error:', err);
+			btn.textContent = 'Fetch Metadata';
+			btn.disabled = false;
+			alert('Could not fetch metadata: ' + err.message);
+		});
 }
 
 function saveAsDraft() {
