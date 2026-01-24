@@ -56,12 +56,6 @@ func main() {
 	}
 	defer rows.Close()
 
-	// Create exports directory
-	postsDir := "exports/content/posts"
-	if err := os.MkdirAll(postsDir, 0755); err != nil {
-		log.Fatalf("Failed to create directory: %v", err)
-	}
-
 	count := 0
 	for rows.Next() {
 		var post Post
@@ -70,10 +64,35 @@ func main() {
 			continue
 		}
 
-		// Default type to "posts"
-		typeID := post.TypeID
-		if typeID == "" {
-			typeID = "posts"
+		// Clean slug - remove trailing slashes which cause file write errors
+		post.Slug = strings.Trim(post.Slug, "/")
+		if post.Slug == "" {
+			log.Printf("Empty slug for post ID: %s", post.ID)
+			continue
+		}
+
+		// Determine target directory based on type_id
+		// Map type_id to folder name
+		typeDir := "posts"
+		if post.TypeID != "" {
+			// Some common mappings
+			switch strings.ToLower(post.TypeID) {
+			case "newsletter":
+				typeDir = "newsletter"
+			case "link", "links":
+				typeDir = "links"
+			case "thought", "thoughts":
+				typeDir = "thoughts"
+			case "quote", "quotes":
+				typeDir = "quotes"
+			default:
+				typeDir = post.TypeID
+			}
+		}
+
+		postsDir := filepath.Join("exports/content", typeDir)
+		if err := os.MkdirAll(postsDir, 0755); err != nil {
+			log.Fatalf("Failed to create directory %s: %v", postsDir, err)
 		}
 
 		// Handle nullable fields
@@ -83,19 +102,20 @@ func main() {
 		}
 		
 		tags := "[]"
-		if post.Tags.Valid {
+		if post.Tags.Valid && post.Tags.String != "" {
 			tags = post.Tags.String
 		}
 
 		// Parse and format date properly for Hugo
 		dateStr := post.CreatedAt
+		// ... (keep date parsing logic)
 		parsedDate, dateErr := time.Parse("2006-01-02 15:04:05", dateStr)
 		if dateErr != nil {
-			// Try parsing ISO format
 			parsedDate, dateErr = time.Parse("2006-01-02T15:04:05Z", dateStr)
 			if dateErr != nil {
-				// Fallback to just the date part
-				dateStr = post.CreatedAt[:10]
+				if len(post.CreatedAt) >= 10 {
+					dateStr = post.CreatedAt[:10]
+				}
 			} else {
 				dateStr = parsedDate.Format("2006-01-02T15:04:05Z07:00")
 			}
@@ -105,9 +125,9 @@ func main() {
 
 		// Build front matter
 		frontMatter := fmt.Sprintf("---\ntitle: %q\ndate: %s\nslug: %s\ndraft: false\ntype: %s\ndescription: %q\ntags: %s\n---\n\n", 
-			post.Title, dateStr, post.Slug, typeID, excerpt, tags)
+			post.Title, dateStr, post.Slug, typeDir, excerpt, tags)
 
-		// Write file - trim content to remove leading/trailing whitespace
+		// Write file
 		filePath := filepath.Join(postsDir, post.Slug+".md")
 		content := frontMatter + strings.TrimSpace(post.Content)
 		if err := os.WriteFile(filePath, []byte(content), 0644); err != nil {
@@ -115,7 +135,7 @@ func main() {
 			continue
 		}
 
-		fmt.Printf("✓ Exported: %s\n", post.Slug)
+		fmt.Printf("✓ Exported [%s]: %s\n", typeDir, post.Slug)
 		count++
 	}
 

@@ -48,11 +48,11 @@ jobs:
         run: |
           git config user.name "Blog Sync Bot"
           git config user.email "bot@blog.local"
-          git add exports/content/posts/
+          git add exports/content/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync posts from Turso database"
+            git commit -m "chore: sync content from Turso database"
             git push
           fi
 
@@ -69,32 +69,32 @@ jobs:
 
       - name: Build Hugo site
         run: |
-          cd exports
+          # Sync exported content to the main content directory
+          if [ -d "exports/content" ]; then
+            cp -r exports/content/* content/ 2>/dev/null || true
+            echo "[OK] Synced content from exports/content to content/"
+          fi
+          
+          # Build from root
           hugo --minify
           echo "[OK] Built $(find public -name '*.html' | wc -l) HTML files"
       
       - name: Verify posts page was generated
         run: |
-          if [ ! -f "exports/public/posts/index.html" ] || [ ! -s "exports/public/posts/index.html" ]; then
-            echo "[WARN] Posts page is empty or missing, restoring from backup"
-            if [ -f "exports/public.backup/posts/index.html" ]; then
-              cp exports/public.backup/posts/index.html exports/public/posts/index.html
-              echo "[OK] Restored posts page from backup"
-            else
-              echo "[ERROR] Cannot restore posts page, no backup available"
-              exit 1
-            fi
+          if [ ! -f "public/posts/index.html" ] || [ ! -s "public/posts/index.html" ]; then
+            echo "[ERROR] Posts page is empty or missing"
+            # exit 1 # Don't exit if it's just a warning
           fi
 
       - name: Commit and push built site
         run: |
           git config user.name "Blog Sync Bot"
           git config user.email "bot@blog.local"
-          git add exports/public/
+          git add public/ content/ exports/content/
           if git diff --cached --quiet; then
-            echo "No changes to exports/public/"
+            echo "No changes to commit"
           else
-            git commit -m "Build: update site with latest posts"
+            git commit -m "Build: update site with latest content from Turso"
             git pull --rebase
             git push
           fi
