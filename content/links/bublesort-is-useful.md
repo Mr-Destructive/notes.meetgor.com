@@ -1,6 +1,6 @@
 ---
 title: "Bublesort is useful"
-date: 2026-01-24
+date: 2025-12-26
 draft: false
 ---
 
@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-1. Yes, this is kind of nuts
-    2. Buble sort is the lowkey high value thing to learn and know of.
-    3. VIsualizing any sorting algorithm really makes you understand the flow better and it clicks almost everytime.Double click to interact with video
+Yes, this is kind of nuts Buble sort is the lowkey high value thing to learn and know of. VIsualizing any sorting algorithm really makes you understand the flow better and it clicks almost everytime.
 
 **Source:** techstructive-weekly-74

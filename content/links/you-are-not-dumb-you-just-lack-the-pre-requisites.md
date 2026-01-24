@@ -1,6 +1,6 @@
 ---
 title: "You are not dumb, you just lack the pre-requisites"
-date: 2026-01-24
+date: 2026-01-02
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-cognito mode if I don’t want it to attach it to the memory. I don’t see using local models on scale is justifiable just yet.You are not dumb, you just lack the pre-requisitesYeah! I have started to learn SQLite and since 2 years made a Brilliant org streak. I feel good taking on advanced concepts soon.
+Yeah! I have started to learn SQLite and since 2 years made a Brilliant org streak. I feel good taking on advanced concepts soon. Basic and a good foundation helps you pivot and branch off to wide possibilities.
 
 **Source:** techstructive-weekly-75

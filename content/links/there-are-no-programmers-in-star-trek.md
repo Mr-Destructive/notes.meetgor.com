@@ -1,6 +1,6 @@
 ---
 title: "There are no programmers in Star Trek"
-date: 2026-01-24
+date: 2025-10-17
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-This makes me sad, if there are no real programmers, how are their services operating? If computers just work and do what they are told, why is there even a service? Why just not complete everything and be done with it?
-    - I wonder if 2027 be a year like that, where you say something and vibe coded mess some how works, how far are we from the reality to here?
+This makes me sad, if there are no real programmers, how are their services operating? If computers just work and do what they are told, why is there even a service? Why just not complete everything and be done with it? I wonder if 2027 be a year like that, where you say something and vibe coded mess some how works, how far are we from the reality to here?
 
 **Source:** techstructive-weekly-64

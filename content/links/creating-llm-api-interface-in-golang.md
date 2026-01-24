@@ -1,6 +1,6 @@
 ---
 title: "Creating LLM API interface in Golang"
-date: 2026-01-24
+date: 2025-10-10
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-Double click to interact with video
+
 
 **Source:** techstructive-weekly-63

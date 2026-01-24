@@ -1,9 +1,15 @@
 ---
 title: "Why talking to LLMs have improved my thinking"
-date: 2026-01-24
+date: 2026-01-23
 draft: false
 ---
 
-[Why talking to LLMs have improved my thinking](https://philipotoole.com/why-talking-to-llms-has-improved-my-thinking/)
+# Why talking to LLMs have improved my thinking
 
-Source: techstructive-weekly-78
+**Link:** https://philipotoole.com/why-talking-to-llms-has-improved-my-thinking/
+
+## Context
+
+I like the take here. The one aspect of it only.
+
+**Source:** techstructive-weekly-78

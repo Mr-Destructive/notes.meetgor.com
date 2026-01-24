@@ -1,6 +1,6 @@
 ---
 title: "2026 Standup Predictions by Teej, Primeagen, Caesy, Trash"
-date: 2026-01-24
+date: 2026-01-16
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-urity, the volume bit wow. Everything makes sense after using them and taking them for granted due to cloud run abstraction.2026 Standup Predictions by Teej, Primeagen, Caesy, TrashPure entertainment. Great insights.AI coded bug yep, that is happening and people won’t notice until a month, bold one.
+Pure entertainment. Great insights. AI coded bug yep, that is happening and people won’t notice until a month, bold one.
 
 **Source:** techstructive-weekly-77

@@ -1,6 +1,6 @@
 ---
 title: "Database Internals:Chapter 1"
-date: 2026-01-24
+date: 2026-01-09
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">Database Internals:Chapter 1The difference of the OLAP and OLTP database is so nice.Also the differnce of column based vs row based database type i
+The difference of the OLAP and OLTP database is so nice. Also the differnce of column based vs row based database type is clear from this. Makes sense and intuitive as well The Binary tree also makes sense.
 
 **Source:** techstructive-weekly-76

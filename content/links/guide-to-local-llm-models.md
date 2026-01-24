@@ -1,6 +1,6 @@
 ---
 title: "Guide to Local LLM Models"
-date: 2026-01-24
+date: 2025-12-26
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-1. Ok, the VRAM and RAM is somethign is quite critical. If you have less RAM and much VRAM, its no use, you need to have sufficient RAM in order to run a good enough model, VRAM wouldn’t handle it.
+Ok, the VRAM and RAM is somethign is quite critical. If you have less RAM and much VRAM, its no use, you need to have sufficient RAM in order to run a good enough model, VRAM wouldn’t handle it.
 
 **Source:** techstructive-weekly-74

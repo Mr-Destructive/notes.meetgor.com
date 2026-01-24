@@ -1,6 +1,6 @@
 ---
 title: "The Gemini API Key Frustration"
-date: 2026-01-24
+date: 2025-12-12
 draft: false
 ---
 
@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-1. Yeah! have you set up Google products without opening and closing a bunch of tabs
-    2. Here you are in 2025. Wait a minute, was PaLM a thing? wasn’t google notes to be shut down?
-    3. What is happening, what is AI Studio, Vertex AI, Jules, Antigravity, Gemini CLI, Gemini models of course, dug sneaked into various products, geese. Google!
+Yeah! have you set up Google products without opening and closing a bunch of tabs Here you are in 2025. Wait a minute, was PaLM a thing? wasn’t google notes to be shut down? What is happening, what is AI Studio, Vertex AI, Jules, Antigravity, Gemini CLI, Gemini models of course, dug sneaked into various products, geese. Google!
 
 **Source:** techstructive-weekly-72

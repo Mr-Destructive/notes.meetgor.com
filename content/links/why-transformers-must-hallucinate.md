@@ -1,9 +1,15 @@
 ---
 title: "Why Transformers must hallucinate"
-date: 2026-01-24
+date: 2025-12-12
 draft: false
 ---
 
-[Why Transformers must hallucinate](https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be)
+# Why Transformers must hallucinate
 
-Source: techstructive-weekly-72
+**Link:** https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be
+
+## Context
+
+This is a spicy take. The points are valid Averaging is a critical mistake They miss checking whether an answer exist or not Always answers will guarantee hallucination It should asses the question, then generate and not generate and then asses.
+
+**Source:** techstructive-weekly-72

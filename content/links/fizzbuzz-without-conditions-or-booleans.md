@@ -1,9 +1,15 @@
 ---
 title: "Fizzbuzz without conditions or booleans"
-date: 2026-01-24
+date: 2025-11-21
 draft: false
 ---
 
-[Fizzbuzz without conditions or booleans](https://evanhahn.com/fizz-buzz-without-conditionals-or-booleans/)
+# Fizzbuzz without conditions or booleans
 
-Source: techstructive-weekly-69
+**Link:** https://evanhahn.com/fizz-buzz-without-conditionals-or-booleans/
+
+## Context
+
+A nice pattern like loop for 3 and 5 divisibility, it won’t scale i think for other problems
+
+**Source:** techstructive-weekly-69

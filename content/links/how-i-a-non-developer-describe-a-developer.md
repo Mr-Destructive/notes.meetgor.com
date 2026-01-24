@@ -1,6 +1,6 @@
 ---
 title: "How I a non-developer describe a developer"
-date: 2026-01-24
+date: 2025-09-26
 draft: false
 ---
 
@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-This is so funny. I can feel this. Documentation, who writes that.
-    - Tests, what are those? We push -f to prod
-    - By the way, here’s the rollback script if the production is doomed.
+This is so funny. I can feel this. Documentation, who writes that. Tests, what are those? We push -f to prod By the way, here’s the rollback script if the production is doomed.
 
 **Source:** techstructive-weekly-61

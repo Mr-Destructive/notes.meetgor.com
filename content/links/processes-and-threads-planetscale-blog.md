@@ -1,6 +1,6 @@
 ---
 title: "Processes and Threads: Planetscale Blog"
-date: 2026-01-24
+date: 2025-09-26
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-This was cool actually. The interactive elements really make things so clear. They remove the textual-ness in the blog and add a depth to it.
-    - There is a clear explanation of program, process, ram, fork and low level details that are quintessential to a developer, any f-ing developer.
+This was cool actually. The interactive elements really make things so clear. They remove the textual-ness in the blog and add a depth to it. There is a clear explanation of program, process, ram, fork and low level details that are quintessential to a developer, any f-ing developer.
 
 **Source:** techstructive-weekly-61

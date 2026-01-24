@@ -1,6 +1,6 @@
 ---
 title: "Go Struct Alignment: A Practical Guide"
-date: 2026-01-24
+date: 2025-09-19
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-I have read this and it makes sense, a bit wired but nice. Writing structs should be carefully planned, so just add the largest ones at the top and cram all the smaller ones thereafter. The rule of thumb to follow if you have any memory-heavy or scarce use case.
-    - Handy functions like Sizeof, Alignof, Offsetof are used to get the total byte size, memory alignment requirement, the field start position of the struct or any fields. Use it to craft the proper and perfect structure by tinkering and aligning.
+I have read this and it makes sense, a bit wired but nice. Writing structs should be carefully planned, so just add the largest ones at the top and cram all the smaller ones thereafter. The rule of thumb to follow if you have any memory-heavy or scarce use case. Handy functions like Sizeof, Alignof, Offsetof are used to get the total byte size, memory alignment requirement, the field start position of the struct or any fields. Use it to craft the proper and perfect structure by tinkering and aligning.
 
 **Source:** techstructive-weekly-60

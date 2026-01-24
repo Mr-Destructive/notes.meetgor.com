@@ -1,6 +1,6 @@
 ---
 title: "The future of software development is software developers"
-date: 2026-01-24
+date: 2026-01-02
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-The future of software development is software developerstechnical practices that can dramatically shrink delivery lead times while improving reliability and re
+
 
 **Source:** techstructive-weekly-75

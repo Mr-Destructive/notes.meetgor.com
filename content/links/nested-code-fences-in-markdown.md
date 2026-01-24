@@ -1,9 +1,15 @@
 ---
 title: "Nested code fences in Markdown"
-date: 2026-01-24
+date: 2026-01-23
 draft: false
 ---
 
-[Nested code fences in Markdown](https://susam.net/nested-code-fences.html)
+# Nested code fences in Markdown
 
-Source: techstructive-weekly-78
+**Link:** https://susam.net/nested-code-fences.html
+
+## Context
+
+This is clever. Never knew this. I think this clears the rule of when to escape the backticks and the fenced code block within one. Really nice to know this. Helps in writing as well as developing a SSG.
+
+**Source:** techstructive-weekly-78

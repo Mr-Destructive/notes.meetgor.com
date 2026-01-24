@@ -1,6 +1,6 @@
 ---
 title: "How do arrays work?"
-date: 2026-01-24
+date: 2025-10-24
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-Its not just AI or LLMs, but people are just working a bit wired, the mindset, the systems have kind of outgrown humans to productivity myths and its rotting thier brain. [How do arrays work?](https://nan-archive.vercel.app/how-arrays-work)- Such a sweet little blog post.
+Such a sweet little blog post. It listed the naive array logic and then also gave a better and more possibilities for the reader to be curious and excited about to try.
 
 **Source:** techstructive-weekly-65

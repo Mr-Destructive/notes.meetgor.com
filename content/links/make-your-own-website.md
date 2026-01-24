@@ -1,9 +1,15 @@
 ---
 title: "Make your own website"
-date: 2026-01-24
+date: 2025-11-21
 draft: false
 ---
 
-[Make your own website](https://michaelenger.com/blog/make-your-own-website/)
+# Make your own website
 
-Source: techstructive-weekly-69
+**Link:** https://michaelenger.com/blog/make-your-own-website/
+
+## Context
+
+Yes, it helps you understand what you need, what you are actually writing. I have built an SSG and learnt a lot of things. It puts you under control, it helps you think broader, and not rely on third-party things all the time.
+
+**Source:** techstructive-weekly-69

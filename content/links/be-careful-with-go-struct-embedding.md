@@ -1,6 +1,6 @@
 ---
 title: "Be careful with Go struct embedding"
-date: 2026-01-24
+date: 2025-09-26
 draft: false
 ---
 

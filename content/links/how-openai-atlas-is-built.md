@@ -1,6 +1,6 @@
 ---
 title: "How OpenAI Atlas is built"
-date: 2026-01-24
+date: 2025-11-14
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-It appeared to me at the right time though, November in middle of NanoWriMo. Perfectly adding up to my writing streak and building confidence. [Building a terminal wizard in BubbleTea](https://youtu.be/Gl31diSVP8M)- This is a great video to understand Bubble Tea framework in almost 20 minutes. I was pumped after this to finally decide to build the TUI for GCP logger. Finally it will be done this weekend. [How OpenAI Atlas is built](https://youtu.be/jxsA_185lMI?si)- Atlas is a chromium wrapper right? right? Nope, its a little custom separate entity that is powered and laid by chromium but it doesn’t look and feel like Chromium.
+Atlas is a chromium wrapper right? right? Nope, its a little custom separate entity that is powered and laid by chromium but it doesn’t look and feel like Chromium. I don’t know anything about what Theo said, but if he is saying its gross. It might as well be, I can’t comment if I don’t know it.
 
 **Source:** techstructive-weekly-68

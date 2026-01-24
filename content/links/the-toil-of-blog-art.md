@@ -1,9 +1,15 @@
 ---
 title: "The toil of blog art"
-date: 2026-01-24
+date: 2026-01-23
 draft: false
 ---
 
-[The toil of blog art](https://lcamtuf.substack.com/p/the-toil-of-blog-art)
+# The toil of blog art
 
-Source: techstructive-weekly-78
+**Link:** https://lcamtuf.substack.com/p/the-toil-of-blog-art
+
+## Context
+
+Yes, the art of expressing some concept is valuable. AI might have eased it, but true human-eque art is impossible to replicate. The chef’s kiss is what the author is trying to meld in the post about.
+
+**Source:** techstructive-weekly-78

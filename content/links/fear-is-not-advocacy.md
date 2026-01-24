@@ -1,9 +1,15 @@
 ---
 title: "Fear is not advocacy"
-date: 2026-01-24
+date: 2026-01-09
 draft: false
 ---
 
-[Fear is not advocacy](https://antonz.org/ai-advocacy/)
+# Fear is not advocacy
 
-Source: techstructive-weekly-76
+**Link:** https://antonz.org/ai-advocacy/
+
+## Context
+
+This is real advice. People are hyping about the next workflow to 100x our productivity. Its ok to be 1x and still push less bugs than 100x and push 1000 bugs.
+
+**Source:** techstructive-weekly-76

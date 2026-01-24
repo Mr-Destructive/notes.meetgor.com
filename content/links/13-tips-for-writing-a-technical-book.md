@@ -1,6 +1,6 @@
 ---
 title: "13 Tips for Writing a technical book"
-date: 2026-01-24
+date: 2026-01-02
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-on advanced concepts soon.Basic and a good foundation helps you pivot and branch off to wide possibilities.13 Tips for Writing a technical bookA handy little thing to remind myself, this is inevitable for me. I would write one. Not this year probably. But I would surely write o
+A handy little thing to remind myself, this is inevitable for me. I would write one. Not this year probably. But I would surely write one, my gut, my instinct is not false on this. I would this then. Great advice for just being curious.
 
 **Source:** techstructive-weekly-75

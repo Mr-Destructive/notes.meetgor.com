@@ -1,6 +1,6 @@
 ---
 title: "Print function in Python"
-date: 2026-01-24
+date: 2025-09-12
 draft: false
 ---
 
@@ -10,9 +10,6 @@ draft: false
 
 ## Context
 
-Wow! I thought print was for stdout, but it was meant to be written to the file. So cool. I though write was the only option to write the file, but this is so crucial to know.
-    - Print is a very versatile function. Sometimes, it makes me wonder, is python really a magical language.
-
-Double click to interact with video
+Wow! I thought print was for stdout, but it was meant to be written to the file. So cool. I though write was the only option to write the file, but this is so crucial to know. Print is a very versatile function. Sometimes, it makes me wonder, is python really a magical language.
 
 **Source:** techstructive-weekly-59

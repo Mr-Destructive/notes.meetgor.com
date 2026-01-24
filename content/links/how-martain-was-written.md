@@ -1,6 +1,6 @@
 ---
 title: "How Martain was written"
-date: 2026-01-24
+date: 2025-11-14
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-[How Martain was written](https://youtu.be/EXD3b6OLtsg)- I haven’t read Martain, want to. But nonetheless, this is an inspiring talk, as a writer and a programmer I am compelled to write a story now. This might be a turning point for me. If he can, I can too.
+I haven’t read Martain, want to. But nonetheless, this is an inspiring talk, as a writer and a programmer I am compelled to write a story now. This might be a turning point for me. If he can, I can too. It appeared to me at the right time though, November in middle of NanoWriMo. Perfectly adding up to my writing streak and building confidence.
 
 **Source:** techstructive-weekly-68

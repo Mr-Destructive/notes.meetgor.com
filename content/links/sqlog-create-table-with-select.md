@@ -1,6 +1,6 @@
 ---
 title: "SQLog: Create Table with SELECT"
-date: 2026-01-24
+date: 2025-10-03
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-I found it interesting to populate dummy data from existing values.
-    - The select statement is so plugable, it just gets into everything.
+I found it interesting to populate dummy data from existing values. The select statement is so plugable, it just gets into everything.
 
 **Source:** techstructive-weekly-62

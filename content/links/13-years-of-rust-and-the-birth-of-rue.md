@@ -1,6 +1,6 @@
 ---
 title: "13 Years of Rust and the birth of Rue"
-date: 2026-01-24
+date: 2025-12-26
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-1. I see this a lot! People creating something that they wanted but didn’t had the mental energy for.
-    2. I see it as draining rather. I can’t watch it write code for me, its a dreading feeling to be in for larger durations.
+I see this a lot! People creating something that they wanted but didn’t had the mental energy for. I see it as draining rather. I can’t watch it write code for me, its a dreading feeling to be in for larger durations.
 
 **Source:** techstructive-weekly-74

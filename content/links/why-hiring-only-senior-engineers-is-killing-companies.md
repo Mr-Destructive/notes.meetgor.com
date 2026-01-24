@@ -1,6 +1,6 @@
 ---
 title: "Why hiring only senior engineers is killing companies"
-date: 2026-01-24
+date: 2025-10-03
 draft: false
 ---
 

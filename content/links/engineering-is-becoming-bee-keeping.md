@@ -1,6 +1,6 @@
 ---
 title: "Engineering is becoming bee-keeping"
-date: 2026-01-24
+date: 2026-01-02
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-each component of the result will come from.I need to try hard on learning functional programming this year.Engineering is becoming bee-keepingI like this comparison quite a lot. Swarming agents is what its happening. And the realisation that code was the thing that doesn’t mat
+I like this comparison quite a lot. Swarming agents is what its happening. And the realisation that code was the thing that doesn’t matter, the thing that matters is did we solve the problem
 
 **Source:** techstructive-weekly-75

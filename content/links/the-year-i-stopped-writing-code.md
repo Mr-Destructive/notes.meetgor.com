@@ -1,6 +1,6 @@
 ---
 title: "The year I stopped writing code"
-date: 2026-01-24
+date: 2026-01-09
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">The year I stopped writing codeThis is interesting and eye opening. It actually gave me the reason to be active while working with LLMs.Reviewing is h
+This is interesting and eye opening. It actually gave me the reason to be active while working with LLMs. Reviewing is hard, most developers avoid it, that’s the part you need to be doing, in order to be a better one. That point I had ignored and it has came to haunt me in the year throughout. This new year though, will be different. I have decided to take LLM generated code with a grain of salt.
 
 **Source:** techstructive-weekly-76

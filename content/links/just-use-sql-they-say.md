@@ -1,6 +1,6 @@
 ---
 title: "Just use SQL they say"
-date: 2026-01-24
+date: 2025-09-12
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-Use tooling around it, there are SQLC tools for go and I think even for Python. It will help you write type safe boilerplate code in the native language as you write the SQL query.
-    - I think the author is right, but unaware of the tooling that exists around it.
+Use tooling around it, there are SQLC tools for go and I think even for Python. It will help you write type safe boilerplate code in the native language as you write the SQL query. I think the author is right, but unaware of the tooling that exists around it.
 
 **Source:** techstructive-weekly-59

@@ -1,6 +1,6 @@
 ---
 title: "Claude Cowork"
-date: 2026-01-24
+date: 2026-01-23
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-t button therefore I am logged in as ABC person” True. Good thinking Claude. Hope you continue in a limited set of thinking.Claude CoworkAgain, I was tempted to learn how different people perceive this tool. I never watched her videos. But this video came to me at random
+Again, I was tempted to learn how different people perceive this tool. I never watched her videos. But this video came to me at random and I thought of watching it, it was fun. It also showed a good starting point and a legit use cases for people to curse themselves a little less with such tools. Developers can do it with writing scripts but laymen can’t oooohhh. This tool should just do that.
 
 **Source:** techstructive-weekly-78

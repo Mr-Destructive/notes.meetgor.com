@@ -1,6 +1,6 @@
 ---
 title: "SQLog: Create Strict Tables"
-date: 2026-01-24
+date: 2025-12-12
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-Live streaming Advent of Code Day 1 and 2 in Golang
-- YouTube Shorts on FreeCodeCamp Daily Challenges
+
 
 **Source:** techstructive-weekly-72

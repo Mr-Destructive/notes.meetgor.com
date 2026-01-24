@@ -1,6 +1,6 @@
 ---
 title: "Claude Cowork: AGI is here, hheh?"
-date: 2026-01-24
+date: 2026-01-23
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-adyIt needs harness for testing, good documentation, edge cases, actual problem it solvesClaude Cowork: AGI is here, hheh?I loved the video. It showed the flaws and the possibilities of this tool. I think its a step in the AGI, but good or bad, the people w
+I loved the video. It showed the flaws and the possibilities of this tool. I think its a step in the AGI, but good or bad, the people will decide. The edit button on twitter, that had me rolling out loud. It was a human-esque reply though. “I can see the edit button therefore I am logged in as ABC person” True. Good thinking Claude. Hope you continue in a limited set of thinking.
 
 **Source:** techstructive-weekly-78

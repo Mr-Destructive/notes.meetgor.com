@@ -1,6 +1,6 @@
 ---
 title: "SQLite SQL: Many to Many Table without RowID"
-date: 2026-01-24
+date: 2025-09-26
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-[SQLite SQL: Collate Column Modifier](https://www.meetgor.com/sqlog/sqlite-collate-column-modifier)
-- [SQLite SQL: Create Temporary Table](https://www.meetgor.com/sqlog/sqlite-create-temp-table)
+
 
 **Source:** techstructive-weekly-61

@@ -1,6 +1,6 @@
 ---
 title: "Structured output can create fake confidence"
-date: 2026-01-24
+date: 2025-12-26
 draft: false
 ---
 
@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-1. Spicy take and true! Somewhat true
-    2. If your task is complex to get things out from image, or understand the context, it might hinder the quality.
-    3. But if your task is to simply do something straightforward tool calls, structured output beats everything.
+Spicy take and true! Somewhat true If your task is complex to get things out from image, or understand the context, it might hinder the quality. But if your task is to simply do something straightforward tool calls, structured output beats everything.
 
 **Source:** techstructive-weekly-74

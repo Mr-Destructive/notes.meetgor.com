@@ -1,6 +1,6 @@
 ---
 title: "Google’s Nano Banana Pro Image Generation Model"
-date: 2026-01-24
+date: 2025-12-05
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-[Google’s Nano Banana Pro Image Generation Model](https://youtu.be/UV9GqinedQ8)- He is saying he won’t use Adobe Photoshop anymore, my god. This models are getting into our heads. Art is at stake, or is it.
+He is saying he won’t use Adobe Photoshop anymore, my god. This models are getting into our heads. Art is at stake, or is it. The SynthID is not quite a solution, just a label from Google or a tag to show that they care about safety but they don’t know how to. The quality of these images is so crisp, OpenAI models have some edgy and fainted colors, but Google’s models are so vibrant.
 
 **Source:** techstructive-weekly-71

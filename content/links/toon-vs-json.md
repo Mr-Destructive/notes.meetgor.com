@@ -1,6 +1,6 @@
 ---
 title: "TOON vs JSON"
-date: 2026-01-24
+date: 2025-11-21
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-Waiting for Gemini 3 flash version [TOON vs JSON](https://youtu.be/nTMP_rLZOYM)- Its just CSV in disguise. YAML in some other way, nothing really surprising. Building SSH TUI with Wish and Bubble Tea
+Its just CSV in disguise. YAML in some other way, nothing really surprising.
 
 **Source:** techstructive-weekly-69

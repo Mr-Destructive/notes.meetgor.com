@@ -1,6 +1,6 @@
 ---
 title: "Python can open web browser for you"
-date: 2026-01-24
+date: 2025-09-19
 draft: false
 ---
 
@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-Python -m webbrowser  
-    - That is so cool, can’t think of other automation that can be done here.
-    - Neat and handy
+Python -m webbrowser <link> That is so cool, can’t think of other automation that can be done here. Neat and handy
 
 **Source:** techstructive-weekly-60

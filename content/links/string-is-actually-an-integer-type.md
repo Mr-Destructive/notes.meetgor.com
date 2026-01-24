@@ -1,6 +1,6 @@
 ---
 title: "STRING is actually an integer type"
-date: 2026-01-24
+date: 2025-12-12
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-Everything is flexible unless you type strict
-    - SQLite is flexible, as I have said its a double-edged sword until you don’t want it to be.Double click to interact with video
+Everything is flexible unless you type strict SQLite is flexible, as I have said its a double-edged sword until you don’t want it to be.
 
 **Source:** techstructive-weekly-72

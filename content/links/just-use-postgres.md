@@ -1,6 +1,6 @@
 ---
 title: "Just use Postgres"
-date: 2026-01-24
+date: 2025-12-12
 draft: false
 ---
 
@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-Wow! I love this. I want to write a technical book too. It is such a great adventure to be in. But burnout seems to be stronger there.
-    - I love Postgres can be used as a message queue, gen ai application, full text search I knew and JSON was obvious.
-    - Getting deep into the tech is important, I need to focus on thing at a time.Double click to interact with video
+Wow! I love this. I want to write a technical book too. It is such a great adventure to be in. But burnout seems to be stronger there. I love Postgres can be used as a message queue, gen ai application, full text search I knew and JSON was obvious. Getting deep into the tech is important, I need to focus on thing at a time.
 
 **Source:** techstructive-weekly-72

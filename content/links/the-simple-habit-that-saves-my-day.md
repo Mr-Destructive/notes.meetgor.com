@@ -1,6 +1,6 @@
 ---
 title: "The simple habit that saves my day"
-date: 2026-01-24
+date: 2025-10-03
 draft: false
 ---
 

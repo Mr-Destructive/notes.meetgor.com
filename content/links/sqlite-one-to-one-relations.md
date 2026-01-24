@@ -1,6 +1,6 @@
 ---
 title: "SQLite: One to One Relations"
-date: 2026-01-24
+date: 2025-09-19
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-This makes it the 32 posts in total, have been writing daily for a month, and could see a lot of confidence and new energy surging within me. Writing really liberates the soul, it gives purpose.
+
 
 **Source:** techstructive-weekly-60

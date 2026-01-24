@@ -1,6 +1,6 @@
 ---
 title: "A TSP game I wanted for 10 years: built in 4 hours"
-date: 2026-01-24
+date: 2025-12-12
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-1. This is quite a good thing, I am not good at frontend, i let ai do it, i do what i am good at, writing backend. Really? need to see it carefully again.
+This is quite a good thing, I am not good at frontend, i let ai do it, i do what i am good at, writing backend. Really? need to see it carefully again.
 
 **Source:** techstructive-weekly-72

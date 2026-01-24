@@ -1,6 +1,6 @@
 ---
 title: "What would you do with 52 hours of discretionary time"
-date: 2026-01-24
+date: 2025-09-12
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-This is a fresh perspective, I haven't taken that analytical approach in measuring the number of hours spent in weekends. That's quite a lot, 52.
-    - Would be spending some time to plan and think about it, it really had me thinking now.
+This is a fresh perspective, I haven't taken that analytical approach in measuring the number of hours spent in weekends. That's quite a lot, 52. Would be spending some time to plan and think about it, it really had me thinking now.
 
 **Source:** techstructive-weekly-59

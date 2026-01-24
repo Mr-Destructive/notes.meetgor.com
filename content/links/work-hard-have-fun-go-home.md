@@ -1,6 +1,6 @@
 ---
 title: "Work Hard, have fun, go home"
-date: 2026-01-24
+date: 2025-09-19
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-If you have fun you can work sustainably, else no matter how trendy or shinny the technology you would use, you won’t endure it long enough on the verge of burnout and the feeling of unsatisfied will crumble your efforts.
-    - Maintaining balance is key, but flowing with the excitement and energy is also helpful not always but can be done to improve the fun and memorable parts.
+If you have fun you can work sustainably, else no matter how trendy or shinny the technology you would use, you won’t endure it long enough on the verge of burnout and the feeling of unsatisfied will crumble your efforts. Maintaining balance is key, but flowing with the excitement and energy is also helpful not always but can be done to improve the fun and memorable parts.
 
 **Source:** techstructive-weekly-60

@@ -1,6 +1,6 @@
 ---
 title: "OpenAI dropped another Codex"
-date: 2026-01-24
+date: 2025-09-19
 draft: false
 ---
 
@@ -10,10 +10,6 @@ draft: false
 
 ## Context
 
-I agree to this, it is just a slight improvement to the GPT-5 experience. Not much here.
-    - I kind of hate to admit that free users can’t use the web codex, the cloud instance of the agent. So, basically free users are devoid of the code experience of the GPT models.
-    - Google might win that race. Gemini CLI is so cool, they also have Jules.
-
-Double click to interact with video
+I agree to this, it is just a slight improvement to the GPT-5 experience. Not much here. I kind of hate to admit that free users can’t use the web codex, the cloud instance of the agent. So, basically free users are devoid of the code experience of the GPT models. Google might win that race. Gemini CLI is so cool, they also have Jules.
 
 **Source:** techstructive-weekly-60

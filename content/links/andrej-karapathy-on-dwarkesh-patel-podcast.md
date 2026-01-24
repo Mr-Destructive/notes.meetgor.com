@@ -1,6 +1,6 @@
 ---
 title: "Andrej Karapathy on Dwarkesh Patel Podcast"
-date: 2026-01-24
+date: 2025-10-24
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-The point of having intrinsic motivation is not mentioned in the conversation which makes me wonder, why it was not? It was such s distinguishing factor, but he doesn’t wants to distinguish humans, so why try to mimic humans? [Andrej Karapathy on Dwarkesh Patel Podcast](https://youtu.be/lXUZvyajciY)- I haven’t completed watching it but felt really excited to learn more about LLMs.
+I haven’t completed watching it but felt really excited to learn more about LLMs. I like the analogy of human brain and the LLM. When we sleep we kind of reset the context window, but update our parameters, we internalise the lessons, we can think and process in the background and connect stuff up. I also found it surprising that reaching the state of the art models with 1B parameter would take a decade or so? Kind of practical but considering the frequency of the current releases of models, it looks it could happen almost next year.
 
 **Source:** techstructive-weekly-65

@@ -1,6 +1,6 @@
 ---
 title: "SQL Heuristics: ORs are expensive"
-date: 2026-01-24
+date: 2025-10-03
 draft: false
 ---
 
@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-Wow! ORs are expensive.
-    - I had never thought about it that way, would like to dig a little deeper here and learn more about the maths here. It hasn’t clicked all the bells for me yet.
+Wow! ORs are expensive. I had never thought about it that way, would like to dig a little deeper here and learn more about the maths here. It hasn’t clicked all the bells for me yet.
 
 **Source:** techstructive-weekly-62

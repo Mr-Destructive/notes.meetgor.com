@@ -1,6 +1,6 @@
 ---
 title: "Designing Data Intensive Applications: Chapter 1 and 2"
-date: 2026-01-24
+date: 2026-01-09
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-Designing Data Intensive Applications: Chapter 1 and 2It was a great overview of the database systems. I like how he explains the p50, p90, and all metrics. It makes sense without getting i
+It was a great overview of the database systems. I like how he explains the p50, p90, and all metrics. It makes sense without getting into too much of details Also the diagram of the OLAP and OLTP databases and how it fits. It made sense.
 
 **Source:** techstructive-weekly-76

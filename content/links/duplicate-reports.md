@@ -1,6 +1,6 @@
 ---
 title: "Duplicate Reports"
-date: 2026-01-24
+date: 2025-12-19
 draft: false
 ---
 
@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-1. Testing guys is the vibe of AI, testing code is becoming apparent as AI can produce code in matter of seconds. Learning the fundamentals has never been so vital.
+Testing guys is the vibe of AI, testing code is becoming apparent as AI can produce code in matter of seconds. Learning the fundamentals has never been so vital.
 
 **Source:** techstructive-weekly-73

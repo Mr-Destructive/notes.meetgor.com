@@ -1,9 +1,15 @@
 ---
 title: "Ideas are cheap, Execution is cheaper"
-date: 2026-01-24
+date: 2026-01-16
 draft: false
 ---
 
-[Ideas are cheap, Execution is cheaper](https://davekiss.com/blog/ideas-are-cheap-execution-is-cheaper/)
+# Ideas are cheap, Execution is cheaper
 
-Source: techstructive-weekly-77
+**Link:** https://davekiss.com/blog/ideas-are-cheap-execution-is-cheaper/
+
+## Context
+
+Oh, my god. This is a bitter truth. Geez. Never thought about it. Really its kind of true now. It just is a quick change. The mindset shift is critical.
+
+**Source:** techstructive-weekly-77
