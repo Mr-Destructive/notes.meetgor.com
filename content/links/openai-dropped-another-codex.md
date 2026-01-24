@@ -6,6 +6,7 @@ title: OpenAI dropped another Codex
 youtube_id: j9wvCrON3XA
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/j9wvCrON3XA/maxresdefault.jpg
 ---
 # OpenAI dropped another Codex
 

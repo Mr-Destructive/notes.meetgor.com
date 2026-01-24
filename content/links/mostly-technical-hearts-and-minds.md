@@ -6,6 +6,7 @@ title: 'Mostly Technical: Hearts and Minds'
 youtube_id: P-fKp3eS5CA
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/P-fKp3eS5CA/maxresdefault.jpg
 ---
 # Mostly Technical: Hearts and Minds
 

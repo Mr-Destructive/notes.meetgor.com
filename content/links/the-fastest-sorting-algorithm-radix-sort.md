@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Y95a-8oNqps
 title: 'The fastest sorting algorithm: Radix Sort'
 youtube_id: Y95a-8oNqps
+preview_image: https://img.youtube.com/vi/Y95a-8oNqps/maxresdefault.jpg
 ---
 # The fastest sorting algorithm: Radix Sort
 

@@ -6,6 +6,7 @@ title: Print function in Python
 youtube_id: MuzF9oQb2rI
 tags:
 - python
+preview_image: https://img.youtube.com/vi/MuzF9oQb2rI/maxresdefault.jpg
 ---
 # Print function in Python
 

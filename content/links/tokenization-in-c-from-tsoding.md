@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/6dCqR9p0yWY
 title: Tokenization in C from Tsoding
 youtube_id: 6dCqR9p0yWY
+preview_image: https://img.youtube.com/vi/6dCqR9p0yWY/maxresdefault.jpg
 ---
 # Tokenization in C from Tsoding
 

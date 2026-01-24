@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/EXD3b6OLtsg
 title: How Martain was written
 youtube_id: EXD3b6OLtsg
+preview_image: https://img.youtube.com/vi/EXD3b6OLtsg/maxresdefault.jpg
 ---
 # How Martain was written
 

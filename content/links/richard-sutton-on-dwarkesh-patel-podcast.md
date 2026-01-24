@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/21EYKqUsPfg
 title: Richard Sutton on Dwarkesh Patel Podcast
 youtube_id: 21EYKqUsPfg
+preview_image: https://img.youtube.com/vi/21EYKqUsPfg/maxresdefault.jpg
 ---
 # Richard Sutton on Dwarkesh Patel Podcast
 

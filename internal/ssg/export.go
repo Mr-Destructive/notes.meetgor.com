@@ -90,12 +90,11 @@ func buildFrontMatter(post *models.Post) string {
 	if post.Metadata != nil && len(post.Metadata) > 0 {
 		var metadata map[string]interface{}
 		if err := json.Unmarshal(post.Metadata, &metadata); err == nil && len(metadata) > 0 {
-			front += "metadata:\n"
 			for key, value := range metadata {
 				if str, ok := value.(string); ok {
-					front += fmt.Sprintf("  %s: \"%s\"\n", key, escapeYAML(str))
+					front += fmt.Sprintf("%s: \"%s\"\n", key, escapeYAML(str))
 				} else {
-					front += fmt.Sprintf("  %s: %v\n", key, value)
+					front += fmt.Sprintf("%s: %v\n", key, value)
 				}
 			}
 		}

@@ -6,6 +6,7 @@ title: Just use Postgres
 youtube_id: IdyK8XB2l6g
 tags:
 - sql
+preview_image: https://img.youtube.com/vi/IdyK8XB2l6g/maxresdefault.jpg
 ---
 # Just use Postgres
 

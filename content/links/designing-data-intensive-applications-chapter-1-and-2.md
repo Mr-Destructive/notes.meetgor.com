@@ -3,7 +3,8 @@ date: 2026-01-09
 draft: false
 link: https://www.youtube.com/live/G7iU2s7LUzA
 title: 'Designing Data Intensive Applications: Chapter 1 and 2'
-youtube_id: live/G7iU2s
+youtube_id: G7iU2s7LUzA
+preview_image: https://img.youtube.com/vi/G7iU2s7LUzA/maxresdefault.jpg
 ---
 # Designing Data Intensive Applications: Chapter 1 and 2
 

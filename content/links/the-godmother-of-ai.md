@@ -6,6 +6,7 @@ title: The Godmother of AI
 youtube_id: Ctjiatnd6Xk
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/Ctjiatnd6Xk/maxresdefault.jpg
 ---
 # The Godmother of AI
 

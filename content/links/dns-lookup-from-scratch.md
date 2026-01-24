@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/CHaEdVIF2_M
 title: DNS Lookup from scratch
 youtube_id: CHaEdVIF2_M
+preview_image: https://img.youtube.com/vi/CHaEdVIF2_M/maxresdefault.jpg
 ---
 # DNS Lookup from scratch
 

@@ -6,6 +6,7 @@ title: 'Python: The documentary'
 youtube_id: GfH4QL4VqJ0
 tags:
 - python
+preview_image: https://img.youtube.com/vi/GfH4QL4VqJ0/maxresdefault.jpg
 ---
 # Python: The documentary
 

@@ -6,6 +6,7 @@ title: 'Claude Haiku 4.5: The best model from Anthropic for cost to intelligence
 youtube_id: iES9r7AZP1s
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/iES9r7AZP1s/maxresdefault.jpg
 ---
 # Claude Haiku 4.5: The best model from Anthropic for cost to intelligence figures
 

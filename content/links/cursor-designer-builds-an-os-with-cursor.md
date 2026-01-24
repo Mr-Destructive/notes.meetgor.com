@@ -6,6 +6,7 @@ title: Cursor designer builds an OS with cursor
 youtube_id: TQhv6Wol6Ns
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/TQhv6Wol6Ns/maxresdefault.jpg
 ---
 # Cursor designer builds an OS with cursor
 

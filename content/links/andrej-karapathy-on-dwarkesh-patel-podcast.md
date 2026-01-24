@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/lXUZvyajciY
 title: Andrej Karapathy on Dwarkesh Patel Podcast
 youtube_id: lXUZvyajciY
+preview_image: https://img.youtube.com/vi/lXUZvyajciY/maxresdefault.jpg
 ---
 # Andrej Karapathy on Dwarkesh Patel Podcast
 

@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/UrNLVip0hSA
 title: AI codes better than me, now what?
 youtube_id: UrNLVip0hSA
+preview_image: https://img.youtube.com/vi/UrNLVip0hSA/maxresdefault.jpg
 ---
 # AI codes better than me, now what?
 

@@ -6,6 +6,7 @@ title: AI Coding Sucks
 youtube_id: rgiuaJbyUyU
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/rgiuaJbyUyU/maxresdefault.jpg
 ---
 # AI Coding Sucks
 

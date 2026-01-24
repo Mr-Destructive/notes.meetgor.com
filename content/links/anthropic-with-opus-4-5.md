@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/QzEsYFcaAkY?si=4leLEl4LU6XBYCHZ
 title: Anthropic with Opus 4.5
 youtube_id: QzEsYFcaAkY
+preview_image: https://img.youtube.com/vi/QzEsYFcaAkY/maxresdefault.jpg
 ---
 # Anthropic with Opus 4.5
 

@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/5vp9ypOUgMw
 title: AI Assisted Coding
 youtube_id: 5vp9ypOUgMw
+preview_image: https://img.youtube.com/vi/5vp9ypOUgMw/maxresdefault.jpg
 ---
 # AI Assisted Coding
 

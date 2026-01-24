@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/VSiPVZcTQTo
 title: STRING is actually an integer type
 youtube_id: VSiPVZcTQTo
+preview_image: https://img.youtube.com/vi/VSiPVZcTQTo/maxresdefault.jpg
 ---
 # STRING is actually an integer type
 

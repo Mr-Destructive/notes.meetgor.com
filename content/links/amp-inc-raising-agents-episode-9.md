@@ -4,6 +4,7 @@ draft: false
 link: https://www.youtube.com/watch?v=2wjnV6F2arc
 title: 'Amp Inc. Raising Agents: Episode 9'
 youtube_id: 2wjnV6F2arc
+preview_image: https://img.youtube.com/vi/2wjnV6F2arc/maxresdefault.jpg
 ---
 # Amp Inc. Raising Agents: Episode 9
 

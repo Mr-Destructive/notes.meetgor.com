@@ -6,6 +6,7 @@ title: Gemini 3 is the best model ever made?
 youtube_id: 39PdgOYjBMg
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/39PdgOYjBMg/maxresdefault.jpg
 ---
 # Gemini 3 is the best model ever made?
 

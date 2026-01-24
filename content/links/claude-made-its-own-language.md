@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/BiFt4vw1-uM
 title: Claude made its own language
 youtube_id: BiFt4vw1-uM
+preview_image: https://img.youtube.com/vi/BiFt4vw1-uM/maxresdefault.jpg
 ---
 # Claude made its own language
 

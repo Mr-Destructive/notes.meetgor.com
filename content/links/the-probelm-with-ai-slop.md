@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/vrTrOCQZoQE
 title: The probelm with AI Slop
 youtube_id: vrTrOCQZoQE
+preview_image: https://img.youtube.com/vi/vrTrOCQZoQE/maxresdefault.jpg
 ---
 # The probelm with AI Slop
 

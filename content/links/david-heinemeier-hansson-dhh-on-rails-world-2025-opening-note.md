@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/gcwzWzC7gUA
 title: 'David Heinemeier Hansson (DHH) on Rails World 2025: Opening Note'
 youtube_id: gcwzWzC7gUA
+preview_image: https://img.youtube.com/vi/gcwzWzC7gUA/maxresdefault.jpg
 ---
 # David Heinemeier Hansson (DHH) on Rails World 2025: Opening Note
 

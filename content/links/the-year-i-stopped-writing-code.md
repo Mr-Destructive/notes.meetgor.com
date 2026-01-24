@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Ge8LoXfJJdA
 title: The year I stopped writing code
 youtube_id: Ge8LoXfJJdA
+preview_image: https://img.youtube.com/vi/Ge8LoXfJJdA/maxresdefault.jpg
 ---
 # The year I stopped writing code
 

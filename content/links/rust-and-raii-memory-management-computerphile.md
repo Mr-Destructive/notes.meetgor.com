@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/pTMvh6VzDls?si=GSEmB3KadHuv-TdD
 title: Rust and RAII Memory Management - Computerphile
 youtube_id: pTMvh6VzDls
+preview_image: https://img.youtube.com/vi/pTMvh6VzDls/maxresdefault.jpg
 ---
 # Rust and RAII Memory Management - Computerphile
 

@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/jxsA_185lMI?si
 title: How OpenAI Atlas is built
 youtube_id: jxsA_185lMI
+preview_image: https://img.youtube.com/vi/jxsA_185lMI/maxresdefault.jpg
 ---
 # How OpenAI Atlas is built
 

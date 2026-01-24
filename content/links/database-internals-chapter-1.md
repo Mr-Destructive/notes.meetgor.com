@@ -3,9 +3,10 @@ date: 2026-01-09
 draft: false
 link: https://www.youtube.com/live/HibHalGlIes
 title: Database Internals:Chapter 1
-youtube_id: live/HibHal
+youtube_id: HibHalGlIes
 tags:
 - database
+preview_image: https://img.youtube.com/vi/HibHalGlIes/maxresdefault.jpg
 ---
 # Database Internals:Chapter 1
 

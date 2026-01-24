@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/zduSFxRajkE
 title: Tokenization from scratch from Andrej Karapathy
 youtube_id: zduSFxRajkE
+preview_image: https://img.youtube.com/vi/zduSFxRajkE/maxresdefault.jpg
 ---
 # Tokenization from scratch from Andrej Karapathy
 

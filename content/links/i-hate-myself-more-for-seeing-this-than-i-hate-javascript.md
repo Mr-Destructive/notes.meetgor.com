@@ -6,6 +6,7 @@ title: I hate myself more for seeing this, than I hate javascript
 youtube_id: 7bvBVBy_CrM
 tags:
 - javascript
+preview_image: https://img.youtube.com/vi/7bvBVBy_CrM/maxresdefault.jpg
 ---
 # I hate myself more for seeing this, than I hate javascript
 

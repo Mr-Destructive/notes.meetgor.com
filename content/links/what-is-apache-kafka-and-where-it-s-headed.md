@@ -6,6 +6,7 @@ title: What is Apache Kafka and where it’s headed?
 youtube_id: 9CrlA0Wasvk
 tags:
 - ai
+preview_image: https://img.youtube.com/vi/9CrlA0Wasvk/maxresdefault.jpg
 ---
 # What is Apache Kafka and where it’s headed?
 

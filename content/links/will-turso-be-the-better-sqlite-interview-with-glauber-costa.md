@@ -8,6 +8,7 @@ tags:
 - career
 - database
 - sql
+preview_image: https://img.youtube.com/vi/1JHOY0zqNBY/maxresdefault.jpg
 ---
 # Will Turso be the better SQLite? Interview with Glauber Costa
 

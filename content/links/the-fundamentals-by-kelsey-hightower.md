@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Jlqzy02k6B8
 title: The Fundamentals by Kelsey Hightower
 youtube_id: Jlqzy02k6B8
+preview_image: https://img.youtube.com/vi/Jlqzy02k6B8/maxresdefault.jpg
 ---
 # The Fundamentals by Kelsey Hightower
 

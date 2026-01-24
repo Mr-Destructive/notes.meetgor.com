@@ -16,6 +16,7 @@ import (
 	h "blog/internal/handler"
 	"blog/internal/models"
 	"blog/internal/ssg"
+	"blog/internal/util"
 
 	"github.com/joho/godotenv"
 )
@@ -29,13 +30,28 @@ func init() {
 
 // PageMetadata holds extracted page info
 type PageMetadata struct {
-	Title       string
-	Description string
-	Image       string
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Image       string `json:"image"`
+	YouTubeID   string `json:"youtube_id"`
 }
 
 // fetchPageMetadata fetches title, description, and image from a URL
 func fetchPageMetadata(url string) PageMetadata {
+	meta := PageMetadata{}
+
+	// Special handling for YouTube
+	youtubeID := util.ExtractYouTubeID(url)
+	if youtubeID != "" {
+		meta.YouTubeID = youtubeID
+		ytMeta, err := util.FetchYouTubeMetadata(youtubeID)
+		if err == nil && ytMeta != nil {
+			meta.Title = ytMeta.Title
+			meta.Image = ytMeta.ThumbnailURL
+			// oEmbed doesn't always provide description, so we'll fall through to HTML if needed
+		}
+	}
+
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
@@ -44,7 +60,7 @@ func fetchPageMetadata(url string) PageMetadata {
 	
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil || resp.StatusCode != 200 {
-		return PageMetadata{}
+		return meta
 	}
 	defer resp.Body.Close()
 
@@ -53,17 +69,17 @@ func fetchPageMetadata(url string) PageMetadata {
 	body, _ := io.ReadAll(limitReader)
 	html := string(body)
 
-	meta := PageMetadata{}
-
-	// Try og:title first
-	ogTitlePattern := regexp.MustCompile(`<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']`)
-	if matches := ogTitlePattern.FindStringSubmatch(html); len(matches) > 1 {
-		meta.Title = strings.TrimSpace(matches[1])
-	} else {
-		// Try title tag
-		titlePattern := regexp.MustCompile(`<title>([^<]+)</title>`)
-		if matches := titlePattern.FindStringSubmatch(html); len(matches) > 1 {
+	// Try og:title first if not already set by YouTube
+	if meta.Title == "" {
+		ogTitlePattern := regexp.MustCompile(`<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']`)
+		if matches := ogTitlePattern.FindStringSubmatch(html); len(matches) > 1 {
 			meta.Title = strings.TrimSpace(matches[1])
+		} else {
+			// Try title tag
+			titlePattern := regexp.MustCompile(`<title>([^<]+)</title>`)
+			if matches := titlePattern.FindStringSubmatch(html); len(matches) > 1 {
+				meta.Title = strings.TrimSpace(matches[1])
+			}
 		}
 	}
 
@@ -79,10 +95,12 @@ func fetchPageMetadata(url string) PageMetadata {
 		}
 	}
 
-	// Try og:image
-	ogImagePattern := regexp.MustCompile(`<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']`)
-	if matches := ogImagePattern.FindStringSubmatch(html); len(matches) > 1 {
-		meta.Image = strings.TrimSpace(matches[1])
+	// Try og:image if not already set by YouTube
+	if meta.Image == "" {
+		ogImagePattern := regexp.MustCompile(`<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']`)
+		if matches := ogImagePattern.FindStringSubmatch(html); len(matches) > 1 {
+			meta.Image = strings.TrimSpace(matches[1])
+		}
 	}
 
 	return meta
@@ -315,25 +333,85 @@ func handlePosts(w http.ResponseWriter, r *http.Request, db *db.DB, id, action s
 			return
 		}
 
-		// Fetch title and image from link if empty and type is "link"
-		if req.Title == "" && req.TypeID == "link" {
+		// Enrich metadata for link posts
+		if req.TypeID == "link" {
 			var metadata map[string]interface{}
 			if err := json.Unmarshal(req.Metadata, &metadata); err == nil && metadata != nil {
-				if sourceURL, exists := metadata["source_url"].(string); exists && sourceURL != "" {
-					pageMeta := fetchPageMetadata(sourceURL)
-					if pageMeta.Title != "" {
-						req.Title = pageMeta.Title
+					// Try to find the URL in metadata
+					var sourceURL string
+					if val, ok := metadata["url"].(string); ok && val != "" {
+						sourceURL = val
+					} else if val, ok := metadata["link"].(string); ok && val != "" {
+						sourceURL = val
+					} else if val, ok := metadata["source_url"].(string); ok && val != "" {
+						sourceURL = val
 					}
-					if pageMeta.Image != "" {
-						metadata["og_image"] = pageMeta.Image
-					}
-					if pageMeta.Description != "" {
-						metadata["og_description"] = pageMeta.Description
-					}
-				}
-			}
-		}
 
+					if sourceURL != "" {
+						pageMeta := fetchPageMetadata(sourceURL)
+						
+						// Auto-fill title if empty
+						if req.Title == "" && pageMeta.Title != "" {
+							req.Title = pageMeta.Title
+						}
+						
+						// Set YouTube ID if found
+						if pageMeta.YouTubeID != "" {
+							metadata["youtube_id"] = pageMeta.YouTubeID
+						}
+						
+						// Set preview images if not present
+						if _, exists := metadata["preview_image"]; !exists && pageMeta.Image != "" {
+							metadata["preview_image"] = pageMeta.Image
+						}
+						
+						if _, exists := metadata["preview_description"]; !exists && pageMeta.Description != "" {
+							metadata["preview_description"] = pageMeta.Description
+						}
+						
+						// Also keep og tags for social sharing if not already present
+						if _, exists := metadata["og_image"]; !exists && pageMeta.Image != "" {
+							metadata["og_image"] = pageMeta.Image
+						}
+						if _, exists := metadata["og_description"]; !exists && pageMeta.Description != "" {
+							metadata["og_description"] = pageMeta.Description
+						}
+						
+											// Marshal back
+											if newMetadata, err := json.Marshal(metadata); err == nil {
+												req.Metadata = newMetadata
+											}
+										}
+									}
+								}
+						
+								// Ensure Title and Slug are not empty to prevent DB failures
+								if req.Title == "" {
+									if req.TypeID == "link" {
+										// Try to find the URL to use as title
+										var metadata map[string]interface{}
+										if err := json.Unmarshal(req.Metadata, &metadata); err == nil && metadata != nil {
+											if val, ok := metadata["link"].(string); ok && val != "" {
+												req.Title = val
+											} else if val, ok := metadata["url"].(string); ok && val != "" {
+												req.Title = val
+											}
+										}
+										if req.Title == "" {
+											req.Title = "Untitled Link"
+										}
+									} else {
+										req.Title = "Untitled"
+									}
+								}
+						
+								if req.Slug == "" {
+									req.Slug = util.GenerateSlug(req.Title)
+									if req.Slug == "" {
+										req.Slug = util.GenerateID()
+									}
+								}
+						
 		post, err := db.CreatePost(ctx, &req)
 		if err != nil {
 			respondError(w, http.StatusInternalServerError, err.Error())
@@ -354,6 +432,51 @@ func handlePosts(w http.ResponseWriter, r *http.Request, db *db.DB, id, action s
 		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 			respondError(w, http.StatusBadRequest, err.Error())
 			return
+		}
+
+		// Enrich metadata on update if metadata is provided
+		if req.Metadata != nil {
+			var metadata map[string]interface{}
+			if err := json.Unmarshal(req.Metadata, &metadata); err == nil && metadata != nil {
+				// Try to find the URL in metadata
+				var sourceURL string
+				if val, ok := metadata["url"].(string); ok && val != "" {
+					sourceURL = val
+				} else if val, ok := metadata["link"].(string); ok && val != "" {
+					sourceURL = val
+				} else if val, ok := metadata["source_url"].(string); ok && val != "" {
+					sourceURL = val
+				}
+
+				if sourceURL != "" {
+					pageMeta := fetchPageMetadata(sourceURL)
+					
+					// Set YouTube ID if found and not already set
+					if pageMeta.YouTubeID != "" && metadata["youtube_id"] == nil {
+						metadata["youtube_id"] = pageMeta.YouTubeID
+					}
+					
+					// Set preview images if missing
+					if metadata["preview_image"] == nil && pageMeta.Image != "" {
+						metadata["preview_image"] = pageMeta.Image
+					}
+					if metadata["og_image"] == nil && pageMeta.Image != "" {
+						metadata["og_image"] = pageMeta.Image
+					}
+					
+					if metadata["preview_description"] == nil && pageMeta.Description != "" {
+						metadata["preview_description"] = pageMeta.Description
+					}
+					if metadata["og_description"] == nil && pageMeta.Description != "" {
+						metadata["og_description"] = pageMeta.Description
+					}
+					
+					// Marshal back
+					if newMetadata, err := json.Marshal(metadata); err == nil {
+						req.Metadata = newMetadata
+					}
+				}
+			}
 		}
 
 		post, err := db.UpdatePost(ctx, id, &req)

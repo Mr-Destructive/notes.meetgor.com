@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Yj9677a3y6c?si=1ND1s1FKQUZq4_Yu
 title: Anthropic acquires Bun
 youtube_id: Yj9677a3y6c
+preview_image: https://img.youtube.com/vi/Yj9677a3y6c/maxresdefault.jpg
 ---
 # Anthropic acquires Bun
 

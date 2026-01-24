@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/MTHGoGUFpvE
 title: 'Kubernetes Zero to Hero Course: Alta3 Research'
 youtube_id: MTHGoGUFpvE
+preview_image: https://img.youtube.com/vi/MTHGoGUFpvE/maxresdefault.jpg
 ---
 # Kubernetes Zero to Hero Course: Alta3 Research
 

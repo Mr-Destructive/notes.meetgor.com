@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Yr9O6KFwbW4
 title: We need to talk about Ralp loops
 youtube_id: Yr9O6KFwbW4
+preview_image: https://img.youtube.com/vi/Yr9O6KFwbW4/maxresdefault.jpg
 ---
 # We need to talk about Ralp loops
 

@@ -614,9 +614,20 @@ func HandlePostEditor(w http.ResponseWriter, r *http.Request, database *db.DB, p
 </div>
 
 <script>
+const INITIAL_METADATA = ` + func() string {
+	if post != nil && len(post.Metadata) > 0 {
+		return string(post.Metadata)
+	}
+	return "{}"
+}() + `;
+
 const POST_TEMPLATES = {
 	'article': { titleRequired: true, contentRequired: true, fields: [] },
-	'link': { titleRequired: false, contentRequired: false, fields: [{name: 'url', label: 'URL', type: 'url'}] },
+	'link': { titleRequired: false, contentRequired: false, fields: [
+		{name: 'link', label: 'URL', type: 'url'},
+		{name: 'youtube_id', label: 'YouTube ID', type: 'text'},
+		{name: 'preview_image', label: 'Preview Image', type: 'url'}
+	] },
 	'page': { titleRequired: true, contentRequired: true, fields: [] },
 	'post': { titleRequired: true, contentRequired: true, fields: [] },
 	'project': { titleRequired: true, contentRequired: false, fields: [] },
@@ -747,6 +758,9 @@ function updatePostType() {
 					const option = document.createElement('option');
 					option.value = opt;
 					option.textContent = opt;
+					if (INITIAL_METADATA && INITIAL_METADATA[field.name] === opt) {
+						option.selected = true;
+					}
 					input.appendChild(option);
 				}
 			} else if (field.type === 'textarea') {
@@ -754,12 +768,18 @@ function updatePostType() {
 				input.id = 'field-' + field.name;
 				input.name = 'meta_' + field.name;
 				input.rows = 3;
+				if (INITIAL_METADATA && INITIAL_METADATA[field.name]) {
+					input.value = INITIAL_METADATA[field.name];
+				}
 			} else {
 				input = document.createElement('input');
 				input.type = field.type;
 				input.id = 'field-' + field.name;
 				input.name = 'meta_' + field.name;
 				input.placeholder = 'Enter ' + field.label.toLowerCase();
+				if (INITIAL_METADATA && INITIAL_METADATA[field.name]) {
+					input.value = INITIAL_METADATA[field.name];
+				}
 			}
 			
 			group.appendChild(input);
@@ -771,7 +791,7 @@ function updatePostType() {
 }
 
 function fetchLinkMetadata() {
-	const urlInput = document.getElementById('field-url');
+	const urlInput = document.getElementById('field-link');
 	const url = urlInput.value.trim();
 	
 	if (!url) {
@@ -791,6 +811,14 @@ function fetchLinkMetadata() {
 			}
 			if (data.description) {
 				document.getElementById('post-excerpt').value = data.description;
+			}
+			if (data.youtube_id) {
+				const ytInput = document.getElementById('field-youtube_id');
+				if (ytInput) ytInput.value = data.youtube_id;
+			}
+			if (data.image) {
+				const imgInput = document.getElementById('field-preview_image');
+				if (imgInput) imgInput.value = data.image;
 			}
 			if (data.title) {
 				const slug = data.title.toLowerCase()
@@ -852,10 +880,17 @@ function handlePostSubmit(event) {
 		return;
 	}
 	
-	const slug = document.getElementById('post-slug').value;
+	let slug = document.getElementById('post-slug').value;
 	if (!slug.trim()) {
-		showMessage('Slug is required', 'danger');
-		return;
+		// Try to generate slug from title
+		if (title && title.trim()) {
+			slug = title.toLowerCase()
+				.replace(/[^\w\s-]/g, '')
+				.replace(/\s+/g, '-')
+				.replace(/-+/g, '-');
+		} else {
+			slug = 'post-' + Math.random().toString(36).substring(2, 9);
+		}
 	}
 	
 	const metadata = {};
