@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/D-tuQNPp0WY
 title: Claude Cowork
 youtube_id: D-tuQNPp0WY
-tags:
-- ai
 ---
 # Claude Cowork
 

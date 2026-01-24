@@ -7,7 +7,6 @@ preview_description: I'm usually an optimist about things. That outlook has serv
   use. It's...
 preview_image: https://kennethreitz.org/static/images/social-card.jpg
 title: The internet is a net negative
-tags: []
 ---
 # The internet is a net negative
 

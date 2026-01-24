@@ -5,9 +5,10 @@ date: 2025-11-22 00:00:00+00:00
 draft: false
 tags:
 - ai
-- go
+- devops
+- git
 - newsletter
-- sql
+- security
 ---
 ## Week #69
 It was a good week. That’s what I can say. I continued writing. I experimented with quite a lot of things. VLLMs, new models, new approaches, tactics, and read a lot of articles as usual.

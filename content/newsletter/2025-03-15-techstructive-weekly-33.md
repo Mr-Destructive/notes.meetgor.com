@@ -5,8 +5,6 @@ date: 2025-03-22
 tags:
 - ai
 - career
-- frontend
-- go
 - newsletter
 - python
 ---

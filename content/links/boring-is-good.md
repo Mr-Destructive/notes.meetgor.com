@@ -3,8 +3,6 @@ date: 2025-09-19
 draft: false
 link: https://jenson.org/boring/
 title: Boring is good
-tags:
-- python
 ---
 # Boring is good
 

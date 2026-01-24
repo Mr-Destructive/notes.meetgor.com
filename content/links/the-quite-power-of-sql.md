@@ -4,6 +4,7 @@ draft: false
 link: https://blog.sturdystatistics.com/posts/sql/
 title: The quite power of SQL
 tags:
+- database
 - sql
 ---
 # The quite power of SQL

@@ -13,7 +13,6 @@ preview_description: 'Today''s representative line is almost too short to be a f
   '
 preview_image: https://s3.amazonaws.com/remy.jetpackshark.com/remy-thumb.jpg
 title: Brace yourself
-tags: []
 ---
 # Brace yourself
 

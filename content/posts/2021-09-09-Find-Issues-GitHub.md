@@ -7,7 +7,6 @@ slug: find-filter-github-issues
 image_url: https://meetgor-cdn.pages.dev/github-filter-issues.png
 tags:
 - git
-- python
 ---
 ## Introduction
 

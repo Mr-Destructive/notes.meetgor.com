@@ -5,7 +5,7 @@ link: https://youtu.be/7bvBVBy_CrM
 title: I hate myself more for seeing this, than I hate javascript
 youtube_id: 7bvBVBy_CrM
 tags:
-- frontend
+- javascript
 ---
 # I hate myself more for seeing this, than I hate javascript
 

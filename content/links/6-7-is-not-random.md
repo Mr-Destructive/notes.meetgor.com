@@ -6,7 +6,6 @@ preview_description: I walked into the grocery shop the other day and saw a soda
   labeled “6-7” and “Brainrot.”
 preview_image: https://substackcdn.com/image/fetch/$s_!sFma!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fmartinlichstam.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1871385577%26version%3D9
 title: 6’7’‘ is not Random
-tags: []
 ---
 # 6’7’‘ is not Random
 

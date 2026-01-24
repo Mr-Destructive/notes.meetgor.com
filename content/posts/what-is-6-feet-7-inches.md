@@ -5,7 +5,6 @@ slug: what-is-6-feet-7-inches
 draft: false
 type: link
 description: ''
-tags: []
 ---
 This is so true 
 

@@ -6,7 +6,7 @@ date: 2025-12-25T15:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
-- git
+- database
 - sql
 ---
 ## Advent of SQL, Day 10 - Misdelivered Presents

@@ -6,9 +6,8 @@ date: 2021-11-05 20:50:00+05:30
 slug: curl-basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643289075/blogmedia/bqnrrfaeaqfaj7hezxjx.png
 tags:
-- frontend
+- database
 - git
-- python
 - testing
 ---
 ## Introduction

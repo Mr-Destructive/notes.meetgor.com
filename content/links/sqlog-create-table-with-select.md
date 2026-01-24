@@ -5,7 +5,8 @@ link: https://www.meetgor.com/sqlog/sqlite-create-table-from-select/
 preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
 title: 'SQLog: Create Table with SELECT'
-tags: []
+tags:
+- sql
 ---
 # SQLog: Create Table with SELECT
 

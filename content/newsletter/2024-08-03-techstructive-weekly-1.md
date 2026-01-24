@@ -5,7 +5,6 @@ type: newsletter
 slug: techstructive-weekly-1
 tags:
 - ai
-- career
 - git
 - go
 - newsletter

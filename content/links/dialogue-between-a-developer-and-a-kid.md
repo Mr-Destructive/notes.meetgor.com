@@ -3,8 +3,6 @@ date: 2026-01-09
 draft: false
 link: https://riggraz.dev/dialogue-developer.html
 title: Dialogue between a developer and a kid
-tags:
-- python
 ---
 # Dialogue between a developer and a kid
 

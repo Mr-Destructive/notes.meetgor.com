@@ -7,7 +7,6 @@ slug: vim-keymaps
 image_url: https://meetgor-cdn.pages.dev/vim-keymapping-guide.webp
 tags:
 - neovim
-- python
 ---
 ## Introduction
 

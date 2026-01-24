@@ -6,6 +6,7 @@ date: 2025-12-19T15:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
+- database
 - sql
 ---
 ## Advent of SQL Day 4 WinterFest Volunteers

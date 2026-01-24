@@ -4,7 +4,6 @@ draft: false
 link: https://youtu.be/UV9GqinedQ8
 title: Google’s Nano Banana Pro Image Generation Model
 youtube_id: UV9GqinedQ8
-tags: []
 ---
 # Google’s Nano Banana Pro Image Generation Model
 

@@ -8,8 +8,6 @@ preview_description: For a decade, I’ve wanted to build a simple game that sho
   could play and understand why dad stares at vehicle routing problems all […]
 preview_image: https://www.graphhopper.com/wp-content/uploads/2025/12/tsp-game-image.png
 title: 'A TSP game I wanted for 10 years: built in 4 hours'
-tags:
-- frontend
 ---
 # A TSP game I wanted for 10 years: built in 4 hours
 

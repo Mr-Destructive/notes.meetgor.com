@@ -6,7 +6,6 @@ preview_description: Web presense of Marvin Hagemeister who is a core developer 
   preactjs
 preview_image: https://marvinh.dev/media/me-twitter.jpg
 title: Building from First Principles
-tags: []
 ---
 # Building from First Principles
 

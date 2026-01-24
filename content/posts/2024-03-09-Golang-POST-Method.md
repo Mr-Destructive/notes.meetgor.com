@@ -7,9 +7,8 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-034-post-method.png
 tags:
-- career
-- devops
 - go
+- security
 ---
 ## Introduction
 

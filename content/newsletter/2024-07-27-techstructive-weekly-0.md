@@ -7,7 +7,6 @@ tags:
 - ai
 - devops
 - git
-- go
 - newsletter
 - python
 - sql

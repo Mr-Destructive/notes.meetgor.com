@@ -5,7 +5,6 @@ link: https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/
 title: Notes on switching to Helix from Vim
 tags:
 - neovim
-- python
 ---
 # Notes on switching to Helix from Vim
 

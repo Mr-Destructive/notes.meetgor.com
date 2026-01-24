@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/VSiPVZcTQTo
 title: STRING is actually an integer type
 youtube_id: VSiPVZcTQTo
-tags:
-- sql
 ---
 # STRING is actually an integer type
 

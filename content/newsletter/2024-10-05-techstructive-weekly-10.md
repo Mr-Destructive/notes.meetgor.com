@@ -4,10 +4,9 @@ type: newsletter
 date: 2024-10-05
 slug: techstructive-weekly-10
 tags:
-- ai
-- devops
+- database
+- docker
 - go
-- neovim
 - newsletter
 - sql
 ---

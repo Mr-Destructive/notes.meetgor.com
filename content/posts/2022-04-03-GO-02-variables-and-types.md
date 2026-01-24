@@ -7,9 +7,8 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-002-variables-types.png
 tags:
-- frontend
+- git
 - go
-- python
 ---
 ## Introduction
 

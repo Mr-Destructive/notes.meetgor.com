@@ -5,7 +5,5 @@ slug: distinguish-yourself-as-a-developer
 draft: false
 type: link
 description: ''
-tags:
-- career
 ---
 This is cool advice. I like writing, side projects, oss, reading, and making stuff. It just shows the passionate flowing out.

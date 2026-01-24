@@ -3,7 +3,6 @@ title: GeeksForGeeks
 date: 2021-09-15
 draft: false
 type: work
-tags: []
 ---
 ### Technical Content Writer - [GeeksForGeeks](https://www.geeksforgeeks.org/)
 **June 2021 - September 2021**

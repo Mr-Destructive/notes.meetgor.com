@@ -6,7 +6,7 @@ date: 2021-08-11 20:24:29+05:30
 slug: vim-buffers
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286548/blogmedia/khj3xx5mulhotdfw7z1x.png
 tags:
-- frontend
+- git
 - neovim
 ---
 ## Introduction

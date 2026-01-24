@@ -6,6 +6,8 @@ date: 2021-07-08 19:50:35+05:30
 slug: bash-game-numberjack
 image_url: https://meetgor-cdn.pages.dev/bash-script-game.webp
 tags:
+- database
+- git
 - sql
 ---
 ## Introduction

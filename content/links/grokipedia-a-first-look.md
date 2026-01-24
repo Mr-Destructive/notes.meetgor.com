@@ -8,8 +8,6 @@ preview_description: 'To begin with my credentials for those who arrive here not
   and launch of Encyclopedia of Earth, founded Citizendium, and found'
 preview_image: https://larrysanger.org/wp-content/uploads/2025/10/Selection_497-1.png
 title: 'Grokipedia: A first look'
-tags:
-- ai
 ---
 # Grokipedia: A first look
 

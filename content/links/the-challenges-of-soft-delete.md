@@ -4,7 +4,6 @@ draft: false
 link: https://atlas9.dev/blog/soft-delete.html
 title: The challenges of soft delete
 tags:
-- python
 - sql
 ---
 # The challenges of soft delete

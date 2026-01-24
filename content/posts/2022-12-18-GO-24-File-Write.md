@@ -7,10 +7,8 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-024-file-write.png
 tags:
-- frontend
+- git
 - go
-- python
-- rust
 ---
 ## Introduction
 

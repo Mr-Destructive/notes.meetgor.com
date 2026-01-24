@@ -7,6 +7,7 @@ status: published
 slug: django-non-clustered-index-pg
 date: 2022-11-10 22:10:00
 tags:
+- database
 - python
 - sql
 ---

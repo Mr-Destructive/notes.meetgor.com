@@ -7,7 +7,6 @@ preview_description: No newsletter next week Running the TLA+ workshop. No way I
   channel...
 preview_image: https://buttondown-attachments.s3.us-west-2.amazonaws.com/images/7757f208-c0e1-491e-98b5-38a45622b114.png
 title: Syntax highlighting is a waste of the information channel
-tags: []
 ---
 # Syntax highlighting is a waste of the information channel
 

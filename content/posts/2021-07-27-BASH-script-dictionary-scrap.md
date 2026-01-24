@@ -7,8 +7,7 @@ date: 2021-07-27 11:45:03+05:30
 slug: bash-dictionary-scrapper
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1627367329063/dabJLKcD-.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
 tags:
-- frontend
-- python
+- sql
 ---
 ## Introduction
 

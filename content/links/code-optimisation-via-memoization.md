@@ -4,7 +4,6 @@ draft: false
 link: https://youtu.be/JXUOMsFBDXQ
 title: Code Optimisation via Memoization
 youtube_id: JXUOMsFBDXQ
-tags: []
 ---
 # Code Optimisation via Memoization
 

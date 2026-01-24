@@ -6,6 +6,8 @@ date: 2025-12-28T20:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
+- database
+- git
 - sql
 ---
 ## Advent of SQL, Day 15 - Confirmation Phrase Dispatches

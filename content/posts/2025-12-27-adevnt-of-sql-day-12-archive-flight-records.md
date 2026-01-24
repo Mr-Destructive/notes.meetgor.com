@@ -6,9 +6,8 @@ date: 2025-12-27T15:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
-- rust
+- database
 - sql
-- testing
 ---
 ## Advent of SQL - Day 12, Archive Flight Records
 

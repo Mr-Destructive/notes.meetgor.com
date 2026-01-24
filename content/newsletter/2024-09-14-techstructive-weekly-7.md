@@ -5,7 +5,7 @@ date: 2024-09-14
 slug: techstructive-weekly-7
 tags:
 - career
-- frontend
+- database
 - git
 - go
 - newsletter

@@ -3,8 +3,6 @@ date: 2026-01-16
 draft: false
 link: https://antirez.com/news/158
 title: Don’t Fall into the AI hype
-tags:
-- ai
 ---
 # Don’t Fall into the AI hype
 

@@ -2,7 +2,6 @@
 title: Harry Potter and the Goblet of Fire
 date: 2026-01-24
 draft: false
-tags: []
 ---
 # Harry Potter and the Goblet of Fire
 

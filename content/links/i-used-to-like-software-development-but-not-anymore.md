@@ -3,8 +3,6 @@ date: 2025-10-24
 draft: false
 link: https://blog.kulman.sk/i-used-to-like-software-development-but-not-anymore/
 title: I used to like software development, but not anymore
-tags:
-- ai
 ---
 # I used to like software development, but not anymore
 

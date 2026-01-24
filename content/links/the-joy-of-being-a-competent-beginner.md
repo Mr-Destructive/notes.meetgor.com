@@ -3,7 +3,6 @@ date: 2026-01-23
 draft: false
 link: https://xydinesh.com/posts/joy-of-competent-beginner/
 title: The joy of being a competent beginner
-tags: []
 ---
 # The joy of being a competent beginner
 

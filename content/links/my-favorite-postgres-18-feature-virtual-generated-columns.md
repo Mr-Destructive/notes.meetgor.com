@@ -4,6 +4,7 @@ draft: false
 link: https://tselai.com/virtual-gencolumns
 title: 'My Favorite Postgres 18 feature: Virtual generated columns'
 tags:
+- database
 - sql
 ---
 # My Favorite Postgres 18 feature: Virtual generated columns

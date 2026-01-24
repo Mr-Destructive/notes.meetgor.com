@@ -6,6 +6,7 @@ slug: techstructive-weekly-62
 tags:
 - ai
 - career
+- database
 - newsletter
 - sql
 ---

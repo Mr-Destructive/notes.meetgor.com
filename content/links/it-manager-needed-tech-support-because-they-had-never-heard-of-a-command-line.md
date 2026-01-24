@@ -6,7 +6,6 @@ preview_description: 'On Call: Traceroute was also a mystery to this mountebank'
 preview_image: https://regmedia.co.uk/2025/09/11/screenshot_cmd_wtf.jpg
 title: IT manager needed tech support because they had never heard of a command line
 tags:
-- career
 - neovim
 ---
 # IT manager needed tech support because they had never heard of a command line

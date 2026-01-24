@@ -4,7 +4,6 @@ draft: false
 link: https://youtu.be/dgwevhEykWQ
 title: Harshad Numbers
 youtube_id: dgwevhEykWQ
-tags: []
 ---
 # Harshad Numbers
 

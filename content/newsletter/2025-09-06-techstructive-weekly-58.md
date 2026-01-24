@@ -6,8 +6,9 @@ slug: techstructive-weekly-58
 tags:
 - ai
 - career
-- frontend
+- database
 - git
+- javascript
 - newsletter
 - sql
 ---

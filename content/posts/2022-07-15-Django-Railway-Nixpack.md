@@ -7,7 +7,9 @@ series:
 - Django-Deployment
 image_url: https://meetgor-cdn.pages.dev/django-deploy-railway-nixpacks.png
 tags:
+- database
 - devops
+- docker
 - git
 - python
 - sql

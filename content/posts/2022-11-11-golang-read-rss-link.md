@@ -6,10 +6,8 @@ status: published
 slug: golang-read-rss-feed
 date: 2022-11-11 22:45:00
 tags:
+- git
 - go
-- neovim
-- python
-- sql
 ---
 ## Reding Rss Feed
 

@@ -7,6 +7,7 @@ slug: ml-intro
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288219/blogmedia/uh0xyxjnpp1olfcksbza.png
 tags:
 - ai
+- devops
 - git
 - testing
 ---

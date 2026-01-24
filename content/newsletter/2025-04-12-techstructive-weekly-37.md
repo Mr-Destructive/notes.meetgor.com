@@ -5,7 +5,6 @@ date: 2025-04-12 00:00:00
 slug: techstructive-weekly-36
 tags:
 - ai
-- career
 - git
 - newsletter
 ---

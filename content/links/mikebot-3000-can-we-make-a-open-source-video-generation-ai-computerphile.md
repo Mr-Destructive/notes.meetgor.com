@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/cP8xpkvs_UI
 title: Mikebot 3000 - Can we make a open source video generation ai? Computerphile
 youtube_id: cP8xpkvs_UI
-tags:
-- ai
 ---
 # Mikebot 3000 - Can we make a open source video generation ai? Computerphile
 

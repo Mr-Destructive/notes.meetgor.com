@@ -4,7 +4,7 @@ title: 'Vim: Get the Text from Visual Selection'
 date: 2022-03-05 17:25:37
 slug: vim-get-visual-text
 tags:
-- neovim
+- sql
 ---
 ## Using Registers 
 

@@ -5,7 +5,6 @@ slug: interstitial journaling
 draft: false
 type: link
 description: ''
-tags: []
 ---
 This is cool, maybe a little too much time aware, maybe doing it too much is bad, but still, a good way to break the mental procrastination cycle
 I think we can get a idea or get aware of the amount of time we wasted or done something good, and act on it accordingly. A nice trick for the brain

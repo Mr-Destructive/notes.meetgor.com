@@ -10,7 +10,6 @@ preview_description: This short article compiles a few notes I previously shared
   one. And for each chapter, I recommend the following steps.
 preview_image: https://sebastianraschka.com/images/blog/2025/reading-books/hero.jpg
 title: Recommendations for getting most from technical books
-tags: []
 ---
 # Recommendations for getting most from technical books
 

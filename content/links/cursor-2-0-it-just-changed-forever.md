@@ -4,7 +4,6 @@ draft: false
 link: https://youtu.be/VgtfpTGJmHQ
 title: 'Cursor 2.0: It just changed forever'
 youtube_id: VgtfpTGJmHQ
-tags: []
 ---
 # Cursor 2.0: It just changed forever
 

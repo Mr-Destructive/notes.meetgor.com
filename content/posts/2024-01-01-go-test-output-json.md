@@ -5,10 +5,6 @@ description: Obtain JSON output of test results in Golang
 status: published
 slug: golang-test-output-json
 date: 2024-01-01 21:30:00
-tags:
-- go
-- neovim
-- testing
 ---
 I just discovered that we can generate a JSON output of test results in Golang. I found this [here](https://youtu.be/cf72gMBrsI0?t=80).
 

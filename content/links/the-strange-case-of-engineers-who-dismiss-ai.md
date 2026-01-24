@@ -6,8 +6,6 @@ preview_description: Some engineers dismiss AI coding tools as ‘garbage’ wit
   modern versions. Their outdated opinions are costing them.
 preview_image: https://terriblesoftware.org/wp-content/uploads/2025/12/cznmcy1wcml2yxrll3jhd3bpegvsx2ltywdlcy93zwjzaxrlx2nvbnrlbnqvbhivchgxmzyynzawlwltywdllwt3dnh4owljlmpwzw.webp
 title: The strange case of engineers who dismiss AI
-tags:
-- ai
 ---
 # The strange case of engineers who dismiss AI
 

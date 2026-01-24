@@ -8,7 +8,6 @@ series:
 image_url: https://meetgor-cdn.pages.dev/nginx-survival-guide/nginx-sg-2.png
 tags:
 - devops
-- frontend
 ---
 ## Introduction
 

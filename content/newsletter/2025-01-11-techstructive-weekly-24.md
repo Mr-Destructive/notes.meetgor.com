@@ -4,6 +4,7 @@ title: 'Techstructive Weekly #24'
 date: 2025-01-11
 tags:
 - ai
+- git
 - go
 - newsletter
 - python

@@ -5,11 +5,12 @@ date: 2025-09-20 00:00:00
 slug: techstructive-weekly-60
 tags:
 - ai
+- database
 - devops
-- frontend
-- go
+- javascript
 - newsletter
 - python
+- security
 - sql
 - testing
 ---

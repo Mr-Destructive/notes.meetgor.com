@@ -7,7 +7,6 @@ preview_description: 'A common UI pattern is something like this: People do lots
   it a tooltip to show the exact datetime u…'
 preview_image: https://nolanlawson.com/wp-content/uploads/2025/01/favicon.png?w=32
 title: The time elemet that should actually do something
-tags: []
 ---
 # The time elemet that should actually do something
 

@@ -6,7 +6,6 @@ slug: techstructive-weekly-3
 tags:
 - ai
 - devops
-- go
 - newsletter
 - python
 ---

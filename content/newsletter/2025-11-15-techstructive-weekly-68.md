@@ -5,11 +5,12 @@ date: 2025-11-15 00:00:00+00:00
 draft: false
 tags:
 - ai
+- database
 - devops
+- git
 - go
 - newsletter
 - python
-- rust
 - sql
 ---
 ## Week #68

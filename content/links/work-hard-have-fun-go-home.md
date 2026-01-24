@@ -3,7 +3,6 @@ date: 2025-09-19
 draft: false
 link: https://www.bonnycode.com/posts/work-hard-have-fun-go-home/
 title: Work Hard, have fun, go home
-tags: []
 ---
 # Work Hard, have fun, go home
 

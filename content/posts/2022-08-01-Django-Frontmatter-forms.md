@@ -7,8 +7,9 @@ date: 2022-08-01 20:30:00
 status: published
 slug: django-form-load-frontmatter
 tags:
-- frontend
+- git
 - python
+- sql
 ---
 ## Introduction
 

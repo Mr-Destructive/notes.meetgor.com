@@ -4,7 +4,7 @@ slug: sqlite-create-temp-table
 title: 'SQLite SQL: Create Temporary Table'
 date: '2025-09-24'
 tags:
-- ai
+- database
 - sql
 ---
 ## Temporary Table in SQLite

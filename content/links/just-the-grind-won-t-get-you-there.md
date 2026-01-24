@@ -6,7 +6,6 @@ preview_description: Don't grind on something the company doesn't value. Hard wo
   is not rewarded. **_Outcomes_** are rewarded.
 preview_image: https://swizec.com/social-cards/the-grind-wont-get-you-there.png
 title: Just the grind won’t get you there
-tags: []
 ---
 # Just the grind won’t get you there
 

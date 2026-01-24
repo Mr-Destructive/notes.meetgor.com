@@ -7,9 +7,11 @@ series:
 - Django-Series
 image_url: https://meetgor-cdn.pages.dev/django-htmx-crud.png
 tags:
-- frontend
+- database
 - git
+- javascript
 - python
+- security
 - sql
 ---
 ## Introduction

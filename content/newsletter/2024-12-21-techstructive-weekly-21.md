@@ -4,6 +4,7 @@ title: 'Techstructive Weekly #21'
 date: 2024-12-21
 tags:
 - ai
+- career
 - go
 - newsletter
 ---

@@ -6,8 +6,6 @@ preview_description: A deep dive into how CRDT-powered local-first apps track, m
   and sync every INSERT, UPDATE, and DELETE inside SQLite.
 preview_image: https://substackcdn.com/image/fetch/$s_!LXtf!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1cdd80d7-058a-4349-97ab-dc24a1555fe1_1920x1080.heic
 title: Secret Life of Local First Value
-tags:
-- sql
 ---
 # Secret Life of Local First Value
 

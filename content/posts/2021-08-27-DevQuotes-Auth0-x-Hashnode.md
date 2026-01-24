@@ -8,10 +8,11 @@ date: 2021-08-27 23:45:00+05:30
 slug: devquotes-platform
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286845/blogmedia/bhajgzmqaknzpk1z9qdn.png
 tags:
-- frontend
+- database
 - git
-- neovim
+- javascript
 - python
+- security
 - sql
 ---
 ## Introduction

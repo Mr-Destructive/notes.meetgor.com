@@ -6,7 +6,7 @@ title: Will Turso be the better SQLite? Interview with Glauber Costa
 youtube_id: 1JHOY0zqNBY
 tags:
 - career
-- rust
+- database
 - sql
 ---
 # Will Turso be the better SQLite? Interview with Glauber Costa

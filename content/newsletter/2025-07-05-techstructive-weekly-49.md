@@ -5,7 +5,7 @@ date: 2025-07-05 00:00:00
 slug: techstructive-weekly-49
 tags:
 - ai
-- devops
+- database
 - newsletter
 - python
 - sql

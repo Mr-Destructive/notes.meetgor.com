@@ -5,7 +5,7 @@ date: 2025-12-20 00:00:00
 slug: techstructive-weekly-73
 tags:
 - ai
-- neovim
+- database
 - newsletter
 - python
 - sql

@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/XhJYNSssqrA
 title: Exposing Brain Rot AI
 youtube_id: XhJYNSssqrA
-tags:
-- ai
 ---
 # Exposing Brain Rot AI
 

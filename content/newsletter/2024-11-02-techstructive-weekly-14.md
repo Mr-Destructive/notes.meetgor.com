@@ -5,7 +5,7 @@ date: 2024-11-02
 slug: techstructive-weekly-14
 tags:
 - ai
-- git
+- database
 - go
 - newsletter
 - python

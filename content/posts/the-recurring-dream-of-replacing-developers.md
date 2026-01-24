@@ -5,8 +5,6 @@ slug: the-recurring-dream-of-replacing-developers
 draft: false
 type: link
 description: ''
-tags:
-- ai
 ---
 - what a flashback, everything makes sense.
 - Programming is not mechanical

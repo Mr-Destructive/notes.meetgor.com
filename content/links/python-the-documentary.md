@@ -5,8 +5,6 @@ link: https://youtu.be/GfH4QL4VqJ0
 title: 'Python: The documentary'
 youtube_id: GfH4QL4VqJ0
 tags:
-- ai
-- frontend
 - python
 ---
 # Python: The documentary

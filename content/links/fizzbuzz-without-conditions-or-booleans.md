@@ -3,7 +3,6 @@ date: 2025-11-21
 draft: false
 link: https://evanhahn.com/fizz-buzz-without-conditionals-or-booleans/
 title: Fizzbuzz without conditions or booleans
-tags: []
 ---
 # Fizzbuzz without conditions or booleans
 

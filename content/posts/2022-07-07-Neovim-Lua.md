@@ -5,9 +5,7 @@ date: 2022-07-09 20:30:00
 slug: neovim-vimscript-to-lua
 image_url: https://meetgor-cdn.pages.dev/vimtolua.png
 tags:
-- devops
 - git
-- go
 - neovim
 - python
 ---

@@ -5,6 +5,7 @@ date: 2022-08-07 20:30:00
 slug: pgcli-pg-from-terminal
 image_url: https://meetgor-cdn.pages.dev/python-pkg-pgcli-postgres-from-terminal.png
 tags:
+- database
 - neovim
 - python
 - sql

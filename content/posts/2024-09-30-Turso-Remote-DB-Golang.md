@@ -7,9 +7,11 @@ series:
 - lets-go-with-turso
 image_url: https://meetgor-cdn.pages.dev/connect-turso-libsql-golang.png
 tags:
+- database
 - devops
 - git
 - go
+- security
 - sql
 ---
 ## Introduction

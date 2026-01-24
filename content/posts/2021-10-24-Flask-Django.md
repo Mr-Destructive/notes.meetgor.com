@@ -6,9 +6,10 @@ date: 2021-10-24 19:00:00+05:30
 slug: flask-django-frameworks
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288439/blogmedia/p8smflzd3rjb6scowhmc.png
 tags:
+- database
 - python
+- security
 - sql
-- testing
 ---
 ## Introduction
 

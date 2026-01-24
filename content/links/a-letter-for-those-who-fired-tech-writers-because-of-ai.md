@@ -13,8 +13,6 @@ preview_description: 'Hey you,
   You are making a big mistake. But you can still undo the damage.'
 preview_image: /thumb.png
 title: A Letter for those who fired Tech Writers because of AI
-tags:
-- ai
 ---
 # A Letter for those who fired Tech Writers because of AI
 

@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/rddX4GEeyvE
 title: Gemini 3 Flash
 youtube_id: rddX4GEeyvE
-tags:
-- ai
 ---
 # Gemini 3 Flash
 

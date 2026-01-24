@@ -7,8 +7,8 @@ date: 2022-05-24 22:30:00
 status: published
 slug: django-app-from-scratch
 tags:
-- devops
-- neovim
+- docker
+- git
 - python
 ---
 ## Pull a Fresh Debian Image

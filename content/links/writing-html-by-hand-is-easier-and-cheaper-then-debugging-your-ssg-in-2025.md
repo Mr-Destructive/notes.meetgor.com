@@ -7,8 +7,6 @@ preview_description: As someone who has used a static site generator every day a
   hand is probably easier” This becomes obvious when you …
 preview_image: https://logicgrimoire.wordpress.com/wp-content/uploads/2020/06/cropped-hilbert-2.png?w=200
 title: Writing HTML by hand is easier and cheaper then debugging your SSG in 2025
-tags:
-- ai
 ---
 # Writing HTML by hand is easier and cheaper then debugging your SSG in 2025
 

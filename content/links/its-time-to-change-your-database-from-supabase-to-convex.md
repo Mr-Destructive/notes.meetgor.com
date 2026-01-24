@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/B6C-MWCFfAg
 title: Its time to change your database - from Supabase to Convex
 youtube_id: B6C-MWCFfAg
-tags:
-- sql
 ---
 # Its time to change your database - from Supabase to Convex
 

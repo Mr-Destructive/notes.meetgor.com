@@ -6,7 +6,6 @@ tags:
 - ai
 - career
 - devops
-- frontend
 - go
 - newsletter
 - python

@@ -7,9 +7,10 @@ series:
 - Django-Deployment
 image_url: https://meetgor-cdn.pages.dev/django-deploy-railway.png
 tags:
+- database
 - devops
-- frontend
 - git
+- javascript
 - python
 - sql
 ---

@@ -5,6 +5,7 @@ date: 2025-10-11 00:00:00
 slug: techstructive-weekly-63
 tags:
 - ai
+- career
 - go
 - newsletter
 - python

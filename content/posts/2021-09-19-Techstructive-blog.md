@@ -6,8 +6,8 @@ date: 2021-09-19 15:00:00+05:30
 slug: techstructive-blog-init
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287813/blogmedia/zgblatyqpwdh5oe7817g.png
 tags:
-- frontend
 - git
+- javascript
 - neovim
 - python
 ---

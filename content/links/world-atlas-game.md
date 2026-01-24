@@ -3,10 +3,6 @@ date: 2026-01-09
 draft: false
 link: https://worldatlas.meetgor.com/
 title: World Atlas Game
-tags:
-- ai
-- frontend
-- go
 ---
 # World Atlas Game
 

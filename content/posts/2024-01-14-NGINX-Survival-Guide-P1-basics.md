@@ -8,6 +8,7 @@ series:
 image_url: https://meetgor-cdn.pages.dev/nginx-survival-guide/nginx-sg-1.png
 tags:
 - devops
+- docker
 ---
 ## Introduction
 

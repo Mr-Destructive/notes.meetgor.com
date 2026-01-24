@@ -6,6 +6,7 @@ slug: techstructive-weekly-57
 tags:
 - ai
 - career
+- database
 - newsletter
 - sql
 - testing

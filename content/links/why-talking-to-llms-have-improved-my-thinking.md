@@ -3,7 +3,6 @@ date: 2026-01-23
 draft: false
 link: https://philipotoole.com/why-talking-to-llms-has-improved-my-thinking/
 title: Why talking to LLMs have improved my thinking
-tags: []
 ---
 # Why talking to LLMs have improved my thinking
 

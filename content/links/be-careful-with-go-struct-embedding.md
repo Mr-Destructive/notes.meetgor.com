@@ -3,9 +3,6 @@ date: 2025-09-26
 draft: false
 link: https://mattjhall.co.uk/posts/be-careful-with-go-struct-embedding.html
 title: Be careful with Go struct embedding
-tags:
-- go
-- sql
 ---
 # Be careful with Go struct embedding
 

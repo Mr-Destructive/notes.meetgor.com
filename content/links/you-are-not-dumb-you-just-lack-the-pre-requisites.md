@@ -7,8 +7,6 @@ preview_description: 'I always thought I was too dumb to understand math. During
   like myself: painfully difficult.'
 preview_image: /Lelouchdaily.png
 title: You are not dumb, you just lack the pre-requisites
-tags:
-- sql
 ---
 # You are not dumb, you just lack the pre-requisites
 

@@ -9,8 +9,6 @@ image_url: https://meetgor-cdn.pages.dev/golang-023-config-files.png
 tags:
 - git
 - go
-- neovim
-- python
 ---
 ## Reading specific file types (JSON, YAML, TOML)
 

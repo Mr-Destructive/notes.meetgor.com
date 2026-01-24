@@ -4,7 +4,6 @@ title: 'Techstructive Weekly #8'
 date: 2024-09-21
 slug: techstructive-weekly-8
 tags:
-- go
 - newsletter
 - python
 - sql

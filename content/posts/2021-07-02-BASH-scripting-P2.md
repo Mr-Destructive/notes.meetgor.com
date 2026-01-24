@@ -7,8 +7,6 @@ slug: bash-guide-p2
 series:
 - BASH Scripting Guide
 image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p2.webp
-tags:
-- sql
 ---
 # Introduction
 

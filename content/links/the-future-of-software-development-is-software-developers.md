@@ -7,7 +7,6 @@ preview_description: <ShamelessPlug> If you’re looking to get your development
   enable teams to rapidly, reliably and s…
 preview_image: https://codemanship.wordpress.com/wp-content/uploads/2025/11/image-7.png
 title: The future of software development is software developers
-tags: []
 ---
 # The future of software development is software developers
 

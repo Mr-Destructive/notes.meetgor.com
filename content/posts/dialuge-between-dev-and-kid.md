@@ -5,8 +5,6 @@ slug: dialuge-between-dev-and-kid
 draft: false
 type: link
 description: ''
-tags:
-- python
 ---
 This is hilariously funny.
 What a real developer is? Who knows languages? No, who knows how to code, No! A developer is someone who sticks to a problem when everyone has given up.

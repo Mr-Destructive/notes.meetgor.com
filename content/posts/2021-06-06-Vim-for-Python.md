@@ -6,6 +6,7 @@ date: 2021-06-06 11:35:25+05:30
 slug: vim-for-python
 image_url: https://meetgor-cdn.pages.dev/vim-for-python.webp
 tags:
+- git
 - neovim
 - python
 ---

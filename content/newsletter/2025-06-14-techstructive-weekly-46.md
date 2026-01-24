@@ -6,8 +6,10 @@ slug: techstructive-weekly-46
 tags:
 - ai
 - career
+- database
 - devops
-- frontend
+- docker
+- kubernetes
 - newsletter
 - python
 ---

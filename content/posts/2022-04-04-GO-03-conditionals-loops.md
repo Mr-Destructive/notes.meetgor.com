@@ -7,10 +7,8 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-003-conditionals-loops.png
 tags:
-- frontend
+- git
 - go
-- python
-- rust
 ---
 ## Introduction
 

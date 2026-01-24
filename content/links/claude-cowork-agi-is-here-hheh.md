@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/IcQEaopx90g
 title: 'Claude Cowork: AGI is here, hheh?'
 youtube_id: IcQEaopx90g
-tags:
-- ai
 ---
 # Claude Cowork: AGI is here, hheh?
 

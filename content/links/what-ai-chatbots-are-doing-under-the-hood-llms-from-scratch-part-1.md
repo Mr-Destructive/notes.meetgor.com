@@ -7,7 +7,7 @@ preview_description: "How AI chatbots like ChatGPT work under the hood -- the po
 preview_image: https://www.gilesthomas.com/images/favicons/web-app-manifest-512x512.png
 title: What AI chatbots are doing under-the-hood, LLMs from scratch part 1
 tags:
-- ai
+- security
 ---
 # What AI chatbots are doing under-the-hood, LLMs from scratch part 1
 

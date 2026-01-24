@@ -7,8 +7,9 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-037-delete-method.png
 tags:
+- database
+- git
 - go
-- sql
 ---
 ## Introduction
 

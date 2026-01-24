@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/GXJwX3tpMe0
 title: How flask started as a joke
 youtube_id: GXJwX3tpMe0
-tags:
-- python
 ---
 # How flask started as a joke
 

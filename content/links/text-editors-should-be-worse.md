@@ -3,8 +3,6 @@ date: 2025-12-26
 draft: false
 link: https://www.da.vidbuchanan.co.uk/blog/annoying-text-editors.html
 title: Text editors should be worse
-tags:
-- neovim
 ---
 # Text editors should be worse
 

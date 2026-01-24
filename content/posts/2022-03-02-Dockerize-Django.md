@@ -4,7 +4,8 @@ title: Dockerize a Django project
 date: 2022-03-02 19:12:51
 slug: dockerize-django-prj
 tags:
-- devops
+- docker
+- git
 - python
 ---
 ## Dockerize a Django project

@@ -6,6 +6,7 @@ preview_description: ''
 preview_image: https://meetgor.com/tbicon.png
 title: 'Day 11: Behavior Score'
 tags:
+- database
 - sql
 ---
 # Day 11: Behavior Score

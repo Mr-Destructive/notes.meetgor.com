@@ -6,7 +6,7 @@ slug: techstructive-weekly-74
 tags:
 - ai
 - career
-- neovim
+- database
 - newsletter
 - rust
 - sql

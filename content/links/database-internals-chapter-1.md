@@ -5,7 +5,7 @@ link: https://www.youtube.com/live/HibHalGlIes
 title: Database Internals:Chapter 1
 youtube_id: live/HibHal
 tags:
-- sql
+- database
 ---
 # Database Internals:Chapter 1
 

@@ -4,7 +4,7 @@ title: 'SQLite dot commands: Output mode'
 slug: sqlite-mode-dot-command
 date: 2025-09-01
 tags:
-- frontend
+- database
 - sql
 ---
 ## Output mode dot command

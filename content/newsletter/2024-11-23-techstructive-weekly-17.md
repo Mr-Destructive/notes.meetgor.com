@@ -4,9 +4,6 @@ title: 'Techstructive Weekly #17'
 date: 2024-11-23
 slug: techstructive-weekly-17
 tags:
-- ai
-- career
-- frontend
 - go
 - newsletter
 - python

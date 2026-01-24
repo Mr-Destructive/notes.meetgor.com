@@ -7,7 +7,6 @@ preview_description: "Cloudflare suffered a service outage on November 18, 2025.
   \ file causing many Cloudflare services to be affected. \n"
 preview_image: https://cf-assets.www.cloudflare.com/zkvhlag99gkb/YBe790iu0YNmD9fP6wdDW/21a23905b0b90e9a505180ac4ad9654d/Cloudflare_outage_on_November_18_2025-OG.png
 title: The 18th November 2025 Cloudflare Outage Report
-tags: []
 ---
 # The 18th November 2025 Cloudflare Outage Report
 

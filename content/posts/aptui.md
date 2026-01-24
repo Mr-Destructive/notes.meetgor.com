@@ -5,9 +5,6 @@ description: A terminal interface for testing and working with APIs and web requ
 date: 2022-06-22 17:00:00
 github_link: https://github.com/Mr-Destructive/aptui
 live_link: https://pypi.org/project/aptui/
-tags:
-- python
-- testing
 ---
 A terminal client interface for testing and working with APIs and web requests.
 

@@ -3,8 +3,6 @@ date: 2025-12-12
 draft: false
 link: https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be
 title: Why Transformers must hallucinate
-tags:
-- ai
 ---
 # Why Transformers must hallucinate
 

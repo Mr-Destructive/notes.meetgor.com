@@ -5,9 +5,10 @@ date: 2024-01-06 20:15:00
 slug: neovim-sourcegraph-cody
 image_url: https://meetgor-cdn.pages.dev/neovim-sourcegraph-cody.png
 tags:
-- ai
+- git
 - neovim
 - rust
+- security
 ---
 ## Introduction
 

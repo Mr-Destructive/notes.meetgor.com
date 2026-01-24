@@ -2,7 +2,6 @@
 title: Can we have a moment of silence for the ones who thought Programmers were replaceable
 date: 2026-01-24
 draft: false
-tags: []
 ---
 # Can we have a moment of silence for the ones who thought Programmers were replaceable
 

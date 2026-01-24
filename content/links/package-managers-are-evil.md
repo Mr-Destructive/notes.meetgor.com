@@ -5,8 +5,8 @@ link: https://www.gingerbill.org/article/2025/09/08/package-managers-are-evil/
 title: Package Managers are evil
 tags:
 - ai
-- frontend
 - go
+- javascript
 - python
 ---
 # Package Managers are evil

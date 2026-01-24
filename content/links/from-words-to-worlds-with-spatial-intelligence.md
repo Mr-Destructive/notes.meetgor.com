@@ -7,8 +7,6 @@ preview_description: 'In 1950, when computing was little more than automated ari
   machines think?'
 preview_image: https://substackcdn.com/image/fetch/$s_!Hlih!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29b21ddb-1bf4-4363-ac55-377bbfff583a_2845x1600.png
 title: From words to worlds with spatial intelligence
-tags:
-- ai
 ---
 # From words to worlds with spatial intelligence
 

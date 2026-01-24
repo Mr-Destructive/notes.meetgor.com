@@ -6,9 +6,7 @@ date: 2021-10-07 16:45:42+05:30
 slug: vim-un-comment-p1
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288865/blogmedia/jbs2hcaiplfvwsgrcfgl.png
 tags:
-- frontend
 - neovim
-- testing
 ---
 ## Introduction
 

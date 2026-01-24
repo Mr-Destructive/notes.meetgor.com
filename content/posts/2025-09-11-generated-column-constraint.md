@@ -4,6 +4,7 @@ slug: sqlite-generated-column-constraint
 title: 'SQLite SQL: GENERATED column constraint'
 date: '2025-09-11'
 tags:
+- database
 - sql
 ---
 ## The GENERATED column constraint

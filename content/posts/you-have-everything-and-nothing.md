@@ -5,7 +5,6 @@ slug: you-have-everything-and-nothing
 draft: false
 type: link
 description: ''
-tags: []
 ---
 Man, that was a heck of an article to read. I continued reading it because I found it relatable to Minecraft.
 - You open a world, you have an empty inventory

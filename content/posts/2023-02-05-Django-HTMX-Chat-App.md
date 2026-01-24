@@ -7,11 +7,13 @@ series:
 - Django-Series
 image_url: https://meetgor-cdn.pages.dev/django-htmx-chat-cover.png
 tags:
-- frontend
+- database
 - git
+- go
+- javascript
 - python
+- security
 - sql
-- testing
 ---
 # Django + HTMX Chat application
 

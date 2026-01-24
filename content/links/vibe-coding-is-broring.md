@@ -5,7 +5,6 @@ link: https://cassidoo.co/post/vibe-coding-yawn/
 preview_description: Vibe coding gets the job done, but there's no thrill in the build.
 preview_image: https://cassidoo.co/og-image/vibe-coding-yawn.png
 title: Vibe Coding is broring
-tags: []
 ---
 # Vibe Coding is broring
 

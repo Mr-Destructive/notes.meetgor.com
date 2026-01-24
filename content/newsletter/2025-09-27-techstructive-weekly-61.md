@@ -6,9 +6,11 @@ slug: techstructive-weekly-61
 tags:
 - ai
 - career
-- frontend
-- go
+- database
+- git
+- javascript
 - newsletter
+- security
 - sql
 ---
 ## Week #61

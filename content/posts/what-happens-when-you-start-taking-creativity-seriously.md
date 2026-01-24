@@ -5,8 +5,6 @@ slug: what-happens-when-you-start-taking-creativity-seriously
 draft: false
 type: link
 description: ''
-tags:
-- career
 ---
 > You have to defend your creativity
 

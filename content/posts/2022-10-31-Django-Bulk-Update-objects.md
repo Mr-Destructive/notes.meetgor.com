@@ -6,6 +6,7 @@ status: published
 slug: django-bulk-update-queryset
 date: 2022-10-31 18:00:00
 tags:
+- database
 - python
 ---
 Let's say, I have a lots of objects which I want to update with a particular field or fields. We can use the [bulk_update](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#bulk-update) method with the model name.

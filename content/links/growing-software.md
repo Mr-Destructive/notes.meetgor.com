@@ -6,7 +6,6 @@ preview_description: A blog where I put any experiments and thoughts concerning 
   technology and, maybe, some opinions on other topics.
 preview_image: https://www.pearprogramming.blog/images/card-image-large.png
 title: Growing Software
-tags: []
 ---
 # Growing Software
 

@@ -5,6 +5,7 @@ type: newsletter
 slug: techstructive-weekly-63
 tags:
 - ai
+- career
 - go
 - newsletter
 - python

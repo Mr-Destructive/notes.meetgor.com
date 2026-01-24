@@ -7,8 +7,6 @@ date: 2022-02-18 22:30:00+05:30
 slug: podevcast-project
 image_url: https://meetgor-cdn.pages.dev/podevcast-python.png
 tags:
-- devops
-- frontend
 - git
 - python
 ---

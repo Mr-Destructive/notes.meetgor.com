@@ -7,6 +7,7 @@ series:
 - lets-go-with-turso
 image_url: https://meetgor-cdn.pages.dev/embedded-replicas-libsql-turso-go.png
 tags:
+- database
 - git
 - go
 - sql

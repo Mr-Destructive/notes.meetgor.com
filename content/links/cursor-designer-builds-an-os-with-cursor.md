@@ -4,7 +4,8 @@ draft: false
 link: https://youtu.be/TQhv6Wol6Ns
 title: Cursor designer builds an OS with cursor
 youtube_id: TQhv6Wol6Ns
-tags: []
+tags:
+- ai
 ---
 # Cursor designer builds an OS with cursor
 

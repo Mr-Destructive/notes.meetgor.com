@@ -3,7 +3,7 @@ title: 'Thoughts: Kubernetes isn’t for you'
 date: 2026-01-24
 draft: false
 tags:
-- devops
+- kubernetes
 ---
 # Thoughts: Kubernetes isn’t for you
 

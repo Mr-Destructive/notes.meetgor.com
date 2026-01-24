@@ -3,7 +3,6 @@ date: 2025-11-14
 draft: false
 link: https://supremecodr.medium.com/-56094c225549
 title: Why I stopped trying to be a great engineer
-tags: []
 ---
 # Why I stopped trying to be a great engineer
 

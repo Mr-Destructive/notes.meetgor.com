@@ -4,6 +4,7 @@ slug: sqlite-self-join-relations
 title: 'SQLite SQL: Self Join Relations'
 date: '2025-09-17'
 tags:
+- database
 - sql
 ---
 ## Self Join Relations

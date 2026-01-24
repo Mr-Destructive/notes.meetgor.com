@@ -4,6 +4,7 @@ title: 'SQLite SQL: Create Table Basic'
 slug: sqlite-create-table
 date: 2025-09-04
 tags:
+- database
 - sql
 ---
 We have explored enough sqlite dot commands, now I want to explore the actual nuts and bolts of SQL in SQLite, what better place then to create tables.

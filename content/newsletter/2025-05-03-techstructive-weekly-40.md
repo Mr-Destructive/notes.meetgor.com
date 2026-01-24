@@ -5,8 +5,8 @@ date: 2025-05-03 00:00:00
 slug: techstructive-weekly-40
 tags:
 - ai
+- database
 - devops
-- neovim
 - newsletter
 - python
 ---

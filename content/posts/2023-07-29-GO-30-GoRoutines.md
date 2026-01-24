@@ -7,8 +7,9 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-030-goroutines.png
 tags:
+- database
+- git
 - go
-- sql
 ---
 ## Introduction
 

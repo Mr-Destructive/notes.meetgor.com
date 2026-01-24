@@ -2,7 +2,6 @@
 type: thoughts
 title: youre screwed unless you take action
 date: 2025-03-09 00:00:00
-tags: []
 ---
 Interesting read,
 

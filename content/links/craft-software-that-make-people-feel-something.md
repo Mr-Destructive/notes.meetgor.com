@@ -7,7 +7,6 @@ preview_description: Recently, people have been asking me why I’m pausing Boo 
   feel.
 preview_image: https://rapha.land/assets/images/banner.jpg
 title: Craft Software that make people feel something
-tags: []
 ---
 # Craft Software that make people feel something
 

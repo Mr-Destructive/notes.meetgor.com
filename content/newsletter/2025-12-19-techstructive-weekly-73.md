@@ -5,7 +5,7 @@ type: newsletter
 slug: techstructive-weekly-73
 tags:
 - ai
-- neovim
+- database
 - newsletter
 - python
 - sql

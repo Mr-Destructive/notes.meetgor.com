@@ -6,9 +6,6 @@ description: A single source for text, youtube and link extraction and summariza
 status: deployed
 live_link: https://utility-studio.vercel.app/
 github_link: https://github.com/Mr-Destructive/utility-studio/
-tags:
-- frontend
-- python
 ---
 A application to perform extraction of information from web, youtube, or document links, download video/audio from youtube links, and summarize the text content.
 

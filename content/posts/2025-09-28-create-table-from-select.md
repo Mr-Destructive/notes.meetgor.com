@@ -4,6 +4,7 @@ slug: sqlite-create-table-from-select
 title: 'SQLite SQL: Create Table with Select'
 date: '2025-09-28'
 tags:
+- database
 - sql
 ---
 ## Creating table with Select Query

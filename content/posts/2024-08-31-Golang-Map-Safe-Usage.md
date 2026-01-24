@@ -5,7 +5,6 @@ date: 2024-08-31 18:30:00
 slug: golang-safely-using-maps
 image_url: https://meetgor-cdn.pages.dev/golang-safe-map-usage.png
 tags:
-- devops
 - go
 ---
 ## Introduction

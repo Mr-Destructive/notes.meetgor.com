@@ -9,6 +9,7 @@ series:
 - Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1642339267/blogmedia/djbasics-8-db_pvulqh.png
 tags:
+- database
 - git
 - python
 - sql

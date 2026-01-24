@@ -4,8 +4,7 @@ slug: sqlite-many-to-many-table-without-rowid
 title: 'SQLite SQL: Many to Many Table without RowID'
 date: '2025-09-20'
 tags:
-- ai
-- rust
+- database
 - sql
 ---
 ## Many to Many Relation

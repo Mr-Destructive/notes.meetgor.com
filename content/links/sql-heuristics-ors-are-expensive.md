@@ -3,8 +3,6 @@ date: 2025-10-03
 draft: false
 link: https://ethanseal.com/articles/ors-are-expensive
 title: 'SQL Heuristics: ORs are expensive'
-tags:
-- sql
 ---
 # SQL Heuristics: ORs are expensive
 

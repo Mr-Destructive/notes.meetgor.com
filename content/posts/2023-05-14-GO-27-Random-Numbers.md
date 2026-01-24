@@ -7,6 +7,7 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-027-random-numbers.png
 tags:
+- git
 - go
 ---
 ## Introduction

@@ -8,7 +8,8 @@ series:
 - Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1640610003/blogmedia/dj-static-6_pjipoj.png
 tags:
-- frontend
+- git
+- javascript
 - python
 ---
 ## Introduction

@@ -8,7 +8,7 @@ preview_description: “Just use SQL”, they say. “No need for ORMs”, they 
 preview_image: https://substackcdn.com/image/fetch/$s_!9IyR!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F10c4a5c1-5e1b-4748-b819-bceb4ad39f73_1080x810.jpeg
 title: Just use SQL they say
 tags:
-- python
+- database
 - sql
 ---
 # Just use SQL they say

@@ -8,9 +8,9 @@ series:
 - Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643202559/blogmedia/k5oebqxixvyhn8o60qpo.png
 tags:
-- frontend
+- database
 - python
-- sql
+- security
 ---
 ## Introduction
 

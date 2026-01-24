@@ -4,7 +4,6 @@ draft: false
 link: https://www.youtube.com/live/G7iU2s7LUzA
 title: 'Designing Data Intensive Applications: Chapter 1 and 2'
 youtube_id: live/G7iU2s
-tags: []
 ---
 # Designing Data Intensive Applications: Chapter 1 and 2
 

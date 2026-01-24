@@ -4,7 +4,7 @@ slug: sqlite-many-to-many-relations
 title: 'SQLite SQL: Many to Many Relations'
 date: '2025-09-18'
 tags:
-- ai
+- database
 - rust
 - sql
 ---

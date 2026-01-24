@@ -4,8 +4,6 @@ draft: false
 link: https://youtu.be/uZBjVeyiYkk
 title: Cluade 4.5 is the best coding model in the world? Till when
 youtube_id: uZBjVeyiYkk
-tags:
-- ai
 ---
 # Cluade 4.5 is the best coding model in the world? Till when
 

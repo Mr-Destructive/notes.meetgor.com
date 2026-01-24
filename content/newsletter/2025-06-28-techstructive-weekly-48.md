@@ -5,9 +5,10 @@ date: 2025-06-28 00:00:00
 slug: techstructive-weekly-48
 tags:
 - ai
+- career
+- database
 - devops
-- frontend
-- go
+- docker
 - newsletter
 - python
 - sql

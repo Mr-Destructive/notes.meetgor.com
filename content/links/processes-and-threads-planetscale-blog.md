@@ -7,7 +7,6 @@ preview_description: Processes and threads are fundamental abstrations for opera
   article.
 preview_image: https://planetscale.com/assets/processes-and-threads-social-CmGLwhpp.jpg
 title: 'Processes and Threads: Planetscale Blog'
-tags: []
 ---
 # Processes and Threads: Planetscale Blog
 

@@ -5,8 +5,8 @@ date: 2024-11-30
 slug: techstructive-weekly-18
 tags:
 - ai
-- devops
-- frontend
+- career
+- database
 - go
 - newsletter
 - python

@@ -4,6 +4,7 @@ slug: sqlite-foreign-key-table-constraint
 title: 'SQLite SQL: Foreign KEY table constraint'
 date: '2025-09-15'
 tags:
+- database
 - sql
 ---
 ## The Foreign KEY Table constraint

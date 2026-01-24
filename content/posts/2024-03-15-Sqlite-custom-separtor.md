@@ -6,6 +6,7 @@ status: published
 slug: sqlite-inline-custom-separator
 date: 2024-03-15 22:30:00
 tags:
+- git
 - sql
 ---
 explaination about how i learned how to write a command for importing a csv 

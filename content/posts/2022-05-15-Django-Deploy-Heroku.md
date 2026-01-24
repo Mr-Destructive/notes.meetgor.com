@@ -7,12 +7,12 @@ series:
 - Django-Deployment
 image_url: https://meetgor-cdn.pages.dev/django-deploy-heroku.png
 tags:
+- database
 - devops
-- frontend
+- docker
 - git
 - python
 - sql
-- testing
 ---
 ## Introduction
 

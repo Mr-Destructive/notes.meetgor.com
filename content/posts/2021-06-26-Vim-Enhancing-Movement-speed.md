@@ -6,6 +6,7 @@ date: 2021-06-26 15:27:05+05:30
 slug: vim-movement-speed
 image_url: https://meetgor-cdn.pages.dev/vim-enchancing-moment-speed.webp
 tags:
+- ai
 - neovim
 ---
 ![]({{ page.image | relative_url }})

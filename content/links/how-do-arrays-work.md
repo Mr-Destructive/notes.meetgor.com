@@ -6,7 +6,6 @@ preview_description: What goes on under the hood of the most popular data struct
   In this post, we uncover the secrets of the array by reinventing one ourselves.
 preview_image: https://nan.fyi/og-image/how-arrays-work.png
 title: How do arrays work?
-tags: []
 ---
 # How do arrays work?
 

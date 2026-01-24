@@ -9,6 +9,7 @@ series:
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1638253939/blogmedia/dj-uv_esbld2.png
 tags:
 - python
+- sql
 ---
 ## Introduction
 

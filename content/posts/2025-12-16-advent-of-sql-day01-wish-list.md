@@ -6,8 +6,9 @@ date: 2025-12-16T15:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
+- database
+- javascript
 - sql
-- testing
 ---
 ## Learning SQLite: Advent of SQL Day 1
 
