@@ -1,10 +1,12 @@
 baseURL = "https://notes-meetgor-com.vercel.app/"
 languageCode = "en-us"
 title = "Notes"
+theme = "terminal"
 
 [params]
   description = "Technical notes, articles, links and newsletters"
-  
+  themeColor = "dark"
+
 [[menu.main]]
   name = "Posts"
   url = "/posts/"
