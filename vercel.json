@@ -1,4 +1,5 @@
 {
   "version": 2,
-  "outputDirectory": "exports/public"
+  "buildCommand": "cp -r public/* .",
+  "outputDirectory": "."
 }
