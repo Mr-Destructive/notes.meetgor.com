@@ -1,4 +1,5 @@
----type: newsletter
+---
+type: newsletter
 title: "Techstructive Weekly #60"
 date: 2025-09-20T00:00:00
 slug: "techstructive-weekly-60"

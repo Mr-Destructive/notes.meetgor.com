@@ -8,6 +8,9 @@ theme = "terminal"
   themeColor = "dark"
   showMenuItems = 6
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params.logo]
   logoText = "Notes"
   logoHomeLink = "/"

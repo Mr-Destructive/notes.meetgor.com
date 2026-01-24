@@ -1,4 +1,5 @@
----type: "newsletter"
+---
+type: "newsletter"
 title: "Techstructive Weekly #20"
 date: 2024-12-14
 tags: ["ai", "career", "frontend", "go", "neovim", "newsletter", "python", "rust", "sql"]

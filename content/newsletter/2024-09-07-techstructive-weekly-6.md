@@ -1,4 +1,5 @@
----type: "newsletter"
+---
+type: "newsletter"
 title: "Techstructive Weekly #6"
 date: 2024-09-07
 slug: "techstructive-weekly-6"
