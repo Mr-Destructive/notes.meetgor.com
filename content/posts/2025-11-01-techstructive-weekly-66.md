@@ -3,6 +3,7 @@ title: "Techstructive Weekly 66"
 type: "newsletter"
 date: 2025-11-01T00:00:00Z
 draft: false
+tags: ["ai", "newsletter", "python", "testing"]
 ---
 
 ## Week #66

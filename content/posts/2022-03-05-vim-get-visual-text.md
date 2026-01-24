@@ -3,7 +3,7 @@ type: til
 title: "Vim: Get the Text from Visual Selection"
 date: 2022-03-05T17:25:37
 slug: "vim-get-visual-text"
-tags:
+tags: ["neovim", "testing"]
   - vim
 ---
 

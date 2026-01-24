@@ -2,6 +2,7 @@
 title: "You’re not burning out, you’re essentially starving"
 date: 2025-12-26
 draft: false
+link: "https://neilthanedar.com/youre-not-burnt-out-youre-existentially-starving/"
 ---
 
 # You’re not burning out, you’re essentially starving

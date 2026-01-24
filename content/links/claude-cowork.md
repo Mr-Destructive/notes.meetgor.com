@@ -2,6 +2,8 @@
 title: "Claude Cowork"
 date: 2026-01-23
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/D-tuQNPp0WY"
 ---
 
 # Claude Cowork

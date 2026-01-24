@@ -2,6 +2,8 @@
 title: "STRING is actually an integer type"
 date: 2025-12-12
 draft: false
+tags: ["sql"]
+link: "https://youtu.be/VSiPVZcTQTo"
 ---
 
 # STRING is actually an integer type

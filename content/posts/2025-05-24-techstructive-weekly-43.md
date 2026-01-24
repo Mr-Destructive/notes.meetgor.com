@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #43"
 date: 2025-05-24T00:00:00
 slug: "techstructive-weekly-43"
+tags: ["ai", "career", "go", "newsletter", "sql"]
 ---
 
 ## Week #43
@@ -144,15 +144,3 @@ Ok, too much Google
 
 Here are the [100 things that Google released at the IO 2025](https://blog.google/technology/ai/google-io-2025-all-our-announcements/)
 
----
-
-Phew! That is a lot of news in a week. Google and Anthropic have nailed it. Google is going all over the place with a commanding position, Anthropic taking the focus to the developer ecosystem by making the model better and better at tool calling and coding tasks.
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-746) (it’s a Boeing 747 edition), and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-- Which model do you think is the ground-breaking model?
-- What agentic tools/IDE do you find more useful and help in improving productivity?
-
-That’s it from this 43rd edition of my weekly learning. I hope you enjoyed it, and leave comments on what you think about some of my takes or any feedback.
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

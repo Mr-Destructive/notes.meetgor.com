@@ -3,6 +3,7 @@ title: "Techstructive Weekly #11"
 date: 2024-10-12
 type: "newsletter"
 slug: "techstructive-weekly-11"
+tags: ["ai", "career", "frontend", "go", "newsletter", "python", "sql"]
 ---
 
 ## Week #11

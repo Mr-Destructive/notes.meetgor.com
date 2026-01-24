@@ -1,7 +1,7 @@
----
-type: "newsletter"
+---type: "newsletter"
 title: "Techstructive Weekly #33"
 date: 2025-03-22
+tags: ["ai", "career", "frontend", "go", "newsletter", "python"]
 ---
 
 ## Week #33

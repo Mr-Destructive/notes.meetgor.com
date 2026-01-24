@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #54"
 date: 2025-08-09T00:00:00
 slug: "techstructive-weekly-54"
+tags: ["ai", "career", "frontend", "git", "go", "newsletter", "python", "rust", "sql"]
 ---
 
 ## Week #54

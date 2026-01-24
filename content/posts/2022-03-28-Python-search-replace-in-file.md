@@ -3,7 +3,7 @@ type: til
 title: "Python: Search and Replace in File"
 date: 2022-03-28T18:59:30
 slug: "python-search-replace-file"
-tags:
+tags: ["frontend", "python"]
   - python
 ---
 

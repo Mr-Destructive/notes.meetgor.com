@@ -4,7 +4,7 @@ title: "Use Embedded Replicas of LibSQL Database hosted on Turso with a Golang A
 date: 2024-10-31T21:45:00
 slug: "turso-libsql-embedded-replicas-golang"
 series: ["lets-go-with-turso"]
-tags:
+tags: ["git", "go", "linux", "sql", "testing"]
   - go
   - turso
   - libsql

@@ -4,7 +4,7 @@ title: "Setting up Vim for Python"
 subtitle: "For the python programmers who need speed!"
 date: 2021-06-06T11:35:25+05:30
 slug: "vim-for-python"
-tags:
+tags: ["neovim", "python", "testing"]
   - python
   - vim
 image_url: https://meetgor-cdn.pages.dev/vim-for-python.webp

@@ -2,7 +2,7 @@
 author: meet
 date: 2025-04-11
 type: til
-tags:
+tags: ["ai", "git", "go", "neovim", "testing"]
   - git
 title: "Add hunks: only line specific changes with git add -p"
 ---

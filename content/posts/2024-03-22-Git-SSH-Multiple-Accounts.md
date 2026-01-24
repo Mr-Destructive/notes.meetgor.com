@@ -4,7 +4,7 @@ title: "Adding SSH Keys for Multiple Accounts in Git"
 description: "Setting up SSH config for using multiple accounts for Git repositories."
 status: published
 slug: git-ssh-multiple-accounts
-tags: ["git", "github"]
+tags: ["git", "linux"]
 date: 2024-03-22 22:30:00
 ---
 

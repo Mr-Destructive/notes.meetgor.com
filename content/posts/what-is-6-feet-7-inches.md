@@ -5,7 +5,7 @@ slug: what-is-6-feet-7-inches
 draft: false
 type: link
 description: ""
-tags: ["inflation"]
+tags: ["career"]
 ---
 
 This is so true 

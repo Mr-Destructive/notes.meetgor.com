@@ -2,6 +2,8 @@
 title: "Parsing integers in C"
 date: 2025-11-14
 draft: false
+tags: ["python"]
+link: "https://daniel.haxx.se/blog/2025/11/13/parsing-integers-in-c/"
 ---
 
 # Parsing integers in C

@@ -4,7 +4,7 @@ title: "Golang: Functions"
 date: 2022-04-13T09:00:00
 slug: "golang-functions"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-008-functions.png
 ---

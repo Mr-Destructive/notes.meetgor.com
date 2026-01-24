@@ -2,6 +2,8 @@
 title: "A Letter for those who fired Tech Writers because of AI"
 date: 2026-01-16
 draft: false
+tags: ["ai"]
+link: "https://passo.uno/letter-those-who-fired-tech-writers-ai/"
 ---
 
 # A Letter for those who fired Tech Writers because of AI

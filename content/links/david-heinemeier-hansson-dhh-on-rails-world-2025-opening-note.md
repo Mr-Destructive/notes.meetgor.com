@@ -2,6 +2,8 @@
 title: "David Heinemeier Hansson (DHH) on Rails World 2025: Opening Note"
 date: 2025-09-19
 draft: false
+tags: ["career"]
+link: "https://youtu.be/gcwzWzC7gUA"
 ---
 
 # David Heinemeier Hansson (DHH) on Rails World 2025: Opening Note

@@ -2,6 +2,8 @@
 title: "You should write an agent"
 date: 2025-11-07
 draft: false
+tags: ["ai"]
+link: "https://fly.io/blog/everyone-write-an-agent/"
 ---
 
 # You should write an agent

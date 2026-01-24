@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-generated-column-constraint
 title: 'SQLite SQL: GENERATED column constraint'
 date: "2025-09-11"
-tags: ["sqlite", "sql"]
+tags: ["frontend", "go", "sql"]
 ---
 
 ## The GENERATED column constraint

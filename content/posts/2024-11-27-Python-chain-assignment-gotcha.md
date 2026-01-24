@@ -4,7 +4,7 @@ title: "Gotcha with Chained Assignment in Python"
 description: "A lesson learned about Python's chained assignment with mutable objects, where all variables store references to the same object, leading to unexpected behaviour when one is modified."
 status: published
 slug: python-chain-assignment-gotcha
-tags: ["python",]
+tags: ["python"]
 date: 2024-11-27 22:15:00
 ---
 

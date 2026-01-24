@@ -5,7 +5,7 @@ description: "Exploring the pipreqs package that allows to list all the dependen
 date: 2022-09-14 21:57:30
 status: published
 slug: python-pipreqs
-tags: ['python',]
+tags: ["python"]
 ---
 
 ## Introduction

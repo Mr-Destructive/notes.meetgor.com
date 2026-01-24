@@ -4,7 +4,7 @@ title: "Django + HTMX CRUD application"
 date: 2022-07-31T12:30:00
 slug: "django-htmx-crud"
 series: ["Django-Series"]
-tags:
+tags: ["frontend", "go", "python", "sql"]
   - django
   - htmx
   - python

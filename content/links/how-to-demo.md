@@ -2,6 +2,7 @@
 title: "How to demo"
 date: 2025-11-14
 draft: false
+link: "https://thorstenball.com/how-to-demo/"
 ---
 
 # How to demo

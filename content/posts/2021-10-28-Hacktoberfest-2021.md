@@ -4,7 +4,7 @@ title: "Hacktoberfest 2021"
 subtitle: "Sharing my contribution and experience as a second hacktoberfest"
 date: 2021-10-28T20:10:00+05:30
 slug: "hacktoberfest-2021"
-tags:
+tags: ["go", "linux", "python"]
   - open-source
   - hacktoberfest
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288673/blogmedia/qy8xrefyqcsslfppdyhp.png

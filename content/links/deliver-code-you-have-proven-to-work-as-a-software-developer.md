@@ -2,6 +2,8 @@
 title: "Deliver Code you have proven to work as a software developer"
 date: 2025-12-19
 draft: false
+tags: ["career", "testing"]
+link: "https://simonwillison.net/2025/Dec/18/code-proven-to-work/"
 ---
 
 # Deliver Code you have proven to work as a software developer

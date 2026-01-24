@@ -4,7 +4,7 @@ title: "Advent of SQL 2025: Wish List"
 slug: "advent-of-sql-2025-day-1"
 date: 2025-12-16T15:30:00+0530
 series: ["advent-of-sql-2025"]
-tags: ["sqlite", "sql", "advent-of-sql"]
+tags: ["frontend", "sql", "testing"]
 ---
 
 ## Learning SQLite: Advent of SQL Day 1
@@ -277,10 +277,3 @@ sqlite> SELECT LOWER(TRIM(raw_wish)) as wish, count(*) as count FROM wish_list g
 sqlite>
 ```
 
----
-
-Day 1 done, moving on to day two by helping those pesky elves tomorrow. I am amazed at how stupider problems humans create with those elves as target. Just kidding, humans are elves :)
-
-Happy Coding :)
-
-Happy Squealing

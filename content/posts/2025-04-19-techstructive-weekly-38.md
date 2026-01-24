@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #38"
 date: 2025-04-19T00:00:00
 slug: "techstructive-weekly-38"
+tags: ["ai", "career", "frontend", "git", "go", "newsletter", "python", "sql"]
 ---
 
 ## Week #38
@@ -51,87 +51,3 @@ If every AI company thinks their model is important and ground-breaking or SOTA 
 
 Isn’t that part clear to them, or are they just too busy to keep up with the AI Race? The latter seems likely, but who am I to comment on that? I can take my time to absorb the things happening and filter out the things myself from the noise and potential unimportant buzz and hype (maybe important later) out there.
 
----
-
-## Created
-
-- [Appwrite Cloud Function Setup, creation, and deployment in Golang](https://www.youtube.com/watch?v=dq9czq0JgZA)
-  I recorded a tutorial on setting up a cloud function, creating the function in golang, and deploying it to Appwrite Cloud via
-    - CLI
-    - Git
-    - Manual (gzip file)Double click to interact with video
-
-## Read
-
-- [How to build an Agent](https://ampcode.com/how-to-build-an-agent)
-  This was a simple article, but it’s so important to read. The things that we see around sometimes feel magical, people might just stare at them and remain in awe for eternity. However, people like engineers and Thorsten Ball (he is an author and engineer), who are fueled not just by skill but also by curiosity and the will to go a step ahead, maybe even two steps. Those types of people understand the craft, play with it (maybe fail several times), gain clarity, gain wisdom, and not just for selfish greed or promotion, they are wise and generous, they share it with others. Those are not humans, those are angels’ inspiration for all of us (at least for me)
-  Agents are not magic; they are LLMs with tools, and they can predict which word(token) to insert next in the sentence. Apply this to hand them the problem and some tools (functions, api calls, documentation, database), and they can understand what to look up for, what to do with it next, get the result, and decide again, in a loop. Just like that. Agents are just loops over an LLM call (at least in the broader way).
-- [Our best customers are now Robots](https://fly.io/blog/fuckin-robots/)
-  > UX > DX > RX
-  A nice way to put that
-    - We first cared about **User experience** with HTML and JavaScript.
-    - Then **Developer experience** with React and god knows what frameworks
-    - Now, **Robots’ experience** with LLMs in the picture, we have MCP, A2A, and again,n god knows what will drop tomorrow
-
-  Tech is changing fast as hell.
-- [The Best Programmer I know](https://endler.dev/2025/best-programmers/)
-
-It is a manual on how to become a better programmer, I can really stick the headings of the post a goals to improve as a developer.
-
-- [Believe it’s going to work even though it probably won’t](https://world.hey.com/dhh/believe-it-s-going-to-work-even-though-it-probably-won-t-58fd9dc5)
-  Startup founders are strong-headed, which is what I also agree upon. And like everything in life, it is a double-edged sword. Everything has pros and cons, but to not be cut by the other edge, you have to sharpen the other; you can’t dismiss the other edge but keep on sharpening the other one.
-  Sorry, that was a weird tangent. Startup founders need to be strong-headed because it’s their dream to build and grow; if they stop defending themselves, then the team just disintegrates.
-
-## Watched
-
-- Raising an Agent [Episodes 1](https://www.youtube.com/watch?v=Cor-t9xC1ck) and [2](https://www.youtube.com/watch?v=5-LPfATZjyM)
-  Sourcegraph is such an open company, open as in the openness about their thinking and approaches. They are heading in a good direction, I think and they might be a fundamental step in something that no one else is noticing yet. They are taking the time and not rushing through the model race. I am betting on them now, a comeback is right around the corner.Double click to interact with video
-
-- [Firebase makes an AI IDE? Firebase Studio](https://youtu.be/ljW1smUpa2U?si=liUDLrETTSw3y02c)
-  App builders are good, but not there yet.
-  > Authentication, coming soon!
-  That was a hilarious dev-like builder. So relatable.
-  It now makes sense, as it is trained on real developers’ data, so if you know, you know.
-  And that brings a relief as well, as to the question of it replacing developers. That’s just not happening, as developers have not yet figured out their lives yet.Double click to interact with video
-
-## Learnt
-
-- Please use f-strings instead of old format strings in Python: Save yourself from questioning your existence
-  Man, this bug is lethal. If you have lets say a logger function that takes in a log string and arguments. You might be questioning your existence in debugging those errors. Since this is pretty nasty to use in logs, as we tend to looks for logs to find the errors. But if the logs itself are causing the issue, then good luck in finding where on earth the code is failing. Please use f-strings and save yourself from this madness `TypeError: not enough arguments for format string`
-- Vibe coding with Windsurf
-    - Windsurf let’s you prompt and generate, edit and delete files, execute commands and even debugging the errors.
-    - Its a good place to start, and then take control yourself. I just found it best for getting the boilerplate (too basic CRUD) steps and the UI parts. For other complex operations, it can’t vibe yet.
-- Intuition Vibe debugging with Chat GPT
-    - I had this above bug and there was try catch expression. The error must be in the middle code of it, but the logs that should have been there weren’t there. That made me wonder what the heck is happening.
-    - I tried to replicate the issue locally and found that we weren’t using the standard logger; it was a custom implementation of a logger. And then I suspected that is where it might be breaking.
-    - Then I went a bit deeper in the implementation of the code and asked gpt to verify that the place I suspect the issue is. And I was correct.
-    - This is am terming as Intuition vibe debugging, as a developer, you know what to expect and what not to, you can save time (and right now tokens) for LLM to do that for you, you can narrow down the search space and let it verify your intuitions. A lethal combination so far.
-    - I have not only used it once or twice, but several times, while checking the accuracy of ground truth and predictions, analyzing logs, filtering issues among the noise, and so many another trivial but too manual kind of operations that consume time and energy.
-
-## Tech News
-
-AI is truly breaking the world, every day there is a new model, new shiny tools, new way to approach things. So much so that it has become really overwhelming to take a deep breathe and listen, observe, learn in this cluttered and shiny, noisy world.
-
-- Open AI releases 4.1 4.1-mini, 4.1-nano breaking the accuracy of 4.5
-- Open AI also releases o3 and o4-mini
-- Google releases 2.5 Flash
-
-Next week, Antrophic will release something, that is my forecast, because we haven’t witnessed a week where there has been without a model release. I am excited but overwhelmed and scared as shit at the same time.
-
-Let us breathe!
-
-For more interesting articles, check out the [hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-742) for the week edition [#742](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-742), for even more software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
----
-
-That’s it from this edition of the newsletter, see you next week (hopefully no AI releases this week, like just stop for a week)
-
-Happy Coding :) (maybe happy vibing now)
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

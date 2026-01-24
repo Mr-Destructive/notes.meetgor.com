@@ -2,6 +2,8 @@
 title: "World Atlas Game"
 date: 2026-01-09
 draft: false
+tags: ["ai", "go"]
+link: "https://worldatlas.meetgor.com/"
 ---
 
 # World Atlas Game

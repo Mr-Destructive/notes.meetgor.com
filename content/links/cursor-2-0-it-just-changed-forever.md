@@ -2,6 +2,7 @@
 title: "Cursor 2.0: It just changed forever"
 date: 2025-10-31
 draft: false
+link: "https://youtu.be/VgtfpTGJmHQ"
 ---
 
 # Cursor 2.0: It just changed forever

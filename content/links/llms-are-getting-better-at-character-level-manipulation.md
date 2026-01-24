@@ -2,6 +2,8 @@
 title: "LLMs are getting better at character-level manipulation"
 date: 2025-10-17
 draft: false
+tags: ["testing"]
+link: "https://blog.burkert.me/posts/llm_evolution_character_manipulation/"
 ---
 
 # LLMs are getting better at character-level manipulation

@@ -2,6 +2,8 @@
 title: "Just use SQL they say"
 date: 2025-09-12
 draft: false
+tags: ["go", "python", "sql"]
+link: "https://www.architecture-weekly.com/p/just-use-sql-they-say-or-on-how-accidental"
 ---
 
 # Just use SQL they say

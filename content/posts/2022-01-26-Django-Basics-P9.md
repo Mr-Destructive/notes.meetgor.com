@@ -5,7 +5,7 @@ subtitle: "Exploring and Interacting with the Django's built-in Admin Section"
 date: 2022-01-26T22:25:00+05:30
 slug: "django-basics-admin"
 series: ["Django-Basics"]
-tags:
+tags: ["go", "linux", "python", "sql", "testing"]
   - django
   - python
   - web-development

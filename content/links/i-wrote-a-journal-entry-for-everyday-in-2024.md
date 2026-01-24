@@ -2,6 +2,7 @@
 title: "I wrote a journal entry for everyday in 2024"
 date: 2025-09-12
 draft: false
+link: "https://www.njbrown.com/blog/67/"
 ---
 
 # I wrote a journal entry for everyday in 2024

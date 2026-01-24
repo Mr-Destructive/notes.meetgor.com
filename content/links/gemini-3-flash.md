@@ -2,6 +2,8 @@
 title: "Gemini 3 Flash"
 date: 2025-12-19
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/rddX4GEeyvE"
 ---
 
 # Gemini 3 Flash

@@ -2,6 +2,7 @@
 title: "Fizzbuzz without conditions or booleans"
 date: 2025-11-21
 draft: false
+link: "https://evanhahn.com/fizz-buzz-without-conditionals-or-booleans/"
 ---
 
 # Fizzbuzz without conditions or booleans

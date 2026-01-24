@@ -2,6 +2,8 @@
 title: "Alien Authors"
 date: 2025-11-21
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://behan.substack.com/p/alien-authors"
 ---
 
 # Alien Authors

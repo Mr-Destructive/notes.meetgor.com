@@ -2,6 +2,8 @@
 title: "Cursor designer builds an OS with cursor"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/TQhv6Wol6Ns"
 ---
 
 # Cursor designer builds an OS with cursor

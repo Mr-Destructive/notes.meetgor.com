@@ -3,7 +3,7 @@ type: post
 title: "PGCLI: Postgres from the terminal"
 date: 2022-08-07T20:30:00
 slug: "pgcli-pg-from-terminal"
-tags:
+tags: ["linux", "neovim", "python", "sql"]
   - postgres
   - python
   - DBMS

@@ -2,6 +2,7 @@
 title: "How do arrays work?"
 date: 2025-10-24
 draft: false
+link: "https://nan-archive.vercel.app/how-arrays-work"
 ---
 
 # How do arrays work?

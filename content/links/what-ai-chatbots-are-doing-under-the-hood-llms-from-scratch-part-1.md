@@ -2,6 +2,8 @@
 title: "What AI chatbots are doing under-the-hood, LLMs from scratch part 1"
 date: 2025-09-19
 draft: false
+tags: ["ai"]
+link: "https://www.gilesthomas.com/2025/08/what-ai-chatbots-are-doing-under-the-hood"
 ---
 
 # What AI chatbots are doing under-the-hood, LLMs from scratch part 1

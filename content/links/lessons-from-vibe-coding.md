@@ -2,6 +2,8 @@
 title: "Lessons from vibe coding"
 date: 2025-11-07
 draft: false
+tags: ["ai"]
+link: "https://brandonharris.io/Garbage-Pail-Code/"
 ---
 
 # Lessons from vibe coding

@@ -2,6 +2,7 @@
 title: "You’re all wrong"
 date: 2025-11-29
 draft: false
+link: "https://youtu.be/KJfz9ChQ0A0?si=x_9C3AzEQrk0Fy3p"
 ---
 
 # You’re all wrong

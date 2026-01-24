@@ -4,7 +4,7 @@ title: "Vim: Registers"
 subtitle: "The guide in understanding Vim registers and where your text gets stored after copying or deleting."
 date: 2021-07-21T23:41:57+05:30
 slug: "vim-registers"
-tags:
+tags: ["linux", "neovim"]
   - vim
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1626940723316/nFGNljJi0.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
 ---

@@ -2,6 +2,7 @@
 title: "You cannot not lead"
 date: 2026-01-02
 draft: false
+link: "https://thoughtbot.com/blog/you-cannot-not-lead"
 ---
 
 # You cannot not lead

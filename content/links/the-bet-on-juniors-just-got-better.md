@@ -2,6 +2,8 @@
 title: "The bet on juniors just got better"
 date: 2026-01-23
 draft: false
+tags: ["ai", "career", "newsletter"]
+link: "https://tidyfirst.substack.com/p/the-bet-on-juniors-just-got-better"
 ---
 
 # The bet on juniors just got better

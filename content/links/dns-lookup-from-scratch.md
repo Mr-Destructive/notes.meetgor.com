@@ -2,6 +2,8 @@
 title: "DNS Lookup from scratch"
 date: 2025-09-12
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/CHaEdVIF2_M"
 ---
 
 # DNS Lookup from scratch

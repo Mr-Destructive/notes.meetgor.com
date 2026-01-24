@@ -2,6 +2,7 @@
 title: "Reflections on OpenAI"
 date: 2026-01-24
 draft: false
+tags: ["go"]
 ---
 
 # Reflections on OpenAI

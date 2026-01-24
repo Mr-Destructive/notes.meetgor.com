@@ -2,6 +2,8 @@
 title: "Kubernetes Zero to Hero Course: Alta3 Research"
 date: 2026-01-16
 draft: false
+tags: ["devops"]
+link: "https://youtu.be/MTHGoGUFpvE"
 ---
 
 # Kubernetes Zero to Hero Course: Alta3 Research

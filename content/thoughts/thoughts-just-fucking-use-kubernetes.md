@@ -2,6 +2,7 @@
 title: "Thoughts: Just fucking use kubernetes"
 date: 2026-01-24
 draft: false
+tags: ["devops"]
 ---
 
 # Thoughts: Just fucking use kubernetes

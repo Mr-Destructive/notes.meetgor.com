@@ -2,6 +2,8 @@
 title: "I read more than I write, do you?"
 date: 2025-12-12
 draft: false
+tags: ["career", "newsletter"]
+link: "https://enombic.com/read-more-than-write"
 ---
 
 # I read more than I write, do you?

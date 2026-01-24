@@ -5,7 +5,7 @@ subtitle: "Rendering templates/html docs in the Django project/app"
 date: 2021-12-14T16:45:00+05:30
 slug: "django-basics-templates"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "python", "sql"]
   - django
   - python
   - web-development

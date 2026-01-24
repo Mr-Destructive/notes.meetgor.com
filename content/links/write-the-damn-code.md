@@ -2,6 +2,8 @@
 title: "Write the damn code"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://antonz.org/write-code/"
 ---
 
 # Write the damn code

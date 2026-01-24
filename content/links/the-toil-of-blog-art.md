@@ -2,6 +2,8 @@
 title: "The toil of blog art"
 date: 2026-01-23
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://lcamtuf.substack.com/p/the-toil-of-blog-art"
 ---
 
 # The toil of blog art

@@ -2,6 +2,8 @@
 title: "Day 11: Behavior Score"
 date: 2025-12-26
 draft: false
+tags: ["sql"]
+link: "https://www.meetgor.com/sqlog/advent-of-sql-2025-day-11"
 ---
 
 # Day 11: Behavior Score

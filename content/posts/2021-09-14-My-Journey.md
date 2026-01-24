@@ -4,7 +4,7 @@ title: "My Journey as a Technical Writer"
 subtitle: "How and Why I became started writing articles and became a novice technical writer."
 date: 2021-09-14T19:30:37+05:30
 slug: "technical-writer-journey"
-tags:
+tags: ["ai", "frontend", "linux", "neovim", "python"]
   - hashnode
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287299/blogmedia/dsqgqfz0uk5ldet6dfer.png
 ---

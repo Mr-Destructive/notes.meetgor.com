@@ -1,8 +1,8 @@
----
-type: thoughts
+---type: thoughts
 title: "Kubernetes isn't for you"
 date: 2025-07-27T00:00:00
 slug: "kubernetes-isn-t-for-you"
+tags: ["devops", "linux"]
 ---
 
 [https://sliplane.io/blog/kubernetes-isnt-for-you](https://sliplane.io/blog/kubernetes-isnt-for-you)

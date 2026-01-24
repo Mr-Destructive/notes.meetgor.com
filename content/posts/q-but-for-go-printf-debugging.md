@@ -5,7 +5,7 @@ slug: q-but-for-go-printf-debugging
 draft: false
 type: link
 description: ""
-tags: ["go","print-debugging","python"]
+tags: ["go", "python"]
 ---
 
 This is cool, we make logging a mess. For logs we need to have separate scripts to get relevant data. How much chaos it can be.

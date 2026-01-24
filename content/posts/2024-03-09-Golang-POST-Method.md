@@ -4,7 +4,7 @@ title: "Golang Web: POST Method"
 date: 2024-03-10T20:15:00
 slug: "golang-web-post-method"
 series: ["100-days-of-golang"]
-tags:
+tags: ["career", "frontend", "go", "linux"]
   - go
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-034-post-method.png
 ---

@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #53"
 date: 2025-08-02T00:00:00
 slug: "techstructive-weekly-53"
+tags: ["ai", "career", "devops", "frontend", "go", "newsletter", "python", "rust", "sql", "testing"]
 ---
 
 ## Week #53
@@ -228,20 +228,3 @@ Double click to interact with video
 - [POE introduces the API for AI Models](https://poe.com/blog/introducing-the-poe-api)
     - I have used POE in the past, and this looks like a great addition to test out a few SOTA models for free with some limitations via the API.
 
----
-
-Phew! a lot of open source models are cooking! Everything is intuition and curiosity, and AI is still a thing to wrap our heads around, but the fundamentals are the same.
-
-See you in the next one!
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-756) (#756th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

@@ -2,6 +2,8 @@
 title: "We traded blogs for black boxes and now we are paying for it"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://tekhne.dev/internet-resist"
 ---
 
 # We traded blogs for black boxes and now we are paying for it

@@ -3,7 +3,7 @@ type: "sqlog"
 title: "SQLite dot commands: Output mode"
 slug: sqlite-mode-dot-command
 date: 2025-09-01
-tags: ["sqlite", "sql"]
+tags: ["frontend", "sql", "testing"]
 ---
 
 ## Output mode dot command

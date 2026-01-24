@@ -2,6 +2,8 @@
 title: "If you’re going to vibe code, why not do it in C or even Assembly"
 date: 2025-12-12
 draft: false
+tags: ["frontend"]
+link: "https://stephenramsay.net/posts/vibe-coding.html"
 ---
 
 # If you’re going to vibe code, why not do it in C or even Assembly

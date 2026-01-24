@@ -2,6 +2,8 @@
 title: "AI should be free software"
 date: 2026-01-09
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://substack.com/inbox/post/183934559"
 ---
 
 # AI should be free software

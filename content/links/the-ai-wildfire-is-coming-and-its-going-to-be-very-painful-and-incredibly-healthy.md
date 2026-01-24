@@ -2,6 +2,8 @@
 title: "The AI Wildfire is coming and its going to be very painful and incredibly healthy"
 date: 2025-11-14
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://ceodinner.substack.com/p/the-ai-wildfire-is-coming-its-going"
 ---
 
 # The AI Wildfire is coming and its going to be very painful and incredibly healthy

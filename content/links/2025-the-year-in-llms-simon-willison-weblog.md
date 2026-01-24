@@ -2,6 +2,8 @@
 title: "2025, The year in LLMs: Simon Willison Weblog"
 date: 2026-01-02
 draft: false
+tags: ["ai"]
+link: "https://simonwillison.net/2025/Dec/31/the-year-in-llms/"
 ---
 
 # 2025, The year in LLMs: Simon Willison Weblog

@@ -2,6 +2,8 @@
 title: "Rust and RAII Memory Management - Computerphile"
 date: 2025-10-24
 draft: false
+tags: ["rust", "sql"]
+link: "https://youtu.be/pTMvh6VzDls?si=GSEmB3KadHuv-TdD"
 ---
 
 # Rust and RAII Memory Management - Computerphile

@@ -2,6 +2,8 @@
 title: "Why Software Development fell to AI first"
 date: 2025-11-21
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://davegriffith.substack.com/p/why-software-development-fell-to"
 ---
 
 # Why Software Development fell to AI first

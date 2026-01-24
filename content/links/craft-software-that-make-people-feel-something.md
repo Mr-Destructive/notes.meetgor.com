@@ -2,6 +2,8 @@
 title: "Craft Software that make people feel something"
 date: 2025-12-12
 draft: false
+tags: ["go"]
+link: "https://rapha.land/craft-software-that-makes-people-feel-something/"
 ---
 
 # Craft Software that make people feel something

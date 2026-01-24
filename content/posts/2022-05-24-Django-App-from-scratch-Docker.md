@@ -5,7 +5,7 @@ description: "Creating a django basic application with configuration for static 
 date: 2022-05-24 22:30:00
 status: published
 slug: django-app-from-scratch
-tags: ['docker', 'web-development', 'django',]
+tags: ["devops", "linux", "neovim"]
 ---
 
 ## Pull a Fresh Debian Image

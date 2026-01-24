@@ -4,7 +4,7 @@ title: "Django + PostgreSQL Deployment on Heroku"
 date: 2022-05-15T20:00:00
 slug: "django-deploy-heroku"
 series: ["Django-Deployment"]
-tags:
+tags: ["devops", "frontend", "git", "go", "linux", "python", "sql", "testing"]
   - django
   - web-development
   - python

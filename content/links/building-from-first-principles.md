@@ -2,6 +2,8 @@
 title: "Building from First Principles"
 date: 2025-10-31
 draft: false
+tags: ["ai"]
+link: "https://marvinh.dev/blog/building-from-first-principles/"
 ---
 
 # Building from First Principles

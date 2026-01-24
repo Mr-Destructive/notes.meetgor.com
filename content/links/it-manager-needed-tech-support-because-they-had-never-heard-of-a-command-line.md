@@ -2,6 +2,8 @@
 title: "IT manager needed tech support because they had never heard of a command line"
 date: 2025-09-12
 draft: false
+tags: ["career", "neovim"]
+link: "https://www.theregister.com/2025/09/12/on_call/"
 ---
 
 # IT manager needed tech support because they had never heard of a command line

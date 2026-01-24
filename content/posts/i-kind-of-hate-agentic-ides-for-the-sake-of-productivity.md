@@ -1,8 +1,8 @@
----
-type: thoughts
+---type: thoughts
 title: "I kind of hate Agentic IDEs for the sake of productivity"
 date: 2025-05-22T00:00:00
 slug: "i-kind-of-hate-agentic-ides-for-the-sake-of-productivity"
+tags: ["ai", "neovim"]
 ---
 
 This is May 2025, we are halfway through 2025. And tech world has gone a 180-degree turn in how developers are working. With the rise of Agentic IDEs (yes, that is a deliberate buzzword, I am using) like Windsurf, Cursor, Lovable, Bolt, Claude code, Warp, Amp code, whatever agent in the loop.

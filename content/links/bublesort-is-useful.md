@@ -2,6 +2,7 @@
 title: "Bublesort is useful"
 date: 2025-12-26
 draft: false
+link: "https://youtu.be/qGH8gKdpZMQ"
 ---
 
 # Bublesort is useful

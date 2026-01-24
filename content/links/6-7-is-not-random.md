@@ -2,6 +2,8 @@
 title: "6’7’‘ is not Random"
 date: 2026-01-09
 draft: false
+tags: ["newsletter"]
+link: "https://substack.com/home/post/p-183890370"
 ---
 
 # 6’7’‘ is not Random

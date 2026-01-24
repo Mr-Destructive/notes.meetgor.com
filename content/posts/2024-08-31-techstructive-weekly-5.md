@@ -1,8 +1,8 @@
----
-type: "newsletter"
+---type: "newsletter"
 title: "Techstructive Weekly #5"
 date: 2024-08-31
 slug: "techstructive-weekly-5"
+tags: ["ai", "go", "newsletter", "python", "rust", "testing"]
 ---
 
 ## Week #5
@@ -155,12 +155,3 @@ return shuffled_lists
 
 For more news, follow the Hackernewsletter [https://mailchi.mp/hackernewsletter/714](https://mailchi.mp/hackernewsletter/714) and for daily developer articles, join [daily.dev](http://daily.dev)
 
----
-
-That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!
-
-Thank you for reading, let’s catch up in the next week.
-
-Happy Coding :)
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

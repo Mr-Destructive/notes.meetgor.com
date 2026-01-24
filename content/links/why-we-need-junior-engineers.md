@@ -2,6 +2,8 @@
 title: "Why we need junior engineers"
 date: 2025-10-10
 draft: false
+tags: ["career", "frontend"]
+link: "https://www.infoworld.com/article/4065771/why-we-need-junior-developers.html"
 ---
 
 # Why we need junior engineers

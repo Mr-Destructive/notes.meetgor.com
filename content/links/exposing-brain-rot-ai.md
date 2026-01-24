@@ -2,6 +2,8 @@
 title: "Exposing Brain Rot AI"
 date: 2025-10-31
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/XhJYNSssqrA"
 ---
 
 # Exposing Brain Rot AI

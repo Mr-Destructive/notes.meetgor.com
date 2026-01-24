@@ -2,6 +2,8 @@
 title: "Learning loops and LLMs"
 date: 2025-11-07
 draft: false
+tags: ["ai", "frontend"]
+link: "https://martinfowler.com/articles/llm-learning-loop.html"
 ---
 
 # Learning loops and LLMs

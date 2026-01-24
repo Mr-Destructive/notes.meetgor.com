@@ -3,7 +3,7 @@ type: post
 title: "Configure Neovim in Lua"
 date: 2022-07-09T20:30:00
 slug: "neovim-vimscript-to-lua"
-tags:
+tags: ["frontend", "git", "go", "linux", "neovim", "python", "testing"]
   - vim
   - lua
 image_url: https://meetgor-cdn.pages.dev/vimtolua.png

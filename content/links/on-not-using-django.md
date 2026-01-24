@@ -2,6 +2,8 @@
 title: "On not using Django"
 date: 2026-01-09
 draft: false
+tags: ["python"]
+link: "https://www.natemeyvis.com/on-not-using-django-in-2026/"
 ---
 
 # On not using Django

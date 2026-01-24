@@ -2,6 +2,8 @@
 title: "Secret Life of Local First Value"
 date: 2025-10-17
 draft: false
+tags: ["newsletter", "sql"]
+link: "https://marcobambini.substack.com/p/the-secret-life-of-a-local-first"
 ---
 
 # Secret Life of Local First Value

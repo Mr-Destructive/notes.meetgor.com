@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #49"
 date: 2025-07-05T00:00:00
 slug: "techstructive-weekly-49"
+tags: ["ai", "devops", "frontend", "newsletter", "python", "sql"]
 ---
 
 ## Week #49
@@ -106,18 +106,3 @@ Double click to interact with video
 - [Claude Code now can support hooks](https://docs.anthropic.com/en/docs/claude-code/hooks)
 - [Google’s Veo 3 launches worldwide for Pro/Ultra Tier](https://gemini.google/overview/video-generation/)
 
----
-
-A week a bit of no new models, nothing fancy launches. Finally, we get a week or two before it gets wild. It’s time to reflect and build something meaningful. It’s time to learn and plant the seeds that will help in the future.
-
-[Leave a comment](https://techstructively.substack.com/p/techstructive-weekly-49/comments)
-
-Thanks for reading Techstructive Weekly! This post is public, so feel free to share it.
-
-[REMOVED]
-
----
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-753) (#753 edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

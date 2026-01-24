@@ -3,6 +3,7 @@ title: "Techstructive Weekly 68"
 type: "newsletter"
 date: 2025-11-15T00:00:00Z
 draft: false
+tags: ["ai", "career", "frontend", "go", "newsletter", "python", "rust", "sql", "testing"]
 ---
 
 ## Week #68

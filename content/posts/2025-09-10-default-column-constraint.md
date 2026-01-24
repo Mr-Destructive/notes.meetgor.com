@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-default-column-constraint
 title: 'SQLite SQL: DEFAULT column constraint'
 date: "2025-09-10"
-tags: ["sqlite", "sql"]
+tags: ["frontend", "sql"]
 ---
 
 ## DEFAULT Constraint

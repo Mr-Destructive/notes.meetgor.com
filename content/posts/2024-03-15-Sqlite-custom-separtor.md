@@ -4,7 +4,7 @@ title: "SQLite importing CSV with custom separator"
 description: "Explorng SQLite CLI with inline CSV import command with custom separator"
 status: published
 slug: sqlite-inline-custom-separator
-tags: ["sqlite",]
+tags: ["career", "go", "linux", "sql"]
 date: 2024-03-15 22:30:00
 ---
 

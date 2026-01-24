@@ -1,8 +1,8 @@
----
-type: "sqlog"
+---type: "sqlog"
 title: "SQLite dot commands: read command is recursive?"
 slug: sqlite-read-dot-command-is-recursive
 date: 2025-08-29
+tags: ["linux", "sql"]
 ---
 
 Yesterday, while exploring the `.read` command I discovered a little hack.

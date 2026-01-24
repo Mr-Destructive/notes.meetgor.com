@@ -2,6 +2,8 @@
 title: "The AI Trap: Why do they quit coding"
 date: 2025-09-12
 draft: false
+tags: ["ai"]
+link: "https://dev.to/bekbrace/why-do-they-quit-coding--56eo?ref=dailydev"
 ---
 
 # The AI Trap: Why do they quit coding

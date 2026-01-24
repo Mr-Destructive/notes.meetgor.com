@@ -4,7 +4,7 @@ title: "Golang: Variables and Types"
 date: 2022-04-03T10:45:00
 slug: "golang-variables"
 series: ["100-days-of-golang"]
-tags:
+tags: ["frontend", "go", "python"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-002-variables-types.png
 ---

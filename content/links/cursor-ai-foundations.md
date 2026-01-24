@@ -2,6 +2,8 @@
 title: "Cursor AI Foundations"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://youtube.com/playlist?list=PLuI2ZfvGpzwCEXrl_K6bW5OqNpZq3HkMa&si=NmxQoNkfB8-0zCZP"
 ---
 
 # Cursor AI Foundations

@@ -3,6 +3,7 @@ title: "Techstructive Weekly #0"
 date: 2024-07-27
 type: "newsletter"
 slug: "techstructive-weekly-0"
+tags: ["ai", "frontend", "git", "go", "newsletter", "python", "sql"]
 ---
 
 ## Week #0

@@ -4,7 +4,7 @@ title: "What is Machine Learning?"
 subtitle: "Understanding the concept and process of Machine Learning. "
 date: 2021-09-29T15:30:07+05:30
 slug: "ml-intro"
-tags:
+tags: ["ai", "career", "frontend", "testing"]
   - hashnode
   - machine-learning
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288219/blogmedia/uh0xyxjnpp1olfcksbza.png

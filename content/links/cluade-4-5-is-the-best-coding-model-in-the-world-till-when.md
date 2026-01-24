@@ -2,6 +2,8 @@
 title: "Cluade 4.5 is the best coding model in the world? Till when"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/uZBjVeyiYkk"
 ---
 
 # Cluade 4.5 is the best coding model in the world? Till when

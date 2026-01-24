@@ -4,7 +4,7 @@ title: "Golang: Random Numbers"
 date: 2023-05-14T14:30:00
 slug: "golang-random-numbers"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go", "linux"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-027-random-numbers.png
 ---

@@ -2,6 +2,7 @@
 title: "How OpenAI Atlas is built"
 date: 2025-11-14
 draft: false
+link: "https://youtu.be/jxsA_185lMI?si"
 ---
 
 # How OpenAI Atlas is built

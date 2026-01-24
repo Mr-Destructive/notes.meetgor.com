@@ -4,7 +4,7 @@ title: "Setting up Vim for BASH Scripting"
 subtitle: "VIM + BASH = Killer Speed Automation"
 date: 2021-06-10T04:52:07+05:30
 slug: "vim-for-bash"
-tags:
+tags: ["frontend", "go", "linux", "neovim"]
   - bash
   - vim
 image_url: https://meetgor-cdn.pages.dev/vim-for-bash.webp

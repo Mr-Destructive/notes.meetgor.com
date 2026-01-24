@@ -2,6 +2,8 @@
 title: "Andrej Karapathy on Dwarkesh Patel Podcast"
 date: 2025-10-24
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/lXUZvyajciY"
 ---
 
 # Andrej Karapathy on Dwarkesh Patel Podcast

@@ -2,6 +2,7 @@
 title: "Engineering is becoming bee-keeping"
 date: 2026-01-02
 draft: false
+link: "https://bits.logic.inc/p/engineering-is-becoming-beekeeping"
 ---
 
 # Engineering is becoming bee-keeping

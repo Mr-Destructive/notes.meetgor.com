@@ -4,7 +4,7 @@ title: "Golang: Operators"
 date: 2022-05-07T20:33:38
 slug: "golang-operators"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-013-operators.png
 ---

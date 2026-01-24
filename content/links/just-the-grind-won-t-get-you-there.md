@@ -2,6 +2,8 @@
 title: "Just the grind won’t get you there"
 date: 2025-10-17
 draft: false
+tags: ["go"]
+link: "https://swizec.com/blog/the-grind-wont-get-you-there/"
 ---
 
 # Just the grind won’t get you there

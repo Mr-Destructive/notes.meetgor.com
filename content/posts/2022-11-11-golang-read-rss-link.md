@@ -4,7 +4,7 @@ title: "Read a Rss Feed with a URL in Golang"
 description: "Reading Rss Feed with a Rss XML Link/URL in golang using encoding package"
 status: published
 slug: golang-read-rss-feed
-tags: ["go", ]
+tags: ["go", "linux", "neovim", "python", "sql"]
 date: 2022-11-11 22:45:00
 ---
 

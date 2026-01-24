@@ -3,7 +3,7 @@ type: post
 title: "Neovim + Sourcegraph Cody Plugin Integration"
 date: 2024-01-06T20:15:00
 slug: "neovim-sourcegraph-cody"
-tags:
+tags: ["ai", "frontend", "go", "linux", "neovim", "rust"]
   - vim
 image_url: https://meetgor-cdn.pages.dev/neovim-sourcegraph-cody.png
 ---

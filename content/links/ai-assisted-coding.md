@@ -2,6 +2,8 @@
 title: "AI Assisted Coding"
 date: 2026-01-16
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/5vp9ypOUgMw"
 ---
 
 # AI Assisted Coding

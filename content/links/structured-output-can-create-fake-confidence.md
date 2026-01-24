@@ -2,6 +2,7 @@
 title: "Structured output can create fake confidence"
 date: 2025-12-26
 draft: false
+link: "https://boundaryml.com/blog/structured-outputs-create-false-confidence"
 ---
 
 # Structured output can create fake confidence

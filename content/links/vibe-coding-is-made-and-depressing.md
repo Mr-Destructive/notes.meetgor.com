@@ -2,6 +2,8 @@
 title: "Vibe Coding is made and depressing"
 date: 2025-12-12
 draft: false
+tags: ["ai"]
+link: "https://law.gmnz.xyz/vibe-coding-is-mad-depressing/"
 ---
 
 # Vibe Coding is made and depressing

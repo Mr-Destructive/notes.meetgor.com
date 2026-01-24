@@ -2,6 +2,8 @@
 title: "AI codes better than me, now what?"
 date: 2026-01-09
 draft: false
+tags: ["ai", "career"]
+link: "https://youtu.be/UrNLVip0hSA"
 ---
 
 # AI codes better than me, now what?

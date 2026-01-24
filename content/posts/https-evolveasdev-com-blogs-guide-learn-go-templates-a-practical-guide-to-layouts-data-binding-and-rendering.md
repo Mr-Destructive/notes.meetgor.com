@@ -1,8 +1,8 @@
----
-type: thoughts
+---type: thoughts
 title: "https://evolveasdev.com/blogs/guide/learn-go-templates-a-practical-guide-to-layouts-data-binding-and-rendering"
 date: 2025-03-16T00:00:00
 slug: "https-evolveasdev-com-blogs-guide-learn-go-templates-a-practical-guide-to-layouts-data-binding-and-rendering"
+tags: ["go"]
 ---
 
 A well written and concise guide on template parsing with golang.

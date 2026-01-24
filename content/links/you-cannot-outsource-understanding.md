@@ -2,6 +2,8 @@
 title: "You cannot outsource understanding"
 date: 2025-10-24
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://russmiles.substack.com/p/you-cannot-outsource-understanding"
 ---
 
 # You cannot outsource understanding

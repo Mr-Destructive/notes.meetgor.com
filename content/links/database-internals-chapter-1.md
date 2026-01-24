@@ -2,6 +2,8 @@
 title: "Database Internals:Chapter 1"
 date: 2026-01-09
 draft: false
+tags: ["sql"]
+link: "https://www.youtube.com/live/HibHalGlIes"
 ---
 
 # Database Internals:Chapter 1

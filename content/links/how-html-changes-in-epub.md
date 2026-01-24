@@ -2,6 +2,8 @@
 title: "How HTML changes in EPUB"
 date: 2025-12-12
 draft: false
+tags: ["frontend"]
+link: "https://htmhell.dev/adventcalendar/2025/11/"
 ---
 
 # How HTML changes in EPUB

@@ -2,6 +2,8 @@
 title: "Duplicate Reports"
 date: 2025-12-19
 draft: false
+tags: ["ai", "testing"]
+link: "https://thedailywtf.com/articles/duplicate-reports"
 ---
 
 # Duplicate Reports

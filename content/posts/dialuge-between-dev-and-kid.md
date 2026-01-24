@@ -5,7 +5,7 @@ slug: dialuge-between-dev-and-kid
 draft: false
 type: link
 description: ""
-tags: ["developer"]
+tags: ["python"]
 ---
 
 This is hilariously funny.

@@ -3,7 +3,7 @@ type: "sqlog"
 title: "SQLite dot commands: run system shell commands"
 slug: sqlite-shell-dot-command
 date: 2025-08-30
-tags: ["sqlite", "sql"]
+tags: ["go", "sql"]
 ---
 
 ## Shell dot command

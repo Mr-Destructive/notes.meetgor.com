@@ -2,6 +2,8 @@
 title: "Writing first tooling second"
 date: 2026-01-23
 draft: false
+tags: ["frontend", "go", "newsletter", "python"]
+link: "https://susam.net/writing-first-tooling-second.html"
 ---
 
 # Writing first tooling second

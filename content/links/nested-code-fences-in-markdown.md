@@ -2,6 +2,8 @@
 title: "Nested code fences in Markdown"
 date: 2026-01-23
 draft: false
+tags: ["frontend"]
+link: "https://susam.net/nested-code-fences.html"
 ---
 
 # Nested code fences in Markdown

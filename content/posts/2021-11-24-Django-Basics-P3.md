@@ -5,7 +5,7 @@ subtitle: "Understanding the folder structure of Django Projects and Application
 date: 2021-11-24T15:45:00+05:30
 slug: "django-basics-folder-struct"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "git", "python", "sql", "testing"]
   - django
   - python
   - web-development

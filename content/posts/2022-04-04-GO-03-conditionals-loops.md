@@ -4,7 +4,7 @@ title: "Golang: Conditionals and Loops"
 date: 2022-04-04T09:00:00
 slug: "golang-conditionals-loops"
 series: ["100-days-of-golang"]
-tags:
+tags: ["career", "frontend", "go", "python", "rust"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-003-conditionals-loops.png
 ---

@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #50"
 date: 2025-07-12T00:00:00
 slug: "techstructive-weekly-50"
+tags: ["ai", "career", "frontend", "go", "newsletter", "python", "sql", "testing"]
 ---
 
 ## Week #50
@@ -120,8 +120,3 @@ Thanks for reading Techstructive Weekly! This post is public so feel free to sha
 
 [REMOVED]
 
----
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-753) (#753 edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

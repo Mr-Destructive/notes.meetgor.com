@@ -2,6 +2,7 @@
 title: "Blogs used to be different"
 date: 2025-09-12
 draft: false
+link: "https://jetgirl.art/blogs-used-to-be-very-different/"
 ---
 
 # Blogs used to be different

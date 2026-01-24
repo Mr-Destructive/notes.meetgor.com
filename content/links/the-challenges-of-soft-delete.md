@@ -2,6 +2,8 @@
 title: "The challenges of soft delete"
 date: 2026-01-23
 draft: false
+tags: ["frontend", "sql"]
+link: "https://atlas9.dev/blog/soft-delete.html"
 ---
 
 # The challenges of soft delete

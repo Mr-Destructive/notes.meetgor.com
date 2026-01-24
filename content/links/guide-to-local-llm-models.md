@@ -2,6 +2,8 @@
 title: "Guide to Local LLM Models"
 date: 2025-12-26
 draft: false
+tags: ["ai"]
+link: "https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude"
 ---
 
 # Guide to Local LLM Models

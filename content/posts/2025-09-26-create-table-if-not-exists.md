@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-create-table-if-not-exists
 title: "SQLite SQL: Create Table If Not Exists"
 date: "2025-09-26"
-tags: ["sqlite", "sql"]
+tags: ["sql"]
 ---
 
 ## Creating table if not already exists

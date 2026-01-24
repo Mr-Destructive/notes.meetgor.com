@@ -3,7 +3,7 @@ type: post
 title: "Safely using Maps in Golang: Differences in declaration and initialization"
 date: 2024-08-31T18:30:00
 slug: "golang-safely-using-maps"
-tags:
+tags: ["go", "linux"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-safe-map-usage.png
 ---

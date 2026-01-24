@@ -2,6 +2,8 @@
 title: "A project is not a bundle ot tasks"
 date: 2025-11-21
 draft: false
+tags: ["ai"]
+link: "https://secondthoughts.ai/p/a-project-is-not-a-bundle-of-tasks"
 ---
 
 # A project is not a bundle ot tasks

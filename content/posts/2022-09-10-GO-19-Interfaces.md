@@ -4,7 +4,7 @@ title: "Golang: Interfaces"
 date: 2022-09-10T17:30:00
 slug: "golang-interfaces"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-019-interfaces.png
 ---

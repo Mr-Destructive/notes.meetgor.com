@@ -2,6 +2,8 @@
 title: "Development gets better with age"
 date: 2025-10-10
 draft: false
+tags: ["ai", "frontend"]
+link: "https://www.allthingsdistributed.com/2025/10/better-with-age.html"
 ---
 
 # Development gets better with age

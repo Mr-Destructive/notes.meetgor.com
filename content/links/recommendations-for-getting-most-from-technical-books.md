@@ -2,6 +2,8 @@
 title: "Recommendations for getting most from technical books"
 date: 2025-11-14
 draft: false
+tags: ["frontend"]
+link: "https://sebastianraschka.com/blog/2025/reading-books.html"
 ---
 
 # Recommendations for getting most from technical books

@@ -2,6 +2,7 @@
 title: "Is it really good enough"
 date: 2025-11-07
 draft: false
+link: "https://ag404labs.com/p/it-really-is-good-enough"
 ---
 
 # Is it really good enough

@@ -4,7 +4,7 @@ title: "Golang Web: GET Method"
 date: 2023-10-28T20:15:00
 slug: "golang-web-get-method"
 series: ["100-days-of-golang"]
-tags:
+tags: ["frontend", "go", "linux"]
   - go
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-033-get-method.png
 ---

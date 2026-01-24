@@ -2,6 +2,8 @@
 title: "Representing Graphs"
 date: 2025-09-19
 draft: false
+tags: ["newsletter"]
+link: "https://thepalindrome.org/p/representing-graphs"
 ---
 
 # Representing Graphs

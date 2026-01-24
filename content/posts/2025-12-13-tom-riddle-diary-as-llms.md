@@ -5,6 +5,7 @@ link: "https://www.goodreads.com/quotes/718814-never-trust-anything-that-can-thi
 post_dir: thoughts
 date: 2025-12-13
 status: published
+tags: ["ai", "go"]
 ---
 
 I was reading Harry Potter, the chambers of secret, the book for the first time and I came across this quote.

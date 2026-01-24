@@ -2,6 +2,8 @@
 title: "Brace yourself"
 date: 2025-09-26
 draft: false
+tags: ["testing"]
+link: "https://thedailywtf.com/articles/brace-yourself"
 ---
 
 # Brace yourself

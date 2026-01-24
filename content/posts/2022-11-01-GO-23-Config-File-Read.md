@@ -4,7 +4,7 @@ title: "Golang: JSON YAML TOML (config) File Reading."
 date: 2022-11-01T23:00:00
 slug: "golang-config-file-read"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go", "neovim", "python"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-023-config-files.png
 ---

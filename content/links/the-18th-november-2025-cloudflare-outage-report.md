@@ -2,6 +2,7 @@
 title: "The 18th November 2025 Cloudflare Outage Report"
 date: 2025-11-21
 draft: false
+link: "https://blog.cloudflare.com/18-november-2025-outage/"
 ---
 
 # The 18th November 2025 Cloudflare Outage Report

@@ -4,7 +4,7 @@ title: "Golang Web: DELETE Method"
 date: 2025-01-12T20:30:00
 slug: "golang-web-delete-method"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go", "sql"]
   - go
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-037-delete-method.png
 ---

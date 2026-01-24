@@ -4,7 +4,7 @@ title: "NGINX Basics and Setup"
 date: 2024-01-14T18:15:00
 slug: "nginx-01-basics"
 series: ["nginx-survival-guide"]
-tags:
+tags: ["career", "devops", "frontend", "linux"]
   - nginx
   - web-development
 image_url: https://meetgor-cdn.pages.dev/nginx-survival-guide/nginx-sg-1.png

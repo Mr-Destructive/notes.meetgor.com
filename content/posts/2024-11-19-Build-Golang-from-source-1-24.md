@@ -4,7 +4,7 @@ title: "Building Golang from Source v1.23 and Above"
 description: "Exploring one of the way to install and build golang from source for version 1.23 and above."
 status: published
 slug: golang-build-from-source-1-24-above
-tags: ["go",]
+tags: ["git", "go", "linux", "testing"]
 date: 2024-11-19 23:15:00
 ---
 

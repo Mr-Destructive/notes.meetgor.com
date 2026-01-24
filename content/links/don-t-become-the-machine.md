@@ -2,6 +2,7 @@
 title: "Don’t become the machine"
 date: 2025-12-26
 draft: false
+link: "https://armeet.bearblog.dev/becoming-the-machine/"
 ---
 
 # Don’t become the machine

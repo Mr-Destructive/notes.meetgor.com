@@ -2,6 +2,8 @@
 title: "Magical Systems Thinking"
 date: 2025-09-19
 draft: false
+tags: ["ai"]
+link: "https://worksinprogress.co/issue/magical-systems-thinking/"
 ---
 
 # Magical Systems Thinking

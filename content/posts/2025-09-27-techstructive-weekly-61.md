@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #61"
 date: 2025-09-27T00:00:00
 slug: "techstructive-weekly-61"
+tags: ["ai", "career", "frontend", "go", "newsletter", "sql", "testing"]
 ---
 
 ## Week #61
@@ -119,16 +119,3 @@ Double click to interact with video
 
 That’s it from this week. It has been a harsher week. We are finally into the last quarter of 2025. Ah! That ended pretty quickly. LLMs have just consumed me.
 
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-764) (#764th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

@@ -2,6 +2,7 @@
 title: "Shuffle: Making random feel more human"
 date: 2025-11-29
 draft: false
+link: "https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human?ref=dailydev"
 ---
 
 # Shuffle: Making random feel more human

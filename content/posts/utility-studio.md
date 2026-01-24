@@ -4,7 +4,7 @@ title: Utility-Studio
 date: 2023-07-14 22:00:00
 description: "A single source for text, youtube and link extraction and summarization."
 status: deployed
-tags: ['react', 'appwrite', 'typescript',]
+tags: ["frontend", "python"]
 live_link: https://utility-studio.vercel.app/
 github_link: https://github.com/Mr-Destructive/utility-studio/
 ---

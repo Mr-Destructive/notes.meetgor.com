@@ -4,7 +4,7 @@ title: "Cryptocurrency Price Scrapping using BASH and Coingecko API"
 subtitle: "Know the price of your favorite cryptocurrency coin/token in your national currency from your terminal using bash shell and Coingecko crypto API."
 date: 2021-07-15T17:56:47+05:30
 slug: "bash-crypto-scrapper"
-tags:
+tags: ["linux", "sql"]
   - bash
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1626331633083/zTSpHCFOu.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
 ---

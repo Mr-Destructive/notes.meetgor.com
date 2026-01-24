@@ -2,6 +2,7 @@
 title: "The internet is a net negative"
 date: 2026-01-02
 draft: false
+link: "https://kennethreitz.org/essays/2025-12-28-the_internet_is_a_net_negative"
 ---
 
 # The internet is a net negative

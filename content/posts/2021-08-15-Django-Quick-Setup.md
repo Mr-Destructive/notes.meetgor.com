@@ -4,7 +4,7 @@ title: "Django Quick Setup Script"
 subtitle: "A Quick simple script to set up the Django project."
 date: 2021-08-15T18:50:46+05:30
 slug: "django-setup-script"
-tags:
+tags: ["linux", "python", "sql"]
   - django
   - web-development
   - python

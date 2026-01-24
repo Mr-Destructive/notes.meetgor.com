@@ -4,7 +4,7 @@ title: "Django Bulk Update QuerySet objects"
 description: "Using bulk_update to update multiple objects in one go."
 status: published
 slug: django-bulk-update-queryset
-tags: ["django", "python"]
+tags: ["go", "python", "sql", "testing"]
 date: 2022-10-31 18:00:00
 ---
 

@@ -5,7 +5,7 @@ subtitle: "Understanding and Structuring a Database Schema with Models in Django
 date: 2022-01-04T22:15:00+05:30
 slug: "django-basics-models"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "go", "python", "sql"]
   - django
   - python
   - web-development

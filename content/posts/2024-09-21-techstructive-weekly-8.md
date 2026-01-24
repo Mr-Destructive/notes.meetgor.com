@@ -1,8 +1,8 @@
----
-type: "newsletter"
+---type: "newsletter"
 title: "Techstructive Weekly #8"
 date: 2024-09-21
 slug: "techstructive-weekly-8"
+tags: ["go", "newsletter", "python", "sql"]
 ---
 
 ## Week #8
@@ -52,14 +52,3 @@ Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts
     * Understanding on a high level how embedded replicas work and where they could fit the software landscape.
         
 
----
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-716/) and for daily developer articles, join [daily.dev](http://daily.dev)
-
-That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!
-
-Thank you for reading, let’s catch up in the next week.
-
-Happy Coding :)
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

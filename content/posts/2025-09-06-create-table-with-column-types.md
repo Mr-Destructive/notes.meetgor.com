@@ -3,7 +3,7 @@ type: "sqlog"
 title: "SQLite SQL: Create Table with column types"
 slug: sqlite-create-table-column-types
 date: 2025-09-06
-tags: ["sqlite", "sql"]
+tags: ["ai", "frontend", "sql", "testing"]
 ---
 
 ## Creating a table with column types

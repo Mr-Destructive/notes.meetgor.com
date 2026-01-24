@@ -4,7 +4,7 @@ title: "Golang: File Write"
 date: 2022-12-18T15:15:00
 slug: "golang-file-write"
 series: ["100-days-of-golang"]
-tags:
+tags: ["frontend", "go", "linux", "python", "rust", "testing"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-024-file-write.png
 ---

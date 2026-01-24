@@ -4,7 +4,7 @@ title: "Golang Web: URL Parsing"
 date: 2023-09-05T21:30:00
 slug: "golang-web-url-parsing"
 series: ["100-days-of-golang"]
-tags:
+tags: ["ai", "go", "sql"]
   - go
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-032-url-parsing.png
 ---

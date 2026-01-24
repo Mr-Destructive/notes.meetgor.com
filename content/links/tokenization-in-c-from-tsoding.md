@@ -2,6 +2,7 @@
 title: "Tokenization in C from Tsoding"
 date: 2025-09-26
 draft: false
+link: "https://youtu.be/6dCqR9p0yWY"
 ---
 
 # Tokenization in C from Tsoding

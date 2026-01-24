@@ -2,6 +2,8 @@
 title: "Myopic Focus"
 date: 2025-09-19
 draft: false
+tags: ["testing"]
+link: "https://thedailywtf.com/articles/myopic-focus"
 ---
 
 # Myopic Focus

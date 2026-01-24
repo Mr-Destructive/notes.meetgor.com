@@ -2,6 +2,8 @@
 title: "AI Did Not Take Your Agency. You Handed It Over"
 date: 2026-01-09
 draft: false
+tags: ["ai"]
+link: "https://systemic.engineering/ai-did-not-take-your-agency-you-handed-it-over/"
 ---
 
 # AI Did Not Take Your Agency. You Handed It Over

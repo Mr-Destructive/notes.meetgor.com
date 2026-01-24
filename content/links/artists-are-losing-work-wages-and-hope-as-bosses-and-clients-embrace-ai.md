@@ -2,6 +2,8 @@
 title: "Artists are losing work, wages, and hope as bosses and clients embrace AI"
 date: 2025-09-26
 draft: false
+tags: ["ai"]
+link: "https://www.bloodinthemachine.com/p/artists-are-losing-work-wages-and"
 ---
 
 # Artists are losing work, wages, and hope as bosses and clients embrace AI

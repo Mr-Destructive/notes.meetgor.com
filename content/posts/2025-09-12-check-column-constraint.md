@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-check-column-constraint
 title: 'SQLite SQL: CHECK column constraint'
 date: "2025-09-12"
-tags: ["sqlite", "sql"]
+tags: ["frontend", "sql", "testing"]
 ---
 
 ## The CHECK column constraint

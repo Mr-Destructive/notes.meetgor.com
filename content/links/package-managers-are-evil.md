@@ -2,6 +2,8 @@
 title: "Package Managers are evil"
 date: 2025-09-12
 draft: false
+tags: ["ai", "frontend", "go", "python"]
+link: "https://www.gingerbill.org/article/2025/09/08/package-managers-are-evil/"
 ---
 
 # Package Managers are evil

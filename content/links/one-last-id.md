@@ -2,6 +2,8 @@
 title: "One last id"
 date: 2025-09-26
 draft: false
+tags: ["sql"]
+link: "https://thedailywtf.com/articles/one-last-id"
 ---
 
 # One last id

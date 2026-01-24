@@ -2,6 +2,8 @@
 title: "Quick and dirty print debuggin in Go"
 date: 2026-01-09
 draft: false
+tags: ["go"]
+link: "https://alexwlchan.net/2026/q-but-for-go/?ref=rss"
 ---
 
 # Quick and dirty print debuggin in Go

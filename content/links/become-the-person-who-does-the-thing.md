@@ -2,6 +2,8 @@
 title: "Become the person who does the thing"
 date: 2025-09-12
 draft: false
+tags: ["career", "sql"]
+link: "https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/"
 ---
 
 # Become the person who does the thing

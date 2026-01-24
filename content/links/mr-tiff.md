@@ -2,6 +2,8 @@
 title: "Mr. TIFF"
 date: 2025-11-07
 draft: false
+tags: ["career"]
+link: "https://inventingthefuture.ghost.io/mr-tiff/"
 ---
 
 # Mr. TIFF

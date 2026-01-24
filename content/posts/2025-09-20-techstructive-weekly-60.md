@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #60"
 date: 2025-09-20T00:00:00
 slug: "techstructive-weekly-60"
+tags: ["ai", "career", "frontend", "go", "newsletter", "python", "sql", "testing"]
 ---
 
 ## Weekly #60
@@ -142,18 +142,3 @@ Double click to interact with video
 
 That was a heck of a long week. Lot of tech things happening. It will get even more in the next couple of months, as it is October and there are already a lot of developer related things, conferences, hactoberfests, and among other things.
 
----
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.
-
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-763) (#763rd edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).

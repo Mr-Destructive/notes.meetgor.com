@@ -2,6 +2,8 @@
 title: "13 Reason why SQL has to GO"
 date: 2025-09-12
 draft: false
+tags: ["ai", "frontend", "go", "sql"]
+link: "https://www.infoworld.com/article/2335455/13-reasons-sql-has-got-to-go.html"
 ---
 
 # 13 Reason why SQL has to GO

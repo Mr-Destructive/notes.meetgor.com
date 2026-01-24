@@ -2,6 +2,8 @@
 title: "Boring is good"
 date: 2025-09-19
 draft: false
+tags: ["frontend", "python"]
+link: "https://jenson.org/boring/"
 ---
 
 # Boring is good

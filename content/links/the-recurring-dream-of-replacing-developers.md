@@ -2,6 +2,8 @@
 title: "The recurring dream of replacing developers"
 date: 2026-01-23
 draft: false
+tags: ["ai", "frontend"]
+link: "https://www.caimito.net/en/blog/2025/12/07/the-recurring-dream-of-replacing-developers.html"
 ---
 
 # The recurring dream of replacing developers

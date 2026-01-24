@@ -2,6 +2,7 @@
 title: "The time elemet that should actually do something"
 date: 2025-12-19
 draft: false
+link: "https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/"
 ---
 
 # The time elemet that should actually do something

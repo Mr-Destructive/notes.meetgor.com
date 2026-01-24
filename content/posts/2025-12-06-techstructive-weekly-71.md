@@ -3,6 +3,7 @@ title: "Techstructive Weekly 71"
 type: "newsletter"
 date: 2025-12-06T00:00:00Z
 draft: false
+tags: ["ai", "frontend", "go", "newsletter"]
 ---
 
 ## Week #71

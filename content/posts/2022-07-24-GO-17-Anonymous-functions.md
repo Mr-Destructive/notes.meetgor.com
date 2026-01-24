@@ -4,7 +4,7 @@ title: "Golang: Anonymous Functions"
 date: 2022-07-24T18:15:00
 slug: "golang-anonymous-functions"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-017-anonymous-functions.png
 ---

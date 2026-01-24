@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-not-null-column-constraint
 title: 'SQLite SQL: NOT NULL column constraint'
 date: "2025-09-08"
-tags: ["sqlite", "sql"]
+tags: ["sql"]
 ---
 
 ## NOT NULL Column constraint

@@ -4,7 +4,7 @@ title: "Deploying Django Project with Railway Nixpacks"
 date: 2022-07-16T16:15:00
 slug: "django-deploy-railway-nixpacks"
 series: ["Django-Deployment"]
-tags:
+tags: ["devops", "linux", "python", "sql", "testing"]
   - django
   - python
   - railway

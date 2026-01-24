@@ -2,6 +2,7 @@
 title: "All it takes is for one to work out"
 date: 2025-12-05
 draft: false
+link: "https://alearningaday.blog/2025/11/28/all-it-takes-is-for-one-to-work-out-2/"
 ---
 
 # All it takes is for one to work out

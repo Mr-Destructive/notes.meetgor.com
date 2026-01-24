@@ -2,6 +2,8 @@
 title: "From words to worlds with spatial intelligence"
 date: 2025-11-14
 draft: false
+tags: ["ai", "newsletter"]
+link: "https://drfeifei.substack.com/p/from-words-to-worlds-spatial-intelligence"
 ---
 
 # From words to worlds with spatial intelligence

@@ -2,6 +2,8 @@
 title: "A TSP game I wanted for 10 years: built in 4 hours"
 date: 2025-12-12
 draft: false
+tags: ["ai"]
+link: "https://www.graphhopper.com/blog/2025/12/08/a-tsp-game-10-years-in-the-making-built-in-4-hours/"
 ---
 
 # A TSP game I wanted for 10 years: built in 4 hours

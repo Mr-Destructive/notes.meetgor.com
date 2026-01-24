@@ -2,6 +2,7 @@
 title: "What would you do with 52 hours of discretionary time"
 date: 2025-09-12
 draft: false
+link: "https://www.njbrown.com/blog/25/"
 ---
 
 # What would you do with 52 hours of discretionary time

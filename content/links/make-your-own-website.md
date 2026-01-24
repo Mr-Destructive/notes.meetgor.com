@@ -2,6 +2,7 @@
 title: "Make your own website"
 date: 2025-11-21
 draft: false
+link: "https://michaelenger.com/blog/make-your-own-website/"
 ---
 
 # Make your own website

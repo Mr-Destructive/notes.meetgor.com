@@ -2,6 +2,8 @@
 title: "The year I stopped writing code"
 date: 2026-01-09
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/Ge8LoXfJJdA"
 ---
 
 # The year I stopped writing code

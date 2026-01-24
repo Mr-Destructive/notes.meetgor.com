@@ -4,7 +4,7 @@ title: "Basics of curl command"
 subtitle: "An short simple introductory guide to the curl command"
 date: 2021-11-05T20:50:00+05:30
 slug: "curl-basics"
-tags:
+tags: ["career", "frontend", "linux", "python", "sql", "testing"]
   - bash
   - linux
   - networking

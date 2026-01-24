@@ -1,8 +1,8 @@
----
-type: thoughts
+---type: thoughts
 title: "Just Fucking use kubernetes"
 date: 2025-07-28T00:00:00
 slug: "just-fucking-use-kubernetes"
+tags: ["ai", "devops", "linux", "sql"]
 ---
 
 Just fucking use Kubernetes - [https://waylonwalker.com/just-fucking-use-kubernetes/](https://waylonwalker.com/just-fucking-use-kubernetes/)

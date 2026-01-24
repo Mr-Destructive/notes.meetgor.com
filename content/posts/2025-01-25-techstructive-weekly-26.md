@@ -1,7 +1,7 @@
----
-type: "newsletter"
+---type: "newsletter"
 title: "Techstructive Weekly #26"
 date: 2025-01-25
+tags: ["ai", "go", "newsletter", "python", "rust", "sql"]
 ---
 
 ## Week #26

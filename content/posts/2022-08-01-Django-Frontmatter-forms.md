@@ -5,7 +5,7 @@ description: "Rendering frontatter from content field into the Template Form fie
 date: 2022-08-01 20:30:00
 status: published
 slug: django-form-load-frontmatter
-tags: ['django', 'htmx','python']
+tags: ["frontend", "python", "testing"]
 ---
 
 ## Introduction

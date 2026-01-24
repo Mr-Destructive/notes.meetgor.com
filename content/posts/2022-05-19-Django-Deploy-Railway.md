@@ -4,7 +4,7 @@ title: "Django Project with PostgreSQL Deployment on Railway App"
 date: 2022-05-19T20:30:00
 slug: "django-deploy-railway"
 series: ["Django-Deployment"]
-tags:
+tags: ["frontend", "git", "go", "linux", "python", "sql", "testing"]
   - django
   - python
   - web-development

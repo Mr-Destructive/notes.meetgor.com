@@ -2,6 +2,7 @@
 title: "Creating a static site for all my bookmarks"
 date: 2025-09-19
 draft: false
+link: "https://alexwlchan.net/2025/bookmarks-static-site/"
 ---
 
 # Creating a static site for all my bookmarks

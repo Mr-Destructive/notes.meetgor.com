@@ -2,6 +2,7 @@
 title: "A New kind of Code"
 date: 2025-09-26
 draft: false
+link: "https://registerspill.thorstenball.com/p/a-new-kind-of-code"
 ---
 
 # A New kind of Code

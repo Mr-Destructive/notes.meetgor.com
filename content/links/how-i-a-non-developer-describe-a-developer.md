@@ -2,6 +2,7 @@
 title: "How I a non-developer describe a developer"
 date: 2025-09-26
 draft: false
+link: "https://anniemueller.com/posts/how-i-a-non-developer-read-the-tutorial-you-a-developer-wrote-for-me-a-beginner"
 ---
 
 # How I a non-developer describe a developer

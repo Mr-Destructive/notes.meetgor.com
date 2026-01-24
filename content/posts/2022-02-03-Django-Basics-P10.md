@@ -5,7 +5,7 @@ subtitle: "Understanding the entire workflow of creating a app in django and mak
 date: 2022-02-03T23:45:00+05:30
 slug: "django-basics-crud-api"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "go", "python", "sql"]
   - django
   - python
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643910006/blogmedia/yp2nvrkqkxmjzcsu0weu.png

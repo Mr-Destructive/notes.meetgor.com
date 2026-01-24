@@ -4,7 +4,7 @@ title: "Golang: Error Handling"
 date: 2022-09-17T20:15:00
 slug: "golang-error-handling"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-020-error-handling.png
 ---

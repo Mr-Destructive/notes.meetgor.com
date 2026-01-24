@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #56"
 date: 2025-08-23T00:00:00
 slug: "techstructive-weekly-56"
+tags: ["ai", "career", "devops", "frontend", "go", "newsletter", "python", "sql"]
 ---
 
 ## Week #56
@@ -115,16 +115,3 @@ Didn’t watch anything apart from this in tech, read a lot of things this week,
 - xAI secretly drops Sonic Models directly into Agentic IDEs as their Coding Models
 - [Google almost halts the maintenance of Pytype](https://github.com/google/pytype): Another project in the Google's Graveyard.
 
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-759) (#759th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

@@ -2,6 +2,8 @@
 title: "My Favorite Postgres 18 feature: Virtual generated columns"
 date: 2025-09-19
 draft: false
+tags: ["sql"]
+link: "https://tselai.com/virtual-gencolumns"
 ---
 
 # My Favorite Postgres 18 feature: Virtual generated columns

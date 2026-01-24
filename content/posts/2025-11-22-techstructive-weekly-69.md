@@ -3,6 +3,7 @@ title: "Techstructive Weekly 69"
 type: "newsletter"
 date: 2025-11-22T00:00:00Z
 draft: false
+tags: ["ai", "career", "go", "linux", "newsletter", "sql"]
 ---
 
 ## Week #69

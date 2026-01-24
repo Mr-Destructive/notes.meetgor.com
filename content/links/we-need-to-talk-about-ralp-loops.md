@@ -2,6 +2,8 @@
 title: "We need to talk about Ralp loops"
 date: 2026-01-23
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/Yr9O6KFwbW4"
 ---
 
 # We need to talk about Ralp loops

@@ -2,6 +2,8 @@
 title: "The Godmother of AI"
 date: 2025-11-29
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/Ctjiatnd6Xk?si=pznjX7kJd7fkChXx"
 ---
 
 # The Godmother of AI

@@ -2,6 +2,7 @@
 title: "Syntax highlighting is a waste of the information channel"
 date: 2025-10-17
 draft: false
+link: "https://buttondown.com/hillelwayne/archive/syntax-highlighting-is-a-waste-of-an-information/"
 ---
 
 # Syntax highlighting is a waste of the information channel

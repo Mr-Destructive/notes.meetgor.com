@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #58"
 date: 2025-09-06T00:00:00
 slug: "techstructive-weekly-58"
+tags: ["ai", "career", "frontend", "go", "newsletter", "sql"]
 ---
 
 ## Week #58
@@ -137,16 +137,3 @@ We all have problems, but we can’t let it define us, rather we will be defined
 
 Nothing happening for a few weeks now, finally there is a slow down in the models and all this hype. I want this hype to be minimum as possible for a stretched duration of time, as it helps learn and do things peacefully.
 
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-761) (#761st edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

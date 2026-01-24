@@ -2,6 +2,8 @@
 title: "Andrej Karapathy’s 2025 LLM Year in Review"
 date: 2026-01-02
 draft: false
+tags: ["ai"]
+link: "https://x.com/karpathy/status/2002118205729562949"
 ---
 
 # Andrej Karapathy’s 2025 LLM Year in Review

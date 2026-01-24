@@ -1,7 +1,7 @@
----
-type: "sqlog"
+---type: "sqlog"
 title: "SQLite Dot command: Output"
 date: 2025-08-19
+tags: ["frontend", "sql"]
 ---
 
 I will be starting to post something I learn daily about sql,sqlite or anything sql.

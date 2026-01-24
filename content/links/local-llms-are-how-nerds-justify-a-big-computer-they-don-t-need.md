@@ -2,6 +2,8 @@
 title: "Local LLMs are how nerds justify a big computer they don’t need"
 date: 2026-01-02
 draft: false
+tags: ["ai"]
+link: "https://world.hey.com/dhh/local-llms-are-how-nerds-now-justify-a-big-computer-they-don-t-need-af2fcb7b"
 ---
 
 # Local LLMs are how nerds justify a big computer they don’t need

@@ -3,7 +3,7 @@ type: post
 title: "Connecting LibSQL database with Python"
 date: 2023-11-30T20:45:00
 slug: "libsql-python"
-tags:
+tags: ["frontend", "linux", "python", "sql"]
   - libsql
   - python
 image_url: https://meetgor-cdn.pages.dev/connect-libsql-with-python.png

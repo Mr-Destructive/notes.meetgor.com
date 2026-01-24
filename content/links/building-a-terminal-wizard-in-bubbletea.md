@@ -2,6 +2,7 @@
 title: "Building a terminal wizard in BubbleTea"
 date: 2025-11-14
 draft: false
+link: "https://youtu.be/Gl31diSVP8M"
 ---
 
 # Building a terminal wizard in BubbleTea

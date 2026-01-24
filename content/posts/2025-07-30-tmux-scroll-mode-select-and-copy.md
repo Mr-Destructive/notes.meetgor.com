@@ -2,7 +2,7 @@
 type: til
 title: "Tmux scroll mode select and copy"
 date: 2025-07-30T00:00:00
-tags:
+tags: ["neovim"]
   - tmux
 ---
 

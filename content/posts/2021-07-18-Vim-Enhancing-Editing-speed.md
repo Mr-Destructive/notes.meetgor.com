@@ -4,7 +4,7 @@ title: "Vim: Enhancing Editing Speed"
 subtitle: "Improving the way you edit code in Vim."
 date: 2021-07-18T16:52:17+05:30
 slug: "vim-editing-speed"
-tags:
+tags: ["go", "neovim", "python"]
   - vim
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1625651851743/RK-CxEtLT.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
 ---

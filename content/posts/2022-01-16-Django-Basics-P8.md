@@ -5,7 +5,7 @@ subtitle: "Understanding and configuring Database for the project and migrating 
 date: 2022-01-21T16:40:34
 slug: "django-database-conf"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "git", "go", "python", "sql", "testing"]
   - python
   - django
   - web-development

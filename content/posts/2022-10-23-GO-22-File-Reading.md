@@ -4,7 +4,7 @@ title: "Golang: File Reading"
 date: 2022-10-23T23:15:00
 slug: "golang-file-read"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-022-file-read.png
 ---

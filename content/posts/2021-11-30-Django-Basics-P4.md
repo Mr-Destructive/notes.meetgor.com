@@ -5,7 +5,7 @@ subtitle: "Creating and Understanding working of views and urls in Django"
 date: 2021-11-30T12:03:00+05:30
 slug: "django-basics-views-urls"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "go", "python"]
   - django
   - python
   - web-development

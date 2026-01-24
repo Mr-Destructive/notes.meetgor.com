@@ -2,6 +2,8 @@
 title: "Stop crawling my html, use the API"
 date: 2025-12-19
 draft: false
+tags: ["ai", "frontend"]
+link: "https://shkspr.mobi/blog/2025/12/stop-crawling-my-html-you-dickheads-use-the-api/"
 ---
 
 # Stop crawling my html, use the API

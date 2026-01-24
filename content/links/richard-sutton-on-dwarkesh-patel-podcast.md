@@ -2,6 +2,7 @@
 title: "Richard Sutton on Dwarkesh Patel Podcast"
 date: 2025-10-24
 draft: false
+link: "https://youtu.be/21EYKqUsPfg"
 ---
 
 # Richard Sutton on Dwarkesh Patel Podcast

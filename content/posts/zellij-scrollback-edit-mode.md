@@ -1,8 +1,8 @@
----
-author: meet
+---author: meet
 date: 2025-03-20
 type: thoughts
 title: "Zellij Open Scrollback Edit mode"
+tags: ["neovim", "python"]
 ---
 
 I was looking at a long list of logs, (debugging of course). 

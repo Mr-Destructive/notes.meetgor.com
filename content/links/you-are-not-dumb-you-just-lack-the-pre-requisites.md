@@ -2,6 +2,8 @@
 title: "You are not dumb, you just lack the pre-requisites"
 date: 2026-01-02
 draft: false
+tags: ["sql"]
+link: "https://lelouch.dev/blog/you-are-probably-not-dumb/"
 ---
 
 # You are not dumb, you just lack the pre-requisites

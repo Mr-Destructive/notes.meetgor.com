@@ -2,6 +2,8 @@
 title: "The probelm with AI Slop"
 date: 2025-11-21
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/vrTrOCQZoQE"
 ---
 
 # The probelm with AI Slop

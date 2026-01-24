@@ -5,7 +5,7 @@ subtitle: "Exploring some advance features, underrated tools and utilities in BA
 date: 2021-07-12T23:16:13+05:30
 slug: "bash-guide-p3"
 series: ["BASH Scripting Guide"]
-tags:
+tags: ["go", "linux", "testing"]
   - bash
 image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p3.webp
 ---

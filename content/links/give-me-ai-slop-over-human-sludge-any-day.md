@@ -2,6 +2,8 @@
 title: "Give me AI slop over human sludge any day"
 date: 2025-10-10
 draft: false
+tags: ["ai"]
+link: "https://world.hey.com/dhh/give-me-ai-slop-over-human-sludge-any-day-8c4b747d"
 ---
 
 # Give me AI slop over human sludge any day

@@ -2,6 +2,7 @@
 title: "Harshad Numbers"
 date: 2025-10-03
 draft: false
+link: "https://youtu.be/dgwevhEykWQ"
 ---
 
 # Harshad Numbers

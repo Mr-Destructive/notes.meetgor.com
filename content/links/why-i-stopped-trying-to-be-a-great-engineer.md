@@ -2,6 +2,8 @@
 title: "Why I stopped trying to be a great engineer"
 date: 2025-11-14
 draft: false
+tags: ["ai", "career"]
+link: "https://supremecodr.medium.com/-56094c225549"
 ---
 
 # Why I stopped trying to be a great engineer

@@ -1,8 +1,8 @@
----
-type: thoughts
+---type: thoughts
 title: "Robots Generate, Humans Manifest"
 date: 2025-03-28T00:00:00
 slug: "robots-generate-humans-manifest"
+tags: ["ai", "career"]
 ---
 
 To,
@@ -62,7 +62,3 @@ You got this!
 Your buddy,
 Meet
 
----
-Thanks for reading,
-
-This looks like a ramble, but please don't judge me, I am just a junior software developer trying to navigate life, and based on what I observe and know, it feels this way.

@@ -2,6 +2,7 @@
 title: "Sabbaticals keep our attrition at bay"
 date: 2025-10-31
 draft: false
+link: "https://world.hey.com/dhh/sabbaticals-keep-our-attrition-at-bay-9ccba5c0"
 ---
 
 # Sabbaticals keep our attrition at bay

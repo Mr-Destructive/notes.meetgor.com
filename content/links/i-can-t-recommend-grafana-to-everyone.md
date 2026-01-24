@@ -2,6 +2,8 @@
 title: "I can’t recommend Grafana to everyone"
 date: 2025-11-21
 draft: false
+tags: ["linux", "sql"]
+link: "https://henrikgerdes.me/blog/2025-11-grafana-mess/"
 ---
 
 # I can’t recommend Grafana to everyone

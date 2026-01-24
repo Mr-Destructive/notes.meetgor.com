@@ -2,6 +2,8 @@
 title: "Mikebot 3000 - Can we make a open source video generation ai? Computerphile"
 date: 2025-10-24
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/cP8xpkvs_UI"
 ---
 
 # Mikebot 3000 - Can we make a open source video generation ai? Computerphile

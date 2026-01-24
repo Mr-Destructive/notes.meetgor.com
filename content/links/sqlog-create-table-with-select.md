@@ -2,6 +2,8 @@
 title: "SQLog: Create Table with SELECT"
 date: 2025-10-03
 draft: false
+tags: ["sql"]
+link: "https://www.meetgor.com/sqlog/sqlite-create-table-from-select/"
 ---
 
 # SQLog: Create Table with SELECT

@@ -4,7 +4,7 @@ title: "Filter and Find an Issue on GitHub"
 subtitle: "A quick guide to filter and sort issues as per your interest/skills on GitHub"
 date: 2021-09-09T17:42:30+05:30
 slug: "find-filter-github-issues"
-tags:
+tags: ["git", "go", "python"]
   - github
   - open-source
 image_url: https://meetgor-cdn.pages.dev/github-filter-issues.png

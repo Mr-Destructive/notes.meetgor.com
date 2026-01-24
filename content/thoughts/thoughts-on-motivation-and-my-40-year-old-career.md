@@ -2,6 +2,7 @@
 title: "Thoughts on motivation and my 40 year-old career"
 date: 2026-01-24
 draft: false
+tags: ["career"]
 ---
 
 # Thoughts on motivation and my 40 year-old career

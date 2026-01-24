@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #52"
 date: 2025-07-26T00:00:00
 slug: "techstructive-weekly-52"
+tags: ["ai", "frontend", "newsletter", "python", "rust", "sql", "testing"]
 ---
 
 ## Week #52
@@ -115,14 +115,3 @@ Some of the things happening in tech, hot and smoking.
 
 I’ll leave you here, it’s been a great week atleast on the learning side, should be more fun next week and over the weekend.
 
----
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-755) (#755th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

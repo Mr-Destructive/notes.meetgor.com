@@ -2,6 +2,7 @@
 title: "Anthropic confirms software engineering is not dead"
 date: 2025-12-05
 draft: false
+link: "https://youtu.be/Te2I2muO-4c"
 ---
 
 # Anthropic confirms software engineering is not dead

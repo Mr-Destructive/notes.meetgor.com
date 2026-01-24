@@ -2,6 +2,7 @@
 title: "Asynchronous Work is the enemy of project based success"
 date: 2025-10-10
 draft: false
+link: "https://www.arturhenriques.com/p/asynchronous-work-is-the-enemy-of"
 ---
 
 # Asynchronous Work is the enemy of project based success

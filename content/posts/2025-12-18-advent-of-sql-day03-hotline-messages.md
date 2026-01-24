@@ -4,7 +4,7 @@ title: "Advent of SQL 2025 Day 3: Hotline Messages"
 slug: "advent-of-sql-2025-day-3"
 date: 2025-12-18T15:30:00+0530
 series: ["advent-of-sql-2025"]
-tags: ["sqlite", "sql", "advent-of-sql"]
+tags: ["sql", "testing"]
 ---
 
 ## Advent of SQL Day 3 - Hotline Messages

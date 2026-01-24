@@ -2,6 +2,7 @@
 title: "Vibe Coding is broring"
 date: 2025-12-26
 draft: false
+link: "https://cassidoo.co/post/vibe-coding-yawn/"
 ---
 
 # Vibe Coding is broring

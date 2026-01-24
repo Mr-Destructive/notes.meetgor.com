@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-create-temp-table
 title: "SQLite SQL: Create Temporary Table"
 date: "2025-09-24"
-tags: ["sqlite", "sql"]
+tags: ["ai", "sql"]
 ---
 
 ## Temporary Table in SQLite

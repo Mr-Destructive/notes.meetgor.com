@@ -2,6 +2,8 @@
 title: "Claude Cowork: AGI is here, hheh?"
 date: 2026-01-23
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/IcQEaopx90g"
 ---
 
 # Claude Cowork: AGI is here, hheh?

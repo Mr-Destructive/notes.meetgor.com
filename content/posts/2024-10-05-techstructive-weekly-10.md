@@ -3,6 +3,7 @@ title: "Techstructive Weekly #10"
 type: "newsletter"
 date: 2024-10-05
 slug: "techstructive-weekly-10"
+tags: ["ai", "devops", "go", "neovim", "newsletter", "sql"]
 ---
 
 ## Week #10

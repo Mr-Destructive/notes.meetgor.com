@@ -4,7 +4,7 @@ title: "Vim: Enhancing Movement Speed"
 subtitle: "Learning to Fly and Glid in Vim!"
 date: 2021-06-26T15:27:05+05:30
 slug: "vim-movement-speed"
-tags:
+tags: ["go", "neovim"]
   - vim
 image_url: https://meetgor-cdn.pages.dev/vim-enchancing-moment-speed.webp
 ---

@@ -1,8 +1,8 @@
----
-type: "newsletter"
+---type: "newsletter"
 title: "Techstructive Weekly #19"
 date: 2024-12-07
 slug: "techstructive-weekly-19"
+tags: ["ai", "go", "neovim", "newsletter", "python", "sql", "testing"]
 ---
 
 ## Week #19

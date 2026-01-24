@@ -5,7 +5,7 @@ subtitle: "Loading Static Files in a Django project/app"
 date: 2021-12-27T22:45:00+05:30
 slug: "django-basics-static-files"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "go", "python"]
   - django
   - python
   - web-development

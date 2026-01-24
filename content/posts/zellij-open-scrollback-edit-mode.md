@@ -1,8 +1,8 @@
----
-type: til
+---type: til
 title: "Zellij Open Scrollback Edit mode"
 date: 2025-03-20T00:00:00
 slug: "zellij-open-scrollback-edit-mode"
+tags: ["neovim", "python"]
 ---
 
 I was looking at a long list of logs, (debugging of course). 

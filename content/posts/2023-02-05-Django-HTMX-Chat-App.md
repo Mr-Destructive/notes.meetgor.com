@@ -4,7 +4,7 @@ title: "Creating a Chat Application with Django and HTMX"
 date: 2023-02-05T17:15:00
 slug: "django-htmx-chat-app"
 series: ["Django-Series"]
-tags:
+tags: ["frontend", "linux", "python", "sql", "testing"]
   - django
   - htmx
   - python

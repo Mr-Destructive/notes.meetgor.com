@@ -5,7 +5,7 @@ subtitle: "The quick basic guide on foundational concepts of Bash scripting."
 date: 2021-06-22T16:37:28+05:30
 slug: "bash-guide-p1"
 series: ["BASH Scripting Guide"]
-tags:
+tags: ["linux"]
   - bash
 image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p1.webp
 ---

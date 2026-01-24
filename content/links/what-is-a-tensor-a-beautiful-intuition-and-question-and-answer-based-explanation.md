@@ -2,6 +2,7 @@
 title: "What is a Tensor? A beautiful intuition and question and answer based explanation"
 date: 2025-09-26
 draft: false
+link: "https://youtu.be/k2FP-T6S1x0"
 ---
 
 # What is a Tensor? A beautiful intuition and question and answer based explanation

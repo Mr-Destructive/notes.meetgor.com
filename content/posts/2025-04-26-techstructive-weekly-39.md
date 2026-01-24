@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #39"
 date: 2025-04-26T00:00:00
 slug: "techstructive-weekly-39"
+tags: ["ai", "career", "go", "newsletter"]
 ---
 
 ## Week #39
@@ -80,18 +80,3 @@ Finally, some time to absorb the things that have happened and shifted in the pa
 
 For more interesting articles, check out the [hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-743) for the week edition [#743](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-743), for even more software development/coding articles, join [daily.dev](http://daily.dev/).
 
----
-
-That’s it from the #39th week of this newsletter. It was a slow-down week and finally will be streaming over the weekend for interesting stuff. See you next time.
-
-[REMOVED]
-
-Thanks for reading.
-
-Happy Vibe Coding :)
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.

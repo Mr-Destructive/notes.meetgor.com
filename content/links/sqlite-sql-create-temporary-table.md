@@ -2,6 +2,8 @@
 title: "SQLite SQL: Create Temporary Table"
 date: 2025-09-26
 draft: false
+tags: ["sql"]
+link: "https://www.meetgor.com/sqlog/sqlite-create-temp-table"
 ---
 
 # SQLite SQL: Create Temporary Table

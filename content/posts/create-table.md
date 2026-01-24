@@ -3,7 +3,7 @@ type: "sqlog"
 title: "SQLite SQL: Create Table Basic"
 slug: sqlite-create-table
 date: 2025-09-04
-tags: ["sqlite", "sql"]
+tags: ["frontend", "go", "sql"]
 ---
 
 We have explored enough sqlite dot commands, now I want to explore the actual nuts and bolts of SQL in SQLite, what better place then to create tables.

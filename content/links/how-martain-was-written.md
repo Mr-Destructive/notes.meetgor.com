@@ -2,6 +2,7 @@
 title: "How Martain was written"
 date: 2025-11-14
 draft: false
+link: "https://youtu.be/EXD3b6OLtsg"
 ---
 
 # How Martain was written

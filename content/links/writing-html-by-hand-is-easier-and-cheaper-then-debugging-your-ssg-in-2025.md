@@ -2,6 +2,8 @@
 title: "Writing HTML by hand is easier and cheaper then debugging your SSG in 2025"
 date: 2025-12-26
 draft: false
+tags: ["ai", "frontend"]
+link: "https://logicgrimoire.wordpress.com/2024/07/01/writing-html-by-hand-is-easier-than-debugging-your-static-site-generator/"
 ---
 
 # Writing HTML by hand is easier and cheaper then debugging your SSG in 2025

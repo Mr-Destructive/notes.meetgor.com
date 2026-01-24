@@ -2,6 +2,7 @@
 title: "Google’s Nano Banana Pro Image Generation Model"
 date: 2025-12-05
 draft: false
+link: "https://youtu.be/UV9GqinedQ8"
 ---
 
 # Google’s Nano Banana Pro Image Generation Model

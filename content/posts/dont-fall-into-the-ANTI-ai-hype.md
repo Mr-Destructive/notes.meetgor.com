@@ -5,7 +5,7 @@ slug: dont-fall-into-the-ANTI-ai-hype
 draft: false
 type: link
 description: ""
-tags: ["ai","ai assisted programming"]
+tags: ["ai"]
 ---
 
 This is interesting and it comes at the right time

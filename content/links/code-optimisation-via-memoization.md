@@ -2,6 +2,7 @@
 title: "Code Optimisation via Memoization"
 date: 2025-12-05
 draft: false
+link: "https://youtu.be/JXUOMsFBDXQ"
 ---
 
 # Code Optimisation via Memoization

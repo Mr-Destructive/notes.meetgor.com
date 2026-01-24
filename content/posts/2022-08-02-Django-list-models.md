@@ -5,7 +5,7 @@ description: "Get the list of all the models and associated fields/attributes in
 date: 2022-08-02 15:30:00
 status: published
 slug: django-list-models
-tags: ['django', 'python']
+tags: ["python"]
 ---
 
 ## Context

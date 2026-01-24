@@ -2,6 +2,8 @@
 title: "It's insulting to read your AI-generated blog post"
 date: 2025-10-31
 draft: false
+tags: ["ai"]
+link: "https://blog.pabloecortez.com/its-insulting-to-read-your-ai-generated-blog-post/"
 ---
 
 # It's insulting to read your AI-generated blog post

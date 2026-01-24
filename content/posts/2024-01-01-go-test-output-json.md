@@ -4,7 +4,7 @@ title: "Golang: Test Output JSON"
 description: "Obtain JSON output of test results in Golang"
 status: published
 slug: golang-test-output-json
-tags: ["go",]
+tags: ["go", "linux", "neovim", "testing"]
 date: 2024-01-01 21:30:00
 ---
 

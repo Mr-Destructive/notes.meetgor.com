@@ -4,7 +4,7 @@ title: "Golang Web: PUT Method"
 date: 2024-06-15T18:30:00
 slug: "golang-web-put-method"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go", "linux", "sql"]
   - go
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-035-put-method.png
 ---

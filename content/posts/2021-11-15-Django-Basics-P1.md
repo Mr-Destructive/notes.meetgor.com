@@ -5,7 +5,7 @@ subtitle: "Understanding what and why of the Django framework"
 date: 2021-11-16T20:45:00+05:30
 slug: "django-basics-intro"
 series: ["Django-Basics"]
-tags:
+tags: ["frontend", "python", "sql", "testing"]
   - django
   - python
   - web-development

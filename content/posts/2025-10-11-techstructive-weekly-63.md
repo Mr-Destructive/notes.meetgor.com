@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #63"
 date: 2025-10-11T00:00:00
 slug: "techstructive-weekly-63"
+tags: ["ai", "career", "frontend", "go", "linux", "newsletter", "python", "testing"]
 ---
 
 ## Week #63
@@ -91,8 +91,3 @@ It was great week. Looking for a next week which is Diwali weekend. Preparation 
 
 See you next week.
 
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-766) (#766th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).

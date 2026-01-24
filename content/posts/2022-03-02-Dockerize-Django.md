@@ -3,7 +3,7 @@ type: til
 title: "Dockerize a Django project"
 date: 2022-03-02T19:12:51
 slug: "dockerize-django-prj"
-tags:
+tags: ["devops", "go", "linux", "python", "testing"]
   - django
   - docker
 ---

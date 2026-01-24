@@ -2,6 +2,8 @@
 title: "Advice I wish I knew as a junior developer"
 date: 2025-10-03
 draft: false
+tags: ["career", "go"]
+link: "https://raheeljunaid.com/blog/advice-for-developers/"
 ---
 
 # Advice I wish I knew as a junior developer

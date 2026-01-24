@@ -4,7 +4,7 @@ title: "Golang: Go Routines and WaitGroups"
 date: 2023-07-29T15:15:00
 slug: "golang-go-routines"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go", "linux", "sql"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-030-goroutines.png
 ---

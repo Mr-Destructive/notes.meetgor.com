@@ -2,6 +2,8 @@
 title: "Work Hard, have fun, go home"
 date: 2025-09-19
 draft: false
+tags: ["go"]
+link: "https://www.bonnycode.com/posts/work-hard-have-fun-go-home/"
 ---
 
 # Work Hard, have fun, go home

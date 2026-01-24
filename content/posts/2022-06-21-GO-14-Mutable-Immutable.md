@@ -4,7 +4,7 @@ title: "Golang: Mutable and Immutable Data Types"
 date: 2022-06-21T21:00:00
 slug: "golang-mutable-immutable"
 series: ["100-days-of-golang"]
-tags:
+tags: ["go"]
   - go
 image_url: https://meetgor-cdn.pages.dev/golang-014-im-mutables.png
 ---

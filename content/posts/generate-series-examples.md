@@ -1,7 +1,7 @@
----
-type: "sqlog"
+---type: "sqlog"
 title: "SQLite functions: Generate_Series Examples"
 date: 2025-08-22
+tags: ["sql"]
 ---
 
 After taking a look at what the Generate Series function does, now let's see some examples that might be handy.

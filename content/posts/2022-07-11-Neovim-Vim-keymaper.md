@@ -5,7 +5,7 @@ description: "Takeout the vimscript keymaps into lua with a single function call
 date: 2022-07-11 22:30:00
 status: published
 slug: vimscript-to-lua-keymapper
-tags: ['vim', 'lua',]
+tags: ["frontend", "go", "linux", "neovim", "python"]
 ---
 
 ## Introduction

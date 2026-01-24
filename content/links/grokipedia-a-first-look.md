@@ -2,6 +2,8 @@
 title: "Grokipedia: A first look"
 date: 2025-10-31
 draft: false
+tags: ["ai"]
+link: "https://larrysanger.org/2025/10/grokipedia-a-first-look/"
 ---
 
 # Grokipedia: A first look

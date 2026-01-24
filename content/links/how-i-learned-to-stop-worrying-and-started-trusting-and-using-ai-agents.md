@@ -2,6 +2,8 @@
 title: "How I learned to stop worrying and started trusting and using AI Agents"
 date: 2025-10-10
 draft: false
+tags: ["ai"]
+link: "https://metalbear.com/blog/claude-experience/"
 ---
 
 # How I learned to stop worrying and started trusting and using AI Agents

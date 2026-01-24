@@ -2,6 +2,8 @@
 title: "The quite power of SQL"
 date: 2025-11-14
 draft: false
+tags: ["sql"]
+link: "https://blog.sturdystatistics.com/posts/sql/"
 ---
 
 # The quite power of SQL

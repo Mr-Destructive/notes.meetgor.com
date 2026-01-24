@@ -2,6 +2,8 @@
 title: "Claude made its own language"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://youtu.be/BiFt4vw1-uM"
 ---
 
 # Claude made its own language

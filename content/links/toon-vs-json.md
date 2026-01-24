@@ -2,6 +2,7 @@
 title: "TOON vs JSON"
 date: 2025-11-21
 draft: false
+link: "https://youtu.be/nTMP_rLZOYM"
 ---
 
 # TOON vs JSON

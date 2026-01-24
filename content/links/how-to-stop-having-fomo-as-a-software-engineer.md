@@ -2,6 +2,8 @@
 title: "How to stop having FOMO as a software engineer"
 date: 2025-11-14
 draft: false
+tags: ["career"]
+link: "https://www.yacinemahdid.com/p/how-to-stop-having-fomo-as-a-curious"
 ---
 
 # How to stop having FOMO as a software engineer

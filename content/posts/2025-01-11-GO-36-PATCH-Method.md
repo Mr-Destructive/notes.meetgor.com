@@ -4,7 +4,7 @@ title: "Golang Web: PATCH Method"
 date: 2025-01-11T20:30:00
 slug: "golang-web-patch-method"
 series: ["100-days-of-golang"]
-tags:
+tags: ["frontend", "go", "sql", "testing"]
   - go
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-036-patch-method.png
 ---

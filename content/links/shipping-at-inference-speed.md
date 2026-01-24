@@ -2,6 +2,8 @@
 title: "Shipping at inference speed"
 date: 2026-01-02
 draft: false
+tags: ["ai", "go"]
+link: "https://steipete.me/posts/2025/shipping-at-inference-speed"
 ---
 
 # Shipping at inference speed

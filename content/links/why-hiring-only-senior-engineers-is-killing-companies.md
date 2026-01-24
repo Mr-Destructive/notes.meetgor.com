@@ -2,6 +2,8 @@
 title: "Why hiring only senior engineers is killing companies"
 date: 2025-10-03
 draft: false
+tags: ["ai"]
+link: "https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies"
 ---
 
 # Why hiring only senior engineers is killing companies

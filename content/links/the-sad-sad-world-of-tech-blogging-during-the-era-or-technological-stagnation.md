@@ -2,6 +2,8 @@
 title: "The Sad, Sad world of Tech Blogging during the Era or Technological Stagnation"
 date: 2025-09-19
 draft: false
+tags: ["newsletter"]
+link: "https://freddiedeboer.substack.com/p/the-sad-sad-world-of-tech-blogging"
 ---
 
 # The Sad, Sad world of Tech Blogging during the Era or Technological Stagnation

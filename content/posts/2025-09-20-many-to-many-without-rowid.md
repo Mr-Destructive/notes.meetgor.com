@@ -3,7 +3,7 @@ type: sqlog
 slug: sqlite-many-to-many-table-without-rowid
 title: "SQLite SQL: Many to Many Table without RowID"
 date: "2025-09-20"
-tags: ["sqlite", "sql"]
+tags: ["ai", "rust", "sql"]
 ---
 
 ## Many to Many Relation

@@ -2,6 +2,8 @@
 title: "Rabbit hole learning"
 date: 2025-11-29
 draft: false
+tags: ["frontend"]
+link: "https://seated.ro/posts/rabbit-hole-learning.html"
 ---
 
 # Rabbit hole learning

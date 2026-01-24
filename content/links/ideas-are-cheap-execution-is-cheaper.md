@@ -2,6 +2,7 @@
 title: "Ideas are cheap, Execution is cheaper"
 date: 2026-01-16
 draft: false
+link: "https://davekiss.com/blog/ideas-are-cheap-execution-is-cheaper/"
 ---
 
 # Ideas are cheap, Execution is cheaper

@@ -1,8 +1,8 @@
----
-type: newsletter
+---type: newsletter
 title: "Techstructive Weekly #51"
 date: 2025-07-19T00:00:00
 slug: "techstructive-weekly-51"
+tags: ["ai", "devops", "frontend", "go", "newsletter", "python", "rust", "sql"]
 ---
 
 ## Week #51
@@ -73,16 +73,3 @@ Double click to interact with video
 - [Cognition acquires Windsurf](https://cognition.ai/blog/windsurf): Devin will now use Windsurf, interesting deal this. How on earth are these two even partnering, doesn’t makes sense. At one point it looked they are rivals, even opposite mentality, but somehow they are collaborating now.
 - [ChatGPT releases Agents](https://openai.com/index/introducing-chatgpt-agent/): This is like a thing that we all knew was coming but is late on the tables. Need to check it out if that is available for free users or not. If yes, then will be quite a fun thing to do and learn.
 
----
-
-Didn’t consume much this week, produced a lot of shitty python and probably fixed a tons of bugs, but never got recognition. That’s quite a whirlwind to do, will be taking this weekend a slight self development route to upskill myself for learning SQL. I am finding it really interesting to learn SQL and contribute to SQLC, will continue on that.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! This post is public so feel free to share it.
-
-[REMOVED]
-
-Thanks for reading Techstructive Weekly! Subscribe for free to receive new posts and support my work.
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-754) (#754 edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
