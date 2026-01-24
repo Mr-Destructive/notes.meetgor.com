@@ -8,15 +8,11 @@ series:
 image_url: https://meetgor-cdn.pages.dev/django-deploy-heroku.png
 tags:
 - devops
-- django
 - frontend
 - git
-- go
-- linux
 - python
 - sql
 - testing
-- web-development
 ---
 ## Introduction
 

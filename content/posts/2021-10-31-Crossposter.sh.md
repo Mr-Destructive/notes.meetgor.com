@@ -6,10 +6,7 @@ date: 2021-10-31 15:45:00+05:30
 slug: crossposter-shellscript
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288989/blogmedia/trssl38erkdbcqlnjdvp.png
 tags:
-- bash
-- linux
-- neovim
-- testing
+- git
 ---
 ## Introduction
 

@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/qGH8gKdpZMQ
 title: Bublesort is useful
 youtube_id: qGH8gKdpZMQ
+tags: []
 ---
 # Bublesort is useful
 

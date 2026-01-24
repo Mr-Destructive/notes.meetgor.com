@@ -7,7 +7,6 @@ slug: git-ssh-multiple-accounts
 date: 2024-03-22 22:30:00
 tags:
 - git
-- linux
 ---
 Let's  say you have multiple github accounts. One for your personal projects, one for your company that you work at, and one other remote repository account (let's say gitlab).
 

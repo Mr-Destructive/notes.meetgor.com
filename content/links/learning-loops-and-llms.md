@@ -6,9 +6,7 @@ preview_description: How continuous learning shapes effective software developme
   with LLMs
 preview_image: https://martinfowler.com/articles/llm-learning-loop/card.png
 title: Learning loops and LLMs
-tags:
-- ai
-- frontend
+tags: []
 ---
 # Learning loops and LLMs
 

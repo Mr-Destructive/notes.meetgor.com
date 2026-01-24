@@ -2,6 +2,7 @@
 title: thoughts
 date: 2026-01-24
 draft: false
+tags: []
 ---
 # thoughts
 

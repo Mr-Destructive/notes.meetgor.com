@@ -7,6 +7,7 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/golang-023-config-files.png
 tags:
+- git
 - go
 - neovim
 - python

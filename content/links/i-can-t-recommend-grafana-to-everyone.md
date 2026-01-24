@@ -4,7 +4,6 @@ draft: false
 link: https://henrikgerdes.me/blog/2025-11-grafana-mess/
 title: I can’t recommend Grafana to everyone
 tags:
-- linux
 - sql
 ---
 # I can’t recommend Grafana to everyone

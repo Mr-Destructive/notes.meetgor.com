@@ -6,7 +6,6 @@ title: AI codes better than me, now what?
 youtube_id: UrNLVip0hSA
 tags:
 - ai
-- career
 ---
 # AI codes better than me, now what?
 

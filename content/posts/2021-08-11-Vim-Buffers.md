@@ -7,9 +7,7 @@ slug: vim-buffers
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286548/blogmedia/khj3xx5mulhotdfw7z1x.png
 tags:
 - frontend
-- linux
 - neovim
-- vim
 ---
 ## Introduction
 

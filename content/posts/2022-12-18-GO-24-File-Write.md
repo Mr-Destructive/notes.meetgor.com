@@ -9,10 +9,8 @@ image_url: https://meetgor-cdn.pages.dev/golang-024-file-write.png
 tags:
 - frontend
 - go
-- linux
 - python
 - rust
-- testing
 ---
 ## Introduction
 

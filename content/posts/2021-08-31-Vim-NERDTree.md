@@ -7,12 +7,8 @@ date: 2021-08-31 20:45:06+05:30
 slug: vim-nerdtree
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286953/blogmedia/pqolzpdehob0xj3sdohr.png
 tags:
-- frontend
 - git
-- go
-- linux
 - neovim
-- vim
 ---
 ## Introduction
 

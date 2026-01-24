@@ -9,11 +9,7 @@ image_url: https://meetgor-cdn.pages.dev/embedded-replicas-libsql-turso-go.png
 tags:
 - git
 - go
-- libsql
-- linux
 - sql
-- testing
-- turso
 ---
 ## Introduction
 

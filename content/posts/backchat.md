@@ -6,8 +6,7 @@ description: A simple chat app with django-channels and HTMX
 status: local
 github_link: https://github.com/Mr-Destructive/django-htmx-chat/
 tags:
-- django
-- htmx
+- python
 ---
 A simple chat/messaging app created for exploring HTMX and django-channels.
 

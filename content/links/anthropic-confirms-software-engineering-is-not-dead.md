@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Te2I2muO-4c
 title: Anthropic confirms software engineering is not dead
 youtube_id: Te2I2muO-4c
+tags: []
 ---
 # Anthropic confirms software engineering is not dead
 

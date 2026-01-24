@@ -7,7 +7,6 @@ slug: golang-test-output-json
 date: 2024-01-01 21:30:00
 tags:
 - go
-- linux
 - neovim
 - testing
 ---

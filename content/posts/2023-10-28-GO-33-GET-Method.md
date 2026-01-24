@@ -7,9 +7,8 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-033-get-method.png
 tags:
-- frontend
+- git
 - go
-- linux
 ---
 ## Introduction
 

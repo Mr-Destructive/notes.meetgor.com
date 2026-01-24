@@ -6,7 +6,6 @@ date: 2025-09-01
 tags:
 - frontend
 - sql
-- testing
 ---
 ## Output mode dot command
 

@@ -3,8 +3,7 @@ date: 2025-12-05
 draft: false
 link: https://flowtwo.io/post/on-10-years-of-writing-a-blog-nobody-reads
 title: On 10 years of writing a blog that nobody reads
-tags:
-- ai
+tags: []
 ---
 # On 10 years of writing a blog that nobody reads
 

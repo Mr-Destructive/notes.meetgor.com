@@ -7,7 +7,7 @@ status: deployed
 live_link: https://mindsdb-dev-main-mr-destructive.grafbase.app/graphql
 github_link: https://github.com/Mr-Destructive/grafbase-mindsdb/
 tags:
-- typescript
+- frontend
 ---
 A GraphQL API for MindsDB using Grafbase that allows you to interact with MindsDB databases, projects, models, and more through a GraphQL interface.
 

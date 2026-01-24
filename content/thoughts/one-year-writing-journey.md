@@ -2,6 +2,7 @@
 title: One-Year Writing Journey
 date: 2026-01-24
 draft: false
+tags: []
 ---
 # One-Year Writing Journey
 

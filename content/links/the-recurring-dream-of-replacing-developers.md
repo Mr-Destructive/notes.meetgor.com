@@ -9,7 +9,6 @@ preview_image: https://www.caimito.net/img/blog/the-recurring-dream-of-replacing
 title: The recurring dream of replacing developers
 tags:
 - ai
-- frontend
 ---
 # The recurring dream of replacing developers
 

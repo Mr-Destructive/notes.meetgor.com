@@ -3,8 +3,7 @@ date: 2025-09-26
 draft: false
 link: https://blaines-blog.com/I-dont-want-to-code-with-LLMs#footnote-ref-1
 title: I don’t want to code with LLMs
-tags:
-- ai
+tags: []
 ---
 # I don’t want to code with LLMs
 

@@ -5,7 +5,7 @@ type: newsletter
 slug: techstructive-weekly-0
 tags:
 - ai
-- frontend
+- devops
 - git
 - go
 - newsletter

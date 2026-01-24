@@ -5,12 +5,7 @@ date: 2022-03-02 19:12:51
 slug: dockerize-django-prj
 tags:
 - devops
-- django
-- docker
-- go
-- linux
 - python
-- testing
 ---
 ## Dockerize a Django project
 

@@ -4,8 +4,7 @@ draft: false
 link: https://www.da.vidbuchanan.co.uk/blog/annoying-text-editors.html
 title: Text editors should be worse
 tags:
-- ai
-- frontend
+- neovim
 ---
 # Text editors should be worse
 

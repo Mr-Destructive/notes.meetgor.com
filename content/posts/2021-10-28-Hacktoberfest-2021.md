@@ -6,10 +6,7 @@ date: 2021-10-28 20:10:00+05:30
 slug: hacktoberfest-2021
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288673/blogmedia/qy8xrefyqcsslfppdyhp.png
 tags:
-- go
-- hacktoberfest
-- linux
-- open-source
+- git
 - python
 ---
 ## Introduction

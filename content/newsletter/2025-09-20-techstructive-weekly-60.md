@@ -1,11 +1,18 @@
 ---
 type: newsletter
-title: "Techstructive Weekly #60"
-date: 2025-09-20T00:00:00
-slug: "techstructive-weekly-60"
-tags: ["ai", "career", "frontend", "go", "newsletter", "python", "sql", "testing"]
+title: 'Techstructive Weekly #60'
+date: 2025-09-20 00:00:00
+slug: techstructive-weekly-60
+tags:
+- ai
+- devops
+- frontend
+- go
+- newsletter
+- python
+- sql
+- testing
 ---
-
 ## Weekly #60
 
 Another great week, consistently learning SQL, developing another streak for solving problems on FreeCodeCamp with Javascript and Python, reading instead of doomscrolling.

@@ -4,8 +4,7 @@ draft: false
 link: https://youtu.be/vFcgXdm-0yY
 title: 2026 Standup Predictions by Teej, Primeagen, Caesy, Trash
 youtube_id: vFcgXdm-0yY
-tags:
-- ai
+tags: []
 ---
 # 2026 Standup Predictions by Teej, Primeagen, Caesy, Trash
 

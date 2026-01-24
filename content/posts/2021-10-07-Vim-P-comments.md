@@ -7,13 +7,8 @@ slug: vim-un-comment-p1
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643288865/blogmedia/jbs2hcaiplfvwsgrcfgl.png
 tags:
 - frontend
-- go
-- linux
 - neovim
-- python
-- rust
 - testing
-- vim
 ---
 ## Introduction
 

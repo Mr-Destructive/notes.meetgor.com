@@ -7,11 +7,8 @@ slug: techstructive-blog-init
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287813/blogmedia/zgblatyqpwdh5oe7817g.png
 tags:
 - frontend
-- go
-- hashnode
-- linux
+- git
 - neovim
-- newsletter
 - python
 ---
 ## Introduction

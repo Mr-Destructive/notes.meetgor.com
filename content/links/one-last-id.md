@@ -16,8 +16,7 @@ preview_description: 'Chris''s company has an unusual deployment. They had a MyS
   '
 preview_image: https://s3.amazonaws.com/remy.jetpackshark.com/remy-thumb.jpg
 title: One last id
-tags:
-- sql
+tags: []
 ---
 # One last id
 

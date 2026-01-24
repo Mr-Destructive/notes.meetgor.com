@@ -4,7 +4,6 @@ draft: false
 link: https://riggraz.dev/dialogue-developer.html
 title: Dialogue between a developer and a kid
 tags:
-- frontend
 - python
 ---
 # Dialogue between a developer and a kid

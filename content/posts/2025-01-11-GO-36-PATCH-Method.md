@@ -7,10 +7,8 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-036-patch-method.png
 tags:
-- frontend
 - go
 - sql
-- testing
 ---
 ## Introduction
 

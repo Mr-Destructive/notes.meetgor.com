@@ -2,6 +2,7 @@
 title: Quote tweet by me
 date: 2026-01-24
 draft: false
+tags: []
 ---
 # Quote tweet by me
 

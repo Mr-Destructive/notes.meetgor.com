@@ -9,7 +9,6 @@ preview_image: https://logicgrimoire.wordpress.com/wp-content/uploads/2020/06/cr
 title: Writing HTML by hand is easier and cheaper then debugging your SSG in 2025
 tags:
 - ai
-- frontend
 ---
 # Writing HTML by hand is easier and cheaper then debugging your SSG in 2025
 

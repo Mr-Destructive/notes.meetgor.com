@@ -7,6 +7,7 @@ preview_description: '“Hello! I am a developer. Here is my relevant experience
   are you kidding? ha!)  and I...'
 preview_image: https://anniemueller.com/social_previews/posts/how-i-a-non-developer-read-the-tutorial-you-a-developer-wrote-for-me-a-beginner.png
 title: How I a non-developer describe a developer
+tags: []
 ---
 # How I a non-developer describe a developer
 

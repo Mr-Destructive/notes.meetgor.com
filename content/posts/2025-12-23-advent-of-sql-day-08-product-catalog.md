@@ -6,9 +6,6 @@ date: 2025-12-23T15:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
-- frontend
-- go
-- linux
 - sql
 ---
 ## Advent of SQL - Day 8, Product Catalog

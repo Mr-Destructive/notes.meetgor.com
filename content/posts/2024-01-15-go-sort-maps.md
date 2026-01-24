@@ -8,7 +8,6 @@ slug: golang-sort-package-basic
 date: 2024-01-15 22:30:00
 tags:
 - go
-- linux
 ---
 I have been learning Golang for around 2 years now, and I have never paid attention to the sort package, can you believe that! Where was this package hiding?
 

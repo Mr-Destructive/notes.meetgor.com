@@ -4,7 +4,6 @@ draft: false
 link: https://www.jeffwofford.com/wp/?p=2240
 title: When the Job search becomes impossible
 tags:
-- ai
 - career
 ---
 # When the Job search becomes impossible

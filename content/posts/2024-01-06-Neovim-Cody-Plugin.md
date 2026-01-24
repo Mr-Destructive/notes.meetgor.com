@@ -6,12 +6,8 @@ slug: neovim-sourcegraph-cody
 image_url: https://meetgor-cdn.pages.dev/neovim-sourcegraph-cody.png
 tags:
 - ai
-- frontend
-- go
-- linux
 - neovim
 - rust
-- vim
 ---
 ## Introduction
 

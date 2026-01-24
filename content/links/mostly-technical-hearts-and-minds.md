@@ -6,7 +6,6 @@ title: 'Mostly Technical: Hearts and Minds'
 youtube_id: P-fKp3eS5CA
 tags:
 - ai
-- sql
 ---
 # Mostly Technical: Hearts and Minds
 

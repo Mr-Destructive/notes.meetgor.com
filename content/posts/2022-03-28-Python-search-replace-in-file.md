@@ -4,7 +4,6 @@ title: 'Python: Search and Replace in File'
 date: 2022-03-28 18:59:30
 slug: python-search-replace-file
 tags:
-- frontend
 - python
 ---
 ## Searching and Replacing the text in a File

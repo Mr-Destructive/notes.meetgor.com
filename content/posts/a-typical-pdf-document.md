@@ -5,10 +5,6 @@ slug: a-typical-pdf-document
 draft: false
 type: link
 description: ''
-tags:
-- document
-- forensics
-- pdf
-- security
+tags: []
 ---
 This is cool, i've read a lot of these and working at docsumo, makes me want to read about them more.

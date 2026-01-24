@@ -8,9 +8,7 @@ series:
 - BASH Scripting Guide
 image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p2.webp
 tags:
-- bash
-- frontend
-- linux
+- sql
 ---
 # Introduction
 

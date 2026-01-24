@@ -6,7 +6,6 @@ draft: false
 type: link
 description: ''
 tags:
-- ai
 - python
 ---
 I don't quite get it. Maybe its true. Django provided a good start but then it was like a lock in.

@@ -17,9 +17,7 @@ preview_description: "He has heard the whispers, â\x80\x9Che is getting older, 
   \ will go wrong."
 preview_image: https://www.allthingsdistributed.com/images/age.png
 title: Development gets better with age
-tags:
-- ai
-- frontend
+tags: []
 ---
 # Development gets better with age
 

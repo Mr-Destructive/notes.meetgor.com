@@ -3,8 +3,7 @@ date: 2025-10-17
 draft: false
 link: https://www.i-programmer.info/news/99-professional/18368-there-are-no-programmers-in-star-trek.html
 title: There are no programmers in Star Trek
-tags:
-- frontend
+tags: []
 ---
 # There are no programmers in Star Trek
 

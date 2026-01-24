@@ -4,7 +4,6 @@ draft: false
 link: https://mattjhall.co.uk/posts/be-careful-with-go-struct-embedding.html
 title: Be careful with Go struct embedding
 tags:
-- frontend
 - go
 - sql
 ---

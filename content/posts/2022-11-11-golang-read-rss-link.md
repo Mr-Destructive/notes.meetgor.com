@@ -7,7 +7,6 @@ slug: golang-read-rss-feed
 date: 2022-11-11 22:45:00
 tags:
 - go
-- linux
 - neovim
 - python
 - sql

@@ -17,8 +17,7 @@ preview_description: 'Recently, I have been testing how well the newest generati
   a while.'
 preview_image: https://blog.burkert.me/llm-character-text-manipulation.jpg
 title: LLMs are getting better at character-level manipulation
-tags:
-- testing
+tags: []
 ---
 # LLMs are getting better at character-level manipulation
 

@@ -4,9 +4,7 @@ type: thoughts
 post_dir: thoughts
 date: 2025-10-17
 status: published
-tags:
-- ai
-- testing
+tags: []
 ---
 Its a beautiful sunny Monday, you had prepared changes well tested on Friday. But today, just for today, Bill had to merge their hotfix into your changes as well. Well, they did.
 

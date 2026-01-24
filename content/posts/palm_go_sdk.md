@@ -6,7 +6,6 @@ description: Unofficial go SDK for Google Generative AI LLM PaLM2 API.
 docs_link: https://pkg.go.dev/github.com/mr-destructive/palm
 github_link: https://github.com/Mr-Destructive/palm/
 tags:
-- ai
 - go
 ---
 A Golang Client (Wrapper) for the PaLM2 API.

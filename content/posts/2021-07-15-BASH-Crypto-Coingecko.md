@@ -6,10 +6,7 @@ subtitle: Know the price of your favorite cryptocurrency coin/token in your nati
 date: 2021-07-15 17:56:47+05:30
 slug: bash-crypto-scrapper
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1626331633083/zTSpHCFOu.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
-tags:
-- bash
-- linux
-- sql
+tags: []
 ---
 ## Introduction
 Cryptocurrency is in such a hype that it is attracting even nerds and terminal fanboys, it is quite comfortable for such people to view the price inside of their terminal, also for normal people to learn about how to interact with an API from the local machine. We are gonna make a script about 20 lines in BASH to extract data from the  [coingecko cryptocurrency API](https://www.coingecko.com/en/api#explore-api) and some tools such as grep and sed. That being said let's start scripting.

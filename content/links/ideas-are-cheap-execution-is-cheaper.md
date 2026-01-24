@@ -6,6 +6,7 @@ preview_description: In a world where ideas are cheap and software is cheaper, w
   truly matters now?
 preview_image: https://davekiss.com/og/ideas-are-cheap-execution-is-cheaper.png
 title: Ideas are cheap, Execution is cheaper
+tags: []
 ---
 # Ideas are cheap, Execution is cheaper
 

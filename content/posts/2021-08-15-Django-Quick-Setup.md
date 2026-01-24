@@ -6,12 +6,7 @@ date: 2021-08-15 18:50:46+05:30
 slug: django-setup-script
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286698/blogmedia/dyfjizyq2zmdo8fk4ars.png
 tags:
-- bash
-- django
-- linux
 - python
-- sql
-- web-development
 ---
 ## Introduction
 

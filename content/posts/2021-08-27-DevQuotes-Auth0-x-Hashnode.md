@@ -8,17 +8,11 @@ date: 2021-08-27 23:45:00+05:30
 slug: devquotes-platform
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643286845/blogmedia/bhajgzmqaknzpk1z9qdn.png
 tags:
-- auth0
-- django
 - frontend
-- go
-- hashnode
-- linux
+- git
 - neovim
 - python
 - sql
-- testing
-- web-development
 ---
 ## Introduction
 

@@ -7,7 +7,6 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-032-url-parsing.png
 tags:
-- ai
 - go
 - sql
 ---

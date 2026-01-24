@@ -9,7 +9,6 @@ preview_image: https://substackcdn.com/image/fetch/$s_!Eb5N!,w_1200,h_675,c_fill
 title: The AI Wildfire is coming and its going to be very painful and incredibly healthy
 tags:
 - ai
-- newsletter
 ---
 # The AI Wildfire is coming and its going to be very painful and incredibly healthy
 

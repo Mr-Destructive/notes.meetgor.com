@@ -3,8 +3,7 @@ date: 2025-12-12
 draft: false
 link: https://stephenramsay.net/posts/vibe-coding.html
 title: If you’re going to vibe code, why not do it in C or even Assembly
-tags:
-- frontend
+tags: []
 ---
 # If you’re going to vibe code, why not do it in C or even Assembly
 

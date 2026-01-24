@@ -5,8 +5,6 @@ link: https://christianheilmann.com/2025/10/30/ai-is-dunning-kruger-as-a-service
 title: AI is Dunning-Kruger as a Service
 tags:
 - ai
-- career
-- newsletter
 ---
 # AI is Dunning-Kruger as a Service
 

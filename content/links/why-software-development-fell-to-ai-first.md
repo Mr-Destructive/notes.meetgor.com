@@ -7,7 +7,6 @@ preview_image: https://substackcdn.com/image/fetch/$s_!h2gW!,f_auto,q_auto:best,
 title: Why Software Development fell to AI first
 tags:
 - ai
-- newsletter
 ---
 # Why Software Development fell to AI first
 

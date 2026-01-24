@@ -6,7 +6,7 @@ title: 'Python: The documentary'
 youtube_id: GfH4QL4VqJ0
 tags:
 - ai
-- go
+- frontend
 - python
 ---
 # Python: The documentary

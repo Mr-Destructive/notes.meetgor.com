@@ -8,7 +8,6 @@ preview_image: https://substackcdn.com/image/fetch/$s_!hNsI!,f_auto,q_auto:best,
 title: AI should be free software
 tags:
 - ai
-- newsletter
 ---
 # AI should be free software
 

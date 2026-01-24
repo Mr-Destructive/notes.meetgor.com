@@ -4,7 +4,6 @@ draft: false
 link: https://mitchellh.com/writing/building-large-technical-projects
 title: My approach to building large technical projects - Mitchel Hashimoto
 tags:
-- go
 - testing
 ---
 # My approach to building large technical projects - Mitchel Hashimoto

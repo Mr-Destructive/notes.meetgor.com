@@ -9,7 +9,6 @@ preview_image: https://substackcdn.com/image/fetch/$s_!Hlih!,w_1200,h_675,c_fill
 title: From words to worlds with spatial intelligence
 tags:
 - ai
-- newsletter
 ---
 # From words to worlds with spatial intelligence
 

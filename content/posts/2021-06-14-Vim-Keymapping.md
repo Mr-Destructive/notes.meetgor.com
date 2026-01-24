@@ -6,11 +6,8 @@ date: 2021-06-14 15:27:44+05:30
 slug: vim-keymaps
 image_url: https://meetgor-cdn.pages.dev/vim-keymapping-guide.webp
 tags:
-- linux
 - neovim
 - python
-- testing
-- vim
 ---
 ## Introduction
 

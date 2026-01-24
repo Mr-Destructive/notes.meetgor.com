@@ -6,9 +6,7 @@ preview_description: Don’t try to eliminate developers; don't sell that as the
   of AI; design platforms and practices that amplify their understanding
 preview_image: https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png
 title: You cannot outsource understanding
-tags:
-- ai
-- newsletter
+tags: []
 ---
 # You cannot outsource understanding
 

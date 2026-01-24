@@ -6,9 +6,7 @@ preview_description: 'One of the great advantages of having junior developers on
   development team is that they aren’t senior developers. '
 preview_image: https://www.infoworld.com/wp-content/uploads/2025/10/4065771-0-85407100-1759419912-shutterstock_1500472583.jpg?quality=50&strip=all&w=1024
 title: Why we need junior engineers
-tags:
-- career
-- frontend
+tags: []
 ---
 # Why we need junior engineers
 

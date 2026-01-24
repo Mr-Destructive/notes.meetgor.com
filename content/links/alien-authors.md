@@ -7,7 +7,6 @@ preview_image: https://substackcdn.com/image/fetch/$s_!BDAN!,w_1200,h_675,c_fill
 title: Alien Authors
 tags:
 - ai
-- newsletter
 ---
 # Alien Authors
 

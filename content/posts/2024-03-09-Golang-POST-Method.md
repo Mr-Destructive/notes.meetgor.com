@@ -8,9 +8,8 @@ series:
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-034-post-method.png
 tags:
 - career
-- frontend
+- devops
 - go
-- linux
 ---
 ## Introduction
 

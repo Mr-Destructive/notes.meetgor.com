@@ -5,8 +5,7 @@ link: https://antonz.org/ai-advocacy/
 preview_description: And you are going to be fine.
 preview_image: https://antonz.org/ai-advocacy/cover.png
 title: Fear is not advocacy
-tags:
-- ai
+tags: []
 ---
 # Fear is not advocacy
 

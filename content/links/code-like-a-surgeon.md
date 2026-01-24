@@ -5,6 +5,7 @@ link: https://www.geoffreylitt.com/2025/10/24/code-like-a-surgeon
 preview_description: ''
 preview_image: https://geoffreylitt.com/images/gradient.jpg
 title: Code like a surgeon
+tags: []
 ---
 # Code like a surgeon
 

@@ -9,8 +9,6 @@ date: 2024-11-19 23:15:00
 tags:
 - git
 - go
-- linux
-- testing
 ---
 ## Introduction
 

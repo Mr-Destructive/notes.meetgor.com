@@ -8,12 +8,9 @@ series:
 image_url: https://meetgor-cdn.pages.dev/django-deploy-railway-nixpacks.png
 tags:
 - devops
-- django
-- linux
+- git
 - python
-- railway
 - sql
-- testing
 ---
 ## Introduction
 

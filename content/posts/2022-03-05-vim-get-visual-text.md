@@ -5,8 +5,6 @@ date: 2022-03-05 17:25:37
 slug: vim-get-visual-text
 tags:
 - neovim
-- testing
-- vim
 ---
 ## Using Registers 
 

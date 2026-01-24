@@ -7,7 +7,6 @@ preview_image: https://steipete.me/posts/2025/shipping-at-inference-speed/index.
 title: Shipping at inference speed
 tags:
 - ai
-- go
 ---
 # Shipping at inference speed
 

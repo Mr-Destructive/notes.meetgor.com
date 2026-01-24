@@ -7,12 +7,7 @@ series:
 - nginx-survival-guide
 image_url: https://meetgor-cdn.pages.dev/nginx-survival-guide/nginx-sg-1.png
 tags:
-- career
 - devops
-- frontend
-- linux
-- nginx
-- web-development
 ---
 ## Introduction
 

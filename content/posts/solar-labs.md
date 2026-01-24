@@ -5,7 +5,6 @@ draft: false
 type: work
 tags:
 - python
-- sql
 ---
 ### Backend Developer Intern - [The Solar Labs](https://www.thesolarlabs.com/)
 **July 2022 - April 2023**

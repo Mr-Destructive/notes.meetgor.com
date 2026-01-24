@@ -5,7 +5,6 @@ link: https://youtu.be/IdyK8XB2l6g
 title: Just use Postgres
 youtube_id: IdyK8XB2l6g
 tags:
-- ai
 - sql
 ---
 # Just use Postgres

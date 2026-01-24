@@ -6,13 +6,9 @@ date: 2021-11-05 20:50:00+05:30
 slug: curl-basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643289075/blogmedia/bqnrrfaeaqfaj7hezxjx.png
 tags:
-- bash
-- career
 - frontend
-- linux
-- networking
+- git
 - python
-- sql
 - testing
 ---
 ## Introduction

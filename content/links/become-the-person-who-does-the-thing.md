@@ -7,7 +7,6 @@ preview_description: 'Bad news: your internal identity dictates everything you d
 preview_image: https://fredrivett.com/api/og?title=Becoming%20the%20person%20who%20does%20the%20thing&date=2025-09-10
 title: Become the person who does the thing
 tags:
-- career
 - sql
 ---
 # Become the person who does the thing

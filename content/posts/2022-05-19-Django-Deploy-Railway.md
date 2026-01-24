@@ -7,15 +7,11 @@ series:
 - Django-Deployment
 image_url: https://meetgor-cdn.pages.dev/django-deploy-railway.png
 tags:
-- django
+- devops
 - frontend
 - git
-- go
-- linux
 - python
 - sql
-- testing
-- web-development
 ---
 ## Introduction
 

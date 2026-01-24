@@ -7,9 +7,6 @@ date: 2022-07-11 22:30:00
 status: published
 slug: vimscript-to-lua-keymapper
 tags:
-- frontend
-- go
-- linux
 - neovim
 - python
 ---

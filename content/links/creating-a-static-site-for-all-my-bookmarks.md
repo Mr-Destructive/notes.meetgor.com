@@ -7,6 +7,7 @@ preview_description: To help me keep track of interesting links, I created a sta
   my new site work?
 preview_image: https://alexwlchan.net/images/cards/2025/bookmarks-static-site.png
 title: Creating a static site for all my bookmarks
+tags: []
 ---
 # Creating a static site for all my bookmarks
 

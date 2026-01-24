@@ -8,7 +8,6 @@ series:
 image_url: https://meetgor-cdn.pages.dev/golang-030-goroutines.png
 tags:
 - go
-- linux
 - sql
 ---
 ## Introduction

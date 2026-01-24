@@ -3,8 +3,7 @@ date: 2026-01-16
 draft: false
 link: https://hackerfactor.com/blog/index.php?/archives/1085-A-Typical-PDF.html
 title: A typical PDF document
-tags:
-- frontend
+tags: []
 ---
 # A typical PDF document
 

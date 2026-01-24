@@ -5,10 +5,7 @@ date: 2022-03-26 15:45:00
 slug: python-feedparser
 image_url: https://meetgor-cdn.pages.dev/python-pkg-feedparser.png
 tags:
-- frontend
-- newsletter
 - python
-- testing
 ---
 ## Introduction
 

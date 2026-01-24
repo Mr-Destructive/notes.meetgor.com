@@ -8,8 +8,8 @@ status: published
 slug: django-app-from-scratch
 tags:
 - devops
-- linux
 - neovim
+- python
 ---
 ## Pull a Fresh Debian Image
 

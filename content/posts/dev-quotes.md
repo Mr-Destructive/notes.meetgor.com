@@ -6,7 +6,7 @@ description: Dev quotes is a platform for developers to write inspireing quotes.
 github_link: https://github.com/Mr-Destructive/devquotes/
 cover_image: https://github.com/Mr-Destructive/devquotes/blob/master/static/img/logo.png?raw=true
 tags:
-- django
+- python
 ---
 A simple quote/post sharing app created for exploring Django.
 

@@ -9,11 +9,8 @@ image_url: https://meetgor-cdn.pages.dev/podevcast-python.png
 tags:
 - devops
 - frontend
-- go
-- hashnode
-- linux
+- git
 - python
-- testing
 ---
 ## Introduction
 

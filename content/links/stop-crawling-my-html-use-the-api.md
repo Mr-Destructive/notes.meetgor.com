@@ -12,7 +12,6 @@ preview_image: https://shkspr.mobi/blog/wp-content/uploads/2025/10/json.webp
 title: Stop crawling my html, use the API
 tags:
 - ai
-- frontend
 ---
 # Stop crawling my html, use the API
 

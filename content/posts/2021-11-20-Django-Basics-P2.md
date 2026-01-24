@@ -8,12 +8,7 @@ series:
 - Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643290071/blogmedia/s8ahlep1e8lmgiboyjhz.png
 tags:
-- django
-- frontend
-- go
-- linux
 - python
-- web-development
 ---
 ## Introduction
 

@@ -6,12 +6,7 @@ date: 2021-06-10 04:52:07+05:30
 slug: vim-for-bash
 image_url: https://meetgor-cdn.pages.dev/vim-for-bash.webp
 tags:
-- bash
-- frontend
-- go
-- linux
 - neovim
-- vim
 ---
 ## Vim and BASH? 
 Bash Scripting is a powerful skill to have as a programmer because we find Linux almost everywhere and to get through it you must have a command over its interface which is generally the BASH shell. Vim is a great option for doing this, or probably the best out there! Because Vim is pre-installed in almost every Linux distribution. This is not an in-depth setup for BASH on Vim, it is a simple editorial on starting up BASH scripting on the Vim editor. So without wasting time on "Vim features" let's dive in with the setup for BASH in Vim.

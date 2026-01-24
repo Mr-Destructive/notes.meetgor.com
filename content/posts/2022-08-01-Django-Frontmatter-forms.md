@@ -9,7 +9,6 @@ slug: django-form-load-frontmatter
 tags:
 - frontend
 - python
-- testing
 ---
 ## Introduction
 

@@ -5,7 +5,6 @@ slug: tally-transaction-ai-tool
 draft: false
 type: link
 description: ''
-tags:
-- ai
+tags: []
 ---
 A cool tool to check how it made it

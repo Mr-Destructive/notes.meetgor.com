@@ -6,6 +6,7 @@ date: 2025-12-27T20:30:00+0530
 series:
 - advent-of-sql-2025
 tags:
+- rust
 - sql
 ---
 ## Advent of SQL - Day 13, XML Travel Manifests

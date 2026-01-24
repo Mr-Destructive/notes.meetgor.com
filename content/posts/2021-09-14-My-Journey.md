@@ -7,10 +7,7 @@ date: 2021-09-14 19:30:37+05:30
 slug: technical-writer-journey
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287299/blogmedia/dsqgqfz0uk5ldet6dfer.png
 tags:
-- ai
-- frontend
-- hashnode
-- linux
+- git
 - neovim
 - python
 ---

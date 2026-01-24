@@ -7,11 +7,7 @@ date: 2021-09-28 20:08:47+05:30
 slug: djagno-auth0-script
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287941/blogmedia/aggaqpjljlcysdopvoj3.png
 tags:
-- bash
-- django
 - frontend
-- go
-- linux
 - python
 - testing
 ---

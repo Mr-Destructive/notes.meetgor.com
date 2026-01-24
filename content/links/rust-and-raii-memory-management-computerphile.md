@@ -6,7 +6,6 @@ title: Rust and RAII Memory Management - Computerphile
 youtube_id: pTMvh6VzDls
 tags:
 - rust
-- sql
 ---
 # Rust and RAII Memory Management - Computerphile
 

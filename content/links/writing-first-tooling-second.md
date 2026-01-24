@@ -4,9 +4,7 @@ draft: false
 link: https://susam.net/writing-first-tooling-second.html
 title: Writing first tooling second
 tags:
-- frontend
 - go
-- newsletter
 - python
 ---
 # Writing first tooling second

@@ -4,6 +4,7 @@ draft: false
 link: https://youtu.be/Gl31diSVP8M
 title: Building a terminal wizard in BubbleTea
 youtube_id: Gl31diSVP8M
+tags: []
 ---
 # Building a terminal wizard in BubbleTea
 

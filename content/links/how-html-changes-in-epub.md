@@ -5,8 +5,7 @@ link: https://htmhell.dev/adventcalendar/2025/11/
 preview_description: A collection of bad practices in HTML, copied from real websites.
 preview_image: https://www.htmhell.dev/images/og/advent25_11.png?s=171224
 title: How HTML changes in EPUB
-tags:
-- frontend
+tags: []
 ---
 # How HTML changes in EPUB
 

@@ -3,6 +3,7 @@ date: 2025-10-03
 draft: false
 link: https://www.julian.ac/blog/2025/09/27/failing-to-understand-the-exponential-again/
 title: Failing to understand exponential again
+tags: []
 ---
 # Failing to understand exponential again
 

@@ -5,9 +5,7 @@ date: 2025-11-22 00:00:00+00:00
 draft: false
 tags:
 - ai
-- career
 - go
-- linux
 - newsletter
 - sql
 ---

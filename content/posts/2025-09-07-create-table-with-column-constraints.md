@@ -5,8 +5,6 @@ title: 'SQLite SQL: Create Table with column constraints'
 date: '2025-09-07'
 tags:
 - ai
-- frontend
-- go
 - sql
 ---
 ## Create Table with column constraints

@@ -7,7 +7,6 @@ series:
 - advent-of-sql-2025
 tags:
 - sql
-- testing
 ---
 ## SQLog: Advent of SQL Day 2
 

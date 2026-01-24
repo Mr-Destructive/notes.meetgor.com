@@ -8,8 +8,6 @@ preview_image: https://substackcdn.com/image/fetch/$s_!-977!,w_1200,h_675,c_fill
 title: The bet on juniors just got better
 tags:
 - ai
-- career
-- newsletter
 ---
 # The bet on juniors just got better
 

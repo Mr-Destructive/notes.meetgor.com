@@ -8,8 +8,6 @@ image_url: https://meetgor-cdn.pages.dev/vim-for-python.webp
 tags:
 - neovim
 - python
-- testing
-- vim
 ---
 ## Introduction
 Vim is quite a powerful text editor which can add performance to the already fast typed language Python. Vim can be highly customizable and efficient to use as it has the power of **adding custom plugins and plugins managers, key mappings**, and the most critical weapon of vim - Access to the terminal straight away.

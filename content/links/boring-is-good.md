@@ -4,7 +4,6 @@ draft: false
 link: https://jenson.org/boring/
 title: Boring is good
 tags:
-- frontend
 - python
 ---
 # Boring is good

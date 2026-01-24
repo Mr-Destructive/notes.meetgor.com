@@ -10,6 +10,7 @@ cover_image: https://github.com/Mr-Destructive/WorldAtlas/raw/master/webpage/img
 slug: world-atlas
 tags:
 - frontend
+- python
 - sql
 ---
 A simple word game using some django in the backend and javascript for frontend. 

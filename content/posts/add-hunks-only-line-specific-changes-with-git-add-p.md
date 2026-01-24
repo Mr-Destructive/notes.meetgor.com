@@ -6,7 +6,6 @@ title: 'Add hunks: only line specific changes with git add -p'
 tags:
 - ai
 - git
-- go
 - neovim
 - testing
 ---

@@ -5,7 +5,6 @@ link: https://togelius.blogspot.com/2025/12/please-dont-automate-science.html
 title: Please don’t automate science
 tags:
 - ai
-- frontend
 ---
 # Please don’t automate science
 

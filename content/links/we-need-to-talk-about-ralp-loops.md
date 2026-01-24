@@ -4,8 +4,7 @@ draft: false
 link: https://youtu.be/Yr9O6KFwbW4
 title: We need to talk about Ralp loops
 youtube_id: Yr9O6KFwbW4
-tags:
-- ai
+tags: []
 ---
 # We need to talk about Ralp loops
 

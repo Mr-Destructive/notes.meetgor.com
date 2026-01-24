@@ -9,7 +9,7 @@ preview_description: ' Weave combines LLMs and domain-specific machine learning 
 preview_image: https://framerusercontent.com/images/UAWlBqgQ9KQljrpb3ruIUgMqBEE.png
 title: Why hiring only senior engineers is killing companies
 tags:
-- ai
+- career
 ---
 # Why hiring only senior engineers is killing companies
 

@@ -6,8 +6,7 @@ preview_description: I wrote a Go module to help with my print debugging, which 
   expressions and values to a separate file.
 preview_image: https://alexwlchan.net/images/profile_green_sq.jpg
 title: Quick and dirty print debuggin in Go
-tags:
-- go
+tags: []
 ---
 # Quick and dirty print debuggin in Go
 

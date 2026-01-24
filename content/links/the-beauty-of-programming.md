@@ -3,6 +3,7 @@ date: 2025-10-03
 draft: false
 link: https://www.brynmawr.edu/inside/academic-information/departments-programs/computer-science/beauty-programming
 title: The beauty of Programming
+tags: []
 ---
 # The beauty of Programming
 

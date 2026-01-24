@@ -4,8 +4,7 @@ draft: false
 link: https://youtu.be/8VsiYWW9r48
 title: 'Computerphile: Machine Code Explained'
 youtube_id: 8VsiYWW9r48
-tags:
-- ai
+tags: []
 ---
 # Computerphile: Machine Code Explained
 

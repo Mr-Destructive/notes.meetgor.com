@@ -3,7 +3,6 @@ title: Docsumo
 date: 2024-12-15
 type: work
 tags:
-- career
 - python
 ---
 ### Junior Backend Engineer - [Docsumo](https://www.docsumo.com/)

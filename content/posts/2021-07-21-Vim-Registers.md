@@ -7,9 +7,7 @@ date: 2021-07-21 23:41:57+05:30
 slug: vim-registers
 image_url: https://cdn.hashnode.com/res/hashnode/image/upload/v1626940723316/nFGNljJi0.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress
 tags:
-- linux
 - neovim
-- vim
 ---
 ## Introduction
 

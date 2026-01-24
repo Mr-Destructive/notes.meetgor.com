@@ -4,7 +4,6 @@ title: 'SQLite dot commands: header command'
 slug: sqlite-dot-command-header
 date: 2025-09-03
 tags:
-- frontend
 - sql
 ---
 The `.headers` command is crucial as might effect the way the result set is displayed. The first row would be set to the name of the columns in the output of the relevant commands like `.output`, `.once`, or even your simple standard out queries if it is set on.

@@ -1,11 +1,14 @@
 ---
 type: newsletter
-title: "Techstructive Weekly #62"
-date: 2025-10-04T00:00:00
-slug: "techstructive-weekly-62"
-tags: ["ai", "career", "go", "newsletter", "sql", "testing"]
+title: 'Techstructive Weekly #62'
+date: 2025-10-04 00:00:00
+slug: techstructive-weekly-62
+tags:
+- ai
+- career
+- newsletter
+- sql
 ---
-
 ## Week #62
 
 It was a great week. I didn’t knew I would say that at the start of the week. But hell yes, a promotion, finally. A hope at the end of the tunnel. Hard work pays off in the end. I kept believing and finally able to bring smile on my loved ones.

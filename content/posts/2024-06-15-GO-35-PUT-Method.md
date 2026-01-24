@@ -7,8 +7,9 @@ series:
 - 100-days-of-golang
 image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-035-put-method.png
 tags:
+- devops
+- git
 - go
-- linux
 - sql
 ---
 ## Introduction

@@ -5,9 +5,7 @@ date: 2023-11-30 20:45:00
 slug: libsql-python
 image_url: https://meetgor-cdn.pages.dev/connect-libsql-with-python.png
 tags:
-- frontend
-- libsql
-- linux
+- devops
 - python
 - sql
 ---

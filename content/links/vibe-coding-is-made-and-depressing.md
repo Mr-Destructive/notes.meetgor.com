@@ -7,8 +7,7 @@ preview_description: "I’ve been in the mobile development industry for almost 
   \ hourly, mile..."
 preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
 title: Vibe Coding is made and depressing
-tags:
-- ai
+tags: []
 ---
 # Vibe Coding is made and depressing
 

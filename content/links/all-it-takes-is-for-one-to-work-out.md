@@ -7,6 +7,7 @@ preview_description: More than a decade ago, when I was applying to graduate sch
   gotten in anywhere. I wanted to try again, but …
 preview_image: https://alearningaday.blog/wp-content/uploads/2017/05/cropped-alearningadaylogov6.png?w=200
 title: All it takes is for one to work out
+tags: []
 ---
 # All it takes is for one to work out
 

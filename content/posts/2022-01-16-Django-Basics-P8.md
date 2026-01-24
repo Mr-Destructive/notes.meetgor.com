@@ -9,14 +9,9 @@ series:
 - Django-Basics
 image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1642339267/blogmedia/djbasics-8-db_pvulqh.png
 tags:
-- django
-- frontend
 - git
-- go
 - python
 - sql
-- testing
-- web-development
 ---
 ## Introduction
 

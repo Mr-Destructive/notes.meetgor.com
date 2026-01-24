@@ -7,10 +7,8 @@ series:
 - Django-Series
 image_url: https://meetgor-cdn.pages.dev/django-htmx-chat-cover.png
 tags:
-- django
 - frontend
-- htmx
-- linux
+- git
 - python
 - sql
 - testing

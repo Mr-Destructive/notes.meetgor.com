@@ -1,11 +1,16 @@
 ---
 type: newsletter
-title: "Techstructive Weekly #61"
-date: 2025-09-27T00:00:00
-slug: "techstructive-weekly-61"
-tags: ["ai", "career", "frontend", "go", "newsletter", "sql", "testing"]
+title: 'Techstructive Weekly #61'
+date: 2025-09-27 00:00:00
+slug: techstructive-weekly-61
+tags:
+- ai
+- career
+- frontend
+- go
+- newsletter
+- sql
 ---
-
 ## Week #61
 
 A bit of slow and disappointing week on a personal note. I tried my best to be a backend developer but was not worthy of being one, I was stranded as a product developer. I am not saying I hate being a product developer, it just gets too menial and boring once you know the limitations and the quirks of a product.

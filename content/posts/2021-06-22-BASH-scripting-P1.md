@@ -7,9 +7,7 @@ slug: bash-guide-p1
 series:
 - BASH Scripting Guide
 image_url: https://meetgor-cdn.pages.dev/bash-scripting-guide-p1.webp
-tags:
-- bash
-- linux
+tags: []
 ---
 ## Introduction
 If you are new to BASH and Linux, don't you worry the community is the driving force here. If someone's stuck somewhere, the platforms, forums, and blogs are ready to help anyone there. BASH is a short term of Bourne-Again Shell, it is a shell interface that has much more capabilities and functions than the simple Bourne shell(sh). It has some quite remarkable features and it is even capable of calling itself a programming language in some sense.
