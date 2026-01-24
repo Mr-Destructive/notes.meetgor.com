@@ -1,0 +1,16 @@
+---
+title: "Agentic Coding: The future of software development with agents"
+date: 2026-01-24
+draft: false
+---
+
+# Agentic Coding: The future of software development with agents
+
+**Link:** https://www.youtube.com/watch?v=nfOVgz_omlU
+
+## Context
+
+ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409"></iframe></div></div><p></p><ul><li><p><a href="https://www.youtube.com/watch?v=nfOVgz_omlU" rel="nofollow ugc noopener">Agentic Coding: The future of software development with agents</a></p><ul><li><p>See, again, Claude's code and agentic tools are getting adorned by experienced developers too. This is the thing that makes me concerne
+
+**Source:** techstructive-weekly-49
+
