@@ -1,8 +1,11 @@
 #!/bin/bash
 set -e
 
-# Build Hugo site
-hugo --minify
+# Install Hugo
+curl -L https://github.com/gohugoio/hugo/releases/download/v0.136.5/hugo_0.136.5_linux-amd64.tar.gz | tar xz
 
-# Copy public to output
+# Build
+./hugo --minify
+
+# Copy output
 cp -r public/* .
