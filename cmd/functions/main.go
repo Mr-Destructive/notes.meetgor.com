@@ -783,58 +783,66 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Blog Admin</title>
+	<title>CMS</title>
 	<script src="https://unpkg.com/htmx.org@1.9.10"></script>
-	<link rel="stylesheet" href="/css/admin.css">
+	<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<style>
-		body {
+		* {
 			margin: 0;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-			background: #f5f5f5;
+			padding: 0;
+			box-sizing: border-box;
 		}
-		
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			background: #ffffff;
+			color: #0a0a0a;
+		}
+
 		.admin-shell {
 			display: flex;
 			height: 100vh;
 			overflow: hidden;
 		}
-		
+
 		.sidebar {
-			width: 220px;
-			background: #1a1a1a;
-			color: white;
-			padding: 20px;
+			width: 260px;
+			background: #fafafa;
+			border-right: 1px solid #e5e5e5;
+			padding: 32px 20px;
 			overflow-y: auto;
-			border-right: 1px solid #333;
 		}
-		
+
 		.sidebar h2 {
-			margin: 0 0 30px 0;
-			font-size: 18px;
+			font-size: 13px;
 			font-weight: 600;
-			border-bottom: 1px solid #333;
-			padding-bottom: 15px;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+			color: #666;
+			margin-bottom: 20px;
 		}
-		
+
 		.nav-section {
-			margin-bottom: 30px;
+			margin-bottom: 24px;
 		}
-		
+
 		.nav-section-title {
 			font-size: 11px;
-			font-weight: 700;
+			font-weight: 600;
+			letter-spacing: 0.5px;
 			text-transform: uppercase;
-			color: #888;
+			color: #999;
 			margin-bottom: 12px;
-			letter-spacing: 1px;
 		}
-		
+
 		.nav-link {
 			display: block;
 			padding: 10px 12px;
-			color: #ccc;
+			color: #444;
 			text-decoration: none;
-			border-radius: 4px;
+			border-radius: 6px;
 			margin-bottom: 4px;
 			font-size: 14px;
 			cursor: pointer;
@@ -842,75 +850,105 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 			background: none;
 			text-align: left;
 			width: 100%;
+			font-weight: 500;
+			transition: all 0.15s;
 		}
-		
+
 		.nav-link:hover {
-			background: #333;
-			color: white;
+			background: #e5e5e5;
+			color: #000;
 		}
-		
+
 		.nav-link.active {
-			background: #0066cc;
+			background: #0a0a0a;
 			color: white;
-			font-weight: 600;
 		}
-		
+
 		.main-content {
 			flex: 1;
 			overflow: hidden;
 			display: flex;
 			flex-direction: column;
 		}
-		
+
 		.topbar {
 			background: white;
-			border-bottom: 1px solid #e0e0e0;
-			padding: 15px 30px;
+			border-bottom: 1px solid #e5e5e5;
+			padding: 20px 32px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 		}
-		
+
 		.topbar h1 {
 			margin: 0;
-			font-size: 24px;
+			font-size: 20px;
 			font-weight: 600;
 		}
-		
+
+		.topbar button {
+			padding: 8px 16px;
+			background: #0a0a0a;
+			color: white;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			font-size: 13px;
+			font-weight: 500;
+		}
+
+		.topbar button:hover {
+			background: #1a1a1a;
+		}
+
 		.content-area {
 			flex: 1;
 			overflow-y: auto;
-			padding: 30px;
+			padding: 32px;
 		}
-		
-		.htmx-request.htmx-settling #main-content {
-			opacity: 0.6;
-		}
-		
-		.htmx-request.htmx-settling .spinner {
-			display: inline-block;
-		}
-		
+
 		.spinner {
 			display: none;
 			width: 16px;
 			height: 16px;
 			border: 2px solid #f3f3f3;
-			border-top: 2px solid #0066cc;
+			border-top: 2px solid #0a0a0a;
 			border-radius: 50%;
 			animation: spin 1s linear infinite;
 		}
-		
+
+		.htmx-request.htmx-settling .spinner {
+			display: inline-block;
+		}
+
 		@keyframes spin {
 			0% { transform: rotate(0deg); }
 			100% { transform: rotate(360deg); }
 		}
-		
+
+		::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #ccc;
+			border-radius: 4px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #999;
+		}
+
 		@media (max-width: 768px) {
 			.admin-shell {
 				flex-direction: column;
 			}
-			
+
 			.sidebar {
 				width: 100%;
 				max-height: 60px;
@@ -921,24 +959,24 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 				overflow-x: auto;
 				overflow-y: hidden;
 			}
-			
+
 			.sidebar h2 {
 				margin: 0;
-				font-size: 14px;
+				font-size: 12px;
 				border: none;
 				padding: 0;
 			}
-			
+
 			.nav-section {
 				margin: 0;
 				display: flex;
 				gap: 10px;
 			}
-			
+
 			.nav-section-title {
 				display: none;
 			}
-			
+
 			.content-area {
 				padding: 20px;
 			}
@@ -948,34 +986,30 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 <body>
 	<div class="admin-shell">
 		<div class="sidebar">
-			<h2>Blog Admin</h2>
-			
+			<h2>Menu</h2>
+
 			<div class="nav-section">
-				<div class="nav-section-title">Main</div>
-				<a class="nav-link" hx-get="/admin/dashboard" hx-target="#main-content" onclick="updateActiveNav(this)">📊 Dashboard</a>
-				<a class="nav-link" hx-get="/admin/posts" hx-target="#main-content" onclick="updateActiveNav(this)">📝 Posts</a>
-				<a class="nav-link" hx-get="/admin/series" hx-target="#main-content" onclick="updateActiveNav(this)">📚 Series</a>
+				<a class="nav-link" hx-get="/admin/dashboard" hx-target="#main-content" onclick="updateActiveNav(this)">Dashboard</a>
+				<a class="nav-link" hx-get="/admin/posts" hx-target="#main-content" onclick="updateActiveNav(this)">Posts</a>
+				<a class="nav-link" hx-get="/admin/series" hx-target="#main-content" onclick="updateActiveNav(this)">Series</a>
 			</div>
-			
+
 			<div class="nav-section">
 				<div class="nav-section-title">Config</div>
-				<a class="nav-link" hx-get="/admin/types" hx-target="#main-content" onclick="updateActiveNav(this)">🏷️ Post Types</a>
-				<a class="nav-link" hx-get="/admin/exports" hx-target="#main-content" onclick="updateActiveNav(this)">📤 Export</a>
+				<a class="nav-link" hx-get="/admin/types" hx-target="#main-content" onclick="updateActiveNav(this)">Post Types</a>
+				<a class="nav-link" href="/" target="_blank">View Site</a>
+				<a class="nav-link" hx-post="/api/auth/logout">Logout</a>
 			</div>
 		</div>
-		
+
 		<div class="main-content">
 			<div class="topbar">
-				<h1 id="page-title">Dashboard</h1>
+				<h1 id="page-title">CMS</h1>
 				<div class="spinner"></div>
 			</div>
-			
+
 			<div class="content-area" id="main-content">
-				<div class="card">
-					<div class="card-body" style="text-align: center; padding: 60px 20px;">
-						<p style="color: #999; font-size: 16px;">Loading...</p>
-					</div>
-				</div>
+				<p style="text-align: center; color: #999; padding: 60px 20px;">Loading...</p>
 			</div>
 		</div>
 	</div>
@@ -985,7 +1019,7 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 		function updateActiveNav(element) {
 			document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
 			element.classList.add('active');
-			
+
 			const text = element.textContent.trim();
 			document.getElementById('page-title').textContent = text;
 		}
