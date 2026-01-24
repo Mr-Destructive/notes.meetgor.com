@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.136.5/hugo_0.136.5_linux-amd64.tar.gz | tar xz && ./hugo --minify",
+  "buildCommand": "git submodule update --init --recursive && curl -L https://github.com/gohugoio/hugo/releases/download/v0.136.5/hugo_0.136.5_linux-amd64.tar.gz | tar xz && ./hugo --minify",
   "outputDirectory": "public"
 }
