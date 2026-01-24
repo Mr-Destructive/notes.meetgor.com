@@ -1,8 +1,5 @@
-.git
-.gitignore
+.env
 node_modules
-*.md
-content/
-exports/
-cmd/
-internal/
+public
+.DS_Store
+.hugo_build.lock

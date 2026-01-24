@@ -6,6 +6,11 @@ theme = "terminal"
 [params]
   description = "Technical notes, articles, links and newsletters"
   themeColor = "dark"
+  showMenuItems = 6
+
+[params.logo]
+  logoText = "Notes"
+  logoHomeLink = "/"
 
 [[menu.main]]
   name = "Posts"
