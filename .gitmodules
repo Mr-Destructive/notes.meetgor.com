@@ -10,3 +10,6 @@
 [submodule "exports/themes/congo"]
 	path = exports/themes/congo
 	url = https://github.com/jpanther/congo
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
