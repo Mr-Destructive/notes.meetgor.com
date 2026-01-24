@@ -539,6 +539,16 @@ func handleExportsPost(w http.ResponseWriter, r *http.Request, db *db.DB) {
 
 // handleMetadata fetches and returns metadata from a URL
 func handleMetadata(w http.ResponseWriter, r *http.Request) {
+	// Allow CORS
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	
+	if r.Method == http.MethodOptions {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+	
 	url := r.URL.Query().Get("url")
 	if url == "" {
 		respondError(w, http.StatusBadRequest, "Missing url parameter")

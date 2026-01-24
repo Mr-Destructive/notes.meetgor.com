@@ -1530,15 +1530,6 @@ func handleMetadata(req events.APIGatewayProxyRequest, ctx context.Context) (eve
 		return respondError(405, "Method not allowed"), nil
 	}
 
-	// Require auth
-	token := ""
-	if authHeader, ok := req.Headers["Authorization"]; ok {
-		token = strings.TrimPrefix(authHeader, "Bearer ")
-	}
-	if token == "" {
-		return respondError(401, "Unauthorized"), nil
-	}
-
 	// Get URL from query params
 	url := req.QueryStringParameters["url"]
 	if url == "" {
