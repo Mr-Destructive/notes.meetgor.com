@@ -1013,8 +1013,9 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 			<h2>Menu</h2>
 
 			<div class="nav-section">
-				<a class="nav-link" hx-get="/admin/dashboard" hx-target="#main-content" onclick="updateActiveNav(this)">Dashboard</a>
+				<a class="nav-link" hx-get="/admin/posts/new" hx-target="#main-content" onclick="updateActiveNav(this)">✎ New Post</a>
 				<a class="nav-link" hx-get="/admin/posts" hx-target="#main-content" onclick="updateActiveNav(this)">Posts</a>
+				<a class="nav-link" hx-get="/admin/dashboard" hx-target="#main-content" onclick="updateActiveNav(this)">Dashboard</a>
 				<a class="nav-link" hx-get="/admin/series" hx-target="#main-content" onclick="updateActiveNav(this)">Series</a>
 			</div>
 
@@ -1028,7 +1029,7 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 
 		<div class="main-content">
 			<div class="topbar">
-				<h1 id="page-title">CMS</h1>
+				<h1 id="page-title">New Post</h1>
 				<div class="spinner"></div>
 			</div>
 
@@ -1048,9 +1049,10 @@ func serveAdminIndex(w http.ResponseWriter, r *http.Request) {
 			document.getElementById('page-title').textContent = text;
 		}
 
-		// Load dashboard on startup
+		// Load new post form on startup (friction removal)
 		document.addEventListener('DOMContentLoaded', () => {
-			htmx.ajax('GET', '/admin/dashboard', { target: '#main-content' });
+			htmx.ajax('GET', '/admin/posts/new', { target: '#main-content' });
+			// Mark first nav link as active visually
 			document.querySelector('.nav-link').classList.add('active');
 		});
 	</script>

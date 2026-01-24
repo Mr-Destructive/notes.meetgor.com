@@ -86,9 +86,11 @@ func HandleAdminDashboard(w http.ResponseWriter, r *http.Request, database *db.D
 .badge-danger { background: #f8d7da; color: #842029; }
 .table-actions { display: flex; gap: 6px; }
 </style>
-<div style="margin-bottom: 24px;">
-	<h2 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">Overview</h2>
-	<div class="stats-grid">
+<div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
+	<h2 style="font-size: 18px; font-weight: 600;">Overview</h2>
+	<button class="btn btn-primary" hx-get="/admin/posts/new" hx-target="#main-content" style="padding: 8px 16px; font-size: 13px;">+ New Post</button>
+</div>
+<div class="stats-grid">
 		<div class="stat-card">
 			<div>` + strconv.Itoa(len(posts)) + `</div>
 			<div>Total Posts</div>
