@@ -1,9 +1,11 @@
 ---
-title: "AI Assisted Coding"
 date: 2026-01-16
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/5vp9ypOUgMw"
+link: https://youtu.be/5vp9ypOUgMw
+tags:
+- ai
+title: AI Assisted Coding
+youtube_id: 5vp9ypOUgMw
 ---
 
 # AI Assisted Coding

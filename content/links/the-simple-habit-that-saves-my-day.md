@@ -1,8 +1,8 @@
 ---
-title: "The simple habit that saves my day"
 date: 2025-10-03
 draft: false
-link: "https://alikhil.dev/posts/the-simple-habit-that-saves-my-evenings/"
+link: https://alikhil.dev/posts/the-simple-habit-that-saves-my-evenings/
+title: The simple habit that saves my day
 ---
 
 # The simple habit that saves my day

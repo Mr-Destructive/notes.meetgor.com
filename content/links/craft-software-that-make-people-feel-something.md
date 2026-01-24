@@ -1,9 +1,14 @@
 ---
-title: "Craft Software that make people feel something"
 date: 2025-12-12
 draft: false
-tags: ["go"]
-link: "https://rapha.land/craft-software-that-makes-people-feel-something/"
+link: https://rapha.land/craft-software-that-makes-people-feel-something/
+preview_description: Recently, people have been asking me why I’m pausing Boo to work
+  on a programming language. I think it would actually be cool to write down how I
+  feel.
+preview_image: https://rapha.land/assets/images/banner.jpg
+tags:
+- go
+title: Craft Software that make people feel something
 ---
 
 # Craft Software that make people feel something

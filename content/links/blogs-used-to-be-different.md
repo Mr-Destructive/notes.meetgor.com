@@ -1,8 +1,12 @@
 ---
-title: "Blogs used to be different"
 date: 2025-09-12
 draft: false
-link: "https://jetgirl.art/blogs-used-to-be-very-different/"
+link: https://jetgirl.art/blogs-used-to-be-very-different/
+preview_description: I saw someone earlier post about how intrusive it felt to read
+  a personal blog post. They made a point that folks like them who have grown up on
+  short form m...
+preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
+title: Blogs used to be different
 ---
 
 # Blogs used to be different

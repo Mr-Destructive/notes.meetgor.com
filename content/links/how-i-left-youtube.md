@@ -1,9 +1,12 @@
 ---
-title: "How I left youtube"
 date: 2025-12-26
 draft: false
-tags: ["go"]
-link: "https://zhach.news/how-i-left-youtube/"
+link: https://zhach.news/how-i-left-youtube/
+preview_description: What was the road like when I left?
+preview_image: https://zhach.news/content/images/size/w1200/2025/11/48-1.jpeg
+tags:
+- go
+title: How I left youtube
 ---
 
 # How I left youtube

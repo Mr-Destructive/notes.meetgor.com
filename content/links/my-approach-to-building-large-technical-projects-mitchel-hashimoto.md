@@ -1,9 +1,11 @@
 ---
-title: "My approach to building large technical projects - Mitchel Hashimoto"
 date: 2025-10-10
 draft: false
-tags: ["go", "testing"]
-link: "https://mitchellh.com/writing/building-large-technical-projects"
+link: https://mitchellh.com/writing/building-large-technical-projects
+tags:
+- go
+- testing
+title: My approach to building large technical projects - Mitchel Hashimoto
 ---
 
 # My approach to building large technical projects - Mitchel Hashimoto

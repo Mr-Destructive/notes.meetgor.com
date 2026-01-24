@@ -1,9 +1,21 @@
 ---
-title: "Myopic Focus"
 date: 2025-09-19
 draft: false
-tags: ["testing"]
-link: "https://thedailywtf.com/articles/myopic-focus"
+link: https://thedailywtf.com/articles/myopic-focus
+preview_description: 'Chops was a developer for Initrode. Early on a Monday, they
+  were summoned to their manager Gary''s office before the caffeine had even hit their
+  brain.
+
+
+  Gary glowered up from his office chair as Chops entered. This wasn''t looking good.
+  "We need to talk about the latest commit for Taskmaster."
+
+
+  '
+preview_image: https://ellismorning.com/img/ellis2.jpeg
+tags:
+- testing
+title: Myopic Focus
 ---
 
 # Myopic Focus

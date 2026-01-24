@@ -1,9 +1,11 @@
 ---
-title: "2026 Standup Predictions by Teej, Primeagen, Caesy, Trash"
 date: 2026-01-16
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/vFcgXdm-0yY"
+link: https://youtu.be/vFcgXdm-0yY
+tags:
+- ai
+title: 2026 Standup Predictions by Teej, Primeagen, Caesy, Trash
+youtube_id: vFcgXdm-0yY
 ---
 
 # 2026 Standup Predictions by Teej, Primeagen, Caesy, Trash

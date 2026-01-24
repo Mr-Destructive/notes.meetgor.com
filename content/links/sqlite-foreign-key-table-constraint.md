@@ -1,9 +1,12 @@
 ---
-title: "SQLite: Foreign KEY table constraint"
 date: 2025-09-19
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/sqlite-foreign-key-table-constraint"
+link: https://www.meetgor.com/sqlog/sqlite-foreign-key-table-constraint
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'SQLite: Foreign KEY table constraint'
 ---
 
 # SQLite: Foreign KEY table constraint

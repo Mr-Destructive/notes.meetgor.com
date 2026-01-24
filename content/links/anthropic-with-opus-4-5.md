@@ -1,8 +1,9 @@
 ---
-title: "Anthropic with Opus 4.5"
 date: 2025-11-29
 draft: false
-link: "https://youtu.be/QzEsYFcaAkY?si=4leLEl4LU6XBYCHZ"
+link: https://youtu.be/QzEsYFcaAkY?si=4leLEl4LU6XBYCHZ
+title: Anthropic with Opus 4.5
+youtube_id: QzEsYFcaAkY
 ---
 
 # Anthropic with Opus 4.5

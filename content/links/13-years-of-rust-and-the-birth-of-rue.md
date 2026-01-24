@@ -1,9 +1,10 @@
 ---
-title: "13 Years of Rust and the birth of Rue"
 date: 2025-12-26
 draft: false
-tags: ["rust"]
-link: "https://steveklabnik.com/writing/thirteen-years-of-rust-and-the-birth-of-rue/?ref=dailydev"
+link: https://steveklabnik.com/writing/thirteen-years-of-rust-and-the-birth-of-rue/?ref=dailydev
+tags:
+- rust
+title: 13 Years of Rust and the birth of Rue
 ---
 
 # 13 Years of Rust and the birth of Rue

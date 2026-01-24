@@ -1,9 +1,11 @@
 ---
-title: "Please don’t automate science"
 date: 2025-12-12
 draft: false
-tags: ["ai", "frontend"]
-link: "https://togelius.blogspot.com/2025/12/please-dont-automate-science.html"
+link: https://togelius.blogspot.com/2025/12/please-dont-automate-science.html
+tags:
+- ai
+- frontend
+title: Please don’t automate science
 ---
 
 # Please don’t automate science

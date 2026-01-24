@@ -1,9 +1,12 @@
 ---
-title: "AI codes better than me, now what?"
 date: 2026-01-09
 draft: false
-tags: ["ai", "career"]
-link: "https://youtu.be/UrNLVip0hSA"
+link: https://youtu.be/UrNLVip0hSA
+tags:
+- ai
+- career
+title: AI codes better than me, now what?
+youtube_id: UrNLVip0hSA
 ---
 
 # AI codes better than me, now what?

@@ -1,9 +1,12 @@
 ---
-title: "Mostly Technical: Hearts and Minds"
 date: 2025-12-19
 draft: false
-tags: ["ai", "sql"]
-link: "https://youtu.be/P-fKp3eS5CA"
+link: https://youtu.be/P-fKp3eS5CA
+tags:
+- ai
+- sql
+title: 'Mostly Technical: Hearts and Minds'
+youtube_id: P-fKp3eS5CA
 ---
 
 # Mostly Technical: Hearts and Minds

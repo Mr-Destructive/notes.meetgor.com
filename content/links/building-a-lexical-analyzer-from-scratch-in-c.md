@@ -1,8 +1,8 @@
 ---
-title: "Building a lexical analyzer from scratch in C"
 date: 2025-09-19
 draft: false
-link: "https://devlogs.xyz/blog/building-a-lexical-analyzer-from-scratch"
+link: https://devlogs.xyz/blog/building-a-lexical-analyzer-from-scratch
+title: Building a lexical analyzer from scratch in C
 ---
 
 # Building a lexical analyzer from scratch in C

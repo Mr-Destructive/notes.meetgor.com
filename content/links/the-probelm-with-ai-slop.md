@@ -1,9 +1,11 @@
 ---
-title: "The probelm with AI Slop"
 date: 2025-11-21
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/vrTrOCQZoQE"
+link: https://youtu.be/vrTrOCQZoQE
+tags:
+- ai
+title: The probelm with AI Slop
+youtube_id: vrTrOCQZoQE
 ---
 
 # The probelm with AI Slop

@@ -1,9 +1,12 @@
 ---
-title: "Day 11: Behavior Score"
 date: 2025-12-26
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/advent-of-sql-2025-day-11"
+link: https://www.meetgor.com/sqlog/advent-of-sql-2025-day-11
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'Day 11: Behavior Score'
 ---
 
 # Day 11: Behavior Score

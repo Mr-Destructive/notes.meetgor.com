@@ -1,9 +1,14 @@
 ---
-title: "Why we need junior engineers"
 date: 2025-10-10
 draft: false
-tags: ["career", "frontend"]
-link: "https://www.infoworld.com/article/4065771/why-we-need-junior-developers.html"
+link: https://www.infoworld.com/article/4065771/why-we-need-junior-developers.html
+preview_description: 'One of the great advantages of having junior developers on the
+  development team is that they aren’t senior developers. '
+preview_image: https://www.infoworld.com/wp-content/uploads/2025/10/4065771-0-85407100-1759419912-shutterstock_1500472583.jpg?quality=50&strip=all&w=1024
+tags:
+- career
+- frontend
+title: Why we need junior engineers
 ---
 
 # Why we need junior engineers

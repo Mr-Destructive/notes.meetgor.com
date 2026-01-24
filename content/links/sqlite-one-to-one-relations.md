@@ -1,9 +1,12 @@
 ---
-title: "SQLite: One to One Relations"
 date: 2025-09-19
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/sqlite-one-to-one-relations"
+link: https://www.meetgor.com/sqlog/sqlite-one-to-one-relations
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'SQLite: One to One Relations'
 ---
 
 # SQLite: One to One Relations

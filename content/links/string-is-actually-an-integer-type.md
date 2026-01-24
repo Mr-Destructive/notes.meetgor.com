@@ -1,9 +1,11 @@
 ---
-title: "STRING is actually an integer type"
 date: 2025-12-12
 draft: false
-tags: ["sql"]
-link: "https://youtu.be/VSiPVZcTQTo"
+link: https://youtu.be/VSiPVZcTQTo
+tags:
+- sql
+title: STRING is actually an integer type
+youtube_id: VSiPVZcTQTo
 ---
 
 # STRING is actually an integer type

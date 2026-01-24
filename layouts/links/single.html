@@ -1,0 +1,62 @@
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-title">
+    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+  </h1>
+  <div class="post-meta">
+    {{- if .Date -}}
+      <time class="post-date">
+        {{- partial "post-date" . -}}
+      </time>
+    {{- end -}}
+    {{- with .Params.Author -}}
+      <span class="post-author">{{ . }}</span>
+    {{- end -}}
+  </div>
+
+  {{ if .Params.tags }}
+    <span class="post-tags">
+      {{ range .Params.tags }}
+      #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;
+      {{ end }}
+    </span>
+  {{ end }}
+
+  <div class="link-preview" style="margin: 2rem 0; padding: 1rem; border: 1px solid #333; border-radius: 8px; background: #111;">
+    {{ if .Params.youtube_id }}
+      <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 1rem;">
+        <iframe 
+          src="https://www.youtube.com/embed/{{ .Params.youtube_id }}" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    {{ else if .Params.preview_image }}
+      <img src="{{ .Params.preview_image }}" alt="Preview" style="max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 1rem; display: block;">
+    {{ end }}
+    
+    {{ if .Params.preview_description }}
+      <p class="preview-description" style="font-style: italic; font-size: 0.9rem; color: #aaa; margin-bottom: 1rem;">
+        {{ .Params.preview_description }}
+      </p>
+    {{ end }}
+    
+    <a href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer" class="button" style="display: inline-block; padding: 0.5rem 1rem; background: #eec35e; color: #000; text-decoration: none; font-weight: bold; border-radius: 4px;">
+      Visit Original Link →
+    </a>
+  </div>
+
+  <div class="post-content">
+    {{- with .Content -}}
+      <div>
+        {{ . | safeHTML }}
+      </div>
+    {{- end -}}
+  </div>
+
+  {{ if eq .Type $.Site.Params.contentTypeName }}
+    {{ partial "posts_pagination.html" . }}
+  {{ end }}
+</article>
+{{ end }}

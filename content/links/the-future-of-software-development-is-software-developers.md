@@ -1,8 +1,12 @@
 ---
-title: "The future of software development is software developers"
 date: 2026-01-02
 draft: false
-link: "https://codemanship.wordpress.com/2025/11/25/the-future-of-software-development-is-software-developers/"
+link: https://codemanship.wordpress.com/2025/11/25/the-future-of-software-development-is-software-developers/
+preview_description: <ShamelessPlug> If you’re looking to get your development team
+  AI-ready, my hands-on instructor-led training in the principles and practices that
+  enable teams to rapidly, reliably and s…
+preview_image: https://codemanship.wordpress.com/wp-content/uploads/2025/11/image-7.png
+title: The future of software development is software developers
 ---
 
 # The future of software development is software developers

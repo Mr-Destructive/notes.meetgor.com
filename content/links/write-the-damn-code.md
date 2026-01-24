@@ -1,9 +1,12 @@
 ---
-title: "Write the damn code"
 date: 2025-10-03
 draft: false
-tags: ["ai"]
-link: "https://antonz.org/write-code/"
+link: https://antonz.org/write-code/
+preview_description: You are a software engineer. Don't become a prompt refiner.
+preview_image: https://antonz.org/write-code/cover.png
+tags:
+- ai
+title: Write the damn code
 ---
 
 # Write the damn code

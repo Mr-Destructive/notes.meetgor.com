@@ -1,9 +1,10 @@
 ---
-title: "15 Go subtleties you must know"
 date: 2025-10-24
 draft: false
-tags: ["go"]
-link: "https://harrisoncramer.me/15-go-sublteties-you-may-not-already-know/"
+link: https://harrisoncramer.me/15-go-sublteties-you-may-not-already-know/
+tags:
+- go
+title: 15 Go subtleties you must know
 ---
 
 # 15 Go subtleties you must know

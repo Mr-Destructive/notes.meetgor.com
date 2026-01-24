@@ -1,9 +1,16 @@
 ---
-title: "Parsing integers in C"
 date: 2025-11-14
 draft: false
-tags: ["python"]
-link: "https://daniel.haxx.se/blog/2025/11/13/parsing-integers-in-c/"
+link: https://daniel.haxx.se/blog/2025/11/13/parsing-integers-in-c/
+preview_description: In the standard libc API set there are multiple functions provided
+  that do ASCII numbers to integer conversions. They are handy and easy to use, but
+  also error-prone and quite lenient in what they accept and silently just swallow.
+  atoi atoi() is perhaps the most common and basic one. It converts from a string
+  to … Continue reading Parsing integers in C →
+preview_image: https://daniel.haxx.se/blog/wp-content/uploads/2025/11/Screenshot-2025-11-13-at-08-19-10-curl-Project-status-dashboard.png
+tags:
+- python
+title: Parsing integers in C
 ---
 
 # Parsing integers in C

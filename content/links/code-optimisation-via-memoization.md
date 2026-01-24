@@ -1,8 +1,9 @@
 ---
-title: "Code Optimisation via Memoization"
 date: 2025-12-05
 draft: false
-link: "https://youtu.be/JXUOMsFBDXQ"
+link: https://youtu.be/JXUOMsFBDXQ
+title: Code Optimisation via Memoization
+youtube_id: JXUOMsFBDXQ
 ---
 
 # Code Optimisation via Memoization

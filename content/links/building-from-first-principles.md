@@ -1,9 +1,13 @@
 ---
-title: "Building from First Principles"
 date: 2025-10-31
 draft: false
-tags: ["ai"]
-link: "https://marvinh.dev/blog/building-from-first-principles/"
+link: https://marvinh.dev/blog/building-from-first-principles/
+preview_description: Web presense of Marvin Hagemeister who is a core developer of
+  preactjs
+preview_image: https://marvinh.dev/media/me-twitter.jpg
+tags:
+- ai
+title: Building from First Principles
 ---
 
 # Building from First Principles

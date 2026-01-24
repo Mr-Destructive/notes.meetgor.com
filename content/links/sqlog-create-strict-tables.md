@@ -1,9 +1,12 @@
 ---
-title: "SQLog: Create Strict Tables"
 date: 2025-12-12
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/sqlite-create-strict-table/"
+link: https://www.meetgor.com/sqlog/sqlite-create-strict-table/
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'SQLog: Create Strict Tables'
 ---
 
 # SQLog: Create Strict Tables

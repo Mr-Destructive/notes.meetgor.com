@@ -1,9 +1,15 @@
 ---
-title: "Grokipedia: A first look"
 date: 2025-10-31
 draft: false
-tags: ["ai"]
-link: "https://larrysanger.org/2025/10/grokipedia-a-first-look/"
+link: https://larrysanger.org/2025/10/grokipedia-a-first-look/
+preview_description: 'To begin with my credentials for those who arrive here not knowing
+  who I am: I''ve started, or helped start, five encyclopedias and meta-encyclopedia
+  projects, including Wikipedia.((I founded Nupedia and Wikipedia, advised the design
+  and launch of Encyclopedia of Earth, founded Citizendium, and found'
+preview_image: https://larrysanger.org/wp-content/uploads/2025/10/Selection_497-1.png
+tags:
+- ai
+title: 'Grokipedia: A first look'
 ---
 
 # Grokipedia: A first look

@@ -1,8 +1,12 @@
 ---
-title: "Creating a static site for all my bookmarks"
 date: 2025-09-19
 draft: false
-link: "https://alexwlchan.net/2025/bookmarks-static-site/"
+link: https://alexwlchan.net/2025/bookmarks-static-site/
+preview_description: To help me keep track of interesting links, I created a static
+  website that keeps all my data locally. Why do I care about bookmarks, and how does
+  my new site work?
+preview_image: https://alexwlchan.net/images/cards/2025/bookmarks-static-site.png
+title: Creating a static site for all my bookmarks
 ---
 
 # Creating a static site for all my bookmarks

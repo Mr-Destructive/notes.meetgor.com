@@ -1,9 +1,14 @@
 ---
-title: "Become the person who does the thing"
 date: 2025-09-12
 draft: false
-tags: ["career", "sql"]
-link: "https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/"
+link: https://www.fredrivett.com/2025/09/10/becoming-the-person-who-does-the-thing/
+preview_description: 'Bad news: your internal identity dictates everything you do.
+  Good news: you can change it'
+preview_image: https://fredrivett.com/api/og?title=Becoming%20the%20person%20who%20does%20the%20thing&date=2025-09-10
+tags:
+- career
+- sql
+title: Become the person who does the thing
 ---
 
 # Become the person who does the thing

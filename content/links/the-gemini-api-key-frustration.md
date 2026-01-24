@@ -1,9 +1,10 @@
 ---
-title: "The Gemini API Key Frustration"
 date: 2025-12-12
 draft: false
-tags: ["ai"]
-link: "https://ankursethi.com/blog/gemini-api-key-frustration/"
+link: https://ankursethi.com/blog/gemini-api-key-frustration/
+tags:
+- ai
+title: The Gemini API Key Frustration
 ---
 
 # The Gemini API Key Frustration

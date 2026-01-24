@@ -1,9 +1,13 @@
 ---
-title: "You should write an agent"
 date: 2025-11-07
 draft: false
-tags: ["ai"]
-link: "https://fly.io/blog/everyone-write-an-agent/"
+link: https://fly.io/blog/everyone-write-an-agent/
+preview_description: 'They''re like riding a bike: easy, and you don''t get it until
+  you try.'
+preview_image: https://fly.io/blog/everyone-write-an-agent/assets/agents-cover.webp
+tags:
+- ai
+title: You should write an agent
 ---
 
 # You should write an agent

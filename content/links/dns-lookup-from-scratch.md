@@ -1,9 +1,11 @@
 ---
-title: "DNS Lookup from scratch"
 date: 2025-09-12
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/CHaEdVIF2_M"
+link: https://youtu.be/CHaEdVIF2_M
+tags:
+- ai
+title: DNS Lookup from scratch
+youtube_id: CHaEdVIF2_M
 ---
 
 # DNS Lookup from scratch

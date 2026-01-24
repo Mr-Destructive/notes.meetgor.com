@@ -1,9 +1,11 @@
 ---
-title: "When the Job search becomes impossible"
 date: 2025-09-12
 draft: false
-tags: ["ai", "career"]
-link: "https://www.jeffwofford.com/wp/?p=2240"
+link: https://www.jeffwofford.com/wp/?p=2240
+tags:
+- ai
+- career
+title: When the Job search becomes impossible
 ---
 
 # When the Job search becomes impossible

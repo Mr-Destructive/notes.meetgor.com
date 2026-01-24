@@ -1,9 +1,11 @@
 ---
-title: "Designing Data Intensive Applications: Chapter 1 and 2"
 date: 2026-01-09
 draft: false
-tags: ["sql"]
-link: "https://www.youtube.com/live/G7iU2s7LUzA"
+link: https://www.youtube.com/live/G7iU2s7LUzA
+tags:
+- sql
+title: 'Designing Data Intensive Applications: Chapter 1 and 2'
+youtube_id: live/G7iU2s
 ---
 
 # Designing Data Intensive Applications: Chapter 1 and 2

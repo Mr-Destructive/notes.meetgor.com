@@ -1,8 +1,8 @@
 ---
-title: "Software never Fails"
 date: 2025-12-12
 draft: false
-link: "https://entropicthoughts.com/software-never-fails"
+link: https://entropicthoughts.com/software-never-fails
+title: Software never Fails
 ---
 
 # Software never Fails

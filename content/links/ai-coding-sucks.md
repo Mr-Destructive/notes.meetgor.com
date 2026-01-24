@@ -1,9 +1,11 @@
 ---
-title: "AI Coding Sucks"
 date: 2025-10-31
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/rgiuaJbyUyU"
+link: https://youtu.be/rgiuaJbyUyU
+tags:
+- ai
+title: AI Coding Sucks
+youtube_id: rgiuaJbyUyU
 ---
 
 # AI Coding Sucks

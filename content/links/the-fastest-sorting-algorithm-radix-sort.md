@@ -1,9 +1,11 @@
 ---
-title: "The fastest sorting algorithm: Radix Sort"
 date: 2025-09-12
 draft: false
-tags: ["go"]
-link: "https://youtu.be/Y95a-8oNqps"
+link: https://youtu.be/Y95a-8oNqps
+tags:
+- go
+title: 'The fastest sorting algorithm: Radix Sort'
+youtube_id: Y95a-8oNqps
 ---
 
 # The fastest sorting algorithm: Radix Sort

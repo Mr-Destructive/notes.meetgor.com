@@ -1,9 +1,12 @@
 ---
-title: "Representing Graphs"
 date: 2025-09-19
 draft: false
-tags: ["newsletter"]
-link: "https://thepalindrome.org/p/representing-graphs"
+link: https://thepalindrome.org/p/representing-graphs
+preview_description: A visual introduction
+preview_image: https://substackcdn.com/image/fetch/$s_!r762!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4ff62f12-91d6-4e1d-8eca-fd434d5cc8e1_2016x1440.png
+tags:
+- newsletter
+title: Representing Graphs
 ---
 
 # Representing Graphs

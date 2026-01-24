@@ -1,9 +1,13 @@
 ---
-title: "Shipping at inference speed"
 date: 2026-01-02
 draft: false
-tags: ["ai", "go"]
-link: "https://steipete.me/posts/2025/shipping-at-inference-speed"
+link: https://steipete.me/posts/2025/shipping-at-inference-speed
+preview_description: Why I stopped reading code and started watching it stream by.
+preview_image: https://steipete.me/posts/2025/shipping-at-inference-speed/index.png
+tags:
+- ai
+- go
+title: Shipping at inference speed
 ---
 
 # Shipping at inference speed

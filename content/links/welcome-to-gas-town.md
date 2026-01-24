@@ -1,9 +1,10 @@
 ---
-title: "Welcome to Gas Town"
 date: 2026-01-23
 draft: false
-tags: ["ai"]
-link: "https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04"
+link: https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04
+tags:
+- ai
+title: Welcome to Gas Town
 ---
 
 # Welcome to Gas Town

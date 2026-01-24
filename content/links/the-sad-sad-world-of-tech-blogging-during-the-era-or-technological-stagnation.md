@@ -1,9 +1,13 @@
 ---
-title: "The Sad, Sad world of Tech Blogging during the Era or Technological Stagnation"
 date: 2025-09-19
 draft: false
-tags: ["newsletter"]
-link: "https://freddiedeboer.substack.com/p/the-sad-sad-world-of-tech-blogging"
+link: https://freddiedeboer.substack.com/p/the-sad-sad-world-of-tech-blogging
+preview_description: watch a journalist's soul die as they say "the big innovation?
+  it's orange!"
+preview_image: https://substackcdn.com/image/fetch/$s_!GbDj!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5815f859-02b8-4fd2-b0cb-cbc3097bbda5_1788x732.png
+tags:
+- newsletter
+title: The Sad, Sad world of Tech Blogging during the Era or Technological Stagnation
 ---
 
 # The Sad, Sad world of Tech Blogging during the Era or Technological Stagnation

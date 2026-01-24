@@ -1,9 +1,12 @@
 ---
-title: "Creating LLM API interface in Golang"
 date: 2025-10-10
 draft: false
-tags: ["ai", "go"]
-link: "https://youtu.be/fJS2Crq-8qU"
+link: https://youtu.be/fJS2Crq-8qU
+tags:
+- ai
+- go
+title: Creating LLM API interface in Golang
+youtube_id: fJS2Crq-8qU
 ---
 
 # Creating LLM API interface in Golang

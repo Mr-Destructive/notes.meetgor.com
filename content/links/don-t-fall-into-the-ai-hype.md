@@ -1,9 +1,10 @@
 ---
-title: "Don’t Fall into the AI hype"
 date: 2026-01-16
 draft: false
-tags: ["ai"]
-link: "https://antirez.com/news/158"
+link: https://antirez.com/news/158
+tags:
+- ai
+title: Don’t Fall into the AI hype
 ---
 
 # Don’t Fall into the AI hype

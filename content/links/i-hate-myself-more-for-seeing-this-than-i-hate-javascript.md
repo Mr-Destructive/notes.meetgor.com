@@ -1,9 +1,11 @@
 ---
-title: "I hate myself more for seeing this, than I hate javascript"
 date: 2025-09-26
 draft: false
-tags: ["frontend"]
-link: "https://youtu.be/7bvBVBy_CrM"
+link: https://youtu.be/7bvBVBy_CrM
+tags:
+- frontend
+title: I hate myself more for seeing this, than I hate javascript
+youtube_id: 7bvBVBy_CrM
 ---
 
 # I hate myself more for seeing this, than I hate javascript

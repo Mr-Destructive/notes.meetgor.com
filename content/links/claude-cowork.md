@@ -1,9 +1,11 @@
 ---
-title: "Claude Cowork"
 date: 2026-01-23
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/D-tuQNPp0WY"
+link: https://youtu.be/D-tuQNPp0WY
+tags:
+- ai
+title: Claude Cowork
+youtube_id: D-tuQNPp0WY
 ---
 
 # Claude Cowork

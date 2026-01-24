@@ -1,9 +1,10 @@
 ---
-title: "13 Tips for Writing a technical book"
 date: 2026-01-02
 draft: false
-tags: ["frontend"]
-link: "https://borischerny.com/writing/2019/05/26/Tips-For-Writing-A-Technical-Book.html"
+link: https://borischerny.com/writing/2019/05/26/Tips-For-Writing-A-Technical-Book.html
+tags:
+- frontend
+title: 13 Tips for Writing a technical book
 ---
 
 # 13 Tips for Writing a technical book

@@ -1,9 +1,18 @@
 ---
-title: "Mr. TIFF"
 date: 2025-11-07
 draft: false
-tags: ["career"]
-link: "https://inventingthefuture.ghost.io/mr-tiff/"
+link: https://inventingthefuture.ghost.io/mr-tiff/
+preview_description: 'For as long as I have published my books, one of my overarching
+  goals was to give credit to those who actually invented the hardware and software
+  that we use.
+
+
+  I have spent 10,000+ hours to create an accurate record of their work but I''m not
+  complaining. The ''as-close-to-possible'''
+preview_image: https://inventingthefuture.ghost.io/content/images/2025/10/Screenshot-2025-10-29-at-11.03.23---am.png
+tags:
+- career
+title: Mr. TIFF
 ---
 
 # Mr. TIFF

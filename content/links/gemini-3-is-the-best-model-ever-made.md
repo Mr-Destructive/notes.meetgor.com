@@ -1,9 +1,11 @@
 ---
-title: "Gemini 3 is the best model ever made?"
 date: 2025-11-21
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/39PdgOYjBMg"
+link: https://youtu.be/39PdgOYjBMg
+tags:
+- ai
+title: Gemini 3 is the best model ever made?
+youtube_id: 39PdgOYjBMg
 ---
 
 # Gemini 3 is the best model ever made?

@@ -1,9 +1,13 @@
 ---
-title: "Python: The documentary"
 date: 2025-09-12
 draft: false
-tags: ["ai", "go", "python"]
-link: "https://youtu.be/GfH4QL4VqJ0"
+link: https://youtu.be/GfH4QL4VqJ0
+tags:
+- ai
+- go
+- python
+title: 'Python: The documentary'
+youtube_id: GfH4QL4VqJ0
 ---
 
 # Python: The documentary

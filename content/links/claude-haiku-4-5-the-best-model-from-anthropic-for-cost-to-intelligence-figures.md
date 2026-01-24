@@ -1,9 +1,11 @@
 ---
-title: "Claude Haiku 4.5: The best model from Anthropic for cost to intelligence figures"
 date: 2025-10-17
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/iES9r7AZP1s"
+link: https://youtu.be/iES9r7AZP1s
+tags:
+- ai
+title: 'Claude Haiku 4.5: The best model from Anthropic for cost to intelligence figures'
+youtube_id: iES9r7AZP1s
 ---
 
 # Claude Haiku 4.5: The best model from Anthropic for cost to intelligence figures

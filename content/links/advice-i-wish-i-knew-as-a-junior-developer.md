@@ -1,9 +1,11 @@
 ---
-title: "Advice I wish I knew as a junior developer"
 date: 2025-10-03
 draft: false
-tags: ["career", "go"]
-link: "https://raheeljunaid.com/blog/advice-for-developers/"
+link: https://raheeljunaid.com/blog/advice-for-developers/
+tags:
+- career
+- go
+title: Advice I wish I knew as a junior developer
 ---
 
 # Advice I wish I knew as a junior developer

@@ -1,9 +1,12 @@
 ---
-title: "SQLite: PRIMARY KEY table constraint"
 date: 2025-09-19
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/sqlite-primary-key-table-constraint"
+link: https://www.meetgor.com/sqlog/sqlite-primary-key-table-constraint
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'SQLite: PRIMARY KEY table constraint'
 ---
 
 # SQLite: PRIMARY KEY table constraint

@@ -1,9 +1,13 @@
 ---
-title: "Quick and dirty print debuggin in Go"
 date: 2026-01-09
 draft: false
-tags: ["go"]
-link: "https://alexwlchan.net/2026/q-but-for-go/?ref=rss"
+link: https://alexwlchan.net/2026/q-but-for-go/?ref=rss
+preview_description: I wrote a Go module to help with my print debugging, which logs
+  expressions and values to a separate file.
+preview_image: https://alexwlchan.net/images/profile_green_sq.jpg
+tags:
+- go
+title: Quick and dirty print debuggin in Go
 ---
 
 # Quick and dirty print debuggin in Go

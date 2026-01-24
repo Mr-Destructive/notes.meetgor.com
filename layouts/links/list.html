@@ -1,0 +1,70 @@
+{{ define "main" }}
+  {{ with .Content }}
+    <div class="index-content">
+      {{ . }}
+    </div>
+  {{ end }}
+  <div class="posts">
+    {{ range .Paginator.Pages }}
+      <article class="post on-list" style="margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #222;">
+        <h2 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        </h2>
+        <div class="post-meta" style="margin-bottom: 1rem;">
+          {{- if .Date -}}
+            <time class="post-date">
+              {{- partial "post-date" . -}}
+            </time>
+          {{- end -}}
+        </div>
+
+        {{ if .Params.tags }}
+          <div class="post-tags" style="margin-bottom: 1rem;">
+            {{ range .Params.tags }}
+            #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+              {{- . -}}
+            </a>&nbsp;
+            {{ end }}
+          </div>
+        {{ end }}
+
+        <div class="link-entry-preview" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          {{ if .Params.youtube_id }}
+            <div class="video-thumbnail" style="flex: 0 0 300px; max-width: 100%;">
+              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 4px;">
+                <iframe 
+                  src="https://www.youtube.com/embed/{{ .Params.youtube_id }}" 
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          {{ else if .Params.preview_image }}
+            <div class="image-thumbnail" style="flex: 0 0 200px; max-width: 100%;">
+              <img src="{{ .Params.preview_image }}" alt="Preview" style="width: 100%; height: auto; border-radius: 4px; display: block; border: 1px solid #333;">
+            </div>
+          {{ end }}
+
+          <div class="link-entry-content" style="flex: 1; min-width: 250px;">
+            {{ if .Params.preview_description }}
+              <p class="preview-description" style="font-size: 0.95rem; color: #ccc; margin-bottom: 1rem; line-height: 1.4;">
+                {{ .Params.preview_description | truncate 250 }}
+              </p>
+            {{ end }}
+            
+            <div class="post-content" style="margin-top: 1rem;">
+              {{ .Summary }}
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <a class="read-more button inline" href="{{ .RelPermalink }}" style="margin-right: 1rem;">Full Note →</a>
+              <a href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer" style="color: #eec35e; text-decoration: underline; font-weight: bold;">Visit Link ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    {{ end }}
+
+    {{ partial "pagination.html" . }}
+  </div>
+{{ end }}

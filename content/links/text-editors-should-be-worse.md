@@ -1,9 +1,11 @@
 ---
-title: "Text editors should be worse"
 date: 2025-12-26
 draft: false
-tags: ["ai", "frontend"]
-link: "https://www.da.vidbuchanan.co.uk/blog/annoying-text-editors.html"
+link: https://www.da.vidbuchanan.co.uk/blog/annoying-text-editors.html
+tags:
+- ai
+- frontend
+title: Text editors should be worse
 ---
 
 # Text editors should be worse

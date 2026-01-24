@@ -1,9 +1,11 @@
 ---
-title: "AI can write code, but can’t build software"
 date: 2025-10-31
 draft: false
-tags: ["ai", "testing"]
-link: "https://bytesauna.com/post/coding-vs-software-engineering"
+link: https://bytesauna.com/post/coding-vs-software-engineering
+tags:
+- ai
+- testing
+title: AI can write code, but can’t build software
 ---
 
 # AI can write code, but can’t build software

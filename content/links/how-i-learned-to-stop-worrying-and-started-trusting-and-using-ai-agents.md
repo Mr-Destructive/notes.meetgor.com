@@ -1,9 +1,14 @@
 ---
-title: "How I learned to stop worrying and started trusting and using AI Agents"
 date: 2025-10-10
 draft: false
-tags: ["ai"]
-link: "https://metalbear.com/blog/claude-experience/"
+link: https://metalbear.com/blog/claude-experience/
+preview_description: A story about how Claude, an AI coding agent, solved a complex
+  Terraform schema bug in mirrord not by brute force, but by reasoning its way out
+  with a helper script it wrote for itself.
+preview_image: https://metalbear.com/blog/claude-experience/thumbnail.png
+tags:
+- ai
+title: How I learned to stop worrying and started trusting and using AI Agents
 ---
 
 # How I learned to stop worrying and started trusting and using AI Agents

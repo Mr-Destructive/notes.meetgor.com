@@ -1,8 +1,8 @@
 ---
-title: "An opinionated critique of Duolingo"
 date: 2025-10-03
 draft: false
-link: "https://isomorphism.xyz/blog/2025/duolingo/"
+link: https://isomorphism.xyz/blog/2025/duolingo/
+title: An opinionated critique of Duolingo
 ---
 
 # An opinionated critique of Duolingo

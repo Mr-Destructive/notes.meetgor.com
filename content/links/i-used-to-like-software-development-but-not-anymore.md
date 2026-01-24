@@ -1,9 +1,10 @@
 ---
-title: "I used to like software development, but not anymore"
 date: 2025-10-24
 draft: false
-tags: ["ai"]
-link: "https://blog.kulman.sk/i-used-to-like-software-development-but-not-anymore/"
+link: https://blog.kulman.sk/i-used-to-like-software-development-but-not-anymore/
+tags:
+- ai
+title: I used to like software development, but not anymore
 ---
 
 # I used to like software development, but not anymore

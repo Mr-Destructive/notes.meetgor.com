@@ -1,9 +1,14 @@
 ---
-title: "AI should be free software"
 date: 2026-01-09
 draft: false
-tags: ["ai", "newsletter"]
-link: "https://substack.com/inbox/post/183934559"
+link: https://substack.com/inbox/post/183934559
+preview_description: Why free software is a surprisingly important component of good
+  futures with powerful AI
+preview_image: https://substackcdn.com/image/fetch/$s_!hNsI!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fmorereasonable.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-176502110%26version%3D9
+tags:
+- ai
+- newsletter
+title: AI should be free software
 ---
 
 # AI should be free software

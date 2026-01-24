@@ -1,9 +1,13 @@
 ---
-title: "Python can open web browser for you"
 date: 2025-09-19
 draft: false
-tags: ["python"]
-link: "https://koaning.io/posts/python-can-open-a-webbrowser-for-you/"
+link: https://koaning.io/posts/python-can-open-a-webbrowser-for-you/
+preview_description: 'I have a line in my `justfile` that goes like this:  ```bash
+  serve port='
+preview_image: https://koaning.io/posts/python-can-open-a-webbrowser-for-you/social.png
+tags:
+- python
+title: Python can open web browser for you
 ---
 
 # Python can open web browser for you

@@ -1,9 +1,15 @@
 ---
-title: "Why hiring only senior engineers is killing companies"
 date: 2025-10-03
 draft: false
-tags: ["ai"]
-link: "https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies"
+link: https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies
+preview_description: ' Weave combines LLMs and domain-specific machine learning to
+  understand engineering work. We understand how much work was done by AI vs. humans.
+  How much AI is helping your team ship faster, if it''s having an impact on code
+  quality and code reviews.'
+preview_image: https://framerusercontent.com/images/UAWlBqgQ9KQljrpb3ruIUgMqBEE.png
+tags:
+- ai
+title: Why hiring only senior engineers is killing companies
 ---
 
 # Why hiring only senior engineers is killing companies

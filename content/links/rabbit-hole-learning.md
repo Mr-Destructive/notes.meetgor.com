@@ -1,9 +1,12 @@
 ---
-title: "Rabbit hole learning"
 date: 2025-11-29
 draft: false
-tags: ["frontend"]
-link: "https://seated.ro/posts/rabbit-hole-learning.html"
+link: https://seated.ro/posts/rabbit-hole-learning.html
+preview_description: programmer by day, programmer by night.
+preview_image: https://seated.ro/images/default-og.png
+tags:
+- frontend
+title: Rabbit hole learning
 ---
 
 # Rabbit hole learning

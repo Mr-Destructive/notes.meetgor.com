@@ -1,8 +1,8 @@
 ---
-title: "The joy of being a competent beginner"
 date: 2026-01-23
 draft: false
-link: "https://xydinesh.com/posts/joy-of-competent-beginner/"
+link: https://xydinesh.com/posts/joy-of-competent-beginner/
+title: The joy of being a competent beginner
 ---
 
 # The joy of being a competent beginner

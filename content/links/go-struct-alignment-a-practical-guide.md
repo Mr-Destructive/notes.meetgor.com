@@ -1,9 +1,10 @@
 ---
-title: "Go Struct Alignment: A Practical Guide"
 date: 2025-09-19
 draft: false
-tags: ["go"]
-link: "https://medium.com/@Realblank/go-struct-alignment-a-practical-guide-e725c8e1d14e"
+link: https://medium.com/@Realblank/go-struct-alignment-a-practical-guide-e725c8e1d14e
+tags:
+- go
+title: 'Go Struct Alignment: A Practical Guide'
 ---
 
 # Go Struct Alignment: A Practical Guide

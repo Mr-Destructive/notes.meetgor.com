@@ -1,9 +1,12 @@
 ---
-title: "SQLite: One to Many Relation with Foreign Key"
 date: 2025-09-19
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key"
+link: https://www.meetgor.com/sqlog/sqlite-one-to-many-foreign-key
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'SQLite: One to Many Relation with Foreign Key'
 ---
 
 # SQLite: One to Many Relation with Foreign Key

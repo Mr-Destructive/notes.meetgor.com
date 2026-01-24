@@ -1,8 +1,9 @@
 ---
-title: "TOON vs JSON"
 date: 2025-11-21
 draft: false
-link: "https://youtu.be/nTMP_rLZOYM"
+link: https://youtu.be/nTMP_rLZOYM
+title: TOON vs JSON
+youtube_id: nTMP_rLZOYM
 ---
 
 # TOON vs JSON

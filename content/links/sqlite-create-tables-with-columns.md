@@ -1,9 +1,12 @@
 ---
-title: "SQLite: Create Tables with columns"
 date: 2025-09-12
 draft: false
-tags: ["sql"]
-link: "https://www.meetgor.com/sqlog/sqlite-create-table-column-types/"
+link: https://www.meetgor.com/sqlog/sqlite-create-table-column-types/
+preview_description: ''
+preview_image: https://meetgor.com/tbicon.png
+tags:
+- sql
+title: 'SQLite: Create Tables with columns'
 ---
 
 # SQLite: Create Tables with columns

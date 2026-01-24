@@ -1,9 +1,12 @@
 ---
-title: "AI is Dunning-Kruger as a Service"
 date: 2025-11-07
 draft: false
-tags: ["ai", "career", "newsletter"]
-link: "https://christianheilmann.com/2025/10/30/ai-is-dunning-kruger-as-a-service/"
+link: https://christianheilmann.com/2025/10/30/ai-is-dunning-kruger-as-a-service/
+tags:
+- ai
+- career
+- newsletter
+title: AI is Dunning-Kruger as a Service
 ---
 
 # AI is Dunning-Kruger as a Service

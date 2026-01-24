@@ -1,8 +1,8 @@
 ---
-title: "Why Transformers must hallucinate"
 date: 2025-12-12
 draft: false
-link: "https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be"
+link: https://nikitph.medium.com/why-transformers-must-hallucinate-7c2a8fc3b3be
+title: Why Transformers must hallucinate
 ---
 
 # Why Transformers must hallucinate

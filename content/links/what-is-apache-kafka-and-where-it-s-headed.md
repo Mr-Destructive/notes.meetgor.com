@@ -1,9 +1,11 @@
 ---
-title: "What is Apache Kafka and where it’s headed?"
 date: 2025-10-17
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/9CrlA0Wasvk"
+link: https://youtu.be/9CrlA0Wasvk
+tags:
+- ai
+title: What is Apache Kafka and where it’s headed?
+youtube_id: 9CrlA0Wasvk
 ---
 
 # What is Apache Kafka and where it’s headed?

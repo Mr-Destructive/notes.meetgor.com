@@ -1,8 +1,9 @@
 ---
-title: "Tokenization from scratch from Andrej Karapathy"
 date: 2025-09-26
 draft: false
-link: "https://youtu.be/zduSFxRajkE"
+link: https://youtu.be/zduSFxRajkE
+title: Tokenization from scratch from Andrej Karapathy
+youtube_id: zduSFxRajkE
 ---
 
 # Tokenization from scratch from Andrej Karapathy

@@ -1,9 +1,11 @@
 ---
-title: "Print function in Python"
 date: 2025-09-12
 draft: false
-tags: ["python"]
-link: "https://youtu.be/MuzF9oQb2rI"
+link: https://youtu.be/MuzF9oQb2rI
+tags:
+- python
+title: Print function in Python
+youtube_id: MuzF9oQb2rI
 ---
 
 # Print function in Python

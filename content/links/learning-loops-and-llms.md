@@ -1,9 +1,14 @@
 ---
-title: "Learning loops and LLMs"
 date: 2025-11-07
 draft: false
-tags: ["ai", "frontend"]
-link: "https://martinfowler.com/articles/llm-learning-loop.html"
+link: https://martinfowler.com/articles/llm-learning-loop.html
+preview_description: How continuous learning shapes effective software development
+  with LLMs
+preview_image: https://martinfowler.com/articles/llm-learning-loop/card.png
+tags:
+- ai
+- frontend
+title: Learning loops and LLMs
 ---
 
 # Learning loops and LLMs

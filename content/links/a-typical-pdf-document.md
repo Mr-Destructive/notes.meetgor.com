@@ -1,9 +1,10 @@
 ---
-title: "A typical PDF document"
 date: 2026-01-16
 draft: false
-tags: ["frontend"]
-link: "https://hackerfactor.com/blog/index.php?/archives/1085-A-Typical-PDF.html"
+link: https://hackerfactor.com/blog/index.php?/archives/1085-A-Typical-PDF.html
+tags:
+- frontend
+title: A typical PDF document
 ---
 
 # A typical PDF document

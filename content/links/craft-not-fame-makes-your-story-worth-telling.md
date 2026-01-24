@@ -1,9 +1,10 @@
 ---
-title: "Craft, not fame, makes your story worth telling"
 date: 2025-10-17
 draft: false
-tags: ["ai"]
-link: "https://herbertlui.net/craft-not-fame-makes-your-story-worth-telling/"
+link: https://herbertlui.net/craft-not-fame-makes-your-story-worth-telling/
+tags:
+- ai
+title: Craft, not fame, makes your story worth telling
 ---
 
 # Craft, not fame, makes your story worth telling

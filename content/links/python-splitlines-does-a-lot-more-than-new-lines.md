@@ -1,9 +1,10 @@
 ---
-title: "Python splitlines does a lot more than new lines"
 date: 2025-10-10
 draft: false
-tags: ["python"]
-link: "https://yossarian.net/til/post/python-s-splitlines-does-a-lot-more-than-just-newlines/"
+link: https://yossarian.net/til/post/python-s-splitlines-does-a-lot-more-than-just-newlines/
+tags:
+- python
+title: Python splitlines does a lot more than new lines
 ---
 
 # Python splitlines does a lot more than new lines

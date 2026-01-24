@@ -1,9 +1,10 @@
 ---
-title: "SQL Heuristics: ORs are expensive"
 date: 2025-10-03
 draft: false
-tags: ["sql"]
-link: "https://ethanseal.com/articles/ors-are-expensive"
+link: https://ethanseal.com/articles/ors-are-expensive
+tags:
+- sql
+title: 'SQL Heuristics: ORs are expensive'
 ---
 
 # SQL Heuristics: ORs are expensive

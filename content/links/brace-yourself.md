@@ -1,9 +1,20 @@
 ---
-title: "Brace yourself"
 date: 2025-09-26
 draft: false
-tags: ["testing"]
-link: "https://thedailywtf.com/articles/brace-yourself"
+link: https://thedailywtf.com/articles/brace-yourself
+preview_description: 'Today''s representative line is almost too short to be a full
+  line. But I haven''t got a category for representative characters, so we''ll roll
+  with it. First, though, we need the setup.
+
+  Brody inherited a massive project for a government organization. It was the kind
+  of code base that had thousands of lines per file, and frequently thousands of lines
+  per function. Almost none of those lines were comments. Almost.
+
+  '
+preview_image: https://s3.amazonaws.com/remy.jetpackshark.com/remy-thumb.jpg
+tags:
+- testing
+title: Brace yourself
 ---
 
 # Brace yourself

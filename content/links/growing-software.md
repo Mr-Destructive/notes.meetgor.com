@@ -1,8 +1,11 @@
 ---
-title: "Growing Software"
 date: 2025-12-12
 draft: false
-link: "https://www.pearprogramming.blog/programming/opinions/2025/11/11/why-rails-just-stayed-with-me/"
+link: https://www.pearprogramming.blog/programming/opinions/2025/11/11/why-rails-just-stayed-with-me/
+preview_description: A blog where I put any experiments and thoughts concerning programming,
+  technology and, maybe, some opinions on other topics.
+preview_image: https://www.pearprogramming.blog/images/card-image-large.png
+title: Growing Software
 ---
 
 # Growing Software

@@ -1,9 +1,15 @@
 ---
-title: "The recurring dream of replacing developers"
 date: 2026-01-23
 draft: false
-tags: ["ai", "frontend"]
-link: "https://www.caimito.net/en/blog/2025/12/07/the-recurring-dream-of-replacing-developers.html"
+link: https://www.caimito.net/en/blog/2025/12/07/the-recurring-dream-of-replacing-developers.html
+preview_description: 'Every decade brings new promises: this time, we''ll finally
+  make software development simple enough that we won''t need so many developers.
+  From COBOL to AI, the pattern repeats. Business leaders gro...'
+preview_image: https://www.caimito.net/img/blog/the-recurring-dream-of-replacing-developers.jpg
+tags:
+- ai
+- frontend
+title: The recurring dream of replacing developers
 ---
 
 # The recurring dream of replacing developers

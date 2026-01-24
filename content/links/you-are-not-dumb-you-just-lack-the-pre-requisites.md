@@ -1,9 +1,14 @@
 ---
-title: "You are not dumb, you just lack the pre-requisites"
 date: 2026-01-02
 draft: false
-tags: ["sql"]
-link: "https://lelouch.dev/blog/you-are-probably-not-dumb/"
+link: https://lelouch.dev/blog/you-are-probably-not-dumb/
+preview_description: 'I always thought I was too dumb to understand math. During my
+  school years, it was evident to me that for some kids math was easy, and for others
+  like myself: painfully difficult.'
+preview_image: /Lelouchdaily.png
+tags:
+- sql
+title: You are not dumb, you just lack the pre-requisites
 ---
 
 # You are not dumb, you just lack the pre-requisites

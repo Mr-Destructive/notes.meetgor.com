@@ -1,9 +1,10 @@
 ---
-title: "On doing things"
 date: 2025-11-14
 draft: false
-tags: ["frontend"]
-link: "https://jalexine.github.io/on-doing-things.html"
+link: https://jalexine.github.io/on-doing-things.html
+tags:
+- frontend
+title: On doing things
 ---
 
 # On doing things

@@ -1,9 +1,12 @@
 ---
-title: "How HTML changes in EPUB"
 date: 2025-12-12
 draft: false
-tags: ["frontend"]
-link: "https://htmhell.dev/adventcalendar/2025/11/"
+link: https://htmhell.dev/adventcalendar/2025/11/
+preview_description: A collection of bad practices in HTML, copied from real websites.
+preview_image: https://www.htmhell.dev/images/og/advent25_11.png?s=171224
+tags:
+- frontend
+title: How HTML changes in EPUB
 ---
 
 # How HTML changes in EPUB

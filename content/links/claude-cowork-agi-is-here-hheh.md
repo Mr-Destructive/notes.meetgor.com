@@ -1,9 +1,11 @@
 ---
-title: "Claude Cowork: AGI is here, hheh?"
 date: 2026-01-23
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/IcQEaopx90g"
+link: https://youtu.be/IcQEaopx90g
+tags:
+- ai
+title: 'Claude Cowork: AGI is here, hheh?'
+youtube_id: IcQEaopx90g
 ---
 
 # Claude Cowork: AGI is here, hheh?

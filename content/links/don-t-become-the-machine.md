@@ -1,8 +1,12 @@
 ---
-title: "Don’t become the machine"
 date: 2025-12-26
 draft: false
-link: "https://armeet.bearblog.dev/becoming-the-machine/"
+link: https://armeet.bearblog.dev/becoming-the-machine/
+preview_description: "I was recently recommended a YouTube video with the following\
+  \ title:\r\n\n\r\n\r\n<pre style=\"\r\n  display: block;\r\n  font-family: monospace;\r\
+  \n  font-size: 4px;\r\n  l..."
+preview_image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png
+title: Don’t become the machine
 ---
 
 # Don’t become the machine

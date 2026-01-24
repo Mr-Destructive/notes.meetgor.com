@@ -1,8 +1,14 @@
 ---
-title: "Sabbaticals keep our attrition at bay"
 date: 2025-10-31
 draft: false
-link: "https://world.hey.com/dhh/sabbaticals-keep-our-attrition-at-bay-9ccba5c0"
+link: https://world.hey.com/dhh/sabbaticals-keep-our-attrition-at-bay-9ccba5c0
+preview_description: 'The only way many tech workers in the US can get a long break
+  is by quitting their job. So lots of them do that every few years, which is partly
+  why the average tenure in our industry is at an atrocious 18 months. But this terrible
+  rate of churn is often avoidable by one simple benefit trick: Sabbaticals. We''ve
+  been giving everyone at ...'
+preview_image: https://world.hey.com/dhh/avatar-fb368b1ee9b185dc2a09b03eabdb61678dd55244
+title: Sabbaticals keep our attrition at bay
 ---
 
 # Sabbaticals keep our attrition at bay

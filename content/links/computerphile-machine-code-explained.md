@@ -1,9 +1,11 @@
 ---
-title: "Computerphile: Machine Code Explained"
 date: 2025-10-03
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/8VsiYWW9r48"
+link: https://youtu.be/8VsiYWW9r48
+tags:
+- ai
+title: 'Computerphile: Machine Code Explained'
+youtube_id: 8VsiYWW9r48
 ---
 
 # Computerphile: Machine Code Explained

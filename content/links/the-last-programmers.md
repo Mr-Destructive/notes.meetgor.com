@@ -1,9 +1,10 @@
 ---
-title: "The last programmers"
 date: 2025-09-12
 draft: false
-tags: ["ai"]
-link: "https://www.xipu.li/posts/the-last-programmers"
+link: https://www.xipu.li/posts/the-last-programmers
+tags:
+- ai
+title: The last programmers
 ---
 
 # The last programmers

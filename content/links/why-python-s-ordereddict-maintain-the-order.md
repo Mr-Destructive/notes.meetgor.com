@@ -1,9 +1,10 @@
 ---
-title: "Why Python’s OrderedDict maintain the order"
 date: 2025-10-31
 draft: false
-tags: ["python"]
-link: "https://www.piglei.com/articles/en-why-is-python-ordereddict-ordered/"
+link: https://www.piglei.com/articles/en-why-is-python-ordereddict-ordered/
+tags:
+- python
+title: Why Python’s OrderedDict maintain the order
 ---
 
 # Why Python’s OrderedDict maintain the order

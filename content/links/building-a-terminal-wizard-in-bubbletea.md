@@ -1,8 +1,9 @@
 ---
-title: "Building a terminal wizard in BubbleTea"
 date: 2025-11-14
 draft: false
-link: "https://youtu.be/Gl31diSVP8M"
+link: https://youtu.be/Gl31diSVP8M
+title: Building a terminal wizard in BubbleTea
+youtube_id: Gl31diSVP8M
 ---
 
 # Building a terminal wizard in BubbleTea

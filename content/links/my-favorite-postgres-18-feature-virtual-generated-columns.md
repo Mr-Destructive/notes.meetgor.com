@@ -1,9 +1,10 @@
 ---
-title: "My Favorite Postgres 18 feature: Virtual generated columns"
 date: 2025-09-19
 draft: false
-tags: ["sql"]
-link: "https://tselai.com/virtual-gencolumns"
+link: https://tselai.com/virtual-gencolumns
+tags:
+- sql
+title: 'My Favorite Postgres 18 feature: Virtual generated columns'
 ---
 
 # My Favorite Postgres 18 feature: Virtual generated columns

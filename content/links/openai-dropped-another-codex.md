@@ -1,9 +1,11 @@
 ---
-title: "OpenAI dropped another Codex"
 date: 2025-09-19
 draft: false
-tags: ["ai"]
-link: "https://youtu.be/j9wvCrON3XA"
+link: https://youtu.be/j9wvCrON3XA
+tags:
+- ai
+title: OpenAI dropped another Codex
+youtube_id: j9wvCrON3XA
 ---
 
 # OpenAI dropped another Codex

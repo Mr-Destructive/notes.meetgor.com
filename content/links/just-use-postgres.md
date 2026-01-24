@@ -1,9 +1,12 @@
 ---
-title: "Just use Postgres"
 date: 2025-12-12
 draft: false
-tags: ["ai", "sql"]
-link: "https://youtu.be/IdyK8XB2l6g"
+link: https://youtu.be/IdyK8XB2l6g
+tags:
+- ai
+- sql
+title: Just use Postgres
+youtube_id: IdyK8XB2l6g
 ---
 
 # Just use Postgres

@@ -1,8 +1,9 @@
 ---
-title: "Anthropic acquires Bun"
 date: 2025-12-05
 draft: false
-link: "https://youtu.be/Yj9677a3y6c?si=1ND1s1FKQUZq4_Yu"
+link: https://youtu.be/Yj9677a3y6c?si=1ND1s1FKQUZq4_Yu
+title: Anthropic acquires Bun
+youtube_id: Yj9677a3y6c
 ---
 
 # Anthropic acquires Bun

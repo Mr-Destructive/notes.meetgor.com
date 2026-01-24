@@ -1,8 +1,12 @@
 ---
-title: "Processes and Threads: Planetscale Blog"
 date: 2025-09-26
 draft: false
-link: "https://planetscale.com/blog/processes-and-threads"
+link: https://planetscale.com/blog/processes-and-threads
+preview_description: Processes and threads are fundamental abstrations for operating
+  systems. Learn how they work and how they impact database performance in this interactive
+  article.
+preview_image: https://planetscale.com/assets/processes-and-threads-social-CmGLwhpp.jpg
+title: 'Processes and Threads: Planetscale Blog'
 ---
 
 # Processes and Threads: Planetscale Blog

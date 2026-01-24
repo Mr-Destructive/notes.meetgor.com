@@ -1,9 +1,14 @@
 ---
-title: "Magical Systems Thinking"
 date: 2025-09-19
 draft: false
-tags: ["ai"]
-link: "https://worksinprogress.co/issue/magical-systems-thinking/"
+link: https://worksinprogress.co/issue/magical-systems-thinking/
+preview_description: Systems thinking promises to give us a toolkit to design complex
+  systems that work from the ground up. It fails because it ignores that systems fight
+  back.
+preview_image: https://wip.gatspress.com/wp-content/uploads/2025/09/Factorio-3-scaled.jpg
+tags:
+- ai
+title: Magical Systems Thinking
 ---
 
 # Magical Systems Thinking

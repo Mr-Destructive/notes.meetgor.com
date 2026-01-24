@@ -1,9 +1,12 @@
 ---
-title: "Fear is not advocacy"
 date: 2026-01-09
 draft: false
-tags: ["ai"]
-link: "https://antonz.org/ai-advocacy/"
+link: https://antonz.org/ai-advocacy/
+preview_description: And you are going to be fine.
+preview_image: https://antonz.org/ai-advocacy/cover.png
+tags:
+- ai
+title: Fear is not advocacy
 ---
 
 # Fear is not advocacy

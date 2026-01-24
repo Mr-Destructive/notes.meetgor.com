@@ -1,9 +1,10 @@
 ---
-title: "On 10 years of writing a blog that nobody reads"
 date: 2025-12-05
 draft: false
-tags: ["ai"]
-link: "https://flowtwo.io/post/on-10-years-of-writing-a-blog-nobody-reads"
+link: https://flowtwo.io/post/on-10-years-of-writing-a-blog-nobody-reads
+tags:
+- ai
+title: On 10 years of writing a blog that nobody reads
 ---
 
 # On 10 years of writing a blog that nobody reads

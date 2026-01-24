@@ -1,9 +1,11 @@
 ---
-title: "Notes on switching to Helix from Vim"
 date: 2025-10-17
 draft: false
-tags: ["neovim", "python"]
-link: "https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/"
+link: https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/
+tags:
+- neovim
+- python
+title: Notes on switching to Helix from Vim
 ---
 
 # Notes on switching to Helix from Vim
