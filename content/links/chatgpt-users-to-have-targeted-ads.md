@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">ChatGPT users to have targeted AdsIts happening. The inevitable.<a href="https://www.anthropic.com/news/claude-new-constitution" rel="nofollow
+ChatGPT users to have targeted AdsIts happening. The inevitable.
 
 **Source:** techstructive-weekly-78

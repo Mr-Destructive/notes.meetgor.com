@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-span>Terms ∙ Collection notice<a native href="https
+span>Terms ∙ Collection notice
 
 **Source:** techstructive-weekly-1

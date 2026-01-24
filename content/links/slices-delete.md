@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Slices.Delete](https://pkg.go.dev/slices#Delete) in Golang is Wired
-    
-    I mean just look at this
+I mean just look at this
     
 
 ```go
@@ -41,9 +39,5 @@ fmt.Println(newS)
 
 I need to dive deep into why this is the way it is. Looks pretty confusing to mean.  
 AFTER A WHILE:
-
-[This article](https://medium.com/google-cloud/go-slices-deleting-items-and-memory-usage-81419317db3d) explains a bit clearly why the original slice is useless after the operation and we need to pass a copy of that in order to avoid it’s mutation.
-
-## Tech News
 
 **Source:** techstructive-weekly-19

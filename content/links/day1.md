@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-* [AOC in Golang Day 1: Missing ABS() for Integers](https://www.bytesizego.com/blog/aoc-day1-golang)
-    
-    This was a really well-researched and interesting article about why there is no Absolute function for integers. It makes sense now, but I still feel it could handle the general use cases so it shouldn’t be an issue. But yes there is a genuine reason for that to not exist in the standard library.
+After completing the basic SSG with Golang, on Sunday I live-streamed solving the day 1 puzzle for Advent of Code 2024 in Golang.
 
 **Source:** techstructive-weekly-19

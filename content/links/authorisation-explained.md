@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-9. [Authorisation explained](https://levelup.gitconnected.com/authentication-explained-when-to-use-basic-bearer-oauth2-jwt-sso-c3fb0aa083ef)
-    - A nice walkthrough of authorisation types, role based, attribute based and access lists.
+A nice walkthrough of authorisation types, role based, attribute based and access lists.
 
 **Source:** techstructive-weekly-58

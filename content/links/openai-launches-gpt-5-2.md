@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [**OpenAI Launches GPT-5.2**](https://openai.com/index/introducing-gpt-5-2/)
-    - Everyone says it will be a best model for a while, and then silence. It just amalgamates into the slop. Nothing major I can see, 0.01% maybe.
+Everyone says it will be a best model for a while, and then silence. It just amalgamates into the slop. Nothing major I can see, 0.01% maybe.
 
 **Source:** techstructive-weekly-72

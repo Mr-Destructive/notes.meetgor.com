@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-10. [Vibe Coding is Legacy code](https://blog.val.town/vibe-code)
-    - This is the realisation I had last week too. I used agent like the code based agents to write a script that I won’t care about, some code that I won’t care about after a while. That type of code is a vibe.
+This is the realisation I had last week too. I used agent like the code based agents to write a script that I won’t care about, some code that I won’t care about after a while. That type of code is a vibe.
 
 **Source:** techstructive-weekly-58

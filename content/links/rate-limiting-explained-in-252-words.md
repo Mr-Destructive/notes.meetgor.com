@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-8. [Rate Limiting explained in 252 words](https://www.systemdesignbutsimple.com/p/rate-limiting-in-1-diagram-and-252-words)
-  > how many requests a user or client can make in a given period
+> how many requests a user or client can make in a given period
   And not control of how much a user can consume over a longer period
 
 **Source:** techstructive-weekly-52

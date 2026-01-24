@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [*Turso* launches offline sync](https://turso.tech/blog/turso-offline-sync-public-beta): Sync your data to the primary database next time whenever you have the internet connectivity. This will allow the data to be saved on the local copy(replica) and get pushed to the primary database which will sync the primary and the replica. Really exited to try it out.
+[*Turso* launches offline sync](https://turso.tech/blog/turso-offline-sync-public-beta): Sync your data to the primary database next time whenever you have the internet connectivity. This will allow the data to be saved on the local copy(replica) and get pushed to the primary database which will sync the primary and the replica. Really exited to try it out.
 
 **Source:** techstructive-weekly-36

@@ -10,6 +10,8 @@ draft: false
 
 ## Context
 
-- [Mistral OCR](https://mistral.ai/fr/news/mistral-ocr): This LLM things are taking over everythign slowly, every domain of things will now have LLM-equivalent, what do we call it? LLMfying, LLMing, GPTing, AIng, LLMify, ok enough jokes, but this is seriously good.
+Week #36
 
-**Source:** techstructive-weekly-32
+Was quite a work-holic week, did a lot of things this week. Debugging, prompting, scripting, flying through a random codebase and number crunching. I felt good, I am genuinely curious about Agents now and want to experiment a lot this weekend. Will have a video or two about it.
+
+**Source:** techstructive-weekly-36

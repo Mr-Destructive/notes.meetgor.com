@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-ture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">Improving the burrow CMSWas brainstorming on how to make the edit and delete functionality in the CMS i.e. the sync between the Git and Database</u
+Was brainstorming on how to make the edit and delete functionality in the CMS i.e. the sync between the Git and Database
 
 **Source:** techstructive-weekly-35

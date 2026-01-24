@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [How HTTPS Works Comic](https://howhttps.works/?ref=dailydev):
-  This was a fun way to learn HTTP. It feels nice to read through the comic, nice visuals and extremely.
+[How HTTPS Works Comic](https://howhttps.works/?ref=dailydev): This was a fun way to learn HTTP. It feels nice to read through the comic, nice visuals and extremely.
 
 **Source:** techstructive-weekly-26

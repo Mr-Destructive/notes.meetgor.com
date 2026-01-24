@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
--7.07l-1.72 1.71">“If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals.”— Sirius Black<p
+7.07l-1.72 1.71">“If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals.”— Sirius Black
 
 **Source:** techstructive-weekly-76

@@ -10,6 +10,10 @@ draft: false
 
 ## Context
 
-/p>Meta AI API clientTools like read/list/edit filesUsed the blog from ampcode (Sourcegraph): How to build AgentsLivestreamed it<div id="youtube2-2JYqHn3oqds" data-attrs="{&quot;videoId&quot;:&quot;2JYqHn3oqds&quot;,&quot;startTime&q
+Livestreamed it
+  Double click to interact with video
+- Created LLM plugin for Meta AI API
+    - LLM is a cli created by Simon Wilson, its pretty easy to use and supports a whole bunch of models and features like tool calling and image parsing, etc.
+  Double click to interact with video
 
 **Source:** techstructive-weekly-45

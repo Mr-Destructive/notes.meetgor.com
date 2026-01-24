@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-1. [The fastest way to detect vowel in a string (Python)](https://austinhenley.com/blog/vowels.html)
-    1. Wow, this dude just found 11 legit (almost 13) ways to detect vowels in a string in python.Such a great depth, the benchmarks feels so intuitive as why each way performs the way it does.
+1. Wow, this dude just found 11 legit (almost 13) ways to detect vowels in a string in python.Such a great depth, the benchmarks feels so intuitive as why each way performs the way it does.
     2. Here are all the ways it did it
           1. For loop: Simple, readable. Fastest for small strings
           2. C-Styled for loop: Uses or comparisons, but surprisingly much slower

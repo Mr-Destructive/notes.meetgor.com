@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-* [The Primeagen on the Lex Fridman Podcast](https://www.youtube.com/watch?v=tNZnLkRBYA8)  
-    Man, that person is a legend.  
+Man, that person is a legend.  
     I have only watched 1:30 hours of this, that is a 5-hour video, man!
     
     * Addiction is something that feels like giving you satisfaction, but it never will, that is a great way to put it.

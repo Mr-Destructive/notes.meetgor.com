@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-- [Zed adds Gemini CLI](https://zed.dev/blog/bring-your-own-agent-to-zed) as a support for [A2A](https://agentclientprotocol.com/overview/introduction) protocol
+[Claude for Chrome](https://www.anthropic.com/news/claude-for-chrome)
+- X AI makes Grok 2.5 open source (not really, its just weight available model)
 
 **Source:** techstructive-weekly-57

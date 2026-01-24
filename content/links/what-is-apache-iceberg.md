@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [What is Apache Iceberg](https://www.youtube.com/watch?v=TsmhRZElPvM&t=34s&pp=ygUOaWNlYmVyZyBhcGFjaGU%3D)
-    - This was a good overview of how Iceberg is actually a bridge from the old data lakes to the modern microserver architecture.
+This was a good overview of how Iceberg is actually a bridge from the old data lakes to the modern microserver architecture.
 
 **Source:** techstructive-weekly-64

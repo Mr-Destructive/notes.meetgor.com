@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Planetscale makes Postgres Generally Available](https://planetscale.com/blog/planetscale-for-postgres-is-generally-available)
-    - This is a big one, they are going all in postgres.
+This is a big one, they are going all in postgres.
 
 **Source:** techstructive-weekly-61

@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-width="728" height="409">OpenAI’s GPT-OSS Models review for 20 billion parameter modelVideo and article<div i
+Double click to interact with video
+- Open source contribution to SQLC
 
 **Source:** techstructive-weekly-54

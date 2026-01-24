@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [Refrain from the usage of dicts in the business logic in Python](https://roman.pt/posts/dont-let-dicts-spoil-your-code/):  
-    I agree with this point, because the way dicts behave in complex structured code mess, is really hard to debug and trace.
+I agree with this point, because the way dicts behave in complex structured code mess, is really hard to debug and trace.
 
 **Source:** techstructive-weekly-11

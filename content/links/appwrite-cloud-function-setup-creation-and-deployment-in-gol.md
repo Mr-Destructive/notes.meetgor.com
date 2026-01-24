@@ -10,6 +10,9 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">Appwrite Cloud Function Setup, creation, and deployment in GolangI recorded a tutorial on setting up a cloud function, creating the function in golang, and deploying it to Appwrite Cloud via
+I recorded a tutorial on setting up a cloud function, creating the function in golang, and deploying it to Appwrite Cloud via
+    - CLI
+    - Git
+    - Manual (gzip file)Double click to interact with video
 
 **Source:** techstructive-weekly-38

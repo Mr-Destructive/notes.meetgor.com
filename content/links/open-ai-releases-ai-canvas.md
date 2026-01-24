@@ -10,9 +10,6 @@ draft: false
 
 ## Context
 
-* [Open AI releases AI Canvas](https://openai.com/index/introducing-canvas/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav)
-    
-
 For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-718/) and for daily developer articles, join [daily.dev](http://daily.dev)
 
 That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!

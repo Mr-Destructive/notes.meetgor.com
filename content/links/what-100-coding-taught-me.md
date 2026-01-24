@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [What 100 coding taught me](https://sotergreco.com/what-10000-hours-of-coding-taught-me-dont-ship-fast?ref=dailydev): I felt the article was a bit off-track by introducing code samples, that could have been simplified, but such is the complexity of developers’ life, can’t simplify complex things as they are indeed complex.
+[What 100 coding taught me](https://sotergreco.com/what-10000-hours-of-coding-taught-me-dont-ship-fast?ref=dailydev): I felt the article was a bit off-track by introducing code samples, that could have been simplified, but such is the complexity of developers’ life, can’t simplify complex things as they are indeed complex.
 
 **Source:** techstructive-weekly-13

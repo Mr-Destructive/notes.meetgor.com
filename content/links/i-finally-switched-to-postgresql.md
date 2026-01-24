@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [I finally switched to PostgreSQL](https://www.youtube.com/watch?v=iIMIKgRvS1Q)
-    - Planetscale just added PostgreSQL as a supported database
+Planetscale just added PostgreSQL as a supported database
     - Convex now switched to PostgreSQL
     - So, convex becomes a free tier for Postgres on Planetscale
 

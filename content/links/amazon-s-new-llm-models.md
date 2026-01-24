@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Amazon’s New LLM Models](https://www.aboutamazon.com/news/aws/amazon-nova-artificial-intelligence-bedrock-aws) are the cheapest among the available ones
+[Amazon’s New LLM Models](https://www.aboutamazon.com/news/aws/amazon-nova-artificial-intelligence-bedrock-aws) are the cheapest among the available ones
 
 **Source:** techstructive-weekly-19

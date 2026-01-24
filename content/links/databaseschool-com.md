@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-1. Advent of SQL 2025 on [databaseschool.com](http://databaseschool.com)
-    
-    1. [Day 1: Wish List](https://www.meetgor.com/sqlog/advent-of-sql-2025-day-1/)
+1. [Day 1: Wish List](https://www.meetgor.com/sqlog/advent-of-sql-2025-day-1/)
         
     2. [Day 2: Snowballs](https://www.meetgor.com/sqlog/advent-of-sql-2025-day-1/)
         

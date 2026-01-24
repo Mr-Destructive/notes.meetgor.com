@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [Claude Code now can support hooks](https://docs.anthropic.com/en/docs/claude-code/hooks)
+[Google’s Veo 3 launches worldwide for Pro/Ultra Tier](https://gemini.google/overview/video-generation/)
 
 **Source:** techstructive-weekly-49

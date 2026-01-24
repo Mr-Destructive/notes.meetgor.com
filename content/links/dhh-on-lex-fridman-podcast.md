@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [DHH on Lex Fridman Podcast](https://youtu.be/vagyIcmIGOQ?si=WTY3YTRFF5RUL8O4)
-    - So many hot takes and might change my perspective on software engineering
+So many hot takes and might change my perspective on software engineering
     - Simplify development is important than elegance, eg. Ruby over Python, SQL over ORMs
     - Using editor to chisel out code, and not let AI rip it.
     - Finally someone to speak about the craft of coding, the fun of writing code alone, in the darkness, letting us spare time and let us cook.

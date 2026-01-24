@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [**Generating music with AI and Python**](https://generativeai.pub/generating-music-using-ai-and-python-d47ab834f0d4) : I actually went ahead and tried a few words to check that out. It actually creates some sound, though it takes time and is bit off track and I actually don’t know what would be the right words for that music that comes to my mind, so I would be experimenting with it just for fun.
+**The New Era of Writing Code**: This is so relatable, I was just using some AI to wire up some functions and making it easier at certain task, but worse at the other, I won’t be surprised to see something like a AI Stack in the upcoming months, Like a set of Models, Providers, templates and prompt cheat sheet for developers and other tasks.
 
 **Source:** techstructive-weekly-9

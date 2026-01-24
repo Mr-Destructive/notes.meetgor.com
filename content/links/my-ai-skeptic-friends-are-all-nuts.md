@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [My AI Skeptic friends are all nuts](https://fly.io/blog/youre-all-nuts/)
-    - This was a hot post on Hacker News for a week, rightly so, it is partial and follows an experienced developer talking about how LLMs are useful as a tool and not a job replacer.
+This was a hot post on Hacker News for a week, rightly so, it is partial and follows an experienced developer talking about how LLMs are useful as a tool and not a job replacer.
     - I love one point, which is this quote:
       > Often, LLMs will drop you precisely at that golden moment where shit almost works, and development means tweaking code and immediately seeing things work better. That dopamine hit is why I code.
       I have talked about it previously, and it resonates with me too. I haven’t tried it to the extreme yet. But this is what it is supposed to be doing, if done and used correctly.

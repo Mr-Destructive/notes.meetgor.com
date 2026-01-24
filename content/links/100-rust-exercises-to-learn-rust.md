@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-6. [100 Rust exercises to learn Rust](https://blog.jetbrains.com/education/2025/07/28/rust-exercises-rustrover/)
-    1. So good. I will be using this to learn rust within a week it seems. I skimmed through a few posts, and found it really nice and interesting to go through them, clear and nice examples.
+1. So good. I will be using this to learn rust within a week it seems. I skimmed through a few posts, and found it really nice and interesting to go through them, clear and nice examples.
 
 **Source:** techstructive-weekly-54

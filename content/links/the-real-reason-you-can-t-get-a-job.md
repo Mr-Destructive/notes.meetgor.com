@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [The real reason you can’t get a job](https://youtu.be/SPwPpsXpZfg)
-    - More work, more luck
+More work, more luck
     - Curiosity to learn, outperforms desperation to get money
 
 Double click to interact with video

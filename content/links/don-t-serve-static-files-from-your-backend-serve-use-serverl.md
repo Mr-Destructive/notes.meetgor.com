@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [Don’t serve static files from your backend serve, use serverless storage cloud providers](https://youtu.be/aybSXT9ZJ8w?si=t_laTOvNBqDPv11E)Double click to interact with video
+[Don’t serve static files from your backend serve, use serverless storage cloud providers](https://youtu.be/aybSXT9ZJ8w?si=t_laTOvNBqDPv11E)Double click to interact with video
 
 **Source:** techstructive-weekly-23

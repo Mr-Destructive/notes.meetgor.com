@@ -10,13 +10,10 @@ draft: false
 
 ## Context
 
-- [Firebase makes an AI IDE? Firebase Studio](https://youtu.be/ljW1smUpa2U?si=liUDLrETTSw3y02c)
-  App builders are good, but not there yet.
+App builders are good, but not there yet.
   > Authentication, coming soon!
   That was a hilarious dev-like builder. So relatable.
   It now makes sense, as it is trained on real developers’ data, so if you know, you know.
   And that brings a relief as well, as to the question of it replacing developers. That’s just not happening, as developers have not yet figured out their lives yet.Double click to interact with video
-
-## Learnt
 
 **Source:** techstructive-weekly-38

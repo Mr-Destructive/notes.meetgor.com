@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Agentic Coding: The future of software development with agents](https://www.youtube.com/watch?v=nfOVgz_omlU)
-    - See, again, Claude's code and agentic tools are getting adorned by experienced developers too. This is the thing that makes me concerned about my own opinion and thoughts.
+See, again, Claude's code and agentic tools are getting adorned by experienced developers too. This is the thing that makes me concerned about my own opinion and thoughts.
     - It surely is powerful but it hasn’t clicked for me yet I think.
 
 Double click to interact with video

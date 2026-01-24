@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Simple Joy of programming Course announcement](https://youtu.be/EV13CNrq4ZA)
-    - It’s a great commitment to teaching the fundamentals.
+It’s a great commitment to teaching the fundamentals.
     - Not just fundamentals but building on top of the strong foundation.
 
 Double click to interact with video

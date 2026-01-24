@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-4. [Exploring EXIF](https://hturan.com/writing/exploring-exif)
-    - A great post, diving into a specific tool for a lot of things.
+A great post, diving into a specific tool for a lot of things.
     - I think the media metadata is messed up, the software is not consistently adhering to the standards. Look at the blog post and the Apple photos have a lot more metadata then Google or any other photo taking software.
     - I have to say the different of fields are in orders of magnitude more than the rest. How much additional info they cram into a single photo is bewildering.
     - I really liked the post, it had dumping of data into sqlite database and writing queries to get certain things, how cute and interesting that idea is. My brain is running in all directions at this now.

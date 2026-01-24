@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">2025 Year ReviewFeels good to write this posts. I never miss them! I write less post this year. Just 2 or 3, but I have written a lot of SQL like learn
+2025 Year ReviewFeels good to write this posts. I never miss them! I write less post this year. Just 2 or 3, but I have written a lot of SQL like learn
 
 **Source:** techstructive-weekly-75

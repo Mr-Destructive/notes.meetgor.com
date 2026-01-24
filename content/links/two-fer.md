@@ -10,6 +10,8 @@ draft: false
 
 ## Context
 
-y" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">Two Fer<div id="youtube2--sZZfSTUrko" data-attrs="{&quot;videoId&quot;:&quot;-sZZfSTUrko&quot;,&quot;startTime&quot;:null,&quot;endTime&quot;:n
+Double click to interact with video
+
+- OpenAI’s GPT-OSS Models review for 20 billion parameter model
 
 **Source:** techstructive-weekly-54

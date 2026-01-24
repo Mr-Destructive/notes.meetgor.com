@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [A](https://www.piglei.com/articles/en-programmer-reading-list-part-one/?ref=dailydev) [programmer’s](https://www.piglei.com/articles/en-programmer-reading-list-part-one/?ref=dailydev) [Reading List: 100 Articles I Enjoyed Part 1](https://www.piglei.com/articles/en-programmer-reading-list-part-one/?ref=dailydev) (1-50)Have not read any of those, but seems a great place to bookmark for never reading (bookmarks are bad design actually in 2025)
+[A](https://www.piglei.com/articles/en-programmer-reading-list-part-one/?ref=dailydev) [programmer’s](https://www.piglei.com/articles/en-programmer-reading-list-part-one/?ref=dailydev) [Reading List: 100 Articles I Enjoyed Part 1](https://www.piglei.com/articles/en-programmer-reading-list-part-one/?ref=dailydev) (1-50)Have not read any of those, but seems a great place to bookmark for never reading (bookmarks are bad design actually in 2025)
 
 **Source:** techstructive-weekly-36

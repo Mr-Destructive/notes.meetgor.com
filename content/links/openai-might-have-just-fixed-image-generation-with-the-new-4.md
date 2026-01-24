@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [OpenAI might have just fixed image generation with the new 4o Model](https://openai.com/index/introducing-4o-image-generation/)
+[OpenAI might have just fixed image generation with the new 4o Model](https://openai.com/index/introducing-4o-image-generation/)
 
 **Source:** techstructive-weekly-35

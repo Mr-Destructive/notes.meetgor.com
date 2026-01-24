@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [The tech Utopia fantasy is over](https://blog.avas.space/tech-utopia-fantasy/)  
-    I haven’t completed reading this post, but till what i have read it feels like we are moving away from the natural and individuality and focusing on the profits and metric games.
+I haven’t completed reading this post, but till what i have read it feels like we are moving away from the natural and individuality and focusing on the profits and metric games.
 
 **Source:** techstructive-weekly-19

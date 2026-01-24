@@ -10,9 +10,6 @@ draft: false
 
 ## Context
 
-* [OpenAI launching ChatGPT Search](https://openai.com/index/introducing-chatgpt-search/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav): I mean Bing and Llama almost do this, so nothing fancy here, but the scale with ChatGPT would do it needs to be tested, seems a bit intriguing to be honest. This could be the tool that developers will use instead of Google search maybe in the next year. who knows?
-    
-
 For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-720) and for daily developer articles, join [daily.dev](http://daily.dev)
 
 That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!

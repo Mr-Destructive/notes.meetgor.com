@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [Avoid overusing the go init function](https://itnext.io/avoid-the-go-init-function-74f7f28e9154)  
-    It is true, that we overuse certain things like this adding logic in the init functions that makes it hard to test and reproduce the behavior that is expected for a library or a package.
+It is true, that we overuse certain things like this adding logic in the init functions that makes it hard to test and reproduce the behavior that is expected for a library or a package.
 
 **Source:** techstructive-weekly-19

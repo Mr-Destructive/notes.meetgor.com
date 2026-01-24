@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [Don't be an Alpha Geek - John Crickett](https://open.substack.com/pub/developingskills/p/dont-be-an-alpha-geek?utm_source=share&utm_medium=android&r=1hoe7f)  
-    Just be empathetic and thoughtful about your actions and feedback. This will gradually creep into your all issues and make you a better developer, this is great advice.
+Just be empathetic and thoughtful about your actions and feedback. This will gradually creep into your all issues and make you a better developer, this is great advice.
 
 **Source:** techstructive-weekly-5

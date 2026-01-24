@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-2. [How long context fail](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)s
-    - This was an insightful observation, must know things before working with LLMs having a large context window, or even a short for that matter.
+This was an insightful observation, must know things before working with LLMs having a large context window, or even a short for that matter.
     - The needle in the haystack problem is not solved, and LLMs are very sensitive to getting up in a rabbit hole.
           - Context Poisoning
           - Context Distraction

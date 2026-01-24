@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Time spent programming is often time well spent](https://stanbright.com/time-spent-programming/)
-    
-    > Programming is often more fun than the alternative uses of my time.
+> Programming is often more fun than the alternative uses of my time.
     
     Programming is really fun, the joy of creating something and the satisfaction of completing or figuring out by yourself hits different and cannot be replaced with anything else.
 

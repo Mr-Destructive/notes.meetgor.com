@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Horseless Carriages](https://koomen.dev/essays/horseless-carriages/) :
-    
-    * This was a great read. People making AI-based applications are too naive to understand the actual technology behind LLM and how the approach needs to be changed.
+This was a great read. People making AI-based applications are too naive to understand the actual technology behind LLM and how the approach needs to be changed.
         
     * Right now, it is the assumption that the developer is attached to the system prompt; however, LLMs at this stage need customisation from the user perspective and ndo ot have the dependency on the developer.
         

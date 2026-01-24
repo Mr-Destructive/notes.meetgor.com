@@ -10,6 +10,10 @@ draft: false
 
 ## Context
 
-* [HTMX CalmCode Crash Course](https://calmcode.io/course/htmx/introduction): A really good quick course on HTMX, highly recommend starting here to get a good understanding of why this library exists.
+Vim Register and Macros Trick:
+    
+    This is actually helpful and I knew some of the tricks but being able to get a reminder of that makes me click a few things that I need to change in my daily workflow.
+    
+* Be a full stack developer with Golang and React: Trolled
 
 **Source:** techstructive-weekly-4

@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [MCP vs API](https://youtu.be/7j1t3UZA1TY)
-    - The MCP explanation part was clear and great
+The MCP explanation part was clear and great
 
 Double click to interact with video
 

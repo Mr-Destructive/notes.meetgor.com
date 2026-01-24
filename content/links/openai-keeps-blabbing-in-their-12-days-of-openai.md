@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [OpenAI keeps blabbing in their 12 days of OpenAI](https://openai.com/12-days/)
+[OpenAI keeps blabbing in their 12 days of OpenAI](https://openai.com/12-days/)
 
 **Source:** techstructive-weekly-20

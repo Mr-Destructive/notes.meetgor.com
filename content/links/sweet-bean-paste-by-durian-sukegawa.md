@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-and listen to the world. It’s a powerful notion, with the potential to subtly reshape our view of everything.&quot;— Mentioned in Sweet Bean Paste by Durian SukegawaSee and Listen is a very deep thing to do, it just changes everything, it eases the soul, removes the burden and expectations from
+See and Listen is a very deep thing to do, it just changes everything, it eases the soul, removes the burden and expectations from one’s shoulder. The quote/sentence is simple, yet it hits home for a person feeling lost in life.
 
 **Source:** techstructive-weekly-45

@@ -10,6 +10,10 @@ draft: false
 
 ## Context
 
-- [Duck DB Interactive tutorial](https://dbquacks.com/)
+[Improve your CV](https://resume-ai.org/)
+- [Deploy FastAPI with Docker and K3s](https://orencodes.io/how-to-deploy-fastapi-with-docker-and-k3s/)
+- [Ask LLMs what time it is](https://bsky.app/profile/paulbjensen.bsky.social/post/3lwwyngwmhc2u)
+    - Prompt
+      > What is the time?
 
 **Source:** techstructive-weekly-56

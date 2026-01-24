@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-5. [Be careful with Go struct embedding](https://mattjhall.co.uk/posts/be-careful-with-go-struct-embedding.html)
-    - Yikes, this hurts sometimes. Its just like SQLite, but without guardrails. Golang tries to be too lenient with the inferring the values for a struct and create a bag of unexpected behaviours.
+Yikes, this hurts sometimes. Its just like SQLite, but without guardrails. Golang tries to be too lenient with the inferring the values for a struct and create a bag of unexpected behaviours.
 
 **Source:** techstructive-weekly-61

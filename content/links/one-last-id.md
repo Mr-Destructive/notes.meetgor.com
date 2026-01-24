@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-8. [One last id](https://thedailywtf.com/articles/one-last-id)
-    - Man! SQL is tricky sometimes. The number of abstractions people create in the dialects is so jarring. It really breaks stuff.
+Man! SQL is tricky sometimes. The number of abstractions people create in the dialects is so jarring. It really breaks stuff.
 
 **Source:** techstructive-weekly-61

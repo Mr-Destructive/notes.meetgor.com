@@ -10,6 +10,10 @@ draft: false
 
 ## Context
 
-s://github.com/Mr-Destructive/meta_ai_api_tool_call" rel="nofollow ugc noopener">meta-ai-api tool-call python packageAgentic Calculator: LLM with math tools using Pydnatic AI and VercelLLM: Meta AI Llama 4 (on API Wrapper with tool calls)Age
+LLM: Meta AI Llama 4 (on API Wrapper with tool calls)
+        
+    * Agent Framework: Pydantic AI
+        
+    * Deployment: Vercel Lambda Functions
 
 **Source:** techstructive-weekly-40

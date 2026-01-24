@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [We’ll always need junior programmers](https://world.hey.com/dhh/we-ll-always-need-junior-programmers-69ddb4a1)
-    - We need to work hard and show the flame of curiosity that’s the deal.
+We need to work hard and show the flame of curiosity that’s the deal.
 
 **Source:** techstructive-weekly-39

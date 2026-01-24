@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-- [SQLog: Create Strict Tables](https://www.meetgor.com/sqlog/sqlite-create-strict-table/)
+Live streaming Advent of Code Day 1 and 2 in Golang
+- YouTube Shorts on FreeCodeCamp Daily Challenges
 
 **Source:** techstructive-weekly-72

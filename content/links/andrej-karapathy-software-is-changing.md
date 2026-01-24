@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Andrej Karapathy: Software is Changing](https://www.youtube.com/watch?v=LCEmiRjPEtQ)
-    - We are in Software 3.0 Era
+We are in Software 3.0 Era
     - Software 1.0 was code | Software 2.0 was Neural Networks
     - Now we are in the LLM space, were we can send prompts to neural networks that can generate programs, that is wild idea
     - We need to create systems around LLMs, like interface to interact LLMs, He puts it like we are in the 1960s era of Computing. Where the computers were not personal, they were mainframe, large machines that fit on factories.

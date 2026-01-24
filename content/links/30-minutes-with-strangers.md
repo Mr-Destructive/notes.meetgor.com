@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [30 Minutes with Strangers](https://pudding.cool/2025/06/hello-stranger/)
+[30 Minutes with Strangers](https://pudding.cool/2025/06/hello-stranger/)
 
 **Source:** techstructive-weekly-58

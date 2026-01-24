@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Mistral launches AI Agents API](https://mistral.ai/news/agents-api)
-    - Every company is launching remote agents
+Every company is launching remote agents
     - Jules from Google, Codex from OpenAI
     - Now mistral, they have similar things
           - Python code environment

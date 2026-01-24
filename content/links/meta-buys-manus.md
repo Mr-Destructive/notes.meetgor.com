@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">Meta Buys ManusGoogle now
+Meta Buys ManusGoogle now
 
 **Source:** techstructive-weekly-75

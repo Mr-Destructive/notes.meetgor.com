@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-zy" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">TIL: Gotcha with Chained Assignment in PythonI learned this point while implementing a feature at work, I was in a deep flow state, but this thing bugged me and broke out of the state
+I learned this point while implementing a feature at work, I was in a deep flow state, but this thing bugged me and broke out of the state rightly so, otherwise would have gone in wired directions without doing anything significant.  
+    Learning python might be simple, but mastering it is a task, there are soo many things to learn about and be aware about. Python is simple but at times could be dangerous if not careful.
 
 **Source:** techstructive-weekly-18

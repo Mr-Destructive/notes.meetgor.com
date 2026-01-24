@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [A blog, If you can keep it](https://fly.io/blog/a-blog-if-kept/)  
-  Getting a blog post featured at hackernews, hmm, I always wonder how a post gets featured at hackernews, does the author submit it to the site, or the community post it there? Really curious about the working of it.
+[A blog, If you can keep it](https://fly.io/blog/a-blog-if-kept/) Getting a blog post featured at hackernews, hmm, I always wonder how a post gets featured at hackernews, does the author submit it to the site, or the community post it there? Really curious about the working of it.
 
 **Source:** techstructive-weekly-31

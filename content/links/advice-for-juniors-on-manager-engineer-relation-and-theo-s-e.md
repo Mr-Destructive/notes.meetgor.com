@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Advice for juniors on manager-engineer relation and Theo’s experience (must watch)](https://youtu.be/3VuM1GCadt4)
-    
-    * TLDR: Don’t try to do a job that you are not asked, if the environment is pulling each other down.
+TLDR: Don’t try to do a job that you are not asked, if the environment is pulling each other down.
         
     * It doesn’t mean you are not following your curiosity or doing the things you are excited to do, rather than knowing when to and when not to.
 

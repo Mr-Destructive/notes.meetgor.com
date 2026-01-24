@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* Reading and Writing a PDF file with [pikepdf](https://pikepdf.readthedocs.io/en/latest/) (useful for splitting and manipulating files)
-    
-    ```go
+```go
     import pikepdf
     from pathlib import Path
     def split_pdf(input_pdf_path, output_dir):
@@ -25,5 +23,7 @@ draft: false
     output_pdf.pages.append(page)
     output_pdf.save(output_pdf_path)
     ```
+    
+* LLMs are taking over. I mean not quality-wise, but they seem to be everywhere, almost every company is trying to use AI Agents to make their business look smart (but is not actually). This is a harsh or soft truth that I have to accept and move ahead to leverage in things I would do and build.
 
 **Source:** techstructive-weekly-2

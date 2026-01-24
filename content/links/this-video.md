@@ -10,10 +10,21 @@ draft: false
 
 ## Context
 
-- OpenAI marks ‘Code Red’ amidst escalating competition from Google and Anthropic and open models from China
+[Playful Programming](https://registerspill.thorstenball.com/p/playful-programming):  
+    I want to watch that video, there is so much explained by Thorsten, should be worth watching then, he is a great deep-diving programmer, can’t ignore his recommendations. Just by reading at the explanations of his observations on the video, it seems there is a lot to learn. Next week will be in the watched section.
+    
+    ![](https://substack-post-media.s3.amazonaws.com/public/images/4f5a67d6-4135-44ed-8f39-8c7554ab5abc_1280x1280.png align="left")
+    
+    [Register Spill](https://registerspill.thorstenball.com/p/playful-programming?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+    
+    [Playful Programming](https://registerspill.thorstenball.com/p/playful-programming?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+    
+    
+    [Read more](https://registerspill.thorstenball.com/p/playful-programming?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+    
+    [a year ago · 21 likes · 3 comments · Thorsten Ball](https://registerspill.thorstenball.com/p/playful-programming?utm_source=substack&utm_campaign=post_embed&utm_medium=web)
+    
+    * [How Raviraj Achar reads books with limited time](https://newsletter.techleadmentor.com/p/how-i-read-books-with-limited-time):  
+        Time is really limited, like everything around you seems to drag into it, the phone most importantly, it feels like a reservoir of knowledge but not wisdom. Taking the time to read is a sign of a level of control over the mind and grit. The process by Raviraj seems a little too complicated or farfetched like Readwise and Notion, those add a lot of friction. I don’t use those tools, I use this newsletter to sift my learnings and tech reading.
 
-[Django 6.0 released](https://www.djangoproject.com/weblog/2025/dec/03/django-60-released/)[Mistral 3 family of models released](https://mistral.ai/news/mistral-3)[Ghostty is now non-profit](https://mitchellh.com/writing/ghostty-non-profit)I want to watch [this video](https://www.youtube.com/watch?v=9rsBaTRI7Is). It just intrigued me, I have been a django developer till late 2023. But then, AI came in and here I am. I haven’t touched Django development since then. I want to see why it might be the case, I suspect its due to ai automating the boilerplate code? Maybe the repetitive and boilerplatey code is no more a cognition on the developers, AI is doing it with flask for them. Not sure. Watch it to find out.That’s it from this week. I have been out of sync in tech for a while. Need to get hands on and create a few project, the itch is there, just procrastination is holding me back. Let’s see if this year I can complete Advent of Code, in Golang of course, need to learn tests, more concurrent operations and stuff.
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/773/) (#773rd edition), and for software development/coding articles, join [daily.dev](http://daily.dev).
-
-**Source:** techstructive-weekly-71
+**Source:** techstructive-weekly-17

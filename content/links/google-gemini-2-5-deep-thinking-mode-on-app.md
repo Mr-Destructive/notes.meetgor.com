@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Google Gemini 2.5 Deep Thinking mode on app](https://blog.google/products/gemini/gemini-2-5-deep-think/)
-    - This looks something interesting, Google keeps pushing the boundaries for what LLMs are capable and making it more accessible.
+This looks something interesting, Google keeps pushing the boundaries for what LLMs are capable and making it more accessible.
 
 **Source:** techstructive-weekly-53

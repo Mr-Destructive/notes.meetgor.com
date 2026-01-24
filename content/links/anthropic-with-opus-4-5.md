@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-- Make humans better, making it answer things possible.
-
-[Anthropic with Opus 4.5](https://youtu.be/QzEsYFcaAkY?si=4leLEl4LU6XBYCHZ)- That’s a minor bump maybe, its different in subtle ways. Still has its pinkish purple vibes.
+Make humans better, making it answer things possible. [Anthropic with Opus 4.5](https://youtu.be/QzEsYFcaAkY?si=4leLEl4LU6XBYCHZ)- That’s a minor bump maybe, its different in subtle ways. Still has its pinkish purple vibes.
 
 **Source:** techstructive-weekly-70

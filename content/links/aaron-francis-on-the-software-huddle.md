@@ -10,11 +10,6 @@ draft: false
 
 ## Context
 
-* [Aaron Francis on The Software Huddle](https://youtu.be/Xdkwc26763M?si=kiI3dxdb1CobMwUs)
-    
-    He is a all round good guy. This podcast is really inspiring to learn and be consistent at it, he has gone from Accountant to launching his own company as a developer, speaker, educator, and database master.
-    
-
-## Learnt
+He is a all round good guy. This podcast is really inspiring to learn and be consistent at it, he has gone from Accountant to launching his own company as a developer, speaker, educator, and database master.
 
 **Source:** techstructive-weekly-19

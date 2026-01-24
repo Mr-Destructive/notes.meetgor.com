@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Gemini crushes OpenAI’s model benchmarks with its 2.5 model](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/)
+[Gemini crushes OpenAI’s model benchmarks with its 2.5 model](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/)
 
 **Source:** techstructive-weekly-35

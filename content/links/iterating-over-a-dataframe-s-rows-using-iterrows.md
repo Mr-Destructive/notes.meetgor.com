@@ -10,7 +10,15 @@ draft: false
 
 ## Context
 
-* [Iterating over a dataframe’s rows using iterrows](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iterrows.html):  
-    I wanted to iterate over all the df rows and also needed to get the index of each of them, so iterrows is so convenient to use.
+I wanted to iterate over all the df rows and also needed to get the index of each of them, so iterrows is so convenient to use.
+    
+* Golang: Connecting a remote LibSQL database
+    
+    * Using libsql-client for golang
+        
+    * Sync local libsql/sqlite database with Embedded replicas.
+        
+
+Next week will have an article about this things as well as a video.
 
 **Source:** techstructive-weekly-7

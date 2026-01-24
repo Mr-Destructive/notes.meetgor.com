@@ -10,12 +10,9 @@ draft: false
 
 ## Context
 
-- [Why Programs use Stack, Heap and other memory segments](https://youtu.be/EXIxAPITb7U?si=WenZsZqxtafWFBVG)
-    - Now, I got a better understanding of what heap and stack actually means.
+Now, I got a better understanding of what heap and stack actually means.
     - Stack would be useful for quickly adding function calls, and heap for accessing long term variables on the memory which might be fragmented.
 
 Double click to interact with video
-
-## Learnt
 
 **Source:** techstructive-weekly-50

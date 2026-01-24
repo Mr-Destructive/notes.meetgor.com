@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* **Cloudflare Workers Setup**: [Documentation](https://developers.cloudflare.com/workers/examples/)  
-    It has good examples of some standard use cases and applications.
+It has good examples of some standard use cases and applications.
 
 **Source:** techstructive-weekly-1

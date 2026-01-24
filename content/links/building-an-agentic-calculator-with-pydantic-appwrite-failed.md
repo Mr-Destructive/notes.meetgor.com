@@ -10,6 +10,8 @@ draft: false
 
 ## Context
 
-y" gesture="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">Building an Agentic Calculator with Pydantic, Appwrite (failed, then moved to Vercel), Meta AI API wrapper with tool calls<div id="youtube2-yA5d-R6O8h0" data-attrs="{&quot;videoId&quot;:&quot;yA5d-R6O8h0&quot;,&quot;startTime&quot;:null,&quot;endTime&quot;:null}" data
+Livestreamed
+    
+    * [Creating the Meta AI API wrapper with a tool call and a Pydantic AI model wrapper for the Meta AI API](https://www.youtube.com/live/tBRQSlpgEUg)
 
 **Source:** techstructive-weekly-40

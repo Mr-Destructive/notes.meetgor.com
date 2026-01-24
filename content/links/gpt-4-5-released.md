@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [GPT 4.5 Released](https://help.openai.com/en/articles/10658365-gpt-4-5-in-chatgpt): Ah! another week another model, another brag on 23% improvement while others are already 50% through. Open AI its game over.
+[GPT 4.5 Released](https://help.openai.com/en/articles/10658365-gpt-4-5-in-chatgpt): Ah! another week another model, another brag on 23% improvement while others are already 50% through. Open AI its game over.
 
 **Source:** techstructive-weekly-31

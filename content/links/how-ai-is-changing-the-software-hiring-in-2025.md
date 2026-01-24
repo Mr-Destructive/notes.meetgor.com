@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-4. [How AI is changing the Software Hiring in 2025](https://www.finalroundai.com/blog/software-developer-skills-ctos-want-in-2025)
-    - Being low on confidence and not fake ego are so valuable, being humble has never been rarer and rewarding then ever.
+Being low on confidence and not fake ego are so valuable, being humble has never been rarer and rewarding then ever.
 
 **Source:** techstructive-weekly-50

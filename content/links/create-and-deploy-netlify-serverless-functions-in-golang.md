@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">Create and Deploy Netlify Serverless Functions in GolangOn the weekend, I experimented with how to deploy a Golang serverless function for the LibSQL database, and through that, I got to understand t
+On the weekend, I experimented with how to deploy a Golang serverless function for the LibSQL database, and through that, I got to understand the cloud function deployment on Netlify with Golang. So, created a video for that on Sunday and published it on Monday.
 
 **Source:** techstructive-weekly-19

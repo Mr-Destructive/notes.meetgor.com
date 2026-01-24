@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-2. [An illustrated guide to OAUTH 2](https://www.ducktyped.org/p/an-illustrated-guide-to-oauth)
-    - This made everything click, not quite everything. I want a better example. I will write a post where I would relate it to a much more simpler and broader example. The Chase bank and other finance provider is a bit not known to me, I want to make the example clear.
+This made everything click, not quite everything. I want a better example. I will write a post where I would relate it to a much more simpler and broader example. The Chase bank and other finance provider is a bit not known to me, I want to make the example clear.
     - But really the explanations in this blog are really sketched out and make a lot of sense.
 
 **Source:** techstructive-weekly-58

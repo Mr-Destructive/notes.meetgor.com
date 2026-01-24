@@ -10,6 +10,10 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">A letter for someone who is afraid of AI (including myself)I focused on Manifestation vs GenerationRobots will generate, and Humans will manifest<
+I focused on Manifestation vs Generation
+        
+    * Robots will generate, and Humans will manifest
+        
+    * Humans need to keep getting good at the craft, leverage AI to make it faster and more efficient
 
 **Source:** techstructive-weekly-35

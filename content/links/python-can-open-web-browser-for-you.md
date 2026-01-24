@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-6. [Python can open web browser for you](https://koaning.io/posts/python-can-open-a-webbrowser-for-you/)
-    - Python -m webbrowser <link>
+Python -m webbrowser  
     - That is so cool, can’t think of other automation that can be done here.
     - Neat and handy
 

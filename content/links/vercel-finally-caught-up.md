@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Vercel Finally Caught up](https://www.youtube.com/watch?v=Vd98UhPGVfY)
-    - Vercel now makes you pay for only the CPU usage and not the time.
+Vercel now makes you pay for only the CPU usage and not the time.
     - Still expensive from Cloudflare but a good dip in the number
 
 Double click to interact with video

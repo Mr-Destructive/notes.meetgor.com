@@ -10,10 +10,7 @@ draft: false
 
 ## Context
 
-- [CS50 SQL Lectures Playlist](https://www.youtube.com/playlist?list=PLhQjrBD2T382v1MBjNOhPu9SiJ1fsD4C0)
-    - I am learning SQL with this playlist, its in depth and also has a problem set to explore on our own.
+I am learning SQL with this playlist, its in depth and also has a problem set to explore on our own.
     - I have completed watching all the videos and just yesterday completed problem set 1, will be moving on to solving more.
-
-## Learnt
 
 **Source:** techstructive-weekly-49

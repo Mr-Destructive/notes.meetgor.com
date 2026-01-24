@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [GO’s wired little iterators](https://mcyoung.xyz/2024/12/16/rangefuncs/?ref=dailydev)   
-  I have just skimmed through this post, haven’t really read it entirely but I think it will be important to go through.
+[GO’s wired little iterators](https://mcyoung.xyz/2024/12/16/rangefuncs/?ref=dailydev) I have just skimmed through this post, haven’t really read it entirely but I think it will be important to go through.
 
 **Source:** techstructive-weekly-27

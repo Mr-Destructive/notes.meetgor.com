@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Claude shares the research behind the thinking capability of the chat model](https://www.anthropic.com/research/tracing-thoughts-language-model)
+[Claude shares the research behind the thinking capability of the chat model](https://www.anthropic.com/research/tracing-thoughts-language-model)
 
 **Source:** techstructive-weekly-35

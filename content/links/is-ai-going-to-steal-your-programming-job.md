@@ -10,11 +10,8 @@ draft: false
 
 ## Context
 
-- [Is AI going to steal your programming job?](https://youtu.be/Cp3xezcdoDE?si=7ga-XEM_CBRMyCpO)
-    - This is a bit scary, really, I am scared of anything because of LLMs and Agentic IDEs
+This is a bit scary, really, I am scared of anything because of LLMs and Agentic IDEs
 
 Double click to interact with video
-
-## Learnt
 
 **Source:** techstructive-weekly-42

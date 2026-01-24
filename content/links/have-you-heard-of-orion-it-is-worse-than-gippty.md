@@ -10,11 +10,6 @@ draft: false
 
 ## Context
 
-* [Have you heard of Orion? It is worse than Gippty!](https://www.youtube.com/watch?v=ZehQ4XQs9NA)
-    
-    This is such a funny and satisfying video, it brings such relief to hear each word. programmers are not replaceable because we write bad code that works :)
-    
-
-## Learned
+This is such a funny and satisfying video, it brings such relief to hear each word. programmers are not replaceable because we write bad code that works :)
 
 **Source:** techstructive-weekly-16

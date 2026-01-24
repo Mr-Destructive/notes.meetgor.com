@@ -10,6 +10,8 @@ draft: false
 
 ## Context
 
-It will take time, but I would have learnt SQL then no other resource but practise and also upped my communication and teaching skills.Hello world and Local environment setup<div id="youtube2-IaqlpeWexig" data-attrs="{&quot;videoId&quot;:&quot;IaqlpeWexig&quot;,&quot;startTime&quot;:null,&quot;endTime&quot;:null}" data
+Exercism SQLite Track: I started a series of solving SQLite problems on exercism and have plans to solve leetcode 50 sql, CS50 sql problemsets too. It will take time, but I would have learnt SQL then no other resource but practise and also upped my communication and teaching skills.
+    - [Two Fer](https://youtu.be/-sZZfSTUrko)
+  Double click to interact with video
 
 **Source:** techstructive-weekly-54

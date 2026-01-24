@@ -10,9 +10,6 @@ draft: false
 
 ## Context
 
-* [Mastering Postgres Course](https://www.pan.utiitsl.com/PAN_ONLINE/homereprint) by [Aaron Francis](https://aaronfrancis.com/): I have been lately watching the course videos of PostgreSQL by Aaron Francis. The quality of content is top-notch, and everything taught is driven by proof, this is really sticking and excellent. HIGHLY RECOMMEND IT!
-    
-
 For tech news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-719) and for daily developer articles, join [daily.dev](http://daily.dev)
 
 That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!

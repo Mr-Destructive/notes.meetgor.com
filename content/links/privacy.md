@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-isibility-check">© 2026 Meet · Privacy ∙ Terms<span
+isibility-check">© 2026 Meet · Privacy ∙ Terms
 
 **Source:** techstructive-weekly-1

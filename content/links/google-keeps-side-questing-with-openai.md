@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Google keeps side questing with OpenAI](https://techcrunch.com/2024/12/11/google-unveils-project-mariner-ai-agents-to-use-the-web-for-you/)
+[Google keeps side questing with OpenAI](https://techcrunch.com/2024/12/11/google-unveils-project-mariner-ai-agents-to-use-the-web-for-you/)
 
 **Source:** techstructive-weekly-20

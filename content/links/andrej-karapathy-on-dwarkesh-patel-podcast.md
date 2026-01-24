@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-- The point of having intrinsic motivation is not mentioned in the conversation which makes me wonder, why it was not? It was such s distinguishing factor, but he doesn’t wants to distinguish humans, so why try to mimic humans?
-
-[Andrej Karapathy on Dwarkesh Patel Podcast](https://youtu.be/lXUZvyajciY)- I haven’t completed watching it but felt really excited to learn more about LLMs.
+The point of having intrinsic motivation is not mentioned in the conversation which makes me wonder, why it was not? It was such s distinguishing factor, but he doesn’t wants to distinguish humans, so why try to mimic humans? [Andrej Karapathy on Dwarkesh Patel Podcast](https://youtu.be/lXUZvyajciY)- I haven’t completed watching it but felt really excited to learn more about LLMs.
 
 **Source:** techstructive-weekly-65

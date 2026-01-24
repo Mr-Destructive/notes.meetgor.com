@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-ube.com/playlist?list=PLMVgNvnU9WlGRy0FySl6Ot9M5Rtb7qopu" rel="nofollow ugc noopener">Creating SSG from Scratch in Golang PlaylistBurrow: SSG + CMS in Golang (not a mature and ready-to-use project yet)Feels really good about how the SSG came together, its really pluggab
+Feels really good about how the SSG came together, it's really pluggable SSG with flexible JSON as well as YAML compatible frontmatter and configs. It has an editor that creates a post and stores it in the database, the GitHub workflow cronjob picks up the last edited or created post in the last hour and creates or updates the file in the GitHub repo.
 
 **Source:** techstructive-weekly-34

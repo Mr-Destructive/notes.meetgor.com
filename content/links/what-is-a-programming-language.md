@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">What is a programming language?I created this video as just a way to express my thoughts and the knowledge I have been gathering over the past few years. It
+What is a programming language?I created this video as just a way to express my thoughts and the knowledge I have been gathering over the past few years. It
 
 **Source:** techstructive-weekly-27

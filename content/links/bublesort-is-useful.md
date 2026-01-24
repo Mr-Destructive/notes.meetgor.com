@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-1. [Bublesort is useful](https://youtu.be/qGH8gKdpZMQ)
-    1. Yes, this is kind of nuts
+1. Yes, this is kind of nuts
     2. Buble sort is the lowkey high value thing to learn and know of.
     3. VIsualizing any sorting algorithm really makes you understand the flow better and it clicks almost everytime.Double click to interact with video
 

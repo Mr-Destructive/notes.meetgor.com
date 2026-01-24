@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Meta AI live demo of glasses that went bad](https://techcrunch.com/2025/09/17/meta-unveils-new-smart-glasses-with-a-display-and-wristband-controller/)
-    - Atlease they tried, that’s what I would say, they aren’t faking that it works like magic unlike others.
+Atlease they tried, that’s what I would say, they aren’t faking that it works like magic unlike others.
 
 **Source:** techstructive-weekly-60

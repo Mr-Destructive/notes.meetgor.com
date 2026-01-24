@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [We should have more friction in our lives](https://cassidoo.co/post/introduce-friction/): Cassidy Williams Blog: I shared this with my own [thoughts](https://dev.meetgor.com/thoughts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/), and yes, we need to bring back some friction as well fiction (pun intended).
+[We should have more friction in our lives](https://cassidoo.co/post/introduce-friction/): Cassidy Williams Blog: I shared this with my own [thoughts](https://dev.meetgor.com/thoughts/friction-is-necessary-in-our-lives-more-the-solutions-more-the-problems/), and yes, we need to bring back some friction as well fiction (pun intended).
 
 **Source:** techstructive-weekly-35

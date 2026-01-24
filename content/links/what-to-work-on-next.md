@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [What to work on next?](https://swizec.com/blog/what-to-work-on-next/)
-    - Types of work laid out in priority order, obviously it depends on the situation at hand, and the instructions and alignment with your manager.
+Types of work laid out in priority order, obviously it depends on the situation at hand, and the instructions and alignment with your manager.
 
 **Source:** techstructive-weekly-39

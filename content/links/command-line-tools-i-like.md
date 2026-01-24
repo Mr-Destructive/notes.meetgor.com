@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [Command line tools I Like](https://rwblickhan.org/newsletters/command-line-tools-i-like-2022/): [rwblickhan.org](http://rwblickhan.org)  
-    This was a nice post on the aggregated tools that the author uses most of the time and are quite handy. I also use most of the tools everyday and would like to create a dev container for the setup of my preferred editor/tools and shells and plugins and all that good stuff.
+This was a nice post on the aggregated tools that the author uses most of the time and are quite handy. I also use most of the tools everyday and would like to create a dev container for the setup of my preferred editor/tools and shells and plugins and all that good stuff.
 
 **Source:** techstructive-weekly-19

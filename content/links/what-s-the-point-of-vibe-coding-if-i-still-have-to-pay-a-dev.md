@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-10. [What's the point of vibe coding if I still have to pay a dev to fix](https://old.reddit.com/r/vibecoding/comments/1mu6t8z/whats_the_point_of_vibe_coding_if_i_still_have_to)it
-    - People are coping seriously on AI now. Not that AI is bad, it's not yet there to build software blindly and let laymen control the steering. Devin, you tried, unfortunately, we won't be moving forward with your application.
+People are coping seriously on AI now. Not that AI is bad, it's not yet there to build software blindly and let laymen control the steering. Devin, you tried, unfortunately, we won't be moving forward with your application.
 
 **Source:** techstructive-weekly-56

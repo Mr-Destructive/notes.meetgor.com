@@ -10,6 +10,8 @@ draft: false
 
 ## Context
 
-ps://dev.meetgor.com/thoughts/zellij-open-scrollback-edit-mode/" rel="nofollow ugc noopener">Thoughts: Zellij Scrollback edit modeTIL: Format JSON file in Vim with JQI will be writing more since I have set up my blog at dev.meetgor.com, it is served by my own Static Site generator using Golang and
+I will be writing more since I have set up my blog at dev.meetgor.com, it is served by my own Static Site generator using Golang and Netlify Cloud Functions hosted on GitHub Pages. I still need a few things to sort out which will do on the live stream.
+
+I created this SSG in Golang from scratch (except for  the markdown parsing) on live streams. This also has a CMS or an API that can add posts to the database and GitHub pages can sync up with the database and save the post to the GitHub repo.
 
 **Source:** techstructive-weekly-34

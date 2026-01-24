@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-5. [Just fucking use Kubernetes](https://waylonwalker.com/just-fucking-use-kubernetes/)
-    - This article is true and motivating to learn Kubernetes
+This article is true and motivating to learn Kubernetes
     - I read an article which was the opposite of this, not in a bad way, just a way of presenting the idea to keep it simple and avoid the complexity if not needed.
     - This article, however, is a motivator in a couple of sense, first it says if you think the scale is low, your ambitions are low. What a statement.
     - And also it’s an under kill if you think Kubernetes is an overkill

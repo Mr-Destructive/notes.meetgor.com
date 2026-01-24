@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [AI changes everything](https://lucumr.pocoo.org/2025/6/4/changes/)
-    - Everyone seems to be positive about AI, I am not against it, its good, but its moving too fast.
+Everyone seems to be positive about AI, I am not against it, its good, but its moving too fast.
       > I encourage you not meet that moment with cynicism or fear: meet it with curiosity, responsibility and the conviction that this future will be bright and worth embracing.
 
 **Source:** techstructive-weekly-45

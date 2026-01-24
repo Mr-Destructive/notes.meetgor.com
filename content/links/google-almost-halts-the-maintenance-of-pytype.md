@@ -10,14 +10,7 @@ draft: false
 
 ## Context
 
-- [Google almost halts the maintenance of Pytype](https://github.com/google/pytype): Another project in the Google's Graveyard.
-
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-759) (#759th edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
-
-[REMOVED]
+Notion Releases Offline page support
+- xAI secretly drops Sonic Models directly into Agentic IDEs as their Coding Models
 
 **Source:** techstructive-weekly-56

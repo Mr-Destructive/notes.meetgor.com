@@ -10,6 +10,9 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">Creating AI Agents with Pydantic AIUnderstanding the basics of Pydantic AIUsing the output type to get the structured response back from LLMs and AI Agent
+Understanding the basics of Pydantic AI
+    - Using the output type to get the structured response back from LLMs and AI Agents
+    - Using tools with LLMs called Agents with Pydantic AI
+    - Using local as well as cloud provider models in Pydantic AIDouble click to interact with video
 
 **Source:** techstructive-weekly-44

@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-pan>Then on Sunday, I continued the stream for completing the most basic SSG in golang by adding the rendering of the templates.Loading Config and Posts<div id="youtube2-smWEhhypbK4" data-attrs="{&quot;videoId&quot;:&quot;smWEhhypbK4&quot;,&quot;startTime&quot;:null,&quot;endTi
+VIDEO: [What’s new in Golang 1.24: Omitzero Tag in Marshalling JSON](https://www.youtube.com/watch?v=RFUz4_axOZg)  
+    This video was about the specific tag which is being added to the encoding/json package for Marshalling from Golang structs to JSON (serialization.)
 
 **Source:** techstructive-weekly-18

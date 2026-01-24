@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* Row Scanning in Golang with reflect package: [Stackoverflow Question](https://stackoverflow.com/questions/56525471/how-to-use-rows-scan-of-gos-database-sql)
+Row Scanning in Golang with reflect package: [Stackoverflow Question](https://stackoverflow.com/questions/56525471/how-to-use-rows-scan-of-gos-database-sql)
 
 **Source:** techstructive-weekly-1

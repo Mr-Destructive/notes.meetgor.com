@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [No docs, no bugs](https://simonwillison.net/2025/May/22/no-docs-no-bugs/)
-    - This is silly; the more detail you put, the more detailed your tests have to be
+This is silly; the more detail you put, the more detailed your tests have to be
     - The more tests there are, the probability of all of them passing would start decreasing, and hence, it could cause subtle bugs
     - So I think it is a matter of convincing yourself to write more tests and documentation
 

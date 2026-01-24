@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Mistral releases Magistral](https://mistral.ai/news/magistral), a thinking/reasoning model
-    - It thinks like crazy, I saw from a clip.
+It thinks like crazy, I saw from a clip.
 
 **Source:** techstructive-weekly-46

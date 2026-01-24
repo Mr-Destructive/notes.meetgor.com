@@ -10,10 +10,14 @@ draft: false
 
 ## Context
 
-- Render is the new Heroku for free application deployment
-    - I used it to deploy my FastAPI backend for BYOK AI Chat App.
-    - Its similar to the old Heroku hobby tier plan, which was vindicated in 2022.
-    - I am not sure how reliable these Platform-As-A-Service are anymore after the Heroku sunset of hobby plan, but nonetheless its what we get from a free tier and its worth appreciating such companies are providing free tiers.
-    - I am wondering can Appwrite take over its spot, its more of a microservice oriented setup but still it has a lot of potential to compete in the space.
+GitHub Link: [https://github.com/Mr-Destructive/byok-ai-chat](https://github.com/Mr-Destructive/byok-ai-chat)
+    - Vibe Coded the Frontend with Lovable / Windsurf
+    - Half baked backend API with Claude and Grok AI
+    - Minor Improvements and Bug Fixes with Jules Agent
+    - Backend in Python (FastAPI), PostgreSQL Database
+    - Frontend with React
+    - Vercel + Render Deployment
+    - LiteLLM for model provider
+    - Yet to add proper authentication (probably with Clerk)
 
 **Source:** techstructive-weekly-47

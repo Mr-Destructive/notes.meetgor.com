@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-4. [I tried coding with AI, I became lazy and stupid](https://thomasorus.com/i-tried-coding-with-ai-i-became-lazy-and-stupid)
-    1. I have tried it too, I use it, but yes I have found myself in the author’s place.
+1. I have tried it too, I use it, but yes I have found myself in the author’s place.
     2. It helps but only in that fine moment, after the work is done, I don’t feel rewarded, I don’t feel fulfilled, I didn’t learn anything, barely any dopamine.
     3. I am better polishing off my skills
 

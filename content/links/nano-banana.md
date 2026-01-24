@@ -10,11 +10,6 @@ draft: false
 
 ## Context
 
-- For input it’s an easy thing, but for making it generate the TOON Structure is no easy thing.
+[Open AI release GPT Image 1.5](https://openai.com/index/new-chatgpt-images-is-here/)
 
-## Tech News
-Google Releases [Gemini 3,](https://blog.google/products/gemini/gemini-3/) [Antigravity](https://antigravity.google/), and [Nano Banana](https://blog.google/technology/ai/nano-banana-pro/)- This is quite a hell of a release week. New Model, an AI Coding assistant IDE, and an image generation/editing tool.
-
-[OpenAI Releases GPT 5.1](https://openai.com/index/gpt-5-1/)- Is there a day when these companies held themselves back from releasing their own slight better models just to get a few eyeballs.
-
-**Source:** techstructive-weekly-69
+**Source:** techstructive-weekly-73

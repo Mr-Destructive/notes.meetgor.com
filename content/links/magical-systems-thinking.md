@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-11. [Magical Systems Thinking](https://worksinprogress.co/issue/magical-systems-thinking/)
-    - I love this post, it hits home for me
+I love this post, it hits home for me
     - Systems should grow from the simplest possible solutions and then branch off from the possibilities and situations.
     - Creating patches to the existing systems will only survive for limited time or none at all.
       > Sundar Pichai estimated in late 2024 that over 25 percent of Google’s code was AI generated; as of mid-2025, the figure for Anthropic is 80–90 percent.

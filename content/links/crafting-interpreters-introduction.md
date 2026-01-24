@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Crafting Interpreters: Introduction](https://craftinginterpreters.com/introduction.html):  As said in the above blog, I am reading this book blog to get some overview of the working of interpreters. I have created a parser for markdown to substack json and vice versa, that is some Python shenanigans. But want to make it a proper parser and interpreter-like tool.
+[Crafting Interpreters: Introduction](https://craftinginterpreters.com/introduction.html):  As said in the above blog, I am reading this book blog to get some overview of the working of interpreters. I have created a parser for markdown to substack json and vice versa, that is some Python shenanigans. But want to make it a proper parser and interpreter-like tool.
 
 **Source:** techstructive-weekly-4

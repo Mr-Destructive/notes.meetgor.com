@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [ChatGPT Pulse](https://openai.com/index/introducing-chatgpt-pulse/)
-    - Not sure this is a right step for OpenAI, they are going to far with this one.
+Not sure this is a right step for OpenAI, they are going to far with this one.
 
 **Source:** techstructive-weekly-61

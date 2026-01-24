@@ -10,13 +10,6 @@ draft: false
 
 ## Context
 
-* [Raising an Agent - Episode 1](https://youtu.be/Cor-t9xC1ck?si=8SuaiF8kHdI8hrQw)
-    
-    Fascinating. A sourcegraph AI Agent is around the corner. Wow this could be the first one to actually replicate the editing experience. We know LLMs can’t really drive the code, so let them do the chore work while we think. That is the approach Sourcegraph will be taking, they are not completely saying LLMs are bad, they are infact bullish on LLMs, claude can do almost anything provided the tools, so LLMs with tools and context is a big brain move.
-    
+Sourcegraph is such an open company, open as in the openness about their thinking and approaches. They are heading in a good direction, I think and they might be a fundamental step in something that no one else is noticing yet. They are taking the time and not rushing through the model race. I am betting on them now, a comeback is right around the corner.Double click to interact with video
 
-{% embed https://youtu.be/Cor-t9xC1ck?si=8SuaiF8kHdI8hrQw %}
-
-## Learnt
-
-**Source:** techstructive-weekly-36
+**Source:** techstructive-weekly-38

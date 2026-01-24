@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-1. [The beauty of Programming](https://www.brynmawr.edu/inside/academic-information/departments-programs/computer-science/beauty-programming)
-    - I love this post, it propagates the love of programming really well.
+I love this post, it propagates the love of programming really well.
     - It shows why someone is so driven and addicted in a good way to programming, it feels like he can create anything. Someone might say, i just change characters in a file and make things happen with the machines.
 
   > you can be God. On a small scale

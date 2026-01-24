@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Artifacts on Antrhropic](https://www.anthropic.com/news/artifacts): Artifacts can be used to create, view, and iterate on platform-specific work directly within [Claude.ai](http://Claude.ai).
+[Artifacts on Antrhropic](https://www.anthropic.com/news/artifacts): Artifacts can be used to create, view, and iterate on platform-specific work directly within [Claude.ai](http://Claude.ai).
 
 **Source:** techstructive-weekly-5

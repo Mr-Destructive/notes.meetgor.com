@@ -10,23 +10,9 @@ draft: false
 
 ## Context
 
-- Google drops some serious projects and protocol: [Google Cloud Next 2025](https://blog.google/products/google-cloud/next-2025/)
-    - [Firebase Studio](https://firebase.google.com/docs/studio)
-    - [Agent Development Kit](https://google.github.io/adk-docs/)
-    - [A2A](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) (Agent to Agent protocol)
+[Qwen-3 Coder](https://qwenlm.github.io/blog/qwen3-coder/): It seems we have now a whole bunch of terminal based ai code war. Claude Code, Codex (does anyone use it?), Warp, Ampcode, Gemini CLI, now Qwen.
+- [GitHub releases Spark for public preview](https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers/): This looks solid and well engineered product, will be trying out this weekend, finger crossed, will get time and will be streaming it.
 
-For more interesting articles, check out the [hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-741) for the week edition [#741](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-741), for even more software development/coding articles, join [daily.dev](http://daily.dev/).
+I’ll leave you here, it’s been a great week atleast on the learning side, should be more fun next week and over the weekend.
 
----
-
-So, let’s wrap up this week, which has been a bit harsh for me. Locking out on Friday from work at 10, no it was not forced, I was just curious to fix that damn bug. But alas despite all the efforts, the bug was not solved entirely, still the core remains making me feel a little sad but a bit satisfied as the major issue was resolved.
-
-See you next week, Bye
-
-Happy Coding :)
-
----
-
-[REMOVED]
-
-**Source:** techstructive-weekly-37
+**Source:** techstructive-weekly-52

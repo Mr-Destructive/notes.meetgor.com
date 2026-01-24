@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [Hashnode Docs](https://hashnode.com/blog/announcing-docs-by-hashnode-the-content-engine-for-api-and-product-documentation): The content engine for API and product documentation.  
-    This brings me in awe with the Hashnode speed and quality of development. The love with which they craft these products is truly commendable, they have the best free tiers for doing almost anything related to writing as a developer.
+This brings me in awe with the Hashnode speed and quality of development. The love with which they craft these products is truly commendable, they have the best free tiers for doing almost anything related to writing as a developer.
 
 **Source:** techstructive-weekly-5

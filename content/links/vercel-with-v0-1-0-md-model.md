@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Vercel with V0-1.0-md model](https://vercel.com/docs/v0/api)
-    - This is a bold move from Vercel, could be used by UI developers extensively
+This is a bold move from Vercel, could be used by UI developers extensively
 
 Tools
 

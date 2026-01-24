@@ -10,8 +10,8 @@ draft: false
 
 ## Context
 
-- Using Jules to get things done on GitHub
-    - Write the thing you want to do
+Write the thing you want to do
     - It will create a branch > you only have to create and merge the PR
+- Use Open Router to use Anthropic models since it’s not quite reliable with their own API
 
 **Source:** techstructive-weekly-43

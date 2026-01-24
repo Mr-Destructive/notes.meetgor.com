@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Using set.update to append a list of keys of a dictionary](https://docs.python.org/3/library/stdtypes.html#frozenset.update): Let’s say I have a list of dictionaries of some sort, I want to keep track of all the unique keys in those dictionaries, the dirty and the long way would be this:
-    
-    ```go
+```go
     tables = [
         {"id": 1, "name": "Alice", "age": 25, "email": "alice@example.com"},
         {"id": 2, "name": "Bob", "city": "New York", "phone": "555-1234"},
@@ -33,5 +31,7 @@ draft: false
     for table in tables:
     unique_keys.update(table.keys())
     ```
+    
+* OpenAI Function Call is not good compared to non-functional prompts. By functional prompt I mean the structure of the response is provided as an object and the LLM has to respond adhering to that structure, this looks good, but not sure why it goofs up the actual text provided to it. Whereas with the normal(non-functional) prompt the response is much better, as we have more control over the things that can be added, validations, and specific structure. I am surprised that normal prompts can also give responses in a structured way that is too consistent.
 
 **Source:** techstructive-weekly-6

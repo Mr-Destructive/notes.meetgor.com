@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-4. [SQL Heuristics: ORs are expensive](https://ethanseal.com/articles/ors-are-expensive)
-    - Wow! ORs are expensive.
+Wow! ORs are expensive.
     - I had never thought about it that way, would like to dig a little deeper here and learn more about the maths here. It hasn’t clicked all the bells for me yet.
 
 **Source:** techstructive-weekly-62

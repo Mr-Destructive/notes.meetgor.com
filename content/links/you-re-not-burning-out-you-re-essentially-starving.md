@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-1. [You’re not burning out, you’re essentially starving](https://neilthanedar.com/youre-not-burnt-out-youre-existentially-starving/)
-    - This was a good one
+This was a good one
 
   > **When you truly chase your highest potential, everything you thought was burnout will melt away.** Because you weren’t suffering from too much work, you were suffering from too little truly important work. Like a boy who thought he was full until dessert arrives, you’ll suddenly find your hunger return!
   Some really good points

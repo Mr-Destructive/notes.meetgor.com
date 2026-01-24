@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Our best customers are now Robots](https://fly.io/blog/fuckin-robots/)
-  > UX > DX > RX
+> UX > DX > RX
   A nice way to put that
     - We first cared about **User experience** with HTML and JavaScript.
     - Then **Developer experience** with React and god knows what frameworks

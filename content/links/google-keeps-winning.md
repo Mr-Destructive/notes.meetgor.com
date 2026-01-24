@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Google keeps winning](https://youtu.be/m8fe5hOVFAU)
-    - Gemini 2.5 Pro and Flash are killing it with the new improvements
+Gemini 2.5 Pro and Flash are killing it with the new improvements
     - Gemini is getting integrated into almost everything at Google
   Double click to interact with video
 

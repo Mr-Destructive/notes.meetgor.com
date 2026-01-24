@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Hertz.dev](http://Hertz.dev) launches the conversational audio generator model
+[Hertz.dev](http://Hertz.dev) launches the conversational audio generator model
 
 **Source:** techstructive-weekly-15

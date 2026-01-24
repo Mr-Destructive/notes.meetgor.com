@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Google with the improved Gemini 2.5 Flash and Pro](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
-    - This was short lived as Claude 4 dropped with all guns blazing
+This was short lived as Claude 4 dropped with all guns blazing
     - But Gemini is now getting into everything at Google
     - This is leaning on the magnetic route in every product
 

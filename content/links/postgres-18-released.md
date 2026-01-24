@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Postgres 18 released](https://www.postgresql.org/about/news/postgresql-18-released-3142/):
-    - This has some cool features like generated virtual column as default generated columns.
+This has some cool features like generated virtual column as default generated columns.
 
 **Source:** techstructive-weekly-61

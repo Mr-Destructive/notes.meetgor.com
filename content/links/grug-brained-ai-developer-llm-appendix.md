@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-1. [Grug brained AI developer: LLM Appendix](https://blog.remote-mcp.com/p/the-grug-brained-ai-developer-an-e3a)
-  > LLM worst when grug not know answer and hope LLM figure out.this important distinction! many grug not understand!
+> LLM worst when grug not know answer and hope LLM figure out.this important distinction! many grug not understand!
     - That made me laugh hard, not gonna lie. Truly relatable
 
 **Source:** techstructive-weekly-55

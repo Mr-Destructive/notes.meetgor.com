@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [I really don’t like ChatGPT’s new memory feature change](https://simonwillison.net/2025/May/21/chatgpt-new-memory/)
-    - I haven’t used this, but I can understand the feeling of this
+I haven’t used this, but I can understand the feeling of this
     - This looks like a feature without a button, a default feature. Really, are these big companies talking about AGI and care about the values, and slopping users with a bare minimum experience?
 
 **Source:** techstructive-weekly-43

@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [What will coding look like in 2027](https://www.aviator.co/blog/software-engineering-ai-2027/?ref=dailydev)
-    - This looks like an AI-slop at first, but then it kind of makes sense
+This looks like an AI-slop at first, but then it kind of makes sense
     - We are now abstracting away the core thing to AI (its pissing me off)
 
 **Source:** techstructive-weekly-42

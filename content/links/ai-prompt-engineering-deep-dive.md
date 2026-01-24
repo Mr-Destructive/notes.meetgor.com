@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [AI Prompt Engineering: Deep dive](https://youtu.be/T9aRN5JkmL8)
-    
-    * This is a masterclass in prompt engineering. Must watch
+This is a masterclass in prompt engineering. Must watch
         
     * Anthropic really cares about the craft and art of LLMs, they really understand what to think when interfacing with an LLM.
         

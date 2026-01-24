@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">Porting my Blog to burrow SSG + CMSMade some tweaks and refinements in the UI and finally it is looking good.<div id="youtube2-7SjyMYHPlxQ" data-attrs="{
+Made some tweaks and refinements in the UI and finally, it is looking good.
 
 **Source:** techstructive-weekly-35

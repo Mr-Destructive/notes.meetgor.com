@@ -10,9 +10,6 @@ draft: false
 
 ## Context
 
-* [Table extraction from Images using GPT-4 Vision and Python](https://python.useinstructor.com/examples/extracting_tables/): This is something I have been researching at my work and found it interesting to read and experiment upon. I am amazed at how beautifully LLMs can parse and get back data.
-    
-
-## Tech News
+[Table extraction from Images using GPT-4 Vision and Python](https://python.useinstructor.com/examples/extracting_tables/): This is something I have been researching at my work and found it interesting to read and experiment upon. I am amazed at how beautifully LLMs can parse and get back data.
 
 **Source:** techstructive-weekly-4

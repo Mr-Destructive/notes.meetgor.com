@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-usly. I had a break on Sunday, then got back after one day gaps. So only three articles for the week. But keeping it strong and sturdy.SQLite SQL: Many to Many Table without RowIDSQLite SQL: Collate Column Modifier
+[SQLite SQL: Collate Column Modifier](https://www.meetgor.com/sqlog/sqlite-collate-column-modifier)
+- [SQLite SQL: Create Temporary Table](https://www.meetgor.com/sqlog/sqlite-create-temp-table)
 
 **Source:** techstructive-weekly-61

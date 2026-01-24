@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [A critical look at MCP](https://raz.sh/blog/2025-05-02_a_critical_look_at_mcp)
-    - This is a great post, detailing out the actual protocol to see why it is there in place, which is a great question to have and get an answer to.
+This is a great post, detailing out the actual protocol to see why it is there in place, which is a great question to have and get an answer to.
 
 **Source:** techstructive-weekly-42

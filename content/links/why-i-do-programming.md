@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-6. [Why I do programming](https://esafev.com/notes/why-i-do-programming/)
-  > For me, programming has always been more than a skill. It’s a way to explore, to tinker, and to satisfy curiosity.
+> For me, programming has always been more than a skill. It’s a way to explore, to tinker, and to satisfy curiosity.
     - This is what programming is about, using curiosity to find the solutions to the problems. Curiosity is like a fire that keeps you warm in the winter.
 
 **Source:** techstructive-weekly-53

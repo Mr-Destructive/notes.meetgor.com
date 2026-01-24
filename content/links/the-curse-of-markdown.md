@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [The Curse of Markdown](https://codehike.org/blog/the-curse-of-markdown?ref=dailydev)
-  It was a nice article, I agree that a few blogs are lying between markdown and rich content. I also love to express ideas that markdown might limit.
+[The Curse of Markdown](https://codehike.org/blog/the-curse-of-markdown?ref=dailydev) It was a nice article, I agree that a few blogs are lying between markdown and rich content. I also love to express ideas that markdown might limit.
 
 **Source:** techstructive-weekly-21

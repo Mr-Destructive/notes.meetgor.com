@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [Claude for Chrome](https://www.anthropic.com/news/claude-for-chrome)
+X AI makes Grok 2.5 open source (not really, its just weight available model)
 
 **Source:** techstructive-weekly-57

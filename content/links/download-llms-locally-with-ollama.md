@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Download LLMs locally with ollama](https://ollama.com/blog/llama3.2): I was quite impressed by the speed of the LLAMA 3.2 1B model. It worked smoothly, on my 8GB laptop. This would be quite handy in case of network issues, vendor outages and other politics.
+[Download LLMs locally with ollama](https://ollama.com/blog/llama3.2): I was quite impressed by the speed of the LLAMA 3.2 1B model. It worked smoothly, on my 8GB laptop. This would be quite handy in case of network issues, vendor outages and other politics.
 
 **Source:** techstructive-weekly-9

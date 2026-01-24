@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">Turso CLI Guide: Interacting with LibSQL databases on the Turso platformI just created the first video on ShotCut tool, a local vid
+Turso CLI Guide: Interacting with LibSQL databases on the Turso platformI just created the first video on ShotCut tool, a local vid
 
 **Source:** techstructive-weekly-28

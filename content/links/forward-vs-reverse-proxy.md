@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-10. [Forward vs Reverse Proxy](https://newsletter.systemdesign.one/p/forward-proxy-vs-reverse-proxy)
-    - This is cool, the examples, make it really interesting and relatable.
+This is cool, the examples, make it really interesting and relatable.
     - Forward proxy acts on the behalf of the client
     - Reverse proxy acts on the behalf of the server
     - It actually makes sense and helps understand better.

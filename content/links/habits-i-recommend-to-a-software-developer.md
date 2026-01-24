@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Habits I recommend to a software developer](https://www.saiyangrowthletter.com/p/habits-i-recommend-to-succeed-as)
-    
-    * Reading a book
+Reading a book
         
     * Build projects (keep building)
         

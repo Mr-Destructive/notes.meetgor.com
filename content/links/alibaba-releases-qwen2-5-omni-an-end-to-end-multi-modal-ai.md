@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Alibaba releases Qwen2.5 omni: An end-to-end multi-modal AI](https://www.alibabacloud.com/blog/alibaba-cloud-releases-qwen2-5-omni-7b-an-end-to-end-multimodal-ai-model_602095)
+[Alibaba releases Qwen2.5 omni: An end-to-end multi-modal AI](https://www.alibabacloud.com/blog/alibaba-cloud-releases-qwen2-5-omni-7b-an-end-to-end-multimodal-ai-model_602095)
 
 **Source:** techstructive-weekly-35

@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [Meta launches Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) (actually [games the lmarena](https://www.theverge.com/meta/645012/meta-llama-4-maverick-benchmarks-gaming))
+[Meta launches Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) (actually [games the lmarena](https://www.theverge.com/meta/645012/meta-llama-4-maverick-benchmarks-gaming))
 
 **Source:** techstructive-weekly-37

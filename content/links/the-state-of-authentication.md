@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [The State of Authentication](https://youtu.be/lxslnp-ZEMw?si=NHEnmYD5AVQUHOM0)
-    - This is so messed up. There are actually three parts in Authentication. I thought Authentication and Authorization, that’s it
+This is so messed up. There are actually three parts in Authentication. I thought Authentication and Authorization, that’s it
     - Authentication is basically “Am I who I say I am?”
     - Authorisation is what I am allowed to do (if i am who I say I am)\
     - Now the third part of Authentication

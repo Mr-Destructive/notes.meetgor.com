@@ -10,6 +10,8 @@ draft: false
 
 ## Context
 
-nFastAPI for backend, Bun/React for FrontendThinking of using a per-user database with TursoLiteLLM listing providers and modelsThis is a rough draft version of the post.I have worked together the way to list down the providers and models
+This is a rough draft version of the post.
+    - I have worked together the way to list down the providers and models
+    - Looking at what else could be done and exploring different ways to query info about a specific model
 
 **Source:** techstructive-weekly-46

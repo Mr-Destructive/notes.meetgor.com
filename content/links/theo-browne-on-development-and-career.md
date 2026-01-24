@@ -10,12 +10,9 @@ draft: false
 
 ## Context
 
-- [Theo Browne on Development and Career](https://youtu.be/oWGtP1iNlZM)
-    - Be curious, be active
+Be curious, be active
     - Content is bullshit, don’t consume too much, be actively building and enthusiasitic about the craft
 
 Double click to interact with video
-
-## Learnt
 
 **Source:** techstructive-weekly-45

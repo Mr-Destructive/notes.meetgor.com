@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-* [Spotify cuts developer access to some developer recommendation APIs](https://techcrunch.com/2024/11/27/spotify-cuts-developer-access-to-several-of-its-recommendation-features/)  
-    This is bad, and looks like the possible issues moving ahead in this AI driven internet.
+This is bad, and looks like the possible issues moving ahead in this AI driven internet.
 
 **Source:** techstructive-weekly-18

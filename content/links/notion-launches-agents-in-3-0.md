@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Notion Launches Agents in 3.0](https://techcrunch.com/2025/09/18/notion-launches-agents-for-data-analysis-and-task-automation/)
-    - Every product is becoming something with AI.
+Every product is becoming something with AI.
 
 **Source:** techstructive-weekly-60

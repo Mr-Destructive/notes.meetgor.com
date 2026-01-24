@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-don’t workMonthly Open source contribution reflectionsDaily Work log (private google doc) inspired from Arpit’s ritualWill I be able to do all? Probably not, but even something better at the end of the year.Read<div
+Will I be able to do all? Probably not, but even something better at the end of the year.
 
 **Source:** techstructive-weekly-52

@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Python: The documentary](https://youtu.be/GfH4QL4VqJ0)
-    - Wow! Just wow! From abstracting the language for making it friendly to running the world. It went from 0 to 3 pretty quick. Its the language spoken by LLMs
+Wow! Just wow! From abstracting the language for making it friendly to running the world. It went from 0 to 3 pretty quick. Its the language spoken by LLMs
     - Dropbox was surprising, the whole stack is Python! how would the frontend by python, maybe server side rendered, but that is really sick. The scale of that working makes me think again, is python slow? or people make it? by adding unnecessary complexity, django scales!
     - I read a few post from Amir about Claude code and AI stuff and was about to disagree, but he is a creator of Flask, and oh my god how many frameworks? I took a step back and read some of his blogs again and it changed my mindset. Maybe LLMs are cool, maybe we need to be better programmers, we need to define our problems better, that’s what I was missing. This guy is a legend.
     - The pyladies moment made me cry. Not gonna lie, this was really relatable. I also find loneliness and under-confident when given an opportunity, maybe its just me.

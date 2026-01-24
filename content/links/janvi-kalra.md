@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- Janvi Kalra From Software Engineer to AI Engineer at OpenAI
-  [The Pragmatic Engineer](https://open.substack.com/pub/pragmaticengineer)
+[The Pragmatic Engineer](https://open.substack.com/pub/pragmaticengineer)
     - This was a really inspirational interview. Its giving me hope in continuing what I am doing currently; being excited and willing to develop stuff, doing the due-deligence to research and solve things.
     - I think I now understand my flaw; I am not specific. I am all over the place.
     - She was very specific in boiling down what she was interested in, listing down the 50+ companies in that space, and getting the interviews. It shows the care and love for the craft.

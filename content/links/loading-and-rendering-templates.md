@@ -10,6 +10,7 @@ draft: false
 
 ## Context
 
-ure="media" allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" width="728" height="409">Loading and Rendering Templates<div id="youtube2-p_av6C8Lji0" data-attrs="{&quot;videoId&quot;:&quot;p_av6C8Lji0&quot;,&quot;startTime&quot;:null,&quot;endTi
+VIDEO: [What’s new in Golang 1.24: Omitzero Tag in Marshalling JSON](https://www.youtube.com/watch?v=RFUz4_axOZg)  
+    This video was about the specific tag which is being added to the encoding/json package for Marshalling from Golang structs to JSON (serialization.)
 
 **Source:** techstructive-weekly-18

@@ -10,13 +10,9 @@ draft: false
 
 ## Context
 
-- [Vibe coding are three types](https://youtu.be/6TMPWvPG5GA)
-    - I know and care about the code
+I know and care about the code
     - I know the code but don’t care enough
     - I don’t know what I am doing
     - Developers, let’s focus on the first 2 and we should be fine, the 3rd one is a luxury as a hobby.
-
-
-## Tech News
 
 **Source:** techstructive-weekly-58

@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-* [Getting started with Pulumi](https://awsfundamentals.com/blog/pulumi-getting-started)
-    
-    * I always wanted to understand Infrastructure and code, but no article helps me understand what it actually solves, no one has yet shown the problem before the solution. I might find and write it myself one day (day one?).
+I always wanted to understand Infrastructure and code, but no article helps me understand what it actually solves, no one has yet shown the problem before the solution. I might find and write it myself one day (day one?).
 
 **Source:** techstructive-weekly-40

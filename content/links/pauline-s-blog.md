@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* Pixel by Pixel, could create a vault of articles: [Pauline’s Blog](https://www.pawlean.com/vault)
+Pixel by Pixel, could create a vault of articles: [Pauline’s Blog](https://www.pawlean.com/vault)
 
 **Source:** techstructive-weekly-1

@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [STRING is actually an integer type](https://youtu.be/VSiPVZcTQTo)
-    - Everything is flexible unless you type strict
+Everything is flexible unless you type strict
     - SQLite is flexible, as I have said its a double-edged sword until you don’t want it to be.Double click to interact with video
 
 **Source:** techstructive-weekly-72

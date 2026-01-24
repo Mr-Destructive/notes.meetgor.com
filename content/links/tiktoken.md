@@ -10,6 +10,22 @@ draft: false
 
 ## Context
 
-* [TikToken](https://github.com/openai/tiktoken) the tokeniser that powers GPT and its family of models: I want to explore this and create a project around it. I learnt that is the model that actually determines the number of tokens passed around the chats while interacting with the LLMs.
+Using the `next` method in python to get the first non-empty or truth value from a dict or any expression.
+    
+    ```go
+    row = {
+        "name": {
+            "value": "123",
+            "position": [40, 40],
+        },
+        "city": {
+            "value": "mumbai",
+            "position": [50, 30],
+        }
+    }
+    row_position = next((attrs["position"] for attrs in row.values() if isinstance(attrs, dict) and attrs.get("value")), None)
+    ```
+    
+* Combining Pandas Dataframes
 
 **Source:** techstructive-weekly-15

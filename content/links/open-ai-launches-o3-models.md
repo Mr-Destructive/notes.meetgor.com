@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-- [Open AI launches o3 models](https://techcrunch.com/2024/12/20/openai-announces-new-o3-model/): Another day, another model
+[Open AI launches o3 models](https://techcrunch.com/2024/12/20/openai-announces-new-o3-model/): Another day, another model
 
 **Source:** techstructive-weekly-21

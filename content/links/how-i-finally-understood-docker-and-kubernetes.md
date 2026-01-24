@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [How I finally understood Docker and Kubernetes](https://medium.com/javarevisited/how-i-finally-understood-docker-and-kubernetes-5debb13cacfe)
-    - This was my pick of the week. I understood the reason why Kubernetes exists
+This was my pick of the week. I understood the reason why Kubernetes exists
     - I knew the concept of Docker (it could be because I have used it extensively in the past to create projects as well in my internships to deploy APIs and apps)
     - But the concept of Kubernetes is like a black-box. But the author’s explanation style and simple example made it clear.
     - Kubernetes is like

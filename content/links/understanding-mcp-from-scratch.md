@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-* [Understanding MCP from scratch](https://youtu.be/CDjjaTALI68?si=Dkse1dPU96MherDQ)
-    
-    This cleared a lot of things.
+This cleared a lot of things.
 
 **Source:** techstructive-weekly-36

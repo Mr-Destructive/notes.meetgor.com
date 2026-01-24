@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-g this video now makes sense. It just a loop for agent to start from where it left off without bloating the context. Superb.Its time to change your database - from Supabase to Convex<div id="youtube2-B6C-MWCFfAg" data-attrs="{&quot;videoId&quot;:&quot;B6C-MWCFfAg&quot;,&quot;startTime&quot;:null,&quot;endTime&quot;:n
+g this video now makes sense. It just a loop for agent to start from where it left off without bloating the context. Superb.Its time to change your database - from Supabase to Convex
 
 **Source:** techstructive-weekly-78

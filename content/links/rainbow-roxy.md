@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-15-Psle70 weight-medium-fw81nC reset-IxiVJZ">Rainbow Roxy <a href="https://techstructively.substack.com/p/techstructive-weekly-74/comment/192121726
+15-Psle70 weight-medium-fw81nC reset-IxiVJZ">Rainbow Roxy
 
 **Source:** techstructive-weekly-74

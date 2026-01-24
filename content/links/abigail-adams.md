@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-v>&quot;Learning is not attained by chance, it must be sought for with ardor and attended to with diligence.&quot; – Abigail AdamsNot every week is the same, if it is then you are not learning, you are not growing. Stepping outside of the comfort zone is the w
+Not every week is the same, if it is then you are not learning, you are not growing. Stepping outside of the comfort zone is the way to get out of that creative slump. There needs to be hard work and curiosity to drive learning, it won’t come by thinking about how worse the situation is, taking action is the key, if you fail, you learn something.
 
 **Source:** techstructive-weekly-4

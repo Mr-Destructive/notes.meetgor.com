@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Open AI releases o3-pro and drops the prices by 80%](https://help.openai.com/en/articles/9624314-model-release-notes)
-    - mini - standard - pro is the ecosystem Open AI has created for its thinking models
+mini - standard - pro is the ecosystem Open AI has created for its thinking models
     - o1 - o3 - o4
     - By the time o3 standard or pro was released, o4-mini was already to the same level
 

@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-* [Lessons learned from 25 years of writing software](https://blog.rpanachi.com/after-25-years-writing-software-here-some-things-learned-so-far?ref=dailydev):  
-    There are so many valuable tips here,
+There are so many valuable tips here,
     
     * Master at least one programming language/database
         

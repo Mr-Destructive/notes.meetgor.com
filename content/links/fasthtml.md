@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [FastHTML](https://fastht.ml/): A Python framework for developing web applications. I would like to explore this in the upcoming weeks.
+[FastHTML](https://fastht.ml/): A Python framework for developing web applications. I would like to explore this in the upcoming weeks.
 
 **Source:** techstructive-weekly-1

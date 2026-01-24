@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">The future of software development is software developerstechnical practices that can dramatically shrink delivery lead times while improving reliability and re
+The future of software development is software developerstechnical practices that can dramatically shrink delivery lead times while improving reliability and re
 
 **Source:** techstructive-weekly-75

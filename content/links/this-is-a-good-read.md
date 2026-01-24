@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-n>&quot;Enthusiasm is common. Endurance is rare.&quot; — Angela DuckworthThis is a good read, motivating to be honest. The start always is the least painful, we quite quickly pick a youtube video to watch but rarely finish it, quickly s
+[How Cosiine Similarity Works](https://tomhazledine.com/cosine-similarity/?ref=dailydev): This is a good read for understanding the cosine or vector similarity. This is really important to understand in the context of today’s fast-paced AI and LLM world, understanding the tokens and the embedding similarity between them. It might not seem oblivious but having an understanding of the essence of the logic behind the things happening around you makes life a lot easier.
 
-**Source:** techstructive-weekly-14
+**Source:** techstructive-weekly-16

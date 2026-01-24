@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-say that it was the book, but it's how you read a book that is most valuable, rather than any power it might have itself.&quot;— Michiko Aoyama(Author of What You Are Looking For Is in
+>
 
 **Source:** techstructive-weekly-57

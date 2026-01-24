@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-* [Lessons on AI Agents from Claude playing Pokémon](https://youtu.be/CXhYDOvgpuU)
-    
-    * Wow, agents are already playing games, not exactly, but quite fair, I would say. Anthropic is really a lab, like they are researching LLM behaviors through and through; they are technical scientists.
+Wow, agents are already playing games, not exactly, but quite fair, I would say. Anthropic is really a lab, like they are researching LLM behaviors through and through; they are technical scientists.
         
     * Claude plays Pokémon Red:
         

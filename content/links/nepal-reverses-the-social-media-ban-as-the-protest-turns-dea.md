@@ -10,12 +10,6 @@ draft: false
 
 ## Context
 
-- [Nepal reverses the social media ban as the protest turns deadly](https://techcrunch.com/2025/09/08/nepal-reverses-social-media-ban-as-protests-turn-deadly/): Really a deadly situation in Nepal, I can relate as I have my work colleagues working there. Government is pretty unstable and it might create havoc for such a fragile nation which might add misery to the already poor state.
-
----
-
-Happy Coding :)
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-762) (#762nd edition) , and for software development/coding articles, join [daily.dev](http://daily.dev/).
+[Claude model degradation](https://ilikekillnerds.com/2025/09/09/anthropic-finally-admits-claude-quality-degradation/): I don’t use Claude much but it had a reputation of being one of the premium and high quality availability model which with this seems to be deteriorated.
 
 **Source:** techstructive-weekly-59

@@ -10,8 +10,6 @@ draft: false
 
 ## Context
 
-* [Turso LibSQL Video from Fireship](https://youtu.be/PGpL5hYpY1o?si=yPfAOsB9l8DhuVAt)
-    
-    Finally Fireship creating a video on Turso’ s LibSQL, this deserved attention and its finally getting the love it deserves.
+Finally Fireship creating a video on Turso’ s LibSQL, this deserved attention and its finally getting the love it deserves.
 
 **Source:** techstructive-weekly-16

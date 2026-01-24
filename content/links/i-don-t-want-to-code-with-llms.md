@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-1. [I don’t want to code with LLMs](https://blaines-blog.com/I-dont-want-to-code-with-LLMs#footnote-ref-1)
-    - This is the best of the lot. Nailed every point.
+This is the best of the lot. Nailed every point.
           - Coding was never a bottleneck, communication was (is).
           - Yes, it can do trivial task, but that is not 20% of developers work.
           - Its still bad at complex stuff. Vibe coders hit a ceiling after a while.

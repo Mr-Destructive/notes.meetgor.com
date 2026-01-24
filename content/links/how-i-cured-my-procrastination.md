@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [How I cured my procrastination](https://learnhowtolearn.org/how-i-cured-procrastination/): This feels like an epidemic of happiness, the enthusiasm and humility in the author’s words are evident and make you jump out of the procrastination loop hell. Worth reading.
+[How I cured my procrastination](https://learnhowtolearn.org/how-i-cured-procrastination/): This feels like an epidemic of happiness, the enthusiasm and humility in the author’s words are evident and make you jump out of the procrastination loop hell. Worth reading.
 
 **Source:** techstructive-weekly-13

@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Database System: Relational Model and Algebra](https://youtu.be/7NPIENPr-zk)
-    - Prepared a detailed notes as I was watching
+Prepared a detailed notes as I was watching
     - data model - how to define the relation, rules
     - schema - defining the specifics of the data model, details
           - relational (the primary kind, we only think of this as real dbs) key value - graph - document - column - array - and more

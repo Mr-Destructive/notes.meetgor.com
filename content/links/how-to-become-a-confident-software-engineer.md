@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-8. [How to become a confident software engineer](https://newsletter.francofernando.com/p/how-to-become-a-confident-software)
-    1. Valuable advice and practical too
+1. Valuable advice and practical too
           1. Pick and learn a single programming language properly (like I am doing with golang)
           2. Write unit tests and CI (Ah, now it makes sense)
                   1. I have not written serious tests in my 1 year long career, rest apart from the 4 year tech journey. Now it makes sense, there is a purpose to give me confidence to build reliable software.

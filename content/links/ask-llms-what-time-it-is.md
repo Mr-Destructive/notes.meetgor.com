@@ -10,8 +10,7 @@ draft: false
 
 ## Context
 
-- [Ask LLMs what time it is](https://bsky.app/profile/paulbjensen.bsky.social/post/3lwwyngwmhc2u)
-    - Prompt
+Prompt
       > What is the time?
 
 **Source:** techstructive-weekly-56

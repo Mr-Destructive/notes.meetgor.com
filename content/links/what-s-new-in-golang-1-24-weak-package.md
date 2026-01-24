@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-7.07-7.07l-1.72 1.71">What’s new in Golang 1.24: Weak PackageAn introduction to the weak package in the standard library, I explored the difference between strong and weak references and some garbage
+What’s new in Golang 1.24: Weak PackageAn introduction to the weak package in the standard library, I explored the difference between strong and weak references and some garbage
 
 **Source:** techstructive-weekly-23

@@ -10,9 +10,6 @@ draft: false
 
 ## Context
 
-* [Stripe launches Workbench](https://stripe.com/blog/workbench-a-new-way-to-debug-monitor-and-grow-your-stripe-integration): A new way to debug, monitor, and grow your Stripe integration
-    
-
 For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-721) and for daily developer articles, join [daily.dev](http://daily.dev)
 
 That’s it from this week, hope you did well this week, and have a happy week and weekend ahead!

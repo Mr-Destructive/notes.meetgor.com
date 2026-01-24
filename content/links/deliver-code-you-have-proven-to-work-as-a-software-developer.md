@@ -10,9 +10,7 @@ draft: false
 
 ## Context
 
-1. [Deliver Code you have proven to work as a software developer](https://simonwillison.net/2025/Dec/18/code-proven-to-work/)
-    
-    1. Right on! So true. merging slop without review, even slightly running against a manual test case can give you a good confidence and make you a good engineer.
+1. Right on! So true. merging slop without review, even slightly running against a manual test case can give you a good confidence and make you a good engineer.
         
     2. With more code being generated and as easy as a command, it becomes rather intimidating to review code, to accept suggestion and produce more code. But code is not a magic wand its some assumptions crumpled with logical validation, both of them contradict yet when done right, creates a software that people use and breathe.
         

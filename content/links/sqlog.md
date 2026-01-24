@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-. A good end to the work week.I have continued to write Advent of SQL for the past 4 days, and brought back the streak of writing SQLog. I was not able to ship some code over the past weekend. But this weekend, I am pumped. I have time sorted out. Would be shipping some improvem
+Last weekend, I wrote 4k words in a single day in around 3 hours. I was pumped to get all in the coming week, but only managed to get 2k words in the 5 days of the week. Struggling with consistency but trying to get hang of it. I am planning to wipe the story off this weekend, a 3-4 hour session could do it. And another goal of the year completed. I can't be more happy. A novel, first draft at the end of 2025.
 
 **Source:** techstructive-weekly-73

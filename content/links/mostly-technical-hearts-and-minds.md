@@ -10,16 +10,14 @@ draft: false
 
 ## Context
 
-* [Mostly Technical: Hearts and Minds](https://youtu.be/P-fKp3eS5CA)
-    
-    * Boy I have some thoughts here.
+Boy I have some thoughts here.
         
     
-    1. Aaron's AI Stack &gt; Claude Opus 4.5, Amp Code, Code Rabbit for review
+    1. Aaron's AI Stack > Claude Opus 4.5, Amp Code, Code Rabbit for review
         
     2. Ship code, no one cares how its done
         
-    3. Have an idea &gt; research &gt; plan &gt; throw it to AI &gt; look at it, stare at it &gt; ship it
+    3. Have an idea > research > plan > throw it to AI > look at it, stare at it > ship it
         
     4. What is the perfect abstraction, no, what can I get shipped.
         
@@ -46,8 +44,5 @@ draft: false
     12. The point of Aaron on shared experience on Pride and Prejudice written by human, is something people are still consuming and talking about after a decade or more. But what about PaLM? Do you remember the model? Noooo. We need human connection.
         
     13. The idea train from Ian is contagious, I am running it something on my brain to think of something to make in SQL or some code.
-        
-
-## Learnt
 
 **Source:** techstructive-weekly-73

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-1. [Pheonix. new Fly’s entry for AI coding agents](https://simonwillison.net/2025/Jun/23/phoenix-new/)
-    - This is a neat little thing from fly.io, they have made everything so right, that these AI Agents just fit perfectly in their ecosystem.
+This is a neat little thing from fly.io, they have made everything so right, that these AI Agents just fit perfectly in their ecosystem.
 
 **Source:** techstructive-weekly-48

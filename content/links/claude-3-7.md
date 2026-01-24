@@ -10,10 +10,6 @@ draft: false
 
 ## Context
 
-- [Claude 3.7](https://www.anthropic.com/news/claude-3-7-sonnet): Antrophic is leading now. These are massive gains in coding models. The AI Race is wild. The speed at which we are moving, we’ll see AGI next week.
-
----
-
-For more news, follow the [Hackernewsletter](https://buttondown.com/hacker-newsletter/archive/hacker-newsletter-735) and for software development/coding articles, join [daily.dev](http://daily.dev/).
+[Claude 3.7](https://www.anthropic.com/news/claude-3-7-sonnet): Antrophic is leading now. These are massive gains in coding models. The AI Race is wild. The speed at which we are moving, we’ll see AGI next week.
 
 **Source:** techstructive-weekly-31

@@ -10,7 +10,6 @@ draft: false
 
 ## Context
 
-- [Atlassian to buy the Browser/Arc Company](https://techcrunch.com/2025/09/04/atlassian-to-buy-arc-developer-the-browser-company-for-610m/)
-    - I don’t care.
+I don’t care.
 
 **Source:** techstructive-weekly-58

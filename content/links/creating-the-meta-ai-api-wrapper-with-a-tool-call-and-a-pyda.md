@@ -10,6 +10,9 @@ draft: false
 
 ## Context
 
-m/shorts/V4WM1SmxrEI" rel="nofollow ugc noopener">Perplexity released as WhatsApp ChatbotsLivestreamedCreating the Meta AI API wrapper with a tool call and a Pydantic AI model wrapper for the Meta AI API<div id="youtube2-tBRQSlpgEUg" data-attrs="{&quot;videoId&quot;:&quot;tBRQSlpgEUg&quot;,&quot;startTime&quot;:null,&quot;endTime&quot;:null}" data
+Livestreamed
+    
+        
+    * [Building an Agentic Calculator with Pydantic, Appwrite (failed, then moved to Vercel), Meta AI API wrapper with tool calls](https://www.youtube.com/live/yA5d-R6O8h0)
 
 **Source:** techstructive-weekly-40

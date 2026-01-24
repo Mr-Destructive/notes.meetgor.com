@@ -10,6 +10,6 @@ draft: false
 
 ## Context
 
-* [Structured Response](https://platform.openai.com/docs/guides/structured-outputs) from Function Calls in Open AI API Calls
+[Structured Response](https://platform.openai.com/docs/guides/structured-outputs) from Function Calls in Open AI API Calls
 
 **Source:** techstructive-weekly-2
