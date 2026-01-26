@@ -1,7 +1,7 @@
 ---type: "sqlog"
 title: "SQLite dot commands: html tables with output and once"
 date: 2025-08-25
-tags: ["devops", "frontend", "git", "linux", "sql"]
+tags: ["devops", "git", "linux", "sql"]
 ---
 
 The `.once -w` or `.www` was released in [SQLite 3.47](https://www.sqlite.org/releaselog/3_47_0.html) release last year.

@@ -1,7 +1,7 @@
 ---type: "sqlog"
 title: "SQLite functions: unistr and unistr_quote"
 date: 2025-08-26
-tags: ["ai", "frontend", "sql"]
+tags: ["ai", "sql"]
 ---
 
 SQLite [3.50](https://www.sqlite.org/releaselog/3_50_0.html) introduced [unistr](https://www.sqlite.org/lang_corefunc.html#unistr) and [unistr_quote](https://www.sqlite.org/lang_corefunc.html#unistr_quote) functions
