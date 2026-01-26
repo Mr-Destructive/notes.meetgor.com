@@ -26,21 +26,16 @@ theme = "terminal"
   weight = 2
 
 [[menu.main]]
-  name = "Newsletter"
-  url = "/newsletter/"
-  weight = 3
+   name = "Newsletter"
+   url = "/newsletter/"
+   weight = 3
 
 [[menu.main]]
-  name = "Quotes"
-  url = "/quotes/"
-  weight = 4
+   name = "Thoughts"
+   url = "/thoughts/"
+   weight = 4
 
 [[menu.main]]
-  name = "Thoughts"
-  url = "/thoughts/"
-  weight = 5
-
-[[menu.main]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 6
+   name = "Tags"
+   url = "/tags/"
+   weight = 5
