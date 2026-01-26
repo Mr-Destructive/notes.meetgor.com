@@ -2,7 +2,7 @@
 title: "Techstructive Weekly #76"
 date: 2026-01-09
 draft: false
-type: "post"
+type: post
 categories: ["newsletter"]
 tags: ["newsletter", "techstructive"]
 description: "Techstructive Weekly #76"

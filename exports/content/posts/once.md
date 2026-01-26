@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "SQLite Dot command: Once"
 date: 2025-08-20
 ---

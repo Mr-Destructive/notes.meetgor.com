@@ -2,7 +2,7 @@
 title: "Solar Labs"
 date: 2023-05-26
 draft: false
-type: "work"
+type: work
 ---
 
 ### Backend Developer Intern - [The Solar Labs](https://www.thesolarlabs.com/)

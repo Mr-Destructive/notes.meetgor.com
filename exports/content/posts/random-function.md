@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "SQLite Scalar Function: Random"
 date: 2025-08-23
 ---

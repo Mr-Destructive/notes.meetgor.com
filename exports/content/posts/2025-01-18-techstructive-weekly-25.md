@@ -1,5 +1,5 @@
 ---
-type: "newsletter"
+type: newsletter
 title: "Techstructive Weekly #25"
 date: 2025-01-18
 ---

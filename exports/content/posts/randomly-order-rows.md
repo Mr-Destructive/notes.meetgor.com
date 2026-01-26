@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "SQLite: Randomly order rows"
 date: 2025-08-24
 ---

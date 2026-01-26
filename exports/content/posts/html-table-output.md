@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "SQLite dot commands: html tables with output and once"
 date: 2025-08-25
 ---

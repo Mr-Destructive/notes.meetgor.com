@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "Advent of SQL 2025 Day 8: Product Catalog"
 slug: "advent-of-sql-2025-day-8"
 date: 2025-12-23T15:30:00+0530

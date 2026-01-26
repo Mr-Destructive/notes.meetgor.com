@@ -1,6 +1,6 @@
 ---
 title: "Techstructive Weekly 65"
-type: "newsletter"
+type: newsletter
 date: 2025-10-25T00:00:00Z
 draft: false
 ---

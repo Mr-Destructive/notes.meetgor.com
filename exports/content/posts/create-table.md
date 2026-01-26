@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "SQLite SQL: Create Table Basic"
 slug: sqlite-create-table
 date: 2025-09-04

@@ -1,5 +1,5 @@
 ---
-type: "sqlog"
+type: sqlog
 title: "SQLite dot commands: header command"
 slug: sqlite-dot-command-header
 date: 2025-09-03
