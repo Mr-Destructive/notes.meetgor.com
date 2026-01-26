@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite functions: unistr and unistr_quote"
 date: 2025-08-26
 ---

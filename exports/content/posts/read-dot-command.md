@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite dot commands: read file or standard output"
 date: 2025-08-28
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Docsumo"
 date: 2024-12-15
-type: work
+type: "work"
 ---
 
 

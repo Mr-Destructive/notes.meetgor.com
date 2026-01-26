@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite functions: generate_series"
 date: 2025-08-21
 ---

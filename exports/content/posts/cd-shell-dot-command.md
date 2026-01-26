@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite dot commands: change directory command"
 slug: sqlite-cd-dot-command
 date: 2025-08-31

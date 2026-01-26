@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite dot commands: read command is recursive?"
 slug: sqlite-read-dot-command-is-recursive
 date: 2025-08-29

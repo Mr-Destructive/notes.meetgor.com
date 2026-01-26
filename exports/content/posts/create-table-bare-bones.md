@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite SQL: Create Table Bare Bones Table"
 slug: sqlite-create-table-bare-bones-table
 date: 2025-09-05

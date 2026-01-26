@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite dot commands: Output mode separator command"
 slug: sqlite-mode-dot-command-separators
 date: 2025-09-02

@@ -2,7 +2,7 @@
 title: "GeeksForGeeks"
 date: 2021-09-15
 draft: false
-type: work
+type: "work"
 ---
 
 ### Technical Content Writer - [GeeksForGeeks](https://www.geeksforgeeks.org/)

@@ -1,5 +1,5 @@
 ---
-type: sqlog
+type: "sqlog"
 title: "SQLite dot commands: Output mode"
 slug: sqlite-mode-dot-command
 date: 2025-09-01
