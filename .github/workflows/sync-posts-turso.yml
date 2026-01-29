@@ -73,13 +73,6 @@ jobs:
           # Fetch latest changes from remote
           git fetch origin main
           
-          # Rebase local changes on top of remote
-          if ! git rebase origin/main; then
-            echo "Rebase conflict detected, aborting..."
-            git rebase --abort
-            exit 0
-          fi
-          
           # Stage all changes
           git add content/ exports/content/
           
@@ -92,5 +85,12 @@ jobs:
           # Commit changes
           git commit -m "chore: sync and build content from Turso database"
           
-          # Push with force if needed (rebase might have changed history)
+          # Rebase local changes on top of remote
+          if ! git rebase origin/main; then
+            echo "[WARN] Rebase conflict detected, aborting rebase..."
+            git rebase --abort
+            # Continue anyway - let push handle any conflicts
+          fi
+          
+          # Push (retry once if it fails)
           git push origin main || git push -f origin main
