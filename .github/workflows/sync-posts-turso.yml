@@ -73,7 +73,7 @@ jobs:
           # Fetch latest changes from remote
           git fetch origin main
           
-          # Stage all changes
+          # Stage only the content we care about
           git add content/ exports/content/
           
           # Check if there are changes to commit
@@ -85,12 +85,13 @@ jobs:
           # Commit changes
           git commit -m "chore: sync and build content from Turso database"
           
-          # Rebase local changes on top of remote
-          if ! git rebase origin/main; then
-            echo "[WARN] Rebase conflict detected, aborting rebase..."
-            git rebase --abort
-            # Continue anyway - let push handle any conflicts
+          # Try to push directly first (no rebase, simpler)
+          if git push origin main 2>&1; then
+            echo "[OK] Pushed successfully"
+            exit 0
           fi
           
-          # Push (retry once if it fails)
-          git push origin main || git push -f origin main
+          # If push fails, pull and retry
+          echo "[INFO] Push failed, pulling latest changes..."
+          git pull origin main --no-rebase
+          git push origin main
