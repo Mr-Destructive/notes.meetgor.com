@@ -70,14 +70,12 @@ jobs:
 
       - name: Commit and push all changes
         run: |
-          # Fetch latest changes from remote
-          git fetch origin main
+          # Check what changed
+          echo "=== Git Status ==="
+          git status --porcelain
           
-          # Discard any uncommitted changes outside content/ and exports/content/
-          git checkout -- . || true
-          
-          # Stage only the content we care about
-          git add content/ exports/content/
+          # Stage ALL changes (not just specific dirs)
+          git add -A
           
           # Check if there are changes to commit
           if git diff --cached --quiet; then
@@ -85,8 +83,14 @@ jobs:
             exit 0
           fi
           
+          echo "=== Staged changes ==="
+          git diff --cached --stat
+          
           # Commit changes
           git commit -m "chore: sync and build content from Turso database"
+          
+          # Fetch latest before pushing
+          git fetch origin main
           
           # Try to push directly first
           if git push origin main; then
@@ -94,7 +98,7 @@ jobs:
             exit 0
           fi
           
-          # If push fails, merge latest and retry
-          echo "[INFO] Push failed, merging latest changes..."
+          # If push fails, we're behind - merge and retry
+          echo "[INFO] Push failed, pulling latest changes..."
           git merge origin/main --no-edit
           git push origin main
