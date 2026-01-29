@@ -1,15 +1,16 @@
 ---
 type: post
-title: Basics of curl command
-subtitle: An short simple introductory guide to the curl command
-date: 2021-11-05 20:50:00+05:30
-slug: curl-basics
-image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643289075/blogmedia/bqnrrfaeaqfaj7hezxjx.png
+title: "Basics of curl command"
+subtitle: "An short simple introductory guide to the curl command"
+date: 2021-11-05T20:50:00+05:30
+slug: "curl-basics"
 tags:
-- database
-- git
-- testing
+  - bash
+  - linux
+  - networking
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643289075/blogmedia/bqnrrfaeaqfaj7hezxjx.png
 ---
+
 ## Introduction
 
 We all might have used the curl command but might be unaware of it. It's super old

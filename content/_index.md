@@ -1,16 +1,56 @@
 ---
-title: "Meet Gor"
-description: "Technical notes, articles, links and newsletters"
+title: "Notes"
+type: "page"
 ---
 
-# Hello, I'm Meet Gor! 👋
+A collection of technical notes and posts
 
-I'm a Software Engineer passionate about building systems, writing technical notes, and sharing my journey through my weekly newsletters.
+## Browse by Type
 
-This space serves as my digital garden where I curate:
-- **Posts**: In-depth articles on Go, Python, SQL, and system design.
-- **Links**: Interesting things I've read and watched across the web.
-- **Newsletter**: Archives of my weekly reflections and learnings.
-- **Thoughts & Quotes**: Random snippets of wisdom and personal reflections.
+<style>
+.post-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-Feel free to explore and connect with me!
+.post-type-link {
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.post-type-link:hover {
+  border-color: #3b82f6;
+  background-color: #f8fafc;
+}
+
+.post-type-title {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.post-type-count {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+</style>
+
+<div class="post-types">
+<a href="/posts/" class="post-type-link">
+<span class="post-type-title">All Posts</span>
+<span class="post-type-count">Browse all</span>
+</a>
+</div>
+
+Or view by category at `/type/`

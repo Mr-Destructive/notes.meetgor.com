@@ -1,16 +1,14 @@
 ---
 type: post
-title: What's in Techstructive Blog
-subtitle: Explaining my blog's scope and finding my niche as a technical writer.
-date: 2021-09-19 15:00:00+05:30
-slug: techstructive-blog-init
-image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287813/blogmedia/zgblatyqpwdh5oe7817g.png
+title: "What's in Techstructive Blog"
+subtitle: "Explaining my blog's scope and finding my niche as a technical writer."
+date: 2021-09-19T15:00:00+05:30
+slug: "techstructive-blog-init"
 tags:
-- git
-- javascript
-- neovim
-- python
+  - hashnode
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287813/blogmedia/zgblatyqpwdh5oe7817g.png
 ---
+
 ## Introduction
 
 **Hello World!** This is an article in which I'll introduce why Techstructive Blog exists and what it covers in brief. This is just a casual introduction to my blogging niche. P.S. It's not any technical blog but has challenged me enough to write and complete it.  

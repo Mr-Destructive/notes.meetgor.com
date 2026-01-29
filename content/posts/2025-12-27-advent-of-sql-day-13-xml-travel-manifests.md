@@ -1,15 +1,12 @@
 ---
-type: sqlog
-title: 'Advent of SQL 2025 Day 13: XML Travel Manifests'
-slug: advent-of-sql-2025-day-13
+type: "sqlog"
+title: "Advent of SQL 2025 Day 13: XML Travel Manifests"
+slug: "advent-of-sql-2025-day-13"
 date: 2025-12-27T20:30:00+0530
-series:
-- advent-of-sql-2025
-tags:
-- database
-- rust
-- sql
+series: ["advent-of-sql-2025"]
+tags: ["sqlite", "sql", "advent-of-sql"]
 ---
+
 ## Advent of SQL - Day 13, XML Travel Manifests
 
 Its day 13 of Advent of SQL, we have some xml to parse, which I don't think SQL can handle, but string manipulation to the rescue.

@@ -1,16 +1,14 @@
 ---
 type: post
-title: 'Golang Web: GET Method'
-date: 2023-10-28 20:15:00
-slug: golang-web-get-method
-series:
-- 100-days-of-golang
-image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-033-get-method.png
+title: "Golang Web: GET Method"
+date: 2023-10-28T20:15:00
+slug: "golang-web-get-method"
+series: ["100-days-of-golang"]
 tags:
-- docker
-- git
-- go
+  - go
+image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-033-get-method.png
 ---
+
 ## Introduction
 
 In this section of the series, we will be exploring how to send a `GET` HTTP request in golang. We will be understanding how to send a basic GET request, create an HTTP request and customize the client, add headers, read the response body, etc in the following sections of this post.

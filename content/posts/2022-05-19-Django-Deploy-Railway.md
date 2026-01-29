@@ -1,19 +1,16 @@
 ---
 type: post
-title: Django Project with PostgreSQL Deployment on Railway App
-date: 2022-05-19 20:30:00
-slug: django-deploy-railway
-series:
-- Django-Deployment
-image_url: https://meetgor-cdn.pages.dev/django-deploy-railway.png
+title: "Django Project with PostgreSQL Deployment on Railway App"
+date: 2022-05-19T20:30:00
+slug: "django-deploy-railway"
+series: ["Django-Deployment"]
 tags:
-- database
-- devops
-- git
-- javascript
-- python
-- sql
+  - django
+  - python
+  - web-development
+image_url: https://meetgor-cdn.pages.dev/django-deploy-railway.png
 ---
+
 ## Introduction
 
 We have already seen the process of deployment of a Django app on Heroku, now we can move to another platform which is [Railway App](https://railway.app). This allows a faster and more intuitive way to deploy a Django app(or any sort of web app). This platform has several [Starter Apps](https://railway.app/starters) for shipping your app in several clicks, definitely, it would require some configuration and tweaking a bit.

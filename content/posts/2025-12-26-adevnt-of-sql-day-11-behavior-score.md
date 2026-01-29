@@ -1,14 +1,12 @@
 ---
-type: sqlog
-title: 'Advent of SQL 2025 Day 11: Behavior Score'
-slug: advent-of-sql-2025-day-11
+type: "sqlog"
+title: "Advent of SQL 2025 Day 11: Behavior Score"
+slug: "advent-of-sql-2025-day-11"
 date: 2025-12-26T15:30:00+0530
-series:
-- advent-of-sql-2025
-tags:
-- database
-- sql
+series: ["advent-of-sql-2025"]
+tags: ["sqlite", "sql", "advent-of-sql"]
 ---
+
 ## Advent of SQL - Day 11, Behavior Score
 
 All right, this is day 11 from Advent of SQL.

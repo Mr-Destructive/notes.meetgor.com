@@ -1,19 +1,17 @@
 ---
 type: post
-title: 'Django Basics: Database Configurations'
-subtitle: Understanding and configuring Database for the project and migrating to
-  the database
-date: 2022-01-21 16:40:34
-slug: django-database-conf
-series:
-- Django-Basics
-image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1642339267/blogmedia/djbasics-8-db_pvulqh.png
+title: "Django Basics: Database Configurations"
+subtitle: "Understanding and configuring Database for the project and migrating to the database"
+date: 2022-01-21T16:40:34
+slug: "django-database-conf"
+series: ["Django-Basics"]
 tags:
-- database
-- git
-- python
-- sql
+  - python
+  - django
+  - web-development
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1642339267/blogmedia/djbasics-8-db_pvulqh.png
 ---
+
 ## Introduction
 
 In this part of the series, we will create an external database and configure the settings for that database. We also look into the process of migrations which is to convert a model which we created in the previous part into the actual structure/schema for the database. I'll be using `PostgreSQL` for most of the demonstrations but it should be similar for other database management tools. This part will make your Django project link to a local database.  

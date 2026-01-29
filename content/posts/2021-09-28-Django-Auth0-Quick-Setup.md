@@ -1,16 +1,16 @@
 ---
 type: post
-title: Django + Auth0 Quick Setup
-subtitle: A simple BASH script to set up a basic Django project with authentication
-  integrated using Auth0.
-date: 2021-09-28 20:08:47+05:30
-slug: djagno-auth0-script
-image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287941/blogmedia/aggaqpjljlcysdopvoj3.png
+title: "Django + Auth0 Quick Setup"
+subtitle: "A simple BASH script to set up a basic Django project with authentication integrated using Auth0."
+date: 2021-09-28T20:08:47+05:30
+slug: "djagno-auth0-script"
 tags:
-- git
-- python
-- security
+  - django
+  - bash
+  - python
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1643287941/blogmedia/aggaqpjljlcysdopvoj3.png
 ---
+
 ## Introduction
 
 

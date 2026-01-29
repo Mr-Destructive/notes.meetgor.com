@@ -1,14 +1,13 @@
 ---
 type: til
-title: SQLite importing CSV with custom separator
-description: Explorng SQLite CLI with inline CSV import command with custom separator
+title: "SQLite importing CSV with custom separator"
+description: "Explorng SQLite CLI with inline CSV import command with custom separator"
 status: published
 slug: sqlite-inline-custom-separator
+tags: ["sqlite",]
 date: 2024-03-15 22:30:00
-tags:
-- git
-- sql
 ---
+
 explaination about how i learned how to write a command for importing a csv 
 into a sqlite3 db with cusotm Separator with a single command inline
 

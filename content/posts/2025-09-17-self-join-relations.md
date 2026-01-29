@@ -1,12 +1,11 @@
 ---
 type: sqlog
 slug: sqlite-self-join-relations
-title: 'SQLite SQL: Self Join Relations'
-date: '2025-09-17'
-tags:
-- database
-- sql
+title: "SQLite SQL: Self Join Relations"
+date: "2025-09-17"
+tags: ["sqlite", "sql"]
 ---
+
 ## Self Join Relations
 
 In the last post, we had defined a `one-to-many` relation between the `users` table and the `posts` table.

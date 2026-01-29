@@ -2,11 +2,10 @@
 type: sqlog
 slug: sqlite-generated-column-constraint
 title: 'SQLite SQL: GENERATED column constraint'
-date: '2025-09-11'
-tags:
-- database
-- sql
+date: "2025-09-11"
+tags: ["sqlite", "sql"]
 ---
+
 ## The GENERATED column constraint
 
 We saw certain limitations of the `DEFAULT` column constraint clause, that it can't generate dynamic values based on other columns or some other dynamic popularities. For overcomming those kind of constraints, there is one more specific constraint, the [GENERATED](https://sqlite.org/gencol.html) column constraint.

@@ -1,16 +1,14 @@
 ---
 type: post
-title: 'Golang Web: PUT Method'
-date: 2024-06-15 18:30:00
-slug: golang-web-put-method
-series:
-- 100-days-of-golang
-image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-035-put-method.png
+title: "Golang Web: PUT Method"
+date: 2024-06-15T18:30:00
+slug: "golang-web-put-method"
+series: ["100-days-of-golang"]
 tags:
-- database
-- git
-- go
+  - go
+image_url: https://meetgor-cdn.pages.dev/100-days-of-golang/golang-035-put-method.png
 ---
+
 ## Introduction
 
 In this section of the series, we will be exploring how to send a `PUT` HTTP request in golang. We will understand how to send a basic PUT request, create an HTTP request, update a resource on a server, parsing the content from struct to json, headers, etc in the following section of this post.

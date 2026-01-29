@@ -1,19 +1,16 @@
 ---
 type: post
-title: Django + PostgreSQL Deployment on Heroku
-date: 2022-05-15 20:00:00
-slug: django-deploy-heroku
-series:
-- Django-Deployment
-image_url: https://meetgor-cdn.pages.dev/django-deploy-heroku.png
+title: "Django + PostgreSQL Deployment on Heroku"
+date: 2022-05-15T20:00:00
+slug: "django-deploy-heroku"
+series: ["Django-Deployment"]
 tags:
-- database
-- devops
-- docker
-- git
-- python
-- sql
+  - django
+  - web-development
+  - python
+image_url: https://meetgor-cdn.pages.dev/django-deploy-heroku.png
 ---
+
 ## Introduction
 
 Django projects are quite easy to build and simple to understand, you might have created a Django application and wanted to show it to the world? You can deploy a basic Django application with a database(PostgreSQL) with Heroku. It provides a decent free tier with some great features and add-ons. A free tier Heroku account has a limitation of 5 apps, limited data in the database, limited connections to the server per month, and so on.  

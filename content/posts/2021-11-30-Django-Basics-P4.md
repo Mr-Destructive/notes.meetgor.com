@@ -1,16 +1,17 @@
 ---
 type: post
-title: 'Django Basics: Views and URLS'
-subtitle: Creating and Understanding working of views and urls in Django
-date: 2021-11-30 12:03:00+05:30
-slug: django-basics-views-urls
-series:
-- Django-Basics
-image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1638253939/blogmedia/dj-uv_esbld2.png
+title: "Django Basics: Views and URLS"
+subtitle: "Creating and Understanding working of views and urls in Django"
+date: 2021-11-30T12:03:00+05:30
+slug: "django-basics-views-urls"
+series: ["Django-Basics"]
 tags:
-- python
-- sql
+  - django
+  - python
+  - web-development
+image_url: https://res.cloudinary.com/dgpxbrwoz/image/upload/v1638253939/blogmedia/dj-uv_esbld2.png
 ---
+
 ## Introduction
 
 After getting familiar with the folder structure of the Django framework, we'll create our first view in an app. The basics of creating and mapping a view with a URL will be cleared by the end of this part.

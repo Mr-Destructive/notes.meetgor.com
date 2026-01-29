@@ -1,14 +1,12 @@
 ---
-type: sqlog
-title: 'Advent of SQL 2025 Day 14: Ski Resort Paths'
-slug: advent-of-sql-2025-day-14
+type: "sqlog"
+title: "Advent of SQL 2025 Day 14: Ski Resort Paths"
+slug: "advent-of-sql-2025-day-14"
 date: 2025-12-28T15:30:00+0530
-series:
-- advent-of-sql-2025
-tags:
-- database
-- sql
+series: ["advent-of-sql-2025"]
+tags: ["sqlite", "sql", "advent-of-sql"]
 ---
+
 ## Advent of SQL, Day 14 - Ski Resort Paths
 
 Ok, almost to the penultimate day in the series. It is day 14 of Advent of SQL.

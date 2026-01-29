@@ -1,14 +1,14 @@
 ---
 type: post
-title: Configure Neovim in Lua
-date: 2022-07-09 20:30:00
-slug: neovim-vimscript-to-lua
-image_url: https://meetgor-cdn.pages.dev/vimtolua.png
+title: "Configure Neovim in Lua"
+date: 2022-07-09T20:30:00
+slug: "neovim-vimscript-to-lua"
 tags:
-- git
-- neovim
-- python
+  - vim
+  - lua
+image_url: https://meetgor-cdn.pages.dev/vimtolua.png
 ---
+
 ## Introduction
 
 It has been a while since I have written a Vim article. Finally, I got some ideas after configuring my Neovim setup for Lua. I recently migrated to Ubuntu a couple of months back and it has been a cool change from Windows 7! 

@@ -1,11 +1,13 @@
 ---
 type: til
-title: 'Golang: Test Output JSON'
-description: Obtain JSON output of test results in Golang
+title: "Golang: Test Output JSON"
+description: "Obtain JSON output of test results in Golang"
 status: published
 slug: golang-test-output-json
+tags: ["go",]
 date: 2024-01-01 21:30:00
 ---
+
 I just discovered that we can generate a JSON output of test results in Golang. I found this [here](https://youtu.be/cf72gMBrsI0?t=80).
 
 Let's take a fresh simple example.

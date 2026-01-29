@@ -2,11 +2,11 @@
 author: meet
 date: 2025-04-11
 type: til
-title: 'Add hunks: only line specific changes with git add -p'
 tags:
-- git
-- sql
+  - git
+title: "Add hunks: only line specific changes with git add -p"
 ---
+
 I had made the changes for a future release, next set of changes so to speak in git terms. Then, I encountered a bug while testing the previous changes. Now, I could have 
 1. Open VS Code and add that little `+` icon in the gutter to fix the bug
 2. Create a separate branch with stashed changes for this new feature

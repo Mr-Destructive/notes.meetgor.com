@@ -1,11 +1,13 @@
 ---
-title: you have everything you need
-date: 2026-01-04 15:11:04+00:00
+title: "you have everything you need"
+date: 2026-01-04T15:11:04Z
 slug: you-have-everything-and-nothing
 draft: false
 type: link
-description: ''
+description: ""
+tags: ["thinking","help"]
 ---
+
 Man, that was a heck of an article to read. I continued reading it because I found it relatable to Minecraft.
 - You open a world, you have an empty inventory
 - Still you believe you can win the game

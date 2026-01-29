@@ -1,15 +1,11 @@
 ---
-date: 2026-01-16
+title: "Typical PDF document"
+date: 2026-01-12T13:19:04Z
+slug: a-typical-pdf-document
 draft: false
-link: https://hackerfactor.com/blog/index.php?/archives/1085-A-Typical-PDF.html
-title: A typical PDF document
+type: links
+description: ""
+tags: ["pdf","document","forensics","security"]
 ---
-# A typical PDF document
 
-**Link:** https://hackerfactor.com/blog/index.php?/archives/1085-A-Typical-PDF.html
-
-## Context
-
-This is cool, I’ve read a lot of these and working at docsumo, makes me want to read about them more.
-
-**Source:** techstructive-weekly-77
+This is cool, i've read a lot of these and working at docsumo, makes me want to read about them more.

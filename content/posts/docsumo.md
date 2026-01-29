@@ -1,8 +1,10 @@
 ---
-title: Docsumo
+title: "Docsumo"
 date: 2024-12-15
-type: work
+type: "work"
 ---
+
+
 ### Junior Backend Engineer - [Docsumo](https://www.docsumo.com/)
 **June 2024 - Present**
 

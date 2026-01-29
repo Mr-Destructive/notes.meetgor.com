@@ -1,11 +1,12 @@
 ---
 type: til
-title: 'Vim: Get the Text from Visual Selection'
-date: 2022-03-05 17:25:37
-slug: vim-get-visual-text
+title: "Vim: Get the Text from Visual Selection"
+date: 2022-03-05T17:25:37
+slug: "vim-get-visual-text"
 tags:
-- sql
+  - vim
 ---
+
 ## Using Registers 
 
 We can get the selected text in a variable in Vim Script using registers. 

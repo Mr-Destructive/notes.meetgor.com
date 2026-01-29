@@ -1,14 +1,12 @@
 ---
-type: sqlog
-title: 'Advent of SQL 2025 Day 2: Snowballs'
-slug: advent-of-sql-2025-day-2
+type: "sqlog"
+title: "Advent of SQL 2025 Day 2: Snowballs"
+slug: "advent-of-sql-2025-day-2"
 date: 2025-12-17T15:30:00+0530
-series:
-- advent-of-sql-2025
-tags:
-- database
-- sql
+series: ["advent-of-sql-2025"]
+tags: ["sqlite", "sql", "advent-of-sql"]
 ---
+
 ## SQLog: Advent of SQL Day 2
 
 Here we are on the day 2 of Advent of SQL

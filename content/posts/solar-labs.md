@@ -1,12 +1,10 @@
 ---
-title: Solar Labs
+title: "Solar Labs"
 date: 2023-05-26
 draft: false
-type: work
-tags:
-- devops
-- python
+type: "work"
 ---
+
 ### Backend Developer Intern - [The Solar Labs](https://www.thesolarlabs.com/)
 **July 2022 - April 2023**
 

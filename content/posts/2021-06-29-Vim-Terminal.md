@@ -1,14 +1,15 @@
 ---
 type: post
-title: 'Vim: Terminal Integration'
-subtitle: To feel and live in Vim with the terminal.
-date: 2021-06-29 15:21:11+05:30
-slug: vim-plus-teminal
-image_url: https://meetgor-cdn.pages.dev/vim-terminal-integration.webp
+title: "Vim: Terminal Integration"
+subtitle: "To feel and live in Vim with the terminal."
+date: 2021-06-29T15:21:11+05:30
+slug: "vim-plus-teminal"
 tags:
-- neovim
-- python
+  - vim
+  - linux
+image_url: https://meetgor-cdn.pages.dev/vim-terminal-integration.webp
 ---
+
 ## Vim and Terminal!?
 Vim was made to work with the command line. Many beginners do not understand what are the true capabilities of Vim, myself included:) Vim can run terminal commands without leaving the text editor, open an instance of a terminal, work with shell environments, and other things depending on the use case.
 
