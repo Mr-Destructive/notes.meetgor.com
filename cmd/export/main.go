@@ -50,8 +50,8 @@ func main() {
 	}
 	cancel()
 
-	// Query posts - include published_at and order by latest
-	rows, err := db.Query("SELECT id, title, slug, content, excerpt, type_id, status, created_at, published_at, tags FROM posts WHERE status = 'published' ORDER BY COALESCE(published_at, created_at) DESC")
+	// Query posts from last 7 days - include published_at and order by latest
+	rows, err := db.Query("SELECT id, title, slug, content, excerpt, type_id, status, created_at, published_at, tags FROM posts WHERE status = 'published' AND datetime(COALESCE(published_at, created_at)) >= datetime('now', '-7 days') ORDER BY COALESCE(published_at, created_at) DESC")
 	if err != nil {
 		log.Fatalf("Query failed: %v", err)
 	}

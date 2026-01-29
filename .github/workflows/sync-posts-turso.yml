@@ -95,6 +95,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Build: update site with latest content from Turso"
-            git pull --rebase
+            git fetch origin main
+            git rebase origin/main || git rebase --abort
             git push
           fi
