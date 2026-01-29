@@ -73,6 +73,9 @@ jobs:
           # Fetch latest changes from remote
           git fetch origin main
           
+          # Discard any uncommitted changes outside content/ and exports/content/
+          git checkout -- . || true
+          
           # Stage only the content we care about
           git add content/ exports/content/
           
@@ -85,13 +88,13 @@ jobs:
           # Commit changes
           git commit -m "chore: sync and build content from Turso database"
           
-          # Try to push directly first (no rebase, simpler)
-          if git push origin main 2>&1; then
+          # Try to push directly first
+          if git push origin main; then
             echo "[OK] Pushed successfully"
             exit 0
           fi
           
-          # If push fails, pull and retry
-          echo "[INFO] Push failed, pulling latest changes..."
-          git pull origin main --no-rebase
+          # If push fails, merge latest and retry
+          echo "[INFO] Push failed, merging latest changes..."
+          git merge origin/main --no-edit
           git push origin main
