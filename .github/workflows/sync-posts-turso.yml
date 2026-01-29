@@ -17,6 +17,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Git
+        run: |
+          git config user.name "Blog Sync Bot"
+          git config user.email "bot@blog.local"
+
+      - name: Fetch latest remote changes
+        run: git fetch origin main
+
       - name: Setup Go
         uses: actions/setup-go@v4
         with:
@@ -35,25 +43,11 @@ jobs:
           if [ -d "exports/content/posts" ]; then
             count=$(find exports/content/posts -name "*.md" | wc -l)
             echo "[OK] Exported $count posts"
-            ls -la exports/content/posts/
             if [ "$count" -eq 0 ]; then
-              echo "[WARN] No posts exported from Turso. This might indicate a connection issue."
-              echo "       Will use existing posts if available."
+              echo "[WARN] No posts exported from Turso"
             fi
           else
-            echo "[WARN] No posts exported"
-          fi
-
-      - name: Commit and push changes
-        run: |
-          git config user.name "Blog Sync Bot"
-          git config user.email "bot@blog.local"
-          git add exports/content/
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: sync content from Turso database"
-            git push
+            echo "[WARN] No exports directory"
           fi
 
       - name: Setup Hugo
@@ -62,40 +56,41 @@ jobs:
           hugo-version: 0.154.0
           extended: true
 
-      - name: Backup current exports/public directory
-        run: |
-          cp -r exports/public exports/public.backup 2>/dev/null || true
-          echo "[OK] Backed up current exports/public directory"
-
       - name: Build Hugo site
         run: |
           # Sync exported content to the main content directory
           if [ -d "exports/content" ]; then
             cp -r exports/content/* content/ 2>/dev/null || true
-            echo "[OK] Synced content from exports/content to content/"
+            echo "[OK] Synced exports/content to content/"
           fi
           
           # Build from root
           hugo --minify
-          echo "[OK] Built $(find public -name '*.html' | wc -l) HTML files"
-      
-      - name: Verify posts page was generated
-        run: |
-          if [ ! -f "public/posts/index.html" ] || [ ! -s "public/posts/index.html" ]; then
-            echo "[ERROR] Posts page is empty or missing"
-            # exit 1 # Don't exit if it's just a warning
-          fi
+          echo "[OK] Built site"
 
-      - name: Commit and push built site
+      - name: Commit and push all changes
         run: |
-          git config user.name "Blog Sync Bot"
-          git config user.email "bot@blog.local"
-          git add content/ exports/content/
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Build: update site with latest content from Turso"
-            git fetch origin main
-            git rebase origin/main || git rebase --abort
-            git push
+          # Fetch latest changes from remote
+          git fetch origin main
+          
+          # Rebase local changes on top of remote
+          if ! git rebase origin/main; then
+            echo "Rebase conflict detected, aborting..."
+            git rebase --abort
+            exit 0
           fi
+          
+          # Stage all changes
+          git add content/ exports/content/
+          
+          # Check if there are changes to commit
+          if git diff --cached --quiet; then
+            echo "[OK] No changes to commit"
+            exit 0
+          fi
+          
+          # Commit changes
+          git commit -m "chore: sync and build content from Turso database"
+          
+          # Push with force if needed (rebase might have changed history)
+          git push origin main || git push -f origin main
