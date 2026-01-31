@@ -45,9 +45,14 @@ type RSS2JSONItem struct {
 func main() {
 	// Use RSS proxy service to bypass Substack blocking
 	feedURL := "https://api.rss2json.com/v1/api.json?rss_url=https://techstructively.substack.com/feed"
-	postsDir := "exports/content/posts"
+	// Save to both exports and content/newsletter for Hugo site
+	exportsDir := "exports/content/posts"
+	newsletterDir := "content/newsletter"
 
-	if err := os.MkdirAll(postsDir, 0755); err != nil {
+	if err := os.MkdirAll(exportsDir, 0755); err != nil {
+		log.Fatalf("Failed to create directory: %v", err)
+	}
+	if err := os.MkdirAll(newsletterDir, 0755); err != nil {
 		log.Fatalf("Failed to create directory: %v", err)
 	}
 
@@ -162,8 +167,8 @@ func main() {
 			continue
 		}
 
-		filename := filepath.Join(postsDir, slug+".md")
-		if _, err := os.Stat(filename); err == nil {
+		exportsFile := filepath.Join(exportsDir, slug+".md")
+		if _, err := os.Stat(exportsFile); err == nil {
 			// File exists, skip
 			// fmt.Printf("Skipping existing: %s\n", slug)
 			continue
@@ -196,8 +201,16 @@ func main() {
 
 		content := frontMatter + item.Content
 
-		if err := os.WriteFile(filename, []byte(content), 0644); err != nil {
-			log.Printf("Failed to write %s: %v", filename, err)
+		// Write to exports directory
+		if err := os.WriteFile(exportsFile, []byte(content), 0644); err != nil {
+			log.Printf("Failed to write %s: %v", exportsFile, err)
+			continue
+		}
+
+		// Also write to content/newsletter with date prefix for Hugo site
+		newsletterFile := filepath.Join(newsletterDir, dateStr[:10]+"-"+slug+".md")
+		if err := os.WriteFile(newsletterFile, []byte(content), 0644); err != nil {
+			log.Printf("Failed to write %s: %v", newsletterFile, err)
 			continue
 		}
 
