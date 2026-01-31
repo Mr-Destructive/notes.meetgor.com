@@ -169,11 +169,22 @@ func main() {
 			continue
 		}
 
-		// Parse date
-		// RFC1123: Fri, 16 Jan 2026 18:45:34 GMT
-		t, err := time.Parse(time.RFC1123, item.PubDate)
+		// Parse date - rss2json returns: 2026-01-30 18:45:23
+		dateFormats := []string{
+			"2006-01-02 15:04:05",           // rss2json format
+			time.RFC1123,                     // Original Substack format
+			"2006-01-02T15:04:05Z07:00",    // ISO format
+		}
+		var t time.Time
+		var err error
+		for _, format := range dateFormats {
+			t, err = time.Parse(format, item.PubDate)
+			if err == nil {
+				break
+			}
+		}
 		if err != nil {
-			log.Printf("Failed to parse date %q: %v", item.PubDate, err)
+			log.Printf("Failed to parse date %q: %v (using current time)", item.PubDate, err)
 			t = time.Now()
 		}
 		dateStr := t.Format("2006-01-02T15:04:05Z07:00")

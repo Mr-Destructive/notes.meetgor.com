@@ -36,12 +36,4 @@ jobs:
           else
             git commit -m "chore: import new posts from Substack RSS"
             git push
-            echo "changes_pushed=true" >> $GITHUB_ENV
           fi
-
-      - name: Trigger Sync and Build
-        if: env.changes_pushed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run sync-posts-turso.yml
