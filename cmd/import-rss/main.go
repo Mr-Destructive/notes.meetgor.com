@@ -1,6 +1,7 @@
 package main
 
 import (
+	"compress/gzip"
 	"encoding/xml"
 	"fmt"
 	"io"
@@ -47,9 +48,14 @@ func main() {
 		}
 
 		// Set realistic headers to avoid blocking
-		req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-		req.Header.Set("Accept", "application/rss+xml, application/xml")
+		req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+		req.Header.Set("Accept", "application/rss+xml, application/xml, text/xml, */*")
 		req.Header.Set("Accept-Language", "en-US,en;q=0.9")
+		req.Header.Set("Accept-Encoding", "gzip, deflate, br")
+		req.Header.Set("DNT", "1")
+		req.Header.Set("Connection", "keep-alive")
+		req.Header.Set("Upgrade-Insecure-Requests", "1")
+		req.Header.Set("Referer", "https://techstructively.substack.com/")
 
 		client := &http.Client{
 			Timeout: 15 * time.Second,
@@ -81,7 +87,26 @@ func main() {
 		}
 
 		var readErr error
-		data, readErr = io.ReadAll(resp.Body)
+		var body io.Reader = resp.Body
+
+		// Handle gzip encoding
+		if resp.Header.Get("Content-Encoding") == "gzip" {
+			gr, err := gzip.NewReader(resp.Body)
+			if err != nil {
+				lastErr = err
+				log.Printf("Attempt %d/%d: Failed to create gzip reader: %v", attempt, maxRetries, err)
+				resp.Body.Close()
+				if attempt < maxRetries {
+					time.Sleep(time.Duration(attempt*2) * time.Second)
+					continue
+				}
+				log.Fatalf("Failed to create gzip reader after %d attempts: %v", maxRetries, err)
+			}
+			body = gr
+			defer gr.Close()
+		}
+
+		data, readErr = io.ReadAll(body)
 		if readErr != nil {
 			lastErr = readErr
 			log.Printf("Attempt %d/%d: Failed to read RSS body: %v", attempt, maxRetries, readErr)
