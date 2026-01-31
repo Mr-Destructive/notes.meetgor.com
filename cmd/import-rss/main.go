@@ -2,7 +2,7 @@ package main
 
 import (
 	"compress/gzip"
-	"encoding/xml"
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
@@ -29,8 +29,22 @@ type Item struct {
 	Description string `xml:"description"`
 }
 
+// JSON API response from rss2json
+type RSS2JSONResponse struct {
+	Items []RSS2JSONItem `json:"items"`
+}
+
+type RSS2JSONItem struct {
+	Title       string `json:"title"`
+	Link        string `json:"link"`
+	PubDate     string `json:"pubDate"`
+	Content     string `json:"content"`
+	Description string `json:"description"`
+}
+
 func main() {
-	feedURL := "https://techstructively.substack.com/feed"
+	// Use RSS proxy service to bypass Substack blocking
+	feedURL := "https://api.rss2json.com/v1/api.json?rss_url=https://techstructively.substack.com/feed"
 	postsDir := "exports/content/posts"
 
 	if err := os.MkdirAll(postsDir, 0755); err != nil {
@@ -134,15 +148,15 @@ func main() {
 		log.Printf("DEBUG: Response preview: %s", dataStr)
 	}
 
-	var rss RSS
-	if err := xml.Unmarshal(data, &rss); err != nil {
-		log.Printf("Failed to parse XML: %v", err)
+	var jsonResp RSS2JSONResponse
+	if err := json.Unmarshal(data, &jsonResp); err != nil {
+		log.Printf("Failed to parse JSON: %v", err)
 		log.Printf("Response length: %d bytes", len(data))
 		log.Fatalf("Response preview: %s", dataStr)
 	}
 
 	count := 0
-	for _, item := range rss.Channel.Items {
+	for _, item := range jsonResp.Items {
 		slug := extractSlug(item.Link)
 		if slug == "" {
 			continue
