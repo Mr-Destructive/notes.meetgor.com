@@ -36,20 +36,84 @@ func main() {
 		log.Fatalf("Failed to create directory: %v", err)
 	}
 
-	resp, err := http.Get(feedURL)
-	if err != nil {
-		log.Fatalf("Failed to fetch RSS: %v", err)
-	}
-	defer resp.Body.Close()
+	var data []byte
+	var lastErr error
+	maxRetries := 3
 
-	data, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatalf("Failed to read RSS body: %v", err)
+	for attempt := 1; attempt <= maxRetries; attempt++ {
+		req, err := http.NewRequest("GET", feedURL, nil)
+		if err != nil {
+			log.Fatalf("Failed to create request: %v", err)
+		}
+
+		// Set realistic headers to avoid blocking
+		req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+		req.Header.Set("Accept", "application/rss+xml, application/xml")
+		req.Header.Set("Accept-Language", "en-US,en;q=0.9")
+
+		client := &http.Client{
+			Timeout: 15 * time.Second,
+			CheckRedirect: func(req *http.Request, via []*http.Request) error {
+				return nil // Allow redirects
+			},
+		}
+
+		resp, err := client.Do(req)
+		if err != nil {
+			lastErr = err
+			log.Printf("Attempt %d/%d: Failed to fetch RSS: %v", attempt, maxRetries, err)
+			if attempt < maxRetries {
+				time.Sleep(time.Duration(attempt*2) * time.Second) // Exponential backoff
+				continue
+			}
+			log.Fatalf("Failed to fetch RSS after %d attempts: %v", maxRetries, err)
+		}
+		defer resp.Body.Close()
+
+		if resp.StatusCode != 200 {
+			lastErr = fmt.Errorf("HTTP %d", resp.StatusCode)
+			log.Printf("Attempt %d/%d: Failed to fetch RSS: HTTP %d", attempt, maxRetries, resp.StatusCode)
+			if attempt < maxRetries {
+				time.Sleep(time.Duration(attempt*2) * time.Second)
+				continue
+			}
+			log.Fatalf("Failed to fetch RSS after %d attempts: HTTP %d", maxRetries, resp.StatusCode)
+		}
+
+		var readErr error
+		data, readErr = io.ReadAll(resp.Body)
+		if readErr != nil {
+			lastErr = readErr
+			log.Printf("Attempt %d/%d: Failed to read RSS body: %v", attempt, maxRetries, readErr)
+			if attempt < maxRetries {
+				time.Sleep(time.Duration(attempt*2) * time.Second)
+				continue
+			}
+			log.Fatalf("Failed to read RSS body after %d attempts: %v", maxRetries, readErr)
+		}
+
+		// Successfully fetched, break out of retry loop
+		lastErr = nil
+		break
+	}
+
+	if lastErr != nil && len(data) == 0 {
+		log.Fatalf("Failed to fetch RSS: %v", lastErr)
+	}
+
+	// Debug: log first 500 chars of response
+	dataStr := string(data)
+	if len(dataStr) > 500 {
+		log.Printf("DEBUG: Response preview: %s...", dataStr[:500])
+	} else {
+		log.Printf("DEBUG: Response preview: %s", dataStr)
 	}
 
 	var rss RSS
 	if err := xml.Unmarshal(data, &rss); err != nil {
-		log.Fatalf("Failed to parse XML: %v", err)
+		log.Printf("Failed to parse XML: %v", err)
+		log.Printf("Response length: %d bytes", len(data))
+		log.Fatalf("Response preview: %s", dataStr)
 	}
 
 	count := 0
